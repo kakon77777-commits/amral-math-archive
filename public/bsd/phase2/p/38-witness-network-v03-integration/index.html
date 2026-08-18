@@ -39,7 +39,6 @@
       <span class="tag">Phase 2 · 38</span>
       <span class="tag">側線 · FW_H2 · 06</span>
       <span class="tag">2026-08-13</span>
-      <span class="tag">今日(2026-08-18)最後一篇 · 15/15</span>
     </div>
     <h1>Witness-Network v0.3 Integration</h1>
     <p class="h1-sub">把 35-37 篇各自獨立的結果組裝成一份完整、可執行的 <code>FW_PROFILE</code> 偽代碼,是整個 FW_H2 子系列的收尾整合。流程依序是:<code>GLOBAL_H1</code> 檢查 $E[p]$ 在 $G_{\mathbf Q}$ 上絕對不可約;<code>LOCAL_H2</code> 先檢查是否 potentially multiplicative(自動 FAIL,呼應 37 篇捷徑一),再檢查 local $E[p]$ 是否在 $\mathbf F_p$ 上 irreducible(自動 PASS),否則建構局部 $p$-isogeny $\phi$ 與其 dual $\widehat\phi$,檢查兩者的 kernel 是否在 $\mathbf Q_p$ 有 linear root(呼應 36 篇),任一個 YES 則 FAIL,兩個都 NO 則 PASS;<code>H3</code> 檢查是否存在 $\ell\ne p$ 的 nonsplit multiplicative witness 且 $p\nmid v_\ell(\Delta)$;<code>PERIOD</code> 檢查 modular/Néron 在 $p$-adic 上的相容性;<code>FINAL</code> 全部 PASS,這個 fixed additive $p$ 才算被 Fouquet–Wan 正式證書化。文件確認一個關鍵的全局性質:odd additive primes 依然只產生一個有限表 $\mathcal A_{\rm odd}(E)$,$\forall p$ 沒有因此重新膨脹回無窮量詞。文件把 v0.3 這一輪真正的改善,收進一句精確的方框陳述:A2 H2 UNKNOWN 變成 exact finite local isogeny test——這正是把 31 篇(A2)條件「local Fouquet-Wan nondegeneracy」從一個抽象、需要驗證的假設,變成一套真正可執行的有限演算法。</p>
@@ -54,7 +53,8 @@
     <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
     <div class="connections">
       <div class="conn-card"><span class="k">上一篇</span><a href="../37-kodaira-prefilters-and-nogo/">37 · Kodaira Prefilters and No-Go Results</a></div>
-      <div class="conn-card"><span class="k">Phase 2 進度</span>38 / 40(今日(2026-08-18)最後一篇,15/15)</div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../39-local-agent-implementation-spec/">39 · Local Agent Implementation Spec</a></div>
+      <div class="conn-card"><span class="k">Phase 2 進度</span>38 / 40</div>
     </div>
     <blockquote class="cite">「A2 H2 UNKNOWN → exact finite local isogeny test。」— 摘自本文「Global consequence」段落。</blockquote>
   </section>

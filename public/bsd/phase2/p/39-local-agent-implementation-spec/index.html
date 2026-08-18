@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Agent Implementation Spec · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="FW_H2 子系列收尾,也是整個 Phase 2(40/40)的最後一篇:把 35-38 篇的判準正式規格化成一支可實作函式 certify_fw_h2(E, p, profile),要求輸出完整可 replay 的 JSON(不可只回 boolean)。四條 backend 規則:優先用 Sage/Magma 既有 certified local isogeny 機械、不可用浮點近似判 Q_p root;只判「isogeny 存在」不夠,必須產出 kernel character 證據;kernel 多項式的線性因子必須是 exact p-adic 分解或 Hensel 證書;若 local irreducible 證書本身只是 heuristic,只能回 UNKNOWN,不可升級 PASS。附六組 regression fixture(A-F)。文件結尾明確列出四個禁止的推論捷徑:Kodaira type 本身、沒有 Q_p 有理 p-torsion、potentially supersingular、global irreducible 推 local irreducible——全部不得單獨拿來判 PASS。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/07_Local_Agent_Implementation_Spec.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link active" href="../../../">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>39 · Local Agent Implementation Spec</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 39</span>
+      <span class="tag">側線 · FW_H2 · 07(最後一篇)</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Phase 2 全 40/40 完結</span>
+    </div>
+    <h1>Local Agent Implementation Spec</h1>
+    <p class="h1-sub">FW_H2 子系列(35-39 篇)收尾,同時是整個 Phase 2 的最後一篇。把前四篇的抽象判準正式規格化成一支要求實作的函式 <code>certify_fw_h2(E, p, profile="FW17_EXACT")</code>,明確要求「輸出必須可 replay,不可只回 boolean」——回傳的 JSON 包含 <code>global_abs_irreducible</code>、<code>potentially_multiplicative</code>、<code>local_reducibility_Fp</code>、<code>phi</code>/<code>dual_phi</code> 的 kernel 多項式與是否有 <code>Q_p</code>-linear factor、最終 <code>fw17_h2</code> 判定,外加 <code>evidence</code> 陣列。四條 backend 規則:Rule 1 優先用 Sage/Magma 既有 certified local isogeny/factorization 機械,不可用浮點 approximation 判斷 <code>Q_p</code> root;Rule 2 若 backend 只能判斷「local $p$-isogeny 存在」但產不出 kernel character 證據,不能把這個當 H2 verdict;Rule 3 kernel 多項式的線性因子必須是 exact $p$-adic factorization 或 Hensel 證書;Rule 4 若 local irreducible 證書本身只是 heuristic,只能回 <code>UNKNOWN</code>,不可升級 <code>PASS</code>。附六組 regression fixture(A 至 F,涵蓋 $p=3$ reducible、potentially multiplicative additive、兩種 kernel 有理根的 FAIL 情形、兩者皆無有理根的 PASS 情形、local irreducible 的 PASS 情形)。文件最後用一個「Do not infer」段落明確列出四個禁止的推論捷徑:<code>Kodaira type alone → PASS</code>、<code>no Q_p rational p-torsion → PASS</code>、<code>potentially supersingular → PASS</code>、<code>global irreducible → local irreducible</code>——全部不得單獨拿來判 PASS。</p>
+    <div class="claim-box">
+      FW_H2 判準正式規格化為可實作函式,要求完整可 replay 輸出;四條 backend 規則禁止浮點近似與 heuristic 升級;六組 regression fixture;明確列出四個禁止推論捷徑。Phase 2(696.e1 非半穩定顯式 twist 家族)全 40 篇完結
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../38-witness-network-v03-integration/">38 · Witness-Network v0.3 Integration</a></div>
+      <div class="conn-card"><span class="k">Phase 2 進度</span>40 / 40(全部完結)</div>
+    </div>
+    <blockquote class="cite">「輸出必須可 replay,不可只回 boolean。」— 摘自本文「Goal」段落。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/07_Local_Agent_Implementation_Spec.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/07_Local_Agent_Implementation_Spec.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
