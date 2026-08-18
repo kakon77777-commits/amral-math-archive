@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navier–Stokes 存在性與正則性 · AMRAL</title>
+<meta name="description" content="AMRAL 案例:三維不可壓縮 Navier–Stokes 方程的全域正則性問題,Clay Millennium Prize 七大問題之一。文件開頭即明確聲明不主張已證明 global regularity、不主張已構造 finite-time blow-up。核心工具是把問題壓縮成兩條可證偽命題:C1(Chain Necessity,blow-up 必須生成一條來源可追蹤、逐尺度合法的 X-legal UV chain)與 C2(Finite Obstruction,任何這樣的鏈都必在有限尺度被真正 N–S 結構阻斷)——若兩者皆證明,則 ¬Blowup。目前:C1a/C1b(UV 逃逸必要性、非線性補給的因果來源)CLOSED;C2 證明純量可加預算不足以排除 blow-up(抽象 cascade ledger 反例);前沿是 C3 跨尺度耦合剛性,25 輪独立子調查。建置中,逐篇上線。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">關於</a>
+  <a class="link" href="../methodology/">方法論</a>
+  <a class="link" href="../protocols/">研究協議</a>
+  <a class="link" href="../validation/">驗證</a>
+  <a class="link" href="../research-modes/">自主模式</a>
+  <a class="link" href="../riemann/">黎曼猜想</a>
+  <a class="link" href="../moser/">Moser 蟲問題</a>
+  <a class="link" href="../skew-field/">歪度場</a>
+  <a class="link" href="../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../bsd/">BSD 猜想</a>
+  <a class="link" href="../cpl/">臨界線比例梯</a>
+  <a class="link" href="../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="./">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-NS</p>
+    <h1>Navier–Stokes 存在性與正則性</h1>
+    <p class="subtitle">3D Incompressible Navier–Stokes Global Regularity · Clay Millennium Prize 問題之一 · 建置中</p>
+    <p class="lede">
+      文件開頭即明確列出<strong>八項不主張</strong>:不主張已證明 global regularity、不主張已構造 finite-time
+      blow-up、不主張 True ETN(無限維張力場)或 X 積分本身能推出 PDE 正則性、不主張任意數值格點平滑可直接推出
+      continuum smoothness。核心工具是兩層語言疊加:<strong>True ETN</strong> 把 N–S 的 Fourier/Littlewood–Paley
+      多尺度演化理解為無限維張力場;<strong>X 積分</strong>則是一套型別化、來源可追蹤、逐尺度守衛的形成合法性演算,
+      用來判定「一組局部非線性互動是否有資格被提升為跨尺度集中或奇點形成機制」——通過 guard 才能形成,沒通過的結論
+      不是「量為零」,而是「目前沒有資格形成這個上位主張」。
+    </p>
+    <p class="lede">
+      整個證明架構壓縮成兩條互補命題:<strong>C1(Chain Necessity)</strong>——blow-up 必須生成一條 X-legal 的
+      ultraviolet concentration chain;<strong>C2(Finite Obstruction)</strong>——任何這樣的鏈都必在有限尺度被真正
+      N–S 結構(不可壓縮性、triad geometry、viscous scale tax)阻斷。若兩者皆證明:blow-up ⟹ 鏈存在,但 ¬鏈存在,
+      故 ¬blow-up,即 global regularity。<strong>兩條命題目前都還沒有完整證明。</strong>
+    </p>
+    <p class="notice">
+      誠實現況:C1a(UV 逃逸必要性)與 C1b(非線性補給的因果來源,非線性 Duhamel 項必須補上耗散掉的高頻尾端)
+      <strong>CLOSED</strong>;C1c(persistent triadic genealogy,是否存在單一可追蹤的因果分支)仍 <strong>OPEN</strong>。
+      C2 本輪的真正貢獻是一個 <strong>NO-GO</strong>:用抽象 geometric cascade ledger 具體構造出一個同時滿足
+      「有限時間 + 有限能量耗散 + Λ∈L¹ + Λ∉L^(5/2) + 每尺度非零 critical toll」的純量模型,證明目前所有自然的
+      scalar/additive 預算論證都不足以排除 blow-up 形狀的記帳。前沿因此正式轉向 <strong>C3 跨尺度耦合剛性</strong>
+      (Cross-Scale Coupling Rigidity),25 輪獨立子調查,之後接續 C4(9 輪)、C5(13 輪)、C6(17 輪)。
+    </p>
+  </header>
+
+  <section id="foundational">
+    <h2 class="doc-h2">框架與第一輪 · Framework &amp; Round One</h2>
+    <p class="section-note">先讀這三篇,再讀底下任何一輪 C3-C6——ETN/X 積分是研究語言,不是已證定理;真正的定理是每一篇文件自己標示 CLOSED 的部分。</p>
+    <nav class="case-grid" aria-label="NS 框架與第一輪">
+      <a class="case-card" href="./p/00-etn-x-integration/">
+        <span class="k">00</span>
+        <h3>ETN–X Integration 重構</h3>
+        <p>把 N–S 編譯成 ETN 可讀的無限維張力場,用 X 積分建立跨尺度形成合法性。定義 C1(Chain Necessity)與 C2(Finite Obstruction)兩條核心開放命題。</p>
+      </a>
+      <a class="case-card" href="./p/01-c1-uv-replenishment-chain/">
+        <span class="k">01</span>
+        <h3>C1:高頻逃逸與非線性 UV 補給鏈</h3>
+        <p>C1a(UV 逃逸必要性)、C1b(非線性補給的因果來源)CLOSED;C1c(persistent triadic genealogy)OPEN。</p>
+      </a>
+      <a class="case-card" href="./p/02-c2-critical-toll-spike-packing/">
+        <span class="k">02</span>
+        <h3>C2:臨界通行費與尺度盲預算 No-Go</h3>
+        <p>抽象 cascade ledger 證明純量可加預算不足以排除 blow-up。正式把前沿轉向 C3 跨尺度耦合剛性。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c3">
+    <h2 class="doc-h2">C3 · 跨尺度耦合剛性(25 輪)</h2>
+    <p class="section-note">建置中,逐輪上線。</p>
+    <div class="case-grid">
+      <div class="case-card placeholder">
+        <span class="k">C3A → C3Y · 25 篇</span>
+        <h3>Parent Depletion → Derivative Chain Intermittency Tradeoff</h3>
+        <p>候選方向包括 parent depletion、branching congestion、triad geometry rigidity、spatial-frequency coherence、vorticity direction/stretching——25 輪獨立子調查逐步展開。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="c4">
+    <h2 class="doc-h2">C4(9 輪)</h2>
+    <p class="section-note">建置中,逐輪上線。</p>
+    <div class="case-grid">
+      <div class="case-card placeholder">
+        <span class="k">C4A → C4J · 9 篇</span>
+        <h3>Unified Survivor State → Final Synchronization Audit</h3>
+        <p>待讀完 C3 全系列後確認具體內容範圍。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="c5">
+    <h2 class="doc-h2">C5(13 輪)</h2>
+    <p class="section-note">建置中,逐輪上線。</p>
+    <div class="case-grid">
+      <div class="case-card placeholder">
+        <span class="k">C5A → C5M · 13 篇</span>
+        <h3>Record Window → Unified Defect Graph Phase Closure</h3>
+        <p>待讀完 C4 全系列後確認具體內容範圍。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="c6">
+    <h2 class="doc-h2">C6(17 輪)</h2>
+    <p class="section-note">建置中,逐輪上線。</p>
+    <div class="case-grid">
+      <div class="case-card placeholder">
+        <span class="k">C6A → C6Q · 17 篇</span>
+        <h3>Certified Defect Graph → Ancient Defect Local Growth</h3>
+        <p>待讀完 C5 全系列後確認具體內容範圍。全系列共 67 篇(框架 1 + C1 1 + C2 1 + C3 25 + C4 9 + C5 13 + C6 17)。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

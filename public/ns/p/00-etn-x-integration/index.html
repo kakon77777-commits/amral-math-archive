@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETN–X Integration 重構 · NS · AMRAL</title>
+<meta name="description" content="Navier-Stokes 全系列的框架奠基文件。明確列出八項不主張(不主張已證明 global regularity、不主張已構造 blow-up、不主張 ETN/X 積分本身推出 PDE 正則性等)。核心貢獻:把 N–S 寫成 Duhamel fixed-point 問題;用 Littlewood-Paley 分解定義 True ETN 的無限維張力場狀態;建立 N–S 專用 X-Guard family(十個 guard:type/div/support/triad/source/boundary/conservation/scale/regularity/persist);證明 Proposition 8.1(blow-up 必迫使任意固定 cutoff 之外的 critical L³ 高頻尾端發散);定義 X-legal ultraviolet concentration chain,並提出全系列的兩條核心開放命題 C1(Chain Necessity)與 C2(Finite Obstruction)——若兩者皆證,則 ¬blow-up。附五階段研究路線圖(N0 編譯器至 N5 形式證明審計)。作者含 Neo.K/EveMissLab 與研究協作者 Aletheia(GPT-5.6 Sol)。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>00 · ETN–X Integration 重構</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 00</span>
+      <span class="tag">v0.1 · 框架奠基</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">Neo.K / EveMissLab + Aletheia</span>
+    </div>
+    <h1>ETN–X Integration 重構</h1>
+    <p class="h1-sub">全系列的框架奠基文件,開頭第 0 節就先做「研究地位與非主張聲明」,列出八項明確不主張:不主張已證明 global regularity、不主張已構造 finite-time blow-up、不主張 True ETN 本身推出 PDE 正則性、不主張 X 積分本身排除 singularity、不主張任意數值格點平滑可直接推出 continuum smoothness、不主張 energy conservation 或 helicity 單獨足以控制三維 N–S、不主張 X-legal chain 與既有 cascade/frequency envelope/concentration compactness 完全等價、不主張本文新術語已具有外部數學優先權。核心構造:把不可壓縮 N–S 寫成 Leray projector 下的 Duhamel fixed-point 問題 $u=\Phi[u]$;用 Littlewood-Paley 分解定義 True ETN 狀態 $\Theta_{\rm NS}(t)=\{X_j(t)\}$,每個尺度紀錄振幅、渦度、能量、非線性轉移、耗散、來源與 parent interaction;建立 N–S 專用 X-Guard family(十個 guard:type、divergence-free、frequency-support、triad、provenance、boundary、conservation、scale、regularity、persistence),核心規則是「單次合法轉移不能推出無限 cascade 合法」;引用 Tao 對 averaged N–S 的反例(能量恆等式可保留但仍能構造 blow-up)確立「energy identity 單獨不足」的外部已知障礙;引用 Biferale–Titi 顯示 helicity sign structure 確實能提供額外 coercive control,但把它定位成 ETN 的一個 chart,不是唯一機制。文件的最硬結果是 Proposition 8.1:若 $T_\ast$ 是真正 blow-up 時刻,則對每個固定 dyadic cutoff $J$,高頻尾端 $\|P_{>J}u(t)\|_{L^3}$ 在 $t\uparrow T_\ast$ 時必發散——證明只用已知的 critical $L^3$ blow-up criterion 加 Bernstein inequality。在此基礎上定義 X-legal ultraviolet concentration chain(要求每一步都有來源、尺度、triad、邊界、正則性、轉移、guard 狀態的完整證書,且不允許「來源消失」的人工高頻節點),並提出全系列真正的核心架構:<strong>C1(Chain Necessity)</strong>——blow-up 必生成一條 X-legal UV chain;<strong>C2(Finite Obstruction)</strong>——任何這樣的鏈都必在有限尺度被真正 N–S 結構阻斷。若兩者皆證,則 blow-up ⟹ 鏈存在,但 ¬鏈存在,故 ¬blow-up。文件附五階段路線圖(N0 編譯器 → N1 精確 UV 必要性 → N2 Chain Necessity → N3 guard 普查 → N4 有限阻斷定理 → N5 形式證明審計,要求移除所有 ETN/X 術語依賴確保結論不是偷渡而來)。</p>
+    <div class="claim-box">
+      建立 N–S 的 ETN/X 積分分層語言;證明 Proposition 8.1(blow-up ⟹ 任意固定 cutoff 外高頻尾端發散);定義 X-legal UV chain;提出核心架構 C1(Chain Necessity)+ C2(Finite Obstruction)⟹ ¬Blowup。兩條核心命題均未證。不主張已解決 Clay Millennium Prize Problem
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">下一篇</span><a href="../01-c1-uv-replenishment-chain/">01 · C1:高頻逃逸與非線性 UV 補給鏈</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>01 / 67</div>
+    </div>
+    <blockquote class="cite">「本文的主要貢獻不是宣稱解決 Navier–Stokes,而是把『奇點是否形成』重新壓縮成一個可證偽、可分層、可建立證書的 multiscale legality problem。」— 摘自本文摘要。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
