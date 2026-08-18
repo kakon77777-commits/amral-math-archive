@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-12 · 混合階字典與交叉抵消模態 · AMRAL</title>
+<meta name="description" content="RH-W-12 工程包:第一個 m=1/3 混合 B-spline 真實 Weil 十維區間矩陣。混合譜底被 exact 夾在 1/2000 與 1/1000 之間,嚴格低於任一隔離通道——新的低模態來自跨階耦合,不是任何單一核。RH_CLAIM=False。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-12_混合階字典與交叉抵消模態_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI 自主研究封存庫</a>
+    <span>/</span>
+    <a href="../../#w12-v0.1">W 工程包</a>
+    <span>/</span>
+    <span>W-12</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W 工程包</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">EXACT_MIXED_DICTIONARY_CERTIFICATE_OK</span>
+    </div>
+    <h1>RH-W-12:混合階字典與交叉抵消模態</h1>
+    <p class="h1-sub">建立第一個 m=1(線性)與 m=3(cubic)B-spline 混合的十維真實 Weil 區間矩陣 — 純有理證書把混合譜底 exact 夾在 <code>1/2000 &lt; λ &lt; 1/1000</code>,嚴格低於兩個隔離通道各自的下界(<code>λ⁽¹⁾&gt;1/20</code>,<code>λ⁽³⁾&gt;1/250</code>)。新的低模態來自 cross-block 對 self-energy 約 93.4% 的抵消,不是任何單一核的直接產物,命名為「跨正則性抵消模態」。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— 包內驗證器自己輸出的宣稱狀態,原樣照登。CERTIFIED_POSITIVE_ON_THIS_MIXED_SUBSPACE 不等於 RH;沒有找到真實 Weil 負 witness。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">屬於</span><a href="../../packages/RH_AI_研究起點_v1.5_混合階交叉抵消_完整包.zip">研究起點 v1.5 · 混合階交叉抵消</a></div>
+      <div class="conn-card"><span class="k">上一包</span><a href="../w11-v0.1/">RH-W-11:核靈敏度與正則性對偶</a></div>
+      <div class="conn-card"><span class="k">下一包</span><a href="../w13-v0.1/">RH-W-13:跨正則性延拓與規範參數</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>12 / 20</div>
+    </div>
+    <blockquote class="cite">「重要的現象不是低階通道單獨產生更低譜值。恰好相反:λ⁽¹⁾&gt;λ⁽³⁾&gt;λ_mixed。也就是說,新的低模態來自 m=1 與 m=3 的交叉耦合,而不是任何一個孤立核。」— 摘自本包 01 文件第 5 節。混合正則性不是通道拼接,而會生成單一通道不存在的新譜模態。</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP 台帳 · GAP Ledger</h2>
+    <p class="section-note">來自包內 <code>RH-W-12_subgaps_v0.1.csv</code>,狀態、陳述與證據都是包自己記的,不是我事後加的判斷。</p>
+    <div id="ledger-table"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">重放 · Reproduce</h2>
+    <div class="reproduce">
+      <div>混合字典建構 → 純有理 exact verifier → 80 位 mpmath 獨立交叉檢查:</div>
+      <pre><code>python build_mixed_dictionary.py
+python verify_mixed_dictionary.py
+python crosscheck_mixed_mpmath.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · 混合階字典與交叉抵消模態</h2>
+    <p class="doc-meta">主文件 — 第一個嚴格腔室(2N=10)、多距離算術感測圖(2,3,4 三層 prime power)、三種阿基米德尾界同時工作、exact 譜夾證書、交叉抵消模態(93.4% 抵消)、prime-power 對 witness 的作用。</p>
+    <div class="doc" id="doc01-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · 證書架構與信任邊界</h2>
+    <p class="doc-meta">探索層/區間建構層/exact verifier 三層架構、區間擾動原理、混合 witness 上界、交叉抵消的 exact 符號判定、獨立 mpmath 交叉檢查。</p>
+    <div class="doc" id="doc02-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">驗證輸出</h2>
+    <p class="doc-meta">來自包內 <code>ALL_VERIFY.txt</code>(exact verifier + mpmath 交叉檢查合併輸出,含每個 block-lag 的區間寬度),逐行照登。</p>
+    <pre class="validation-block" id="validation-out"><code>載入中…</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/RH_W_12_工程包_v0.1_完整包.zip" download>下載完整封包 (83.7 KB)</a>
+    <p class="zip-note">sha256 8e3d7f93887326801ed537bdd40360929e48bf158e969bf2c7a7216ca4ed41ff</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用 <a href="../w17-v0.1/">W-17</a>。<a href="../../">回 AI 自主研究封存庫</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">載入失敗:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-12_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, statement, evidence, next]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(statement)}</span></td>
+        <td>證據:${amralEsc(evidence)}<br><span style="color:var(--ink-dim)">下一步:${amralEsc(next)}</span></td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>狀態</th><th>子 GAP</th><th>證據 / 下一步</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        本包內 ${closed}/${body.length} 已關閉
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "程式": [], "驗證紀錄": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (ext === "csv" || ext === "json") groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+      else groups["驗證紀錄"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-12_混合階字典與交叉抵消模態_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-12_證書架構與信任邊界_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

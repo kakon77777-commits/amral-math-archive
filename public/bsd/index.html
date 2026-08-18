@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD 猜想 · AMRAL</title>
+<meta name="description" content="AMRAL 案例:Birch and Swinnerton-Dyer 猜想(Clay Millennium Prize 問題之一)。不宣稱證明 BSD——建立曲線級證書階梯(C0-C10),精確分級每條曲線、每個質數究竟證到哪一層。四條子線:Phase 0 全局包圍框架(已上線)、P5 針對 rank-2 曲線 389.a1 在質數 p=11 的強 BSD 深度技術工作(已上線,核心比較仍 OPEN)、Phase 1 重現 Banwait-Huang 2026 演算法化普查、Phase 2 建構非半穩定曲線 696.e1 的顯式 twist 家族。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">關於</a>
+  <a class="link" href="../methodology/">方法論</a>
+  <a class="link" href="../protocols/">研究協議</a>
+  <a class="link" href="../validation/">驗證</a>
+  <a class="link" href="../research-modes/">自主模式</a>
+  <a class="link" href="../riemann/">黎曼猜想</a>
+  <a class="link" href="../moser/">Moser 蟲問題</a>
+  <a class="link" href="../skew-field/">歪度場</a>
+  <a class="link" href="../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../glc-framework/">GLC 閉合框架</a>
+  <a class="link active" href="./">BSD 猜想</a>
+  <a class="link" href="../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-BSD</p>
+    <h1>BSD 猜想</h1>
+    <p class="subtitle">Birch and Swinnerton-Dyer Conjecture · Clay Millennium Prize 問題之一</p>
+    <p class="lede">
+      不宣稱證明 BSD,也不把數值吻合當證明。核心工具是一把<strong>曲線級證書階梯</strong>(C0 身分 → C6 弱 BSD →
+      C7 單一質數強式 → C8 Sha 有限且精確 → C9 完整強 BSD → C10 family 定理)——每條曲線、每個質數,精確標示
+      究竟證到哪一層,而不是只存一個「BSD true/false」的布林值。研究過程中,系統對研究者自己的舊主張(「格點秩收斂」)
+      做了正式審計並否決,是這條線紀律最高的地方。
+    </p>
+    <p class="notice">
+      四條子線熟度不同:Phase 0、P5、Phase 1 已全數上線;Phase 2 正逐篇建頁中(9/40)——下方先列出目前的真實狀態,不預先宣稱完成度。
+    </p>
+  </header>
+
+  <section id="phase0">
+    <h2 class="doc-h2">Phase 0 · Global Enclosure(全局包圍)</h2>
+    <p class="section-note">2026-08-12 · 裁決:GO,進入 Phase 1 · 九篇文件已全數上線</p>
+    <nav class="case-grid" aria-label="Phase 0">
+      <a class="case-card" href="./phase0/">
+        <span class="k">框架 · 9 篇</span>
+        <h3>拆分 BSD-W/F/S,建立證書階梯與路線矩陣</h3>
+        <p>否決 Neo.K 舊「格點秩收斂」主張;判定 Strong-BSD Twist-Family Reproduction 為首選路線;鎖定樣本曲線 389.a1。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="p5">
+    <h2 class="doc-h2">P5 · 389.a1 於 $p=11$</h2>
+    <p class="section-note">2026-08-14 · 十篇文件已全數上線 · 核心比較(P5-CANON-BocID、P5-CPLX-GPR)仍 OPEN</p>
+    <nav class="case-grid" aria-label="P5">
+      <a class="case-card" href="./p5/">
+        <span class="k">單一質數強 BSD · 10 篇</span>
+        <h3>Rank-2 曲線 389.a1 的單一質數 leading-term 公式</h3>
+        <p>從 Rank-Uniform Zeta-Primitivity Bridge 架構出發,閉合 Sha[11^∞]=0,壓成 uGPR11 兩個位元,異常質數局域化建立 Selmer 骨架,最新到行列式 Kurihara 半局部閉合——複數首項比較仍未閉合。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase1">
+    <h2 class="doc-h2">Phase 1 · Banwait–Huang 重現</h2>
+    <p class="section-note">2026-08-12 · 25 篇文件已全數上線,25/25 COMPLETE · Reproduction = COMPLETE</p>
+    <nav class="case-grid" aria-label="Phase 1">
+      <a class="case-card" href="./phase1/">
+        <span class="k">Strong-BSD Twist-Family Reproduction · 25 篇</span>
+        <h3>arXiv:2601.16044 全量 500K 演算法化普查</h3>
+        <p>36,687 條 base curves、247,391 組 admissible twist pairs,全域 twist accounting identity 46,091=46,091 exact PASS。v0.3-v0.6 逐層修正:精確 one-commit diff 找出 13 條 removed curves 的 first-failure、把小樣本效應放大到 500K 全量規模量測、最後用 exact replay 證明 Algorithm2 的 expand mechanism 在真實資料域從未啟動——stable domain 是純單調縮減,修正了早先從 source diff 做的猜測。已為 Phase 2 提出三條具體路線(高秩 wall atlas / strong-BSD 覆蓋擴張 / 2-primary 前沿)。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="roadmap">
+    <h2 class="doc-h2">Phase 2(建置中)</h2>
+    <p class="section-note">下面的狀態描述直接來自批次自己的文件,不是我方推論或美化。</p>
+    <div class="case-grid">
+      <a class="case-card" href="./phase2/">
+        <span class="k">Phase 2 · 非半穩定家族 · 38/40 建置中</span>
+        <h3>曲線 696.e1 顯式 Twist 家族</h3>
+        <p>為 Banwait–Huang 方法不覆蓋的非半穩定曲線構造顯式無窮 twist 家族(密度 1/24)。已推導出 FW-H2 的精確 representation-level predicate。經內部對抗式審查(6 個子 referee)抓到並修正一個引用錯誤,目前狀態:「DERIVED THEOREM CANDIDATE」,尚未升格為新定理,待獨立外部覆核。</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

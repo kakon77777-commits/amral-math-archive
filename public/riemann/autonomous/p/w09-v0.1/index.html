@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-09 · 自適應腔室延拓 · AMRAL</title>
+<meta name="description" content="RH-W-09 工程包:從固定網格改成局部自適應延拓,把最低廣義譜底從 10^-5 推低 9110 倍到 10^-9,終點恰好逼近 log3 的素數活化邊界。邊界前後都以純有理驗證器證出十五維正裕度。RH_CLAIM=False。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-09_自適應腔室延拓_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI 自主研究封存庫</a>
+    <span>/</span>
+    <a href="../../#w09-v0.1">W 工程包</a>
+    <span>/</span>
+    <span>W-09</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W 工程包</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">CLOSED_FOR_ONE_LOCAL_CONTINUATION_POLICY_AND_ONE_CERTIFIED_15D_CHAMBER</span>
+    </div>
+    <h1>RH-W-09:自適應腔室延拓</h1>
+    <p class="h1-sub">把固定網格搜尋改寫成局部延拓問題 — 從 W-08 的候選出發,每輪評估九個鄰點,自動把十五維最低廣義譜底從 <code>1.2×10⁻⁵</code> 一路推低到 <code>1.32×10⁻⁹</code>(下降約 9110 倍),終點恰好逼近 <code>log3</code> 的 lag-1 素數活化邊界,只差約 <code>9.67×10⁻⁵</code>。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— 包內驗證器自己輸出的宣稱狀態,原樣照登。「十五維正裕度 ⇏ RH」;浮點延拓路徑只能輸出 NUMERICAL_CANDIDATE_ONLY,沒有證明譜底在此邊界取得局部極小。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">屬於</span><a href="../../packages/RH_AI_研究起點_v1.2_自適應延拓與十億分之一裕度_完整包.zip">研究起點 v1.2 · 自適應延拓與十億分之一裕度</a></div>
+      <div class="conn-card"><span class="k">上一包</span><a href="../w08-v0.1/">RH-W-08:腔室搜尋與嚴格細化</a></div>
+      <div class="conn-card"><span class="k">下一包</span><a href="../w10-v0.1/">RH-W-10:素數邊界局部模態與七階軟啟動</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>9 / 20</div>
+    </div>
+    <blockquote class="cite">「搜尋器自動把最低模態推向一條離散算術耦合即將改變的幾何邊界……這一點的重要性不是『三這個素數特別神祕』,而是搜尋器自動把最低模態推向一條離散算術耦合即將改變的幾何邊界。是否所有低模態都傾向此類邊界,目前仍是開放研究問題。」— 摘自本包 01 文件第 6 節。</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP 台帳 · GAP Ledger</h2>
+    <p class="section-note">來自包內 <code>RH-W-09_subgaps_v0.1.csv</code>,狀態與依賴都是包自己記的,不是我事後加的判斷。</p>
+    <div id="ledger-table"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">重放 · Reproduce</h2>
+    <div class="reproduce">
+      <div>自適應延拓(需 NumPy/SciPy)→ 嚴格區間證書 → 純有理 exact verifier:</div>
+      <pre><code>python adaptive_continuation.py
+python build_continuation_certificate.py
+python verify_continuation_certificate.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · 自適應腔室延拓</h2>
+    <p class="doc-meta">主文件 — 局部延拓政策(九鄰點步進 + 減半)、prime-power 活化邊界追蹤器、延拓終點與下降 9110 倍、最近的活化邊界(lag=1, n=3)。</p>
+    <div class="doc" id="doc01-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · 十億分之一正裕度證書</h2>
+    <p class="doc-meta">十五維真實矩陣分解、有理中心與擾動半徑、exact LDL^T 證書、為何十五維正裕度仍不是 RH 證明。</p>
+    <div class="doc" id="doc02-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · 精度升級與信任邊界</h2>
+    <p class="doc-meta">為何 10⁻⁹ 尺度候選需要重新設計常數與尾界 — Euler 常數的 Binet/digamma 區間、阿基米德冪次尾的二段延拓、計算成本與證書精度解耦。</p>
+    <div class="doc" id="doc03-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">驗證輸出</h2>
+    <p class="doc-meta">來自包內 <code>EXACT_VERIFY.txt</code>,逐行照登。</p>
+    <pre class="validation-block" id="validation-out"><code>載入中…</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">完整延拓路徑(<code>adaptive_continuation_path.json</code>)與十五維區間證書沒有逐一列出,都在完整 zip 裡。</p>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/RH_W_09_工程包_v0.1_完整包.zip" download>下載完整封包 (88.1 KB)</a>
+    <p class="zip-note">sha256 61871e8c9c8fbdf9ca788a873140049c194386b816fde99dd718659f6ec0166b</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用 <a href="../w17-v0.1/">W-17</a>。<a href="../../">回 AI 自主研究封存庫</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">載入失敗:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-09_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, title, status, depends, next]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(title)}</span></td>
+        <td>依賴:${amralEsc(depends)}<br><span style="color:var(--ink-dim)">下一步:${amralEsc(next)}</span></td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[2].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>狀態</th><th>子 GAP</th><th>依賴 / 下一步</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        本包內 ${closed}/${body.length} 已關閉
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "程式": [], "驗證紀錄": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (ext === "csv" || ext === "json") groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+      else groups["驗證紀錄"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-09_自適應腔室延拓_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-09_十億分之一正裕度證書_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-09_精度升級與信任邊界_v0.1.md");
+loadPre("validation-out", "EXACT_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

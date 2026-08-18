@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-13 · 跨正則性延拓與規範參數 · AMRAL</title>
+<meta name="description" content="RH-W-13 工程包:探索器一度回報疑似 Weil 負方向 -3.32e-7,依規定升級為紅色警報而非宣布反例,查出是 M/G 量化不一致的參數身份錯誤,一致量化後翻正並被 80 位獨立積分證實。最終十維近零正譜帶被 exact 夾在 (1e-8, 5e-8)。RH_CLAIM=False。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-13_跨正則性延拓與規範參數_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI 自主研究封存庫</a>
+    <span>/</span>
+    <a href="../../#w13-v0.1">W 工程包</a>
+    <span>/</span>
+    <span>W-13</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W 工程包</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">EXACT_CROSS_REGULARITY_CERTIFICATE_OK</span>
+    </div>
+    <h1>RH-W-13:跨正則性延拓與規範參數</h1>
+    <p class="h1-sub">探索器一度回報疑似 Weil 負方向 <code>-3.32×10⁻⁷</code> — 若為真將是重大反例。本包沒有宣傳也沒有立即刪除,而是依規定升級為紅色警報候選逐層排查,查出根因是 <code>M</code> 的參數被快取量化、<code>G</code> 卻未同步量化,造成廣義特徵值問題的「物件身份錯誤」;一致量化後翻正為 <code>+8.76×10⁻⁸</code>,並被 80 位獨立積分證實。最終以 jump-resolved 尾界,把十維 mixed 廣義譜底 exact 夾在 <code>(10⁻⁸, 5×10⁻⁸)</code>。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— 包內驗證器自己輸出的宣稱狀態,原樣照登。近零正譜帶不是 RH 證明也不是反例;假負值已被明確標記為 NUMERICAL_FALSE_NEGATIVE_REJECTED,不是被悄悄移除。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">屬於</span><a href="../../packages/RH_AI_研究起點_v1.6_跨正則性近零譜帶_完整包.zip">研究起點 v1.6 · 跨正則性近零譜帶</a></div>
+      <div class="conn-card"><span class="k">上一包</span><a href="../w12-v0.1/">RH-W-12:混合階字典與交叉抵消模態</a></div>
+      <div class="conn-card"><span class="k">下一包</span><a href="../w14-v0.1/">RH-W-14:嚴格二維參數管</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>13 / 20</div>
+    </div>
+    <blockquote class="cite">「若這是同一個真實 Weil 字典的嚴格負方向,將具有極端重大意義。因此正確工程行為不是宣傳,也不是立即刪除,而是把它升級成紅色警報候選並逐層排查……在計算數學中,共用度量的版本一致性,是定理輸入的一部分,而不是軟體細節。」— 摘自本包 02 文件「一致量化反例與紅色警報審計」。</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP 台帳 · GAP Ledger</h2>
+    <p class="section-note">來自包內 <code>RH-W-13_subgaps_v0.1.csv</code>,狀態與描述都是包自己記的,不是我事後加的判斷。</p>
+    <div id="ledger-table"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">重放 · Reproduce</h2>
+    <div class="reproduce">
+      <div>跨正則性證書建構 → 純有理 exact verifier → 80 位 mpmath 獨立交叉檢查:</div>
+      <pre><code>python build_cross_regularity_certificate.py
+python verify_cross_regularity.py
+python crosscheck_w13_mpmath.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · 跨正則性延拓與規範參數</h2>
+    <p class="doc-meta">主文件 — 為何 α 只是規範/預條件參數而非真正延拓方向、真正的延拓參數 σ、一致參數原則、選定的有理腔室、exact 譜夾(10⁻⁸, 5×10⁻⁸)、通道抵消與算術抵消的雙重疊加。</p>
+    <div class="doc" id="doc01-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · 一致量化反例與紅色警報審計</h2>
+    <p class="doc-meta">為何必須保存這個失敗、M/G 量化不一致的錯誤結構、三路結果對照表(量化前/一致量化後/80位交叉檢查)、新的強制規則、廣義特徵值問題中「物件身份錯誤」與一般矩陣誤差的區別。</p>
+    <div class="doc" id="doc02-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · Jump-Resolved 尾界與近零證書</h2>
+    <p class="doc-meta">舊尾界為何無法解析 10⁻⁸ 級譜底、精確 jump 表示、指數 jump 尾界的額外衰減、本輪 cutoff 與區間寬度、最終上下界證書。</p>
+    <div class="doc" id="doc03-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">驗證輸出</h2>
+    <p class="doc-meta">來自包內 <code>ALL_VERIFY.txt</code>(exact verifier + mpmath 交叉檢查合併輸出,含每個 block-lag 的區間寬度),逐行照登。</p>
+    <pre class="validation-block" id="validation-out"><code>載入中…</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">量化不一致審計的原始 JSON(<code>quantization_mismatch_audit.json</code>)與延拓搜尋路徑沒有逐一列出,都在完整 zip 裡。</p>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/RH_W_13_工程包_v0.1_完整包.zip" download>下載完整封包 (203.0 KB)</a>
+    <p class="zip-note">sha256 83b21f30594c9867e2ec3ab52fb5b796e19ba6cf778c37aea5e89dca46d4b4fa</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用 <a href="../w17-v0.1/">W-17</a>。<a href="../../">回 AI 自主研究封存庫</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">載入失敗:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-13_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, description]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}</td>
+        <td>${amralEsc(description)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>狀態</th><th>子 GAP</th><th>描述</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        本包內 ${closed}/${body.length} 已關閉
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "程式": [], "驗證紀錄": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (ext === "csv" || ext === "json") groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+      else groups["驗證紀錄"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-13_跨正則性延拓與規範參數_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-13_一致量化反例與紅色警報審計_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-13_JumpResolved尾界與近零證書_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

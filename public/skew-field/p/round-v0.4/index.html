@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第 4 輪 · Fourier曲率空間與非凸容器削減 · 歪度場 · AMRAL</title>
+<meta name="description" content="Center-Generated Bridge Experiment 第 4 輪:提高曲率函數維度(Fourier 6/8/10模)仍能增加凸支撐張力,但同時發現凸化成本佔目前有限族容器面積的37.31%——非凸單連通容器只需0.191,遠低於凸容器的0.305。凸支撐冗餘不等於非凸容器冗餘。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/reports/ROUND_04_REPORT.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link active" href="../../">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 歪度場</a>
+    <span>/</span>
+    <a href="../../#round-v0.4">實驗輪次</a>
+    <span>/</span>
+    <span>第 4 輪</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">第 4 輪</span>
+      <span class="tag">v0.4</span>
+      <span class="tag">2026-07-27</span>
+    </div>
+    <h1>Fourier 曲率函數空間、伴隨靈敏度與非凸容器削減</h1>
+    <p class="h1-sub">把曲率函數從固定公式推廣到 Fourier 級數(6/8/10 模式),支撐張力仍隨維度上升;但同時發現,把七個測試族的管狀鄰域直接非凸聯集(不強制凸化),單連通容器只要 0.191,遠低於同族凸容器的 0.305——凸化成本佔了目前容器面積的 37.31%。</p>
+    <div class="claim-box">
+      有限維函數空間候選＋半驗證曲率盒＋有限族非凸容器候選
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。「凸支撐冗餘 ≠ 非凸容器冗餘。」</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../round-v0.3/">第 3 輪 · 法向單射定理與雙頻對數曲率</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../round-v0.5/">第 5 輪 · 第一個非凸交替對抗循環</a></div>
+      <div class="conn-card"><span class="k">實驗輪次進度</span>4 / 11</div>
+    </div>
+    <blockquote class="cite">「支撐函數只記錄凸包;非凸容器還必須記錄:凹槽、狹窄通道、局部空缺、管狀邊界間的互補嵌合。因此:凸支撐冗餘不等於非凸容器冗餘。第 1 輪有限寬度族在凸問題中已冗餘,但在非凸容器 leave-one-out 中仍有非零貢獻。」— 摘自本包主文件第 9 節「結構判斷」。</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">第 4 輪核心內容</h2>
+    <p class="doc-meta">Fourier 曲率函數空間定義、維度推進(6→8→10模)、Fourier-10 候選的曲率盒與手性審計、頻譜與敏感度(振幅不蘊含張力敏感度)、伴隨梯度推導、凸有限族容器、非凸有限族容器(37.31%削減)、結構判斷、誠實邊界、下一節點(交替對抗系統)。</p>
+    <div class="doc" id="doc-main-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-method">
+    <h2 class="doc-h2">實驗方法 · Method</h2>
+    <p class="doc-meta">曲率函數空間參數化、三層搜尋分層、凸/非凸容器公式、驗證層清單。</p>
+    <div class="doc" id="doc-method-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-sensitivity">
+    <h2 class="doc-h2">曲率—支撐函數伴隨靈敏度</h2>
+    <p class="doc-meta">完整伴隨梯度推導(曲率正規化、中心線變分、支撐函數變分),數值核對(有限差分 vs 伴隨梯度)。</p>
+    <div class="doc" id="doc-sensitivity-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-pruning">
+    <h2 class="doc-h2">非凸容器削減</h2>
+    <p class="doc-meta">七個測試族的非凸聯集面積、孔洞填補、相對凸容器 37.31% 的削減、leave-one-out 逐族分析。</p>
+    <div class="doc" id="doc-pruning-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/CenterGenerated_Bridge_Experiment_v0.4.zip" download>下載完整封包 (2862.4 KB)</a>
+    <p class="zip-note">sha256 ac08e76579ac23f7946c36292c687c1a24659f3eb620e068152a63754fd932fb</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用<a href="../round-v0.1/">第 1 輪</a>。<a href="../../">回歪度場</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "圖表": [], "程式": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (f.path.startsWith("figures/")) groups["圖表"].push(f);
+      else if (f.path.startsWith("data/")) groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_04_REPORT.md");
+loadDoc("doc-method-body", "reports/ROUND_04_METHOD.md");
+loadDoc("doc-sensitivity-body", "reports/ROUND_04_ADJOINT_SENSITIVITY.md");
+loadDoc("doc-pruning-body", "reports/ROUND_04_NONCONVEX_PRUNING.md");
+loadFiles();
+</script>
+</body>
+</html>

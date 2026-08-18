@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 · Banwait–Huang 重現 · BSD 猜想 · AMRAL</title>
+<meta name="description" content="BSD Phase 1:重現 Banwait-Huang 2026(arXiv:2601.16044)的演算法化 rank-0 twist-family 普查。25/25 COMPLETE。裁決 PASS(路線可工程化),第一批小範圍重現與官方 fixture 完全一致,v0.3 用精確 one-commit diff 完成 13 條 removed curves 的 first-failure closure,v0.4 把效應放大到 500K 全量規模量測(4062/40749 curves 被移除),v0.5 exact census 全域 accounting identity 精確 PASS,v0.6 用 exact replay 修正早先猜測——Algorithm2 的 expand mechanism 在真實資料域從未啟動,stable domain 是純單調縮減——正式封頂,宣告 Banwait–Huang Reproduction = COMPLETE,並為 Phase 2 提出三條具體路線。不宣稱證明 BSD。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link active" href="../">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← BSD 猜想</a> · Phase 1</p>
+    <h1>Phase 1:Banwait–Huang 重現</h1>
+    <p class="subtitle">Strong-BSD Twist-Family Reproduction · <strong>25 / 25 COMPLETE</strong></p>
+    <p class="lede">
+      重現 Banwait–Huang 2026(arXiv:2601.16044)把 strong-BSD twist criteria 編譯成明確算法、對 conductor&lt;500,000 的
+      LMFDB 橢圓曲線做系統辨識的工作。不宣稱證明 BSD——每一篇都只回答「哪些曲線與 twist 滿足已知定理的可驗證條件」,
+      不是「BSD 對這些曲線成立」。
+    </p>
+    <p class="notice">
+      v0.1(7 篇)+ v0.2(7 篇)+ v0.3(4 篇)+ v0.4(4 篇)+ v0.5(1 篇 exact census report,位於 <code>results/</code> 而非
+      <code>docs/</code>,不在原始 24 篇估計內,發現後補齊)+ v0.6(2 篇)全數上線,25/25。v0.6 末篇正式宣告
+      <strong>Banwait–Huang Reproduction = COMPLETE</strong>,並為 Phase 2 提出三條具體路線。
+    </p>
+  </header>
+
+  <section id="docs">
+    <h2 class="doc-h2">已上線文件</h2>
+    <nav class="case-grid" aria-label="Phase 1 文件">
+      <a class="case-card" href="./p/00-consensus/">
+        <span class="k">00</span>
+        <h3>Phase 1 共識裁決</h3>
+        <p>PASS,路線可工程化。CLZ20/Zha16 分支小範圍重現與官方 fixture 完全一致。</p>
+      </a>
+      <a class="case-card" href="./p/01-condition-map/">
+        <span class="k">01</span>
+        <h3>Theorem 2.18 條件圖</h3>
+        <p>Base curve 七條件、兩個 2-撓點分支、twist 條件。admissible ⟹ BSD,單向。</p>
+      </a>
+      <a class="case-card" href="./p/02-paper-vs-code-audit/">
+        <span class="k">02</span>
+        <h3>論文與官方程式審計</h3>
+        <p>官方程式比論文多了防過度宣稱閘門:區分 Sha[2] 維度與 ord_2(Sha)。</p>
+      </a>
+      <a class="case-card" href="./p/03-algorithm2-reproduction/">
+        <span class="k">03</span>
+        <h3>Algorithm 2 獨立重現</h3>
+        <p>純 Python 標準庫 mirror,46a1/106d1 兩分支 exact list match。</p>
+      </a>
+      <a class="case-card" href="./p/04-environment-and-gaps/">
+        <span class="k">04</span>
+        <h3>Algorithm 1 執行環境與尚缺項</h3>
+        <p>誠實列出本輪沒做的六件事,給出小樣本先行的 v0.2 計畫。</p>
+      </a>
+      <a class="case-card" href="./p/05-enclosure-and-stop-rules/">
+        <span class="k">05</span>
+        <h3>全局包圍與停止規則</h3>
+        <p>路線天花板是 uniform infinite-family theorem,不是 ∀E/ℚ。定義停止規則。</p>
+      </a>
+      <a class="case-card" href="./p/06-local-agent-handoff/">
+        <span class="k">06</span>
+        <h3>本地 Agent 交接</h3>
+        <p>六角色交接,銜接停止規則的實際執行。</p>
+      </a>
+      <a class="case-card" href="./p/07-v02-consensus/">
+        <span class="k">07</span>
+        <h3>Phase 1 v0.2 收斂裁決</h3>
+        <p>從結果重現升級為版本化證書回歸。發現正式 fixture 25 條 → 12 條。</p>
+      </a>
+      <a class="case-card" href="./p/08-fixture-regression/">
+        <span class="k">08</span>
+        <h3>小樣本版本回歸:25 → 12</h3>
+        <p>被移除的 13 條曲線標籤逐一列出,reason = OPEN,不猜測理由。</p>
+      </a>
+      <a class="case-card" href="./p/09-discrepancy-corpus/">
+        <span class="k">09</span>
+        <h3>官方 Discrepancy Corpus</h3>
+        <p>62a1/66b1/105a1/141c1 精確拒絕 predicate。意外通過 ⟹ 先標 REGRESSION?,不是 BREAKTHROUGH。</p>
+      </a>
+      <a class="case-card" href="./p/10-soundness-gates/">
+        <span class="k">10</span>
+        <h3>Algorithm 1 Soundness Gates</h3>
+        <p>S1-S6 六條 gate:analytic≠actual Sha、timeout=UNKNOWN、deterministic gate、完整 provenance。</p>
+      </a>
+      <a class="case-card" href="./p/11-500k-preflight/">
+        <span class="k">11</span>
+        <h3>500K Preflight</h3>
+        <p>放大到 conductor&lt;500000 前的五步檢查清單。成功 = 四項同時成立,不是數字接近。</p>
+      </a>
+      <a class="case-card" href="./p/12-agent-regression-protocol/">
+        <span class="k">12</span>
+        <h3>Agent Regression Protocol</h3>
+        <p>三層回歸測試 + 四道認知防火牆。純工程改動標 ENGINEERING ONLY,不計數學進展。</p>
+      </a>
+      <a class="case-card" href="./p/13-semantic-version-changelog/">
+        <span class="k">13</span>
+        <h3>Semantic Version Changelog</h3>
+        <p>核心原則:code version ≠ theorem semantics version。八項語義漂移監控項目。</p>
+      </a>
+      <a class="case-card" href="./p/14-one-commit-autopsy/">
+        <span class="k">14</span>
+        <h3>One-Commit Semantic Autopsy</h3>
+        <p>恰好一個 commit 之差。Algorithm 1 實質收緊,Algorithm 2 同時 shrink 與 expand。</p>
+      </a>
+      <a class="case-card" href="./p/15-removed-13-closure/">
+        <span class="k">15</span>
+        <h3>Removed 13 First-Failure Closure</h3>
+        <p>13 條 removed curves 全數由新 Algorithm1 判準解釋,不再是黑箱版本漂移。</p>
+      </a>
+      <a class="case-card" href="./p/16-algorithm2-twist-diff/">
+        <span class="k">16</span>
+        <h3>Algorithm 2 Twist Semantic Diff</h3>
+        <p>新增 2 個 synthetic case 直接區分新舊語義分支,僅 predicate-level,不宣稱對應實際 twist。</p>
+      </a>
+      <a class="case-card" href="./p/17-phase1-gate-v03/">
+        <span class="k">17</span>
+        <h3>Phase 1 Gate v0.3</h3>
+        <p>A+B+C+D 四層全通過 → REPRODUCTION-QUALIFIED;否則至多 OUTPUT-MATCHED。v0.3 完結。</p>
+      </a>
+      <a class="case-card" href="./p/18-500k-one-commit-impact/">
+        <span class="k">18</span>
+        <h3>500K One-Commit Global Impact</h3>
+        <p>同一 commit 在全量 500K 規模移除 4062/40749 條曲線。Semantic versioning 是數學 soundness 的一部分。</p>
+      </a>
+      <a class="case-card" href="./p/19-delta-only-verifier/">
+        <span class="k">19</span>
+        <h3>Delta-Only Algorithm1 Verifier</h3>
+        <p>增量證明重播,不必重跑未變 filters。若不吻合官方輸出,應停,不應直接進 full replay。</p>
+      </a>
+      <a class="case-card" href="./p/20-500k-twist-nonmonotonicity/">
+        <span class="k">20</span>
+        <h3>500K Twist Output Non-Monotonicity</h3>
+        <p>+1899/-53404 行證明 Algorithm2 語義變動在大規模資料域確實啟動,但行數≠已證明的 twist count。</p>
+      </a>
+      <a class="case-card" href="./p/21-phase1-next-low-cost-gate/">
+        <span class="k">21</span>
+        <h3>Phase 1 下一個最低成本 Gate</h3>
+        <p>Gate A→B→C 三段式策略。真正昂貴的是研究語義錯誤的返工,不是 runtime。v0.4 完結。</p>
+      </a>
+      <a class="case-card" href="./p/22-exact-census-report/">
+        <span class="k">22</span>
+        <h3>v0.5 Exact Census Report</h3>
+        <p>Gate A+B 精確執行結果。全域 twist accounting identity 46091=46091 exact PASS,26/26 completion checks。</p>
+      </a>
+      <a class="case-card" href="./p/23-fresh-algorithm2-semantic-replay/">
+        <span class="k">23</span>
+        <h3>Fresh Algorithm2 Semantic Replay</h3>
+        <p>關鍵修正:exact replay 證明 expand mechanism 在真實資料域從未啟動,stable domain 是純單調縮減。</p>
+      </a>
+      <a class="case-card" href="./p/24-phase1-closure-phase2-interface/">
+        <span class="k">24</span>
+        <h3>Phase 1 封頂與 Phase 2 接口</h3>
+        <p>Banwait–Huang Reproduction = COMPLETE。Phase 2 三路線:高秩 wall atlas、strong-BSD 覆蓋擴張、2-primary 前沿。</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← BSD 猜想</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

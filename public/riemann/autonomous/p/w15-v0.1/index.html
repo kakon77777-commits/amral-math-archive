@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-15 · IntervalTaylor參數管擴張 · AMRAL</title>
+<meta name="description" content="RH-W-15 工程包:改用四角矩陣凸組合加二階 Taylor 餘項,把 W-14 的二維近零參數管半徑擴大 25000 倍。同時發現並修正 W-14 阿基米德導數界漏掉的支撐外尾——原結論保留,但推導與常數須由修正版取代。RH_CLAIM=False。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-15_IntervalTaylor參數管擴張_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI 自主研究封存庫</a>
+    <span>/</span>
+    <a href="../../#w15-v0.1">W 工程包</a>
+    <span>/</span>
+    <span>W-15</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W 工程包</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">EXACT_INTERVAL_TAYLOR_TUBE_CERTIFICATE_OK</span>
+    </div>
+    <h1>RH-W-15:Interval–Taylor 參數管擴張</h1>
+    <p class="h1-sub">改用四角矩陣的凸組合加純二階 Taylor 餘項(取代 W-14 的全域一階絕對值包絡),把二維近零參數管每個方向的半徑從 <code>4×10⁻¹²</code> 擴大到 <code>10⁻⁷</code> — 整整 <code>25,000</code> 倍,矩形面積擴大 <code>6.25×10⁸</code> 倍,整個矩形仍嚴格滿足 <code>10⁻⁸&lt;λ_min&lt;5×10⁻⁸</code>。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— 包內驗證器自己輸出的宣稱狀態,原樣照登。同時發現並修正 W-14 阿基米德一階導數界漏掉支撐外常數尾的缺口:W-14 原推導標為 SUPERSEDED,結論標為 RECERTIFIED——原結論仍成立,但常數(175/215/253→179/218/255)須由修正版取代。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">屬於</span><a href="../../packages/RH_AI_研究起點_v1.8_IntervalTaylor參數管_完整包.zip">研究起點 v1.8 · IntervalTaylor參數管</a></div>
+      <div class="conn-card"><span class="k">上一包</span><a href="../w14-v0.1/">RH-W-14:嚴格二維參數管</a></div>
+      <div class="conn-card"><span class="k">下一包</span><a href="../w16-v0.1/">RH-W-16:三參數近零譜管</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>15 / 20</div>
+    </div>
+    <blockquote class="cite">「支撐函數為零,不代表包含 f(0) 減項的正規化被積式也為零。這條規則適用於任何帶局部消去、全域補償或 renormalization constant 的積分證書。若只檢查函數支撐而不檢查完整被積式,很容易漏掉支撐外尾。」— 摘自本包 02 文件「為何必須保存這次修正」。</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP 台帳 · GAP Ledger</h2>
+    <p class="section-note">來自包內 <code>RH-W-15_subgaps_v0.1.csv</code>,狀態與摘要都是包自己記的,不是我事後加的判斷。</p>
+    <div id="ledger-table"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">重放 · Reproduce</h2>
+    <div class="reproduce">
+      <div>純有理 exact verifier(可選高精度浮點交叉檢查):</div>
+      <pre><code>python verify_interval_taylor_tube.py
+python crosscheck_w15_mpmath.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Interval–Taylor 參數管擴張</h2>
+    <p class="doc-meta">主文件 — 四角線性插值取代全域絕對值界、修正後的二階全域界、四角 exact 正定與凸性論證、全參數管上界、方法論意義(一階變化不再當敵對擾動,只有真正曲率被轉成絕對值誤差)。</p>
+    <div class="doc" id="doc01-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · 阿基米德支撐外尾修正與 W-14 回溯重證</h2>
+    <p class="doc-meta">發現的缺口(支撐外常數尾 artanh(e⁻ᴿ))、精確尾積分、W-14 修正後的一階界、重新執行純有理 LDL^T 確認原結論保留、為何必須保存這次修正。</p>
+    <div class="doc" id="doc02-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · GAP 更新與 Batch 01 進度</h2>
+    <p class="doc-meta">已關閉/仍開放的子節點、Batch 01 進度 15/20、剩餘規劃(W-16 加入 h、W-17 腔室感知自動分割、W-18 證書後端統一、W-19 對抗性審計、W-20 Batch 01 統合與交棒包)。</p>
+    <div class="doc" id="doc03-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">驗證輸出</h2>
+    <p class="doc-meta">來自包內 <code>ALL_VERIFY.txt</code>(跨正則性驗證 + interval-Taylor 參數管驗證合併輸出,含 W-14 回溯重證結果),逐行照登。</p>
+    <pre class="validation-block" id="validation-out"><code>載入中…</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">W-14 回溯重證的機器可讀證書(<code>RH-W-14_corrected_lipschitz_reaudit.json</code>)已列在下方,可直接下載核對。</p>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/RH_W_15_工程包_v0.1_完整包.zip" download>下載完整封包 (253.6 KB)</a>
+    <p class="zip-note">sha256 74755c497650d207840ef0169b41b4be35031f7d5961380209871d09f7d36540</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用 <a href="../w17-v0.1/">W-17</a>。<a href="../../">回 AI 自主研究封存庫</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">載入失敗:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-15_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, summary]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}</td>
+        <td>${amralEsc(summary)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>狀態</th><th>子 GAP</th><th>摘要</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        本包內 ${closed}/${body.length} 已關閉
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "程式": [], "驗證紀錄": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (ext === "csv" || ext === "json") groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+      else groups["驗證紀錄"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-15_IntervalTaylor參數管擴張_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-15_阿基米德支撐外尾修正與W14回溯重證_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-15_GAP更新與Batch01進度_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 2 · 非半穩定家族 · BSD 猜想 · AMRAL</title>
+<meta name="description" content="BSD Phase 2:為 Banwait-Huang 方法不覆蓋的非半穩定(non-semistable)曲線,構造顯式的 strong-BSD twist family。核心工具是把 Fouquet-Wan 的 arbitrary-reduction odd-p hypotheses 編譯成有限、可重播的 predicates。建置中,逐篇上線,目前 3/40。真正總數 40(29 篇主線 + 11 篇 Witness-Network/FW_H2 輔助支線),修正自原先估計的 33。不宣稱證明 BSD。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link active" href="../">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← BSD 猜想</a> · Phase 2</p>
+    <h1>Phase 2:非半穩定家族</h1>
+    <p class="subtitle">曲線 696.e1 顯式 Twist 家族 · 建置中 · 38 / 40 篇已上線 · 主線 00-28 完結</p>
+    <p class="lede">
+      Banwait–Huang 方法本身需要 semistability 這個結構性限制。Phase 2 的目標是為它不覆蓋的非半穩定
+      (non-semistable)曲線,用 Fouquet–Wan 的 arbitrary-reduction Iwasawa Main Conjecture 構造顯式的
+      strong-BSD twist family。核心難題是把「$\forall p>2$ 都要驗證」這個無窮量詞,壓縮成有限、可重播的
+      exceptional-prime certificate——不宣稱證明 BSD,每一篇都只回答已編譯清楚的條件對哪些曲線/質數成立。
+    </p>
+    <p class="notice">
+      建置中,逐篇上線,依原始文件順序閱讀。真實總數是 40 篇(修正自原先估計的 33):主線 29 篇(v0.1
+      NonSemistable Bridge → v0.2 FW Compiler → v0.3 First NonSemistable Family → v0.4 696e1 Referee Audit,
+      連續編號 00-28),加上一條獨立的「Witness-Network / FW_H2」輔助支線 11 篇(三篇 Neo.K 具名 theorem-note
+      論文 + FW-H2 條件的 local isogeny compiler)——這條支線在最初估計時完全被漏算,發現後補齊。2026-08-17
+      起步調加快為「一天 15 篇」。
+    </p>
+  </header>
+
+  <section id="docs">
+    <h2 class="doc-h2">已上線文件 · 主線</h2>
+    <nav class="case-grid" aria-label="Phase 2 主線文件">
+      <a class="case-card" href="./p/00-global-enclosure-consensus/">
+        <span class="k">00</span>
+        <h3>Phase 2 全局包圍共識</h3>
+        <p>砍掉 higher 2-descent/full 2-torsion/rank 1 三條主線,GO 進 Fouquet-Wan Hypothesis Compiler。</p>
+      </a>
+      <a class="case-card" href="./p/01-route-matrix/">
+        <span class="k">01</span>
+        <h3>Phase 2 路線矩陣</h3>
+        <p>八路線完整比較表。排序是「可擴張性」排序,不是數學難度排序。</p>
+      </a>
+      <a class="case-card" href="./p/02-fouquet-wan-hypothesis-compiler/">
+        <span class="k">02</span>
+        <h3>Fouquet–Wan Hypothesis Compiler</h3>
+        <p>FW-H1/H2/H3 三假設。真正目標:infinite prime quantifier → finite certificate。</p>
+      </a>
+      <a class="case-card" href="./p/03-quadratic-twist-invariance-bridge/">
+        <span class="k">03</span>
+        <h3>Quadratic-Twist Invariance Bridge</h3>
+        <p>三候選引理證明 FW(E,p) ⟹ FW(E_d,p)。只解決 ∀d,∀p&gt;2 未觸碰。</p>
+      </a>
+      <a class="case-card" href="./p/04-finite-exceptional-prime-problem/">
+        <span class="k">04</span>
+        <h3>Finite Exceptional Prime Problem</h3>
+        <p>H1 有限、H3 有 heuristic、H2 最不清楚。失敗標準:不得用「tested up to B」代替全稱量詞。</p>
+      </a>
+      <a class="case-card" href="./p/05-nonsemistable-family-theorem-schema/">
+        <span class="k">05</span>
+        <h3>Non-Semistable Family Theorem Schema</h3>
+        <p>候選定理完整 proof obligations。兩大 gap:∀p&gt;2 未閉合、period/Manin constant 拼接。</p>
+      </a>
+      <a class="case-card" href="./p/06-phase2-agent-experiment/">
+        <span class="k">06</span>
+        <h3>Phase 2 第一個 Agent 實驗</h3>
+        <p>七步驟實驗設計。H2/H3 各指派獨立 Agent 符號推導,不得默認與 Banwait 判準相同。</p>
+      </a>
+      <a class="case-card" href="./p/07-stop-rules-and-claim-ladder/">
+        <span class="k">07</span>
+        <h3>停止規則與 Claim Ladder</h3>
+        <p>Phase 2 自己的 C0-C6 七級證書階梯。三輪停止規則:避免資料越跑越多但量詞沒縮。v0.1 完結。</p>
+      </a>
+      <a class="case-card" href="./p/08-fw-weight2-exact-translation/">
+        <span class="k">08</span>
+        <h3>FW Theorem 1.7:Weight-2 Exact Translation</h3>
+        <p>H2 真正被推導出來:H2 FAIL ⟺ αβ⁻¹∈{χ_cyc,χ_cyc⁻¹}。H3 也精確 specialise。v0.2 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/09-fw-h3-exact-compiler/">
+        <span class="k">09</span>
+        <h3>FW-H3 Exact Elliptic-Curve Compiler</h3>
+        <p>Uniform certificate:g_-(E)=2^a ⟹ 對全部 p&gt;2,H3=PASS。∀p&gt;2 首次在單一假設上壓縮成有限檢查。</p>
+      </a>
+      <a class="case-card" href="./p/10-fw-h2-and-ordinary-obstruction/">
+        <span class="k">10</span>
+        <h3>FW-H2 Compiler 與 Ordinary Obstruction</h3>
+        <p>Good supersingular:H1/H2 自動 PASS。Ordinary 沒有乾淨 finite-exception theorem,FW 範圍收窄為 additive+supersingular。</p>
+      </a>
+      <a class="case-card" href="./p/11-derived-supersingular-fw-bridge/">
+        <span class="k">11</span>
+        <h3>Derived Supersingular FW Bridge</h3>
+        <p>∀p&gt;2 首次在整個 good supersingular 分支真正閉合。Safe period condition:第一版要求 c_E=1。</p>
+      </a>
+      <a class="case-card" href="./p/12-hybrid-odd-prime-router/">
+        <span class="k">12</span>
+        <h3>Hybrid Odd-Prime Router</h3>
+        <p>P0-P5 六類路由表,每類分派既有最合適的工具。∀p&gt;2 拆成四塊,才是可行的 quantifier compression。</p>
+      </a>
+      <a class="case-card" href="./p/13-candidate-nonsemistable-strong-bsd-family/">
+        <span class="k">13</span>
+        <h3>Candidate Non-Semistable Strong-BSD Family Schema</h3>
+        <p>B0-B5 六個可驗證條件。六項未完成 proof obligations,明確聲明不升級為 theorem。v0.2 完結。</p>
+      </a>
+      <a class="case-card" href="./p/14-candidate-sieve/">
+        <span class="k">14</span>
+        <h3>Candidate Sieve:為什麼 696.e1 冒出來?</h3>
+        <p>696.e1 首次登場,搭配控制組 116.b1 精確定位真正必要條件。v0.3 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/15-696e1-base-certificate/">
+        <span class="k">15</span>
+        <h3>696.e1 Base Certificate</h3>
+        <p>完整 base 證書。BSD(E,2) 繼承自既有 conductor≤5000 文獻,非本系列新證。</p>
+      </a>
+      <a class="case-card" href="./p/16-696e1-chebotarev-support/">
+        <span class="k">16</span>
+        <h3>696.e1 Chebotarev Support Family</h3>
+        <p>精確 Chebotarev density 1/24。第一個具體驗證的 twist parameter d=241。</p>
+      </a>
+      <a class="case-card" href="./p/17-696e1-all-prime-router/">
+        <span class="k">17</span>
+        <h3>696.e1 All-Prime Router</h3>
+        <p>四類分支(additive/ordinary/multiplicative/supersingular)全部窮盡驗證通過,無遺漏。</p>
+      </a>
+      <a class="case-card" href="./p/18-provisional-derived-theorem/">
+        <span class="k">18</span>
+        <h3>Provisional Derived Family Theorem</h3>
+        <p>候選定理首次成文:∀q∈P, BSD(E_q)。11 項 CLOSED,5 項待獨立 referee 核對。v0.3 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/19-independent-referee-handoff/">
+        <span class="k">19</span>
+        <h3>Independent Referee / Local Agent Handoff</h3>
+        <p>六位對抗式 referee,姿態是「先嘗試推翻」。A-E 全過才升級,一項失敗就退回確切引理。v0.3 完結。</p>
+      </a>
+      <a class="case-card" href="./p/20-adversarial-referee-verdict/">
+        <span class="k">20</span>
+        <h3>Adversarial Referee Verdict</h3>
+        <p>proof router 沒被打死,但抓到一個真實引用錯誤。Claim level 升到 DERIVED THEOREM CANDIDATE。v0.4 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/21-base-bsd-anchor-repair/">
+        <span class="k">21</span>
+        <h3>Base BSD Anchor Repair</h3>
+        <p>Miller「most」被誤引為「all」,改引 Creutz-Miller Theorem 1.1(無條件版本)修復。</p>
+      </a>
+      <a class="case-card" href="./p/22-odd-prime-source-audit/">
+        <span class="k">22</span>
+        <h3>Odd Prime Source Audit</h3>
+        <p>三分支逐一追溯到具名定理(BSTW 9.21c、Skinner Theorem C)重驗,全部 PASS。</p>
+      </a>
+      <a class="case-card" href="./p/23-fw-supersingular-source-audit/">
+        <span class="k">23</span>
+        <h3>Fouquet–Wan Supersingular Source Audit</h3>
+        <p>對照 FW 論文原文 normalization 重驗 H1/H2/H3,全部 PASS。period issue 留待下一份稽核。</p>
+      </a>
+      <a class="case-card" href="./p/24-manin-period-audit/">
+        <span class="k">24</span>
+        <h3>Manin / Period Audit</h3>
+        <p>good supersingular p 自動 p∤c_{E_q},period issue 閉合。E_q 的 isogeny class 是單元素,自動 optimal。</p>
+      </a>
+      <a class="case-card" href="./p/25-chebotarev-referee-audit/">
+        <span class="k">25</span>
+        <h3>Chebotarev Referee Audit</h3>
+        <p>獨立重算整個 Chebotarev 論證,密度同樣是 1/24,兩次計算互相印證。</p>
+      </a>
+      <a class="case-card" href="./p/26-novelty-search-log/">
+        <span class="k">26</span>
+        <h3>Novelty Search Log</h3>
+        <p>arXiv 搜尋未找到直接對應結果,但明確聲明 NO HIT ≠ NOVELTY PROOF。</p>
+      </a>
+      <a class="case-card" href="./p/27-revised-derived-theorem-candidate/">
+        <span class="k">27</span>
+        <h3>Revised Derived Theorem Candidate</h3>
+        <p>最終 proof router:六類質數各對應具名定理,窮盡覆蓋。Claim label = DERIVED THEOREM CANDIDATE。</p>
+      </a>
+      <a class="case-card" href="./p/28-submission-gate/">
+        <span class="k">28</span>
+        <h3>Submission / Publication Gate</h3>
+        <p>發表前五項功課;建議措辭明確迴避「全新定理」宣稱。<strong>主線 00-28 完結,29/29。</strong></p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="witness-network">
+    <h2 class="doc-h2">已上線文件 · Witness-Network / FW_H2 側線</h2>
+    <p class="section-note">
+      跟主線平行的另一條線,同一個 696.e1 結果,但寫成 Neo.K 具名、帶編號 Lemma/Proposition 與真實文獻引用的正式論文,
+      逐版把單一曲線的證明抽象成可重用的一般判準。11 篇,連續編號。
+    </p>
+    <nav class="case-grid" aria-label="Phase 2 Witness-Network 側線文件">
+      <a class="case-card" href="./p/29-theorem-note-696e1/">
+        <span class="k">29</span>
+        <h3>696.e1 Theorem Note v1.0</h3>
+        <p>Neo.K 具名完整論文。Theorem 1.1 + 六條引理 + 真實數值 sanity check(27667/664579 vs 1/24)。</p>
+      </a>
+      <a class="case-card" href="./p/30-two-witness-criterion/">
+        <span class="k">30</span>
+        <h3>A Two-Witness Criterion</h3>
+        <p>把單一曲線證明抽象成 T1-T7 七條件的可重用判準。696.e1 降格為具體 Corollary。</p>
+      </a>
+      <a class="case-card" href="./p/31-witness-network-criterion/">
+        <span class="k">31</span>
+        <h3>A Finite-Exception Witness-Network Criterion</h3>
+        <p>側線最重要一篇:gcd 取代 valuation-1、首次允許固定奇 additive 質數。「瓶頸從無窮量詞變成有限 compiler」。</p>
+      </a>
+      <a class="case-card" href="./p/32-gcd-witness-lemmas/">
+        <span class="k">00</span>
+        <h3>GCD Witness Lemmas</h3>
+        <p>31 篇 Section 2 的精簡速查版:三條引理都歸結到同一個 gcd 引理。</p>
+      </a>
+      <a class="case-card" href="./p/33-odd-additive-period-barrier/">
+        <span class="k">01</span>
+        <h3>Odd Additive Period Barrier</h3>
+        <p>為什麼固定 additive 質數比 good supersingular 難:period normalization,不是 Iwasawa 定理本身。</p>
+      </a>
+      <a class="case-card" href="./p/34-next-compiler-targets/">
+        <span class="k">02</span>
+        <h3>Next Compiler Targets</h3>
+        <p>四項優先順序交棒下一套件。要求輸出五態,UNKNOWN 必須可見。<strong>Witness-Network 完結。</strong></p>
+      </a>
+      <a class="case-card" href="./p/35-fw-h2-jordan-holder-lemma/">
+        <span class="k">03</span>
+        <h3>FW-H2 Jordan–Hölder Lemma</h3>
+        <p>精確引理:FW17-H2 FAIL ⟺ 某 Jordan-Hölder character 是 quadratic 或 trivial。首個正式證明。</p>
+      </a>
+      <a class="case-card" href="./p/36-local-p-isogeny-kernel-criterion/">
+        <span class="k">04</span>
+        <h3>Local p-Isogeny Kernel Criterion</h3>
+        <p>抽象判準翻譯成可計算的 isogeny kernel 條件。只需一條 isogeny + dual,不必列舉全部。</p>
+      </a>
+      <a class="case-card" href="./p/37-kodaira-prefilters-and-nogo/">
+        <span class="k">05</span>
+        <h3>Kodaira Prefilters and No-Go Results</h3>
+        <p>三個免算捷徑 + 正式禁止未經證明的 Kodaira-only 推論表。</p>
+      </a>
+      <a class="case-card" href="./p/38-witness-network-v03-integration/">
+        <span class="k">06</span>
+        <h3>Witness-Network v0.3 Integration</h3>
+        <p>組裝成完整 FW_PROFILE 偽代碼。A2 H2 UNKNOWN → exact finite local isogeny test。<strong>38/40。</strong></p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← BSD 猜想</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-16 · 三參數近零譜管 · AMRAL</title>
+<meta name="description" content="RH-W-16 工程包:把核尺度 h 本身也納入參數域,建立第一個三維有理盒(h,d,σ)。八個角點的真實 Weil 區間矩陣搭配三線性凸插值與二階 Taylor 餘項,exact 證明整盒 10^-8<λ<5×10^-8。Batch 01 進度 16/20。RH_CLAIM=False。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-16_三參數近零譜管_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI 自主研究封存庫</a>
+    <span>/</span>
+    <a href="../../#w16-v0.1">W 工程包</a>
+    <span>/</span>
+    <span>W-16</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W 工程包</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">EXACT_THREE_PARAMETER_TUBE_CERTIFICATE_OK</span>
+    </div>
+    <h1>RH-W-16:三參數近零譜管</h1>
+    <p class="h1-sub">把核尺度 <code>h</code> 本身也納入參數域,建立第一個三維有理盒 <code>|h−1797/10000|≤10⁻⁸, |d−893/5000|≤10⁻⁷, |σ|≤10⁻⁷</code> — 八個角點各自組裝完整真實 Weil 區間矩陣,三線性凸插值加二階 Taylor 餘項,exact 證明整個非退化三維體積內都嚴格滿足 <code>10⁻⁸&lt;λ_min&lt;5×10⁻⁸</code>。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— 包內驗證器自己輸出的宣稱狀態,原樣照登。三維有限參數管 ⇏ RH;沒有找到真實 Weil 負 witness。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他封包的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">屬於</span><a href="../../packages/RH_AI_研究起點_v1.9_三參數近零譜管_完整包.zip">研究起點 v1.9 · 三參數近零譜管</a></div>
+      <div class="conn-card"><span class="k">上一包</span><a href="../w15-v0.1/">RH-W-15:Interval–Taylor 參數管擴張</a></div>
+      <div class="conn-card"><span class="k">下一包</span><a href="../w17-v0.1/">RH-W-17:腔室感知切分與事件薄層</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>16 / 20</div>
+    </div>
+    <blockquote class="cite">「本輪建立了第一個三維連續近零正譜參數盒……它證明近零正譜結構不只存在於單點或固定尺度平面,而至少延伸到一個非退化三維體積。但它仍然只是固定十維字典上的有限維結果:三維有限參數管 ⇏ RH。」— 摘自本包 01 文件第 10 節。</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP 台帳 · GAP Ledger</h2>
+    <p class="section-note">來自包內 <code>RH-W-16_subgaps_v0.1.csv</code>,狀態與證據都是包自己記的,不是我事後加的判斷。</p>
+    <div id="ledger-table"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="corners">
+    <h2 class="doc-h2">八角非嚴格譜觀察</h2>
+    <p class="section-note">來自包內 <code>corner_spectrum_observation.csv</code> — 八個角點的 midpoint 廣義特徵值,只作探索觀察,不參與證書。</p>
+    <div class="datatable-wrap" id="csv-corners"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">重放 · Reproduce</h2>
+    <div class="reproduce">
+      <div>純有理 exact verifier(不重新生成超越矩陣,只用已儲存區間):</div>
+      <pre><code>python verify_three_parameter_tube.py</code></pre>
+      <div>完整重建八角矩陣(較慢,需重新生成八套 jump-resolved 阿基米德矩陣):</div>
+      <pre><code>python build_three_parameter_tube.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · 三參數近零譜管</h2>
+    <p class="doc-meta">主文件 — 為何 h 是真正的新方向(同時改變支撐寬度/取樣位置/Gram/端點/prime-power/阿基米德尾)、三線性角點架構、尺度方向的二階導數、exact 上下界證書。</p>
+    <div class="doc" id="doc01-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · 尺度曲率證書與計算架構</h2>
+    <p class="doc-meta">本輪新增的計算負擔(八角需要八套阿基米德資料)、可重用資料層、證書與探索的分離、下一個工程問題(chamber-aware subdivision)。</p>
+    <div class="doc" id="doc02-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · GAP 更新與 Batch 01 進度</h2>
+    <p class="doc-meta">已關閉/保持開放的子節點、Batch 01 進度 16/20、剩餘節點(W-17 腔室感知切分、W-18 證書後端統一、W-19 對抗性可重現性審計、W-20 Batch 01 統合)。</p>
+    <div class="doc" id="doc03-body"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">驗證輸出</h2>
+    <p class="doc-meta">來自包內 <code>ALL_VERIFY.txt</code>,逐行照登。</p>
+    <pre class="validation-block" id="validation-out"><code>載入中…</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">八角完整區間證書(<code>three_parameter_tube_certificate.json</code>)體積較大,沒有逐一列出,都在完整 zip 裡。</p>
+    <div id="filelist-out"><p class="loading">載入中…</p></div>
+    <a class="zip-dl" href="../../packages/RH_W_16_工程包_v0.1_完整包.zip" download>下載完整封包 (299.6 KB)</a>
+    <p class="zip-note">sha256 479c91f6238865578e8743d2631d7d2397c1d8b39ab5a60f085a7790091dd68d</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>逐包詳細頁格式沿用 <a href="../w17-v0.1/">W-17</a>。<a href="../../">回 AI 自主研究封存庫</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">載入失敗:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-16_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, summary, evidence]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(summary)}</span></td>
+        <td>${amralEsc(evidence)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>狀態</th><th>子 GAP</th><th>證據</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        本包內 ${closed}/${body.length} 已關閉
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadCornersTable() {
+  const el = document.getElementById("csv-corners");
+  try {
+    const rows = amralParseCSV(await F("corner_spectrum_observation.csv"));
+    const [head, ...body] = rows;
+    const th = head.map((h) => `<th>${amralEsc(h)}</th>`).join("");
+    const trs = body.map((r) => `<tr>${r.map((v) => `<td>${amralEsc(v)}</td>`).join("")}</tr>`).join("");
+    el.innerHTML = `<table class="data"><thead><tr>${th}</tr></thead><tbody>${trs}</tbody></table>`;
+    el.insertAdjacentHTML("afterend",
+      '<p class="rigor-note">rigor = FLOATING_POINT_ONLY — 這張表只是探索觀察,沒有進入證書。</p>');
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "文件": [], "資料": [], "程式": [], "驗證紀錄": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["文件"].push(f);
+      else if (ext === "csv" || ext === "json") groups["資料"].push(f);
+      else if (ext === "py") groups["程式"].push(f);
+      else groups["驗證紀錄"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">檔案清單載入失敗:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-16_三參數近零譜管_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-16_尺度曲率證書與計算架構_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-16_GAP更新與Batch01進度_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadCornersTable();
+loadFiles();
+</script>
+</body>
+</html>
