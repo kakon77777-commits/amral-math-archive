@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BSD 猜想 · AMRAL</title>
-<meta name="description" content="AMRAL 案例:Birch and Swinnerton-Dyer 猜想(Clay Millennium Prize 問題之一)。不宣稱證明 BSD——建立曲線級證書階梯(C0-C10),精確分級每條曲線、每個質數究竟證到哪一層。四條子線:Phase 0 全局包圍框架(已上線)、P5 針對 rank-2 曲線 389.a1 在質數 p=11 的強 BSD 深度技術工作(已上線,核心比較仍 OPEN)、Phase 1 重現 Banwait-Huang 2026 演算法化普查、Phase 2 建構非半穩定曲線 696.e1 的顯式 twist 家族。">
+<meta name="description" content="AMRAL 案例:Birch and Swinnerton-Dyer 猜想(Clay Millennium Prize 問題之一)。不宣稱證明 BSD——建立曲線級證書階梯(C0-C10),精確分級每條曲線、每個質數究竟證到哪一層。四條子線全數上線:Phase 0 全局包圍框架、P5 針對 rank-2 曲線 389.a1 在質數 p=11 的強 BSD 深度技術工作(核心比較仍 OPEN)、Phase 1 重現 Banwait-Huang 2026 演算法化普查(COMPLETE)、Phase 2 構造非半穩定曲線 696.e1 的顯式 twist 家族,40/40 COMPLETE,狀態 DERIVED THEOREM CANDIDATE。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -37,7 +37,7 @@
       做了正式審計並否決,是這條線紀律最高的地方。
     </p>
     <p class="notice">
-      四條子線熟度不同:Phase 0、P5、Phase 1 已全數上線;Phase 2 正逐篇建頁中(9/40)——下方先列出目前的真實狀態,不預先宣稱完成度。
+      四條子線已全數上線:Phase 0、P5、Phase 1、Phase 2(40/40 COMPLETE)——下方列出各線目前的真實狀態,P5 核心比較仍 OPEN,不預先宣稱完成度。
     </p>
   </header>
 
@@ -77,16 +77,16 @@
     </nav>
   </section>
 
-  <section id="roadmap">
-    <h2 class="doc-h2">Phase 2(建置中)</h2>
-    <p class="section-note">下面的狀態描述直接來自批次自己的文件,不是我方推論或美化。</p>
-    <div class="case-grid">
+  <section id="phase2">
+    <h2 class="doc-h2">Phase 2 · 696.e1 非半穩定家族</h2>
+    <p class="section-note">2026-08-18 · 40 篇文件已全數上線,40/40 COMPLETE · 狀態:DERIVED THEOREM CANDIDATE,novelty 待查</p>
+    <nav class="case-grid" aria-label="Phase 2">
       <a class="case-card" href="./phase2/">
-        <span class="k">Phase 2 · 非半穩定家族 · 38/40 建置中</span>
+        <span class="k">非半穩定家族 · 40 篇</span>
         <h3>曲線 696.e1 顯式 Twist 家族</h3>
-        <p>為 Banwait–Huang 方法不覆蓋的非半穩定曲線構造顯式無窮 twist 家族(密度 1/24)。已推導出 FW-H2 的精確 representation-level predicate。經內部對抗式審查(6 個子 referee)抓到並修正一個引用錯誤,目前狀態:「DERIVED THEOREM CANDIDATE」,尚未升格為新定理,待獨立外部覆核。</p>
+        <p>為 Banwait–Huang 方法不覆蓋的非半穩定曲線構造顯式無窮 twist 家族(密度 1/24)。主線 29 篇收在「DERIVED THEOREM CANDIDATE」(經 6 個子 referee 對抗式審查,抓到並修正一個引用錯誤,novelty 待獨立外部覆核);獨立側線 11 篇(Witness-Network/FW_H2)把單一曲線結果推廣成可重用的七條件判準,最終把 FW-H2 判準規格化成一支要求完整可 replay 輸出的可執行函式,明確禁止浮點近似與 heuristic 升級。</p>
       </a>
-    </div>
+    </nav>
   </section>
 
   <footer class="sitefoot">
