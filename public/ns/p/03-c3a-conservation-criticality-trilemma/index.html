@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-A:守恆—臨界—正定三難 · NS · AMRAL</title>
+<meta name="description" content="C2 證明純量可加預算不足以排除 blow-up 後,本輪從三個自然二次量(能量、helicity、臨界 Ḣ^(1/2) 大小)出發,發現它們把「正定」「尺度臨界」「非線性守恆」三個性質分散到不同量上,無法同時取得——Conservation-Criticality-Positivity Trilemma。用 helical 分解 u=u⁺+u⁻,證明兩個手性扇區的非線性生成率必然相等(R₊=R₋),定義 critical helical pair-production rate R,主定理:blow-up 迫使 ∫[R]₊dt 發散——這是第一個真正使用完整 N-S 非線性結構(而非只用能量恆等式)的不可逃避條件。引用 Biferale-Titi 的 helical-decimated 全域正則性結果,說明移除相反手性自由度後三難確實可解除,證明混合手性不是可忽略的裝飾。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>03 · C3-A:守恆—臨界—正定三難</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 03</span>
+      <span class="tag">C3-A · 三難首篇</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-A:守恆—臨界—正定三難與雙手性成對生成發散</h1>
+    <p class="h1-sub">C2 已證明純量可加能量預算單獨無法排除 critical geometric cascade,本輪正式使用 true N-S nonlinearity 的更細結構。從三個自然二次量出發:動能 $\|u\|_2^2$(正定、次臨界、非線性守恆)、helicity $H$(尺度臨界、非線性守恆,但正負不定)、臨界 $\|u\|_{\dot H^{1/2}}^2$(正定、尺度臨界,但無精確非線性守恆)——製成表格後發現三個性質(positive/critical/nonlinearly-conserved)無法由這三個最自然的量同時取得,構成 <strong>Conservation–Criticality–Positivity Trilemma</strong>。用 helical 投影 $u=u^++u^-$,定義正負扇區的臨界大小 $H_\pm=\|D^{1/2}u^\pm\|_2^2$,由非線性 helicity 守恆推出兩扇區的生成率必然相等 $\mathcal R_+=\mathcal R_-$,共同值 $\mathcal R$ 稱為 <strong>critical helical pair-production rate</strong>。主定理(12.1):若 $T_\ast$ 有限 blow-up,則 $\int_0^{T_\ast}[\mathcal R]_+dt=\infty$——證明只需 $\dot H^{1/2}\hookrightarrow L^3$ 把 C1 的 $L^3$ escape 轉成臨界二次量發散,再用 pair-production identity 排除有限預算。文件強調這是<strong>第一個真正用到完整 $B(u,u)$ 結構</strong>而非只用能量恆等式的不可逃避條件,比 C2 的 critical toll 更細——$\mathcal R$ 不是能量通量,是 helical 座標下的特定投影。引用 Biferale–Titi 對 sign-definite helical-decimated N-S 的全域正則性結果作外部對照:移除相反手性自由度後,helicity 變 sign-definite 且等於臨界大小,三難確實解除,可證全域正則——這證明混合手性自由度不是可以隨意忽略的裝飾,而是真正的困難來源。文件也提出候選 minority-factor estimate(用兩扇區中較小者控制 $\mathcal R$)但明確標記 CANDIDATE LEMMA,不得當定理使用。</p>
+    <div class="claim-box">
+      證明 Conservation-Criticality-Positivity Trilemma(三個自然性質無法由單一二次量同時取得);證明兩手性扇區生成率相等 R₊=R₋;主定理:blow-up ⟹ 臨界成對生成率的正部分積分發散——第一個真正用完整 N-S 結構(非僅能量恆等式)的不可逃避條件。minority-factor estimate 與持續三元障礙仍 OPEN
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../02-c2-critical-toll-spike-packing/">02 · C2:臨界通行費與尺度盲預算 No-Go</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../04-c3b-bihelical-equalization/">04 · C3-B:雙手性臨界能量等化</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>04 / 67</div>
+    </div>
+    <blockquote class="cite">「這不等於已證明『helicity 是唯一問題』。它只表示:在正定臨界 Ḣ^(1/2) 大小與精確非線性 helicity 結構同時保留時,任何 blow-up 都必須穿過這個 pair-production channel。」— 摘自本文結論。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
