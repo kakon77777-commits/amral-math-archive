@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-H:Ancestry Renormalization 與 Critical Compactness Barrier · NS · AMRAL</title>
+<meta name="description" content="把 C3-G 條件式抽出的因果譜系做黏性正規化的臨界重新標度,問能否直接得到非平凡 ancient critical element再套 backward uniqueness。裁決:不能直接。first-crossing unit shell 在標度下保留(Persistent First-Crossing Trace),unit-shell snapshot 可取得非零 compact profile(定理 9.1,Arzelà–Ascoli),backward lifespan 趨於無限。但引用外部 Seregin 定理,證明完整重新標度場的全域 L³ 與 Ḣ^(1/2) 臨界範數必須發散(Renormalized global critical-norm divergence)——Critical Compactness Barrier:packet anchor compact,但完整臨界場 noncompact,不能直接套用需要 bounded critical sequence 的 Kenig-Koch/Gallagher-Koch-Planchon 緊緻性定理。第二個 no-go:正規化時間差 δn 可能坍縮為零,嚴格因果性不是重整化封閉性質。給出三分支(完全緊緻/背景缺陷/因果坍縮)。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3H_Ancestry_Renormalization_CriticalCompactnessBarrier_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>10 · C3-H:Ancestry Renormalization</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 10</span>
+      <span class="tag">C3-H · Compactness Barrier</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-H:Ancestry Renormalization、Unit-Shell Anchor 與 Critical Compactness Barrier</h1>
+    <p class="h1-sub">C3-G 已在明確假設下建立條件式因果譜系。本輪把這條譜系做黏性正規化的臨界重新標度 $v_n(y,s)=\nu^{-1}\lambda_n^{-1}u(x_n+y/\lambda_n,t_n+s/(\nu\lambda_n^2))$,問能否直接得到非平凡 ancient critical element,再套用既有 backward uniqueness/rigidity 定理。裁決明確:<strong>不能直接</strong>。因 first crossing 定義,重新標度場保留 <strong>Persistent First-Crossing Trace</strong>(定理 5.1):$s<0$ 時 unit shell 振幅嚴格小於門檻,$s=0$ 時恰好等於門檻——純標度後果。用 Bernstein 一致導數界加 Arzelà–Ascoli 對角抽取,證明 <strong>Unit-Shell Snapshot Compactness</strong>(定理 9.1):存在非零、光滑、band-limited 的極限 profile $w_\ast$,滿足 helical eigen-relation,且具有真正的非零局部臨界質量。backward lifespan 因 $\nu\lambda_n^2t_n\to\infty$ 而趨於 $(-\infty,0]$。然而文件引用外部 Seregin 定理(potential blow-up 要求 $\|u(t)\|_3\to\infty$,不只是 $\limsup$)加上臨界標度不變性,證明 <strong>Renormalized global critical-norm divergence</strong>(定理 13.1):$\|v_n(0)\|_3\to\infty$,$\dot H^{1/2}$ 範數同樣發散——這就是 <strong>Critical Compactness Barrier</strong>(定理 15.1):unit-shell anchor 緊緻,但完整重新標度場在 $L^3$、$\dot H^{1/2}$ 中都不有界,因此不能直接套用需要 bounded critical sequence 的 Kenig–Koch 或 Gallagher–Koch–Planchon 緊緻性/profile decomposition 定理——文件明確指出振幅正規化(除以 $L^3$ 範數)也不是合法 N-S 重整化,因為那樣方程本身會被改寫。剩餘發散部分必須顯式保存為 <strong>critical background defect</strong>,不可靜默丟棄(呼應 X 積分的非坍縮精神)。第二個 no-go 出現在因果邊的重新標度:正規化時間差 $\delta_n=\nu\lambda_n^2(t_n^c-t_n^p)$ 只知道 $0<\delta_n\le\theta$,沒有一致正下界,完全可能 $\delta_n\to0$——<strong>逐尺度合法不等於極限合法</strong>,嚴格因果性不是重整化封閉性質。文件最後給出 <strong>Renormalization Trichotomy</strong>:Branch A(完全緊緻,但已證不可能是有界全域 $L^3$)、Branch B(背景缺陷,需分類發散去向)、Branch C(因果坍縮,需要 activation-depth 而非物理時間作序參數)。</p>
+    <div class="claim-box">
+      證明 unit-shell snapshot 緊緻(非零、光滑、正臨界質量),但引用外部定理證明完整臨界場全域範數必發散——Critical Compactness Barrier,不能直接套用既有 bounded-critical-sequence 緊緻性定理。第二個 NO-GO:正規化時間差可能坍縮為零,逐尺度合法不等於極限合法
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../09-c3g-first-crossing-causal-ancestry/">09 · C3-G:First-Crossing 因果前沿</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../11-c3i-frontier-uv-cap-defect-trichotomy/">11 · C3-I:Frontier UV Cap</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>11 / 67</div>
+    </div>
+    <blockquote class="cite">「逐尺度合法 ⟹̸ 極限合法。這正好是 X-Integration 最重要的極限守衛之一。」— 摘自本文第 43 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3H_Ancestry_Renormalization_CriticalCompactnessBarrier_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3H_Ancestry_Renormalization_CriticalCompactnessBarrier_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

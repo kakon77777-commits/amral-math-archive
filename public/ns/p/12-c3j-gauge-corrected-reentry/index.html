@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-J:Moving-Gauge Re-entry Audit 與 Flux-Variation No-Go · NS · AMRAL</title>
+<meta name="description" content="修正「重新進入」本身的定義:移動的頻率前沿或空間核心會產生純粹的座標重新標記(gauge sweep),不是真正的物理輸運——用 Moving Spectral/Spatial Balance Identity 把表觀變化精確拆成 gauge 項與真正流量項。扣除 gauge 後,證明兩個真正有限性結果:固定絕對殼層最多能直接餵有限個 frontier 世代(Absolute-Shell Direct-Reuse Bound),固定殼層+手性的完整門檻循環次數有限(Fixed-Shell Hysteretic Re-entry Bound,Lipschitz 論證)。但正規化時間差仍可能趨零(Energy-Only Time-Gap No-Go),而且最關鍵的是:帶號守恆只控制淨流量,不控制正流量總變差(Signed-Flux Variation No-Go,顯式反例 Φ_N=N sin(Nt))。「重新進入=有限可加成本」第二次失敗。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3J_GaugeCorrected_Reentry_Hysteresis_NoGo_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>12 · C3-J:Moving-Gauge Re-entry Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 12</span>
+      <span class="tag">C3-J · 本輪最尖銳的方法論修正</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-J:Moving-Gauge Re-entry Audit、Absolute-Shell Hysteresis 與 Flux-Variation No-Go</h1>
+    <p class="h1-sub">C3-I 留下的問題是:遠方缺陷若日後重新進入移動的譜系核心,是否必須支付成本?本輪先修正「重新進入」這個概念本身,是全系列到目前為止最尖銳的方法論修正。<strong>Moving Spectral Balance Identity</strong>(定理 4.1)把移動頻率前沿下的高側能量變化精確拆成 $\mathcal G_\Lambda$(gauge sweep,前沿本身移動掃過既有內容造成的表觀變化)與 $\Phi_\Lambda$(真正的非線性譜傳遞);<strong>Moving Spatial-Core Balance</strong>(定理 10.1)對移動空間核心做相同拆解,得到 $\mathcal G_\chi$。兩個 No-Go(§6、§12)證明:純粹的座標重新標記(相對高頻變相對低頻、核心外變核心內)不蘊含真正的物理輸運——同一絕對殼層可以純因為前沿移動就依序被標成 UV→frontier→IR,沒有任何實際頻譜傳遞。因此 X 積分必須同時保存絕對殼層 $q$ 與相對殼層 $q-Q$,不得互相取代。扣除 gauge 後,本輪證出兩個真正的有限性結果:<strong>Absolute-Shell Direct-Reuse Bound</strong>(定理 15.1,純組合):固定絕對殼層最多只能在 $C_L$ 個 frontier 世代中擔任直接局部 parent;<strong>Fixed-Shell Hysteretic Re-entry Bound</strong>(定理 21.1,Lipschitz 論證):固定殼層+手性的完整 $\beta_0\to\beta_1$ 門檻循環次數在有限時間內必然有限。但這兩個有限性結果都與 $q_n\to\infty$(無窮多相異殼層)完全相容,呼應 C3-F 的有限分枝反轉——「單一 token 有限重用」不蘊含「總譜系有限」。更嚴重的是兩個新 No-Go:正規化時間差 $\delta_q\gtrsim C\lambda_q^{-1}$ 只是最弱下界,$\delta_q\to0$ 仍未被排除(<strong>Energy-Only Time-Gap No-Go</strong>,C3-H 的因果坍縮問題無法靠純能量修復);而全文最關鍵的是 <strong>Signed-Flux Variation No-Go</strong>(命題 27.1):任何只用「$E(T)-E(0)+D=\int\Phi$」型的論證都只能控制帶號淨流量 $\int\Phi$,不能控制總變差 $\int|\Phi|$ 或正部分 $\int[\Phi]_+$——顯式反例 $\Phi_N(t)=N\sin(Nt)$ 在固定區間上帶號積分保持 $O(1)$,但正部分積分卻隨 $N$ 線性增長。所以「重新進入 = 有限可加成本」的策略第二次失敗:很多表觀重新進入只是 gauge sweep,扣除後真正流量仍是帶號的,可以反覆換方向。研究前線正式轉向 C3-K:不再數「看起來回來幾次」,改問這究竟是真正無窮的流量總變差,還是移動前沿反覆掃過一個早已高度擁塞的相空間場。</p>
+    <div class="claim-box">
+      證明大部分表觀「重新進入」其實是移動座標本身造成的 gauge sweep,不是真正輸運;扣除後得到兩個真正有限性結果(絕對殼層直接重用有界、固定殼層遲滯重啟有限)。但正規化時間差仍可能趨零,且最關鍵:帶號守恆只控制淨流量不控制正流量總變差——「重新進入=有限成本」策略第二次失敗
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../11-c3i-frontier-uv-cap-defect-trichotomy/">11 · C3-I:Frontier UV Cap</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>12 / 67</div>
+    </div>
+    <blockquote class="cite">「re-entry counting ⟹̸ monotone energy expenditure。」— 摘自本文第 36 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3J_GaugeCorrected_Reentry_Hysteresis_NoGo_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3J_GaugeCorrected_Reentry_Hysteresis_NoGo_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

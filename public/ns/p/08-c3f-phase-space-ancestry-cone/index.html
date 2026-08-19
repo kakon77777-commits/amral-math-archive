@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-F:Phase-Space 準局部性與 Ancestry Cone · NS · AMRAL</title>
+<meta name="description" content="第一次把物理空間直接放進證明路線。annular Leray nonlinearity 的 kernel 有 Schwartz 級 off-diagonal decay(Off-Diagonal Critical Interaction Lemma),推出 Locality-Coherence Tradeoff:相位效率 η_q 越低,需要保留的空間 ancestry 半徑越大,但只要 η_q 不以超多項式速度崩潰,半徑仍遠小於巨觀尺度。合併黏性窗口更新,證明 coherent 譜系的中心與時間被迫收斂進一個拋物線 phase-space cone。全文最重要的方向修正:證明「有限分枝」本身不是障礙——用 Kőnig 無窮引理,有限分枝+任意深度反而保證存在無窮 ray。真正未閉合的缺口是:瞬時交互作用不等於嚴格更早的因果 parent,因為同時刻的交互作用圖可能是循環的。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>08 · C3-F:Phase-Space 準局部性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 08</span>
+      <span class="tag">C3-F · 有限分枝反轉</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-F:Phase-Space 準局部性、Ancestry Cone 與有限分枝反轉</h1>
+    <p class="h1-sub">C3-E 把 local heterochiral survivor 壓成「快速黏性更新 + 相位/振幅效率 + 來源保存譜系」三個同時必要條件。本輪第一次把物理空間直接接進證明路線。核心是 <strong>Off-Diagonal Critical Interaction Lemma</strong>(定理 3.1):annular Leray nonlinearity 的 kernel 在頻率尺度 $\lambda_q$ 下具有 Schwartz 級的 off-diagonal 衰減 $(1+\lambda_qd)^{-N}$——父母空間支撐距離越遠,直接交互作用貢獻衰減越快,不用湍流標度假設,純粹是 Fourier 幾何。把空間切成邊長 $O(\lambda_q^{-1})$ 的 admissible dyadic packet,證明每個 output packet 只有有限個 core parent tuple(命題 7.1),尾端貢獻由定理 8.1 的 packet tail bound 控制。<strong>Locality–Coherence Tradeoff</strong>(定理 10.1):若相位效率 $\eta_q$ 不太小,可以固定一個與 $q$ 無關的半徑 $R_\ast$,使至少一半實際正生成歸因於這個半徑內的空間 parent core;$\eta_q\to0$ 時所需半徑會擴張,但只要不是超多項式速度崩潰,半徑仍遠小於巨觀尺度。合併黏性窗口更新(C3-E),證出 <strong>Ancestry Center Convergence</strong> 與 <strong>Parabolic Ancestry Cone Theorem</strong>(定理 19.1):coherent 譜系的空間中心收斂到單一點 $x_\ast$、時間收斂到 $T_\ast$,誤差分別壓進 $O(\lambda_n^{-1})$ 與 $O((\nu\lambda_n^2)^{-1})$——這與 Barker–Prange 的 Type-I 集中結果幾何相容,但文件明確聲明兩者是各自獨立的定理,不能互相偷換。<strong>全文最重要的方向修正</strong>在 §22:直覺上「每個 parent 只有有限 children」聽起來像能排除無窮級聯,但這是錯的——用 Kőnig 無窮引理,有根樹若根集有限、每節點只有有限 children、且樹有任意大深度,則必存在無窮 ray。所以有限分枝不是消滅無窮路徑,而是把模糊的聚合級聯壓成可抽取的具體譜系。文件把 C1c 拆成三個子問題:C1c-a(靜態 packet 來源選擇,本輪已給出有限核心選擇引理)、C1c-b(無窮路徑萃取,純組合定理)、C1c-c(因果方向,仍缺)——真正剩下的缺口是:同一時刻的瞬時交互作用圖可能存在循環(A→B 同時 B→A),不等於嚴格更早的因果 parenthood,必須用 Duhamel 時序才能真正建立因果關係。</p>
+    <div class="claim-box">
+      證明 off-diagonal critical interaction 呈 Schwartz 衰減;Locality-Coherence Tradeoff;coherent 譜系被迫收斂進拋物線 phase-space cone。關鍵方向修正:有限分枝不是障礙,Kőnig 引理下反而保證無窮 ray 存在。真正缺口:瞬時交互作用 ≠ 嚴格更早的因果 parent
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../07-c3e-viscous-window-renewal/">07 · C3-E:黏性窗口更新與 Zeno 相容性</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../09-c3g-first-crossing-causal-ancestry/">09 · C3-G:First-Crossing 因果前沿</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>09 / 67</div>
+    </div>
+    <blockquote class="cite">「finite branching ⟹̸ finite genealogy。」— 摘自本文第 22 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
