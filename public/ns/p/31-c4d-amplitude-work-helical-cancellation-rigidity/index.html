@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C4-D:Amplitude-to-Work Branching Bridge 與 Helical-Cancellation Rigidity · NS · AMRAL</title>
+<meta name="description" content="C4-C留下振幅不蘊含通量的障壁。本輪不再追求錯誤的直接蘊含,改在真正N-S演化上證一條分支橋。臨界殼層首次穿越先分持續性或快速穿越;快速穿越中,振幅最大點的黏性項不能為正,所以正號振幅變化必須由非線性源提供,再用能量頻寬限制把逐點源擴成殼層尺度的正功率球。因此每次快速穿越至少支付來源過量脈衝、正號殼層非線性功、或空間功抵銷三者之一。更關鍵的新結果:穩健異手性螺旋抵銷不是獨立逃逸通道,它必然同步產生相當量級的負號最高模能量功——螺旋抵銷只是能量功抵銷的臨界加權投影。振幅穿越因此被壓成有限分支族,直接蘊含仍是假的,但分支蘊含現在被證明成立。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4D_AmplitudeWork_HelicalCancellationRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>31 · C4-D:Amplitude-to-Work Bridge</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 31</span>
+      <span class="tag">C4-D · 部分閉合振幅障壁</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C4-D:Amplitude-to-Flux Branching Bridge、Local Work Cancellation 與 Helical-Cancellation Rigidity</h1>
+    <p class="h1-sub">C4-C 留下 Amplitude-to-Flux Barrier:振幅資訊不能單獨決定通量正負號。本輪不再追求錯誤的直接蘊含,改在真正 N–S 殼層演化上證一條分支橋。核心是 <strong>Persistence-or-Fast-Crossing Dichotomy</strong>(定理 5.1):任何臨界殼層首次穿越 $\beta_0\to\beta_1$,要嘛前一個完整黏性視窗都保持 $a>\beta_0$(可直接送回 C4-A 的持續性同步機制),要嘛是在一個黏性時間內完成的<strong>快速穿越</strong>——所以本輪只需處理快速穿越。<strong>Positive Amplitude Variation Requires Positive Nonlinear Source</strong>(定理 C4-D.2)用標準 max-envelope 論證證明:在振幅最大點,黏性項 $e\cdot\Delta f\le0$ 不能貢獻正號變化,所以任何正號 $M'(t)$ 都必須由非線性源提供,$-e\cdot N\ge M'>0$——這是精確的同時刻振幅/源耦合。快速穿越必須支付固定的正號變化預算,依來源效率 $\eta$ 分成好壞兩區,壞區給出 <strong>Nonlinear Source-Overcapacity Impulse</strong>(定理 14.1),好區則透過 <strong>Band-Limited Local Positive-Work Ball</strong>(定理 17.1,靠 Bernstein 連續性把逐點源擴成殼層尺度的正功率球)得到 <strong>Integrated Local Work Toll</strong>(定理 19.1)——一個真正尺度不變的局部非線性功代價。<strong>Local-to-Global Work Cancellation Identity</strong>(定理 22.1)證明局部正功不能憑空消失,若沒有變成殼層淨輸入就必須留下相應的空間負功。三者合併給出全輪核心 <strong>Amplitude-to-Work Branching Bridge</strong>(定理 23.1):每次快速穿越至少支付<strong>來源過量脈衝</strong> ∨ <strong>正號殼層非線性功</strong> ∨ <strong>空間功抵銷</strong>三者之一——標度審計(§40-41)顯示這兩個新分支都是尺度臨界的 $O(1)$,解釋了為何一般有限能量預算同樣關不掉它們,但這次是真正掛在 N–S 結構上,不是通用脈衝。若走正功分支,再依三元組秩與螺旋類別展開(秩缺陷、同手性、徑向間隙退化、穩健異手性)。<strong>全輪最重要的新定理</strong>是 <strong>Helical Cancellation Forces High-Mode Work Cancellation</strong>(§31,定理 C4-D.7):證明穩健異手性耦合比值 $\kappa_\tau=\mathcal R_\tau/(q_\tau\dot e_{q_\tau})\in[c_\ast,1]$ 對正負號皆成立,所以若螺旋成對生成被反向抵銷(即 C4-C 的抵銷分支),就<strong>必然</strong>同步產生相當量級的負號最高模能量功——<strong>螺旋抵銷不再是一個獨立的隱藏逃逸通道,它只是能量功抵銷的臨界加權投影</strong>,這比 C4-C 自己的結果更強。文件組出完整的振幅穿越分支樹(§34,八個具名分支 A-H),並宣布 <strong>Amplitude-to-Flux Barrier 部分閉合</strong>(§35):直接蘊含仍然是假的,但分支蘊含(振幅穿越 ⟹ 有限結構化分支集合)現在<strong>已證</strong>。文件也確認(§39)大部分分支已經接上既有的 C3 依賴圖,不是孤立的新開放問題,並用鴿籠論證得到 <strong>Recurrent Escape-Branch Reduction</strong>(定理 38.1):無限次臨界穿越、有限分支族 ⟹ 必有一個分支反覆出現——下一輪可以逐一攻各分支的剛性,而不必同時處理所有穿越逃逸。</p>
+    <div class="claim-box">
+      證明快速穿越振幅最大點的黏性項不能貢獻正號變化,正號變化必由非線性源提供,band-limit 擴成局部正功率球。得到核心 Amplitude-to-Work Branching Bridge:每次快速穿越至少支付來源過量、正號殼層功、或空間功抵銷之一。最重要新結果:證明穩健異手性螺旋抵銷必然同步負號最高模能量功——螺旋抵銷不是獨立逃逸通道。Amplitude-to-Flux Barrier 部分閉合:直接蘊含仍假,分支蘊含已證
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../30-c4c-shared-event-coupling-amplitude-flux-barrier/">30 · C4-C:Shared-Event Coupling</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>32 / 67 · C4(4/9)</div>
+    </div>
+    <blockquote class="cite">「helical cancellation ⟹ high-mode back-transfer——「helicity 正負互相抵掉」不再是一個完全獨立的隱藏通道。」— 摘自本文第 31、54 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C4D_AmplitudeWork_HelicalCancellationRigidity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4D_AmplitudeWork_HelicalCancellationRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
