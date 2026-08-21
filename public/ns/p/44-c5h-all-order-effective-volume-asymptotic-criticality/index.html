@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-H:All-Order Effective-Volume No-Go 與 Asymptotic-Critical Compatibility · NS · AMRAL</title>
+<meta name="description" content="C5-G拿到第一個theorem-ready固定階直接閘門,C5-H問能不能靠純體積論證把它一路升到k趨於無窮形成矛盾。答案是不能:發表定理本身帶有2^{-k}空間因子與4^{-k}時間因子,顯式構造一個完全光滑的單尺度分析波包模型,證明即使是最理想的光滑資料,純體積證書在高階仍會指數發散。加入L2傅立葉矩對數凸性後,證明譜頻率階梯必單調,但這完全不控制譜胞多重性——高譜頻率完全可以和無界多重性同時發生,譜級聯不蘊含物理集中。連用鏈式定理的漸近有利指數差(確實趨零)也救不回來,因為定理常數與多重性都可能同步發散壓過指數增益。因此正式宣告靜態全階有效體積封閉方案是死路,真正的高階前沿必須轉向分量符號一維微幾何與鏈式區段相容性。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5H_AllOrder_EffectiveVolume_AsymptoticCriticality_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>44 · C5-H:All-Order Volume No-Go</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 44</span>
+      <span class="tag">C5-H · 靜態全階體積路線判死</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-H:All-Order Effective-Volume Defects、Spectral–Multiplicity Ladders 與 Asymptotic-Critical Compatibility</h1>
+    <p class="h1-sub">C5-G 拿到第一個 theorem-ready 的固定階直接閘門。C5-H 問:如果假想倖存者對所有固定 $k$ 都保持 $\mathfrak G_k^{dir}>1$,能不能靠純體積論證一路升到 $k\to\infty$ 形成矛盾?**答案是不能,而且不只是固定階直接路線不行,連漸近有利的鏈式路線也不行,靠純體積本身。**先做誠實的定理稽核:Grujić–Xu(2024)Theorem 3.5 的空間尺度帶 $2^{-k}$ 因子,容許後期時間窗帶 $4^{-k}$ 因子——這是發表定理自身內建的指數懲罰,不是 C5 方法論的產物。顯式構造一個純推論式的光滑單尺度分析波包模型(明確聲明不是 N-S 反例,只是推論 no-go):**C5-H.1 All-Order Direct-Gate No-Go** 證明即使是最理想的光滑、單尺度資料,粗糙的體積證書仍會讓 $\mathfrak G_k^{dir}$ 隨 $k$ 指數發散;§8 進一步證明容許時間窗本身也有指數 Zeno 收縮,不能靠升高階數自行消失。為研究全階譜階梯,引入 $L^2$ 傅立葉矩 $M_k=\||\xi|^ku\|_2^2$,**C5-H.2**(Cauchy–Schwarz)證明 $M_k^2\le M_{k-1}M_{k+1}$,逼出譜頻率 $\Lambda_k$ 單調遞增。但接著是全輪最核心的 no-go:用 Agmon 不等式把有效體積精確分解成「譜胞尺度 × 物理多重性」$r_{eff,k}=\mathfrak N_k^{1/3}\Lambda_k^{-1}$,**對數凸性只控制 $\Lambda_k$ 單調,完全不控制多重性 $\mathfrak N_k$**——高譜頻率完全可以和無界多重性同時發生,<strong>譜級聯不蘊含物理集中</strong>,這是全階有效體積路線的核心 no-go。把直接閘門比值分解成階數懲罰 $2^k$、物理多重性 $\mathfrak N_k^{1/3}$、譜峰不匹配三個座標,證明即使完美單胞集中($\mathfrak N_k\sim1$),純粹的 $2^k$ 因子也能讓固定階失敗——高階直接失敗不等於封包多重性。接著測更有利的 Theorem 3.14 鏈式尺度:**C5-H.3 Volume-Only Chain No-Go** 用同一個波包模型證明——即使是漸近臨界指數本身確實趨零的鏈式定理,靠粗糙全域體積證書在高階仍普遍無法封閉(定理常數本身按 $k^2$ 成長,壓過純體積的增益)。§24-25 從幾何上解釋原因:Theorem 3.14 真正利用的是分量/符號一維微幾何(快速符號交替、絲狀幾何、方向震盪),全域體積完全看不到這種結構——小體積是一維稀疏性的<strong>充分</strong>證書,不是定理真正使用的<strong>全部</strong>幾何。真正保留下來的正面事實(**C5-H.4**):鏈式與先驗指數差 $1/[(k+1)(2k+3)]\sim1/(2k^2)\to0$ 確實趨零,若倖存者能維持任意固定正的集中增益指數,且定理常數負擔可忽略,鏈式空間條件最終會被跨過——但(**C5-H.5** 及後續)定理常數或多重性 $\mathfrak N_k$ 若同步快速成長,足以完全壓過這個消失的指數差,<strong>指數差趨零不蘊含自動正則性</strong>。多封包實現範例(§36)進一步證明:$N$ 個遠距離近似不相交的相同波包能讓 $\mathfrak N_k$ 直接乘上 $N$ 而不改變導數譜尺度,延續 C3/C4 系列一貫的「載體多重性」主題。**C5-H.6 Static All-Order Volume Closure No-Go** 正式宣告:靜態全階有效體積封閉方案是<strong>方法論死路</strong>,直接閘門應保持為固定階的「關閉開關」,不是自動升階的主引擎;真正正確的高階漸近物件必轉向 Grujić–Xu 論文真正核心而 C5 尚未緊緻化的東西:<strong>分量/符號一維微幾何 + Type-A/B 導數鏈 + 調和測度相容性</strong>。正式交棒 <strong>C5-I — Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility</strong>,8 項待證目標。</p>
+    <div class="claim-box">
+      顯式波包模型證明即使最理想光滑單尺度資料,純體積證書在高階仍指數發散(定理自身帶 2^{-k}/4^{-k} 因子)。傅立葉矩對數凸性只逼譜頻率單調,完全不控制物理多重性——譜級聯不蘊含物理集中。即使漸近有利的鏈式定理,靠純體積證書一般也無法在高階封閉,因為定理常數與多重性可壓過確實趨零的指數差。正式宣告靜態全階體積封閉方案是方法論死路,轉向分量符號一維微幾何
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">43 · C5-G:Fixed-Order Gate Closure</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>45 / 67 · C5 系列 8/13</div>
+    </div>
+    <blockquote class="cite">「high spectral frequency does not imply physical concentration——volume-only certificate is too coarse, even to certify Theorem 3.14's chain scale in general。」— 摘自本文第 16、23 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5H_AllOrder_EffectiveVolume_AsymptoticCriticality_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5H_AllOrder_EffectiveVolume_AsymptoticCriticality_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
