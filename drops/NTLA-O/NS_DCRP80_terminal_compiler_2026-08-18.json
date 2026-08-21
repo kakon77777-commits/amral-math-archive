@@ -1,0 +1,42 @@
+{
+  "round": "DCRP80_X72R63",
+  "date": "2026-08-18",
+  "mandatory_parallel_obligation": "O_PFET",
+  "terminal_coordinates": [
+    "X",
+    "R_tail",
+    "R_fil",
+    "R_state",
+    "R_K"
+  ],
+  "absorption_map": {
+    "D79_alignment_boundary_rho_to_zero": [
+      "X",
+      "R_state"
+    ],
+    "D79_tilt_blowup_rho_to_infinity": [
+      "R_fil",
+      "R_state"
+    ],
+    "D79_strain_shape_blowup": [
+      "R_state"
+    ],
+    "D79_support_or_ancestry_escape": [
+      "R_tail"
+    ],
+    "D79_filamentation_or_director_oscillation": [
+      "R_fil"
+    ],
+    "D79_packet_multiplicity_explosion": [
+      "R_state"
+    ],
+    "D79_singular_material_injection": [
+      "R_state"
+    ],
+    "prelimit_second_order_viscous_Kelvin_residue": [
+      "R_K"
+    ]
+  },
+  "new_terminal_coordinate_found": false,
+  "next_priority": "R_K_second_order_viscous_Kelvin_residue"
+}
