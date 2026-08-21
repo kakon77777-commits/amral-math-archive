@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-J:Line-Section Sign Processes 與 Order-Sandwich Coupling · NS · AMRAL</title>
+<meta name="description" content="C5-I只保存弦占據率,不知道符號濃厚集合是一段長區間還是大量快速碎裂。C5-J問碎裂本身能不能形成新的調和逃逸,答案是不能——Solynin極值定理只需要弦補集的總測度,碎裂不能讓調和測度下界變差,C5-I的下降估計同樣只看同號高值集合總長度。但碎裂不是免費的:用雙門檻遲滯計數穩健孤島數N_k,每個內部間隙至少付出固定總變差代價,而總變差被下一階導數振幅上界控制,逼出真正的上階代價。把這個上階代價乘上C5-I的下階代價,鏈式半徑精確抵消,得到一個無因次的三階導數夾心不等式——大量碎裂直接逼出正的三階曲率。若粗糙度有界則整條角度弦過程等度利普希茨、可緊緻化,碎裂因此被完全吸收進導數鏈metadata,不再是獨立倖存範疇。最重要的誠實劃界:所有新不等式都是同時刻的,不同導數階在定理裡用不同容許時刻,同時刻夾心不能直接跨階拼接成全階矛盾,交棒C5-K處理鏈式時間縫合。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>46 · C5-J:Order-Sandwich Curvature</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 46</span>
+      <span class="tag">C5-J · 碎裂被吸收進導數鏈</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-J:Line-Section Sign Processes、Order-Sandwich Coupling 與 Harmonic Critical Saturation</h1>
+    <p class="h1-sub">C5-I 只保存弦占據率 $b_k([\nu])$,不知道符號濃厚集合實際上是一段長區間、少量孤島、還是大量快速碎裂。C5-J 的問題:<strong>碎裂本身會不會形成新的調和逃逸?</strong>答案是不會。**C5-J.1 Fragmentation-Neutral Harmonic Lower Bound** 證明 Solynin 極值定理只需要弦補集的<strong>總測度</strong>,無論活躍集合是一段區間、有限多段、還是高度碎裂的可測集合,只要補集測度保持 $\ge2(1-\beta)$,調和測度下界 $h(\beta)$ 都成立——碎裂不能讓調和測度下界比純占據率下界更差。**C5-J.2** 同樣證明 C5-I 的下降估計只看同號高值集合<strong>總長度</strong>,碎裂位置不影響下降代價。但碎裂不是免費的:它強迫沿弦重複穿越門檻,而這種穿越正是<strong>下一階導數</strong>的變化量。用雙門檻遲滯計數($\lambda_0<\lambda_1$,避免門檻噪聲假象)定義穩健高值孤島數 $N_k$,每個內部間隙至少付出固定總變差 $2(\lambda_1-\lambda_0)A_k$,而總變差被 $|f_k'|\le C_DA_{k+1}$ 上界控制,**C5-J.3** 逼出 $A_{k+1}\ge\frac{(\lambda_1-\lambda_0)(N_k-1)}{C_Dr_k}A_k$——碎裂真正向上支付給更高一階。**全輪最漂亮的結果是把這個上階代價乘上 C5-I 的下階代價 $A_{k-1}\ge\kappa_{\lambda,\delta}r_kA_k$**:鏈式半徑 $r_k$ 精確抵消,得到一個無因次的<strong>三階導數夾心不等式</strong> $A_{k-1}A_{k+1}/A_k^2\ge c_{\lambda_0,\lambda_1,\delta}(N_k-1)$(**C5-J.4**),轉成 Grujić–Xu 自己的正規化鏈根記法(正規化常數同樣精確抵消,**C5-J.5**)。定義對數鏈曲率 $Y_k=(k+1)\log\mathcal R_k$,**C5-J.6** 證明若碎裂數 $N_k\to\infty$,離散二階差分 $\Delta^2Y_k\to+\infty$——無界碎裂不能與局部平坦/仿射的鏈根對數輪廓共存,必逼出尖銳的階空間凸性事件。另一方面,定義無因次線粗糙度 $\mathfrak U_k=r_kA_{k+1}/A_k$,證明碎裂數受粗糙度上界控制,**C5-J.7** 若 $\sup_k\mathfrak U_k<\infty$,正規化線輪廓 $\psi_k$ 等度利普希茨,Arzelà–Ascoli 給出真正連續的極限輪廓,推廣到完整角度弦過程 $\Psi_k(\nu,s)$ 在 $S^2\times[-1,1]$ 上同樣緊緻化(**C5-J.9**)。**C5-J.10 Bad-Core Line-Process Dichotomy** 收尾:每個復發的鏈式尺度符號濃厚壞核心,抽子序列後只能是<strong>緊緻遲滯符號核心</strong>(粗糙度有界)或<strong>上階導數粗糙</strong>($\mathfrak U_k\to\infty$)二者之一——<strong>碎裂因此完全被吸收進導數鏈 metadata,正式從 C5 倖存者名單中移除,不再是獨立範疇</strong>。線微幾何最終壓縮成僅四種狀態:調和通過、緊緻臨界核心、上階粗糙、強符號濃厚。**最重要的誠實劃界(§49-55)延續 C5-I 的守則並更精確化**:所有新不等式(下降、碎裂上階代價、三階夾心)都是<strong>同時刻</strong>的,但發表定理在不同導數階用不同容許後期時刻,同時刻夾心不能直接跨階拼接——明確定義「根轉移因子」$\mathfrak T_{k\to k+1}$ 衡量跨時刻的鏈根比值,若這個因子發散,本身就構成一個新命名的<strong>導數根時間翻轉缺陷</strong>,屬於 Type-A/B 動態插值層,本輪不解決。正式交棒 <strong>C5-K — Chain-Time Stitching, Type-Switch Defects, and Dynamic-Interpolation Closure Audit</strong>,8 項待證目標。</p>
+    <div class="claim-box">
+      證明碎裂不能讓調和測度下界或下降代價變差——兩者只看總測度/總長度。但碎裂強迫上階導數變化,用雙門檻遲滯計數逼出真正的上階代價;乘上 C5-I 的下階代價,鏈式半徑精確抵消,得到無因次三階導數夾心不等式,大量碎裂直接逼出正的階空間曲率。粗糙度有界則角度弦過程等度利普希茨可緊緻化——碎裂因此完全吸收進導數鏈,不再是獨立倖存範疇。誠實劃界:所有新不等式都是同時刻的,不同階用不同容許時刻,跨階拼接需要根轉移因子控制,否則本身構成新缺陷
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../45-c5i-sign-geometry-chain-harmonic-compatibility/">45 · C5-I:Sign-Geometry/Chain Bridge</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>47 / 67 · C5 系列 10/13</div>
+    </div>
+    <blockquote class="cite">「LINE-FRAGMENTATION is removed as an independent survivor category——fragmentation ⟹ upper derivative toll ⟹ order curvature, and the unresolved frontier is now overwhelmingly temporal: chain-time stitching。」— 摘自本文第 46、56 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
