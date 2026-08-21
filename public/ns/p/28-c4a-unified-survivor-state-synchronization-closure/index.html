@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C4-A:Unified Survivor State 與 Synchronization Debt · NS · AMRAL</title>
+<meta name="description" content="C3 系列正式封階:C3-A到C3-Y的任務不是證明正則性,而是把 hypothetical blow-up 的巨大可能空間壓縮成少數無法被單一 scalar budget 排除的 survivor channel。C4 改問:目前所有必要 channel 能不能在一條真正的 singular state-transition chain 中同時合法存在?核心修正:global necessary conditions 的交集不等於 pointwise synchronized event 的交集——顯式構造證明有限時間內兩個各自發散的 channel 可以完全錯開零重疊。得到 Persistence-to-Synchronization Lemma、Temporal Desynchronization Debt、Recurrent Desynchronizer Lemma,把問題從「找更多必要條件」正式轉成「證明反覆去同步化的那個 channel 不能永遠免費切換」。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4A_UnifiedSurvivorState_SynchronizationClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>28 · C4-A:Unified Survivor State</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 28</span>
+      <span class="tag">C4-A · C3 封階,C4 開題</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C4-A:Unified Survivor State、Synchronization Debt 與 Transition Closure</h1>
+    <p class="h1-sub">開篇先把 C3 正式封階(§0):C3-A 到 C3-Y 的主要任務不是證明 global regularity,而是把 hypothetical blow-up 的巨大可能空間壓縮成少數不能再靠單一 scalar budget 排除的 survivor channel(UV 逃逸、螺旋成對生成、first-crossing 因果祖先、gauge-invariant occupancy、應變自增幅幾何、Betchov 局部化、算子逃逸、壓力近遠場壓縮、多核心堆疊、壓力遺傳、應變間歇性、臨界壓力集中、導數鏈權衡)。C4 因此不再問「還有什麼必要條件」,而改問<strong>「目前所有必要 channel 能不能在一條真正的 singular state-transition chain 中同時合法存在」</strong>。核心修正在 §1-3:<strong>global necessary conditions 的交集不等於 pointwise synchronized event 的交集</strong>——即使 critical vorticity toll、正號中間應變、Miller 算子逃逸、壓力集中、導數幾何閘門失敗全部都是 hypothetical blow-up 的邊際必要條件,它們仍可能在不同時間、不同尺度、不同空間核心、不同因果分支上分別支付。<strong>Marginal Divergence Synchronization No-Go</strong>(定理 13.1)用顯式構造證明:即使兩個非負 channel 密度的積分都發散,也完全不蘊含它們的支撐集有交集——把每個發散窗口切成不重疊的左右兩半,兩者處處零乘積。由此得到硬性守衛 <strong>G-SYNC</strong>:禁止「A 發散 + B 發散 ⟹ A、B 同時大」這類非法推論,任何交集宣稱都必須額外提供持續性、重疊、遺傳或轉換代價之一作為證據。正面結果是 <strong>Persistence-to-Synchronization Lemma</strong>(定理 16.1):若每個必要 channel 的「不活躍比例」總和小於 1,則由 union bound 直接保證共同活躍時刻存在——把持續性估計偽裝成同步定理。反之得到 <strong>Temporal Desynchronization Debt</strong>:永久異步的奇異路徑必須讓不活躍比例總和 $\ge1$,而 <strong>Recurrent Desynchronizer Lemma</strong>(定理 19.1)用有限 channel 的鴿籠原理證明:任何永久異步路徑都必然存在至少一個反覆去同步化的 channel——把 C4 問題正式轉成 turnover 問題,不是再找新的靜態不等式,而是 <strong>Synchronization-by-Turnover Rigidity</strong>。文件建立五層同步階層(Sync-0 邊際 → Sync-4 因果),定義 Unified Survivor State $\mathfrak S_n=\langle\Gamma_n,\mathbf L_n,\mathbf C_n,\mathbf G_n,\mathbf D_n\rangle$(負載、載體、閘門、缺陷四向量),明確 <strong>No-Deletion Rule</strong>:任何未被局部吸收的 channel 債務必須流入缺陷向量,不得直接消失。合法轉換定義(T1-T8)中最重要的是 T8 <strong>Gate Termination</strong>:只要任一充分正則性閘門真正關閉,奇異鏈就必須終止,狀態機裡不能悄悄忽略已證的正則性。全輪最重要的誠實修正在 §41:blow-up 的正確形式不是「同時同地」的逐點交集,而是<strong>一束異步的邊際債務,加上足夠的轉換結構讓它們能一路撐到 $T_\ast$</strong>——C4 的任務正是證明這種異步束無法永遠迴避同步化或正則性閉合。</p>
+    <div class="claim-box">
+      C3 正式封階(壓縮 survivor channel,不是證明正則性)。C4 核心修正:必要條件各自發散不蘊含同時同地——顯式構造證明可完全錯開。得到 Persistence-to-Synchronization、Temporal Desynchronization Debt、Recurrent Desynchronizer 三個定理,把問題轉成:反覆去同步化的那個 channel 能不能免費切換。定義 Unified Survivor State 四向量架構 + No-Deletion Rule + 8 條合法轉換規則
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../27-c3y-derivative-chain-intermittency-tradeoff/">27 · C3-Y:Derivative-Chain / Intermittency Tradeoff</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../29-c4b-temporal-synchronization-carrier-relay-nogo/">29 · C4-B:Temporal Synchronization NO-GO</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>29 / 67 · C4(1/9)</div>
+    </div>
+    <blockquote class="cite">「blow-up requires an asynchronous bundle of marginal debts, plus enough transition structure to keep them all payable up to T*。」— 摘自本文第 41 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C4A_UnifiedSurvivorState_SynchronizationClosure_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4A_UnifiedSurvivorState_SynchronizationClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -211,15 +211,25 @@
   </section>
 
   <section id="c4">
-    <h2 class="doc-h2">C4(9 輪)</h2>
-    <p class="section-note">建置中,逐輪上線。</p>
-    <div class="case-grid">
+    <h2 class="doc-h2">C4 · Unified Survivor State(9 輪,跳過 C4-H)</h2>
+    <p class="section-note">建置中,逐輪上線,目前 2/9。C3 把倖存者拆成獨立必要 channel;C4 改問這些 channel 能不能在一條真正的 state-transition chain 中合法共存。</p>
+    <nav class="case-grid" aria-label="NS C4">
+      <a class="case-card" href="./p/28-c4a-unified-survivor-state-synchronization-closure/">
+        <span class="k">C4-A</span>
+        <h3>Unified Survivor State 與 Synchronization Debt</h3>
+        <p>C3 正式封階。核心修正:必要條件各自發散不蘊含同時同地。定義四向量倖存狀態架構 + No-Deletion Rule + 8 條合法轉換規則。</p>
+      </a>
+      <a class="case-card" href="./p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+        <span class="k">C4-B</span>
+        <h3>Temporal Synchronization 與 Carrier-Relay NO-GO</h3>
+        <p>證明通用轉換代價無法強迫同步(脈衝逃逸、載體接力、跨代路由、可加權重障壁)。策略轉向:改找真正的 N-S 共享事件耦合。</p>
+      </a>
       <div class="case-card placeholder">
-        <span class="k">C4A → C4J · 9 篇</span>
-        <h3>Unified Survivor State → Final Synchronization Audit</h3>
-        <p>待讀完 C3 全系列後確認具體內容範圍。</p>
+        <span class="k">C4C → C4J · 7 篇</span>
+        <h3>Shared-Event Coupling → Final Synchronization Audit</h3>
+        <p>下一輪繼續 C4 系列,建置中。</p>
       </div>
-    </div>
+    </nav>
   </section>
 
   <section id="c5">
