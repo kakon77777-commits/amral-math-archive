@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-F:Compressive-Axis Robustness 與 Pressure-Signature Locking · NS · AMRAL</title>
+<meta name="description" content="C5-E已把七點抵銷完全翻成場缺陷,C5-F問中間縫隙退化會不會連帶抹掉壓縮軸壓力幾何。證明正向中間應變在整個正向中間扇區有一致譜隙,壓縮軸即使縫隙退化到邊界仍穩定存在。只要縫隙不退化,即使只允許另外兩個特徵向量亂轉、壓縮軸固定在窄帽內,二次張量方向仍全部落入同一半空間——七點抵銷因此真的需要壓縮軸本身分散,不只是應變方向分散,這比C5-E的結果更強。而共同遠場壓力若只有一個負特徵值且負向補償夠強,反而會把壓縮軸鎖進單一投影帽——若這個帽窄於抵銷所需的分散尺度,兩者不相容,這是C5第二個有限維互斥。渦度洩漏被送回Miller算子架構,分裂成算子正交壅塞或約束補集壅塞。應變導數儲量給出真正的臨界二階導數振幅,中間縫隙三次間歇性在空間指數上對固定k=1直接尺度呈現形式上有利的關係,但仍不能直接套用發表定理。導數階數逃逸不是自動的,只有排除所有固定階缺陷後才合法送到k趨於無窮的漸近臨界邊界。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>42 · C5-F:Axis/Pressure Locking</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 42</span>
+      <span class="tag">C5-F · 第二個有限維互斥</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-F:Compressive-Axis Robustness、Pressure-Signature Locking 與 Derivative-Gate Escalation</h1>
+    <p class="h1-sub">C5-E 已把七點抵銷完全翻成三條 PDE 場缺陷路線。C5-F 問更精細的問題:中間縫隙退化會不會連帶抹掉 C5-D 的壓縮軸壓力幾何?抵銷真正需要的方向分散,是不是可以只轉動另外兩個特徵向量、保持最壓縮軸不動就夠?共同遠場壓力能不能反過來鎖住壓縮軸,和抵銷形成第二個有限維互斥?**C5-F.1 Uniform Compressive Spectral Gap** 先證正向中間正規化應變在整個正向中間扇區(包括縫隙邊界)都有一致譜隙 $k_2-k_1\ge1/\sqrt2$——最壓縮特徵值處處單純,標準有限維譜攝動估計因此給出**C5-F.2 Middle-Gap Limit Preserves the Compressive Axis**:縫隙退化只把應變形狀推向退化邊界 $(-1/\sqrt2,0,1/\sqrt2)$,<strong>不會抹除壓縮軸投影 $G(e_1)$</strong>,中間縫隙路線與壓力軸幾何因此仍保持耦合。接著證明固定軸版(C5-F.3)與軸帽版(C5-F.4)的二次半空間定理:只要縫隙不退化、壓縮軸落在一個由縫隙定半徑的窄投影帽內,即使容許另外兩個特徵向量任意旋轉,所有二次方向仍全部落入同一嚴格半空間。**C5-F.5 Nondegenerate Q Cancellation Forces Axis Anti-Concentration** 因此比 C5-E 的結果更強:七點抵銷真正需要的是<strong>壓縮軸本身分散</strong>,不只是完整應變方向分散——單靠讓另外兩個特徵向量亂轉、固定最壓縮軸,絕對撐不出零重心。壓力側:調和遠場壓力矩陣只有兩種非退化慣性型——單負特徵值 $(-,+,+)$ 或雙負特徵值 $(-,-,+)$。**全輪標題結果 C5-F.6**:若共同遠場壓力簽名為 $(-,+,+)$ 且負向補償邊際夠強,會把壓縮軸鎖進一個投影帽;若這個帽窄於抵銷分散所需的尺度,兩者<strong>不可能同時存在於同一復發極限</strong>——這是 C5 系列<strong>第二個有限維代數互斥</strong>,比 C5-D 的原始結果更精細,因為它不需要鎖住完整應變方向,只需要鎖住壓縮軸本身,並給出顯式的邊際判準門檻。反之,雙負簽名 $(-,-,+)$ 不會強迫單一軸帽鎖定(負特徵子空間是二維的,軸仍可在其中顯著散布)——所以壓力生存者若要與非退化縫隙的抵銷共存,必須逃向弱邊際、雙負簽名、簽名退化邊界、壓力來源分裂、或平均旋轉。渦度主導洩漏方面,Hölder 論證逼出真正的 $\omega\otimes\omega$ $L^2$ 壅塞下界,經正交投影分裂成 Miller 算子正交壅塞(接回成長方向正交性)或約束補集壅塞(明確聲明這不是真正的壓力 Hessian,只是暫定佔位,需要未來與應變平方、平流、真實壓力聯立)。應變導數洩漏給出真正的臨界二階導數逐點振幅 $R^3\|D^2u\|_\infty/\nu\gtrsim1$,但振幅不等於分量/符號超水平集稀疏性,這個硬性守則保留。文件把中間縫隙三次間歇性的空間稀疏指數($2/3$)拿去和 Grujić–Xu 固定 $k=1$ 直接正則性尺度指數($3/5$)比較,因 $2/3>3/5$,在形式上更有利——但立刻警告 $\nabla u$ 包含渦度,原始導數高值集合必須用應變高值集合∪渦度高值缺陷集合來覆蓋(C5-F.9 Field-Conversion Dichotomy),所以這只是<strong>尺度有利的條件式介面</strong>,不是定理套用。**C5-F.10 Fixed-Order Recurrence or Derivative-Order Escape**(純粹自然數子序列二分法)明確指出:反覆的固定階失敗本身不自動蘊含導數階數必須逃向無窮——除非所有固定階復發缺陷都已被另外排除,才有資格把研究路線正式送到 $k\to\infty$ 的漸近臨界邊界,而這個邊界本身也<strong>不是矛盾</strong>,只是每一代仍可能敗在分量/符號轉換、後期解析時間、導數鏈或空間承載不匹配。正式交棒 <strong>C5-G — Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure</strong>,8 項待證目標。</p>
+    <div class="claim-box">
+      證明正向中間扇區有一致譜隙,壓縮軸即使縫隙退化到邊界仍穩定存在,不被抹除。證明只轉動另外兩個特徵向量、固定壓縮軸,撐不出七點零重心——抵銷真正需要壓縮軸本身分散,比先前結果更強。核心新結果:共同遠場壓力若單負簽名且邊際夠強,會把壓縮軸鎖進窄帽,與非退化縫隙的抵銷不相容——C5 第二個有限維互斥,給出顯式邊際門檻。渦度洩漏送回 Miller 算子架構。導數階數逃逸不是自動的,漸近臨界邊界本身不是矛盾
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../41-c5e-strain-direction-middle-gap-derivative-intermittency/">41 · C5-E:Derivative-Intermittency Closure</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>43 / 67 · C5 系列 6/13</div>
+    </div>
+    <blockquote class="cite">「Q-cancellation + nondegenerate gap ⟹ compressive-axis dispersion; strong one-negative far pressure can force the opposite——Strong One-Negative Pressure Axis Lock + Nondegenerate Gap + Q Zero Barycenter = ∅。」— 摘自本文第 18、50 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
