@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-Y:Derivative-Chain / Intermittency Tradeoff · NS · AMRAL</title>
+<meta name="description" content="C3 系列收官,25/25。重新對齊 Grujić-Xu 2024 正式期刊版本,重新derive三個尺度(能量先驗、直接有限k、鏈輔助),得到核心恆等式:直接路線與鏈輔助路線所需的活躍體積指數比值恰好是 k+1。在 k=2 時,真正定理就緒的直接指數是 3/7,不是上一輪的 1/7——1/7 被正式修正定位成只是鏈輔助的較弱條件式指數,不是獨立的 k=2 正則性橋接,是對自己上一輪結果的誠實修正。同時證明祖先局部的間歇性不等於外部定理需要的一致局部間歇性(No-Go 19.1),真正的缺口從「間歇性夠不夠」變成「能不能全域化,且能不能在指定時間窗反覆出現」。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>27 · C3-Y:Derivative-Chain Tradeoff</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 27</span>
+      <span class="tag">C3-Y · C3 系列收官 25/25</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-Y:Derivative-Chain / Intermittency Tradeoff、Direct-vs-Chain Gap Closure 與 Joint-Concentration Routing</h1>
+    <p class="h1-sub">C3 系列的最後一輪,先做 <strong>Source Audit Correction</strong>(§0):重新把外部定理釘死到正式期刊版本——Grujić &amp; Xu, <em>Asymptotic Criticality of the Navier–Stokes Regularity Problem</em>, Journal of Mathematical Fluid Mechanics 26, Article 53(2024-07-27),明確列出所引用的定理編號(3.5 直接判準、3.7 能量先驗、3.8/3.9 升降鏈、3.14 鏈輔助)。重新推導三個尺度:能量先驗尺度 $R_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$、直接有限-$k$ 正則性尺度 $R_{\rm dir}^{(k)}\sim A_k^{-3/2/(k+3/2)}$、鏈輔助尺度 $R_{\rm chain}^{(k)}\sim A_k^{-1/(k+1)}$,且 $R_{\rm dir}<R_{\rm chain}<R_{\rm apr}$。核心是 <strong>Derivative-Chain / Intermittency Tradeoff Identity</strong>(定理 12.1):直接路線所需活躍體積指數 $\theta_k^{\rm dir}=3/[2(k+3/2)]$ 與鏈輔助指數 $\theta_k^{\rm chain}=3/[2(k+1)(k+3/2)]$ 的比值恰好是 <strong>$k+1$</strong>——導數鏈動態把空間間歇性所需的冪次負擔精確降低 $k+1$ 倍。全輪最重要的誠實時刻在 §15-18、§35:在 $k=2$ 時,真正定理就緒(theorem-ready)的<strong>直接</strong>指數是 $\theta_2^{\rm dir}=3/7$,不是 C3-X 上一輪標出的 $1/7$——$1/7$ 被正式重新定位成<strong>只是鏈輔助的較弱、需要額外升鏈閘門條件的形式指數</strong>,不能單獨當成 $k=2$ 正則性橋接,這是本文對自己上一輪結果狀態標籤的直接修正。另一個關鍵區分是 <strong>No-Go 19.1</strong>:單一祖先核心的局部有效體積 $\phi_{p,R}(x_{\rm ancestry})\ll1$ 不蘊含外部定理真正需要的<strong>一致局部</strong>活躍體積因子 $\Phi_{k,c}$ 在每一個空間點都小——這是「祖先局部量」與「全域判準所需量」的本質分離,三條可能的全域化路線(單一主導叢集、多核心覆蓋、局部化幾何定理)目前都未完成。§23-24 再加一個時間閘門 no-go:即使逃逸時刻的稀疏性夠小,不代表定理指定的後續時間切片仍然夠小,空間缺口閉合與時間閘門閉合是兩個獨立的證明義務。最終 <strong>Joint-Concentration Routing Principle</strong>(定理 32.1)把倖存者收緊成:壓力集中分支若成立,則必須讓每一個定理容許的導數層級 $k$ 都至少滿足間歇性不足、全域化失敗、時間閘門失敗、鏈閘門失敗、介面不匹配五者之一。</p>
+    <div class="claim-box">
+      重新對齊外部定理到正式 2024 期刊版本。得到核心恆等式:直接路線與鏈輔助路線所需活躍體積指數比值恰好 k+1。誠實修正上一輪(C3-X)的 1/7 標籤——k=2 真正定理就緒的直接指數是 3/7,1/7 只是需要額外升鏈條件的較弱形式指數。證明祖先局部間歇性不等於全域一致局部間歇性(No-Go 19.1),缺口從「夠不夠間歇」變成「能不能全域化+能不能在指定時間窗反覆出現」。C3 系列 25/25 收官,交棒 C4
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../26-c3x-joint-pressure-strain-analyticity-gap/">26 · C3-X:Joint Pressure–Strain Concentration</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>28 / 67 · C3 系列 25/25 COMPLETE</div>
+    </div>
+    <blockquote class="cite">「ancestry-local φ ⇏ uniform-local Φ — the missing link is globalization and time-gate recurrence, not just 'is it intermittent enough'。」— 摘自本文第 19、47 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

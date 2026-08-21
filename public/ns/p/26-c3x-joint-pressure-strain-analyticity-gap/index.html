@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-X:Joint Pressure–Strain Concentration 與 Finite-k Gap Closure · NS · AMRAL</title>
+<meta name="description" content="壓力活躍核心攜帶尺度無關的臨界壓力質量憑證,多核心收縮直接給出小體積、不消失壓力質量的一致可積性失效憑證。但壓力集中不蘊含與應變梯度集中逐點重疊——壓力是非局部的,明確禁止合併兩者。核心新結果:把 Grujić-Xu 能量先驗稀疏尺度與正則性稀疏尺度之間的代數缺口,用一個顯式活躍體積指數 θ_k=3/[2(k+1)(k+3/2)] 橋接起來,k=2 時恰好是 1/7。明確標注這不是獨立的正則性定理,只是代數尺度橋接——而且矛盾地,間歇性不能太強,體積縮太快反而會把稀疏尺度自動推進正則性尺度。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>26 · C3-X:Joint Pressure–Strain Concentration</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 26</span>
+      <span class="tag">C3-X · θ_k 代數橋接</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-X:Joint Pressure–Strain Concentration、Finite-k Gap Closure 與 Analyticity-Scale Escape</h1>
+    <p class="h1-sub">C3-W 已把 hypothetical singular survivor 壓成壓力集中與應變間歇性兩個 channel。本輪真正問:兩者能不能同時無限制逃逸?核心是 <strong>Critical Pressure-Mass Certificate</strong>(定理 4.1):把 C3-W 的震盪界改用仿射函數扣除(而非常數),$b$-壓力活躍核心因此攜帶一個<strong>完全不含 $R$ 的尺度無關臨界壓力質量</strong> $\int_{B_{2R}}|p|^{3/2}\ge cb^{3/2}\nu^3$。多核心收縮(定理 6.1:Small-Volume Pressure Concentration Certificate)直接給出小體積集合上不消失壓力質量的憑證,對接 Constantin 的壓力一致可積性正則性判準——但明確標注這只是一個 sufficient mechanism,不是矛盾。全輪最重要的 no-go 在 §13-32:<strong>壓力集中不蘊含與應變梯度集中逐點重疊</strong>——因為壓力是非局部二次變換,遠場來源可在低 $D^2u$ 區域製造局部壓力,co-located($\Theta_{P/S}\ge\theta_0$)與 segregated($\Theta_{P/S}\to0$)必須分開追蹤,不得自動合併。全輪最強的新結構是 <strong>Finite-$k$ Volume Gap-Closure Lemma</strong>(定理 17.1):把 Grujić–Xu 高階導數階層中「能量先驗稀疏尺度」$\ell_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$ 與「正則性稀疏尺度」$\ell_{\rm reg}^{(k)}\sim A_k^{-1/(k+1)}$ 之間的代數缺口,用一個顯式活躍體積指數橋接:$\phi_k\lesssim A_k^{-\vartheta_k}$,其中 $\vartheta_k=3/[2(k+1)(k+3/2)]$——特別在 $k=2$ 時恰好 $\vartheta_2=1/7$(推論 18.1),且 $\vartheta_k\to0$ 呼應 Grujić–Xu 本身「缺口隨 $k\to\infty$ 消失」的方向。但文件反覆明確標注:<strong>這不是獨立的 $k=2$ 正則性定理</strong>,只是代數尺度橋接(§23),真正套用外部定理仍需 component/sign/threshold/analyticity 全部對齊。更反直覺的是 §36:間歇性不能無限強——若 $\phi_2\ll A_2^{-1/7}$,體積塌縮反而比補掉尺度缺口所需更強,把稀疏尺度推向正則性一側,所以<strong>間歇性夠強時反而具有正則化的一面</strong>。真正倖存的交集是壓力集中 $\cap$ 解析/幾何稀疏閉合失敗。</p>
+    <div class="claim-box">
+      證明壓力活躍核心攜帶尺度無關的臨界壓力質量憑證,多核心收縮給出一致可積性失效機制。明確 no-go:壓力集中不蘊含與應變梯度集中逐點重疊,壓力非局部。核心新結構:用顯式指數 θ_k=3/[2(k+1)(k+3/2)] 橋接 Grujić-Xu 能量先驗尺度與正則性尺度的代數缺口,k=2 時 θ_2=1/7——但明確標注只是尺度橋接不是定理,且間歇性太強反而自動正則化
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../25-c3w-pressure-rotation-strain-sparseness/">25 · C3-W:Critical Pressure Rotation</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../27-c3y-derivative-chain-intermittency-tradeoff/">27 · C3-Y:Derivative-Chain / Intermittency Tradeoff</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>27 / 67</div>
+    </div>
+    <blockquote class="cite">「pressure concentration ⇏ pointwise overlap with D²u concentration。」— 摘自本文第 13 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
