@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-M:Unified Defect-State Closure 與 C5 Phase Boundary · NS · AMRAL</title>
+<meta name="description" content="C5系列收官,13/13。本輪不找新的魔法不等式,只做封階稽核:把C5-A到L遇到的所有復發倖存者狀態編碼成六元殘餘字母表——合法性/譜系/定理設置、時間相位、場幾何退化、壓力補償來源、高階調和/定理窗口缺陷、強迫/階變異負債。九個偽缺陷(自由七點抵銷、通用線碎裂、Type-A/B切換、通用根翻轉、通用鐘不匹配、載體轉移、單獨算子範數、單獨渦度補集、靜態全階體積升級)全部被路由進六類或外部定理閘門,不再是獨立節點。建立認證相容圖,證明有限復發原理:任何無限假想倖存者標籤序列必有某類無限重複。但明確警告有限缺陷圖不蘊含全域正則性——圖仍可能有向循環。三個候選復發循環尚未排除:高階強迫循環、幾何壓力循環、可能孤立的時間循環。C5研究階段正式封階,但納維-斯托克斯全域正則性依然開放,交棒C6處理最小復發缺陷循環與匯點強連通分量萃取。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5M_UnifiedDefectGraph_C5PhaseClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>49 · C5-M:C5 Phase Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 49</span>
+      <span class="tag">C5-M · C5 系列收官 13/13</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-M:Unified Defect-State Closure、Compatibility Graph Audit 與 C5 Phase Boundary</h1>
+    <p class="h1-sub">C5 的任務從來不是再找一條魔法不等式,而是把 C4 的復發補償母題轉成緊緻復發狀態,再把表面上不同的逃逸做負債路由。本輪只做封階稽核,不引入新的估計。**核心結論**:C5 應該以研究階段身份封階,但<strong>納維-斯托克斯全域正則性依然開放</strong>。列出貫穿全 C5 使用的外部定理閘門(Miller 中間特徵值閘門、Miller 應變-渦度算子閘門 $\langle-\Delta S,\omega\otimes\omega\rangle=0$、Grujić–Xu 固定階直接閘門 Theorem 3.5、Grujić–Xu 鏈式閘門 Theorem 3.14、Bradshaw–Tsai/Constantin 壓力閘門)後,把 C5-A 到 L 遇到的所有復發倖存者狀態編碼成<strong>六元殘餘字母表</strong> $\mathfrak D_{C5}=\{\mathsf A,\mathsf T,\mathsf G,\mathsf P,\mathsf H,\mathsf F\}$:$\mathsf A$ 合法性/譜系/定理設置(明確聲明這是<strong>證明入口合法性缺陷</strong>,不是物理奇異機制);$\mathsf T$ 時間相位缺陷(Young 振盪、負載集中、分離純量補償週期);$\mathsf G$ 場幾何退化(中間縫隙、壓縮軸分散、應變導數波動、渦度洩漏、三次間歇性);$\mathsf P$ 壓力補償/來源(平均旋轉、壓力集中、遠場簽名、零行列式邊界、來源分裂/翻轉、軸鎖定);$\mathsf H$ 高階調和/定理窗口缺陷(固定階閘門失敗、窗口持續性符號缺陷、調和-時間臨界飽和、持續壞集群);$\mathsf F$ 強迫/階變異負債(黏性/投影非線性翻轉、階曲率、鏈鐘變異、定理常數漂移)。**九個偽缺陷正式從獨立節點名單刪除**:自由七點抵銷、通用線碎裂、通用 Type-A/B 切換、通用根翻轉、通用鐘不匹配、振幅層級載體轉移、單獨大算子範數、單獨渦度約束補集、靜態全階有效體積升級——全部路由進六類或外部正則性閘門。建立帶標記(無條件 U、條件式 C、外部定理封閉 E)的認證相容圖,詳述六類之間的路由關係(如 $\mathsf H\to\mathrm{REG}$ 經由發表定理、$\mathsf F\to\mathsf H$ 經由黏性壅塞推向更高階、$\mathsf G\to\mathsf P$ 經由強中間相干逼壓力重返)。**Finite Recurrence Principle**:因殘餘字母表有限,任何無限假想倖存者標籤序列必有某一類無限重複——純粹但真實的鴿籠論證,建立在字母表確實有限這個實質結果之上。若相容圖對某條倖存者路徑完備,其強連通分量凝聚圖有限且無環,所以無限路徑經過渡後必落入某個匯點強連通分量——<strong>C6 真正的物件是復發匯點 SCC/最小復發缺陷循環,不是新的孤立缺陷節點</strong>。標出三個尚未排除的候選復發循環:<strong>高階強迫循環</strong> $\mathsf H\leftrightarrow\mathsf F$(持續壞定理窗口 → 下降/負載代價 → 黏性/非線性/鐘負債 → 活動推向更高導數階 → 新窗口再度失敗,C5 目前沒有有限全階預算排除,可能是最硬的候選匯點);<strong>幾何-壓力循環</strong> $\mathsf G\leftrightarrow\mathsf P$;以及可能<strong>孤立</strong>的<strong>時間循環</strong> $\mathsf T$(要移除這個候選 SCC 需要一個通用的 $\mathsf T\to\mathsf G/\mathsf P/\mathsf H$ 共同來源定理,目前開放)。**最重要的誠實劃界**:有限缺陷圖<strong>不蘊含</strong>全域正則性——圖仍可能有向循環,緊緻性不消滅循環,沒有有限可加性定理的負債路由也不構成矛盾。**Six-Class Closure Theorem**:在目前的 C3/C4/C5 守則與條件式譜系框架下,C5-A 到 L 遇到的所有復發倖存者狀態都可編碼進這六類加上各類內的緊緻 metadata,沒有任何機制需要新增第七個獨立殘餘類——<strong>C5 的狀態空間/母題緊緻化任務結構性完成</strong>,這是研究階段封階,不是 PDE 證明封階。正式宣告 <strong>C5 — Recurrent Motif Limits, Defect Measures, and Compensation Compactness</strong> 狀態為 <strong>PHASE CLOSED</strong>,PDE 狀態為 <strong>GLOBAL REGULARITY OPEN</strong>,交棒 <strong>C6 — Minimal Recurrent Defect Cycles, Sink-SCC Extraction, and Cross-Domain Closure</strong>,首篇 C6-A,任務是萃取真正的匯點強連通分量並判定其負債能否無限支付。</p>
+    <div class="claim-box">
+      封階稽核:把 C5-A 到 L 所有復發倖存者狀態編碼成六元殘餘字母表(合法性、時間相位、場幾何、壓力補償、高階調和窗口、強迫階變異),九個偽缺陷全部路由進六類或外部定理閘門。有限復發原理:字母表有限,無限倖存者必有某類無限重複,真正物件是匯點強連通分量,不是新缺陷節點。三個候選復發循環尚未排除,最硬的可能是高階強迫循環。誠實劃界:有限缺陷圖不蘊含全域正則性。C5 研究階段正式封階,交棒 C6,納維-斯托克斯全域正則性依然開放
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../48-c5l-persistent-bad-window-clock-defect-root-turnover-compression/">48 · C5-L:Window Rigidity/Turnover</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>50 / 67 · C5 系列 13/13 COMPLETE</div>
+    </div>
+    <blockquote class="cite">「finite defect graph ⇏ global regularity——C5's state-space/motif-compactification task is structurally complete, but Navier–Stokes global regularity remains OPEN。」— 摘自本文第 25、31 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5M_UnifiedDefectGraph_C5PhaseClosure_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5M_UnifiedDefectGraph_C5PhaseClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
