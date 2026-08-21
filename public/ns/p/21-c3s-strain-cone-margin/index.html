@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-S:Strain-Cone Margin 與 Merger Rigidity · NS · AMRAL</title>
+<meta name="description" content="把 C3-R 的二元是否準則升級成定量邊界:γ(V)=dist(0,conv V),局部平均應變集合的凸包到原點的距離。證明 Uniform Margin Compactness Theorem——若邊界跨尺度一致有下界,由緊緻性得到一個固定的跨尺度分離矩陣 K*。證明核心合併不會摧毀一致性(Merger Inheritance),只要各自邊界維持下界。退化分支 γ→0 給出六核近平衡見證,直接對應 C3-R 的 Carathéodory 障礙變成緊的。核心結果是加細的遠場壓力恩斯特羅菲債:𝔈_R≳κ²γ^(-2/3)——邊界越小,補償代價越高,但沒有排除邊界趨零的情形,只是標了價。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>21 · C3-S:Strain-Cone Margin</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 21</span>
+      <span class="tag">C3-S · 邊界剛性</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-S:Strain-Cone Margin、Cross-Scale Separator Compactness 與 Merger Rigidity</h1>
+    <p class="h1-sub">C3-R 只回答二元問題:共同遠場矩陣存不存在。本輪把它升級成定量。核心定義是<strong>邊界</strong> $\gamma(V):=\operatorname{dist}(0,\operatorname{conv}V)$——局部平均應變集合 $V$ 的凸包到原點的距離,$\gamma(V)>0$ 恰好等價於 C3-R 的正向支持準則成立,但現在有多遠也量化出來了。核心是 <strong>Uniform Margin Compactness Theorem</strong>(定理 6.1):若邊界跨所有尺度一致有下界 $\gamma(V_R)\ge\gamma_0>0$,則由 $\operatorname{Sym}_0(3)$ 單位球面的緊緻性,存在一個固定的<strong>跨尺度分離矩陣</strong> $K^\ast$,對每個尺度的核心集合都同時見證正向支持——不需要每個尺度重新找一個分離矩陣,一致邊界直接給出一個通用見證者。<strong>Merger Inheritance</strong>(定理 14.1)接著證明:兩個核心簇合併時,只要各自邊界都維持下界 $\gamma_0$,合併後集合的邊界不會任意坍縮,只在一個由角度幾何控制的顯式因子內收縮——<strong>合併不會摧毀一致性</strong>,雖然會付出可計算的代價。退化分支處理 $\gamma\to0$ 的情形:文件證明這正好對應 C3-R 的 Carathéodory 障礙變緊——<strong>Six-Core Near-Balance Witness</strong>(命題 21.1)顯示邊界趨零時,六核組態會逼近一個原點恰好落在凸包邊界上的臨界排列,不多不少正好是 Carathéodory 上界會飽和的那個組態。全輪最強的量化結果是<strong>加細的遠場壓力恩斯特羅菲債</strong>(定理 27.1):$\mathfrak E_R\gtrsim\kappa^2\gamma^{-2/3}$——邊界越小,維持解耦所需的縮放恩斯特羅菲代價越高,把 C3-P/C3-Q 的 $\kappa^2$ 債進一步按邊界加細。文件明確標注 NG-S1:這個界限不排除 $\gamma\to0$,只是替它標了一個發散的價格——若縮放恩斯特羅菲真能無界增長,邊界趨零本身在代數上仍是合法的,真正的障礙必須來自別處對 $\mathfrak E_R$ 的獨立上界,而這仍是 OPEN。</p>
+    <div class="claim-box">
+      把 C3-R 的二元準則升級成定量邊界 γ(V)。證明一致邊界⟹固定跨尺度分離矩陣(緊緻性)。證明核心合併不摧毀一致性,只按顯式因子收縮。退化分支 γ→0 對應六核 Carathéodory 障礙變緊。加細遠場壓力恩斯特羅菲債 𝔈_R≳κ²γ^(-2/3)——但沒有排除邊界趨零,只是標價
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../20-c3r-multi-core-pressure-horizon/">20 · C3-R:Multi-Core Packing</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../22-c3t-pressure-diversification-cone-eigenvalue/">22 · C3-T:Pressure Diversification</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>22 / 67</div>
+    </div>
+    <blockquote class="cite">「a vanishing margin is not excluded — it is priced。」— 摘自本文第 34 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

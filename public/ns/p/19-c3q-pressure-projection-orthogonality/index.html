@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-Q:Pressure–Projection Orthogonality · NS · AMRAL</title>
+<meta name="description" content="證明壓力 Hessian 與投影後的完整應變非線性項在全空間中是正交的投影通道(精確畢氏定理),所以「壓力大」不會透過全域範數抵銷讓「投影算子小」——兩者可以同時大。把 Miller 算子逃逸局部化成核心/外部二分。證明遠場調和壓力矩陣永遠不是正定阻尼(無跡矩陣必然一個方向放大、另一方向抑制)——Trace-Free Redistribution Debt。推出定量 Far-Pressure Enstrophy Debt:固定大小的遠場補償迫使縮放恩斯特羅菲至少按 κ² 增長。目前算子逃逸與遠場壓力矩陣之間沒有找到代數矛盾。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>19 · C3-Q:Pressure–Projection Orthogonality</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 19</span>
+      <span class="tag">C3-Q · 壓力與算子正交</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-Q:Pressure–Projection Orthogonality、Operator-Escape Localization 與 Harmonic-Matrix Compensation Debt</h1>
+    <p class="h1-sub">C3-P 得到算子逃逸與遠場壓力兩個獨立通道。本輪問:這兩個通道能否互相構成剛性?核心是 <strong>Pressure–Projection Complement Theorem</strong>(定理 3.1):應變約束子空間 $L^2_{st}$ 的正交投影 $P_{st}$ 把完整非線性項精確拆成「投影後算子」與「壓力 Hessian」兩個互補通道,$\nabla^2p=-(I-P_{st})\mathcal N_{\rm raw}$。由此直接得到 <strong>Pressure–Projection Pythagoras</strong>(定理 4.1):$\|\mathcal N_{\rm raw}\|_2^2=\|\mathcal N_{\rm proj}\|_2^2+\|\nabla^2p\|_2^2$——壓力與投影後的完整應變非線性項在全空間是正交的,不是可以互相抵銷的兩項。<strong>Pressure–Operator Cancellation No-Go</strong>(定理/命題 9)因此正式禁止「壓力大 ⟹ 投影算子小」或反向推論這類非法論證,兩者可以同時很大,真正耦合只能透過時間演化、局部化、特徵幾何等機制。文件也小心指出 Miller 的 $\mathcal Q_{SV}$ 不是這個畢氏分解的其中一項,不能套錯定理。用核心/外部截止把算子逃逸局部化(<strong>Operator-Escape Localization Dichotomy</strong>,定理 13.1)。壓力方面的核心新結果是 <strong>No Uniform Harmonic-Pressure Depletion</strong>(定理 17.1):非零的遠場調和壓力矩陣因為無跡,必然在某個方向放大、另一方向抑制,永遠不是正定阻尼算子——<strong>遠場壓力是各向異性的重新分配,不是正定耗散</strong>。最後推出定量的 <strong>Far-Pressure Compensation Bound</strong> 與 <strong>Far-Pressure Enstrophy Debt</strong>(定理 24.1、25.1):固定大小的遠場壓力補償迫使縮放恩斯特羅菲至少按 $\kappa^2$ 增長——距離越遠的補償,代價越高,不是免費的。全輪最重要的結構性 no-go 在 §40:原本希望算子逃逸與遠場壓力矩陣互相不相容,但精確分析顯示它們在全空間投影上正交,沒有簡單的範數矛盾——真正可能的剛性只能來自同一 ancestry core 中兩者所需幾何無法跨尺度同步,這仍是 OPEN。</p>
+    <div class="claim-box">
+      證明壓力 Hessian 與投影後算子是正交通道(精確畢氏定理),禁止用範數抵銷互相推論大小。證明遠場調和壓力矩陣永遠是各向異性重分配,不是正定阻尼。推出定量遠場壓力恩斯特羅菲債。算子逃逸與遠場壓力目前沒有代數矛盾,兩者正交但動態上仍可能耦合
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../18-c3p-operator-escape-far-pressure/">18 · C3-P:Operator Escape</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../20-c3r-multi-core-pressure-horizon/">20 · C3-R:Multi-Core Packing</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>20 / 67</div>
+    </div>
+    <blockquote class="cite">「far pressure is anisotropic redistribution, not a positive-definite dissipation operator。」— 摘自本文第 17 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
