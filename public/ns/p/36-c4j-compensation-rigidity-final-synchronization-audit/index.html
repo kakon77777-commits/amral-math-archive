@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C4-J:Compensation Rigidity 與 C4 Phase Closure · NS · AMRAL</title>
+<meta name="description" content="C4系列收官,9/9。顯式構造證明收縮紀錄窗本身連同有界峰值/平均比,仍不足以逼中間應變與算子成長的同時刻重疊——C4-I的充分條件在對稱點K=2,2是緊的,這是真正的no-go。但反向對齊脈衝不是免費的:精確恆等式證明正負成長變化差恰等於能量導數,反向對齊越多以後必須付出更多正號成長。壓力迴避方面,把二次項抵銷從無結構的純量損失重新理解成六維對稱矩陣空間中的方向重心塌縮,Carathéodory定理證明最多七個局部方向就能見證任何抵銷比例,可抽緊緻的元資料極限。完成六通道最終同步審計,正式宣告C4以研究階段身份封階——不是正則性定理,交棒C5。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>36 · C4-J:C4 Phase Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 36</span>
+      <span class="tag">C4-J · C4 系列收官 9/9</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C4-J:Compensation Rigidity、Final Synchronization Audit 與 C4 Phase Closure</h1>
+    <p class="h1-sub">C4-I 留下兩個補償機制:時間脈衝分離,與平均旋轉/二次抵銷的壓力迴避。C4-J 的任務是:這兩者能否被現有預算直接排除?若不能,能否壓成有限復發母題?並對 UV、螺旋度、應變、算子、壓力、導數幾何六大通道做<strong>最終同步審計</strong>,判定 C4 是否應該封階。<strong>Bounded-Peakiness Pulse-Separation No-Go</strong>(定理 5.1)用顯式構造給出真正的 no-go:把紀錄窗切成左右兩半,中間應變負載全部塞左半、算子負載全部塞右半,兩者處處零乘積,卻能讓峰值/平均比 $K_m=K_o=2$ 對每個窗都成立——證明<strong>收縮視窗本身,即使配合一致有界的峰值/平均比,依然逼不出中間/算子的同時刻重疊</strong>,C4-I 的充分條件 $1/K_m+1/K_o>1$ 在對稱點 $K_m=K_o=2$ 剛好是<strong>緊的</strong>,這是純測度論層級的真實 no-go,不是還沒證出來。但反向對齊脈衝不是免費的:<strong>Exact Positive/Negative Growth Compensation Identity</strong>(定理 8.1)是一個精確恆等式(不是不等式)$P_j-N_j=\Delta E_{1,j}$——任何反向對齊算子脈衝或黏性過度耗散的插曲,都會準確地把之後必須支付的正號成長對齊算子變化量加大,不能免費 deplete。壓力迴避方面,<strong>Integrated Mean-Variation / Pressure Compensation Theorem</strong>(定理 15.1)證明:若壓力被壓低,一致的局部二次平均驅動必須由固定的正規化平均應變總變差支付;但 C3-V 已知的尺度加權封裝仍允許這在幾何級數祖先上反覆 Zeno 存活。全輪最漂亮的新結果是 <strong>Seven-Point Quadratic Cancellation Witness</strong>(定理 20.1):把二次項抵銷從無結構的純量損失,重新理解成<strong>六維對稱無跡矩陣空間中的方向重心塌縮</strong>($\operatorname{Sym}(3)\simeq\mathbb R^6$)——由 Carathéodory 定理,任何給定的抵銷比例 $\kappa$,最多只需要<strong>七個</strong>局部正規化二次張量方向就能見證。當 $\kappa_n\to0$ 時,可以在緊緻的度量空間(單位球面加七點單純形)中抽出真正的<strong>元資料極限</strong> $\sum_{i=1}^7\alpha_i^\ast U_i^\ast=0$——文件明確強調這只是元資料緊緻性,不是完整場的緊緻性,不違反 C3-H 對重縮放臨界場範數可以發散的 hard no-go。文件完成六通道最終審計表(§37:UV=條件式因果祖先骨幹、應變=紀錄窗同步、中間特徵值=紀錄窗同步、算子=紀錄窗成長對齊同步、螺旋度=儲量同步生產條件式、壓力=條件式局部重返、導數幾何=儲量同步閘門條件式),得出全輪核心 <strong>C4 Phase Closure Theorem</strong>(定理 40.1):所有復發 UV 奇異事件現在都能路由到已同步結構,或六元有限補償母題家族 $\mathcal C=\{T,O,M,Q,P,D\}$(時間脈衝、算子角度、平均變異、二次抵銷、壓力集中、導數閘門缺陷)之一——<strong>C4 的分支/同步化階段正式結構性封階</strong>,但文件反覆強調這是<strong>研究階段封階,不是正則性定理</strong>,Navier–Stokes 全域正則性依然 OPEN。文件也明確警告 C5 不得做的事(§41,援引 C3-H 自己的 hard no-go:重縮放臨界場範數可以發散,不能假設標準臨界元素緊緻性),並規劃 C5 應該優先緊緻化的四個層級(有限維元資料 → 機率/缺陷測度 → 封包/核心局部軌跡 → 完整 PDE 場,只有在額外一致臨界界限被證明後才能嘗試最後一級)——交棒 <strong>C5 — Recurrent Motif Limits, Defect Measures, and Compensation Compactness</strong>,首篇 C5-A。</p>
+    <div class="claim-box">
+      顯式構造證明收縮紀錄窗+有界峰值比仍逼不出同時刻重疊,C4-I 充分條件在對稱點是緊的。反向對齊脈衝有精確能量恆等式,不能免費 deplete。核心新結果:把二次抵銷理解成六維矩陣空間的方向重心塌縮,Carathéodory 給最多七點見證,可抽緊緻元資料極限(不是場緊緻性)。完成六通道最終審計,正式宣告 C4 以研究階段身份結構性封階,交棒 C5,NS 全域正則性依然 OPEN
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../35-c4i-middle-operator-overlap-pressure-reentry/">35 · C4-I:Pressure Re-entry</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>37 / 67 · C4 系列 9/9 COMPLETE</div>
+    </div>
+    <blockquote class="cite">「C4 branch/synchronization phase is structurally closed — this is research-program phase closure, not a Navier–Stokes regularity theorem。」— 摘自本文第 40 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
