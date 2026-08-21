@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-E:Strain-Direction Defect Measures 與 Derivative-Intermittency Closure · NS · AMRAL</title>
+<meta name="description" content="C5-D把七點抵銷壓成中間縫隙退化∨方向分散兩條路線,C5-E問這兩條路線實際代表哪種可測量的導數/間歇性負債。證明正規化中間縫隙變數與正規化中間特徵值定量等價,縫隙不小時二次張量真的與應變、渦度平方同階——是真正物理集中,不是矩陣正規化假象。方向洩漏精確二分成應變承載與渦度主導,前者靠加權Poincaré逼真正應變導數儲量,後者逼真正渦度儲量。縫隙路線也不是免費的:固定中間放大量逼三次應變範數發散,配合有效體積引理逼出真正的應變振幅間歇性——小體積集合承載大部分三次活動。但誠實劃界:發表的Grujić-Xu定理要的是原始導數分量/符號超水平集的稀疏性,應變震幅間歇性目前還不能直接偷換,C5-E停在導數間歇性前閘,不是正則性缺口的封閉。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>41 · C5-E:Derivative-Intermittency Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 41</span>
+      <span class="tag">C5-E · Q 母題完全轉成場缺陷</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-E:Strain-Direction Defect Measures、Middle-Gap Degeneration 與 Derivative-Intermittency Closure</h1>
+    <p class="h1-sub">C5-D 把七點抵銷壓成兩條逃逸路線:中間縫隙退化,或應變方向分散。C5-E 不滿足於保留這兩個名字,而是問它們實際對應哪一種可測量的導數/間歇性負債。**C5-E.1 Middle-Gap Equivalence** 先證正規化縫隙變數 $\vartheta(S)=\lambda_2^+\lambda_3/|S|^2$ 與正規化中間特徵值 $\xi_2=\lambda_2^+/|S|$ 定量等價($\sqrt2\,\vartheta\le\xi_2\le\sqrt6\,\vartheta$)——中間縫隙退化就是中間特徵值真正的退化,不是任意統計量。**C5-E.2** 證明若 $\vartheta(S)\ge\delta$,則逐點 $|Q|\gtrsim_\delta|S|^2+|\omega|^2$——Q 加權的縫隙集中是真正物理的二次活動集中,不是矩陣正規化造成的假缺陷。建出應變方向/縫隙聯合狀態的緊緻化,**C5-E.3** 證明若七點重心趨零,極限不可能是集中在單一非退化強中間方向的點質量(直接由 C5-D 錐定理導出矛盾)。**C5-E.4 Quantitative Direction Anti-Concentration** 進一步定量:若中間縫隙質量小,抵銷會強迫應變方向機率不能集中在任何單一強中間錐內,給出真正的方向變異數下界。要把方向洩漏轉成物理儲量,C5-E 精確二分洩漏區域為<strong>應變承載</strong>與<strong>渦度主導</strong>兩支(依 $|S|^2$ 對 $\eta|Q|$ 的大小);**C5-E.5 Leakage → Derivative or Vorticity Dichotomy** 證明應變承載支經加權 Poincaré 逼出真正的應變導數 $L^2$ 儲量 $\mathfrak H_R\gtrsim a_R^Q$,渦度主導支逼出真正的臨界渦度儲量 $\mathfrak W_R\gtrsim a_R^Q$——**C5-E.6 Q-Cancellation Spatial Debt Trichotomy**:在非退化局部二次強度下,持續的小重心抵銷必至少走中間縫隙缺陷、應變導數波動、或渦度主導洩漏三者之一。中間縫隙這條路也不是免費的:**C5-E.7 Middle-Gap Load Forces Cubic Strain** 證明若縫隙集合承擔非退化中間負載 $M_\delta$,則 $\int|S|^3\gtrsim M_\delta/\delta$——當 $\delta\downarrow0$ 時三次應變範數必須發散。配合插值不等式 $\|S\|_3\le C\|S\|_2^{1/2}\|\nabla S\|_2^{1/2}$ 給出真正的導數下界。**C5-E.8 Effective Active-Set Lemma**(Chebyshev 論證)定義有效三次振幅與有效體積,證明大 $\|S\|_3^3/\|S\|_2^2$ 保證存在一個小體積集合承載至少 $1-c$ 比例的三次應變活動——這就是<strong>應變振幅間歇性</strong>,**C5-E.9** 進一步證明中間縫隙若持續承擔非退化負載且應變 $L^2$ 儲量有界,有效體積比例必然坍縮到零,並接回 C3-W 的體積-到-線幾何引理,把活躍集推向更細的稀疏尺度。**全輪最重要的誠實劃界是 C5-E.10 Derivative-Intermittency Pre-Gate**:文件明確指出發表的 Grujić–Xu(2024, J. Math. Fluid Mech.)定理要的是原始導數 $D^ku$ 或 $D^k\omega$ 的<strong>分量/符號超水平集稀疏性</strong>,而 C5-E 目前產生的是應變震幅/導數的間歇性——兩者之間仍有真正的場轉換介面缺口(§37 明確警告:應變高值集合稀疏,不自動蘊含所有相關原始導數分量/符號高值集合稀疏,渦度是 $\nabla u$ 的反對稱部分,必須分開處理),5 項待補接口(場轉換、門檻對齊、全域/局部集合範圍、時間閘、導數鏈假設)列為<strong>開放介面</strong>,不是已封閉的正則性缺口。全輪收尾:C4-J 原本自由的七點抵銷母題,經 C5-D+C5-E 兩輪,現在<strong>完全轉成 PDE 場缺陷</strong>——Q ⟹ 中間縫隙/三次間歇性 ∨ 應變導數波動 ∨ 渦度洩漏,不再是自由補償母題。正式交棒 <strong>C5-F — Strain/Vorticity Defect Coupling, Axis Locking, and Derivative-Gate Escalation</strong>,8 項待證目標處理縫隙與壓縮軸鎖定的聯立、渦度洩漏與 Miller 正交性的接口、以及導數階數是否被迫升高。</p>
+    <div class="claim-box">
+      證明中間縫隙變數與正規化中間特徵值定量等價,縫隙不退化時二次張量真的與應變/渦度平方同階,是真正物理集中。方向洩漏精確二分應變承載/渦度主導,分別逼出真正的應變導數儲量與渦度儲量。縫隙路線也非免費:固定中間負載逼三次應變範數發散,配合有效體積引理逼出真正應變振幅間歇性。但誠實劃界:發表定理要的是原始導數分量/符號稀疏性,應變震幅間歇性還不能直接偷換,C5-E 停在導數間歇性前閘。七點抵銷母題現在完全轉成場缺陷,不再自由
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../40-c5d-spatial-matrix-quadratic-pressure-obstruction/">40 · C5-D:Spatial-Matrix Obstruction</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>42 / 67 · C5 系列 5/13</div>
+    </div>
+    <blockquote class="cite">「C5-E reaches a Derivative-Intermittency Pre-Gate, not a regularity proof——the published Grujić–Xu theorem tracks D^k u or D^k ω component/sign superlevel-set sparseness, and strain-amplitude geometry cannot yet be silently substituted for it。」— 摘自本文第 34、36 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
