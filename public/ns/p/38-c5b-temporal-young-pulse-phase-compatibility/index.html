@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-B:Temporal Young Defects 與 Pulse-Phase Compatibility · NS · AMRAL</title>
+<meta name="description" content="C5-A發現分開弱極限會把微觀脈衝分離洗掉,C5-B用聯合上色時間微狀態修復。把中間/算子正/算子負正規化負載門檻化成有限相位字母表(算子正負互斥,只剩六態),建立colored temporal Young measure,證明其緊緻性、正確保存禁止組合、且正係數同時活躍質量真的逼出有限尺度同時重疊——交替範例正確收斂成50/50混合而非虛假重疊。但Young測度仍看不到消失佔空比的高振幅集中脈衝,借DiPerna-Majda振盪+集中的架構補上濃度模數,證明一致可積性給正佔空比、佔空比全趨零則濃度質量必達1。核心三分定理:同時活化、體相位分離振盪、負載集中三者至少一成立。明確承認Young測度不保存脈衝先後順序,交棒C5-C處理因果排序。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>38 · C5-B:Pulse-Phase Compatibility</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 38</span>
+      <span class="tag">C5-B · 修復微觀脈衝分離</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-B:Temporal Young Defects、Pulse-Phase Compatibility 與 Concentration/Oscillation Trichotomy</h1>
+    <p class="h1-sub">C5-A 抓到一個 hard no-go:分開緊緻化中間負載測度 $\mu_j^{mid}$ 與算子成長測度 $\mu_j^{op,+}$,即使兩者在每個有限尺度處處不相交,弱極限仍可能同質化成完全重疊。C5-B 的修法是不再分開緊緻化,改用<strong>聯合上色時間微狀態</strong>。定義正規化負載密度 $f_j^M,f_j^+,f_j^-$(各自積分為 1),先立最基本的精確約束:逐點 $[h_j]_+[-h_j]_+=0$ 給出 $f_j^+f_j^-=0$ 幾乎處處成立——算子正負成長精確互斥。固定有理門檻 $\vartheta=(a,b,c)$,把三個負載門檻化成二元相位向量 $X_j^\vartheta=(\chi_M,\chi_+,\chi_-)$;因正負互斥,相位只能落在<strong>六態字母表</strong> $\mathcal A=\{000,100,010,001,110,101\}$,禁止 $011,111$。把 $(s,X_j^\vartheta(s))$ 一起 push forward 得到 colored temporal Young measure $Y_j^\vartheta\in\mathcal P([0,1]\times\mathcal A)$,證明 <strong>Colored Temporal Young Compactness</strong>(定理 10.1):子序列弱收斂到 $Y_\ast^\vartheta$,且因有理門檻可數,可對角化抽出對所有門檻同時成立的「Temporal Phase Spectrum」。因 $\mathcal A$ 有限離散,禁止組合(如算子正負同時活躍 $F_{+-}$)在弱極限中精確保持為零測度——<strong>C5-B.2 Operator Sign-Exclusion Preservation</strong>。全輪的關鍵修復是 <strong>C5-B.3</strong>(定理 15.1):若極限的同時活躍相位質量 $C_{\ast,M+}^\vartheta>0$,則對充分大的 $j$ 這個係數真的收斂到正值——<strong>Young 極限中的同時活躍態不是弱同質化的假象,對應真正的有限尺度同時重疊</strong>;反過來,若有限尺度精確分離(§16),則對所有有理門檻同時活躍質量精確為零,C5-A 的交替格範例因此被正確修復:正確收斂成 $\tfrac12\delta_{100}+\tfrac12\delta_{010}$ 的 50/50 混合,而不是虛假的 $\delta_{110}$。但 Young 測度仍不夠:如果負載越來越集中到測度趨零的尖峰上(佔空比 → 0 但總負載積分仍為 1),Lebesgue-time 的 Young 狀態只會看到「幾乎處處不活躍」——借 DiPerna–Majda 對不可壓流體弱極限「振盪 + 集中」的結構類比(明確聲明不是在對速度場 $u$ 本身建立 DiPerna–Majda measure-valued 解,只在記錄窗正規化時間補償變數這一層借用其思想),定義負載集中模數 $\mathfrak c_f^\infty=\lim_{K\to\infty}\limsup_j\int_{\{f_j>K\}}f_j\in[0,1]$,證明<strong>一致可積性給正佔空比下界</strong>(定理 28.1 一個乾淨的三段估計證明)、以及 <strong>Vanishing Duty Forces Full Concentration</strong>(定理 30.1:若對每個正門檻佔空比都趨零,則集中質量必exactly等於 1,非僅趨近)。全輪核心 <strong>Temporal Coactivation–Oscillation–Concentration Trichotomy</strong>(定理 33.1):中間/算子正規化負載序列至少落入三類之一——B-COACT(真同時活躍,有限尺度重疊真實存在)、B-OSC(兩者集中質量皆零、佔空比皆正,卻由非平凡 Young 相位混合維持微觀分離)、B-CONC(至少一個負載有正質量進入消失佔空比的高振幅脈衝)。若排除同時活躍,C4 的「時間脈衝分離」正式壓成 <strong>Oscillation ∨ Concentration</strong> 兩種古典弱極限缺陷。文件也建了一個標記 Young 測度把相位顏色和 C5-A 的算子角度緊緻座標綁在一起,證明 <strong>Phase–Angle Compatibility Theorem</strong>(正成長相位的支撐閉包必滿足 $\gamma\ge1/2$,反向相位必 $\gamma\le1/2$)——顏色與角度不能在極限中任意重配。**最後誠實劃出這一階的邊界**(§40-41):Young 測度只保存局部相位比例,不保存脈衝先後順序——$M,+,M,+,\ldots$ 與 $M,M,+,+,M,M,+,+,\ldots$ 兩種完全不同的微觀排列,在微尺度趨零時可以收斂到完全相同的 Young 測度;引入固定延遲相關譜作初步嘗試,但明確承認它仍抓不到與微尺度本身同階的延遲。正式交棒 <strong>C5-C — Temporal Correlation Defects, Transition Measures, and Causal Pulse Ordering</strong>,列出 8 項具體待證目標(轉移對測度、內在微尺度、雙尺度 Young 狀態、算子補償週期、中間/算子因果序、集中態轉移、壓力相位、極限環相容性)。</p>
+    <div class="claim-box">
+      修法:不再分開緊緻化中間/算子測度,改用聯合上色 Young 測度,證明其緊緻性且精確保存禁止相位組合。核心修復:同時活躍質量為正真的逼出有限尺度重疊(不是假象),精確分離也真的保存為零同時活躍(交替範例修復成正確的 50/50 混合)。但 Young 測度看不到消失佔空比的集中脈衝,借 DiPerna-Majda 振盪+集中架構補上負載集中模數,證明一致可積性給正佔空比、佔空比全趨零則集中質量恰為 1。核心三分定理:同時活躍∨體相位分離振盪∨負載集中。誠實承認 Young 測度不保存脈衝先後順序,交棒 C5-C
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../37-c5a-record-window-compensation-motif-compactness/">37 · C5-A:Motif Compactness</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>39 / 67 · C5 系列 2/13</div>
+    </div>
+    <blockquote class="cite">「ordinary Young measure captures local phase fractions, not temporal ordering。」— 摘自本文第 40 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
