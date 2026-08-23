@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-A:Certified Defect Graph、Typed Cycles 與 Minimal Survivors · NS · AMRAL</title>
+<meta name="description" content="C6系列開篇。C5-M把六元殘餘字母表投影成普通digraph,得到SCC分解{T}與{G,P,H,F},但C6-A證明普通label-level SCC不足以證明PDE recurrent cycle:粗邊可能只對子型別成立、邊帶額外metadata、兩條各自合法的邊未必首尾相接、not-ruled-out自環不是轉換定理、外部正則性閘門是匯點不是普通轉換。建立Certified Typed Defect Transition System:四種邊語意I(implication)/C(conditional)/N(non-exclusion)/E(external kill),為每個殘餘類定義完整metadata空間,把邊寫成型別化關係而非裸標籤箭頭,disjunctive routing編碼成hyperedge。定義cycle compatibility fiber product,Composable Cycle Criterion要求fiber product非空且復發疊代保持全部metadata合法。逐一審計三個候選復發循環——時間T(僅N-self-loop,candidate trap非certified cycle)、幾何-壓力G↔P(反向邊四項組成義務無一自動成立)、高階強迫H↔F(正向已有C5-J/L嚴謹routing,反向F→H是結構性猜想,五項組成義務待證)——全部只是candidate,沒有一個被certified,也沒有一個被排除。Finite-Budget Cycle Exclusion Lemma證明一致正負債排除復發,但三個候選都可能遇上critical saturation逃逸。最成熟的候選是H↔F,正式交棒C6-B專攻缺失的反向邊。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>50 · C6-A:Certified Defect Graph</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 50</span>
+      <span class="tag">C6-A · C6 系列開篇 1/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-A:Certified Defect Graph、Typed Cycle Composition 與 Minimal Survivor Candidates</h1>
+    <p class="h1-sub">C6 正式啟動,任務從 C5 的 state construction + compactification + debt routing 轉向 cycle extraction + cycle compatibility + cycle elimination。本輪第一個目標看似簡單——對 C5-M 的 finite defect graph 做 SCC extraction——但立刻出現關鍵修正:<strong>普通 label-level SCC 並不足以證明 PDE recurrent cycle</strong>,因為粗邊可能只對子型別成立、邊帶有額外 metadata、兩條各自合法的邊未必首尾相接、`not ruled out` 自環不是轉換定理、外部正則性閘門是匯點不是普通轉換、許多 C5 routing 本質上是 disjunctive hyperedge。因此本輪先建立 <strong>Certified Typed Defect Transition System</strong>:四種邊語意——$I$(implication,已證定理)、$C$(conditional implication,需額外閘門)、$N$(non-exclusion,僅代表「目前未排除」,不是轉換定理)、$E$(external kill edge,指向 REG 的發表定理閉合)——並為每個殘餘類定義完整 metadata 空間 $\mathcal K_T,\mathcal K_G,\mathcal K_P,\mathcal K_H,\mathcal K_F$,把每條邊寫成型別化關係 $R_e\subset\mathcal K_X\times\mathcal K_Y$ 而非裸標籤箭頭,並把 C5 常見的 disjunctive routing($X\Rightarrow Y_1\vee Y_2\vee Y_3$)正式編碼成 hyperedge 而非三條並行的強制邊。把 C5-M 所有 candidate/conditional/not-yet-excluded 箭頭投影成普通 digraph,得到 $V_6=\{T,G,P,H,F\}$(排除 $A$,因為它可能只代表 proof-entry legality 缺陷而非物理奇異機制)上的 may-graph,SCC 分解得到 $\{T\}$ 與 $\{G,P,H,F\}$——但 <strong>C6-A.1 Projected-SCC No-Go</strong> 證明 $X\leftrightarrow Y$ 在投影圖中成立並不蘊含存在真正首尾相接的 $(\theta_X,\theta_Y)$ 對:前一條邊產生的 target metadata 未必落在後一條邊的 source antecedent 內。因此定義 cycle compatibility fiber product $\mathfrak C(e_1,\ldots,e_m)=R_{e_1}\times_{\mathcal K_{X_2}}\cdots\times_{\mathcal K_{X_1}}R_{e_m}$,<strong>C6-A.2 Composable Cycle Criterion</strong> 要求全部邊皆為 I/C 狀態、條件相容、fiber product 非空、無自動觸發外部 REG 閘門、且復發疊代保持 legality/scale/time metadata——並進一步區分 projected cycle、composable cycle、recurrent cycle 三個嚴格遞增的層級,composable 不等於 recurrent。逐一審計三個候選:<strong>候選 $T$</strong> 僅是 $T\overset{N}{\looparrowright}T$(C5-C 的純量時間 no-go 未構造真正復發軌道,是 candidate trap 不是 certified self-cycle);<strong>候選 $G\leftrightarrow P$</strong>(<strong>C6-A.3</strong>)正向靠強中間相干幾何逼壓力重返,反向靠壓力軸鎖定,但 C5 未證明前者產生的 $P$ 態自動滿足後者的 antecedent,四項組成義務 GP-1 至 GP-4(來源連續性、簽名相容、軸相容、復發性)無一自動成立;<strong>候選 $H\leftrightarrow F$</strong>(<strong>C6-A.4</strong>)的 $H\to F$ 已有 C5-J/L 的嚴謹子型別 routing($\text{TURNOVER}\Rightarrow\text{VISC}\vee\text{PROJECTED-NL}$),但反向 $F\to H$——高階強迫壅塞是否真的重新生成 theorem-legal 的下一代 persistent bad window——目前只是結構性猜想,五項組成義務 HF-1 至 HF-5(強迫到振幅、振幅到定理入口、定理入口到窗口失敗、外部閘門迴避、復發縮放)同樣無一自動成立。<strong>C6-A.5 Finite-Budget Cycle Exclusion Lemma</strong> 證明:若復發循環代際總負債有限且逐代負債下界為正,則只有有限多代可以發生——但三個候選循環的負債($T$ 的純量時間代價、$G/P$ 的壓力臨界質量、$H/F$ 的全階黏性/非線性翻轉代價)都可能隨空間尺度、導數階、窗口長度收縮而趨零,目前沒有已知的一致正 global toll 排除任何一個,critical saturation($b_n\downarrow0$)是尚未排除的逃逸模式。<strong>核心結論(C6-A.6)</strong>:目前沒有任何非平凡 recurrent PDE defect cycle 被真正 certified,但也沒有一個候選被證明不可能——ordinary SCC 只是 survivor kernel 的 over-approximation(<strong>C6-A.7</strong>),必要但不充分。三個候選依優先序排列:<strong>Priority 1 — $H/F$</strong>(理論介面最成熟、debt 變數最明確、只缺一條 sharply formulated 的反向邊);Priority 2 — $G/P$(有限維矩陣障礙已具備,壓力來源相容性是主要不確定性);Priority 3 — $T$(純量 no-go 強,但通用時間-空間 PDE 耦合定理仍缺)。正式交棒下一篇 <strong>C6-B — High-Order Forcing Re-entry, Bad-Window Regeneration, and the $H/F$ Cycle Test</strong>,八項組成義務(B1 強迫事件正規化 至 B8 循環證實/否證),目標是判定「高階黏性/投影非線性強迫是否真的能重新生成一個 theorem-legal 且整個容許窗口都 sign-thick 的下一代缺陷」——不論答案是或否,都是高價值結果。</p>
+    <div class="claim-box">
+      對 C5-M 的 finite defect graph 做 SCC extraction,但證明普通 label-level SCC 不足以證明 PDE recurrent cycle。建立四種型別化邊語意(I/C/N/E)與 typed transition relation,把裸標籤箭頭換成型別化關係,disjunctive routing 正式編碼成 hyperedge。審計三個候選復發循環——時間 $T$、幾何-壓力 $G\leftrightarrow P$、高階強迫 $H\leftrightarrow F$——全部只是 candidate,沒有一個被 certified,也沒有一個被排除。Finite-Budget Cycle Exclusion Lemma 證明若負債一致有正下界則循環只能有限多代,但目前沒有任何候選被證明滿足這個下界。最成熟的候選是 $H\leftrightarrow F$,正式交棒 C6-B 專攻其缺失的反向邊。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../49-c5m-unified-defect-graph-c5-phase-closure/">49 · C5-M:C5 Phase Closure</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>51 / 67 · C6 系列 1/17</div>
+    </div>
+    <blockquote class="cite">「it means cycle existence itself has become a proof obligation。」— 摘自本文第 22 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
