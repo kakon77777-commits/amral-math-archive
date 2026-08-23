@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-E:Temporal-to-Spatial Coupling 與 the Fate of the T Trap · NS · AMRAL</title>
+<meta name="description" content="C6-E審核C6-A最後一個候選T。middle/operator時間負債本身天然攜帶canonical時空機率測度,時間marginal只是其投影。Temporal Projection Contraction Theorem證明時空共享overlap Ω_ST永遠不超過時間overlap Ω_T,並用顯式抽象構造證明可以時間完全重疊(Ω_T=1)而空間來源完全分離(Ω_ST=0)。即使真有共享時空來源,Shared Directional-Cone Extraction Lemma只證明存在某個共享強中間方向錐,不足以給出逐點核心、壓力來源、或高階符號幾何,還需要額外的核心尺度定位與跨代遺傳。Pure-Temporal State Completeness No-Go證明兩組完全不同的時空來源對可以有一模一樣的時間marginal——T本身不足以決定物理耦合狀態,只是marginal標籤,不是完整物理態,判死。narrowed成需要時空來源遺傳的TS_n⇢TS_n+1,Finite Temporal-Spatial Coupling Bottleneck Theorem給出與C6-C/D同型的二分法。全輪最重要結論:至此C6-A三個原始候選(H/F、G/P、T)全部被同型精煉,五輪下來沒有任何非平凡復發循環被certified,但問題已改寫成有限個組合問題。交棒C6-F嘗試建立TS到GP/HF的跨域路由。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6E_TemporalSpatial_SharedSource_TTrap_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>54 · C6-E:Fate of the T Trap</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 54</span>
+      <span class="tag">C6-E · 三候選全部同型精煉完畢 5/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-E:Temporal-to-Spatial Shared-Source Coupling、Isolation No-Go Tests 與 the Fate of the T Trap</h1>
+    <p class="h1-sub">C6-A 留下的三個候選中,$H\leftrightarrow F$ 已被 C6-B/C 砍成 $H_{\rm force}\to F_{\rm NL}^{+}\dashrightarrow H_{\rm force}$,$G\leftrightarrow P$ 已被 C6-D 改寫成遺傳性聯合態 $(G,P)_{\rm joint}\dashrightarrow(G,P)_{\rm joint}$;C6-E 正式審核最後一個:$T$。C5-B/C 已經證明純量時間論證本身無法強迫 same-time overlap,C6-E 問的不再是這個舊問題,而是:middle/operator 時間負債本身,是不是早就已經是某個空間 source measure 的 marginal?<strong>C6-E.1 Canonical Middle Spacetime Lift</strong> 給出精確肯定答案:中間負債 $m(t)=\int\lambda_2^+|S|^2dx$ 本身天然攜帶一個時空機率測度 $\Pi^M$,其時間 marginal 精確就是 C5 用的中間負債機率——<strong>中間時間態本身就是一個空間 source measure 的 marginal</strong>。<strong>C6-E.2</strong> 對 operator 正向 $H^1$ 成長負債重複同樣構造,用局部正成長容量當空間條件密度。定義時間 overlap $\Omega_T$(兩個時間 marginal 之間)與時空共享 overlap $\Omega_{ST}$(兩個完整時空測度之間),<strong>C6-E.4 Temporal Projection Contraction Theorem</strong>(全變差在 pushforward 下收縮)證明 $\Omega_{ST}\le\Omega_T$——<strong>時空共享來源比時間同時發生更強</strong>。<strong>C6-E.5</strong> 用一個顯式抽象構造(相同時間密度、但空間條件分佈互不相交支撐)證明可以 $\Omega_T=1$ 同時 $\Omega_{ST}=0$——純時間 marginal 邏輯上不能證明真的共享空間來源。若真的 $\Omega_{ST}>0$,可建出<strong>共享中間-算子時空來源機率</strong> $\Pi^\cap$,其支撐上幾乎每點同時具備正的中間應變活性與正的局部 $H^1$ 成長容量,嚴格強於單純時間重疊。在共享來源上追蹤中間縫隙變數 $\vartheta(S)$,若非退化質量存活,<strong>C6-E.6 Shared Directional-Cone Extraction Lemma</strong>(用正規化應變方向球面的緊緻性配合有限覆蓋)強迫某個固定寬度的方向錐真的承擔非零時空質量——一個真正的<strong>共享強中間方向來源</strong>。但文件明確劃界:這仍不給出逐點核心、平均旋轉耗盡、壓力來源、或 Grujić–Xu 符號幾何——還需要額外的 core-scale localization(只有相對一個合法參考尺度才有意義,否則路由進 legality 類 $\mathsf A$)與跨代 heredity,兩者都還沒有。<strong>C6-E.7 Pure-Temporal State Completeness No-Go</strong> 因此證明:兩組完全不同的時空來源對可以擁有一模一樣的時間 marginal,卻在空間重疊、中間縫隙幾何、方向集中、核心定位、遺傳性上截然不同——<strong>$T$ 本身不足以決定物理來源耦合狀態,只是一個 marginal 標籤,不是完整的物理態</strong>。因此 $T\overset{N}{\looparrowright}T$ 作為完整物理自循環正式<strong>判死</strong>——與 H/F、G/P 相同的判死形狀——但不是全域排除:正確物件變成 $TS_n\overset{\text{時空來源遺傳}}{\dashrightarrow}TS_{n+1}$。<strong>C6-E.8 Finite Temporal–Spatial Coupling Bottleneck Theorem</strong> 給出與 C6-C/D 完全同型的二分法:任何無窮候選必一致共享來源相干,或逼近七個具名邊界之一(時間相位分離、空間來源分離、算子容量抵銷膨脹、共享中間縫隙塌縮——直接路由進既有 $G$ 類——核心尺度擴散/多重性、來源遺傳塌縮、尺度/設置出口——路由進 $\mathsf A$ 類)。<strong>全輪最重要的整體結論</strong>:至此 C6-A 三個原始粗糙候選——$H/F$、$G/P$、$T$——全部被同型精煉成:$HF_{\rm coherent}$、$GP_{\rm hereditary}$、$TS_{\rm hereditary}$,五輪下來仍然<strong>沒有任何非平凡復發 PDE 缺陷循環被真正 certified</strong>,但整個問題已經被精確改寫成有限個定義良好的組合問題。既然三者現在都已個別型別化到同一種形狀,下一步最自然的不再是繼續各自細分,而是嘗試建立真正的跨域邊:uniform TS coherence 能不能真的路由進 $GP$ 或 $HF$?正式交棒 <strong>C6-F — Shared-Source Core Extraction, Spatiotemporal Heredity, and Cross-Domain Routing to GP/HF</strong>,八項組成義務(F1 參考尺度共享集中度 至 F8 候選圖重新計算)。</p>
+    <div class="claim-box">
+      證明 middle/operator 時間負債本身天然攜帶時空機率測度,時間 marginal 只是其投影。全變差 pushforward 收縮定理證明時空共享 overlap 永遠不超過時間 overlap,並用顯式構造證明可以時間完全重疊而空間來源完全分離。即使真有共享時空來源,也只證明存在某個共享強中間方向錐,不足以給出逐點核心、壓力來源、或高階符號幾何。因此純時間態 $T$ 不足以決定物理耦合狀態,只是一個 marginal 標籤——判死,narrowed 成需要時空來源遺傳的 $TS_n\dashrightarrow TS_{n+1}$。至此 C6-A 三個候選(H/F、G/P、T)全部同型精煉完畢,沒有一個被 certified,但整個問題已改寫成有限個組合問題。交棒 C6-F 嘗試建立 TS 到 GP/HF 的跨域路由。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../53-c6d-geometry-pressure-cycle-composition-provenance-compatibility-signature-return-tests/">53 · C6-D:Geometry–Pressure Cycle</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>55 / 67 · C6 系列 5/17</div>
+    </div>
+    <blockquote class="cite">「T does not contain enough state information to define a physical recurrent node. It is a marginal label。」— 摘自本文第 31 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6E_TemporalSpatial_SharedSource_TTrap_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6E_TemporalSpatial_SharedSource_TTrap_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
