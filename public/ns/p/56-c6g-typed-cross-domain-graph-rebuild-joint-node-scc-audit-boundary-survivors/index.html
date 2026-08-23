@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-G:Typed Cross-Domain Graph Rebuild 與 SCC Audit · NS · AMRAL</title>
+<meta name="description" content="C6-G重建整張型別化圖,每條邊攜帶證明狀態(I/C/N/E)與時間語意(S/D/E)雙標籤,只有真正跨代動態邊能組成復發SCC,靜態互逆關係必須先quotient掉。Interior SCC Dissolution Theorem證明C5-M那個看似存在的大型{G,P,H,F} SCC在型別化語意下正式解體——TS°、GP°、HF°之間沒有任何被認證的多節點循環,沒有任何反向跨域邊(GP⇏TS、GP⇏HF、HF⇏TS、HF⇏GP)被認證。Positive Certification-Deficit Theorem證明每一條候選復發循環都有正的認證缺口,明確強調這只代表研究圖還沒認證,不代表PDE不能實現。把累積的邊界儲備quotient成十個全域超類(絕對負載、相干性崩潰、來源分離、幾何臨界、來源-場脫鉤、平均旋轉接管、來源合法性喪失、遺傳性喪失、定理設置出口、發散容量無窮邊界)。Minimal Survivor Reduction Theorem證明任何無窮倖存者必屬於一致GP、一致HF、逼近某個固定邊界、或合法性出口四者之一——TS從最小內部倖存者候選名單正式移除。最重要的方法論結論:真正的全域不確定性已經從內部圖遷移到邊界圖,這是七輪下來C6的真正前沿。交棒C6-H專攻邊界面轉換與負債強制性稽核。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6G_TypedCrossDomainGraph_SCC_BoundarySurvivors_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>56 · C6-G:Typed Graph Rebuild</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 56</span>
+      <span class="tag">C6-G · 內部 SCC 解體,前沿轉向邊界 7/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-G:Typed Cross-Domain Graph Rebuild、Joint-Node SCC Audit 與 Minimal Boundary-Saturated Survivor Cycles</h1>
+    <p class="h1-sub">C5-M 的 coarse residual graph $\{A,T,G,P,H,F\}$ 投影成普通有向圖後,很容易讀出一個大型 $\{G,P,H,F\}$ SCC——但這只是第一層壓縮,C6-A 早已指出 projected label SCC 不蘊含 composable PDE recurrent cycle。C6-B/C 把 $H\leftrightarrow F$ 壓成非線性相干重入節點 $HF_{\rm coherent}$,C6-D 證明 $G\leftrightarrow P$ 大部分是同事件相容性,quotient 成聯合節點 $GP_{\rm hereditary}$,C6-E/F 證明 $T$ 只是真正時空來源狀態的時間 marginal,提升成 $TS_{\rm hereditary}$ 並建出第一批跨域型別化橋 $TS\to GP$、$TS\to HF/F/H/\mathrm{REG}$。C6-G 現在正式重建整張圖並重做 SCC 稽核。核心工具:每條邊現在攜帶兩個標籤——證明狀態($I/C/N/E$)與時間語意($S$ 同事件靜態、$D$ 真正跨代動態、$E$ 外部封閉)——<strong>只有 $D$ 邊能組成動力復發 SCC</strong>,靜態互逆關係必須先被 quotient 掉。精煉後的內部節點集合 $V_{\rm int}=\{TS^\circ,GP^\circ,HF^\circ\}$(上標 $\circ$ 表示定義該內部區域的所有儲備嚴格為正)。目前已認證/條件式的跨域邊只有:$TS^\circ_X\overset{C,D}{\to}GP^\circ$(給定 source-to-field capture + 平均旋轉耗盡 + 壓力來源合法)、$TS^\circ_X\to F_{\rm OP}\vee F_{\rm DER}\to\{HF^\circ,H\vee\mathrm{REG}\}$——但<strong>沒有任何反向跨域邊被認證</strong>:$GP\not\Rightarrow TS$、$GP\not\Rightarrow HF$、$HF\not\Rightarrow TS$、$HF\not\Rightarrow GP$,這些直覺上「應該」存在的回饋邊,C6 目前沒有通用型別化定理,因此不能畫進認證圖。<strong>C6-G.1 Interior SCC Dissolution Theorem</strong> 因此證明:在四項修正(靜態 G/P quotient、H/F 相干子型別精煉、T→TS 時空提升、C6-F 跨域橋插入)之後,$TS^\circ_X$、$GP^\circ$、$HF^\circ$ 之間<strong>沒有任何被認證的多節點有向循環</strong>——TS 只有向外的路由,沒有 GP/HF 邊返回 TS,GP/HF 自身的復發仍是未證的義務,GP↔HF 之間也沒有已認證的交叉循環——<strong>C5-M 那個看似存在的大型 SCC,在型別化動力語意下正式解體</strong>(明確標註:這是目前研究圖的稽核結果,不是「未來定理不能新增反向邊」的 PDE 證明)。定義每條候選循環的<strong>認證缺口</strong> $\delta_{\rm cert}(C)$(循環中缺乏已認證組合動態轉換的邊數),<strong>C6-G.2 Positive Certification-Deficit Theorem</strong> 證明目前每一條被識別出的候選復發循環都有 $\delta_{\rm cert}(C)\ge1$——GP 自循環缺聯合幾何-壓力遺傳回歸定理,HF 自循環缺一致相干非線性重入復發定理,$TS\to GP\to TS$ 缺 $GP\to TS$,$TS\to HF\to TS$ 缺 $HF\to TS$,$GP\leftrightarrow HF$ 兩個方向都缺——文件明確強調這個區別是強制性的:$\delta_{\rm cert}>0$ 只代表「目前研究圖還沒認證這個循環」,不代表「PDE 不能實現這個循環」。把 C6-C/D/E/F 累積下來一大堆零散的個別儲備邊界,重新 quotient 成<strong>十個全域邊界超類</strong> $\mathfrak B=\{B_{LOAD},B_{COH},B_{SEG},B_{GEOM},B_{FIELD},B_{MEAN},B_{PROV},B_{HER},B_{SETUP},B_{CAP^\infty}\}$(絕對負載塌縮、相干性崩潰、來源分離、幾何臨界、來源-場脫鉤、平均旋轉接管、來源合法性喪失、遺傳性喪失——標記為「主要的循環組成邊界」——定理設置出口、以及發散容量比的無窮邊界),並明確警告:一個儲備趨於零只代表狀態逼近某個邊界 $\partial\mathcal K$,<strong>不自動定義</strong> $B_i\to B_j$ 這樣的 PDE 轉換邊——那需要獨立認證,C6-G 刻意停在這裡,不繼續往下細分子邊界,「以避免重演 C5 的邊界增殖問題」。<strong>C6-G.3 Minimal Survivor Reduction Theorem</strong> 是全輪的高潮:任何避開 $\mathrm{REG}$ 的假想無窮倖存者序列,取子序列後必屬於四者之一——M1 一致遺傳性 GP 候選、M2 一致相干性 HF 候選、M3 逼近某個固定邊界 $B_\ast\in\mathfrak B$ 的<strong>邊界飽和倖存者</strong>、M4 遞歸進入合法性出口 $\mathsf A$。<strong>關鍵推論</strong>:$TS$ <strong>從最小內部倖存者候選名單中被正式移除</strong>——在 C6-F 的一致跨域儲備下,TS 只能是一個中繼/暫態/邊界復發狀態,不能再是一個孤立的最小內部匯點。<strong>C6-G.4 Zero-Certified-Cycle Audit</strong> 正式重述:目前型別化動力圖中,完全由已認證動態蘊含邊組成的非平凡復發有向循環<strong>不存在</strong>——明確標註這是「目前研究圖定理」,不是對 PDE 本身的斷言。全輪最重要的方法論總結(第 51 節):「C4 把異步 blow-up 通道轉成同步母題;C5 把母題轉成緊緻缺陷態;C6-A–F 修正圖語意並建出型別化聯合態;C6-G 現在顯示——<strong>真正的全域不確定性已經從內部圖遷移到邊界圖</strong>」。文件進一步論證(第 44 節)邊界飽和分支應該優先於證明新的內部自復發定理:如果大多數邊界面能被證明要嘛進入 $\mathrm{REG}$、要嘛離開復發類、要嘛消耗有限全域預算、要嘛路由進某個已受限的內部節點,那整個循環空間可能<strong>完全不需要</strong>證出 GP/HF 自復發定理就直接崩潰——一個真正有策略價值的洞見。正式交棒 <strong>C6-H — Critical Boundary-Face Transition Graph, Debt-Coercivity Audit, and Boundary-Cycle Elimination</strong>,八項組成義務(H1 具現化邊界超類代表 至 H8 最小倖存者更新)。</p>
+    <div class="claim-box">
+      重建整張型別化圖,每條邊攜帶證明狀態與時間語意兩個標籤,只有真正跨代的動態邊能組成復發 SCC。證明 C5-M 那個看似存在的大型 SCC 在型別化語意下正式解體——目前沒有任何被認證的多節點內部循環,每一條候選循環都有正的認證缺口(明確強調:這只代表研究圖還沒認證,不代表 PDE 不能實現)。把累積的邊界儲備 quotient 成十個全域超類,任何無窮倖存者取子序列後必屬於:一致 GP、一致 HF、逼近某個固定邊界、或合法性出口——TS 從最小內部倖存者候選名單中正式移除。最重要的方法論結論:真正的全域不確定性已經從內部圖遷移到邊界圖,這是七輪下來 C6 的真正前沿。交棒 C6-H 專攻邊界面轉換與負債強制性稽核。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../55-c6f-shared-source-core-extraction-spatiotemporal-heredity-cross-domain-routing/">55 · C6-F:Cross-Domain Routing</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>57 / 67 · C6 系列 7/17</div>
+    </div>
+    <blockquote class="cite">「The main global uncertainty has migrated from the interior graph to the boundary graph. This is the correct frontier after all previous reductions。」— 摘自本文第 51 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6G_TypedCrossDomainGraph_SCC_BoundarySurvivors_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6G_TypedCrossDomainGraph_SCC_BoundarySurvivors_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
