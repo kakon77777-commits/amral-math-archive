@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-Q:Ancient Defect Rigidity、Local Growth Lift、Strain-Projection Tail Reduction 與 Spatial Carrier Rebinding · NS · AMRAL</title>
+<meta name="description" content="C6-Q發現對TS真正使用的時間H¹ strain-growth ledger而言,P_st根本不是內稟的空間載體物件——利用Miller的精確恆等式⟨-ΔS,ω⊗ω⟩=0可以把它從growth pairing中完全移除(Projection-Free H¹ Growth Identity),給出一個完全局部的精確空間密度代表g_O^loc。修正C6-E的「canonical lift」措辭:時間邊際不決定唯一空間提升。即使對真正需要P_st範數的算子通道,也用Miller–Sawyer等距同構推出顯式投影公式,證明遠場尾端頂多是「常數矩陣模式+O(R⁻¹)消失振盪」,非局部性被壓成有限維。第二個突破:空間載體逃逸不是終點——平移對稱可以重新定心抽出攜帶同樣缺陷的Satellite Ancient Defect Profile;若缺陷反覆復發,時空平移甚至能抽出一個定義在全部時間上的有界永恆(Eternal)解。七分歸約(Ancient Defect Reduction):GP/HF/TS-ancient、算子範數態、order-geometry逃逸、永恆缺陷、或FLAT(不含缺陷)。交棒C6-R攻打永恆缺陷剛性與order-geometry逃逸。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6Q_AncientDefect_LocalGrowth_PstTail_Satellite_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>66 · C6-Q:Ancient Defect Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 66</span>
+      <span class="tag">C6-Q · P_st 尾端消解與衛星/永恆延拓 17/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-Q:Ancient Defect Rigidity、Local Growth Lift、Strain-Projection Tail Reduction 與 Spatial Carrier Rebinding</h1>
+    <p class="h1-sub">C6-P 留下的最後難點看似是 TS 算子通道 $P_{st}$ 的非局部尾端。C6-Q 發現一個重大修正:對 TS 真正使用的<strong>時間 $H^1$ strain-growth ledger</strong> 而言,$P_{st}$ 根本不是內稟的空間載體物件。利用 Miller 的精確恆等式 $\langle-\Delta S,\omega\otimes\omega\rangle=0$ 配合 $-\Delta S\in L^2_{st}$,可以把 $P_{st}$ 從整個 growth pairing 中移除,<strong>C6-Q.1 Projection-Free $H^1$ Growth Identity</strong> 因此證明 $E_1'=-\nu\|\Delta S\|_2^2-\langle(u\cdot\nabla)S+S^2,-\Delta S\rangle$ 有一個完全<strong>局部</strong>的精確空間密度代表 $g_O^{loc}$——不含 $P_{st}$、不含壓力奇異積分。<strong>C6-Q.2 Operator-Lift Nonuniqueness Guard</strong> 修正 C6-E 用過的「canonical」措辭:一個時間算子成長邊際並不決定唯一的正空間提升,必須分別標記 Projected Representative Lift 與 Local Growth Representative Lift 的來源。<strong>C6-Q.3 Projected-Tail Deletion for the TS Growth Carrier</strong> 正式宣告:非局部 $P_{st}$ 尾端<strong>不是</strong> TS growth-carrier 局部化的內稟障礙——但明確劃界:這只刪掉 carrier-tail 問題,不是刪掉 $P_{st}$ 的每一種用法,因為 Miller 真正的臨界算子判準仍然依賴 $Q_{SV}=P_{st}(\cdots)$ 本身的範數,所以 growth carrier ≠ operator-norm carrier。即使對真正需要 $P_{st}$ 的算子範數通道,<strong>C6-Q.4 Explicit Strain-Projection Formula</strong> 從 Miller–Sawyer 的等距同構 $T^*T=\frac12I$ 直接推出顯式公式 $P_{st}M=-2\nabla_{\rm sym}(-\Delta)^{-1}P_{df}\operatorname{div}M$,證明 $P_{st}$ 是零階 Calderón–Zygmund 矩陣算子,核 $K_{st}(x)=|x|^{-3}\Omega(x/|x|)$;<strong>C6-Q.5/6 Far-Tail Oscillation Lemma / Local-Constant Tail Reduction</strong> 證明對有界來源,固定核心上的遠場尾端頂多是「常數矩陣模式 + $O(R_0/R)$ 消失振盪」——遠場非局部性被壓成有限維。<strong>C6-Q.8 Conditional Ancient TS Local-Growth Inheritance</strong> 因此證明在五個條件下,$TS_{growth}^{anc}$ 可以<strong>完全不需要任何 $P_{st}$ 遠端尾端假設</strong>就傳給 ancient 極限——明確標註這是對 C6-P 的重大修正。全輪第二個真正的正面突破處理 C6-P 留下的空間載體逃逸:<strong>C6-Q.9 Satellite Ancient Defect Extraction</strong> 證明 $|z_n|\to\infty$ 的空間逃逸<strong>不是終點</strong>——利用平移對稱重新定心,任何非零局部絕對缺陷負載都能抽出一個攜帶同樣缺陷的「Satellite Ancient Defect Profile」,HF、GP、TS 三個標籤都各自獲得衛星版本,<strong>C6-Q.10 Satellite Physical-Center Trichotomy</strong> 進一步分類衛星中心與原記錄峰值的物理距離關係。更進一步,若一個 ancient 缺陷在 $\tau_j\to-\infty$ 反覆復發,<strong>C6-Q.11 Ancient Recurrence → Eternal Profile Extraction</strong> 證明時空平移可以抽出一個定義在<strong>全部</strong>時間 $\mathbb R$ 上的有界<strong>永恆</strong> N–S 解,攜帶同樣的非零局部缺陷——誠實聲明這不是矛盾,因為一般 3D 有界 ancient/eternal Liouville 問題仍然開放,而是一次更強的緊緻化化簡。全輪收攏成 <strong>C6-Q.12 Ancient Defect Reduction</strong>:$GP_{\rm loc}^{anc}\vee HF_{k,\rm geom}^{anc}\vee TS_{growth}^{anc}\vee OP_{\rm norm}^{anc}\vee$ Order-Geometry Escape $\vee$ Eternal Defect Profile $\vee$ FLAT——FLAT 不攜帶任何缺陷,空間載體逃逸不再是獨立的終端分類。正式交棒 <strong>C6-R — Eternal Defect Profiles, Analytic Order-Geometry Rigidity, and Operator-Constant-Mode Closure</strong>,十項組成義務直攻:非平凡有界永恆 TS/GP/HF 缺陷狀態是否存在、以及在一致解析基線下 order-geometry 逃逸是否真能倖存。</p>
+    <div class="claim-box">
+      發現對 TS 真正使用的時間 $H^1$ strain-growth ledger 而言,$P_{st}$ 根本不是內稟的空間載體物件——利用 Miller 的精確恆等式可以把它從 growth pairing 中完全移除,給出一個完全局部的精確空間密度代表。修正 C6-E 的「canonical lift」措辭:時間邊際不決定唯一空間提升。即使對真正需要 $P_{st}$ 範數的算子通道,也證明遠場尾端頂多是「常數矩陣模式 + 消失振盪」,非局部性被壓成有限維。第二個突破:空間載體逃逸不是終點——平移對稱可以重新定心抽出攜帶同樣缺陷的衛星 ancient profile;若缺陷反覆復發,時空平移甚至能抽出一個定義在全部時間上的有界永恆解。七分歸約:GP/HF/TS-ancient、算子範數態、order-geometry 逃逸、永恆缺陷、或 FLAT(不含缺陷)。交棒 C6-R 攻打永恆缺陷剛性。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../65-c6p-ancient-defect-state-classification-record-peak-derivative-rigidity-peak-local-pressure-closure/">65 · C6-P:Ancient Defect-State Classification</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>67 / 67 · C6 系列 17/17</div>
+    </div>
+    <blockquote class="cite">「TS shared-source localization does not fundamentally depend on a global strain projection。」— 摘自本文第 73 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6Q_AncientDefect_LocalGrowth_PstTail_Satellite_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6Q_AncientDefect_LocalGrowth_PstTail_Satellite_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
