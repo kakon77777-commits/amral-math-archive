@@ -17,6 +17,7 @@
   <a class="link" href="protocols/">研究協議</a>
   <a class="link" href="validation/">驗證</a>
   <a class="link" href="research-modes/">自主模式</a>
+  <a class="link" href="data-access/">資料存取</a>
   <a class="link" href="riemann/">黎曼猜想</a>
   <a class="link" href="moser/">Moser 蟲問題</a>
   <a class="link" href="skew-field/">歪度場</a>
@@ -24,6 +25,8 @@
   <a class="link" href="glc-framework/">GLC 閉合框架</a>
   <a class="link" href="bsd/">BSD 猜想</a>
   <a class="link" href="cpl/">臨界線比例梯</a>
+  <a class="link" href="ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="ns/">NS 納維-斯托克斯</a>
 </div></nav>
 <div class="wrap narrow">
   <header class="page">
@@ -119,6 +122,36 @@
     </p>
   </section>
 
+  <section id="outlook-ccm">
+    <h2 class="doc-h2">第五條計畫線:CCM 計算複合方法論</h2>
+    <p class="lede">
+      <code>PROGRAM-CCM</code>(Computational Composite Methodology)跟前四條線性質不同——不是攻堅單一猜想,
+      而是一套給數學研究本身用的<strong>方法論理論</strong>:如何系統性組合計算探索、形式化驗證與人類審查,
+      產生可追蹤、可否證、可交棒的研究狀態。目前基礎理論篇上線,規劃了 13 個校準基準與一套以希爾伯特第三問題
+      為應用案例的 18 輪系列,兩者都已定範疇但尚未逐篇建置。
+    </p>
+  </section>
+
+  <section id="outlook-ns">
+    <h2 class="doc-h2">第六條計畫線:Navier–Stokes 全域正則性</h2>
+    <p class="lede">
+      <code>PROGRAM-NS</code> 是第六個獨立問題族——三維不可壓縮 Navier–Stokes 方程的全域正則性問題,另一個
+      Clay Millennium Prize 問題。文件開頭即明確列出八項不主張:不主張已證明 global regularity、不主張已構造
+      finite-time blow-up、不主張 True ETN(無限維張力場)或 X 積分本身能推出 PDE 正則性。核心工具是把問題壓縮成
+      兩條互補、可證偽的命題:<strong>C1(Chain Necessity)</strong>——blow-up 必須生成一條來源可追蹤、逐尺度合法的
+      X-legal UV concentration chain;<strong>C2(Finite Obstruction)</strong>——任何這樣的鏈都必在有限尺度被真正
+      N–S 結構阻斷。若兩者皆證明,則 ¬Blowup。
+    </p>
+    <p class="lede">
+      目前:C1a/C1b(UV 逃逸必要性、非線性補給的因果來源)CLOSED;C2 已證明純量可加預算不足以排除 blow-up(抽象
+      cascade ledger 反例),前沿轉向 C3 跨尺度耦合剛性,展開為 25 輪獨立子調查。後續 C4(9 輪,同步化與共享事件耦合)、
+      C5(13 輪,記錄窗與補償動機狀態空間)、C6(17 輪,最小遞迴缺陷循環與 sink-SCC 提取)相繼完成——
+      <strong>framework + C1/C2/C3/C4/C5/C6 全 67 篇目前皆已上線</strong>,全域正則性仍完全 OPEN,沒有任何一輪
+      宣稱已解決。另有一份跨全系列的<a href="data-access/#ns-symbols">機器可讀符號對照表</a>,收錄全部 67 篇中
+      定義過的每個符號。
+    </p>
+  </section>
+
   <nav class="case-grid" aria-label="內容導覽">
     <a class="case-card" href="methodology/">
       <span class="k">方法論</span>
@@ -160,9 +193,19 @@
       <h3>臨界線比例梯</h3>
       <p>延伸真實已發表的 Anthropic 論文(67.25% 無條件結果),研究能否推進到 70% 以上。明確不影響黎曼猜想本身。</p>
     </a>
+    <a class="case-card" href="ccm/">
+      <span class="k">PROGRAM-CCM · 2026-08</span>
+      <h3>CCM 計算複合方法論</h3>
+      <p>給數學研究本身用的方法論理論,不是攻堅單一猜想。基礎理論篇上線,13 個校準基準與希爾伯特第三問題應用系列已定範疇、待建置。</p>
+    </a>
+    <a class="case-card" href="ns/">
+      <span class="k">PROGRAM-NS · 2026-08</span>
+      <h3>Navier–Stokes 全域正則性</h3>
+      <p>把問題壓縮成 C1(Chain Necessity)與 C2(Finite Obstruction)兩條可證偽命題。framework+C1-C6 全 67 篇已上線,全域正則性仍完全 OPEN。</p>
+    </a>
   </nav>
 
-  <p class="notice">四條計畫線各自獨立編號、獨立驗證。下一個希爾伯特問題會加進第一條線;下一個萬有覆蓋類問題會加進第二條線;下一個 P/NP 類問題會加進第三條線;下一個 BSD 類問題會加進第四條線——都不重寫這頁,只加卡片。</p>
+  <p class="notice">六條計畫線各自獨立編號、獨立驗證。下一個希爾伯特問題會加進第一條線;下一個萬有覆蓋類問題會加進第二條線;下一個 P/NP 類問題會加進第三條線;下一個 BSD 類問題會加進第四條線;CCM 自己的應用案例(如希爾伯特第三問題系列)會加進第五條線;下一個 Clay Millennium Prize 問題會加進第六條線——都不重寫這頁,只加卡片。</p>
 
   <footer class="sitefoot">
     <span>EveMissLab · Logic Matrix 系列</span>
