@@ -82,6 +82,34 @@
     </div>
   </section>
 
+  <section id="ns-symbols">
+    <h2 class="doc-h2">ns-symbols.json · NS PROGRAM 符號全域對照表</h2>
+    <p class="section-note">
+      跟上面兩個不一樣——這不是原始研究文字的鏡射,是一份純資料的機器可讀符號表:每個在 NS PROGRAM
+      (Navier–Stokes 全域正則性)全系列文件中被定義或核心使用過的符號,配上 LaTeX、中英文定義、出處回合。
+      設計目的是讓 AI/agent 在讀任一單篇 <code>.md</code> 時,不必手動翻過其餘幾十篇回合就能查到某個符號第一次
+      被定義在哪裡、意思是什麼。
+    </p>
+    <div class="doc">
+      <p>
+        直接抓取:
+        <a href="/data/symbols/ns-symbols.json" target="_blank" rel="noopener">
+          amral.evemisslab.com/data/symbols/ns-symbols.json
+        </a>
+      </p>
+      <p>
+        純 JSON,不依賴 SEDB 或任何資料庫即可讀取;內容從獨立維護的 SEDB entity store 重新產生(見
+        <code>SEDB/projects/amral-ns-symbols/</code>,未公開鏡射),兩者刻意保持同步而非互為唯一來源。
+      </p>
+      <p class="notice">
+        誠實狀態(2026-08-28):共 1845 筆,涵蓋 framework 共用記號 + C1、C2、C3(A–Y 全 25 輪)、C4(A–J,無
+        H,全 9 輪)、C5(A–M 全 13 輪)、C6(A–Q 全 17 輪)——NS PROGRAM 目前已發表的全部 67 篇皆已納入。
+        目前只涵蓋 NS 這一條研究線;BSD、Moser/歪度場、P/NP 對偶、GLC、CPL、CCM 等其他系列尚未建表。
+        不同系列間的符號空間刻意不假設共用意義(同一個希臘字母在兩個系列可能代表完全不同的量)。
+      </p>
+    </div>
+  </section>
+
   <footer class="sitefoot">
     <a href="../">← AMRAL</a>
     <span>兩條路徑指向同一批研究,不是兩份不同的內容</span>
