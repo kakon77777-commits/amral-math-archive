@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C4-G:Cross-Congestion Synchronization 與 Operator Funnel · NS · AMRAL</title>
+<meta name="description" content="C4-F留下三種壅塞:尾巴/包裹、形變/算子、徑向交互作用。本輪問三者是否能彼此獨立,答案是不能。追蹤來源後發現:無論高頻中繼是來自來源過量還是秩缺陷正功,都自動蘊含形變/算子壅塞;譜幾何退化本身就是正功分支的子情形,同樣自動蘊含。三個壅塞類別因此不是三個獨立出口,而是共享同一個傳輸無關殼層驅動事件,形變/算子壅塞是通用漏斗,尾巴與徑向只是附加在上面的相空間座標。遠端中繼還額外帶精確的近反平行傅立葉幾何。UV穿越最終被壓成四個同步通道,其中第四支再分裂成Miller算子、渦度二次項、平流形變三種可能承載者。UV側正式完成一個清楚的相位閉合,前沿從拆分支移到算子能否真正逼近正則性閘門。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>34 · C4-G:Cross-Congestion Funnel</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 34</span>
+      <span class="tag">C4-G · UV 相位正式閉合</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C4-G:Cross-Congestion Synchronization、Operator Funnel 與 UV Phase-Space Closure</h1>
+    <p class="h1-sub">C4-F 留下三種壅塞:$C_{TP}$ 尾巴/包裹、$C_{DO}$ 形變/算子、$C_{RI}$ 徑向交互作用。本輪問:這三種壅塞能否彼此完全獨立?<strong>答案是不能</strong>。文件先追蹤各母題的來源:高頻中繼($M_4$)有兩個源頭——Relay-S(來自來源過量)與 Relay-W(來自秩缺陷正功)。<strong>Source-Impulse → Growing Deformation-Impulse Theorem</strong>(定理 7.1,靠環形下界 Bernstein 加對稱梯度 Korn 型下界)證明來源過量必同步一筆真正的 $L^1_tL^2_x$ 形變驅動衝量,且下界隨 $\lambda_q^{1/2}$ <strong>增長</strong>——很強的壅塞憑證,但 Leray 能量理論目前沒有提供對應的有限全域預算。由此得到 Relay-S 與 Relay-W 都<strong>自動</strong>蘊含形變/算子壅塞(定理 C4-G.2、C4-G.3),而譜幾何退化($M_6$)本身從一開始就是正功分支的子情形,同樣自動蘊含(定理 C4-G.4)。三者合併給出全輪核心 <strong>Cross-Congestion Funnel</strong>(§15):$M_4\subset C_{TP}\cap C_{DO}$,$M_5\subset C_{DO}$,$M_6\subset C_{RI}\cap C_{DO}$,所以 $M_4\vee M_5\vee M_6\Rightarrow C_{DO}$——<strong>$C_{DO}$ 是通用強迫漏斗,$C_{TP}$ 與 $C_{RI}$ 不再是與它平行的獨立出口,只是附加在同一個形變/算子事件上的相空間座標</strong>。文件還額外證明遠端中繼帶有精確的 <strong>近反平行傅立葉幾何</strong>(定理 18.1,反三角不等式加餘弦定理):遠端父代動能量級必須相近,方向必須接近反平行,角孔徑隨中繼間隙 $L$ 增大而以 $O(2^{-L})$ 縮小——中繼本身也是一種角度/徑向交互作用集中。全輪最重要的成果是 <strong>Universal Deformation-Funnel Theorem</strong>(定理 C4-G.6):每次臨界 UV 穿越必進<strong>四個</strong>同步通道之一——持續性、低應變/渦度、正號螺旋生產、或形變/算子驅動——把整個 UV 側從「八分支 → 六母題 → 三壅塞」進一步壓成<strong>四個同步通道</strong>。文件接著用 C3-P/Q 的精確算子恆等式把第四支再拆:<strong>G-O1</strong> Miller 算子衝量、<strong>G-O2</strong> 渦度二次衝量、<strong>G-O3</strong> 平流/掃掠形變衝量三者之一。G-O1 再得 <strong>Operator-Ratio or Higher-Derivative Impulse</strong> 二分(定理 C4-G.7):要嘛真正的 Miller 逃逸比值在相當時間比例上維持高位(真正接近 Miller 的 blow-up 必要條件),要嘛衝量必須改由 $\int\|\Delta S\|_2dt$ 支付,直接轉進 C3-W/X/Y 的高階導數/導數鏈幾何。文件也誠實保留 §35 的<strong>掃掠警示</strong>:單純空間平移式的掃掠可以讓平流算子很大,卻不直接產生局部應變成長,C3-O 的「平衡不動點 ≠ 動力學不動點」守衛必須保留,不得靜默當成正號應變能量生產。最終 UV 側完成清楚的<strong>相位閉合</strong>(§39):UV 穿越已經沒有真正孤立的復發逃逸,前沿正式從「拆 UV 分支」移到 <strong>Operator-to-Gate Closure</strong>——這個被迫的形變/算子事件能不能真正逼近某個正則性閘門。</p>
+    <div class="claim-box">
+      證明三種壅塞不獨立:高頻中繼(無論來自來源過量或秩缺陷)與譜幾何退化都自動蘊含形變/算子壅塞——後者是通用漏斗,其餘兩種只是附加座標。證明遠端中繼帶精確近反平行傅立葉幾何。核心定理:UV 穿越正式壓成四個同步通道(持續性、低應變、螺旋生產、形變/算子驅動),第四支再分裂成 Miller 算子、渦度二次、平流形變三種承載者。UV 側完成相位閉合,前沿移到算子能否逼近正則性閘門
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。文件內部把下一輪稱為「C4-H」,但實際交付的下一份文件是 C4-I(來源資料夾本身跳過 C4-H 這個編號)——原樣照登,不做編號更動。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../33-c4f-relay-work-spectral-congestion-trilemma/">33 · C4-F:UV Congestion Trilemma</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../35-c4i-middle-operator-overlap-pressure-reentry/">35 · C4-I:Pressure Re-entry</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>35 / 67 · C4(7/9)</div>
+    </div>
+    <blockquote class="cite">「UV side no longer has a genuinely isolated escape motif。」— 摘自本文第 39 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

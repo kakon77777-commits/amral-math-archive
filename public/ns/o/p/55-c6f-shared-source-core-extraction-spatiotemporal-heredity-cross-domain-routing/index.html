@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-F:Shared-Source Core Extraction 與 Cross-Domain Routing · NS · AMRAL</title>
+<meta name="description" content="C6-F證明共享來源密度同時被中間物理應變密度與正算子成長容量逐點支配,透過Fubini從共享核心真的抽出同一時刻、同一空間區域,使兩種物理代價同時有下界——時間同步問題在這個萃取層級被真正解決。共享核心因此必進入非線性算子強迫或三階應變活性至少一支,無條件成立。但要真正進GP還缺Source-to-Field Capture Gate:來源加權錐不等於C5-D需要的Q/場加權錐,若洩漏夠小配合平均旋轉耗盡才條件式進入GP;要進H則F-DER還需通過定理實現、component/sign幾何、設置合法性,條件式二分H或REG。Finite Cross-Domain Bottleneck Theorem給出與前幾輪同型的二分法,against十一個具名邊界。全輪最重要結論:三個精煉候選家族(TS、GP、HF)第一次透過型別化橋真正接進同一張圖,雖然沒有任何閉合復發SCC被certified,但確實排除了永遠純孤立不進任何界面的TS核心——這種狀態早已攜帶足夠的物理代價,純TS只是記帳投影不是獨立物理機制。交棒C6-G做全圖重建與SCC稽核。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6F_SharedSource_CoreExtraction_CrossDomainRouting_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>55 · C6-F:Cross-Domain Routing</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 55</span>
+      <span class="tag">C6-F · 第一條跨域型別化橋 6/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-F:Shared-Source Core Extraction、Spatiotemporal Heredity 與 Cross-Domain Routing to GP/HF</h1>
+    <p class="h1-sub">C6-B–E 已把 C6-A 的三個候選精煉成 $HF_{\rm coherent}$、$GP_{\rm hereditary}$、$TS_{\rm hereditary}$;C6-E 留下的關鍵新物件是共享時空來源機率測度 $\Pi^\cap$,但時間 overlap $\Omega_T$ 本身不保證真正共享空間來源,需要 $\Omega_{ST}>0$。C6-F 的核心問題:如果這個 TS 共享來源真的一致非退化,它還能永遠停在純時間記帳,還是必須真正進入 $GP$、$HF$、或高階強迫?<strong>C6-F.1 Shared Density Physical Domination Theorem</strong> 給出一個精確逐點橋接:同一個正規化共享來源密度同時被中間物理應變密度與正局部算子成長容量逐點支配——不再只是抽象機率簿記。但機率正規化本身會遺忘絕對負載 $M_J,P_J$,因此新增明確的<strong>絕對負載儲備</strong> $\rho_M,\rho_P$。透過 Fubini/平均原理,<strong>C6-F.2/3</strong> 從共享核心圓柱中真的抽出<strong>同一個時刻</strong> $t_\ast$、<strong>同一個空間區域</strong> $E_\ast$,使中間應變密度與算子正成長容量在該處同時有下界——「時間同步問題在這個萃取層級被真正解決」。因中間態滿足 $\lambda_2^+/|S|\le1/\sqrt6$,<strong>C6-F.4</strong> 把中間下界直接轉成真正的<strong>三次應變活性</strong>下界;<strong>C6-F.5/6</strong> 用 Cauchy–Schwarz 把算子下界轉成 $\|\mathcal Q_{SV}\|_{L^2(E_\ast)}\|\Delta S\|_{L^2(E_\ast)}$ 的同時刻乘積代價,<strong>Operator/Derivative Junction Dichotomy</strong> 證明共享核心必進入非線性算子強迫(F-OP)或三階應變活性(F-DER)至少一支——無條件成立,「一致 TS 共享來源復發不能永遠停留在純時空記帳」。但真正要進 $GP$ 還缺一個關鍵橋接:被抽取的方向錐是<strong>來源加權</strong>的,不是 C5-D 強中間定理真正需要的<strong>Q/場加權</strong>錐——這是「TS→GP 組成的主要缺口」,定義 <strong>Source-to-Field Capture Gate</strong>(Q 加權洩漏 $\epsilon_Q$),若洩漏低於 C5-D 的定量門檻,配合平均旋轉耗盡儲備,<strong>C6-F.7 Conditional TS-Core → GP Theorem</strong> 證明同一事件真的進入 $GP$(至少在總壓力聯合態層級,若遠場主導且來源合法則進更細的簽名/軸態子型別)——明確標註<strong>條件式</strong>。另一支:F-DER 給出真正的三階導數活性,但不自動等於 $H$——還需要 derivative-realization 定理旗標、component/sign 幾何、定理設置合法,若都成立則二分:通過空間閘門則外部 $\mathrm{REG}$,整個容許窗口都失敗則真正 $H$——「F-DER + 定理實現 $\Rightarrow H\vee\mathrm{REG}$」,不是無條件的 $TS\to H$ 邊。文件也明確區分同時刻萃取(存在 $t_\ast$)與真正的時空持續性(對一個正測度時間集合持續),兩者不同,復發仍需獨立的 heredity/concentration 分析。把所有橋接需要的儲備(絕對負載、共享 overlap、核心定位、中間縫隙/方向、來源厚度、Q-場捕獲、平均旋轉、壓力來源、導數實現、遺傳性、合法尺度共 13 維)壓成向量 $\mathbf R^X$,<strong>C6-F.9 Finite Cross-Domain Bottleneck Theorem</strong> 給出與 C6-C/D/E 完全同型的二分法:一致跨域相干,或逼近十一個具名邊界之一。<strong>C6-F.10 Conditional Cross-Domain Routing Theorem</strong> 是全輪的高潮——在一致分支上:幾何-壓力側 $TS_{\rm core}\to GP$(條件式),高階側 $TS_{\rm core}\to F_{\rm OP}\vee F_{\rm DER}$,前者可能進入 $HF_{\rm coherent}$ 的 Duhamel 相干重入,後者可能進入 $H\vee\mathrm{REG}$——<strong>這是全系列第一條真正連接三個精煉候選家族的型別化橋</strong>。明確劃界:C6-F 沒有證明「每一條 TS 復發都會進 GP 或 H」(橋接儲備可能退化),也沒有證明「GP/HF 復發不可能」——但確實排除了一種更強的孤立形式:一個共享、局部化、非退化、來源-場相干、遺傳性的 TS 核心永遠不進任何幾何/高階界面——這種狀態本身早已攜帶三次應變、算子/$D^3u$ 代價、Q-場相干、壓力/平均旋轉負債,「純 TS」在一致分支上因此只是一個記帳投影,不是獨立的物理機制。全輪淨效果:三個精煉候選家族 $TS$、$GP$、$HF$ 第一次透過型別化跨域邊真正接進同一張圖,但整張圖仍然<strong>沒有任何閉合的復發 SCC 被 certified</strong>。正式交棒 <strong>C6-G — Typed Cross-Domain Graph Rebuild, Joint-Node SCC Audit, and Minimal Boundary-Saturated Survivor Cycles</strong>,八項組成義務(G1 用新聯合節點重建圖 至 G8 最小倖存者定理)。</p>
+    <div class="claim-box">
+      證明共享來源密度同時被中間物理應變密度與正算子成長容量逐點支配,透過 Fubini 從共享核心真的抽出同一時刻、同一空間區域,使兩種物理代價同時有下界——時間同步問題在這個萃取層級被真正解決。共享核心因此必進入非線性算子強迫或三階應變活性至少一支,無條件成立。但要真正進 GP 還缺 Source-to-Field Capture Gate:來源加權錐不等於 C5-D 需要的 Q/場加權錐,若洩漏夠小配合平均旋轉耗盡才條件式進入 GP;要進 H 則 F-DER 還需通過定理實現、component/sign 幾何、設置合法性,條件式二分 H 或 REG。Finite Cross-Domain Bottleneck Theorem 給出與前幾輪同型的二分法。全輪最重要結論:三個精煉候選家族(TS、GP、HF)第一次透過型別化橋真正接進同一張圖,雖然沒有任何閉合復發 SCC 被 certified,但確實排除了「永遠純孤立不進任何界面」的 TS 核心——這種狀態早已攜帶足夠的物理代價。交棒 C6-G 做全圖重建與 SCC 稽核。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../54-c6e-temporal-spatial-shared-source-coupling-fate-of-t-trap/">54 · C6-E:Fate of the T Trap</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../56-c6g-typed-cross-domain-graph-rebuild-joint-node-scc-audit-boundary-survivors/">56 · C6-G:Typed Graph Rebuild</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>56 / 67 · C6 系列 6/17</div>
+    </div>
+    <blockquote class="cite">「Such a state already carries cubic strain, nonlinear operator/D³u toll, Q-field coherence, pressure response or mean-rotation debt. Thus 'pure TS' becomes a bookkeeping projection, not an independent physical mechanism。」— 摘自本文第 48 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6F_SharedSource_CoreExtraction_CrossDomainRouting_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6F_SharedSource_CoreExtraction_CrossDomainRouting_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

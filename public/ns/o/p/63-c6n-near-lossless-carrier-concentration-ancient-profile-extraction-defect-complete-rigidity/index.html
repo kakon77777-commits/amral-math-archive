@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-N:Near-Lossless Carrier Concentration、Ancient-Profile Extraction 與 Defect-Complete Rigidity · NS · AMRAL</title>
+<meta name="description" content="C6-N對C6-L/M的可見度語義做出永久性修正:相對旁觀者(全域L³比例趨零)不蘊含「不是真正的奇異載體」——引用Albritton–Barker局部集中定理與Barker–Prange的Type-I拋物尺度集中下界,兩者都是絕對下界而非全域比例,證明relative spectator status is compatible with being the actual singular point。證明真正的相對主導載體必屬Type-II(Carrier-Scale Type-II Escalation),其質量尺度$\ell_n$內部必藏更小的峰值振幅尺度$a_n^C\ll\ell_n$;在峰值尺度做record-time重縮放可抽出非平凡有界ancient解(獲Albritton–Barker奇點zoom-in定理外部支持),但這個ancient profile對原始全域質量而言必然是相對L³旁觀者(Ancient-Peak Critical-Tail Escape)——質量緊緻尺度與ancient-profile緊緻尺度是兩個結構不同的尺度(Mass-vs-Peak Rescaling Dichotomy)。同時修正C6-M的巢狀乘積形式主義:固定光滑切片不可能真正無限巢狀(正規化L³密度無原子),真正的無限巢狀只能是跨世代的漸近原子化。提出方法論轉向:把「固定全域比例」降級為Type-II特化分支,改用「每個奇異世代至少一個標籤攜帶非零絕對臨界負載」作為一般正則性綱領真正該用的最低標準。交棒C6-O攻打峰值尺度的缺陷標籤繼承問題。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6N_NearLossless_AncientProfile_DefectRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>63 · C6-N:Near-Lossless Carrier Concentration</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 63</span>
+      <span class="tag">C6-N · 修正相對/絕對可見度語義 14/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-N:Near-Lossless Carrier Concentration、Ancient-Profile Extraction 與 Defect-Complete Rigidity</h1>
+    <p class="h1-sub">C6-M 把「near-lossless carrier retention + scale→0 + horizon→∞」留給 C6-N 追問:這樣的巢狀結構能不能直接餵進 ancient/eternal profile 再接上 Liouville 剛性?C6-N 給出一個比預期更精細的答案,並對 C6-L/M 的可見度語義做出<strong>永久性修正</strong>。首先把可見度正式一分為二:絕對臨界載體 $m_{3,n}^{abs}=\int_{C_n}|u|^3dx$(liminf>0 即 Absolutely $L^3$-Visible)與相對臨界載體 $\chi_{3,n}^{rel}=\mu_{3,n}(C_n)$。<strong>C6-N.1 Carrier Visibility Hierarchy</strong> 證明 Relative Dominant ⟹ Absolute Divergent ⟹ Absolute Visible,但反方向不成立——因此 $\chi_{3,n}^{rel}\to0$<strong>不蘊含</strong>「這個核心不是真正的奇異載體」。引用 Albritton–Barker 的局部 $L^3$ 集中定理與 Barker–Prange 的 Type-I 拋物尺度集中下界,兩者都是<strong>絕對</strong>下界而非全域比例——<strong>C6-N.5 Type-I Carrier Classification</strong> 因此證明「relative spectator status is compatible with being the actual singular point」,正式推翻 C6-L/M 把相對可見度趨零直接讀成旁觀者的語義。接著證明真正的相對主導載體其實必屬 Type-II:<strong>C6-N.2 Relative Carrier Amplitude Theorem</strong> 給出 $\ell_nA_n^C\ge c_3^{-1/3}\beta_\ast^{1/3}\|u(t_n)\|_3\to\infty$(Carrier-Scale Type-II Escalation),<strong>C6-N.3</strong> 進一步證明拋物尺度下的相對主導載體必然是 $\sqrt{T^\ast-t_n}\|u(t_n)\|_\infty\to\infty$ 的 Type-II 振幅分支,而<strong>C6-N.4 Type-I Relative-Visibility No-Go</strong> 反向證明 Type-I 有界拋物核心不可能相對主導——但仍可攜帶固定的絕對臨界負載。<strong>C6-N.6 Amplitude-Scale Separation Theorem</strong> 揭露相對主導質量載體內部必藏一個遠遠更小的峰值振幅尺度 $a_n^C\ll\ell_n$;在峰值尺度做 record-time N–S 重縮放,<strong>C6-N.8 Bounded Ancient Peak Extraction Principle</strong> 真正抽出一個非平凡有界 ancient 解(獲 Albritton–Barker 的奇點 zoom-in 定理外部支持),但<strong>C6-N.9 Conditional Ancient $L^3$ Kill Gate</strong> 誠實聲明 Koch–Nadirashvili–Seregin–Šverák 的一般 3D bounded ancient Liouville 問題仍是開放的,殺死條件不是自動成立。缺陷標籤要不要跟著走又是新缺口:「ancient peak extraction ⇏ defect-labeled ancient extraction」,<strong>Peak-Scale Defect Visibility Gate(C6-N.10/11)</strong> 把它拆成 N-PVIS/N-PESC 二分。另一條主線修正 C6-M 的巢狀乘積形式主義本身:<strong>C6-N.12 Fixed-Slice Infinite-Nesting No-Go</strong> 用測度連續性證明<strong>一個固定光滑切片不可能</strong>包含真正無限深、保持固定正比例直到零直徑的巢狀鏈(正規化 $L^3$ 密度無原子);真正的無限巢狀只能是跨世代的<strong>漸近原子化</strong>(<strong>C6-N.13 Atomic Limit Theorem</strong>、<strong>C6-N.14 Multi-Channel Co-Atomicity</strong>——質量、頻譜、缺陷測度可以在弱極限中收斂到同一個原子點)。全輪真正的核心洞見在於一個<strong>雙尺度障礙</strong>:<strong>C6-N.15/16</strong> 證明有界振幅與相對載體完備性互斥(相對主導骨子裡就是 Type-II/非緊振幅現象),<strong>C6-N.17 Ancient-Peak Critical-Tail Escape</strong> 則證明反過來——峰值尺度抽出的有界 ancient profile 對<strong>原始</strong>全域臨界質量而言必然是相對 $L^3$ 旁觀者,<strong>C6-N.18 Mass-vs-Peak Rescaling Dichotomy</strong> 正式證明沒有單一重縮放能同時讓固定比例的相對載體保持有界、又把峰值振幅正規化成 $O(1)$——質量緊緻尺度與 ancient-profile 緊緻尺度是兩個結構上不同的尺度。這迫使一次方法論轉向(第 66 節):把「固定全域比例」(Strong Global Carrier Completeness)降級為 Type-II 的特化分支,改用「每個奇異世代至少一個標籤攜帶非零絕對臨界負載」(Local Singular-Carrier Completeness)作為一般正則性綱領真正該用的最低標準——與已知的 Type-I 集中理論一致。<strong>C6-N.19 Defect-Complete Rigidity Reduction</strong> 收攏成三分:N-A Type-I Absolute Carrier、N-B Type-II Relative-Dominant Carrier、N-C Carrier/Peak Label Escape。正式交棒 <strong>C6-O — Peak-Scale Defect Inheritance, Type-II Ancient Carriers, and Mass–Peak Two-Scale Closure</strong>,十項組成義務直攻:峰值尺度重建 TS/GP/HF、缺陷標籤能否在 ancient 緊緻性下存活、相對質量究竟停在 $|z|\sim\ell_n/a_n\to\infty$ 的哪裡、以及有沒有辦法真正觸發 ancient Liouville 殺手。</p>
+    <div class="claim-box">
+      對 C6-L/M 的可見度語義做出永久性修正:相對旁觀者(全域比例趨零)不蘊含「不是真正的奇異載體」——已知的 Type-I 局部集中定理證明絕對可見度才是正確的一般奇異載體判準。證明真正的相對主導載體必屬 Type-II,其質量尺度內部藏著更小的峰值振幅尺度;在峰值尺度可抽出非平凡有界 ancient 解,但這個 ancient profile 對原始全域質量而言必然是相對旁觀者——質量緊緻尺度與 ancient-profile 緊緻尺度是兩個結構不同的尺度。同時修正 C6-M 的巢狀乘積形式主義:固定切片不可能真正無限巢狀(測度無原子),真正的無限巢狀只是跨世代漸近原子化。提出新的最低標準:每個奇異世代至少一個標籤攜帶非零絕對臨界負載,而非固定全域比例。交棒 C6-O 攻打峰值尺度的缺陷標籤繼承問題。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">62 · C6-M:Carrier Completeness</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../64-c6o-peak-scale-defect-inheritance-type-ii-ancient-carriers-mass-peak-two-scale-closure/">64 · C6-O:Peak-Scale Defect Inheritance</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>64 / 67 · C6 系列 14/17</div>
+    </div>
+    <blockquote class="cite">「Relative spectator status is compatible with being the actual singular point。」— 摘自本文第 18 節(C6-N.5)。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6N_NearLossless_AncientProfile_DefectRigidity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6N_NearLossless_AncientProfile_DefectRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

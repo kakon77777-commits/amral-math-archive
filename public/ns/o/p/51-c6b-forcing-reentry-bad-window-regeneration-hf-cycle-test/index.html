@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-B:High-Order Forcing Re-entry 與 the H/F Cycle Test · NS · AMRAL</title>
+<meta name="description" content="C6-B正式測試反向邊F⇒?H。把C5強迫類拆成F_visc↓(黏性衰減側)與F_NL±(投影非線性)。C6-B.1用最大值原理證明黏性在signed derivative maximum不能正向再生導數峰值,C6-B.2把F_visc從H re-entry引擎名單刪除。C6-B.3 Duhamel-Capacity No-Go用抽象測試場構造證明強迫容量本身邏輯上不能下界真正response,必須保留明確的Duhamel coherence係數。C6-B.4 Amplitude-to-Sign-Thickness No-Go用bump function縮放見證證明峰值振幅不決定sign-thick幾何。粗邊F_NL→H因此精煉成六段鏈,C6-B.5/6/7逐步證明只有Duhamel相干+繼承熱部分夠小+分量選擇邊際+空間厚度+定理設置+整窗持續六項前提同時成立,才有條件式的F_NL^coh→H。淨結果:C6-A標記的粗糙通用H↔F循環正式判死,倖存的只剩窄得多的H_force→F_NL+⇢H_force子循環,復發性依然OPEN。真正的global question轉向能否讓五個coherence座標在無窮多代同時保持非退化,交棒C6-C專攻Duhamel coherence本身。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>51 · C6-B:Forcing Re-entry / H-F Cycle Test</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 51</span>
+      <span class="tag">C6-B · H/F 循環正式判死 2/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-B:High-Order Forcing Re-entry、Bad-Window Regeneration 與 the H/F Cycle Test</h1>
+    <p class="h1-sub">C6-A 的結論是 projected SCC 不蘊含 composable PDE recurrent cycle,C5-M 的 coarse may-graph 上看似存在的 $H\leftrightarrow F$,C6-B 正式測試反向邊 $F\overset{?}{\Rightarrow}H$。第一步把 C5 的強迫類拆成 $F_{\rm visc}^{\downarrow}$(黏性/衰減側翻轉)與 $F_{\rm NL}^{\pm}$(可能穩定或可能放大選定峰值的投影非線性強迫)——<strong>C6-B.1</strong>(在 signed spatial maximum 用最大值原理 $\Delta f(x_\ast,t)\le0$)證明 $D^+A_k\le\mathcal N_k^{proj}$,<strong>黏性本身不能是正向導數峰值再生的引擎</strong>,<strong>C6-B.2 Viscous Half-Cycle Elimination</strong> 因此把 $F_{\rm visc}^{\downarrow}$ 從正向 $H$ re-entry engine 名單中刪除,只剩 $F_{\rm NL}^{+}$ 可能。但即使投影非線性強迫的 Duhamel capacity $\mathfrak C_\ell^{Duh}$ 很大,<strong>C6-B.3 Duhamel-Capacity No-Go</strong>(用一個緊支撐、兩端點為零的抽象測試場構造)證明 capacity 本身邏輯上不能下界真正的 response——必須保留明確的 Duhamel coherence 係數 $\Gamma_\ell^{Duh}=\|Z_\ell\|_\infty/\mathfrak C_\ell^{Duh}\in[0,1]$,可以等於 $0$ 而 capacity $>0$。即使 response 峰值真的很大,<strong>C6-B.4 Amplitude-to-Sign-Thickness No-Go</strong>(用固定 bump function 縮放 $\phi_N(x)=\phi(Nx)$ 當見證)證明峰值振幅本身不決定 component/sign chain-scale 厚度幾何——相同的 sup norm 可以攜帶任意不同的稀疏/厚實幾何。因此粗邊 $F_{\rm NL}\to H$ 必須精煉成一條六段鏈:$F_{\rm NL}\to R_{\rm amp}\to R_{\rm select}\to R_{\rm sign}\to R_{\rm setup}\to R_{\rm persist}\to H$。正面的一半:<strong>C6-B.5 One-Time Sign-Reentry Lemma</strong> 證明若 response 本身在某集合上真的 sign-thick、繼承的熱部分 $\|Y_\ell\|_\infty\le\epsilon A_Z$ 夠小、且門檻邊際嚴格($\lambda_Z-\epsilon>\lambda(1+\epsilon)$),則真正的導數場在該瞬間確實繼承同一個厚集合;<strong>C6-B.6 Sign-Thickness Persistence Lemma</strong> 證明只要時間擾動 $\Theta_\ell(s,t_\ast)$ 相對邊際 $m$ 夠小($(1+\lambda)\Theta_\ell<m$),這個厚集合能撐過鄰近時刻;結合 component-selection coherence($m_{\rm sel}>0$,確保定理挑選的仍是同一個分量)、定理設置合法性、整個容許窗口的持續性,<strong>C6-B.7 Conditional Nonlinear Re-entry Theorem</strong> 證明真正合法的邊是 $F_{\rm NL}^{coh}\overset{C}{\to}H$,一個帶六項前提的條件式蘊含,而不是粗糙的 $F\to H$——目前沒有任何 C5/C6 結果能自動從純量 forcing metadata 供應這六項前提。<strong>淨結果</strong>:C6-A 標記的粗糙通用 $H\leftrightarrow F$ cycle 被正式<strong>判死</strong>(不只是「仍然開放」,是真正的 REJECTED,本輪五項 no-go B-NG1 至 B-NG5 逐一擊破每一段粗糙蘊含),連反向 $H\Rightarrow F$ 本身也不是無條件類別邊(C5-L 自己的三分律 $H\Rightarrow H_{\rm compact}\vee F_{\rm visc}\vee F_{\rm NL}$,候選循環只活在子型別 $H_{\rm force}$ 裡)。真正倖存的候選被壓成窄得多的<strong>C6-B.9 Typed H/F Cycle Reduction</strong>:$H_{\rm force}\to F_{\rm NL}^{+}\overset{\Gamma^{re}\text{ gates}}{\dashrightarrow}H_{\rm force}$,復發仍需證明五件事(正向非線性來源復發、$\Gamma^{re}$ 保持非退化、目標 $H$ 再度是強迫產生型、時間仍在 $T^\ast$ 之前、每一代都迴避外部 Grujić–Xu 閘門),沒有一項目前被證。全輪最重要的轉向:真正的 global question 不再是「強迫會不會變大」,而是 $\Gamma^{Duh},\eta^{grow},m_{\rm sel},\beta_Z-\delta,\Pi_{\rm time}$——Duhamel 不可抵銷性、峰值再生效率、分量選擇邊際、空間符號厚度邊際、持續性儲備——<strong>能不能在無窮多代 re-entry 中同時保持非退化</strong>,這是一個真正的 cycle-composition 問題,比「強迫能不能維持很大」窄得多也幾何得多。正式交棒 <strong>C6-C — Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</strong>,八項組成義務(C1 Duhamel coherence dynamics 至 C8 H/F subcycle verdict)。</p>
+    <div class="claim-box">
+      黏性在 signed derivative maximum 滿足最大值原理 $\Delta f\le0$,證明黏性不能是正向 $H$ re-entry 的引擎,只剩投影非線性強迫可能。但 Duhamel capacity 只給上界不給下界(抽象測試場構造證明),即使 response 很大,峰值振幅本身也不決定 sign-thick 幾何(bump function 縮放見證)。真正合法的邊需要六項前提同時成立:Duhamel 相干、繼承熱部分夠小、分量選擇邊際、空間厚度、定理設置、整窗持續。C6-A 標記的粗糙 $H\leftrightarrow F$ 通用循環正式判死,倖存的只剩窄得多的 $H_{\rm force}\to F_{\rm NL}^{+}\dashrightarrow H_{\rm force}$ 子循環,復發性依然 OPEN。真正的 global question 轉向能否讓五個 coherence 座標在無窮多代同時保持非退化。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">50 · C6-A:Certified Defect Graph</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">52 · C6-C:Duhamel Coherence</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>52 / 67 · C6 系列 2/17</div>
+    </div>
+    <blockquote class="cite">「Can a recurrent N–S nonlinear source keep Duhamel coherence, component-selection coherence, spatial sign-thickness, and theorem-window persistence uniformly nondegenerate over infinitely many generations? This is narrower and more geometric than: can the nonlinearity stay large?」— 摘自本文第 39 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

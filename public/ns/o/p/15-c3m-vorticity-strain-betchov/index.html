@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-M:Vorticity–Strain 耦合與 Betchov 全域坍縮 · NS · AMRAL</title>
+<meta name="description" content="精確逐點分解伸展率 α=λ₂+principal surplus-compressive depletion,證明強伸展若不由中間應變值承擔就必須支付最大伸展方向對齊債。但引用 Betchov 恆等式 ∫ω·Sω=-4∫detS,證明全域積分會把方向資訊完全坍縮掉——不能從全域 enstrophy 增長推出渦度必須對齊最伸長特徵向量,這是對常見文獻直覺的正式否證(Global Orientation Collapse)。真正的全域承載者是兩正特徵值應變幾何。引用 2026 最新結果:Miller 的逆耦合正交性⟨-ΔS,ω⊗ω⟩=0,以及 Grujić 對數消耗定理。研究前線轉向局部化 Betchov 補償,而非另一個全域純量恆等式。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>15 · C3-M:Vorticity–Strain 耦合與 Betchov 坍縮</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 15</span>
+      <span class="tag">C3-M · 否證對齊民間傳說</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-M:Vorticity–Strain 耦合、Betchov 全域坍縮與方向幾何債</h1>
+    <p class="h1-sub">C3-L 留下兩條平行必須發散的通道:頻譜矩逃逸與 middle-strain 逃逸。本輪問:這兩者能否被真正的渦度伸展幾何強制耦合?答案不是簡單的「渦度必須對齊某個應變特徵向量」。核心是 <strong>Exact Stretching-Orientation Identity</strong>(定理 4.1):沿渦度方向的瞬時伸展率 $\alpha=\lambda_2+(\lambda_3-\lambda_2)c_3-(\lambda_2-\lambda_1)c_1$——精確拆成中間特徵值基線、主伸展方向盈餘、壓縮方向損耗三個有型分量。由此得到 <strong>Excess-Stretching Alignment Debt</strong>(定理 7.1):若中間應變值不足以解釋伸展,渦度就必須支付與最伸展特徵向量對齊的債務,形成 <strong>Middle-Strain / Principal-Alignment Carrier Dichotomy</strong>(定理 10.1)——但文件明確警告這不等於「blow-up 迫使渦度對齊最伸展方向」,因為第一分支(中間應變承擔)本身就足夠。全文最鮮明的修正在 §12-14:引用 Betchov 恆等式 $\int\omega\cdot S\omega=-4\int\det S$,證明<strong>全域積分完全消去方向資訊</strong>(<strong>Global Orientation Collapse</strong>)——local orientation 經過 $\int dx$ 坍縮成 global strain determinant,不含 $\xi$ 任何蹤跡。因此「全域 enstrophy 增長很大 ⟹ 渦度對齊最伸展特徵向量」是不合法推論,正式否證這個常見於數值文獻的直覺(NG-M1)。真正的全域承載者被證明是<strong>兩正特徵值應變幾何</strong>($\lambda_2>0$,定理/命題 §15-17)。文件也小心區分「局部特徵框對齊」與「渦度方向空間相干性」是兩種不同幾何,只有後者是 Constantin–Fefferman 型幾何消耗定理真正作用的對象,並引用 2026 最新的 Grujić 對數-BMO 方向控制結果作為條件式界面。最後引用 Miller 2024/2026 的逆耦合正交性 $\langle-\Delta S,\omega\otimes\omega\rangle=0$——證明「渦度作用到應變」本身不足以單獨解釋 blow-up。研究前線正式轉向局部化 Betchov 補償,而非再找另一個全域純量恆等式。</p>
+    <div class="claim-box">
+      精確分解伸展率為三個有型分量,建立對齊債務二分法。核心修正:Betchov 恆等式證明全域積分完全坍縮方向資訊,正式否證「enstrophy 增長蘊含渦度對齊」的常見直覺。真正全域承載者是兩正特徵值應變幾何。引用 2026 最新逆耦合正交性,渦度作用應變本身不是充分驅動力
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../14-c3l-critical-moment-escape/">14 · C3-L:Critical Moment Escape</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../16-c3n-localized-betchov-boundary/">16 · C3-N:Localized Betchov Boundary Current</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>16 / 67</div>
+    </div>
+    <blockquote class="cite">「local orientation 經過 ∫dx 坍縮到 global strain determinant,這是一個 genuine information collapse。」— 摘自本文第 13 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

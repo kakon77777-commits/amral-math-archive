@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-J:Log-Scale Renormalized Defect Flow 與 Critical Fiber Escape · NS · AMRAL</title>
+<meta name="description" content="C6-J用標準backward Leray座標把有限時間blow-up精確變成重整化尺度時間s=-log(T*-t)裡的自治N-S方程,不動點對應backward self-similar剖面,週期軌道對應backward DSS情境。證明精確L²平衡有反耗散漂移項,加權能量族V_α裡尺度臨界性與普遍單調性不能共存,唯一單調權重α=1/2精確還原成物理能量,解釋了為何其望遠鏡求和權重會隨尺度衰減。用已發表的blow-up必要條件(L³、Ḣ^{1/2}範數必發散)證明重整化軌道任何尾段都不可能在這兩個臨界拓撲中緊緻,有限臨界範數的不動點與週期軌道都不可能是blow-up軌道——但這沒有殺死C6缺陷循環,因為緊緻缺陷復發不等於緊緻場復發:全場狀態投影到C6缺陷元資料空間的纖維可以完全不緊緻。核心定理Critical Fiber Escape:任何被假想blow-up無窮次造訪的緊緻缺陷集合,其臨界纖維半徑必為無窮,這正是已發表場層級Liouville定理不會自動殺死C6缺陷循環的根本原因。把剩下的問題重新框架成緊緻復發基底加無界臨界纖維的skew-product動力系統,給出四步循環消除診斷程序。交棒C6-K專攻纖維逃逸機制分類。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6J_LogScale_RenormalizedFlow_CriticalFiberEscape_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>59 · C6-J:Critical Fiber Escape</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 59</span>
+      <span class="tag">C6-J · 接回 backward Leray 動力系統 10/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-J:Log-Scale Renormalized Defect Flow、Telescoping Potentials 與 Critical-Cycle Closure Tests</h1>
+    <p class="h1-sub">C6-I 證明了固定的臨界代價本身不能強迫有限時間矛盾,只修正了尺度類型,沒有提供跨尺度的方向性。C6-J 正式把 $s=-\log r$(以及等價的標準 backward Leray 時間 $s=-\log(T^\ast-t)$)升格為真正的動力學時間,重新接回 Navier–Stokes 方程本身。用標準 backward Leray 座標($y=(x-x^\ast)/\sqrt{T^\ast-t}$、$U=\sqrt{T^\ast-t}\,u$、$P=(T^\ast-t)p$),<strong>C6-J.1</strong> 給出精確的<strong>自治</strong>方程 $\partial_sU+\frac12U+\frac12(y\cdot\nabla)U+(U\cdot\nabla)U+\nabla P=\nu\Delta U$——有限時間 blow-up 視界 $t\uparrow T^\ast$ 精確變成 $s\to+\infty$,物理座標裡的有限時間 Zeno 因此變成重整化尺度時間裡的<strong>無窮時間</strong>動力系統問題。不動點 $U(y,s)=U_\ast(y)$ 精確對應<strong>backward self-similar blow-up profile</strong>,週期軌道對應<strong>backward discretely self-similar(DSS)</strong>情境(伸縮因子 $\lambda=e^{L/2}$)。已發表的 Liouville 型定理(Seregin、Chae、Chae–Wolf、Nečas–Růžička–Šverák、Tsai)確實排除了廣泛一類非平凡的 backward self-similar 剖面與局部漸近 DSS blow-up——但文件明確劃界:這些定理需要<strong>場層級</strong>的剖面假設,不會自動套用到<strong>只有 C6 缺陷元資料</strong>的週期軌道上;同時明確提醒 forward DSS 解確實存在,所以「在重整化時間裡週期」本身在 N–S 裡並非內在不可能,必須真正利用 backward blow-up 的邊界條件與臨界正則性限制才能排除。全輪第一個關鍵結果來自精確的 $L^2$ 平衡:<strong>C6-J.3</strong> 給出 $\frac12E'+\nu D-\frac14E=0$($E=\|U\|_2^2$)——尺度伸縮項貢獻一個<strong>反耗散</strong>的 $+\frac12E$ 漂移,所以 $E$ 本身<strong>不是</strong>單調量,單純的 $L^2$ 平衡本身並不排斥週期重整化軌道。<strong>C6-J.4/5</strong> 把加權族 $V_\alpha=e^{-\alpha s}E$ 的精確恆等式算出來,證明<strong>普遍單調性只從 $\alpha\ge1/2$ 開始成立</strong>,而 $\alpha=1/2$ 恰好精確還原成<strong>物理動能</strong> $V_{1/2}=e^{-s/2}E=\|u(t)\|_2^2$——這是<strong>Criticality–Monotonicity Tradeoff</strong>:在這個自然的指數 $L^2$ 族裡,尺度臨界性與普遍單調性<strong>不能共存</strong>,唯一能單調的權重 $e^{-s/2}=r$ 精確就是 C6-I Zeno 求和裡出現的那個權重——這正式解釋了物理能量確實有望遠鏡式求和,但那個求和權重<strong>隨尺度衰減</strong>,不能對一個尺度不變的復發事件標上固定正價格,不是「沒有望遠鏡量」,而是「唯一可用的普遍望遠鏡量權重會衰減」。真正的場層級消除來自另一條路:證明 $\|U\|_{L^3}$ 與 $\|U\|_{\dot H^{1/2}}$ 在 backward 重縮放下<strong>精確不變</strong>(度為零的臨界場拓撲),而已發表的假想 blow-up 必要條件要求 $\|u(t)\|_{L^3}\to\infty$ 與 $\|u(t)\|_{\dot H^{1/2}}\to\infty$——<strong>C6-J.2 Critical Field-Compact Recurrence No-Go</strong> 因此乾淨證明:重整化軌道的任何尾段都<strong>不可能</strong>在 $L^3$ 或 $\dot H^{1/2}$ 中緊緻(緊緻蘊含有界,但假想 blow-up 強迫這兩個範數發散,矛盾)——有限臨界範數的不動點與週期軌道<strong>都</strong>不可能是 blow-up 軌道,與既有 Liouville 文獻一致。但這<strong>沒有</strong>殺死 C6 的缺陷循環,因為<strong>緊緻缺陷復發不等於緊緻場復發</strong>:C6 從 C4/C5 以來研究的其實一直是全場狀態 $\mathcal X_{crit}$ 經投影 $\pi$ 到緊緻化缺陷態空間 $\mathcal K_{def}$($TS,GP,HF$ 加邊界面)之後的像 $\pi(U(s))$,而這個投影的<strong>纖維</strong> $\pi^{-1}(\theta)$ 完全可以不緊緻。定義臨界纖維半徑 $\mathfrak R_{fiber}(K)=\sup\{\mathfrak F_{crit}(U):\pi(U)\in K\}$,<strong>C6-J.6</strong> 證明若一個緊緻缺陷集合 $K$ 有<strong>有限</strong>纖維半徑,它就不能支撐假想 blow-up 的晚期復發。<strong>C6-J.7 Critical Fiber Escape Theorem</strong> 是全輪真正的核心:<strong>任何被假想 blow-up 軌道無窮次造訪的緊緻缺陷集合,其臨界纖維半徑必為無窮</strong>——「每一個倖存的緊緻缺陷復發都需要纖維裡的臨界不緊緻」,正式命名為 <strong>Critical Fiber Escape</strong>。這正是為何已發表的場層級 Liouville 定理不會自動殺死 C6 缺陷循環的根本原因:週期缺陷元資料完全可以對應<strong>非週期、纖維方向持續漂移到無窮</strong>的場動力學。因此把剩下的問題正式重新框架成一個 skew-product 動力系統 $(\theta(s),\kappa(s))$——$\theta\in\mathcal K_{def}$ 是緊緻復發基底,$\kappa=\log(1+\mathfrak F_{crit})$ 是無界的臨界纖維座標,假想 blow-up 要求 $\kappa(s)\to\infty$,而 $\theta(s)$ 完全可能持續復發甚至精確週期。具體回接到 C6 已建立的候選:目前<strong>沒有</strong>任何定理證明一致 $GP^\circ$ 或一致 $HF^\circ$ 復發蘊含 $\mathfrak F_{crit}$ 有界——GP 的幾何/來源遺傳儲備、HF 的 Duhamel/符號相干儲備都只控制局部組合條件,不控制全域臨界範數,所以兩者的存活<strong>正好等價於</strong>纖維方向能不能真的逃逸。<strong>C6-J.9 Critical-Cycle Closure Test</strong> 給出可重複使用的四步診斷程序:候選循環是否已被型別化認證?一致復發是否蘊含臨界場緊緻/有界?若是則與 blow-up 不相容,直接排除;若否,精確辨認哪個纖維座標逃逸;那個逃逸是否觸發外部正則性閘門、容量不相容、望遠鏡位能、或剖面分解矛盾?——只有走完第四步才能真正消除一個倖存循環。全輪最後把 C5 的缺陷緊緻化工作重新定位為<strong>沒有白做</strong>:它把剩餘的自由度精確隔離進了纖維裡,將一個無結構的無窮維流問題,轉成「緊緻有限缺陷基底 + 需要分類的不緊緻臨界纖維」——一個更適合濃度緊緻性/剖面分解方法的清晰目標,並列出六種候選纖維逃逸機制(振幅逃逸、多重性逃逸、次尺度逃逸、平移/尾部逃逸、頻率逃逸、剖面分裂)供下一輪分類。正式交棒 <strong>C6-K — Critical Fiber Escape, Defect-Fiber Compactness, and Profile-Splitting Closure</strong>,十項組成義務(K1 選定臨界場拓撲 至 K10 循環更新)。</p>
+    <div class="claim-box">
+      用標準 backward Leray 座標把有限時間 blow-up 精確變成重整化尺度時間裡的自治方程,不動點對應 backward self-similar 剖面,週期軌道對應 backward DSS。證明加權能量族裡尺度臨界性與普遍單調性不能共存——唯一單調的權重精確就是物理能量,解釋了為何它的望遠鏡求和權重會隨尺度衰減。用已發表的 blow-up 必要條件($L^3$、$\dot H^{1/2}$ 範數必發散)證明重整化軌道的任何尾段都不可能在這兩個臨界拓撲中緊緻——但這沒有殺死 C6 缺陷循環,因為緊緻缺陷復發不等於緊緻場復發。核心定理 Critical Fiber Escape:任何被假想 blow-up 無窮次造訪的緊緻缺陷集合,其臨界纖維半徑必為無窮。把剩下的問題重新框架成緊緻復發基底加無界臨界纖維的 skew-product 動力系統,並給出四步循環消除診斷程序。交棒 C6-K 專攻纖維逃逸機制分類。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../58-c6i-scale-normalized-critical-debt-capacity-at-infinity-barrier-accumulation/">58 · C6-I:Critical Debt / Zeno No-Go</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../60-c6k-critical-fiber-escape-defect-fiber-compactness-profile-splitting-closure/">60 · C6-K:Profile-Splitting Closure</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>60 / 67 · C6 系列 10/17</div>
+    </div>
+    <blockquote class="cite">「A genuine blow-up cycle cannot be both recurrent and compact in the full critical field state。」— 摘自本文第 52 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6J_LogScale_RenormalizedFlow_CriticalFiberEscape_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6J_LogScale_RenormalizedFlow_CriticalFiberEscape_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-K:Critical Fiber Escape 與 Profile-Splitting Closure · NS · AMRAL</title>
+<meta name="description" content="C6-K問Critical Fiber Escape到底怎麼逃。先做關鍵方法論修正:不能把標準有界剖面分解定理直接套用到發散的原始blow-up序列,必須先正規化。定義臨界質量機率測度與集中半徑,證明必屬於三種情形之一(次尺度集中、同尺度膨脹、空間擴散),次尺度集中被證明不是死路而是精確保留臨界範數的重整化重啟。定義缺陷可見度,證明要嘛C6追蹤的缺陷核心本身承擔發散質量,要嘛所有發散質量逃進旁觀者剖面(Defect-Fiber Decoupling)——後者不蘊含正則性,只代表目前追蹤的復發基底可能只是真正奇異點的旁觀者。明確劃界:振幅正規化不是N-S對稱,萃取出的剖面只是形狀分類器不是動力子解,合法的動力學剖面需要有界物理臨界序列。核心定理Three-Way Fiber Reduction:任何纖維逃逸必屬於可見同尺度膨脹、次尺度重啟、或旁觀者逃逸三者之一。附帶證明同尺度純振幅逃逸分支條件式漸近變成無黏Euler方程。最誠實的結論:TS/GP/HF目前都沒有證明承擔固定比例的真正奇異質量,旁觀者逃逸依然是一個真正的漏洞。交棒C6-L直接攻打這個可見度缺口。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6K_CriticalFiber_ProfileSplitting_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>60 · C6-K:Profile-Splitting Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 60</span>
+      <span class="tag">C6-K · 纖維逃逸機制分類 11/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-K:Critical Fiber Escape、Defect-Fiber Compactness 與 Profile-Splitting Closure</h1>
+    <p class="h1-sub">C6-J 留下的 Critical Fiber Escape 只是一個通用條件——任何被假想 blow-up 無窮次造訪的緊緻缺陷集合,其臨界纖維必為無窮。C6-K 第一次真正回答:這個纖維<strong>到底怎麼逃</strong>?先做一個關鍵的方法論修正:<strong>C6-K.1 Unbounded-Fiber Profile Guard</strong> 指出不能把標準的有界剖面分解定理直接套用到原始 blow-up 序列 $U_n$ 上,因為 $\|U_n\|_3,\|U_n\|_{\dot H^{1/2}}\to\infty$——必須先萃取一個有界的<strong>物理</strong>臨界片段,或改用無因次化的<strong>輔助形狀序列</strong>,兩者的動力學意義完全不同。定義正規化臨界 $L^3$ 機率測度 $d\mu_n=|U_n|^3/M_n\,dx$(把絕對質量 $M_n=\|U_n\|_3^3\to\infty$ 與「質量在哪裡」分開),以及空間集中函數 $Q_n(R)=\sup_y\mu_n(B_R(y))$ 與集中半徑 $R_n(\vartheta)$。<strong>C6-K.2 Concentration-Radius Trichotomy</strong> 證明對每個固定質量比例 $\vartheta$,取子序列後恰有三種情形之一:$R_n\to0$(次尺度集中)、$R_n\to R_\ast\in(0,\infty)$(同尺度質量膨脹)、$R_n\to\infty$(空間擴散/多重性/尾部逃逸)——完全不需要有界性假設,是一個真正無條件的分類工具。同尺度分支(<strong>C6-K.3</strong>)可乾淨證明必然伴隨重整化 $L^\infty$ 振幅發散。真正的新物件是<strong>缺陷可見度</strong> $\chi_n^{def}(R)=\mu_n(B_R(z_n))$——「被追蹤的 C6 缺陷核心到底看見多少發散中的臨界質量」——<strong>C6-K.4 Defect-Visibility Dichotomy</strong> 證明要嘛 $\chi_n^{def}(R)\ge\chi_0>0$(缺陷核心本身承擔發散質量),要嘛對每個固定 $R$ 都 $\chi_n^{def}(R)\to0$,後者正式命名為 <strong>Defect–Fiber Decoupling / Spectator Escape</strong>——明確強調這<strong>不蘊含正則性</strong>,只代表「被追蹤的復發缺陷核心根本不是主要的臨界質量載體」,C6-A 到 C6-J 一直追蹤的緊緻復發基底,完全可能只是真正奇異點的旁觀者。次尺度分支(<strong>C6-K.5 Secondary-Scale Renormalization Restart Theorem</strong>)證明一個精確的內層重縮放 $W_n(z)=\rho_nU_n(y_n+\rho_nz)$ 會<strong>完整保留</strong>兩個臨界範數,同時在單位球內捕捉固定質量比例——所以次尺度逃逸<strong>不是死路</strong>,而是一次真正的<strong>重整化重啟</strong>,原則上可以無限嵌套(Nested Critical Fiber Cascade,未證存在也未被排除)。擴散分支則有精確的<strong>覆蓋數下界</strong>(C6-K.6):$N_n(R,\eta)\ge(1-\eta)/q_n(R)$,集中函數趨零必強迫載體數目發散。頻譜側用完全平行的構造(正規化 $\dot H^{1/2}$ 機率測度、對數頻率 pushforward、環形集中函數)得到<strong>C6-K.7 Spectral Fiber Trichotomy</strong>:紅外逃逸、固定頻率纖維膨脹、UV/次頻率逃逸、或多尺度頻譜塵埃。要真正合法使用任何剖面分解定理,必須先除以發散振幅 $V_n=U_n/\|U_n\|_3$(精確得到 $\|V_n\|_3=1$),此時 Gallagher–Koch–Planchon 等已發表的臨界剖面分解定理才能合法套用(<strong>C6-K.8</strong>),給出典型的尺度/核心正交剖面分解,<strong>C6-K.9 Finite Significant Profile Lemma</strong> 證明在任何固定正規化強度門檻下只能有有限個顯著剖面。但文件立刻劃出全輪最重要的一條誠實界線:<strong>C6-K.10 Auxiliary-Profile Dynamics No-Go</strong> 明確指出振幅正規化 $V_n=U_n/L_n$ <strong>不是</strong> Navier–Stokes 對稱,因此從中萃取出的剖面<strong>不能</strong>自動解讀成 N–S 的子解、動力循環節點、或原始 blow-up 軌道的非線性剖面——它們只是<strong>形狀層級的緊緻性分類器</strong>,真正的動力學剖面定理需要一個有界的<strong>物理</strong>臨界序列,不只是正規化形狀序列。把這一切收攏成全輪的中心結果 <strong>C6-K.11 Three-Way Fiber Reduction</strong>:任何晚期假想 blow-up 序列,取子序列後必屬於<strong>可見同尺度核心膨脹</strong>、<strong>次尺度重整化重啟</strong>、或<strong>旁觀者/剖面逃逸</strong>(再細分平移/尾部、有限正交剖面骨架、多重性、頻譜塵埃)三者之一,每一支都需要完全不同的閉合策略。順帶一個有趣的側面結果:<strong>C6-K.12 Conditional Eulerization Lemma</strong> 在緊緻性假設下證明同尺度純振幅逃逸分支漸近變成<strong>無黏 Euler 方程</strong>——因為二次非線性項的量級是 $A_n^2$,而 backward-Leray 的漂移/黏性項只有 $A_n$,正規化後黏性在領頭階被遺忘——條件式,不構成矛盾,但辨認出纖維極限的另一個可能方程。全輪最終誠實指出真正最硬的缺口(<strong>Defect-to-Critical-Mass Visibility Gate</strong>):$TS$ 的中間/算子共享負載、$GP$ 的強中間/壓力核心、$HF$ 的符號厚導數核心,目前<strong>沒有一個</strong>被證明對全域 $L^3$ 臨界質量提供固定比例——原因是它們追蹤的密度($\lambda_2^+|S|^2$、算子範數、壓力 Hessian 來源、符號幾何佔比)根本不是定義真正「奇異質量」的 $|U|^3dx$,C6-F 先前的跨域來源核心萃取<strong>不會自動</strong>解決這個新的可見度缺口——旁觀者逃逸依然是一個真正的漏洞。因此正式更新 C6 循環認證標準,新增缺陷可見度、尺度解析、旁觀者控制、場緊緻性/逃逸機制四項門檻。正式交棒 <strong>C6-L — Singular Carrier Profiles, Spectator Decoupling, and Secondary-Scale Defect Rebinding</strong>,十項組成義務(L1 從 TS/GP/HF 推導載體可見度 至 L10 循環更新),直接攻打這個可見度缺口。</p>
+    <div class="claim-box">
+      不能把標準有界剖面分解定理直接套用到發散的原始 blow-up 序列,必須先正規化。定義臨界質量機率測度與集中半徑,證明集中半徑必屬於三種情形之一:次尺度集中、同尺度膨脹、或空間擴散——次尺度集中不是死路,而是精確保留臨界範數的重整化重啟。定義缺陷可見度,證明要嘛被追蹤的 C6 缺陷核心本身承擔發散質量,要嘛所有發散質量其實逃進了旁觀者剖面——後者不蘊含正則性,只代表目前追蹤的復發基底可能只是真正奇異點的旁觀者。明確劃界:振幅正規化不是 N–S 對稱,萃取出的剖面只是形狀分類器,不能當成真正的動力子解。全輪核心:任何纖維逃逸必屬於可見同尺度膨脹、次尺度重啟、或旁觀者逃逸三者之一。最誠實的結論是找出真正最硬的缺口——TS/GP/HF 目前都沒有證明承擔固定比例的真正奇異質量,旁觀者逃逸依然是一個真正的漏洞。交棒 C6-L 直接攻打這個可見度缺口。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../59-c6j-log-scale-renormalized-defect-flow-telescoping-potentials-critical-fiber-escape/">59 · C6-J:Critical Fiber Escape</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../61-c6l-singular-carrier-profiles-spectator-decoupling-secondary-scale-defect-rebinding/">61 · C6-L:Singular Carrier Profiles</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>61 / 67 · C6 系列 11/17</div>
+    </div>
+    <blockquote class="cite">「The defect event is asymptotically negligible in the global L³ critical-mass probability。」— 摘自本文第 70 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6K_CriticalFiber_ProfileSplitting_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6K_CriticalFiber_ProfileSplitting_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

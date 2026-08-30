@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-W:Critical Pressure Rotation 與 Strain Active-Volume Sparseness · NS · AMRAL</title>
+<meta name="description" content="平均應變的壓力驅動只需要帶號的矩陣積分,不需要絕對值積分——兩次分部積分把它精確降到尺度臨界的 L^3/2 壓力震盪。全域臨界壓力平方預算給出 R 平方加權的壓力轉動封裝,但幾何級數尺度下 Zeno 仍存活。壓力活躍核心有尺度無關的時間乘數預算。真正的新幾何結果:應變活躍體積塌縮不是無結構的逃逸,它自動產生一維線性稀疏,尺度 r~φ^(1/3)R,而且 ∇S 與 D²u 逐點線性等價——落在 Grujić-Xu 高階導數正則性框架的同一階,極端間歇性反而開始逼近已知的幾何正則性機制,除非解析半徑縮得更快。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>25 · C3-W:Critical Pressure Rotation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 25</span>
+      <span class="tag">C3-W · 體積轉一維稀疏</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-W:Critical Pressure Rotation、Strain Active-Volume Sparseness 與 Analyticity-Scale Barrier</h1>
+    <p class="h1-sub">C3-V 把 hypothetical singular survivor 壓成壓力轉動與應變波動兩個 concentration channel。本輪把兩者都推進一步。壓力方面,核心是 <strong>Critical Pressure Mean-Forcing Bound</strong>(定理 4.1):平均應變的壓力驅動 $P_{\chi,R}=\int\chi_R\nabla^2p$ 是帶號張量,不需要控制 $\int\chi|\nabla^2p|$,兩次分部積分(减去任意常數 $c$)把它精確降到尺度臨界的 <strong>$L^{3/2}$ 壓力震盪</strong> $\Pi_R$。由全域 $\int\|p\|_{3/2}^2dt\le C\|u_0\|_2^4/\nu$(定理 7.1,標準 Riesz+內插估計),得到 <strong>$R^2$-Weighted Pressure-Rotation Packing</strong>(定理 8.1)——但這仍只是加權有限,幾何級數尺度下每代仍可 $\mathfrak R_n^P\sim1$,<strong>壓力轉動的 Zeno 逃逸依然存活</strong>(§9)。另有 <strong>Pressure-Active Core Packing</strong>(定理 11.1、12.1):$b$-壓力活躍核心的數量與時間 $L_t^{4/3}$ 乘數都有尺度無關的全域預算,並直接對接 Constantin 的壓力正則性定理——hypothetical blow-up 必須逃出 $|p|^{3/2}$ 在收縮集合上的一致可積性,<strong>壓力轉動逃逸本質上就是一個臨界壓力集中分支</strong>。真正的新幾何在應變這邊:<strong>Volume-to-One-Dimensional-Sparseness Lemma</strong>(定理 20.1,純幾何引理)證明體積小於 $\delta^3|B_r|$ 就保證存在方向讓集合在該尺度呈一維 $\delta$-稀疏,由此得到 <strong>Strain-Intermittency-to-Sparseness Theorem</strong>(定理 22.1):有效活躍體積 $\phi_{p,R}$ 夠小時,高梯度區自動在尺度 $r_{\rm sp}\sim\phi_{p,R}^{1/3}R$ 上呈一維線性稀疏——且證明 $|\nabla S|\asymp|D^2u|$ 逐點線性等價(§23),使這條路線與 Grujić–Xu 的高階導數稀疏正則性框架落在同一導數階。所以<strong>極端間歇性不是自由逃逸</strong>:若稀疏尺度沒有超過相關解析半徑 $\rho_{\rm an}$,已知幾何正則性機制可能被啟動;要繼續當作奇異倖存者,必須讓解析尺度縮得比 $\phi^{1/3}R$ 更快(Analyticity-Scale Escape Debt),或讓 component/sign/time 介面不匹配。</p>
+    <div class="claim-box">
+      證明平均應變壓力驅動只需帶號積分,精確降到臨界 L^3/2 壓力震盪,但仍只有 R²加權封裝,Zeno 逃逸存活。壓力活躍核心有尺度無關時間預算,直接對接 Constantin 正則性定理。新幾何結果:應變活躍體積塌縮自動產生一維線性稀疏(r~φ^(1/3)R),與 Grujić-Xu 高階導數框架同階——極端間歇性開始逼近已知正則性機制,除非解析尺度縮得更快
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../24-c3v-turnover-packing-strain-fluctuation-escape/">24 · C3-V:Turnover Packing</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../26-c3x-joint-pressure-strain-analyticity-gap/">26 · C3-X:Joint Pressure–Strain Concentration</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>26 / 67</div>
+    </div>
+    <blockquote class="cite">「small volume 其實足以保證某方向的 weak 1D sparseness。」— 摘自本文第 28 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

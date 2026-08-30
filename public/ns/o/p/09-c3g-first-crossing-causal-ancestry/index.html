@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-G:First-Crossing 因果前沿與 Monotone Depletion No-Go · NS · AMRAL</title>
+<meta name="description" content="用 first-crossing threshold 解決瞬時交互作用不等於因果 parenthood的問題。定義無因次臨界殼振幅,證明 Critical First-Crossing Parent Lemma:child 第一次跨越門檻,必有一個局部 parent 更早跨越同一門檻——建立真正的時序 DAG(Critical Activation DAG),不可能有循環。合併耗散波數無界性,推出條件式的無窮因果 ray(Conditional C1c Closure)。但本輪同時證明第二個直覺失敗:「parent 用過一次就永久耗掉」不能從能量+helicity 守恆推出——守恆律只把轉移向量限制在一維帶號方向,不固定符號,donor/receiver 角色可以反轉,一個顯式反例(Θ(t)=sin t)在每個時刻精確滿足守恆律卻反覆換方向。Monotone Depletion No-Go。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>09 · C3-G:First-Crossing 因果前沿</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 09</span>
+      <span class="tag">C3-G · 因果 DAG,但 Depletion NO-GO</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-G:First-Crossing 因果前沿、臨界 Shell Ancestry 與 Monotone Depletion No-Go</h1>
+    <p class="h1-sub">C3-F 留下的最大缺口是:瞬時交互作用不等於嚴格更早的因果 parent。本輪改用無因次臨界殼振幅 $a_q^\sigma=\|u_q^\sigma\|_\infty/(\nu\lambda_q)$(尺度不變,直接連到耗散波數框架),定義每個 shell-sign node 的 first crossing time $\tau_{q,\sigma}$。核心結果是 <strong>Critical First-Crossing Parent Lemma</strong>(定理 9.1):在「eventual local-source dominance」假設下(前幾輪已對強非局部生成建立抑制,但尚未無條件證明此假設對所有可能的 blow-up 成立,故本輪結果明確標記為條件式),存在固定小門檻 $\beta_\ast$,使 child 第一次跨越門檻時,必有一個局部 parent 已更早跨越同一門檻——反證法只用 normalized Duhamel 公式加上有限 parent 類型數即可證明。這給出嚴格時序 $\tau_p<\tau_c$,由此建立的 <strong>Critical Activation DAG</strong> 不可能有循環,填上了 C3-F 留下的缺口。進一步證出 <strong>First Frontier Crossing Lemma</strong>(定理 15.1):高頻活動不能「瞬間傳送」到任意高的 frontier,必須先經過一個有界寬度的殼層邊界——合併耗散波數的無界性(來自 blow-up 下 $\Lambda\notin L^{5/2}$),用 Kőnig 型論證抽出一條 <strong>Conditional Ancestry Ray</strong>(定理 18.1):任意長、嚴格時序、頻率無界的因果路徑存在。但本輪同時測試另一個直覺——「parent 傳給 child 一次能量後應永久失去對應資源」——並證明這<strong>不能</strong>從守恆律推出:能量與 helicity 守恆只把轉移向量限制在固定的一維帶號方向 $\dot{\mathbf e}=\Theta_\tau(t)\mathbf v_\tau$,完全不限制 $\Theta_\tau(t)$ 的正負號。命題 26.1 給出明確反例:取 $\Theta(t)=\sin t$,這個抽象轉移帳本在每個時刻都精確滿足 triadwise 能量與 helicity 守恆,但能量會前後反覆交換——守恆代數本身不足以證明 monotone depletion。粘性提供的才是真正不可回收的損失,但 C2 已證其代價可縮成 $O(\lambda^{-1})$,沿幾何尺度仍可求和收斂。研究前線轉向 C3-H:把已得到的因果譜系做臨界重新標度,看能否逼出一個能跟既有 backward-uniqueness/rigidity 定理正面碰撞的重整化極限物件。</p>
+    <div class="claim-box">
+      證明 Critical First-Crossing Parent Lemma(條件式)——child 首次跨門檻必有更早跨門檻的局部 parent,建立無循環的因果 DAG;合併耗散波數無界性得條件式無窮因果 ray。但同時證明 Monotone Depletion NO-GO:守恆律只限制轉移方向為一維帶號,不固定符號,parent 資源可反覆重新使用,不能靠簡單計數關閉
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../08-c3f-phase-space-ancestry-cone/">08 · C3-F:Phase-Space 準局部性</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../10-c3h-ancestry-renormalization/">10 · C3-H:Ancestry Renormalization</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>10 / 67</div>
+    </div>
+    <blockquote class="cite">「causality ≠ monotone depletion。」— 摘自本文第 32 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

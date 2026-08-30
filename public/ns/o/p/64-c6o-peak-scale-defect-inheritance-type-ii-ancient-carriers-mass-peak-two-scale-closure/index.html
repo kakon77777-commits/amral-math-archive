@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-O:Peak-Scale Defect Inheritance、Type-II Ancient Carriers 與 Mass–Peak Two-Scale Closure · NS · AMRAL</title>
+<meta name="description" content="C6-O追問C6-N留下的雙尺度問題:全域臨界質量都跑到ancient peak frame的空間無窮遠,TS/GP/HF缺陷標籤還能不能留在有界峰值核心?證明若缺陷真的在峰值框架保持緊緻(Θ_D^peak=1),它必然是全域相對L³旁觀者(Peak-Tight Defect/Relative-Mass Decoupling)——ancient繼承只能用局部絕對缺陷負載,不能用全域相對比例。全輪真正的突破在壓力側:Mass-Tail/Peak-Pressure Decoupling Theorem對Calderón–Zygmund壓力Hessian核做遠場估計,證明承擔幾乎全部全域相對質量的空間尾端對固定峰值核心的Hessian影響只有O(R⁻²),徹底關掉C6-L/M一直擔心的「巨大旁觀者質量透過遠場壓力驅動峰值」漏洞。同時證明峰值導數尺度本身還可能藏着更小的逃逸尺度b_{k,n}≪a_n,觸發Derivative-Tower Restart。三分歸約(Mass–Peak Two-Scale Closure Theorem):峰值繼承的ancient缺陷、留在質量尺度的旁觀逃逸、或次峰值導數重啟——並引用Seregin 2026年最新Type-II分析,把特定情境下的Euler縮放極限記錄成獨立條件式外部介面。交棒C6-P攻打ancient缺陷穩定性與導數塔剛性。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6O_PeakScale_DefectInheritance_TypeII_TwoScale_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>64 · C6-O:Peak-Scale Defect Inheritance</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 64</span>
+      <span class="tag">C6-O · 質量/峰值雙尺度缺陷繼承 15/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-O:Peak-Scale Defect Inheritance、Type-II Ancient Carriers 與 Mass–Peak Two-Scale Closure</h1>
+    <p class="h1-sub">C6-N 證明相對主導 Type-II 載體必分裂成質量尺度 $\ell_n$ 遠大於峰值振幅尺度 $a_n$ 兩層。C6-O 正式追問:如果全域臨界質量都跑到 ancient peak frame 的空間無窮遠,TS/GP/HF 缺陷標籤還能不能留在有界的峰值核心?換句話說,<strong>critical mass inheritance ≠ defect inheritance</strong>。<strong>C6-O.1 Peak Relative-Mass Escape Theorem</strong> 用 record 正規化的簡單體積估計直接證明 $\mu_{3,n}^{peak}(B_R)\to0$ 對每個固定 $R$ 成立——peak tightness 係數 $\Theta_3^{peak}=0$,全域相對 $L^3$ 載體在 ancient peak frame 中完全不緊。<strong>C6-O.2 Peak-Tight Defect / Relative-Mass Decoupling</strong> 進一步證明:若缺陷載體真的在峰值框架中保持緊緻($\Theta_D^{peak}=1$),它必然是全域相對 $L^3$ 旁觀者——因此「相對奇異質量重疊」根本不能當作 ancient peak 缺陷的繼承判準,把 C6-N 的絕對/相對區分正式收緊成:ancient 繼承只能用<strong>局部絕對缺陷負載</strong>,不能用全域相對比例。<strong>C6-O.3 Local Absolute Defect Inheritance Lemma</strong> 證明非零局部絕對缺陷負載在足夠強的局部收斂下確實傳給 ancient 極限。接著把峰值導數尺度公理化:$\widehat A_{k,n}^{peak}=A_{k,n}/A_{0,n}^{k+1}$,<strong>C6-O.4 Derivative-to-Peak Trichotomy</strong> 分成 flattening(→0)、peak-scale derivative(→有限)、subpeak derivative escape(→∞)三支,若導數振幅真的逃逸,<strong>C6-O.5 Derivative-Tower Restart Theorem</strong> 證明必存在更小尺度 $b_{k,n}\ll a_n$,高階 HF 缺陷必須在峰值尺度以下重新綁定——因此<strong>C6-O.6 HF Peak-Inheritance Gate</strong> 明確列出全域 HF 標籤要合法繼承所需的四個條件,TS 需要額外的 Peak Time-Window Gate,GP 局部幾何則在 $C^2_{\rm loc}$ 收斂加非退化 $Q$ 質量下可以繼承。全輪真正的技術亮點在壓力側:<strong>C6-O.8 Mass-Tail / Peak-Pressure Decoupling Theorem</strong> 直接對 Calderón–Zygmund 壓力 Hessian 核做遠場估計,證明 record 有界正規化下,承擔幾乎全部全域相對質量的空間尾端對任何固定峰值核心的 Hessian 影響是 $O(R^{-2})$——也就是說「全域臨界質量主導」不等於「局部 GP 壓力主導」,徹底關掉了 C6-L/M 一直擔心的「巨大旁觀者質量透過遠場壓力偷偷驅動峰值」漏洞。<strong>C6-O.9 Conditional Ancient GP Inheritance Theorem</strong> 在強局部收斂、非零局部 $Q$ 負載、非退化邊界餘量、以及壓力來源在峰值重新分割四個條件下,證明局部 GP 元資料確實可以傳給 ancient 極限。全輪收攏成 <strong>C6-O.10 Mass–Peak Two-Scale Closure Theorem</strong> 三分:O-A Peak-Inherited Ancient Defect(峰值有界區域真的攜帶非零局部絕對缺陷負載,可條件式抽出 $D^{anc}$)、O-B Mass-Scale Defect / Peak Escape(缺陷不緊或局部負載消失,ancient peak 對這個標籤而言是無標籤/部分標籤物件,缺陷仍活在 $\ell_n$ 或更大尺度)、O-C Subpeak Derivative Restart(某個必要導數階逃逸,缺陷必須在振幅尺度以下重新綁定)——明確警告「ancient inheritance ≠ ancient recurrence」,峰值繼承本身不證明復發。另外引用 Seregin 2026 年最新 Type-II 分析(arXiv:2606.29468),把某些 Type-II 情境下的 Euler 縮放極限正式記錄成獨立的<strong>條件式外部介面</strong> EULER_TYPEII,不與 N–S ancient 狀態混為一談。正式交棒 <strong>C6-P — Ancient Defect-State Classification, Derivative-Tower Rigidity, and Peak-Local Pressure Closure</strong>,十項組成義務直攻:ancient TS/GP/HF 穩定性條件、derivative-tower 能否無限重複、以及 ancient 壓力來源能否在 $\tau\to-\infty$ 中變成真正可繼承的結構。</p>
+    <div class="claim-box">
+      追問 C6-N 留下的雙尺度問題:全域臨界質量都跑到 ancient peak frame 的空間無窮遠,TS/GP/HF 缺陷標籤還能不能留在有界峰值核心?證明若缺陷真的在峰值框架保持緊緻,它必然是全域相對旁觀者——ancient 繼承只能用局部絕對缺陷負載,不能用全域相對比例。全輪真正的突破在壓力側:證明承擔幾乎全部全域質量的空間尾端對固定峰值核心的壓力 Hessian 影響只有 $O(R^{-2})$,徹底關掉「巨大旁觀者質量透過遠場壓力驅動峰值」的漏洞。同時證明峰值本身還可能藏著更小的導數逃逸尺度,觸發 derivative-tower restart。三分歸約:峰值繼承的 ancient 缺陷、留在質量尺度的旁觀逃逸、或次峰值導數重啟。交棒 C6-P 攻打 ancient 缺陷穩定性與導數塔剛性。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../63-c6n-near-lossless-carrier-concentration-ancient-profile-extraction-defect-complete-rigidity/">63 · C6-N:Near-Lossless Carrier Concentration</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../65-c6p-ancient-defect-state-classification-record-peak-derivative-rigidity-peak-local-pressure-closure/">65 · C6-P:Ancient Defect-State Classification</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>65 / 67 · C6 系列 15/17</div>
+    </div>
+    <blockquote class="cite">「Critical mass inheritance ≠ defect inheritance。」— 摘自本文第 0 節(本輪定位)。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6O_PeakScale_DefectInheritance_TypeII_TwoScale_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6O_PeakScale_DefectInheritance_TypeII_TwoScale_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

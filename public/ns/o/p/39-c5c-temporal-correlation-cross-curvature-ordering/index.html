@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-C:Temporal Correlation Defects 與 Cross-Curvature Ordering · NS · AMRAL</title>
+<meta name="description" content="C5-B留下Young測度知道相位比例卻不知道先後順序,C5-C直接回到真實應變能量E0、E1恆等式。中間負載精確恆等式m=E0'+2νE1+q給出供給/需求/餘裕累積帳本C=R+D+Q,證明其緊緻性與供給赤字預算。核心新結果是跨曲率恆等式:算子正負成長相位精確等於正規化應變耗散需求速率的凹凸性來源,曲率變異恰等於算子總變異——O+就是需求速率的凸性來源,O-是凹性來源。三種曲率狀態:消失、有限、壅塞。但誠實的純量排序no-go:顯式構造證明光靠純量能量帳本仍允許完全分離的O+→M或M→O+補償週期,純量恆等式本身不足以排除——交棒C5-D轉向空間矩陣層。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>39 · C5-C:Cross-Curvature Ordering</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 39</span>
+      <span class="tag">C5-C · 算子相位接回 PDE 曲率</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-C:Temporal Correlation Defects、Cross-Curvature Transition Measures 與 Causal Pulse Ordering</h1>
+    <p class="h1-sub">C5-B 留下一個明確缺口:Young 測度知道相位比例,不知道先後順序——$M,+,M,+,\ldots$ 與 $M,M,+,+,\ldots$ 可以有同一個局部 Young 分布。C5-C 不再只做固定延遲統計,直接回到真實應變能量 $E_0=\tfrac12\|S\|_2^2$、$E_1=\tfrac12\|S\|_{\dot H^1}^2$。應變恆等式 $E_0'+2\nu E_1=a(t)$($a=-2\int\det S\,dx$)配合 C4-H 逐點矩陣不等式 $a\le m$(中間應變負載),定義中間餘裕 $q=m-a\ge0$,給出精確恆等式 $m=E_0'+2\nu E_1+q$。沿記錄窗正規化時間,定義四條累積路徑——供給 $C_j(s)$、應變耗散需求 $D_j(s)$、中間餘裕 $Q_j(s)$、$E_0$ 記錄位移 $R_j(s)$——證明<strong>精確中間累積帳本</strong>(定理 7.1):$C_j=R_j+D_j+Q_j$ 對所有 $s$ 成立,四條路徑皆單調有界,由 Helly selection 給出緊緻性。**C5-C.2 Middle Supply-Deficit Budget**(定理 13.1)證明需求超過供給的部分有硬預算上界 $\int[d_j-c_j]_+ds\le1-\alpha_j^{mid}$——需求不能長期超前供給而不支付負的 $E_0$ 變化,總赤字預算就是中間負載沒能轉成 $E_0$ 記錄成長的那一份。算子正負成長側建出精確 BV 記錄路徑 $G_j(s)=C_j^+(s)-C_j^-(s)$,證明 <strong>Operator BV Compactness</strong>(定理 22.1)並定義 Operator Variation-Cancellation Defect 量化 BV 極限中互相抵消掉的微觀變異。**全輪核心是 Cross-Curvature Variation Identity**(定理 27.1):對需求速率 $d_j(s)$ 微分,精確得到 $Dd_j=\kappa_j^{MO}(\mu_j^{op,+}-\mu_j^{op,-})$,而且驚人地 $\kappa_j^{MO}=\operatorname{Var}_{[0,1]}d_j$ 恰好相等——<strong>算子正/負成長相位不是任意的時間標籤,它精確等於正規化應變耗散需求速率的凹凸性來源</strong>:$O^+$ 恰是 $d_j$ 的凸性來源,$O^-$ 恰是凹性來源。跨曲率數 $\kappa_j^{MO}$ 抽子序列只能落三種狀態:C-K0(消失,需求速率弱化成常數)、C-KF(有限非零,給出有界變差轉移閉合,但仍可能留下正的曲率變異缺陷,即有限尺度快速切換在極限速率中互相抵消)、C-K∞(曲率壅塞,變異發散——這正是 C5-B 算子相位測度在此狀態下的正規化曲率剖面)。固定振幅穿越次數上界 $N_j^{a\uparrow b}\le\kappa_j^{MO}/(b-a)$ 進一步量化有界曲率下的轉移次數。結合供給/需求/算子符號的三元標記測度,證明 <strong>Anti-Phase Growth Causes Negative Enstrophy Drift</strong>(定理 40.1):若算子正成長發生在中間供給明顯低於耗散需求時,精確逼出 $E_0'<0$。**但全輪最重要的誠實結論是一個 no-go**(§45-48,Scalar Temporal Ordering No-Go):文件顯式構造一個抽象純量帳本(分段線性需求速率 $d(s)$、供給 $c(s)$ 完全分離在前後兩半),同時滿足正的最終 $E_0$ 記錄漂移、正的算子需求加速、精確的中間/算子時間分離、以及精確累積帳本——證明<strong>單靠純量 $E_0$/$E_1$ 恆等式,仍完全允許 $O^+\to M$ 或反向 $M\to O^+$ 的分離補償週期</strong>,明確聲明這不是證明 N-S 真的實現這種模式,只是證明純量時間恆等式本身不足以排除它。因此文件正式宣告<strong>純時間純量層的收益已經到頂</strong>,交棒 <strong>C5-D — Spatial–Matrix Motif Compatibility: Strain Cones, Quadratic Barycenters, and Pressure Defects</strong>,任務是把應變錐、二次張量重心、壓力矩陣方向、七點見證、時間相位放進同一個復發極限。</p>
+    <div class="claim-box">
+      回到真實應變能量恆等式,證明精確中間累積帳本 C=R+D+Q 及其緊緻性,證明供給赤字有硬預算上界。核心新結果:跨曲率恆等式證明算子正/負成長相位精確等於正規化應變耗散需求速率的凹凸性來源,曲率變異恰等於算子總變異——三種曲率狀態(消失/有限/壅塞)分類轉移。但顯式構造抽象純量帳本反例證明:單靠純量能量恆等式仍完全允許分離的 O+→M 補償週期,純量層本身不足以排除。純時間純量層收益到頂,交棒 C5-D 轉向空間矩陣
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../38-c5b-temporal-young-pulse-phase-compatibility/">38 · C5-B:Pulse-Phase Compatibility</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../40-c5d-spatial-matrix-quadratic-pressure-obstruction/">40 · C5-D:Spatial-Matrix Obstruction</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>40 / 67 · C5 系列 3/13</div>
+    </div>
+    <blockquote class="cite">「operator positive/negative growth phase is exactly equal to the convexity/concavity source of the normalized strain-dissipation demand rate——但 scalar temporal identities alone仍允許完全分離的補償週期。」— 摘自本文第 27、48 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

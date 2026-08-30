@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-C:Nonlinear Duhamel Coherence 與 Cycle-Critical Saturation · NS · AMRAL</title>
+<meta name="description" content="C6-C正式打開C6-B留下的dashed edge,問nonlinear re-entry coherence gates能否在無窮多代同時保持非退化。C6-C.1精確因式分解Duhamel coherence=future-target concentration×temporal sign coherence。C6-C.3證明growth efficiency被coherence上界(η^grow≤Γ^Duh),真正峰值再生不允許任意小coherence。C6-C.4 Thick-Target Source Coherence Theorem證明sign-thick re-entry必須被一整塊spatiotemporally coherent source slab支撐,不能靠單點作弊。C6-C.5證明coherence崩潰精確等價於forcing-capacity inflation,不是零代價。Finite Re-entry Bottleneck Theorem證明任何無窮候選re-entry序列必屬於一致相干或逼近有限邊界字母表(target diffusion/temporal cancellation/capacity inflation/inherited-field takeover/selection degeneration/harmonic sign saturation/persistence collapse/setup exit)兩型之一。一致相干分支被嚴格限制但沒有被預算排除。全輪淘汰四個粗糙解釋——強迫大、capacity大、單峰值大、單一壞時刻——都不再是F_NL→H的合法證據。H/F已壓得夠窄,轉向G↔P,交棒C6-D。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>52 · C6-C:Duhamel Coherence</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 52</span>
+      <span class="tag">C6-C · H/F 壓窄,轉向 G/P 3/17</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C6-C:Nonlinear Duhamel Coherence、Sign-Reentry Efficiency 與 Cycle-Critical Saturation</h1>
+    <p class="h1-sub">C6-B 把粗糙 $H\leftrightarrow F$ 砍成 $H_{\rm force}\to F_{\rm NL}^{+}\overset{\text{coherence+sign+setup+persistence}}{\dashrightarrow}H_{\rm force}$;C6-C 正式打開中間那條 dashed edge,問這些 re-entry coherence gates 能不能在無窮多代同時保持非退化。第一個 exact result(<strong>C6-C.1</strong>)把 Duhamel coherence 精確因式分解:$\Gamma_\ell^{Duh}=\chi_\ast^{target}\gamma_\ast^{time}$——future-target concentration(強迫容量有多少真正瞄準同一個未來目標分量/位置)乘上 temporal sign coherence(在那個目標歷史上是否維持同向符號)。大容量可以透過兩條路徑失敗:錯過同一個未來目標,或者用交替符號抵達它。把 response peak 推成機率測度 $\nu_\ell^{coh}\in\mathcal P([-1,1])$ 後,<strong>C6-C.2 High-Coherence Concentration Lemma</strong> 證明高 coherence 強迫大部分正規化強迫容量對齊同一個未來方向。<strong>C6-C.3 Growth Efficiency Is Bounded by Duhamel Coherence</strong> 證明 $\eta_\ell^{grow}\le\Gamma_\ell^{Duh}$——真正的正向峰值再生自動要求非退化 Duhamel coherence,任意小的 coherence 配不出真正的成長。更進一步,若 response 要在整個 chain-scale sign-thick 集合 $E$ 上生成(而不是只在單點作弊),<strong>C6-C.4 Thick-Target Source Coherence Theorem</strong> 證明 $\chi_E\gamma_E\ge\lambda_Z\Gamma^{Duh}$,故各自 $\chi_E,\gamma_E\ge\lambda_Z\Gamma^{Duh}$——sign-thick re-entry 因此必須被一整塊「spatiotemporally coherent nonlinear source slab」支撐,不能只靠單點強迫聚焦後蒙混整個厚集合。<strong>C6-C.5 Coherence–Capacity Tradeoff</strong> 證明若 $\Gamma^{Duh}\to0$ 而真正 response 仍要維持相當量級,則 $\mathfrak C_\ell/\|Z_\ell\|_\infty=1/\Gamma^{Duh}\to\infty$——coherence 崩潰不是零代價,而是準確等價於「Forcing-Capacity Inflation」,仍歸在 $\mathsf F$ 類內,不是新的殘餘類。把整套 re-entry 所需的儲備(Duhamel coherence、inherited-field dominance、component selection、harmonic sign margin、temporal persistence、theorem setup)壓成七維(加一個布林)儲備向量 $\mathbf R^{re}$ 與其最小值 $b^{re}$,<strong>C6-C.6 Finite Re-entry Bottleneck Theorem</strong> 證明任何無窮候選 re-entry 序列,取子序列後必屬於恰好兩型之一:要嘛<strong>一致相干</strong>($b_n^{re}\ge b_0>0$ 對所有代成立),要嘛<strong>逼近一個有限邊界字母表</strong>(target diffusion、temporal cancellation、capacity inflation、inherited-field takeover、selection degeneration、harmonic sign saturation——不會抹除 C5-L 的下游 descent debt——、persistence collapse——不是純幾何噪音,而是繞回黏性/非線性時間強迫——、setup exit——繞回 legality 類 $\mathsf A$)。<strong>C6-C.7 Coherent H/F Cycle Reduction</strong> 把整條無窮候選壓成 Type U(一致相干)或 Type S(逼近某個固定邊界)兩型。<strong>但 C6-C 並沒有判死一致相干分支</strong>:雖然證明它攜帶一個固定的正規化 source-slab toll,目前沒有已知的全域有限預算能控制所有世代這個 toll 的總和,uniform coherent branch 因此「被嚴格限制,但沒有被預算排除」。全輪真正淘汰的是四個過去曾經被默認接受的粗糙解釋:「強迫很大」、「Duhamel capacity 很大」、「單一 response 峰值很大」、「存在一個壞時刻」,全部不再是 $F_{\rm NL}\to H$ 的合法證據。H/F 的問題自此不再是「強迫會不會變大」,而是「能不能有一條無窮遞迴、時空相干的非線性 source slab,每一代都同時通過 dominance、selection、sign、persistence、setup 五道閘門」——這個 uniformly coherent branch 目前既未被證實也未被排除。由於 H/F 這條線已經被壓得夠窄,本輪不再回頭深挖,轉向 C6-A 原本三個候選中唯一還沒單獨處理過的:$G\leftrightarrow P$。正式交棒 <strong>C6-D — Geometry–Pressure Cycle Composition, Provenance Compatibility, and Signature-Return Tests</strong>,八項組成義務(D1 G→P 型別化目標 至 D8 復發來源)。</p>
+    <div class="claim-box">
+      Duhamel coherence 精確因式分解成 future-target concentration 乘上 temporal sign coherence,證明真正的峰值再生量($\eta^{grow}\le\Gamma^{Duh}$)與整塊 sign-thick 集合的生成($\chi_E,\gamma_E\ge\lambda_Z\Gamma^{Duh}$)都自動要求非退化 coherence,不能靠單點作弊或純大容量蒙混。coherence 崩潰不是零代價,精確等價於 forcing-capacity inflation。Finite Re-entry Bottleneck Theorem 證明任何無窮候選 re-entry 序列必屬於一致相干或逼近某個有限邊界字母表兩型之一,但一致相干分支目前既未被證實也未被排除——沒有已知的全域有限預算控制所有世代的 source-slab toll 總和。H/F 這條線已被壓得夠窄,轉向 C6-A 原本三候選中還沒單獨處理過的 $G\leftrightarrow P$,交棒 C6-D。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">51 · C6-B:Forcing Re-entry / H-F Cycle Test</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../53-c6d-geometry-pressure-cycle-composition-provenance-compatibility-signature-return-tests/">53 · C6-D:Geometry–Pressure Cycle</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>53 / 67 · C6 系列 3/17</div>
+    </div>
+    <blockquote class="cite">「The following are no longer acceptable explanations of F_NL→H: forcing norm is large; Duhamel capacity is large; one response peak is large; one bad time exists. A valid re-entry requires explicit coherence/persistence reserves。」— 摘自本文第 55 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

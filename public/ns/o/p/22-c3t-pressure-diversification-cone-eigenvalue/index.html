@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-T:Pressure Diversification 與 Cone-Eigenvalue Non-Rigidity · NS · AMRAL</title>
+<meta name="description" content="兩個真正的型別缺口 no-go。(1) 固定的 5 維平均應變半空間不能固定中間特徵值 λ₂ 的符號——顯式雙矩陣反例;只有帶特徵值間隙的窄錐才能靠 Weyl 不等式鎖定符號,即使如此「平均 λ₂>0」也不蘊含「逐點 λ₂>0」——另一個顯式反例。(2)「每個尺度都有壓力貧乏見證核心」不蘊含「存在一條壓力貧乏的因果祖先射線」——顯式無限樹反例,缺的那個 Hereditary Pressure-Poor Ancestry Lemma 才是真正的開放目標。也證明只有 5 個純量的固定平均應變母題無法靠資訊論控制 Miller 算子逃逸這個無限維核。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>22 · C3-T:Pressure Diversification</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 22</span>
+      <span class="tag">C3-T · 兩個型別缺口</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-T:Pressure Diversification、Cone-Eigenvalue Non-Rigidity 與 Heredity Gap</h1>
+    <p class="h1-sub">C3-S 把邊界一致性做到跨尺度剛性。本輪回頭檢查兩個看起來很自然、但都不成立的推論,誠實標出型別缺口。第一個是 <strong>Half-Space Signature Non-Rigidity</strong>(命題 5.1):固定的 5 維平均應變半空間(C3-P 的 $H_0$、C3-R/S 的共同支持矩陣)<strong>不能</strong>固定中間特徵值 $\lambda_2$ 的符號——文件給出一個顯式雙矩陣反例,兩個矩陣落在同一個半空間內,$\lambda_2$ 符號卻相反。只有當半空間收窄成一個帶<strong>特徵值間隙</strong>的窄錐時,才能靠 Weyl 不等式(定理 8.1)鎖定符號。但即使符號鎖定,<strong>Mean-to-Pointwise Middle-Eigenvalue No-Go</strong>(命題 11.1)證明「時間或空間平均後 $\lambda_2>0$」不蘊含「逐點 $\lambda_2>0$」——另一個顯式反例(一個逐點振盪但平均為正的構造)。這直接提醒:C3-K/C3-L 一路建立的中間特徵值判準,只在逐點層級成立,平均層級的證據不能直接套用。第二個更根本,是 <strong>Hereditary Pressure-Poor Ancestry Gap</strong>(§18):C3-R/C3-S 只證明「每個尺度都存在一個壓力貧乏的見證核心」,但這<strong>不蘊含</strong>「存在單一一條跨所有尺度、逐代都壓力貧乏的因果祖先射線」——文件用一個顯式的無限分支樹反例說明:每一層都有見證節點,但沒有任何單一路徑能在每一層都命中見證節點。文件把這個缺口明確命名成還沒證出來的 <strong>Hereditary Pressure-Poor Ancestry Lemma</strong>,標為本條研究線真正的下一個開放目標。最後一個結果是資訊論式的 <strong>Mean-Motif/Operator-Fluctuation Separation No-Go</strong>(定理 24.1):固定平均應變母題只有 5 個純量自由度,而 Miller 算子逃逸比例是一個無限維核上的泛函,5 個純量在資訊論上不可能決定一個無限維核的行為——<strong>有限的平均幾何天生無法控制無限維的算子逃逸</strong>,這不是計算難度問題,是維度不匹配。</p>
+    <div class="claim-box">
+      證明固定 5 維半空間不能鎖定中間特徵值符號(顯式反例),只有窄錐+特徵值間隙才行,且平均為正不蘊含逐點為正(又一反例)。證明「每尺度都有見證核心」不蘊含「存在跨尺度祖先射線」(無限樹反例),明確命名缺的引理 Hereditary Pressure-Poor Ancestry Lemma 為下一個開放目標。證明 5 個純量的平均母題在資訊論上無法控制無限維算子逃逸
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../21-c3s-strain-cone-margin/">21 · C3-S:Strain-Cone Margin</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>23 / 67</div>
+    </div>
+    <blockquote class="cite">「a witness at every level does not make a witness along any one path。」— 摘自本文第 18 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

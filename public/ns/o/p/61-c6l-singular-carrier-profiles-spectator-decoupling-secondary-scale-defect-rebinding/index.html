@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C6-L:Singular Carrier Profiles 與 Spectator Decoupling · NS · AMRAL</title>
+<meta name="description" content="C6-L第一次把奇異臨界質量與缺陷標籤放進同一個測度論物件裡,定義可見度Ω_D3=1-d_TV(μ_n,η_n)。證明可見度低不是重疊偏低而是真正的漸近測度分離(Spectator Separation Theorem),可見度高則能精確抽出同時標籤化又奇異質量可見的載體(Singular-Carrier Extraction Theorem)。用有限字母表{TS,GP,HF}的混合測度證明:要嘛至少一個標籤可見,要嘛整個字母表同時是旁觀者。修正C6-K的次尺度重啟:真正的物理N-S重縮放揭露內層未來視界會發散到無窮——次尺度重啟不是同一個循環縮小重播,而是視界型別完全不同的新動力問題,甚至可能產生永恆解。唯一真正建設性的定理證明一階符號厚核心必攜帶正的絕對臨界L³質量,但誠實劃界:絕對可見度不等於相對可見度,旁觀者逃逸依然沒有被完全關閉,壓力的非局部性更進一步保證單靠L³不夠。正式結論:若整個現有字母表混合可見度趨零,該循環不是奇異點的完整模型。交棒C6-M攻打載體完備性。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6L_SingularCarrier_Spectator_Rebinding_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>61 · C6-L:Singular Carrier Profiles</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 61</span>
+      <span class="tag">C6-L · 攻打可見度缺口 12/17</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>C6-L:Singular Carrier Profiles、Spectator Decoupling 與 Secondary-Scale Defect Rebinding</h1>
+    <p class="h1-sub">C6-K 留下的最硬缺口是:$TS$、$GP$、$HF$ 追蹤的復發核心,到底是不是真正的奇異臨界質量載體?C6-L 第一次把<strong>奇異臨界質量</strong>與<strong>缺陷標籤</strong>放進同一個測度論物件裡。定義臨界質量機率測度 $d\mu_n=|U_n|^3/\|U_n\|_3^3\,dx$,以及每個缺陷標籤自己的正規化載體機率測度 $\eta_n$(TS 用 C6-F 的共享來源密度、GP 用 Q-加權幾何、HF 用 component/sign 高集合各自構造),定義可見度 $\Omega_{D3,n}=1-d_{TV}(\mu_n,\eta_n)\in[0,1]$。<strong>C6-L.1 Singular-Carrier Extraction Theorem</strong> 證明若 $\Omega_{D3,n}\ge\omega_0>0$,可建出聯合測度 $\xi_n=(\mu_n\wedge\eta_n)/\Omega_{D3,n}$,使任何 $\xi_n(B)\ge\vartheta$ 同時精確推出 $\mu_n(B),\eta_n(B)\ge\omega_0\vartheta$——第一次真正把「缺陷可見」與「真正奇異質量可見」用同一個集合連接起來。反過來,<strong>C6-L.2 Spectator Separation Theorem</strong> 把 C6-K 留下的模糊描述精確化成更嚴厲的結論:若 $\Omega_{D3,n}\to0$,可以精確抽出一個分離集 $A_n$,使 $\mu_n(A_n)\to1$ 同時 $\eta_n(A_n)\to0$——Defect–Fiber Decoupling 不是「重疊偏低」,而是<strong>漸近測度真正分離</strong>。把這套工具用在完整的有限字母表 $\{TS,GP,HF\}$ 上(<strong>C6-L.3 Finite Defect-Label Carrier Lemma</strong>):要嘛至少一個標籤有定量可見度,要嘛<strong>整個目前的字母表同時是旁觀者</strong>——正式定義「Carrier-Complete Defect Alphabet」為新目標,明確聲明 C6 目前<strong>還沒有</strong>證明它。全輪真正的方法論修正在於重新審視 C6-K 的次尺度重啟:C6-K 只是對單一時間切片做重縮放,<strong>不是</strong>真正的動力對稱。<strong>C6-L.7 Exact Physical Inner Rescaling</strong> 改用真正的物理 $(x,t)$ 域 N–S 重縮放(內尺度 $\ell_n=\sqrt{T^\ast-t_n}\,\rho_n$),得到全輪最意外的發現——<strong>C6-L.8 Secondary-Scale Horizon Theorem</strong>:內層未來視界 $H_n^+=\rho_n^{-2}\to\infty$——也就是說,次尺度核心越深,在它自己的拋物鐘裡,原本的終結時刻 $T^\ast$ 反而變得<strong>無窮遠</strong>。<strong>次尺度重啟因此不是同一個 backward blow-up 循環縮小重播</strong>,而是視界型別完全不同(從有限 $O(1)$ 變成無窮)的新動力問題——在足夠緊緻性假設下甚至可能產生一個真正的<strong>永恆</strong> N–S 解(C6-L.9,條件式)。接著系統性分類哪些 C6 元資料能在這個重縮放下自動延續(<strong>C6-L.10 Defect Rebinding Covariance Principle</strong>:中間縫隙、應變/Q 方向、符號佔比、壓力簽名、Duhamel coherence、共享來源重疊都是無因次且協變的),哪些必須在內層重新驗證(來源身分、因果祖先、共同遠場壓力關係、跨代遺傳性、定理視窗歸屬、乃至視界型別本身)——「幾何協變不等於定理入場協變」。全輪唯一真正建設性的可見度定理是 <strong>C6-L.12(First-Derivative Sign-Thickness → Local Critical $L^3$ Visibility)</strong>:對一個真正的 $k=1$(一階導數)符號厚壞核心,透過弦積分加鄰域估計,直接證出一個與尺度無關的正臨界 $L^3$ 質量下界 $\int_B|u|^3dx\ge c_{\rm vis}(\lambda,\delta,\widetilde{\mathcal C}_1)>0$——「真正的一階符號厚調和閘門失敗絕不可能是零臨界質量的載體」。但文件立刻誠實劃界(第 56 節):這只是<strong>絕對</strong>下界,不是<strong>相對</strong>下界——因為 $\|u(t)\|_3^3\to\infty$,這個絕對質量除以發散的全域質量後依然可能趨零,「絕對臨界可見度不等於相對奇異質量可見度」,旁觀者逃逸即使對這個最具體的定理也<strong>沒有被完全關閉</strong>。同時補上一個關鍵警告(壓力非局部性):$L^3$ 旁觀者<strong>不代表</strong>壓力旁觀者——一個在局部 $L^3$ 質量上消失的剖面,依然可能透過遠場壓力影響被追蹤的 GP 核心,所以完整的載體理論不能只靠 $L^3$ 一個通道。<strong>C6-L.13 Spectator-Cycle Incompleteness Theorem</strong> 把這一切收攏成正式結論:若整個 $\{TS,GP,HF\}$ 混合可見度趨零,該復發缺陷循環<strong>不是</strong>假想奇異點的完整模型——明確標註這是「在載體測度層級證明」,附帶壓力非局部性的保留條款。<strong>C6-L.14 Secondary Rebinding Horizon No-Go</strong> 則是一條嚴格的循環語意守則:任何把主層級與內層缺陷動力學直接等同、卻沒有更新視界元資料的循環證明都<strong>不合法</strong>。把 C6-K 的三分類(CORE/INNER/SPECTATOR)精煉成 CORE-L(標籤化同尺度奇異載體)、INNER-L(標籤化次尺度真物理重綁定)、SPECTATOR-U(無標籤/旁觀者奇異載體)。正式交棒 <strong>C6-M — Carrier Completeness, Spectral/Pressure Visibility, and Nested-Rebinding Rigidity</strong>,十項組成義務(M1 頻譜可見度 至 M10 移除旁觀者循環後重算候選圖),直接攻打「載體完備性」這個最新、最根本的開放問題。</p>
+    <div class="claim-box">
+      第一次把奇異臨界質量與缺陷標籤放進同一個測度論物件裡,證明可見度低不是「重疊偏低」而是真正的漸近測度分離,可見度高則能精確抽出同時標籤化又奇異質量可見的載體。修正 C6-K 的次尺度重啟:真正的物理重縮放揭露內層未來視界會發散到無窮——次尺度重啟不是同一個循環縮小重播,而是視界型別完全不同的新動力問題,甚至可能產生永恆解。唯一真正建設性的定理證明一階符號厚核心必攜帶正的絕對臨界質量,但誠實劃界:絕對可見度不等於相對可見度,旁觀者逃逸依然沒有被完全關閉,壓力的非局部性更進一步保證單靠 $L^3$ 不夠。正式結論:若整個現有字母表混合可見度趨零,該循環不是奇異點的完整模型。交棒 C6-M 攻打載體完備性。
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../60-c6k-critical-fiber-escape-defect-fiber-compactness-profile-splitting-closure/">60 · C6-K:Profile-Splitting Closure</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">62 · C6-M:Carrier Completeness</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>62 / 67 · C6 系列 12/17</div>
+    </div>
+    <blockquote class="cite">「Absolute critical visibility ≠ relative singular-mass visibility。」— 摘自本文第 56 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C6L_SingularCarrier_Spectator_Rebinding_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6L_SingularCarrier_Spectator_Rebinding_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

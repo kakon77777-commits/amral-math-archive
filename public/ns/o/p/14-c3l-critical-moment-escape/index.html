@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-L:Critical Moment Escape 與 Strain-Geometry Debt · NS · AMRAL</title>
+<meta name="description" content="回答 C3-K 留下的問題:下一個頻率矩真的必須逃向無窮嗎?答案是 YES,用 Cheskidov-Dai 頻率局部化正則性判準的逆否直接證明(Critical Vorticity-Moment Divergence),不是猜測。分成 Branch A(前沿 L² 尖峰)與 Branch B(活躍矩逃逸,M1 有限但 M(5/2) 必發散)。測試 enstrophy 能否免費補上缺的矩——不能,提升一個矩會產生渦度伸展幾何債(exact identity 直接後果,不是啟發式)。連接外部 middle strain eigenvalue 正則性判準(Miller、2025 Guo-O 端點結果),blow-up 還必須讓 λ₂⁺ 逃出臨界正則類——兩條平行必要條件,尚未證明互相蘊含。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>14 · C3-L:Critical Moment Escape</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 14</span>
+      <span class="tag">C3-L · 矩真的必須逃逸</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-L:Critical Vorticity Moment Escape、Active-Occupancy Dichotomy 與 Strain-Geometry Debt</h1>
+    <p class="h1-sub">C3-K 把缺口壓成 One-Frequency-Moment Gap,本輪原問題是:hypothetical blow-up 是否真的必須把下一個頻率矩推到無窮?答案明確是 <strong>YES</strong>——用 Cheskidov–Dai 的頻率局部化正則性判準之逆否直接證明(<strong>Critical Vorticity-Moment Divergence</strong>,定理 4.1):$\nu\int\sum_{q\le Q(t)}\lambda_q^2a_q\,dt=\infty$,可讀成殼層渦度絕對值的積分發散,不是猜想而是已證定理的直接後果。把這條件按門檻 $\beta$ 拆成次門檻與活躍兩部分,次門檻部分由耗散波數 $\Lambda\in L^2$ 控制,因此得到 <strong>Critical-Moment Carrier Dichotomy</strong>(定理 9.1):要嘛 $\Lambda\notin L^2$(Branch A,前沿尖峰直接承擔),要嘛 $\Lambda\in L^2$ 但對每個固定門檻活躍矩 $M_{5/2}(\beta)$ 必發散(Branch B)——結合 C3-K 已證的 $M_1(\beta)<\infty$,得到一個非常清楚的訊號:有限一階占據矩 + 發散 5/2 階矩。最自然的補矩候選是 enstrophy,渦度方程直接給出精確恆等式,但積分後立刻看到必須額外控制 vortex stretching $\int\omega\cdot S\omega$——<strong>Moment-Raising Geometry Debt No-Go</strong>(命題 20.1):提升一個微分/頻率矩會產生渦度伸展幾何債,這是精確恆等式的直接邏輯後果,不是啟發式,標度稽核確認 enstrophy 恆等式本身沒有隱藏的尺度優勢。接著引入外部 middle strain eigenvalue 正則性判準(Evan Miller 定理,加上 2025 年 Guo–O 的端點 Besov 結果):hypothetical blow-up 必須讓 $\lambda_2^+\notin L_t^2L_x^3$,甚至更強地 $\lambda_2^+\notin L_t^2\dot B^{-1}_{\infty,\infty}$——這是一組平行必要條件(<strong>Spectral–Geometric Double Escape</strong>,定理 26.1),文件明確聲明目前尚未證明頻譜矩逃逸蘊含應變幾何逃逸,或反向蘊含,不得偷寫成因果等價。研究前線轉向 C3-M:這兩個已知必須同時發散的通道,能否被真正的 N-S 幾何強制耦合到一個不可能的狀態。</p>
+    <div class="claim-box">
+      用外部定理逆否確證下一個頻率矩必須逃逸,不是猜測。證明提升一個矩必產生渦度伸展幾何債(精確後果,非啟發式)。連接外部 middle-strain 正則性判準,得到兩條平行必要條件(頻譜矩逃逸 + 應變幾何逃逸),尚未證明互相蘊含
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../13-c3k-absolute-occupancy-moment-gap/">13 · C3-K:Absolute Occupancy</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../15-c3m-vorticity-strain-betchov/">15 · C3-M:Vorticity–Strain 耦合與 Betchov 坍縮</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>15 / 67</div>
+    </div>
+    <blockquote class="cite">「raising one differential/frequency moment creates a vortex-stretching geometry debt。」— 摘自本文第 20 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

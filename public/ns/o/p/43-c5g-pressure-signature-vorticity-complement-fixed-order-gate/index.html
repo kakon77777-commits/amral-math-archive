@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C5-G:Fixed-Order Derivative-Gate Closure 與 Pressure-Signature Defects · NS · AMRAL</title>
+<meta name="description" content="C5-G做出全NS系列第一個真正theorem-ready的定理接口。不再繞strain/渦度轉換或殼層/全場轉換,直接對原始D^ku全部分量/符號超水平集做全域體積上界(Chebyshev),配合體積轉線幾何引理得到1D稀疏尺度,和發表的Grujić-Xu(2024)Theorem 3.5直接尺度比較——只要在定理容許的後期時間比值小於等於1,定理的空間假設就真的成立,不是前閘,是真正的定理封閉。舊的COMPSIGN與SHELLFULL缺陷因此被繞過,固定階殘餘只剩有效體積擴散度與後期時間錯位兩項。壓力簽名方面證明強遺傳性配合簽名反覆切換必逼零行列式邊界。渦度洩漏用精確的壓力泊松恆等式證明渦度主導集合上壓力曲率必為正,約束補集又證明不能孤立存在。最重要的誠實邊界:反覆固定階失敗本身不蘊含必須逃向無窮階,真正的核心問題是假想的奇異倖存者能否在所有固定導數階同時、在每個定理容許時刻都保持比值大於一。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>43 · C5-G:Fixed-Order Gate Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 43</span>
+      <span class="tag">C5-G · 全系列第一個 theorem-ready 接口</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C5-G:Pressure-Signature Defects、Vorticity Constraint Complements 與 Fixed-Order Derivative-Gate Closure</h1>
+    <p class="h1-sub">C5-F 把殘餘網路壓成壓力簽名缺陷、渦度約束補集缺陷、固定階導數閘門缺陷、漸近臨界階數逃逸四項。C5-G 優先死扣固定階直接閘門,做出一個更乾淨的移動:<strong>不繞應變/殼層轉換,直接對原始 $D^ku$ 全部分量/符號超水平集做全域體積上界</strong>。**C5-G.1 Direct Component-Volume Bound**(Chebyshev)證明 $|V_{\lambda,k}^{\zeta,i,\pm}|\le\lambda^{-2}L_k^2/A_k^2$ 對<strong>所有</strong>分量/符號組合一致成立,不需要應變/旋轉分解、不需要殼層轉全場、不需要先猜哪個分量。配合 C3-W 的體積轉線幾何引理,得到 theorem-ready 的 1D 稀疏尺度 $r_{vol,k}\sim L_k^{2/3}A_k^{-2/3}$,與發表的 Grujić–Xu(2024, J. Math. Fluid Mech.)Theorem 3.5 真正直接尺度 $r_{GX,k}$ 比較,定義比值 $\mathfrak G_k^{dir}=r_{vol,k}/r_{GX,k}$。**全輪標題結果 C5-G.3 Fixed-Order Direct Gate Closure Theorem**:若在定理容許的後期時間 $s(t)$ 上 $\mathfrak G_k^{dir}(s)\le1$,則 Theorem 3.5 的空間假設真的成立,$T_\ast$ 就不是爆破時刻——<strong>這不是前閘,是全 NS 系列第一個真正 theorem-ready 的定理封閉接口</strong>。因此舊的 COMPSIGN(分量/符號猜測)與 SHELLFULL(殼層轉全場)兩個缺陷標籤在這條直接體積路線中被正式繞過,固定階殘餘只剩<strong>有效體積(多重性)擴散度</strong>與<strong>後期時間錯位</strong>兩項。$k=1$ 精確形式給出應變恩斯特羅菲 vs 原始梯度峰值的閘門 $\|S\|_2^2\le C\|Du\|_\infty^{1/5}$,但指數 $1/15$ 很小,說明 $k=1$ 雖已 theorem-ready,仍需要很強的峰值集中度才能真正關閉,一般固定 $k$ 的振幅指數 $(4k-3)/(3(2k+3))$ 隨 $k$ 增大而趨近 $2/3$,顯示更高階導數的槓桿更強,但 $L_k$ 也可能同步增長,不是自動的階數升級閉合。壓力簽名側:**C5-G.4/5** 證明若共同遠場壓力矩陣簽名(單負/雙負)反覆切換,配合強遺傳性(相鄰矩陣相對變化趨零),必逼零行列式邊界 $d_{\rm sig}\to0$——給出乾淨的壓力簽名三分法(簽名固定∨簽名邊界缺陷∨壓力翻轉/來源分裂)。渦度主導洩漏側:用精確的壓力泊松恆等式 $\Delta p=-|S|^2+\tfrac12|\omega|^2$,**C5-G.6** 證明渦度主導洩漏集合上逐點 $\Delta p>0$——真正的「壓力泊松重返證書」,但明確警告這還不是 $L^{3/2}$ 壓力集中(需要額外控制負值區域、震盪尺度、符號一致的裁切幾何)。另外精確的約束補集壓力帳本 $\nabla^2p=-(C_A+C_S+C_\omega)$ 給出 **C5-G.7 Vorticity-Complement Re-entry Trichotomy**:大的渦度約束補集必逼真正的壓力 Hessian、平流補集、或應變平方補集三者之一——渦度約束補集缺陷不能孤立存在。**最重要的誠實劃界(NG-G7)**:反覆的固定階直接缺陷失敗本身<strong>不蘊含</strong>必須逃向 $k\to\infty$,除非所有固定階復發缺陷都已被另外排除。全輪收尾把最硬的新問題講得非常清楚:<strong>假想的奇異倖存者,能不能在所有固定導數階、在每一個定理容許的後期時刻,都讓 $D^ku$ 的 $L^2$ 質量相對峰值保持足夠擴散,使 $\mathfrak G_k^{dir}>1$?</strong>正式交棒 <strong>C5-H — All-Order Effective-Volume Defects, Derivative Concentration Ladders, and Asymptotic-Critical Compatibility</strong>,8 項待證目標。</p>
+    <div class="claim-box">
+      不繞轉換,直接對原始導數全部分量/符號超水平集做全域體積上界,配合體積轉線引理與發表定理尺度比較,得到全系列第一個真正 theorem-ready 的定理封閉接口——比值小於等於一,定理空間假設真的成立。COMPSIGN 與 SHELLFULL 缺陷被繞過,固定階只剩有效體積擴散度與後期時間錯位。壓力簽名反覆切換配合強遺傳性逼零行列式邊界。渦度主導洩漏用精確泊松恆等式逼真正的正壓力曲率,約束補集不能孤立存在。誠實劃界:固定階反覆失敗不蘊含必須逃向無窮階
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../42-c5f-axis-pressure-signature-derivative-gate-escalation/">42 · C5-F:Axis/Pressure Locking</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../44-c5h-all-order-effective-volume-asymptotic-criticality/">44 · C5-H:All-Order Volume No-Go</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>44 / 67 · C5 系列 7/13</div>
+    </div>
+    <blockquote class="cite">「C5-G has a genuine theorem-ready fixed-order closure interface——if 𝔊_k^dir(s) ≤ 1 at an admissible later time, Theorem 3.5's spatial hypothesis genuinely holds, and T* is not a blow-up time。」— 摘自本文第 52 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

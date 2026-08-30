@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3-O:Adjoint Core Balance 與 Balance–Dynamics Separation · NS · AMRAL</title>
+<meta name="description" content="用向後拋物線伴隨截止函數,把移動核心的規範/平流/擴散項精確消除,得到乾淨的體積-邊界比 ρ=B/A。證明ρ≤-1的硬排除區(不可能支持正局部應變成長),但ρ→-1⁺(取消精度債)、ρ→0、ρ→+∞全部存活。全文最重要的結果:引用 Miller 的應變自增幅模型——它與完整 N-S 共享完全相同的全域應變恩斯特羅菲增長恆等式,卻對某類初始資料確實有限時間爆炸,證明⟨P_NS,S⟩=0(正交)不蘊含 P_NS=0(小)——Balance-Dynamics Separation:能量平衡看起來像簡化模型,不代表動力學真的接近那個模型。純量比例路線走到極限,必須升級到算子層級。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3O_AdjointCore_BalanceDynamicsSeparation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>17 · C3-O:Adjoint Core Balance</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 17</span>
+      <span class="tag">C3-O · 純量比例路線終點</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>C3-O:Adjoint Core Balance、Cancellation Corridor 與 Balance–Dynamics Separation</h1>
+    <p class="h1-sub">C3-N 留下的問題是能否把截止函數自己造成的規範/平流/擴散項完全剝除。本輪用<strong>向後拋物線伴隨截止</strong>(令 $\partial_t\chi+u\cdot\nabla\chi+\nu\Delta\chi=0$,從終端條件反向求解)精確吸收這三項,得到 <strong>Adjoint Core Balance Theorem</strong>(定理 4.1):$E_\chi'+D_\chi=A_\chi+B_\chi$,其中 $A_\chi=-2\int\chi\det S$ 是體積自增幅,$B_\chi=\int\nabla\chi\cdot(\frac13F_B+F_p)$ 是乾淨的邊界修正流。定義比例 $\rho_I=B_I/A_I$,<strong>Hard Depletion Barrier</strong>(定理 10.1):若 $\rho_I\le-1$,該窗口不可能是正局部應變成長窗口——這是一個真正的硬排除區。但其餘全部存活:$\rho_I\to-1^+$ 存活但需支付「取消精度債」(<strong>Cancellation-Precision Debt</strong>,§12——大體積生成 + 大反向邊界流 + 小殘差);$\rho_I\to0$ 存活;$\rho_I\to+\infty$ 存活,邊界/壓力流成為主要承載者。<strong>全文最重要的結果是 Balance–Dynamics Separation No-Go</strong>(命題 17.1):引用 Miller 把完整應變方程寫成「應變自增幅模型 + 正交擾動項 $\mathcal P_{NS}$」,證明全空間內 $\langle\mathcal P_{NS},S\rangle=0$——完整 N-S 與這個簡化模型共享<strong>完全相同</strong>的全域應變-恩斯特羅菲增長恆等式。但 Miller 自己的模型對某類初始資料確實有限時間爆炸。所以正交($\langle\mathcal P_{NS},S\rangle=0$)不蘊含微小($\mathcal P_{NS}=0$)——<strong>能量平衡看起來像簡化模型,不代表動力學真的接近那個模型</strong>,$\rho\to0$ 不能解讀成動力學上接近 SSA model。文件建立一個標度不變的候選診斷量 $\mathfrak P_I$(算子層級的相對大小),但明確標記它目前只是候選診斷,不是已證的穩定性判準,也不能因為 $\mathfrak P_I$ 大就推出正則性(因為 Miller 的逆耦合正交性顯示大的省略項也可能是消耗機制而非驅動機制)。純量比例路線正式走到極限,下一輪必須升級到算子層級。</p>
+    <div class="claim-box">
+      用伴隨截止精確剝除規範/平流/擴散項,得到乾淨的體積-邊界比 ρ。證出唯一硬排除區 ρ≤-1,其餘存活。全文最重要結果:引用 Miller 應變自增幅模型(與完整 N-S 共享同一全域恆等式卻確實會爆炸),證明能量正交不蘊含算子微小——Balance-Dynamics Separation,純量比例路線走到極限
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../16-c3n-localized-betchov-boundary/">16 · C3-N:Localized Betchov Boundary Current</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>17 / 67</div>
+    </div>
+    <blockquote class="cite">「balance closeness ≠ dynamical/operator closeness。」— 摘自本文第 0 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C3O_AdjointCore_BalanceDynamicsSeparation_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3O_AdjointCore_BalanceDynamicsSeparation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

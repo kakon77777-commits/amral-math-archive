@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navier–Stokes 存在性與正則性 · AMRAL</title>
+<meta name="description" content="AMRAL 案例:三維不可壓縮 Navier–Stokes 方程的全域正則性問題,Clay Millennium Prize 七大問題之一。文件開頭即明確聲明不主張已證明 global regularity、不主張已構造 finite-time blow-up。核心工具是把問題壓縮成兩條可證偽命題:C1(Chain Necessity,blow-up 必須生成一條來源可追蹤、逐尺度合法的 X-legal UV chain)與 C2(Finite Obstruction,任何這樣的鏈都必在有限尺度被真正 N–S 結構阻斷)——若兩者皆證明,則 ¬Blowup。目前:C1a/C1b(UV 逃逸必要性、非線性補給的因果來源)CLOSED;C2 證明純量可加預算不足以排除 blow-up(抽象 cascade ledger 反例);前沿是 C3 跨尺度耦合剛性,25 輪独立子調查。建置中,逐篇上線。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-NS</p>
+    <h1>Navier–Stokes 存在性與正則性</h1>
+    <p class="subtitle">3D Incompressible Navier–Stokes Global Regularity · Clay Millennium Prize 問題之一 · 建置中</p>
+    <p class="lede">
+      文件開頭即明確列出<strong>八項不主張</strong>:不主張已證明 global regularity、不主張已構造 finite-time
+      blow-up、不主張 True ETN(無限維張力場)或 X 積分本身能推出 PDE 正則性、不主張任意數值格點平滑可直接推出
+      continuum smoothness。核心工具是兩層語言疊加:<strong>True ETN</strong> 把 N–S 的 Fourier/Littlewood–Paley
+      多尺度演化理解為無限維張力場;<strong>X 積分</strong>則是一套型別化、來源可追蹤、逐尺度守衛的形成合法性演算,
+      用來判定「一組局部非線性互動是否有資格被提升為跨尺度集中或奇點形成機制」——通過 guard 才能形成,沒通過的結論
+      不是「量為零」,而是「目前沒有資格形成這個上位主張」。
+    </p>
+    <p class="lede">
+      整個證明架構壓縮成兩條互補命題:<strong>C1(Chain Necessity)</strong>——blow-up 必須生成一條 X-legal 的
+      ultraviolet concentration chain;<strong>C2(Finite Obstruction)</strong>——任何這樣的鏈都必在有限尺度被真正
+      N–S 結構(不可壓縮性、triad geometry、viscous scale tax)阻斷。若兩者皆證明:blow-up ⟹ 鏈存在,但 ¬鏈存在,
+      故 ¬blow-up,即 global regularity。<strong>兩條命題目前都還沒有完整證明。</strong>
+    </p>
+    <p class="notice">
+      誠實現況:C1a(UV 逃逸必要性)與 C1b(非線性補給的因果來源,非線性 Duhamel 項必須補上耗散掉的高頻尾端)
+      <strong>CLOSED</strong>;C1c(persistent triadic genealogy,是否存在單一可追蹤的因果分支)仍 <strong>OPEN</strong>。
+      C2 本輪的真正貢獻是一個 <strong>NO-GO</strong>:用抽象 geometric cascade ledger 具體構造出一個同時滿足
+      「有限時間 + 有限能量耗散 + Λ∈L¹ + Λ∉L^(5/2) + 每尺度非零 critical toll」的純量模型,證明目前所有自然的
+      scalar/additive 預算論證都不足以排除 blow-up 形狀的記帳。前沿因此正式轉向 <strong>C3 跨尺度耦合剛性</strong>
+      (Cross-Scale Coupling Rigidity),25 輪獨立子調查,之後接續 C4(9 輪)、C5(13 輪)、C6(17 輪)。
+    </p>
+  </header>
+
+  <section id="foundational">
+    <h2 class="doc-h2">框架與第一輪 · Framework &amp; Round One</h2>
+    <p class="section-note">先讀這三篇,再讀底下任何一輪 C3-C6——ETN/X 積分是研究語言,不是已證定理;真正的定理是每一篇文件自己標示 CLOSED 的部分。</p>
+    <nav class="case-grid" aria-label="NS 框架與第一輪">
+      <a class="case-card" href="./p/00-etn-x-integration/">
+        <span class="k">00</span>
+        <h3>ETN–X Integration 重構</h3>
+        <p>把 N–S 編譯成 ETN 可讀的無限維張力場,用 X 積分建立跨尺度形成合法性。定義 C1(Chain Necessity)與 C2(Finite Obstruction)兩條核心開放命題。</p>
+      </a>
+      <a class="case-card" href="./p/01-c1-uv-replenishment-chain/">
+        <span class="k">01</span>
+        <h3>C1:高頻逃逸與非線性 UV 補給鏈</h3>
+        <p>C1a(UV 逃逸必要性)、C1b(非線性補給的因果來源)CLOSED;C1c(persistent triadic genealogy)OPEN。</p>
+      </a>
+      <a class="case-card" href="./p/02-c2-critical-toll-spike-packing/">
+        <span class="k">02</span>
+        <h3>C2:臨界通行費與尺度盲預算 No-Go</h3>
+        <p>抽象 cascade ledger 證明純量可加預算不足以排除 blow-up。正式把前沿轉向 C3 跨尺度耦合剛性。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c3">
+    <h2 class="doc-h2">C3 · 跨尺度耦合剛性(25 輪)</h2>
+    <p class="section-note">25/25 COMPLETE。從跨尺度耦合的第一個必要條件,一路推進到算子逃逸、多核心幾何、壓力集中與 Grujić–Xu 導數鏈架構的代數橋接——真正的 blow-up 排除仍是 OPEN,前沿交棒 C4。</p>
+    <nav class="case-grid" aria-label="NS C3">
+      <a class="case-card" href="./p/03-c3a-conservation-criticality-trilemma/">
+        <span class="k">C3-A</span>
+        <h3>守恆—臨界—正定三難</h3>
+        <p>三個自然二次量無法同時正定+臨界+非線性守恆。blow-up ⟹ 臨界成對生成率發散——第一個用完整 N-S 結構的不可逃避條件。</p>
+      </a>
+      <a class="case-card" href="./p/04-c3b-bihelical-equalization/">
+        <span class="k">C3-B</span>
+        <h3>雙手性等化與 Unique-Sign UV Escape</h3>
+        <p>兩手性扇區臨界能量同時發散且漸近等化。固定低頻貢獻可積 ⟹ 真正負責生成的唯一符號模本身必須逃向高頻。</p>
+      </a>
+      <a class="case-card" href="./p/05-c3c-classii-nonlocality-tax/">
+        <span class="k">C3-C</span>
+        <h3>Class-II 非局部二次稅</h3>
+        <p>Class II 強非局部時付昂貴的 quadratic tax + radial-drift congestion;Class III/IV forward-compatible,Class IV 是主要前沿存活者。</p>
+      </a>
+      <a class="case-card" href="./p/06-c3d-cutoff-flux-signature/">
+        <span class="k">C3-D</span>
+        <h3>Cutoff-Flux 符號定理</h3>
+        <p>存在 Lambert W 臨界值 χ*≈0.27846,強非局部 Class II 的對數尺度通量必為負。存活核心壓向局部/中度局部前沿。</p>
+      </a>
+      <a class="case-card" href="./p/07-c3e-viscous-window-renewal/">
+        <span class="k">C3-E</span>
+        <h3>黏性窗口更新與 Zeno 相容性</h3>
+        <p>證明每代必須在縮短窗口內更新,但關鍵 NO-GO:拋物線時間仍可幾何求和——時間壓縮不排除有限時間 Zeno cascade。</p>
+      </a>
+      <a class="case-card" href="./p/08-c3f-phase-space-ancestry-cone/">
+        <span class="k">C3-F</span>
+        <h3>Phase-Space 準局部性與 Ancestry Cone</h3>
+        <p>證明有限分枝不是障礙(Kőnig 引理下反而保證無窮 ray)。真正缺口:瞬時交互作用不等於嚴格更早的因果 parent。</p>
+      </a>
+      <a class="case-card" href="./p/09-c3g-first-crossing-causal-ancestry/">
+        <span class="k">C3-G</span>
+        <h3>First-Crossing 因果前沿</h3>
+        <p>建立無循環的因果 DAG(條件式)。但同時證明 Monotone Depletion NO-GO——parent 資源可反覆重新使用。</p>
+      </a>
+      <a class="case-card" href="./p/10-c3h-ancestry-renormalization/">
+        <span class="k">C3-H</span>
+        <h3>Ancestry Renormalization</h3>
+        <p>Critical Compactness Barrier:unit-shell anchor 緊緻,但完整臨界場全域範數必發散,不能直接套用既有緊緻性定理。</p>
+      </a>
+      <a class="case-card" href="./p/11-c3i-frontier-uv-cap-defect-trichotomy/">
+        <span class="k">C3-I</span>
+        <h3>Frontier UV Cap 與三分解</h3>
+        <p>One-Generation Defect Decoupling(條件式):child 首次激活可與發散背景解耦,但僅一代/一窗口,不排除日後重新進入。</p>
+      </a>
+      <a class="case-card" href="./p/12-c3j-gauge-corrected-reentry/">
+        <span class="k">C3-J</span>
+        <h3>Moving-Gauge Re-entry Audit</h3>
+        <p>證明大部分「重新進入」其實是座標移動的 gauge sweep。關鍵 NO-GO:帶號守恆只控制淨流量,不控制正流量總變差。</p>
+      </a>
+      <a class="case-card" href="./p/13-c3k-absolute-occupancy-moment-gap/">
+        <span class="k">C3-K</span>
+        <h3>Absolute Occupancy 與 One-Moment Gap</h3>
+        <p>全文核心解釋:臨界成對生成比一般能量轉移多一個頻率權重,精確說明為何所有能量預算路線最終都失敗。</p>
+      </a>
+      <a class="case-card" href="./p/14-c3l-critical-moment-escape/">
+        <span class="k">C3-L</span>
+        <h3>Critical Moment Escape</h3>
+        <p>用外部定理逆否確證下一個頻率矩必須逃逸。提升一個矩必產生渦度伸展幾何債。連接外部應變幾何正則性判準。</p>
+      </a>
+      <a class="case-card" href="./p/15-c3m-vorticity-strain-betchov/">
+        <span class="k">C3-M</span>
+        <h3>Vorticity–Strain 耦合與 Betchov 坍縮</h3>
+        <p>Betchov 恆等式證明全域積分坍縮方向資訊,正式否證「enstrophy 增長蘊含渦度對齊」的常見直覺。</p>
+      </a>
+      <a class="case-card" href="./p/16-c3n-localized-betchov-boundary/">
+        <span class="k">C3-N</span>
+        <h3>Localized Betchov Boundary Current</h3>
+        <p>局部 Betchov 不匹配恰好是精確的空間散度邊界流。關鍵 NO-GO:邊界修正與體積自增幅同尺度,收縮半徑不會讓它變小。</p>
+      </a>
+      <a class="case-card" href="./p/17-c3o-adjoint-core-balance/">
+        <span class="k">C3-O</span>
+        <h3>Adjoint Core Balance</h3>
+        <p>能量正交不蘊含算子微小(Balance-Dynamics Separation)——引用 Miller 應變自增幅模型作為反例。純量比例路線走到極限。</p>
+      </a>
+      <a class="case-card" href="./p/18-c3p-operator-escape-far-pressure/">
+        <span class="k">C3-P</span>
+        <h3>Operator Escape 與 Far-Pressure Harmonic Matrix</h3>
+        <p>引用 Miller 2026:blow-up 必須逃離全域正則模型的微擾管道。遠場壓力可壓成 5 維調和矩陣,但有限維化不等於微小。</p>
+      </a>
+      <a class="case-card" href="./p/19-c3q-pressure-projection-orthogonality/">
+        <span class="k">C3-Q</span>
+        <h3>Pressure–Projection Orthogonality</h3>
+        <p>精確畢氏定理:壓力 Hessian 與投影算子正交,禁止範數抵銷推論。遠場調和矩陣永遠是各向異性重分配,推出定量恩斯特羅菲債。</p>
+      </a>
+      <a class="case-card" href="./p/20-c3r-multi-core-pressure-horizon/">
+        <span class="k">C3-R</span>
+        <h3>Multi-Core Packing 與 Strain-Convexity Debt</h3>
+        <p>逆尺度堆疊律:核心數上界 O(R⁻¹)。共同遠場矩陣正向支持所有核心若且唯若凸包不含原點,Carathéodory 給出六核障礙見證。</p>
+      </a>
+      <a class="case-card" href="./p/21-c3s-strain-cone-margin/">
+        <span class="k">C3-S</span>
+        <h3>Strain-Cone Margin 與 Merger Rigidity</h3>
+        <p>把二元準則升級成定量邊界 γ(V)。一致邊界⟹固定跨尺度分離矩陣,核心合併不摧毀一致性。加細恩斯特羅菲債 𝔈_R≳κ²γ^(-2/3)。</p>
+      </a>
+      <a class="case-card" href="./p/22-c3t-pressure-diversification-cone-eigenvalue/">
+        <span class="k">C3-T</span>
+        <h3>Pressure Diversification 與 Cone-Eigenvalue Non-Rigidity</h3>
+        <p>兩個型別缺口:固定半空間不鎖定中間特徵值符號;逐尺度見證不蘊含跨尺度祖先射線。5 純量無法資訊論控制無限維算子逃逸。</p>
+      </a>
+      <a class="case-card" href="./p/23-c3u-pressure-heredity-mean-pointwise-rigidity/">
+        <span class="k">C3-U</span>
+        <h3>Pressure-Poor Heredity Decomposition</h3>
+        <p>遠場壓力矩陣變化精確拆成空間位移+重分類+時間換手三項。得到條件式遺傳定理。誠實 no-go:逐點剛性即使閉合仍與 blow-up 相容。</p>
+      </a>
+      <a class="case-card" href="./p/24-c3v-turnover-packing-strain-fluctuation-escape/">
+        <span class="k">C3-V</span>
+        <h3>Turnover Packing 與 Strain-Fluctuation Escape</h3>
+        <p>有限重縮放恩斯特羅菲⟹遠場壓力方向可穩定傳遞,責任轉嫁平均應變轉動。二次項轉動只 R 加權有限——正式判定純能量遺傳 NO-GO。</p>
+      </a>
+      <a class="case-card" href="./p/25-c3w-pressure-rotation-strain-sparseness/">
+        <span class="k">C3-W</span>
+        <h3>Critical Pressure Rotation 與 Strain Sparseness</h3>
+        <p>壓力驅動降到臨界 L^3/2 震盪,但 Zeno 仍存活。新幾何:應變活躍體積塌縮自動產生一維線性稀疏,逼近已知正則性機制。</p>
+      </a>
+      <a class="case-card" href="./p/26-c3x-joint-pressure-strain-analyticity-gap/">
+        <span class="k">C3-X</span>
+        <h3>Joint Pressure–Strain Concentration</h3>
+        <p>壓力活躍核心攜帶尺度無關臨界質量憑證,但不蘊含與應變梯度逐點重疊。用顯式指數 θ_k 橋接 Grujić-Xu 能量先驗與正則性尺度缺口。</p>
+      </a>
+      <a class="case-card" href="./p/27-c3y-derivative-chain-intermittency-tradeoff/">
+        <span class="k">C3-Y</span>
+        <h3>Derivative-Chain / Intermittency Tradeoff</h3>
+        <p>重新對齊 Grujić-Xu 2024 正式版本,誠實修正上一輪 1/7 的定理狀態標籤。C3 系列 25/25 COMPLETE,交棒 C4。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c4">
+    <h2 class="doc-h2">C4 · Unified Survivor State(9 輪,原始編號跳過 C4-H)</h2>
+    <p class="section-note">9/9 COMPLETE。C3 把倖存者拆成獨立必要 channel;C4 改問這些 channel 能不能在一條真正的 state-transition chain 中合法共存——最終把所有復發 UV 奇異事件路由到已同步結構,或六元有限補償母題家族之一。C4 以研究階段身份結構性封階,不是正則性定理,交棒 C5。</p>
+    <nav class="case-grid" aria-label="NS C4">
+      <a class="case-card" href="./p/28-c4a-unified-survivor-state-synchronization-closure/">
+        <span class="k">C4-A</span>
+        <h3>Unified Survivor State 與 Synchronization Debt</h3>
+        <p>C3 正式封階。核心修正:必要條件各自發散不蘊含同時同地。定義四向量倖存狀態架構 + No-Deletion Rule + 8 條合法轉換規則。</p>
+      </a>
+      <a class="case-card" href="./p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+        <span class="k">C4-B</span>
+        <h3>Temporal Synchronization 與 Carrier-Relay NO-GO</h3>
+        <p>證明通用轉換代價無法強迫同步(脈衝逃逸、載體接力、跨代路由、可加權重障壁)。策略轉向:改找真正的 N-S 共享事件耦合。</p>
+      </a>
+      <a class="case-card" href="./p/30-c4c-shared-event-coupling-amplitude-flux-barrier/">
+        <span class="k">C4-C</span>
+        <h3>Shared-Event Coupling 與 Amplitude-to-Flux Barrier</h3>
+        <p>單三元組代數證明異手性能量增益蘊含正號成對生成。核心守衛:振幅事件≠通量事件,顯式構造證明振幅代數上無法決定通量正負號。</p>
+      </a>
+      <a class="case-card" href="./p/31-c4d-amplitude-work-helical-cancellation-rigidity/">
+        <span class="k">C4-D</span>
+        <h3>Amplitude-to-Work Branching Bridge</h3>
+        <p>快速穿越必支付來源過量、正號殼層功、或空間功抵銷三者之一。證明螺旋抵銷必同步負號最高模能量功——不再是獨立逃逸通道。</p>
+      </a>
+      <a class="case-card" href="./p/32-c4e-recurrent-escape-branch-uv-motif-compression/">
+        <span class="k">C4-E</span>
+        <h3>Recurrent Escape-Branch Rigidity 與 UV Motif Compression</h3>
+        <p>八個分支正式壓成六個復發母題,三個已同步成功。真正未解決只剩高頻中繼、臨界功變異、譜幾何退化三個。</p>
+      </a>
+      <a class="case-card" href="./p/33-c4f-relay-work-spectral-congestion-trilemma/">
+        <span class="k">C4-F</span>
+        <h3>Higher-Frequency Relay 與 Spectral-Congestion Trilemma</h3>
+        <p>三個逃逸母題正式壓成三種壅塞:尾巴/包裹、形變/算子、徑向交互作用。壅塞尚不等於矛盾,但 UV 不能再維持單一通道異步物件。</p>
+      </a>
+      <a class="case-card" href="./p/34-c4g-cross-congestion-operator-funnel-uv-closure/">
+        <span class="k">C4-G</span>
+        <h3>Cross-Congestion Synchronization 與 Operator Funnel</h3>
+        <p>三種壅塞不獨立,全部自動蘊含形變/算子壅塞。UV 穿越正式壓成四個同步通道,UV 側完成相位閉合。</p>
+      </a>
+      <a class="case-card" href="./p/35-c4i-middle-operator-overlap-pressure-reentry/">
+        <span class="k">C4-I</span>
+        <h3>Middle–Operator Gate Overlap 與 Local Pressure Re-entry</h3>
+        <p>同視窗重疊真正缺峰值容量控制。渦度二次項精確正交於成長方向。局部核心中壓力並非算子的普遍推論,只在二次驅動一致且平均旋轉被壓低時才必須重返。</p>
+      </a>
+      <a class="case-card" href="./p/36-c4j-compensation-rigidity-final-synchronization-audit/">
+        <span class="k">C4-J</span>
+        <h3>Compensation Rigidity 與 C4 Phase Closure</h3>
+        <p>顯式構造證明收縮視窗逼不出同時刻重疊。七點抵銷見證把二次抵銷變成六維矩陣空間的方向重心塌縮。六通道最終審計,C4 結構性封階,交棒 C5。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c5">
+    <h2 class="doc-h2">C5 · Recurrent Motif Limits, Defect Measures, and Compensation Compactness(13 輪)</h2>
+    <p class="section-note">13/13 COMPLETE。C4 把 UV 奇異事件路由到六元有限補償母題家族;C5 逐輪緊緻化這些母題、把偽缺陷路由成有限殘餘字母表 $\{A,T,G,P,H,F\}$。C5-M 正式宣告 C5 以研究階段身份結構性封階——有限缺陷圖不蘊含全域正則性,交棒 C6 萃取真正的復發匯點循環。</p>
+    <nav class="case-grid" aria-label="NS C5">
+      <a class="case-card" href="./p/37-c5a-record-window-compensation-motif-compactness/">
+        <span class="k">C5-A</span>
+        <h3>Record-Window Renormalization 與 Motif State Space</h3>
+        <p>六元補償母題逐一轉成機率測度、有界向量測度、緊空間座標。證明母題層級序列緊緻性,但明確不證場收斂。核心 no-go:弱極限會抹除微觀脈衝分離。</p>
+      </a>
+      <a class="case-card" href="./p/38-c5b-temporal-young-pulse-phase-compatibility/">
+        <span class="k">C5-B</span>
+        <h3>Temporal Young Defects 與 Pulse-Phase Compatibility</h3>
+        <p>用聯合上色 Young 測度修復 C5-A 的 no-go:同時活躍質量為正真的逼出有限尺度重疊。借 DiPerna–Majda 振盪+集中架構補上負載集中模數。誠實承認 Young 測度不保存脈衝先後順序。</p>
+      </a>
+      <a class="case-card" href="./p/39-c5c-temporal-correlation-cross-curvature-ordering/">
+        <span class="k">C5-C</span>
+        <h3>Temporal Correlation Defects 與 Cross-Curvature Ordering</h3>
+        <p>跨曲率恆等式證明算子正負成長相位精確等於應變耗散需求速率的凹凸性來源。但顯式構造反例證明純量能量恆等式仍允許分離補償週期——純時間層收益到頂,轉向空間矩陣。</p>
+      </a>
+      <a class="case-card" href="./p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/">
+        <span class="k">C5-D</span>
+        <h3>Spatial-Matrix Motif Compatibility 與 Quadratic/Pressure Obstruction</h3>
+        <p>強中間逐點應變錐逼所有局部二次張量方向落入同一嚴格半空間——七點零重心抵銷因此不可能同時存在。C5 第一個真正有限維代數互斥,純凸幾何障礙。</p>
+      </a>
+      <a class="case-card" href="./p/41-c5e-strain-direction-middle-gap-derivative-intermittency/">
+        <span class="k">C5-E</span>
+        <h3>Strain-Direction Defect Measures 與 Derivative-Intermittency Closure</h3>
+        <p>中間縫隙退化與方向洩漏都翻譯回真正的 PDE 場缺陷:三次應變間歇性、應變導數儲量、渦度洩漏。誠實劃界:離發表的 Grujić–Xu 導數分量稀疏性定理仍有開放介面。</p>
+      </a>
+      <a class="case-card" href="./p/42-c5f-axis-pressure-signature-derivative-gate-escalation/">
+        <span class="k">C5-F</span>
+        <h3>Compressive-Axis Robustness 與 Pressure-Signature Locking</h3>
+        <p>壓縮軸即使縫隙退化仍穩定存在。抵銷真正需要壓縮軸本身分散。共同遠場壓力若單負簽名夠強會鎖住壓縮軸,與抵銷不相容——C5 第二個有限維互斥。</p>
+      </a>
+      <a class="case-card" href="./p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">
+        <span class="k">C5-G</span>
+        <h3>Fixed-Order Derivative-Gate Closure 與 Pressure-Signature Defects</h3>
+        <p>直接對原始導數全部分量/符號超水平集做全域體積上界,得到全系列第一個真正 theorem-ready 的 Grujić–Xu 定理封閉接口。舊的分量猜測與殼層轉換缺陷被繞過。</p>
+      </a>
+      <a class="case-card" href="./p/44-c5h-all-order-effective-volume-asymptotic-criticality/">
+        <span class="k">C5-H</span>
+        <h3>All-Order Effective-Volume No-Go 與 Asymptotic-Critical Compatibility</h3>
+        <p>波包模型證明純體積證書在高階指數發散,譜級聯不蘊含物理集中。正式判死靜態全階體積封閉方案,轉向分量符號一維微幾何與鏈式區段相容性。</p>
+      </a>
+      <a class="case-card" href="./p/45-c5i-sign-geometry-chain-harmonic-compatibility/">
+        <span class="k">C5-I</span>
+        <h3>Derivative Sign-Geometry Defects 與 Harmonic-Measure Compatibility</h3>
+        <p>空間幾何失敗時逼出處處符號濃厚的壞核心,壞核心逼出低一階振幅下界。每階皆調和通過或下降代價擇一;夠陡的相鄰上升則逼出通過——首次由振幅鏈形狀逼出符號幾何。</p>
+      </a>
+      <a class="case-card" href="./p/46-c5j-line-section-order-sandwich-harmonic-saturation/">
+        <span class="k">C5-J</span>
+        <h3>Line-Section Sign Processes 與 Order-Sandwich Coupling</h3>
+        <p>碎裂不能形成新調和逃逸,但強迫上階導數代價。鏈式半徑在上下代價相乘後精確抵消,得到無因次三階導數夾心不等式——碎裂被完全吸收進導數鏈,不再是獨立倖存範疇。</p>
+      </a>
+      <a class="case-card" href="./p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">
+        <span class="k">C5-K</span>
+        <h3>Chain-Time Stitching 與 Dynamic-Interpolation Closure Audit</h3>
+        <p>自我修正:不同導數階用不同容許時刻本身不是漏洞,發表定理已外部處理。定義鏈鐘,證明同步窗口可合法跨階串接,不同步則精確等價於真正的導數根跳躍。</p>
+      </a>
+      <a class="case-card" href="./p/48-c5l-persistent-bad-window-clock-defect-root-turnover-compression/">
+        <span class="k">C5-L</span>
+        <h3>Persistent Bad-Window Rigidity 與 Root-Turnover Compression</h3>
+        <p>載體轉移移不掉下降帶,調和臨界飽和不是零代價。窗內根翻轉直接接回真正的投影 Navier-Stokes 方程,無界翻轉必須支付真正的黏性或非線性 PDE 強迫。</p>
+      </a>
+      <a class="case-card" href="./p/49-c5m-unified-defect-graph-c5-phase-closure/">
+        <span class="k">C5-M</span>
+        <h3>Unified Defect-State Closure 與 C5 Phase Boundary</h3>
+        <p>封階稽核:六元殘餘字母表涵蓋所有復發倖存者狀態,九個偽缺陷全部路由完畢。有限復發原理成立,但三個候選復發循環尚未排除。C5 結構性封階,正則性依然開放。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c6">
+    <h2 class="doc-h2">C6 · Minimal Recurrent Defect Cycles, Sink-SCC Extraction, and Cross-Domain Closure(17 輪)</h2>
+    <p class="section-note">17/17 全數上線,PROGRAM-NS 全系列 67/67 篇齊備(框架 1 + C1 1 + C2 1 + C3 25 + C4 9 + C5 13 + C6 17)。C5 把所有復發倖存者狀態壓成六元殘餘字母表 $\{A,T,G,P,H,F\}$ 與一個認證相容圖,標出三個候選復發循環;C6-A 到 C6-Q 十七輪逐步萃取匯點強連通分量、修正可見度語義、打開頻譜/壓力/峰值/衛星/永恆等多重載體通道。C6-Q 證明 TS 非局部尾端可被局部化、空間逃逸可經平移重綁定、復發缺陷甚至可延拓成永恆解——文件自身提出的下一篇 C6-R 目前尚未成文,是否延伸系列未定。有限缺陷圖不蘊含全域正則性,正則性依然完全開放。</p>
+    <nav class="case-grid" aria-label="NS C6">
+      <a class="case-card" href="./p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">
+        <span class="k">C6-A</span>
+        <h3>Certified Defect Graph、Typed Cycle Composition 與 Minimal Survivor Candidates</h3>
+        <p>證明普通 label-level SCC 不足以證明 PDE recurrent cycle,建立四種型別化邊語意(I/C/N/E)。三個候選復發循環($T$、$G\leftrightarrow P$、$H\leftrightarrow F$)全部只是 candidate,沒有一個被 certified,也沒有一個被排除。最成熟的候選是 $H\leftrightarrow F$,交棒 C6-B。</p>
+      </a>
+      <a class="case-card" href="./p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">
+        <span class="k">C6-B</span>
+        <h3>High-Order Forcing Re-entry、Bad-Window Regeneration 與 the H/F Cycle Test</h3>
+        <p>最大值原理證明黏性不能正向再生導數峰值,Duhamel capacity 不是 response 下界,峰值振幅不決定 sign-thick 幾何。粗糙通用 $H\leftrightarrow F$ 循環正式判死,倖存的只剩窄得多的條件式子循環,交棒 C6-C 專攻 Duhamel coherence。</p>
+      </a>
+      <a class="case-card" href="./p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">
+        <span class="k">C6-C</span>
+        <h3>Nonlinear Duhamel Coherence、Sign-Reentry Efficiency 與 Cycle-Critical Saturation</h3>
+        <p>精確因式分解 $\Gamma^{Duh}=\chi^{target}\gamma^{time}$,證明 sign-thick re-entry 必須被一整塊時空相干 source slab 支撐。Finite Re-entry Bottleneck Theorem:無窮候選必一致相干或逼近有限邊界字母表。H/F 已壓窄,轉向 G/P,交棒 C6-D。</p>
+      </a>
+      <a class="case-card" href="./p/53-c6d-geometry-pressure-cycle-composition-provenance-compatibility-signature-return-tests/">
+        <span class="k">C6-D</span>
+        <h3>Geometry–Pressure Cycle Composition、Provenance Compatibility 與 Signature-Return Tests</h3>
+        <p>發現許多 $G\to P$、$P\to G$ 箭頭其實是同事件相容性,不是跨代序列邊。粗糙 $G\leftrightarrow P$ 動力循環正式判死。全輪最重要結論:真正剩下的物理候選只剩三個——$T$、遺傳性 $GP$、非線性相干 $HF$。交棒 C6-E 專攻 $T$。</p>
+      </a>
+      <a class="case-card" href="./p/54-c6e-temporal-spatial-shared-source-coupling-fate-of-t-trap/">
+        <span class="k">C6-E</span>
+        <h3>Temporal-to-Spatial Shared-Source Coupling、Isolation No-Go Tests 與 the Fate of the T Trap</h3>
+        <p>證明時間負債本身天然攜帶時空機率測度,純時間態 $T$ 不足以決定物理耦合狀態,只是 marginal 標籤,判死。至此 C6-A 三個候選全部同型精煉完畢:$HF_{\rm coherent}$、$GP_{\rm hereditary}$、$TS_{\rm hereditary}$。交棒 C6-F 嘗試跨域路由。</p>
+      </a>
+      <a class="case-card" href="./p/55-c6f-shared-source-core-extraction-spatiotemporal-heredity-cross-domain-routing/">
+        <span class="k">C6-F</span>
+        <h3>Shared-Source Core Extraction、Spatiotemporal Heredity 與 Cross-Domain Routing to GP/HF</h3>
+        <p>透過 Fubini 從共享核心抽出同一時刻、同一區域的真正物理代價,證明共享核心必進入算子強迫或三階應變活性。條件式證明 $TS_{\rm core}\to GP$ 與 $TS_{\rm core}\to F_{\rm OP}\vee F_{\rm DER}$——全系列第一條連接三個候選家族的型別化橋。交棒 C6-G 做全圖重建。</p>
+      </a>
+      <a class="case-card" href="./p/56-c6g-typed-cross-domain-graph-rebuild-joint-node-scc-audit-boundary-survivors/">
+        <span class="k">C6-G</span>
+        <h3>Typed Cross-Domain Graph Rebuild、Joint-Node SCC Audit 與 Minimal Boundary-Saturated Survivor Cycles</h3>
+        <p>重建整張型別化圖,證明 C5-M 那個看似存在的大型 SCC 正式解體,目前沒有任何被認證的內部復發循環。TS 從最小倖存者候選名單移除。最重要結論:全域不確定性已從內部圖遷移到邊界圖。交棒 C6-H 專攻邊界面轉換。</p>
+      </a>
+      <a class="case-card" href="./p/57-c6h-critical-boundary-face-transition-graph-debt-coercivity-boundary-cycle-elimination/">
+        <span class="k">C6-H</span>
+        <h3>Critical Boundary-Face Transition Graph、Debt-Coercivity Audit 與 Boundary-Cycle Elimination</h3>
+        <p>證明 Navier–Stokes 動能耗散在拋物尺度變換下精確縮放 $D_E[u_\lambda]=\lambda^{-1}D_E[u]$,單靠有限動能預算無法對任何尺度不變邊界事件提供一致正代價。物理邊界字母表從十個壓到六個。交棒 C6-I 換用尺度臨界座標。</p>
+      </a>
+      <a class="case-card" href="./p/58-c6i-scale-normalized-critical-debt-capacity-at-infinity-barrier-accumulation/">
+        <span class="k">C6-I</span>
+        <h3>Scale-Normalized Critical Debt、Capacity-at-Infinity Compactification 與 Barrier-Accumulation Cycles</h3>
+        <p>建立通用臨界化算子,驗證所有已發表外部定理精確落在度零。核心衝擊:即使每一代都固定為正的臨界代價,幾何尺度階梯依然能讓有限能量與無窮多個事件完全相容——臨界屏障累積不足以排除 Zeno 循環。交棒 C6-J 換成對數尺度動力系統。</p>
+      </a>
+      <a class="case-card" href="./p/59-c6j-log-scale-renormalized-defect-flow-telescoping-potentials-critical-fiber-escape/">
+        <span class="k">C6-J</span>
+        <h3>Log-Scale Renormalized Defect Flow、Telescoping Potentials 與 Critical-Cycle Closure Tests</h3>
+        <p>接回 backward Leray 自治方程,證明重整化軌道不可能在臨界拓撲 $L^3$、$\dot H^{1/2}$ 中緊緻。核心定理 Critical Fiber Escape:任何被 blow-up 無窮次造訪的緊緻缺陷集合,其臨界纖維半徑必為無窮。交棒 C6-K 分類纖維逃逸機制。</p>
+      </a>
+      <a class="case-card" href="./p/60-c6k-critical-fiber-escape-defect-fiber-compactness-profile-splitting-closure/">
+        <span class="k">C6-K</span>
+        <h3>Critical Fiber Escape、Defect-Fiber Compactness 與 Profile-Splitting Closure</h3>
+        <p>把纖維逃逸壓成三種機制:可見同尺度膨脹、次尺度重整化重啟、旁觀者/剖面逃逸。誠實指出最硬的缺口:TS/GP/HF 目前都沒有證明承擔固定比例的真正奇異質量,旁觀者逃逸依然是漏洞。交棒 C6-L 攻打可見度缺口。</p>
+      </a>
+      <a class="case-card" href="./p/61-c6l-singular-carrier-profiles-spectator-decoupling-secondary-scale-defect-rebinding/">
+        <span class="k">C6-L</span>
+        <h3>Singular Carrier Profiles、Spectator Decoupling 與 Secondary-Scale Defect Rebinding</h3>
+        <p>證明可見度低是真正的漸近測度分離,可見度高則能精確抽出標籤化奇異載體。修正次尺度重啟:真正物理重縮放揭露內層未來視界發散到無窮。一階符號厚核心有正臨界質量下界,但絕對可見度不等於相對可見度,旁觀者逃逸未被完全關閉。交棒 C6-M。</p>
+      </a>
+      <a class="case-card" href="./p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">
+        <span class="k">C6-M</span>
+        <h3>Carrier Completeness、Spectral/Pressure Visibility 與 Nested-Rebinding Rigidity</h3>
+        <p>證明 $L^3$ 不是唯一的奇異載體通道:建立頻譜($\dot H^{1/2}$)與壓力(遠場 Calderón–Zygmund)兩個額外可見度通道,各自給出獨立載體抽取定理。巢狀重綁定服從精確乘法保留律,無限深 carrier-complete 巢狀必須漸近無損。交棒 C6-N。</p>
+      </a>
+      <a class="case-card" href="./p/63-c6n-near-lossless-carrier-concentration-ancient-profile-extraction-defect-complete-rigidity/">
+        <span class="k">C6-N</span>
+        <h3>Near-Lossless Carrier Concentration、Ancient-Profile Extraction 與 Defect-Complete Rigidity</h3>
+        <p>永久性修正 C6-L/M 的可見度語義:相對旁觀者不蘊含「非真正奇異載體」。證明相對主導載體必屬 Type-II,峰值尺度可抽出有界 ancient 解,但對原始全域質量而言必然是相對旁觀者——質量緊緻尺度與 ancient-profile 緊緻尺度是兩個不同尺度。交棒 C6-O。</p>
+      </a>
+      <a class="case-card" href="./p/64-c6o-peak-scale-defect-inheritance-type-ii-ancient-carriers-mass-peak-two-scale-closure/">
+        <span class="k">C6-O</span>
+        <h3>Peak-Scale Defect Inheritance、Type-II Ancient Carriers 與 Mass–Peak Two-Scale Closure</h3>
+        <p>證明峰值尺度抽出的有界 ancient 缺陷必是全域相對旁觀者,ancient 繼承只能用局部絕對負載。壓力側突破:承擔幾乎全部全域質量的空間尾端對固定峰值核心的壓力 Hessian 影響只有 $O(R^{-2})$,關掉遠場壓力驅動漏洞。交棒 C6-P。</p>
+      </a>
+      <a class="case-card" href="./p/65-c6p-ancient-defect-state-classification-record-peak-derivative-rigidity-peak-local-pressure-closure/">
+        <span class="k">C6-P</span>
+        <h3>Ancient Defect-State Classification、Record-Peak Derivative Rigidity 與 Peak-Local Pressure Closure</h3>
+        <p>證明 record-peak boundedness 已消滅每個固定階的導數塔,修正 C6-O 的三層塔回兩層。若峰值退化則整個 ancient profile 是恆定常數(不含缺陷)。壓力 Hessian 完全由有限半徑決定,但 TS 算子通道核不絕對可積,開出新缺口。交棒 C6-Q。</p>
+      </a>
+      <a class="case-card" href="./p/66-c6q-ancient-defect-rigidity-local-growth-lift-strain-projection-tail-reduction-spatial-carrier-rebinding/">
+        <span class="k">C6-Q</span>
+        <h3>Ancient Defect Rigidity、Local Growth Lift、Strain-Projection Tail Reduction 與 Spatial Carrier Rebinding</h3>
+        <p>發現 TS 的 $H^1$ growth ledger 有完全局部的精確代表,$P_{st}$ 非局部尾端不是內稟障礙。空間載體逃逸可經平移重綁定成衛星 ancient profile;復發缺陷可延拓成有界永恆解。全系列目前最新一輪,提出的下一篇 C6-R 尚未成文。</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

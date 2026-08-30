@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C4-C:Shared-Event Coupling 與 Amplitude-to-Flux Barrier · NS · AMRAL</title>
+<meta name="description" content="策略正式轉向:不再問A、B能不能分別復發,而問是否存在真正N-S事件,其同一來源或同一守恆代數已經強迫A、B同時支付。單一螺旋三元組的能量+螺旋度守恆代數直接推出:異手性最高模能量增益蘊含正號臨界成對生成,第四類甚至是精確完美耦合。但關鍵新缺口是振幅不蘊含通量——顯式相位重排構造證明固定所有模態振幅只改相位可以讓L2範數不變但L∞劇烈變化,所以C1/C3-G的UV首次穿越錨點是振幅事件不是能量增益事件,兩者不能直接等同。另外得到局部應變成長、算子逃逸的多個精確同一事件分支邊,組裝成C4第一版共享事件閉合圖。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS</a>
+    <span>/</span>
+    <span>30 · C4-C:Shared-Event Coupling</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 30</span>
+      <span class="tag">C4-C · 第一批真正共享邊</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>C4-C:Carrier Relay、Shared-Event Coupling 與 Amplitude-to-Flux Barrier</h1>
+    <p class="h1-sub">C4-B 證明 generic turnover cost 不足以強迫同步。本輪策略正式轉向 <strong>Shared-Event Synchronization</strong>:不再問「A 與 B 能不能分別復發」,而問「是否存在某個真正 N–S event,其同一來源、同一平衡、同一三元組代數,已經強迫 A 與 B 同時支付」。核心工具是<strong>螺旋三元組代數</strong>(§4-9):單一 Fourier 三元組 $k\le p\le q$ 的能量守恆加螺旋度守恆聯立,直接把導數向量鎖進固定形式,分成四個螺旋類別(I 同手性、II-IV 異手性)。<strong>C4-C.2</strong> 證明:對所有異手性類別,只要最高模能量增益 $\dot e_q>0$,就有正號臨界成對生成 $\mathcal R_\tau>0$——第 IV 類甚至是<strong>精確完美耦合</strong> $\mathcal R_{IV}=G_{IV}^q$。II/III 類的耦合常數在徑向間隙 $q-p\to0$ 時會退化到零,但在「局部可比三元組 + 徑向間隙不退化」的<strong>穩健區域</strong>內能拿到真正的正號下界耦合常數(定理 12.1)。由此得到 <strong>High-Mode Energy Gain 分岔邊</strong>:最高模能量增益強迫同手性載體 ∨ 徑向間隙退化 ∨ 正號螺旋淨生產 ∨ 螺旋抵銷——這是 C4 第一條真正的 N–S 螺旋共享事件分支邊。但全輪最重要的守衛在 §19:<strong>C1/C3-G 的 UV 錨點是振幅/範數事件,不是能量增益/通量事件</strong>,兩者不能直接等同。<strong>Phase-Rearrangement Norm–Flux No-Go</strong>(定理 20.1)用顯式構造證實這個區別是真的:固定所有模態振幅 $|a_m|$ 只改變相位,由 Parseval 定理 $\|u_\theta\|_2$ 與相位無關,但 $\|u_\theta\|_\infty$ 可因相位對齊或抵銷劇烈變化——存在一條光滑相位路徑讓 $L^2$ 範數導數為零但 $L^\infty$ 範數持續增加,證明<strong>振幅資訊本身在代數上無法決定殼層能量通量的正負號</strong>,這就是 <strong>Amplitude-to-Flux Barrier</strong>。正面的補償結果是:UV 振幅雖不能控制通量,卻能透過 Bernstein 不等式精確控制<strong>同一時刻的臨界儲量</strong>——UV Amplitude → Critical Helical Stock(定理 23.1)與 → Strain/Vorticity Stock(定理 24.1)——C4 第一條真正的非異步共享邊,只是「儲量同步」不是「生產同步」。應變這邊,<strong>Local Strain-Growth 三分邊</strong>(定理 28.1,精確三項和的鴿籠論證)證明局部應變成長事件強迫壓力 ∨ Betchov 邊界流 ∨ 正號渦度伸展之一,再串接 C3-N 的精確局部 Betchov 恆等式與逐點渦度伸展幾何分解,展開成四路精確邊(壓力 ∨ Betchov ∨ 中間應變加權渦度 ∨ 主伸展對齊加權渦度)——目前 C4 最乾淨的多步精確局部邊。算子這邊,<strong>Miller Operator-Source 三分邊</strong>(定理 37.1,三角不等式)證明算子逃逸強迫平流項 ∨ 應變平方 ∨ 渦度二次項之一同時承擔,不能靠 carrier relay 換成「沒有來源」;但也標出 <strong>Operator Cancellation Debt</strong>(§39):渦度二次來源大而完整 Miller 算子小時,差額必須由其餘兩項抵銷承擔。文件組裝出 C4 第一版<strong>共享事件閉合圖</strong>(§41)與四個真正的最小同步子集(§48),並誠實列出五個明確 no-go(振幅不蘊含能量增益、能量增益不蘊含淨螺旋生產、臨界儲量不蘊含臨界生產、應變成長不蘊含 Miller 逃逸、局部渦度二次來源大不蘊含完整算子大)。下一輪正式鎖定兩個最關鍵缺口:<strong>Amplitude-to-Flux Bridge</strong> 與 <strong>Helical-Cancellation Rigidity</strong>。</p>
+    <div class="claim-box">
+      策略轉向:找真正 N-S 共享事件,不找通用切換代價。單三元組代數證明異手性最高模能量增益蘊含正號成對生成(第四類精確完美耦合)。核心守衛:振幅事件≠能量增益/通量事件,顯式相位重排構造證明振幅資訊代數上無法決定通量正負號(Amplitude-to-Flux Barrier)。正面結果:UV 振幅可同步臨界儲量(儲量≠生產)。應變成長、算子逃逸各自得到精確多路分支邊,組裝出 C4 第一版共享事件閉合圖
+      <span class="note">— 包內文件自陳的階段性狀態,原樣照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../29-c4b-temporal-synchronization-carrier-relay-nogo/">29 · C4-B:Temporal Synchronization NO-GO</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../31-c4d-amplitude-work-helical-cancellation-rigidity/">31 · C4-D:Amplitude-to-Work Bridge</a></div>
+      <div class="conn-card"><span class="k">NS 進度</span>31 / 67 · C4(3/9)</div>
+    </div>
+    <blockquote class="cite">「amplitude information本身無法代數決定 shell energy flux sign。」— 摘自本文第 20 節。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS</a>
+    <a href="../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
