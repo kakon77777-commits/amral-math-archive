@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-DCRP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-DCRP 子線:53 篇已建置(原始編號 03-55、59,15 與 56-58 在投遞資料夾中缺失),圍繞 Navier–Stokes 全域正則性問題的一條連續、逐輪修正推進的研究鏈——從對數模型錐債務出發,經耗散供給世系、過濾渦度次網格能量、Type-II Euler 重整、Kelvin 環量、仿射噴流渦度共變剛性,推進到薄層/煎餅幾何與黏性厚度底限。全域正則性依然完全 OPEN。與 NTLA-O 內含的 117 個交叉引用檔案為同編號論文的另一視角處理,兩批平行保留。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-DCRP</p>
+    <h1>NS-DCRP</h1>
+    <p class="subtitle">Navier–Stokes Dissipation-Chain Research Program · 53/53 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-DCRP 是一條連續、逐輪修正推進的研究鏈:每一輪都直接稽核、修正或延伸前一輪的結論——不是獨立主題的合輯。
+      原始編號從 03 到 59,本頁下方依主題脈絡分成七個階段,方便循序閱讀,但骨幹仍是單一條依賴鏈。
+    </p>
+    <p class="lede">
+      誠實揭露兩類缺口:(1)編號 01、02 的原始檔案只以 <code>.zip</code> 封存(release/checkpoint 壓縮包)存在,
+      沒有獨立的 <code>.md</code> 論文可供建成本頁的獨立分頁,故未列入;(2)編號 15 與 56–58 被後續輪次多次引用
+      (例如 DCRP-16 明確接續「DCRP-15 的缺口」,DCRP-59 明確引用 DCRP-56/57/58),但原始投遞資料夾中並不存在
+      對應檔案——可能遺失、可能只存在於某個 <code>.zip</code> 封存包內尚未拆封確認。兩者都不是本頁疏漏,如實標記。
+    </p>
+    <p class="notice">
+      與 <a href="ntla-o/">NTLA-O</a> 內含的 117 個「以 NTLA-O 觀察者視角重新處理 NS-DCRP 同編號論文」交叉引用檔案,
+      是同一批編號論文的兩種平行理論視角,不是重複或版本衝突,兩批都會保留。
+    </p>
+  </header>
+
+  <section id="early-chain">
+    <h2 class="doc-h2">早期供給鏈(Rounds 3-14)</h2>
+    <p class="section-note">從對數模型錐債務出發,一路把耗散邊界供給殼層從瞬時頻率標記逐步收緊為真正有實際歷史因果性的非線性 Navier–Stokes 世系,最終建成有限維無散痕跡窗。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 早期供給鏈">
+      <a class="case-card" href="./p/03-log-cone-debt-scale-return/">
+        <span class="k">DCRP-03 · CLOSED 兩項難題</span>
+        <h3>對數模型錐債務與尺度回歸排除</h3>
+        <p>以尺度不變的對數模型錐債務恆等式取代先前失敗的原始稅收累積路線,直接對照 MORP 復發回歸測試,一次解決前一輪留下的兩個難題(尺度歸一復發不蘊含端點動能相等;固定尺度臨界原始…</p>
+      </a>
+      <a class="case-card" href="./p/04-scalar-gain-transfer-scale-gap/">
+        <span class="k">DCRP-04 · 延續</span>
+        <h3>純量增益轉移與尺度差距邊界</h3>
+        <p>延續 DCRP-03,移除對數模型錐債務路線中不必要的高導數轉移要求。</p>
+      </a>
+      <a class="case-card" href="./p/05-transverse-cone-normalization-audit/">
+        <span class="k">DCRP-05 · 修正</span>
+        <h3>橫向模型錐剛性與歸一化定向稽核</h3>
+        <p>稽核 MORP 歸一化編譯器,修正尺度定向歧義(含 MORP-04 的一處符號錯誤),並用 Navier–Stokes 應變殘差的精確正交性強化 Miller 模型錐估計。</p>
+      </a>
+      <a class="case-card" href="./p/06-spectral-moment-separation/">
+        <span class="k">DCRP-06 · 反例</span>
+        <h3>頻譜矩分離與 Hellinger 剛性</h3>
+        <p>攻擊 DCRP-05 留下的 β_SV→0 前沿,證明原先設想的「固定比例應變能量必移至遠端高頻」為假——以雙尺度反例直接推翻。</p>
+      </a>
+      <a class="case-card" href="./p/07-h2-interaction-tax-derivative-visibility/">
+        <span class="k">DCRP-07 · 延續</span>
+        <h3>H² 交互稅與導數可見性缺口</h3>
+        <p>攻擊 DCRP-06 的低—高交互稅前沿,檢驗紫外導數載體能否由既有低階能量/通量記帳收取。</p>
+      </a>
+      <a class="case-card" href="./p/08-dissipation-supplier-atom-recovery/">
+        <span class="k">DCRP-08 · 延續</span>
+        <h3>耗散波數供給原子恢復與紫外供給橋</h3>
+        <p>證明即使導數主導的紫外尾端可以讓低階原始質量消失,也不代表該尾端能在動力學上不靠低階臨界原子而被供給。</p>
+      </a>
+      <a class="case-card" href="./p/09-duhamel-supplier-ancestry/">
+        <span class="k">DCRP-09 · 延續</span>
+        <h3>Duhamel 供給世系與實際歷史因果性</h3>
+        <p>證明非消失的耗散邊界供給殼層不只是瞬時頻率標記,而必然連結到真實同一歷史的非線性 Navier–Stokes 世系。</p>
+      </a>
+      <a class="case-card" href="./p/10-first-crossing-flux-parent-localization/">
+        <span class="k">DCRP-10 · 精煉</span>
+        <h3>首次穿越殼層通量與世系定位</h3>
+        <p>把 DCRP-09 的非線性來源世系精煉為真正的正向動能轉移,將帶號三元世系定位為「母源或缺陷」二選一。</p>
+      </a>
+      <a class="case-card" href="./p/11-heat-band-pfet-compatibility/">
+        <span class="k">DCRP-11 · 橋接</span>
+        <h3>熱帶 PFET 相容性與前向/反向散射替代</h3>
+        <p>在不發明新物理偵測器的前提下,把 DCRP-10 的正向首次穿越頻譜殼通量,經熱半群粗粒化橋接回既有的 FCBP 壓力—通量架構。</p>
+      </a>
+      <a class="case-card" href="./p/12-local-pfet-work-carrier-completion/">
+        <span class="k">DCRP-12 · 封閉缺口</span>
+        <h3>局部 PFET 定位與工作載體完成</h3>
+        <p>封閉 DCRP-11 遺留的全域到局部熱功定位缺口,並確定若固定臨界功量擴散到無界多個歸一化拋物胞元時究竟剩下什麼。</p>
+      </a>
+      <a class="case-card" href="./p/13-supplier-trace-critical-lift/">
+        <span class="k">DCRP-13 · 繞過障礙</span>
+        <h3>供給者痕跡臨界提升與有限族反擴散</h3>
+        <p>直接從耗散邊界供給原子萃取尺度一致的有限族痕跡見證,繞過 DCRP-12 的工作多重性障礙。</p>
+      </a>
+      <a class="case-card" href="./p/14-solenoidal-trace-window-compiler/">
+        <span class="k">DCRP-14 · 修正</span>
+        <h3>螺線管痕跡窗編譯器與最終痕跡實現記帳</h3>
+        <p>對照真實的有限窗伴隨痕跡定義稽核 DCRP-13,修正其中不允許的純量測試捷徑,為供給者產生的非線性增量建構真正的有限維無散痕跡窗。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="local-capture">
+    <h2 class="doc-h2">局部捕獲與臨界供給(Rounds 16-19(15 缺失))</h2>
+    <p class="section-note">在原始資料夾中不存在的 DCRP-15 之後接續:把局部供給序列裝配成真正相容 MORP 的停止規則,再把未課稅供給化簡為簡短機制清單,轉向具強制力的過濾渦度伸展路線。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 局部捕獲與臨界供給">
+      <a class="case-card" href="./p/16-good-collar-local-supplier-capture/">
+        <span class="k">DCRP-16 · 封閉缺口</span>
+        <h3>良好套環定位與局部供給者捕獲</h3>
+        <p>在原始檔案中缺失的 DCRP-15 之後,本輪在第一奇異點定位層級封閉其遺留缺口:構造無散局部化並證明有界局部化耗散波數將迫使局部延拓。</p>
+      </a>
+      <a class="case-card" href="./p/17-supplier-stopping-time-synchronization/">
+        <span class="k">DCRP-17 · 延續</span>
+        <h3>供給者停時同步與遠足不可逆障礙</h3>
+        <p>把 DCRP-16 的局部供給序列安裝成真正相容 MORP 的回歸/重根停止規則,證明供給者為根的有限窗封包在固定歸一化後確實原生分離且緊緻。</p>
+      </a>
+      <a class="case-card" href="./p/18-trace-erasure-two-sided-scale-carrier/">
+        <span class="k">DCRP-18 · 測試+補完</span>
+        <h3>痕跡抹除作用與雙側尺度載體完成</h3>
+        <p>嚴格檢驗 DCRP-17 的供給者遠足不可逆提案——只在固定歸一化參考系內才能成立——並補完相對頻率封包缺失的紅外方向。</p>
+      </a>
+      <a class="case-card" href="./p/19-critical-supply-source-reduction/">
+        <span class="k">DCRP-19 · 轉向</span>
+        <h3>臨界供給來源化簡與過濾伸展—擴散樞紐</h3>
+        <p>把未課稅的正向供給化簡成一份簡短的定量來源機制清單,並在不捨棄既有 DCRP 架構下,轉向具強制力的過濾渦度伸展機制。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="filtered-sgs">
+    <h2 class="doc-h2">過濾渦度與次網格能量(Rounds 20-26)</h2>
+    <p class="section-note">逐步排除零成本逃逸分支(遠場諧和噴流、超短時間尖峰、仿射剖面、雙功強制性),把爆破分支持續壓縮向臨界儲庫/緊緻性逃逸。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 過濾渦度與次網格能量">
+      <a class="case-card" href="./p/20-filtered-enstrophy-ir-dichotomy/">
+        <span class="k">DCRP-20 · 化簡</span>
+        <h3>過濾恩斯特羅菲擴散/紅外二分與遠場化簡</h3>
+        <p>以頻譜擴散—紅外二分法排除低階過濾恩斯特羅菲儲庫作為隱藏零成本機制,把倖存分支化簡為僅剩遠場存活者。</p>
+      </a>
+      <a class="case-card" href="./p/21-far-field-annular-escape/">
+        <span class="k">DCRP-21 · 證明</span>
+        <h3>遠場環形逃逸與諧和噴流化簡</h3>
+        <p>證明持續的遠場伸展盈餘會迫使來源環形區以發散的歸一化環形渦度振幅逃逸至無窮相對空間半徑,排除有界諧和仿射噴流作為最終零成本倖存者。</p>
+      </a>
+      <a class="case-card" href="./p/22-supplier-filtered-activation-spike-elimination/">
+        <span class="k">DCRP-22 · 封閉介面</span>
+        <h3>供給者到過濾恩斯特羅菲活化與時間尖峰排除</h3>
+        <p>在定量二選一層級封閉「局部供給者⟹過濾恩斯特羅菲活化」介面,排除「超短時間尖峰」逃逸,修正 DCRP-20 對局部化儲庫的處理。</p>
+      </a>
+      <a class="case-card" href="./p/23-bounded-lag-increment-young-frontier/">
+        <span class="k">DCRP-23 · 化簡</span>
+        <h3>有界延遲增量活化與 Young 剖面前沿</h3>
+        <p>把持續有界儲庫非 CKN 分支化簡為每個充分小尺度上不消失的、與導數相容的速度增量缺陷。</p>
+      </a>
+      <a class="case-card" href="./p/24-increment-young-fiber-covariance-rigidity/">
+        <span class="k">DCRP-24 · 修正+證明</span>
+        <h3>增量 Young 剖面纖維完成與共變剛性</h3>
+        <p>修正 MORP 延伸成本定義的一致性問題,補完外部圓柱 Young 剖面定理遺漏的無窮維纖維逃逸缺陷,證明實際速度增量場共變的剛性定理。</p>
+      </a>
+      <a class="case-card" href="./p/25-pressure-compatible-sgs-affine-rigidity/">
+        <span class="k">DCRP-25 · 排除分支</span>
+        <h3>壓力相容次網格能量剛性與仿射核崩塌</h3>
+        <p>證明壓力相容雷諾共變沒有整體次網格產能;零次網格黏性方差會迫使仿射速度剖面;再用繼承的 Morrey 能量增長排除有界儲庫爆破分支上每一個非零仿射強剖面。</p>
+      </a>
+      <a class="case-card" href="./p/26-sgs-recurrence-gap-work-orthogonality-nogo/">
+        <span class="k">DCRP-26 · NO-GO</span>
+        <h3>次網格復發缺口與雙功強制性 NO-GO</h3>
+        <p>證明能量/恩斯特羅菲功配對本身不可能具強制力(剛性遷移切向量恰好功正交),改以精確次網格能量復發論證取代,把剩餘全域分支確認為臨界儲庫/緊緻性逃逸而非未解的應力角核。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="type-ii-kelvin">
+    <h2 class="doc-h2">Type-II Euler 重整與 Kelvin 環量(Rounds 27-34)</h2>
+    <p class="section-note">把動能 Type-II 分支重整為 Euler/Euler–Reynolds 缺陷對象,證明無原子倒退—古老 Euler 復發分支是真正剩餘狀態,再從能量記帳轉向 Kelvin/Weber 環量不變量。</p>
+    <nav class="case-grid" aria-label="NS-DCRP Type-II Euler 重整與 Kelvin 環量">
+      <a class="case-card" href="./p/27-critical-reservoir-euler-reynolds-reprofiling/">
+        <span class="k">DCRP-27 · 重新定位</span>
+        <h3>臨界儲庫吸收與 Type-II Euler–Reynolds 重整</h3>
+        <p>移除「臨界儲庫爆破」這個未加區分的逃逸標籤,證明有界局部能量與壓力儲庫沿嵌套鏈迫使最終一致的耗散上界,將動能 Type-II 分支以 Euler 時間歸一化重整為局部 Eule…</p>
+      </a>
+      <a class="case-card" href="./p/28-type-ii-double-crossing-euler-barrier/">
+        <span class="k">DCRP-28 · 精煉+障礙</span>
+        <h3>Type-II 雙層穿越與真正的 Euler 障礙</h3>
+        <p>篩選出真正的雙層能量轉換,分離倖存的黏性支付與純粹非黏性 Type-II 極限,證明有限 Euler 時間層穿越不可能成為靜默的 Euler/Euler–Reynolds 剖面…</p>
+      </a>
+      <a class="case-card" href="./p/29-raw-energy-atomicity-backward-ancient/">
+        <span class="k">DCRP-29 · 分裂+隔離</span>
+        <h3>原始能量原子性與無原子倒退—古老倖存者</h3>
+        <p>證明固定正比例的實際物理動能被困在收縮核心中會迫使終端能量測度出現一個原子;隔離出真正剩餘的 Type-II 狀態:無原子的倒退—古老 Euler 復發分支。</p>
+      </a>
+      <a class="case-card" href="./p/30-same-parent-dss-tail-escape/">
+        <span class="k">DCRP-30 · 證明+窗口</span>
+        <h3>同源 DSS 復發、無原子指數窗與強制尾端逃逸</h3>
+        <p>證明緊緻非退化復發同源分支即為 Euler 廣義/離散自相似分支,導出相似指數窗,並證明無原子分支必然把歸一化「全域」動能分布的質量損失到空間無窮遠。</p>
+      </a>
+      <a class="case-card" href="./p/31-dss-radial-pfet-core-tail-matching/">
+        <span class="k">DCRP-31 · 壓縮成有限見證</span>
+        <h3>DSS 徑向 PFET 剛性與核心—尾端匹配通量</h3>
+        <p>證明光滑非零核心若無有限半徑向內 Euler 壓力—動能通量,無法連接到臨界 DSS 尾端;把結論壓縮成緊緻歸一化剖面類上的有限原生 PFET 見證。</p>
+      </a>
+      <a class="case-card" href="./p/32-critical-telescoping-kelvin-holonomy/">
+        <span class="k">DCRP-32 · NO-GO+改用不變量</span>
+        <h3>臨界望遠縮並 NO-GO 與 Kelvin 全純剛性</h3>
+        <p>證明每一種能量齊次求和封閉法都會遇到精確的臨界望遠縮並障礙;改用 Euler Kelvin/Weber 物質不變量,證明零物質全純性會迫使環量消失,在臨界尾端增長下迫使剖面為零。</p>
+      </a>
+      <a class="case-card" href="./p/33-circulation-replenishment-kelvin-shadowing/">
+        <span class="k">DCRP-33 · 量化+推導</span>
+        <h3>環量補給、倒退細絲化與 Navier–Stokes Kelvin 映照</h3>
+        <p>證明非零 DSS 環量必須由空間遠端物質標籤供給,或經由指數倒退細絲化供給,並為預極限 Type-II Navier–Stokes 剖面導出精確的 Kelvin 修正項。</p>
+      </a>
+      <a class="case-card" href="./p/34-quotient-kelvin-oseen-equality-manifold/">
+        <span class="k">DCRP-34 · 修正+定義</span>
+        <h3>商正確 Kelvin 數與臨界 Kelvin–Oseen 等式流形</h3>
+        <p>指出 DCRP-32/33 把 DSS 環量收縮解讀為原生回歸稅是不精確的;找出商正確的環量變數,分離次網格環量串級與分子黏性,定義修正後的 Kelvin/Oseen 等式流形。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="affine-covariance">
+    <h2 class="doc-h2">仿射噴流與渦度共變剛性(Rounds 35-42)</h2>
+    <p class="section-note">把不可避免的渦伸展來源定位到有限環形區,化簡為有限維仿射應變噴流,再逐步分類其渦度共變矩陣的秩(從一般秩到秩一、秩二),最終導出移動煎餅噴流的正規形式與其純量 PDE。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 仿射噴流與渦度共變剛性">
+      <a class="case-card" href="./p/35-dss-enstrophy-replenishment-affine-jet/">
+        <span class="k">DCRP-35 · 定位來源</span>
+        <h3>DSS 恩斯特羅菲補給與外部仿射噴流化簡</h3>
+        <p>以精確渦度/恩斯特羅菲動力記帳取代 DCRP-34 的啟發式語言,證明非零嚴格 DSS 核心必須由正向渦伸展或向內恩斯特羅菲輸運維持,把不可避免的伸展來源定位到有限中間環形區,…</p>
+      </a>
+      <a class="case-card" href="./p/36-affine-jet-reproduction-critical-packing/">
+        <span class="k">DCRP-36 · 精確且臨界</span>
+        <h3>仿射噴流複製作用與臨界殼層堆疊</h3>
+        <p>證明供給者階層恰好是臨界而非超臨界,導出精確的週期仿射噴流複製方程,證明非零週期噴流必須支付固定的有限維複製作用,指認角度/相位抵銷為下一個封閉前沿。</p>
+      </a>
+      <a class="case-card" href="./p/37-affine-jet-vorticity-covariance-phase-locking/">
+        <span class="k">DCRP-37 · 轉換問題形式</span>
+        <h3>仿射噴流/渦度共變相位鎖定與本徵框動力學</h3>
+        <p>把振幅問題轉換成張量相位/對齊問題,定義歸一化應變—渦度共變相位參數,導出仿射應變噴流與核心渦度共變的本徵框演化公式。</p>
+      </a>
+      <a class="case-card" href="./p/38-covariance-determinant-low-rank-collapse/">
+        <span class="k">DCRP-38 · 修正+分類</span>
+        <h3>共變行列式剛性與低秩渦度相位崩塌</h3>
+        <p>修正「持續相位對齊必為非泛型」的說法,導出固定核心渦度共變矩陣方程,證明週期性滿秩共變需要非零非仿射殘差,證明精確零殘差週期分支的秩至多為 2。</p>
+      </a>
+      <a class="case-card" href="./p/39-rank-one-burgers-jet-rank-lifting/">
+        <span class="k">DCRP-39 · Liouville 定理</span>
+        <h3>秩一渦度核心分解與 Burgers 噴流正規形式</h3>
+        <p>證明空間共同渦度方向會迫使渦度量值的軸向不變性,在嚴格 DSS 次線性尾端增長下證明全域秩一 Liouville 定理,結論每個非零秩一核心都必須經歷有限半徑渦度方向擴散或方向…</p>
+      </a>
+      <a class="case-card" href="./p/40-rank-two-planar-covariance-floquet/">
+        <span class="k">DCRP-40 · 反例</span>
+        <h3>秩二平面共變與法向壓縮 Floquet 剛性</h3>
+        <p>導出共同渦度平面法向量的精確演化與平面內共變的擬行列式演化,證明純運動學的全域平面渦度 Liouville 定理是假的,指認平面共形 Floquet 模為真正剩餘分支。</p>
+      </a>
+      <a class="case-card" href="./p/41-planar-covariance-shape-disk-pancake-jet/">
+        <span class="k">DCRP-41 · 重構</span>
+        <h3>平面共變形狀盤與移動煎餅噴流正規形式</h3>
+        <p>導出歸一化平面內共變的精確二維盤方程,證明零形狀作用會迫使渦度平面上逐點的各向同性仿射伸展,在此等式分支上把完整三維仿射張量重構為移動的煎餅噴流。</p>
+      </a>
+      <a class="case-card" href="./p/42-planar-potential-shear-scalar-reduction/">
+        <span class="k">DCRP-42 · 推導 PDE</span>
+        <h3>平面位勢—剪切純量化簡與正則煎餅放大</h3>
+        <p>導出隱藏在平面位勢—剪切表示內的真正純量 PDE,證明正則移動煎餅本徵模化簡為純量物質放大方程,得到該本徵模的條件式全域 L^p Liouville 定理。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="sheet-geometry">
+    <h2 class="doc-h2">薄層/煎餅幾何與黏性下界(Rounds 43-54)</h2>
+    <p class="section-note">從錨定剪切上循環出發,逐步證明相干薄層必然佔據指數消失的物質比例,識別出正確的餘維一渦度通量載體,最終建成一般彎曲物質薄管的黏性厚度底限,並證明高斯 Batchelor 核心並非自足,需要有限匹配環形區供給。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 薄層/煎餅幾何與黏性下界">
+      <a class="case-card" href="./p/43-anchored-shear-poincare-cocycle-infinite-reservoir/">
+        <span class="k">DCRP-43 · 強化 NO-GO</span>
+        <h3>錨定剪切 Poincaré 上循環與無限薄層儲庫剛性</h3>
+        <p>以錨點相對、規範完成的剪切位勢取代絕對純量振幅,導出一週期仿射 Poincaré 上循環,證明純上循環分支上每個非零全域模都需要無限測度的純量超水平集儲庫。</p>
+      </a>
+      <a class="case-card" href="./p/44-coarea-nogo-sheet-interface-dichotomy/">
+        <span class="k">DCRP-44 · NO-GO</span>
+        <h3>餘面積 NO-GO 與薄層界面/高原逃逸二分</h3>
+        <p>證明一項運動學 NO-GO:無限純量超水平集測度可以與有限水平梯度成本共存;改用切片均零規範取代點錨規範,得到緊緻強剖面類上的有限薄層界面恩斯特羅菲缺口。</p>
+      </a>
+      <a class="case-card" href="./p/45-log-capacity-super-dss-inward-portal/">
+        <span class="k">DCRP-45 · 量化最便宜逃逸</span>
+        <h3>對數薄層容量、超 DSS 界面逃逸與消失內向通口</h3>
+        <p>量化界面在水平尺度上必須逃逸多遠才能把固定反差藏在小平面恩斯特羅菲之後,證明大半徑向內相似物質通口的面積與體積通量都趨於零。</p>
+      </a>
+      <a class="case-card" href="./p/46-canonical-label-measure-intermittent-exhaust/">
+        <span class="k">DCRP-46 · 修正+證明</span>
+        <h3>正則標籤測度、對數半徑輸運與間歇性超 DSS 排出</h3>
+        <p>修正把入流來源半徑與出流放大薄層半徑直接等同的錯誤,證明任何相干的超 DSS 薄層排出都必然只佔據指數消失的物質比例。</p>
+      </a>
+      <a class="case-card" href="./p/47-shear-vorticity-two-form-sheet-monodromy/">
+        <span class="k">DCRP-47 · 識別真正載體</span>
+        <h3>剪切—渦度二形式不變量與臨界薄層單值群</h3>
+        <p>把純秩二煎餅分支的真正物理載體識別為餘維一的渦度通量形式而非三維體積密度,導出完整的臨界薄層單值群指數恆等式。</p>
+      </a>
+      <a class="case-card" href="./p/48-coherent-pancake-fokker-planck-batchelor-floor/">
+        <span class="k">DCRP-48 · 黏性定理</span>
+        <h3>相干煎餅 Fokker–Planck 化簡與黏性 Batchelor 底限</h3>
+        <p>識別出可精確化簡為一維 Fokker–Planck 方程的相干單號固定平面煎餅薄層子分支,證明正的黏性 Batchelor/Burgers 厚度不動點,並排除漸近次擴散的相干薄…</p>
+      </a>
+      <a class="case-card" href="./p/49-material-sheet-tube-viscous-thickness-floor/">
+        <span class="k">DCRP-49 · 推廣</span>
+        <h3>物質薄管帶號距離記帳與一般黏性厚度底限</h3>
+        <p>把 DCRP-48 的一維相干薄層方差恆等式推廣到真正彎曲的物質薄管,證明分子擴散貢獻與薄層曲率無關的正向主導項。</p>
+      </a>
+      <a class="case-card" href="./p/50-thickness-curvature-vorticity-direction-compiler/">
+        <span class="k">DCRP-50 · 編譯成物理缺陷</span>
+        <h3>厚度尺度曲率與過濾渦度方向編譯器</h3>
+        <p>把厚度尺度曲率逃逸編譯成物理渦度/秩/薄管缺陷,證明厚度尺度曲率會迫使尺度不變的過濾渦度梯度缺口,除非秩相干性失效。</p>
+      </a>
+      <a class="case-card" href="./p/51-curved-sheet-uncertainty-fragmentation-proof/">
+        <span class="k">DCRP-51 · 封閉漏洞</span>
+        <h3>彎曲薄層不確定性與抗碎裂二階擴散活化</h3>
+        <p>封閉 DCRP-50 的漏洞(梯度率可能很大但薄層恩斯特羅菲載體質量趨零),證明薄層碎裂無法降低倒數厚度擴散帳單,把多薄層過濾梯度和編譯回真正未過濾的 Navier–Stoke…</p>
+      </a>
+      <a class="case-card" href="./p/52-palinstrophy-criticality-gaussian-batchelor/">
+        <span class="k">DCRP-52 · NO-GO+唯一性</span>
+        <h3>類恩斯特羅菲臨界性稽核與高斯 Batchelor 回歸剛性</h3>
+        <p>證明一項臨界 NO-GO:原始歸一化類恩斯特羅菲的正性本身不足以得出同源有限預算矛盾;把擴散型 Batchelor 分支識別為合法的應變—擴散等式而非缺陷,證明復發高斯剖面的 …</p>
+      </a>
+      <a class="case-card" href="./p/53-gaussian-strain-reconstruction-finite-matching/">
+        <span class="k">DCRP-53 · 非自足性</span>
+        <h3>高斯寬度—應變重構與有限匹配層剛性</h3>
+        <p>證明高斯薄層並非自足:全域高斯剪切與仿射應變正規形式與嚴格次線性 Type-II 動能尾端不相容,得到精確仿射—高斯核心區半徑的有限上界。</p>
+      </a>
+      <a class="case-card" href="./p/54-finite-annulus-dual-moments-return-matching/">
+        <span class="k">DCRP-54 · NO-GO+定位下一步</span>
+        <h3>有限環形雙矩與回歸渦度匹配剛性</h3>
+        <p>把有限匹配環形區轉為定量渦度矩記帳,證明供給者模與常數平均回歸模精確正交,記錄重要 NO-GO:雙矩運動學相容,本身不足以封閉分支。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="frontier">
+    <h2 class="doc-h2">前沿:動態不變性測試(Rounds 55, 59)</h2>
+    <p class="section-note">從「靜態匹配流形是否運動學相容」轉向「是否在真正的局部相似 Navier–Stokes 動力學下不變」——DCRP-56/57/58 三輪在被 DCRP-59 多次引用,但原始投遞資料夾中不存在對應檔案,誠實標記為缺失,不是本頁遺漏。</p>
+    <nav class="case-grid" aria-label="NS-DCRP 前沿">
+      <a class="case-card" href="./p/55-two-mode-dynamic-leakage/">
+        <span class="k">DCRP-55 · NO-GO(前沿)</span>
+        <h3>雙模動態洩漏與自主匹配封閉的失敗</h3>
+        <p>測試 DCRP-54 的零盈餘雙模匹配流形是否在真正局部相似 Navier–Stokes 渦度動力學下不變,證明環形應變供給模的非線性自交互作用會離開該雙模張成空間,結論雙模內…</p>
+      </a>
+      <a class="case-card" href="./p/59-signed-residual-confluence-rank-two-closure/">
+        <span class="k">DCRP-59 · 封閉(引用 56–58,原始檔案缺失)</span>
+        <h3>帶號殘差通道匯流與秩二等式封閉</h3>
+        <p>承接 DCRP-58 對全域透明固定平面尾端的封閉(該檔案本身在交付的原始資料夾中缺失),證明 DCRP-54 復發可見度洩漏的任何精確補償都必須經由有限補償分支發生,而 DC…</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

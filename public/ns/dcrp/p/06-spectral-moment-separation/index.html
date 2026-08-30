@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP-06:頻譜矩分離與 Hellinger 剛性 · NS-DCRP · NS · AMRAL</title>
+<meta name="description" content="攻擊 DCRP-05 留下的 β_SV→0 前沿,證明原先設想的「固定比例應變能量必移至遠端高頻」為假——以雙尺度反例直接推翻。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP_06_SpectralMoment_Separation_2026-08-16.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-DCRP</a>
+    <span>/</span>
+    <span>DCRP-06 · 頻譜矩分離與 Hellinger 剛性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-DCRP · 06</span>
+      <span class="tag">反例</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP-06:頻譜矩分離與 Hellinger 剛性</h1>
+    <p class="h1-sub">攻擊 DCRP-05 留下的 β_SV→0 前沿,證明原先設想的「固定比例應變能量必移至遠端高頻」為假——以雙尺度反例直接推翻。</p>
+    <div class="claim-box">
+      本輪狀態:反例
+      <span class="note">— 取自檔案自身的 objective / Executive result 區塊,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../05-transverse-cone-normalization-audit/">DCRP-05 · 橫向模型錐剛性與歸一化定向稽核</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../07-h2-interaction-tax-derivative-visibility/">DCRP-07 · H² 交互稅與導數可見性缺口</a></div>
+      <div class="conn-card"><span class="k">NS-DCRP 進度</span>4 / 53</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-DCRP</a>
+    <a href="../../files/NS_DCRP_06_SpectralMoment_Separation_2026-08-16.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP_06_SpectralMoment_Separation_2026-08-16.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
