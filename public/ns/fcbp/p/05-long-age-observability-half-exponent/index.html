@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCBP-05:長齡可觀察性、銳利半指數窗口門檻、組合反幻影偵測與付費端復發 · NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="FCBP 系列第 5 篇。證明新鮮渦度來源到單一帶號功通道的直接橋接不可能,改用組合可觀察性;證明視界排程的銳利序列定理,指數 1/2 是耗盡有效性的銳利時間門檻。整合 Tao 的量化 L³ 反向傳播為外部模組。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_FCBP_05_TemporalObservability_CombinedAntiPhantom_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-FCBP</a>
+    <span>/</span>
+    <span>FCBP-05 · 長齡可觀察性、銳利半指數窗口門檻、組合反幻影偵測與付費端復發</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle VI</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>FCBP-05:長齡可觀察性、銳利半指數窗口門檻、組合反幻影偵測與付費端復發</h1>
+    <p class="h1-sub">Long-Age Observability, Sharp Half-Exponent Window Threshold, Combined Anti-Phantom Detection, and Paid-Side Recurrence</p>
+    <p class="h1-sub">FCBP-04 把視界時間問題拆成「長齡可觀察性」或「薄窗放大」兩支,並顯示濾波器端點問題已不再是主要障礙。本文處理:危險資訊能否在許多局部拋物年齡內保持可觀察?在視界對齊的薄窗上,可觀察性常數能以多快的速度惡化、同時仍保有不可加總的耗盡排程?新鮮渦度更新能否被迫進單一帶號壓力—通量功通道?付費端反向散射/洩漏能否單靠端點能量控制?證明從新鮮渦度來源到單一帶號動能功通道的直接普遍橋接是不可能的(Navier–Stokes 非線性項全域能量正交,即使其旋度可以非零)——改用組合式的壓力/通量/正能量/伴隨痕跡/模型錐可觀察性取代單通道目標。證明有限時間視界排程的銳利序列定理:歸一化視界厚度指數 a=1/2 是銳利門檻,並給出使級數發散的顯式對數排程實例——由此得到耗盡有效性的銳利時間門檻 γq=1/2。整合 Tao 的量化 L³ 反向傳播作為外部強臨界長齡狀態傳播模組。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../04-moving-filter-horizon-alignment/">FCBP-04 · 移動濾波器望遠縮並、連續濾波器漂移、視界對齊、時間厚度障壁與邊界臨界提升</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../06-causal-audit-cycle-vi-closure/">FCBP-06 · 因果到稽核轉移、組合隱形串級、付費端吸收與 Cycle VI 封階稽核</a></div>
+      <div class="conn-card"><span class="k">NS-FCBP 進度</span>5 / 6</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-FCBP</a>
+    <a href="../../files/NS_FCBP_05_TemporalObservability_CombinedAntiPhantom_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_FCBP_05_TemporalObservability_CombinedAntiPhantom_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

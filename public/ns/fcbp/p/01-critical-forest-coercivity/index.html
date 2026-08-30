@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCBP-01:臨界森林強制性、一階導數缺口、雙壅塞重整化與結構性抵銷 · NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="FCBP 系列第 1 篇,Cycle VI 開篇。證明能量類強迫上界與臨界強迫拓樸精確相差一個空間導數,證明加權轉無加權臨界提升 NO-GO,整合三個外部抵銷模組,定義本 Cycle 的核心「臨界提升問題」。承接 CFOP Cycle V。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-FCBP</a>
+    <span>/</span>
+    <span>FCBP-01 · 臨界森林強制性、一階導數缺口、雙壅塞重整化與結構性抵銷</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle VI · 開篇</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>FCBP-01:臨界森林強制性、一階導數缺口、雙壅塞重整化與結構性抵銷</h1>
+    <p class="h1-sub">Critical Forest Coercivity, One-Derivative Gap, Dual Congestion Renormalization, and Structural Cancellation</p>
+    <p class="h1-sub">承接 CFOP Cycle V 留下的森林強制預算問題(尋找同時滿足全域有限、危險切割上近臨界、分支/碎裂下穩定三條件的森林泛函),FCBP 不再增添新的森林分類法,而是問:精確的 Navier–Stokes 結構能否把已知的有限尺度弱預算「提升」成臨界或不可加總的強制預算?證明速度與渦度非線性強迫在 Sobolev 對偶空間中的尺度定理,指認出在同一時間指數 p=4/3 下,普遍能量類強迫上界與尺度臨界強迫拓樸之間精確相差一個空間導數;證明對每個可加總正尺度權重都成立的「加權轉無加權臨界提升」NO-GO。整合三個外部 Navier–Stokes 專屬抵銷模組(Miller 應變—渦度正交性、過濾渦伸展的擴散吸收、壓力—通量加權有限鏈望遠縮並),這些抵銷展現真正的結構性導數/強制性恢復,但留下模型錐、遠場/交換子/局部化、反向散射、可觀察性、加權堆疊等明確缺口。定義「臨界提升問題」:在不假設正則性的前提下,把普遍有限的尺度加權抵銷帳本轉成不可加總的近臨界森林切割預算——本文未證出這樣的提升,有限森林障礙與正則性仍是 OPEN。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      
+      <div class="conn-card"><span class="k">下一篇</span><a href="../02-filtered-stretching-critical-lift/">FCBP-02 · 過濾伸展強制性、可比環障壁、帶號仿射噴流提升、交換子復發與臨界提升 NO-GO</a></div>
+      <div class="conn-card"><span class="k">NS-FCBP 進度</span>1 / 6</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-FCBP</a>
+    <a href="../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

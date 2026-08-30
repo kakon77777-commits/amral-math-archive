@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-FCBP(Navier–Stokes Forest Coercive Budget Program)子線:Cycle VI 全 6 篇已上線。從尋找同時全域有限、近臨界、分支穩定的森林強制預算出發,一路推進到 FCBP-03 的慢尺度臨界提升突破、FCBP-05 的銳利半指數時間門檻,終審於 FCBP-06 證明複製閘門 NO-GO 並正式交棒 NS-MORP。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-FCBP</p>
+    <h1>NS-FCBP</h1>
+    <p class="subtitle">Navier–Stokes Forest Coercive Budget Program · Cycle VI · 6/6 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-FCBP 承接 <strong>NS_CFOP Cycle V</strong> 留下的森林強制預算問題:能否找到一個森林泛函,同時滿足全域有限、
+      在危險切割上近臨界、且在分支/碎裂下穩定?六篇一路推進:<strong>FCBP-01</strong> 證明能量類強迫上界與臨界強迫拓樸
+      精確相差一個空間導數,<strong>FCBP-02</strong> 測試過濾渦度架構、找出仍缺的四個障礙,<strong>FCBP-03</strong>
+      證出本 Cycle 第一個真正的突破——不可加總的「慢尺度臨界提升窗」,<strong>FCBP-04</strong> 封閉濾波器相容性但揭露
+      新的時間厚度障壁,<strong>FCBP-05</strong> 證明銳利的半指數時間門檻,<strong>FCBP-06</strong> 完成 Cycle VI 終審。
+    </p>
+    <p class="notice">
+      Cycle VI <strong>不產生無條件的森林強制預算</strong>——FCBP-06 證明複製閘門 NO-GO(把危險因果標記本身當成
+      觀察座標插入,不能算作新的強制橋接)、原生 CAR 編譯器、條件式付費端吸收編譯器,結論最終障礙已不再是
+      尺度/濾波器/排程構造問題,而是最小非重言障礙萃取與剛性——正式交棒給
+      <strong>「NS-MORP:Navier–Stokes 最小障礙剛性計畫」</strong>。<a href="../morp/">NS-MORP</a> →
+      <a href="../dcrp/">NS-DCRP</a> 因此是同一條研究線的三段接力:FCBP(Cycle VI)→ MORP(Cycle VII)→ DCRP。
+      NS_CFOP(Cycle V,FCBP 的前導)尚未讀取分類。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle VI 六篇 · The Six-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:一階導數缺口 → 過濾強制性測試 → 慢尺度排程突破 → 移動濾波器/視界對齊 → 時間門檻 → 因果稽核終審。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-FCBP 六篇">
+      <a class="case-card" href="./p/01-critical-forest-coercivity/">
+        <span class="k">FCBP-01</span>
+        <h3>臨界森林強制性、一階導數缺口與結構性抵銷</h3>
+        <p>證明能量類強迫上界與臨界強迫拓樸精確相差一個空間導數,定義本 Cycle 的核心「臨界提升問題」。</p>
+      </a>
+      <a class="case-card" href="./p/02-filtered-stretching-critical-lift/">
+        <span class="k">FCBP-02</span>
+        <h3>過濾伸展強制性、可比環障壁與臨界提升 NO-GO</h3>
+        <p>測試過濾渦度架構能否升級成無加權全域森林預算,答案是單靠現有不等式辦不到,化簡為四個具體障礙。</p>
+      </a>
+      <a class="case-card" href="./p/03-signed-work-slow-scale-telescoping/">
+        <span class="k">FCBP-03 · 突破</span>
+        <h3>帶號壓力—通量功、慢尺度臨界提升與濾波器切換缺陷</h3>
+        <p>證出本 Cycle 第一個真正突破:選取 r_k=r_0(k+1)^(-β) 得到不可加總的慢尺度臨界提升窗。</p>
+      </a>
+      <a class="case-card" href="./p/04-moving-filter-horizon-alignment/">
+        <span class="k">FCBP-04</span>
+        <h3>移動濾波器望遠縮並、視界對齊與時間厚度障壁</h3>
+        <p>大致封閉濾波器移動相容性,但證明拋物對齊可加總性定理與普遍時間厚度定理,揭露新的時間障壁。</p>
+      </a>
+      <a class="case-card" href="./p/05-long-age-observability-half-exponent/">
+        <span class="k">FCBP-05</span>
+        <h3>長齡可觀察性與銳利半指數窗口門檻</h3>
+        <p>證明新鮮渦度到單一功通道的直接橋接不可能;證明視界排程的銳利序列定理,指數 1/2 是耗盡有效性門檻。</p>
+      </a>
+      <a class="case-card" href="./p/06-causal-audit-cycle-vi-closure/">
+        <span class="k">FCBP-06 · 終審</span>
+        <h3>因果到稽核轉移、組合隱形串級與 Cycle VI 封階稽核</h3>
+        <p>證明複製閘門 NO-GO 與條件式付費端吸收編譯器。Cycle VI 不產生無條件預算,交棒 NS-MORP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      六篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。本頁只抽取並上線每輪的核心論文 <code>.md</code> 與 Cycle VI 終審交接文件,
+      發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_FCBP_CYCLE_VI_HANDOFF_v1.0.md" download>下載 Cycle VI Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

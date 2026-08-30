@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCBP-04:移動濾波器望遠縮並、連續濾波器漂移、視界對齊、時間厚度障壁與邊界臨界提升 · NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="FCBP 系列第 4 篇。大致封閉濾波器隨尺度移動的相容性問題(連續濾波器漂移可被 Leray 能量預算控制),但證明拋物對齊可加總性定理與普遍時間厚度定理,揭露一個新的、更深層的時間厚度障壁。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_FCBP_04_MovingFilter_HorizonAlignment_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-FCBP</a>
+    <span>/</span>
+    <span>FCBP-04 · 移動濾波器望遠縮並、連續濾波器漂移、視界對齊、時間厚度障壁與邊界臨界提升</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle VI</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>FCBP-04:移動濾波器望遠縮並、連續濾波器漂移、視界對齊、時間厚度障壁與邊界臨界提升</h1>
+    <p class="h1-sub">Moving-Filter Telescoping, Continuous Filter Drift, Horizon Alignment, Time-Thickness Barrier, and Borderline Critical Lift</p>
+    <p class="h1-sub">FCBP-03 產生第一個不可加總的壓力—通量尺度排程(∑r_k²<∞ 但 ∑r_k/r_0=∞),證明了真正的「排程提升」,但排程提升還不是「視界臨界提升」。本文處理兩個相容性問題:濾波器必須隨物理尺度移動;窗片必須以正確的拋物幾何真正逼近奇異視界。第一個問題大致可以封閉,第二個問題揭露一個新的時間厚度障壁。證明光滑緊緻磨光核的 L² 濾波尺度導數估計,導出連續時間相依濾波器的精確粗粒化 Navier–Stokes 方程;在慢排程下,線性移動的相對濾波器濾波漂移功被 Leray 能量/耗散預算普遍控制——離散濾波器切換堆疊因此可被連續濾波器漂移繞過。然而證明拋物對齊可加總性定理:若相鄰全厚度拋物窗片累積於 T* 且維持在視界的 O(1) 局部拋物年齡內,則 ∑r_k 必為有限——不可加總的慢排程因此必然失去固定的拋物視界對齊。第二條路線用視界對齊的薄窗片,配合共動熱半群濾波器可精確吸收濾波漂移,但證明的普遍時間厚度定理顯示,即使 ∑w_k 發散,有界的歸一化功率仍可能可加總。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../03-signed-work-slow-scale-telescoping/">FCBP-03 · 帶號壓力—通量功、變半徑望遠縮並、慢尺度臨界提升、濾波器切換缺陷與模型錐復發</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../05-long-age-observability-half-exponent/">FCBP-05 · 長齡可觀察性、銳利半指數窗口門檻、組合反幻影偵測與付費端復發</a></div>
+      <div class="conn-card"><span class="k">NS-FCBP 進度</span>4 / 6</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-FCBP</a>
+    <a href="../../files/NS_FCBP_04_MovingFilter_HorizonAlignment_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_FCBP_04_MovingFilter_HorizonAlignment_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
