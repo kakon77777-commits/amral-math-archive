@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper 3:NTLA-O II:集合論觀察者階層 · NTLA-O · NS · AMRAL</title>
+<meta name="description" content="NTLA-O 系列第 3 篇。為觀察者理論建立集合論地基:合法區分族的冪集表示、序數 rank、集合型有界性,並把觀察塔從集合層級推廣到類級。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NTLA-O_II_Paper03_SetTheoreticObserverHierarchy.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NTLA-O</a>
+    <span>/</span>
+    <span>Paper 3 · NTLA-O II:集合論觀察者階層</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1 Formal Draft</span>
+      <span class="tag">2026-08-17</span>
+      <span class="tag">前置:NTLA-O I</span>
+    </div>
+    <h1>Paper 3:NTLA-O II:集合論觀察者階層</h1>
+    <p class="h1-sub">Set-Theoretic Observer Hierarchy — Power Sets, Admissible Distinction Families, Ordinal Rank, Set-Boundedness, and Class-Level Observer Towers</p>
+    <p class="h1-sub">NTLA-O 系列第 3 篇。把前文以五元組表示的觀察者,以及由有效觀察映射定義的觀察不可區分核,正式落實到集合論地基:觀察者的合法區分族如何用冪集、序數 rank 與 size/boundedness 條件約束,並把「觀察塔」從單一集合層級推廣到類級(class-level)觀察塔。</p>
+    <div class="claim-box">
+      本篇核心問題:區分的集合論底座是什麼?
+      <span class="note">— 出自統合篇(Paper 9)第 1 節系列結構總表,原詞照登。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他論文的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../02-ntla-o-i/">Paper 2 · NTLA-O I:主—內—外三觀察者</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../04-ntla-o-iii/">Paper 4 · NTLA-O III:觀察拓樸、不可區分核與商空間</a></div>
+      <div class="conn-card"><span class="k">NTLA-O 進度</span>3 / 9</div>
+    </div>
+    <blockquote class="cite">為下一篇「區分族如何升級成拓樸」提供集合論前提。</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NTLA-O</a>
+    <a href="../../files/NTLA-O_II_Paper03_SetTheoreticObserverHierarchy.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NTLA-O_II_Paper03_SetTheoreticObserverHierarchy.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

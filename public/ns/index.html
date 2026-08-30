@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS 研究特區 · AMRAL</title>
-<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認橫跨 14 條獨立子線、約 530 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。NS_O 67/67 已完整建置上線；其餘 13 條子線(NTLA-O、NS_X72、NS-DCRP 等)為 2026-08-30 盤點時新確認、尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
+<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。NS_O 67/67、NTLA-O 九篇系列已完整建置上線；其餘 13 條子線(NS_X72、NS-DCRP 等)為 2026-08-30 盤點時新確認、尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -35,9 +35,9 @@
     <p class="subtitle">Navier–Stokes Research Zone · 三維不可壓縮 Navier–Stokes 全域正則性問題,Clay Millennium Prize 問題之一</p>
     <p class="lede">
       這裡原本只有一條子線(<code>NS_O</code>,framework+C1 至 C6,共 67 篇,已完整建置)。2026-08-30 盤點原始
-      投遞資料夾時發現,實際累積的 Navier–Stokes 相關研究遠不只這一條——目前確認共
-      <strong>14 條獨立子線、約 530 個原始檔案</strong>,而且數量仍在持續增加中,確切總數尚未封頂。
-      這個頁面是所有子線的統一入口:先列出目前的盤點狀態,子線內容會依序逐步建置上線,不是一次到位。
+      投遞資料夾時發現,實際累積的 Navier–Stokes 相關研究遠不只這一條——<code>NS_O</code> 之外另外還確認
+      <strong>14 條獨立子線</strong>,全站合計 <strong>15 條子線、約 529 個原始檔案</strong>,而且數量仍在持續增加中,
+      確切總數尚未封頂。這個頁面是所有子線的統一入口:先列出目前的盤點狀態,子線內容會依序逐步建置上線,不是一次到位。
     </p>
     <p class="lede">
       子線之間偶有名稱相似但內容不同的情況——例如兩批不同的 <code>NS_DCRP</code> 編號檔案,是研究者用不同理論視角
@@ -52,6 +52,11 @@
         <span class="k">NS_O · framework + C1-C6 · 67 篇 · 2026-08 COMPLETE</span>
         <h3>NS_O:核心證明鏈</h3>
         <p>把全域正則性問題壓縮成 C1(Chain Necessity)與 C2(Finite Obstruction)兩條可證偽命題。framework+C1/C2/C3(25輪)/C4(9輪)/C5(13輪)/C6(17輪)全 67 篇已上線,全域正則性仍完全 OPEN。</p>
+      </a>
+      <a class="case-card" href="ntla-o/">
+        <span class="k">NTLA-O · 九篇系列 · 2026-08 核心系列 COMPLETE</span>
+        <h3>NTLA-O:廣義嵌套拓樸觀察者論</h3>
+        <p>研究者原創理論,把「兩個結構是否不同」提升為「相對哪個觀察者才判定為不同」。九篇正式系列已上線;另有 117 個以此視角重新處理 NS-DCRP 的交叉引用檔案尚待分類。</p>
       </a>
     </div>
   </section>
@@ -68,14 +73,9 @@
         <p>目前規模最大的未建子線,與 NTLA-O、NS-DCRP 兩條子線在檔名中互有交叉編號(如 X72R83),彼此關聯尚待整理釐清。</p>
       </div>
       <div class="case-card placeholder">
-        <span class="k">10 + 117 個檔案</span>
-        <h3>NTLA-O:廣義嵌套拓樸觀察者論</h3>
-        <p>研究者原創理論,共 I 至 VII 篇(10 個核心文件)。另含 117 個以 NTLA-O 視角重新處理 NS_DCRP 系列同編號論文的檔案,與下方 NS-DCRP 為平行、非重複的兩批結果。</p>
-      </div>
-      <div class="case-card placeholder">
         <span class="k">61 個檔案</span>
         <h3>NS-DCRP</h3>
-        <p>與 NTLA-O 內含的 117 個 NS_DCRP 檔案為同編號論文的另一視角處理,兩批平行保留。</p>
+        <p>與 <a href="ntla-o/">NTLA-O</a> 內含的 117 個 NS_DCRP 交叉引用檔案為同編號論文的另一視角處理,兩批平行保留。</p>
       </div>
       <div class="case-card placeholder">
         <span class="k">54 個檔案</span>

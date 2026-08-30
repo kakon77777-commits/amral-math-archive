@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NTLA-O:廣義嵌套拓樸觀察者論 · NS · AMRAL</title>
+<meta name="description" content="NTLA-O(廣義嵌套拓樸觀察者論)是研究者原創的九篇系列理論:把「兩個結構是否不同」提升為「相對哪個觀察者、哪個參考域、哪個判定域,兩個結構才被判定為相同或不同」,依序接上集合論、點集拓樸、Sheaf/Descent、群胚/Transport、Inverse/Pro Systems 與 Canonical Separation 等成熟數學工具。九篇正式系列已全數上線;另有 117 個以此視角重新處理 NS-DCRP 系列同編號論文的交叉引用檔案,尚未分類上線。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NTLA-O</p>
+    <h1>NTLA-O:廣義嵌套拓樸觀察者論</h1>
+    <p class="subtitle">Generalized Nested Topological Observer Theory · 研究者原創理論 · 九篇正式系列已全數上線</p>
+    <p class="lede">
+      NTLA-O 是研究者(Neo.K)原創的理論,由更早期的「崁套拓樸代數學習架構」(NTLA)修訂而來,核心問題從
+      <strong>「兩個結構是否不同?」</strong>提升為<strong>「相對哪個觀察者、哪個參考域、哪個合法域、哪個判定域、哪個身份解析度,
+      兩個結構才被判定為相同或不同?」</strong>整套理論依序接上五個成熟數學接口:集合論 → 點集拓樸 → Sheaf/Descent →
+      群胚/Transport → Inverse/Pro Systems → Canonical Separation,並在統合篇(Paper 9)明確聲明不宣稱重新發明這些既有工具,
+      candidate novelty 具體在於把 observer role、legality、identity specification、nested distinction refinement、
+      local/global structure、path transport、resolution history 這一整組耦合起來。
+    </p>
+    <p class="lede">
+      NTLA-O 後來才接上 NS(Navier–Stokes):研究者用 NTLA-O 建立的觀察者視角,重新處理 NS-DCRP 系列同編號論文,
+      產生 117 個平行的交叉引用檔案——與下方 NS-DCRP 子線是同一批編號論文的兩種不同理論視角,不是重複或版本衝突。
+      這批交叉引用檔案尚未讀取分類,不在本頁下方的九篇系列之列。
+    </p>
+    <p class="notice">
+      九篇系列全部標示 <strong>v0.1 (Unified) Formal Draft</strong>,2026-08-17 定稿,作者 Neo.K,理論整理與形式化協作
+      Aletheia / GPT-5.6 Sol。這是 NTLA-O 自身的理論建構(集合論、拓樸、Sheaf、群胚、逆系統、可分離性),
+      <strong>尚未包含任何與 Navier–Stokes 直接相關的證明內容</strong>——那是上述 117 個交叉引用檔案要做的事,留待下一階段。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">九篇正式系列 · The Nine-Paper Series</h2>
+    <p class="section-note">
+      依賴鏈:Representation → Observer → Distinction → Topology → Locality → Transport → Resolution History → Completeness → Unification。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NTLA-O 九篇系列">
+      <a class="case-card" href="./p/01-ntla-2.0/">
+        <span class="k">Paper 1</span>
+        <h3>NTLA 2.0:崁套拓樸代數學習架構</h3>
+        <p>修訂更早期的 NTLA:拓樸匹配降級為結構表示方法之一,加入差異敏感連接結構——相同 Betti 數不再自動代表相同身份。全系列地基。</p>
+      </a>
+      <a class="case-card" href="./p/02-ntla-o-i/">
+        <span class="k">Paper 2</span>
+        <h3>NTLA-O I:主—內—外三觀察者</h3>
+        <p>觀察者拆成主/內/外三種角色,證明角色鏈單次穿越定理。關鍵反例:無限套娃不等於無限新觀察差異。</p>
+      </a>
+      <a class="case-card" href="./p/03-ntla-o-ii/">
+        <span class="k">Paper 3</span>
+        <h3>NTLA-O II:集合論觀察者階層</h3>
+        <p>建立集合論地基:合法區分族的冪集表示、序數 rank、集合型有界性,推廣到類級觀察塔。</p>
+      </a>
+      <a class="case-card" href="./p/04-ntla-o-iii/">
+        <span class="k">Paper 4</span>
+        <h3>NTLA-O III:觀察拓樸、不可區分核與商空間</h3>
+        <p>證明任意觀察區分族可生成唯一最弱拓樸,且拓樸閉包不增加新的點級可區分性。</p>
+      </a>
+      <a class="case-card" href="./p/05-ntla-o-iv/">
+        <span class="k">Paper 5</span>
+        <h3>NTLA-O IV:局部—全域觀察、Presheaf、Sheaf、Stalk 與 Descent</h3>
+        <p>內部觀察者表示為局部 section,用 sheaf 語言研究局部資料何時能黏合成全域狀態。</p>
+      </a>
+      <a class="case-card" href="./p/06-ntla-o-v/">
+        <span class="k">Paper 6</span>
+        <h3>NTLA-O V:路徑身份、基本群胚、覆蓋、Monodromy 與 Holonomy</h3>
+        <p>研究觀察狀態如何被運輸、同起訖異路徑是否算相同觀察,區分五級路徑身份。</p>
+      </a>
+      <a class="case-card" href="./p/07-ntla-o-vi/">
+        <span class="k">Paper 7</span>
+        <h3>NTLA-O VI:逆系統、Observer Tower、Inverse Limit 與 Pro-Observer Identity</h3>
+        <p>建立 Observer Tower Theory,逐步精化核序列形成逆系統。核心命題:極限同一不等於塔同一。</p>
+      </a>
+      <a class="case-card" href="./p/08-ntla-o-vii/">
+        <span class="k">Paper 8</span>
+        <h3>NTLA-O VII:完備分離、Canonical Invariants 與 Continuous Separation Problem</h3>
+        <p>證明有限結構域存在 complete separator;連續版本明確留作未解問題。</p>
+      </a>
+      <a class="case-card" href="./p/09-unified/">
+        <span class="k">Paper 9 / 9</span>
+        <h3>NTLA-O:統合</h3>
+        <p>系列總篇。收攏為四軸加身份控制層,對應成熟數學接口,附完整依賴鏈總表與四層可信度分類。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="pending">
+    <h2 class="doc-h2">已盤點,尚未分類上線</h2>
+    <p class="section-note">誠實列出目前進度,不是佔位符也不是承諾建置順序。</p>
+    <div class="case-grid" aria-label="尚未分類上線">
+      <div class="case-card placeholder">
+        <span class="k">117 個檔案</span>
+        <h3>NS_DCRP 交叉引用(NTLA-O 視角)</h3>
+        <p>研究者用 NTLA-O 觀察者視角重新處理 NS-DCRP 系列同編號論文所產生的平行結果,與 <a href="../">NS 特區</a> 下 NS-DCRP 子線互為兩種視角,尚未讀取分類。</p>
+      </div>
+      <div class="case-card placeholder">
+        <span class="k">1 個檔案 · 早期草稿</span>
+        <h3>第四階草稿(Kolmogorov 商、層論、覆蓋空間、群胚、Pro-Observer)</h3>
+        <p>內容涵蓋後來正式拆分成 Paper 4–7 的主題,無正式系列編號或作者/日期資訊區塊,推測是九篇系列定案前的整合草稿。已存檔供參考,不計入上方九篇正式系列。<a href="../../ns/ntla-o/files/NTLA-O_EarlyDraft_Stage4_SheafGroupoidProObserver.md" download>下載原始 .md</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
