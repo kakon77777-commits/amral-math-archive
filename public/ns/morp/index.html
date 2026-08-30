@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-MORP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-MORP(Navier–Stokes Minimal Obstruction Rigidity Program)子線:Cycle VII 全 5 篇已上線。從「能否萃取最小非零障礙」出發,依序建成缺陷完成緊緻拓樸、回歸轉換動力學、等式流形剛性稽核,最終在 MORP-05 證明最終倖存物件是一個最小、零稅、核飽和的瀰散載體,並正式把下一步交棒給 NS-DCRP。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-MORP</p>
+    <h1>NS-MORP</h1>
+    <p class="subtitle">Navier–Stokes Minimal Obstruction Rigidity Program · Cycle VII · 5/5 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-MORP 承接 FCBP Cycle VI 留下的四項定理義務,提出本計畫的核心問題:若臨界強制缺口證明失敗,
+      能否萃取出一個最小非零、Navier–Stokes 可實現的障礙,而「最小」這個條件本身是否會迫使該障礙落入
+      某個剛性的轉換/核類別?五篇一路推進:<strong>MORP-01</strong> 定義原生障礙切片與抽象緊緻性—剛性二分,
+      <strong>MORP-02</strong> 建成缺陷完成緊緻拓樸,<strong>MORP-03</strong> 找出正確的回歸轉換動力學,
+      <strong>MORP-04</strong> 稽核等式流形、排除純耗散缺陷分支,<strong>MORP-05</strong> 完成 Cycle VII 終審。
+    </p>
+    <p class="notice">
+      最終倖存物件是<strong>最小、零稅、核飽和的瀰散載體</strong>(minimal diffuse carrier)——不是全域正則性證明,
+      而是把倖存障礙壓縮到這一種正規形式。MORP-05 結尾明確把下一步交棒給
+      <strong>「NS-DCRP:Navier–Stokes 瀰散載體剛性計畫」</strong>(Diffuse Carrier Rigidity Program)——
+      這正是 <a href="../dcrp/">NS-DCRP</a> 子線名稱的由來,兩條子線是同一條研究線的前後兩段,不是平行或獨立的主題。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle VII 五篇 · The Five-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:原生障礙幾何 → 缺陷完成緊緻性 → 最小回歸動力學 → 等式流形剛性 → 逃逸/古老終審。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-MORP 五篇">
+      <a class="case-card" href="./p/01-minimal-obstruction-rigidity/">
+        <span class="k">MORP-01</span>
+        <h3>非重言萃取、最小隱形剖面、核飽和與轉換剛性</h3>
+        <p>定義原生歸一化障礙切片,證明抽象緊緻性—剛性二分定理與轉換剛性定理。Cycle VII 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-native-extraction-compactness/">
+        <span class="k">MORP-02</span>
+        <h3>原生缺陷萃取、缺陷完成緊緻性、剖面分裂與最小剖面存在性</h3>
+        <p>建成缺陷完成緊緻拓樸,證明速度強局部 L³ 緊緻性,給出條件式最小剖面存在定理。</p>
+      </a>
+      <a class="case-card" href="./p/03-transition-profile-rigidity-entry/">
+        <span class="k">MORP-03</span>
+        <h3>歸一化回歸轉換、剖面載體飽和、古老/缺陷正規形式與剛性入口</h3>
+        <p>找出原生分離窗上的正確回歸轉換,證明最小剖面分裂飽和定理:嚴格分裂稅排除多剖面極小性。</p>
+      </a>
+      <a class="case-card" href="./p/04-equality-manifold-rigidity-audit/">
+        <span class="k">MORP-04</span>
+        <h3>古老態 Liouville 切割、局部能量鬆弛剛性、零稅分裂與等式流形排除稽核</h3>
+        <p>證明耗散缺陷被局部能量鬆弛定量支配,排除純缺陷分支;引入外部 Liouville 定理作排除切割。</p>
+      </a>
+      <a class="case-card" href="./p/05-escape-ancient-final-audit/">
+        <span class="k">MORP-05 · 終審</span>
+        <h3>逃逸重剖面、古老空間尾端剛性、瀰散最小載體與 Cycle VII 終審</h3>
+        <p>證明原子逃逸可重剖面、多支古老態被排除,最終倖存物件是最小零稅核飽和瀰散載體。交棒 NS-DCRP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      五篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG、JSON schema、狀態帳本等)。本頁只抽取並上線每輪的核心論文 <code>.md</code>
+      與 Cycle VII 終審交接文件,發布包內的路線圖/帳本/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_MORP_CYCLE_VII_HANDOFF_v1.0.md" download>下載 Cycle VII Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
