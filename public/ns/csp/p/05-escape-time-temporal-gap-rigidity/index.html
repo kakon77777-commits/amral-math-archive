@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSP-05:逃逸時間同步、Besov 恢復包與時間間隙剛性 · NS-CSP · NS · AMRAL</title>
+<meta name="description" content="CSP 系列第 5 篇。為臨界 Besov 範數建立逃逸時間微積分,證明每個半層逃逸攜帶普遍恢復作用包,把時間缺陷化簡成有界延遲同步或陳舊底層分離。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CSP</a>
+    <span>/</span>
+    <span>CSP-05 · 逃逸時間同步、Besov 恢復包與時間間隙剛性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle II</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CSP-05:逃逸時間同步、Besov 恢復包與時間間隙剛性</h1>
+    <p class="h1-sub">Escape-Time Synchronization, Besov Recovery Packets, and Temporal Gap Rigidity</p>
+    <p class="h1-sub">CSP-04 證明在 Bradshaw–Grujic 活躍逃逸集 I_BG 上,移動頻率視窗滿足 Φ_(1/2)(t)≥½B(t)——因此一旦波長局部化的中應變載體存在,I_BG 上就有同時刻中頻同步。剩下主要的全域時間缺陷是逃逸間隙。本文為 ε=1/2 的臨界 Besov 範數建立連續層級逃逸時間微積分,證明每個半層逃逸都攜帶一個普遍的移動視窗恢復作用包,把剩餘的中應變逃逸間隙缺陷化簡成有界拋物延遲同步或陳舊底層累積 Besov 作用分離。另證明啟動層間隙尖峰的快速演化債務。不排除陳舊底層分離,不在間隙情形把作用密度同步到完全相同時刻。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../04-moving-window-dissipation-wavenumber/">CSP-04 · 移動視窗捕獲、耗散波數幾何、逃逸區間與紫外庫存配置</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../06-stale-floor-model-cone-synchronization/">CSP-06 · 陳舊底層/模型錐同步、預載儲庫深度與帶通核心對齊</a></div>
+      <div class="conn-card"><span class="k">NS-CSP 進度</span>5 / 8</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CSP</a>
+    <a href="../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSP-02:空間原子等價性、Type-I 恩斯特羅菲核心紫外萃取與拋物堆疊 · NS-CSP · NS · AMRAL</title>
+<meta name="description" content="CSP 系列第 2 篇。證明波長胞元渦度原子化與縮放速度振幅的雙向等價,從 Barker–Prange 恩斯特羅菲集中證明 Type-I 奇異核心紫外渦度萃取定理,把空間同步失敗化簡成三個具體缺陷。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CSP_02_SpatialAtom_TypeI_CoreExtraction_ParabolicPacking_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CSP</a>
+    <span>/</span>
+    <span>CSP-02 · 空間原子等價性、Type-I 恩斯特羅菲核心紫外萃取與拋物堆疊</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle II</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CSP-02:空間原子等價性、Type-I 恩斯特羅菲核心紫外萃取與拋物堆疊</h1>
+    <p class="h1-sub">Spatial-Atom Equivalence, Type-I Enstrophy-Core UV Extraction, and Parabolic Packing</p>
+    <p class="h1-sub">CSP-01 證明同時刻同步命題:只要中應變紫外尖峰同時有移動視窗捕獲、非原子化二進載體殼、波長胞元空間集中三者,就有 Φ_(1/2)(t)⁴≳χ²η²σ²g(t)²。剩下的同步缺陷是 D_win∨D_shell∨D_space。本文攻擊空間分支:證明波長胞元渦度原子化與縮放二進速度 L^∞ 振幅之間的雙向等價;從 Barker–Prange 恩斯特羅菲集中與 Lorentz–Bernstein 界證明 Type-I 奇異核心紫外渦度萃取定理;導出拋物堆疊不等式;把 Type-I 空間同步失敗化簡成核心—視窗不匹配、核心殼原子化、或超拋物微堆疊。不證明這些缺陷不可能,不把核心渦度載體等同於中應變載體。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../01-spatial-concentration-synchronizer/">CSP-01 · 空間集中同步器、視窗捕獲、殼原子化與波長胞元離散</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../03-shell-atomization-spectral-variance/">CSP-03 · 殼原子化、頻譜變異幾何、近似本徵殼與共振轉移</a></div>
+      <div class="conn-card"><span class="k">NS-CSP 進度</span>2 / 8</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CSP</a>
+    <a href="../../files/NS_CSP_02_SpatialAtom_TypeI_CoreExtraction_ParabolicPacking_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CSP_02_SpatialAtom_TypeI_CoreExtraction_ParabolicPacking_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

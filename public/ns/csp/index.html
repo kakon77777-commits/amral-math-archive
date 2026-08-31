@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-CSP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-CSP(Navier–Stokes Coercive Synchronization Program)子線:Cycle II 全 8 篇已上線。逐一同步中應變作用與移動頻率視窗作用,終審於 CSP-08 以明確的四機制殘餘核心(指數預載、耗散範圍補給、核心稀釋、來源/狀態多重性)收尾,正式交棒 NS-DRC(Cycle III)——與 DRC-01 開篇處理的殘差集合完全一致。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-CSP</p>
+    <h1>NS-CSP</h1>
+    <p class="subtitle">Navier–Stokes Coercive Synchronization Program · Cycle II · 8/8 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-CSP 解決了上一輪留下的懸案:<a href="../drc/">NS-DRC</a> 的開篇提到還有更早的「Cycle II」存在,
+      當時沒有給出簡稱。實際讀取後確認:<strong>CSP 就是 Cycle II</strong>(第八個發布包的檔名本身就是
+      <code>NS_CSP_08_CYCLE_II</code>),而它終審文件列出的四項殘餘機制(指數放大預載、耗散範圍補給、核心稀釋、
+      來源/狀態多重性),與 DRC-01 開篇「Cycle II 以四個殘餘機制收尾」逐字對應。八篇一路同步中應變作用與移動頻率
+      視窗作用:<strong>CSP-01</strong> 證明波長胞元同步不等式,<strong>CSP-02~04</strong> 逐步排除空間/殼/視窗
+      三類同步缺陷,<strong>CSP-05~07</strong> 處理時間間隙、陳舊底層、預載儲庫,<strong>CSP-08</strong> 完成
+      Cycle II 封階。
+    </p>
+    <p class="notice">
+      CSP-08 的結論是:Cycle I 與 Cycle II 累積的標準 PDE 防護只能<strong>部分</strong>覆蓋剩餘機制——
+      證明一個泛函分析 NO-GO:能量加上瞬時臨界 Besov 振幅無法界定預載應變 Ḣ¹ 儲庫。Cycle II 以明確的四機制
+      殘餘核心收尾,正式交棒給<strong>「Dynamic Reservoir Closure Problem」</strong>,也就是
+      <a href="../drc/">NS-DRC</a>。CSP-01 自身文件同樣提到更早的 <strong>Cycle I</strong> 存在(留下中應變作用與
+      移動頻率視窗作用兩個強制目標),同樣沒有給出簡稱,誠實標記為已知存在、尚未識別對應子線。目前確認的完整研究鏈:
+      <a href="../csp/">NS-CSP</a>(Cycle II)→ <a href="../drc/">NS-DRC</a>(Cycle III)→
+      <a href="../anp/">NS-ANP</a>(Cycle IV)→ <a href="../cfop/">NS-CFOP</a>(Cycle V)→
+      <a href="../fcbp/">NS-FCBP</a>(Cycle VI)→ <a href="../morp/">NS-MORP</a>(Cycle VII)→
+      <a href="../dcrp/">NS-DCRP</a>,共七段接力。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle II 八篇 · The Eight-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:空間同步 → 殼原子化 → 移動視窗 → 逃逸時間 → 陳舊底層 → 預載儲庫 → 封階稽核。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-CSP 八篇">
+      <a class="case-card" href="./p/01-spatial-concentration-synchronizer/">
+        <span class="k">CSP-01</span>
+        <h3>空間集中同步器與波長胞元離散</h3>
+        <p>證明波長胞元不等式,把局部化應變質量與移動頻率視窗密度同步起來。Cycle II 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-spatial-atom-type-i-core-extraction/">
+        <span class="k">CSP-02</span>
+        <h3>空間原子等價性與 Type-I 核心紫外萃取</h3>
+        <p>證明波長胞元原子化與縮放速度振幅的雙向等價,證明 Type-I 奇異核心紫外渦度萃取定理。</p>
+      </a>
+      <a class="case-card" href="./p/03-shell-atomization-spectral-variance/">
+        <span class="k">CSP-03</span>
+        <h3>殼原子化、頻譜變異幾何與共振轉移</h3>
+        <p>證明嚴重全域殼原子化下,近似本徵函數殘差必然變大——普遍殘差缺口定理。</p>
+      </a>
+      <a class="case-card" href="./p/04-moving-window-dissipation-wavenumber/">
+        <span class="k">CSP-04</span>
+        <h3>移動視窗捕獲與耗散波數幾何</h3>
+        <p>用精確 Bradshaw–Grujic 視窗構造證明視窗主導性,化簡全域移動視窗缺陷。</p>
+      </a>
+      <a class="case-card" href="./p/05-escape-time-temporal-gap-rigidity/">
+        <span class="k">CSP-05</span>
+        <h3>逃逸時間同步與時間間隙剛性</h3>
+        <p>建立臨界 Besov 範數的逃逸時間微積分,證明每個半層逃逸攜帶普遍恢復作用包。</p>
+      </a>
+      <a class="case-card" href="./p/06-stale-floor-model-cone-synchronization/">
+        <span class="k">CSP-06</span>
+        <h3>陳舊底層/模型錐同步與預載儲庫深度</h3>
+        <p>證明模型錐單調性原理與預載儲庫二選一,過量預載必須迫使紫外深度超過門檻。</p>
+      </a>
+      <a class="case-card" href="./p/07-preloaded-reservoir-transport/">
+        <span class="k">CSP-07</span>
+        <h3>預載儲庫輸運與補給債務</h3>
+        <p>證明 PRELOAD 分支必須指數放大存活或支付高頻 Duhamel 補給債務。</p>
+      </a>
+      <a class="case-card" href="./p/08-cycle-ii-closure/">
+        <span class="k">CSP-08 · 終審</span>
+        <h3>統一儲庫覆蓋與 Cycle II 封階</h3>
+        <p>證明泛函分析 NO-GO,以明確四機制殘餘核心收尾,交棒 NS-DRC。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      八篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。第八篇的發布包額外含有一份「標準 PDE 重編譯」總覽文件,一併上線供參考。
+      發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_CSP_CYCLE_II_HANDOFF_v1.0.md" download>下載 Cycle II Handoff 原始 .md</a> ·
+      <a href="./files/NS_CSP_CYCLE_II_STANDARD_PDE_RECOMPILATION_v1.0.md" download>下載標準 PDE 重編譯原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
