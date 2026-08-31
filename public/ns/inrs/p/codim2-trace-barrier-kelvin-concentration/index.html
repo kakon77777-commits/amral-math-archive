@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP82 / X72R65:餘維二跡障礙與Kelvin濃度缺陷 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP81 將 Kelvin 殘量化約為次網格環量通量 K^sgs_ℓ 並提議以管狀增厚吸收進既有體積型交換子偵測器的計畫,本輪檢驗此吸收是否無條件成立。證明並非如此:構造明確的餘維二運動學反例——一函數在曲線附近濃聚,線跡質量為 O(1) 而管狀歸一化體積質量卻趨於零——顯示不存在通用的跡對體積不等式;推導精確因子分解 S̃_C=Θ_tr·S̃_T,其中 Θ_tr 為無量綱餘維二跡比,唯有額外假設 Θ_tr≲1 才能完成吸收,這是對 D81 計畫的重要修正。結論:Kelvin 終端問題化約為 R_K⟹S̃^(4)_active∨R_tr∨已知材料非緊性,二階黏性之謎已降階為一階材料線跡濃度問題 R_tr,留給 DCRP83 檢驗 Θ_tr→∞ 是否強迫更細的活躍橫向尺度。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP82_X72R65_Codim2TraceBarrier_KelvinConcentration_2026-08-18.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP82 / X72R65 · 餘維二跡障礙與Kelvin濃度缺陷</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP82 / X72R65</span>
+      <span class="tag">反例</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP82 / X72R65:餘維二跡障礙與Kelvin濃度缺陷</h1>
+    <p class="h1-sub">承接 DCRP81 將 Kelvin 殘量化約為次網格環量通量 K^sgs_ℓ 並提議以管狀增厚吸收進既有體積型交換子偵測器的計畫,本輪檢驗此吸收是否無條件成立。證明並非如此:構造明確的餘維二運動學反例——一函數在曲線附近濃聚,線跡質量為 O(1) 而管狀歸一化體積質量卻趨於零——顯示不存在通用的跡對體積不等式;推導精確因子分解 S̃_C=Θ_tr·S̃_T,其中 Θ_tr 為無量綱餘維二跡比,唯有額外假設 Θ_tr≲1 才能完成吸收,這是對 D81 計畫的重要修正。結論:Kelvin 終端問題化約為 R_K⟹S̃^(4)_active∨R_tr∨已知材料非緊性,二階黏性之謎已降階為一階材料線跡濃度問題 R_tr,留給 DCRP83 檢驗 Θ_tr→∞ 是否強迫更細的活躍橫向尺度。</p>
+    <div class="claim-box">
+      本輪狀態:反例
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../kelvin-residue-sgs-comm-bridge/">DCRP81 / X72R64 · 介尺度Kelvin分解與SGS環量橋接</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../subfilter-trace-reroot-atom-trichotomy/">DCRP83 / X72R66 · 子濾波跡重根與拋物原子三分法</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>40 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP82_X72R65_Codim2TraceBarrier_KelvinConcentration_2026-08-18.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP82_X72R65_Codim2TraceBarrier_KelvinConcentration_2026-08-18.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

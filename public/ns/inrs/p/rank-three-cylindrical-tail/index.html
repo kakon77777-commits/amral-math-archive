@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP56:秩三共變量提升與圓柱尾流 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP55 留下的「秩提升 vs 無窮尾流」二分法,追問兩支能否被定量化為精確正規形式。證明有限透明補償不只是「脫離秩二」,而是精確的各向同性秩三共變量(λ₁=λ₂=λ₃=c>0),其最小特徵值與外部總渦度都至少為內部局域渦度的一半,故有限 X72 透明性必然蘊含秩三共變量提升;另一方面證明固定平面的整體透明尾流(圓柱剪切型)無法落在任何正 L^p 渦度可積類中。STOP-D56 交給 DCRP57:一是檢驗秩三供應者動力學能否被既有機制動態再生,二是核對圓柱尾流的能量增長是否與 DSS 亞線性能量律矛盾。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP56_RankThree_CylindricalTail_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP56 · 秩三共變量提升與圓柱尾流</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP56</span>
+      <span class="tag">精化</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP56:秩三共變量提升與圓柱尾流</h1>
+    <p class="h1-sub">承接 DCRP55 留下的「秩提升 vs 無窮尾流」二分法,追問兩支能否被定量化為精確正規形式。證明有限透明補償不只是「脫離秩二」,而是精確的各向同性秩三共變量(λ₁=λ₂=λ₃=c>0),其最小特徵值與外部總渦度都至少為內部局域渦度的一半,故有限 X72 透明性必然蘊含秩三共變量提升;另一方面證明固定平面的整體透明尾流(圓柱剪切型)無法落在任何正 L^p 渦度可積類中。STOP-D56 交給 DCRP57:一是檢驗秩三供應者動力學能否被既有機制動態再生,二是核對圓柱尾流的能量增長是否與 DSS 亞線性能量律矛盾。</p>
+    <div class="claim-box">
+      本輪狀態:精化
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../multipole-compensation-rank-lift-tail-escape/">DCRP55 · 多極補償、秩提升與尾流逃逸</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../isotropic-residual-straight-cylinder-no-go-twist-tail/">DCRP57 · 各向同性殘差、直柱NO-GO與扭轉尾流</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>15 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP56_RankThree_CylindricalTail_2026-08-17.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP56_RankThree_CylindricalTail_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

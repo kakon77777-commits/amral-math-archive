@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP48:壓力驅動響應斜率與混合海森伸縮 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP47 由構成式 w=B(q,s)-2a(s)z 導出的響應斜率 c=B_q 及其散度方程與 [0,1] 響應窗口,本輪首先加以修正。證明 DCRP47 的流 J_c 實為 ∂_z(∇·V)=0,只是不可壓縮性微分後的構成式改寫,並非獨立方程;真正新的動力學來自垂直相似歐拉動量方程 D_sc=-P_{zq},即混合壓力海森必須平行於 ∇_hq 且為響應斜率演化的唯一驅動,並導出壓力泊松源恆等式,證明零混合壓力偏移搭配 DSS 縮放與 q=0 連續性將迫使響應斜率為常數。STOP-D48 確立響應窗口並非獨立相容方程支配而是壓力海森驅動——脫離 [0,1] 需輸出有限壓力-諾伊曼通量,留在窗內需服從有界伸縮預算,留待 DCRP49 將此壓力-諾伊曼缺口與 DCRP31 的 PFET 缺口置於同一環域比較。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP48 · 壓力驅動響應斜率與混合海森伸縮</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP48</span>
+      <span class="tag">修正</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP48:壓力驅動響應斜率與混合海森伸縮</h1>
+    <p class="h1-sub">承接 DCRP47 由構成式 w=B(q,s)-2a(s)z 導出的響應斜率 c=B_q 及其散度方程與 [0,1] 響應窗口,本輪首先加以修正。證明 DCRP47 的流 J_c 實為 ∂_z(∇·V)=0,只是不可壓縮性微分後的構成式改寫,並非獨立方程;真正新的動力學來自垂直相似歐拉動量方程 D_sc=-P_{zq},即混合壓力海森必須平行於 ∇_hq 且為響應斜率演化的唯一驅動,並導出壓力泊松源恆等式,證明零混合壓力偏移搭配 DSS 縮放與 q=0 連續性將迫使響應斜率為常數。STOP-D48 確立響應窗口並非獨立相容方程支配而是壓力海森驅動——脫離 [0,1] 需輸出有限壓力-諾伊曼通量,留在窗內需服從有界伸縮預算,留待 DCRP49 將此壓力-諾伊曼缺口與 DCRP31 的 PFET 缺口置於同一環域比較。</p>
+    <div class="claim-box">
+      本輪狀態:修正
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../dual-current-criticality-characteristic-window/">DCRP47 · 雙流臨界標度與特徵窗口</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../pfet-neumann-independence-off-central-response-defect/">DCRP49 · PFET–諾伊曼獨立性與非中心剛性</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>7 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

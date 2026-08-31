@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP87 / X72R70:遞迴作功不可見性剛性定理 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP86 將晚期森林問題收窄為「已解析 CKN 壞性是否蘊含帶號壓力-通量作功」,此蘊含關係在外部 2026 年 Yu 氏來源中因壓力-通量抵消、調和壓力尾、相干低頻剖面、洩漏、逆散射等可能性而明確保持開放;本輪僅在更窄的同親代遞迴緊緻類別上(而非全體合適弱解)證明之。證明定理 D87.8(無遞迴作功不可見已解析壞極限):分布意義下作功沉默且局部動能回歸、洩漏消失的組態必有零已解析耗散,從而速度在空間上為常數;若子濾波殘量同時消失,唯一極限是體平移加仿射調和壓力,而原生全域 Morrey 律排除任何非零平移,故此類上正的 CKN 壞性不能與零作功偵測器共存;緊性進一步將無窮檢驗可觀測性缺口化約為有限主動檢驗族,給出明確前向作功/逆散射二分法。但明確區分(定理 D87.14):可觀測性已封閉,全域耗盡問題未封閉——耗盡不等式的權重 w_k=r_k/r_0 幾何可加,故即使均勻作功下界也不與無限幾何鏈矛盾,留給 DCRP88 檢驗同親代再生能否將此幾何加權帶號作功預算轉為不可加債務。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP87 / X72R70 · 遞迴作功不可見性剛性定理</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP87 / X72R70</span>
+      <span class="tag">證明</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP87 / X72R70:遞迴作功不可見性剛性定理</h1>
+    <p class="h1-sub">承接 DCRP86 將晚期森林問題收窄為「已解析 CKN 壞性是否蘊含帶號壓力-通量作功」,此蘊含關係在外部 2026 年 Yu 氏來源中因壓力-通量抵消、調和壓力尾、相干低頻剖面、洩漏、逆散射等可能性而明確保持開放;本輪僅在更窄的同親代遞迴緊緻類別上(而非全體合適弱解)證明之。證明定理 D87.8(無遞迴作功不可見已解析壞極限):分布意義下作功沉默且局部動能回歸、洩漏消失的組態必有零已解析耗散,從而速度在空間上為常數;若子濾波殘量同時消失,唯一極限是體平移加仿射調和壓力,而原生全域 Morrey 律排除任何非零平移,故此類上正的 CKN 壞性不能與零作功偵測器共存;緊性進一步將無窮檢驗可觀測性缺口化約為有限主動檢驗族,給出明確前向作功/逆散射二分法。但明確區分(定理 D87.14):可觀測性已封閉,全域耗盡問題未封閉——耗盡不等式的權重 w_k=r_k/r_0 幾何可加,故即使均勻作功下界也不與無限幾何鏈矛盾,留給 DCRP88 檢驗同親代再生能否將此幾何加權帶號作功預算轉為不可加債務。</p>
+    <div class="claim-box">
+      本輪狀態:證明
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../hardy-annularization-one-component-work-gap/">DCRP86 / X72R69 · Hardy環化與單分量作功缺口</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../kelvin-regeneration-ancestry-depth/">DCRP88 / X72R71 · Kelvin環量再生深度與世系逃逸</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>45 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

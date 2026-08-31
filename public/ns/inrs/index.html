@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-INRS · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-INRS(Independent Navier–Stokes Research Series)子線:63 篇已建置(DCRP43-58、43-QC,缺 59;DCRP60-105/X72-R44-88)。原本藏在 NTLA-O 投遞資料夾裡、被誤認為「NTLA-O 重新處理 DCRP 同編號論文」的交叉引用檔案,實際讀取後確認是 DCRP 與 X72 兩條官方系列的另一條延續研究——DCRP43-58 是同號平行分支,DCRP60 起源文自陳「秩二局部幾何已窮盡,DCRP/X72 複合編號正式起算」,63 篇形成單一連續 STOP-D 節點鏈。DCRP105/X72-R88 是目前前沿,原文明列下一輪八項待辦,未見中止語句。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-INRS</p>
+    <h1>NS-INRS</h1>
+    <p class="subtitle">Independent Navier–Stokes Research Series · 63/63 已建置(缺 DCRP59)· 全域正則性 OPEN</p>
+    <p class="lede">
+      這條子線的檔案原本放在 <a href="../ntla-o/">NTLA-O</a> 的投遞資料夾裡,網站原本的說法是「研究者用 NTLA-O
+      觀察者視角重新處理 <a href="../dcrp/">NS-DCRP</a> 同編號論文,產生交叉引用檔案」。逐篇讀取原始檔案的
+      frontmatter 後,這個說法需要修正:這批檔案自稱<strong>「Independent Navier–Stokes Research Series」</strong>,
+      是 <a href="../dcrp/">NS-DCRP</a> 從第 42 輪開始的一條<strong>平行延續研究</strong>,不是舊論文的重新詮釋——
+      DCRP43 自己寫著「用新建立的 NTLA-O 區分方式,重新推進 DCRP42 的結論」,此後一路編號到 DCRP105,
+      2026-08-17 到 2026-08-20 之間持續產出,比官方 <a href="../dcrp/">NS-DCRP</a>(止於 55/59)與
+      <a href="../x72/">NS-X72</a>(止於 71)兩條資料夾都晚收尾。
+    </p>
+    <p class="lede">
+      編號 43 到 58(含一篇 43-QC 修正篇)與已上線的官方 <a href="../dcrp/">NS-DCRP</a> 43-58 輪<strong>同號但內容不同</strong>
+      ——是研究者用不同理論工具(NTLA-O 的觀察者/規範區分)重新攻擊同一個 DCRP42 分支點所產生的平行結果,
+      跟網站首頁一直以來的說明一致(「兩批不同編號檔案是平行結果,不是版本衝突,兩批都會保留」)。
+      真正的分水嶺在 <a href="./p/rank-two-closure-package-x72-frontier/">DCRP60</a>:回合原文明白寫道「秩二局部幾何已窮盡,唯一能打破迴圈的
+      新觀察座標來自 X72,DCRP/X72 複合回合編號由此正式起算」——這是原始文件自己劃的界線,不是本頁猜的。
+      DCRP60 之後(61 到 105)不再與任何已建置內容重號,是全新、僅存在於這批檔案裡的研究。
+    </p>
+    <p class="notice">
+      63 篇形成單一連續的 STOP-D 節點鏈,深度交織已建置的 <a href="../dcrp/">NS-DCRP</a> 與 <a href="../x72/">NS-X72</a>
+      真實輪次(逐篇明確引用「X72 Round37」「DCRP31 的 PFET」等具體編號,不是泛泛帶過)。<strong>DCRP59 缺失</strong>
+      ——本批次未收錄,DCRP58 與 DCRP60 的原文都提到它,但檔案本身不在投遞資料夾中,與全站其他缺號輪次一樣
+      誠實標記,不是本頁遺漏。<strong>目前前沿是 <a href="./p/vanishing-viscosity-shear-tr-residual-matching/">DCRP105/X72-R88</a></strong>
+      ——原文結尾用與前 13 輪相同的「Next autonomous step」格式,列出下一輪 DCRP106/X72-R89 的八項具體待辦,
+      全文沒有任何中止、擱置或已規劃收尾的語句;它是目前最新前沿,單純是因為本批次檔案止於 105,不是研究自己喊停。
+    </p>
+  </header>
+
+  <section id="phase-1">
+    <h2 class="doc-h2">第一階段:同號平行分支,DCRP42 的另一條攻擊路線(DCRP43-58)</h2>
+    <p class="section-note">與官方 NS-DCRP 43-58 輪同號不同文——用 NTLA-O 的規範/觀察者區分重新攻擊同一個分支點,經薄餅聯絡平坦性、環域供體、雙流臨界標度、中心響應仿射不可行,一路化約到秩三共變量與圓柱透明尾流,最終在 DCRP58 宣告秩二零殘差分支整體封閉。</p>
+    <nav class="case-grid" aria-label="NS-INRS 第一階段">
+      <a class="case-card" href="./p/poincare-scalar-transfer-material-nonrecurrence/">
+        <span class="k">DCRP43 · 初步證明</span>
+        <h3>龐加萊純量傳遞與物質不可復現性</h3>
+        <p>證明歐拉週期規範下非零純量物質標籤逐點不可復現,確立歐拉恆等性與物質恆等性有別。</p>
+      </a>
+      <a class="case-card" href="./p/same-parent-scalar-gauge-quotient-audit/">
+        <span class="k">DCRP43-QC · 修正</span>
+        <h3>同親代純量重根與規範商坍縮</h3>
+        <p>修正 DCRP43「新增同親代純量稅」的說法,證明絕對純量在殘餘勢規範下不具不變性。</p>
+      </a>
+      <a class="case-card" href="./p/gauge-covariant-pancake-connection-flatness/">
+        <span class="k">DCRP44 · 封閉缺口</span>
+        <h3>規範協變薄餅聯絡與平坦性分類</h3>
+        <p>修正典範薄餅等式分支的真正定義:規範平坦聯絡類,而非原始的 G=0。</p>
+      </a>
+      <a class="case-card" href="./p/canonical-ray-annular-supplier-compression/">
+        <span class="k">DCRP45 · 轉向</span>
+        <h3>環域應變供體之典範射線壓縮</h3>
+        <p>證明有限環域應變供給與規範平坦性相容,倖存者化約為一維帶號典範振幅再生問題。</p>
+      </a>
+      <a class="case-card" href="./p/gauge-flat-annular-scalar-transport-gap/">
+        <span class="k">DCRP46 · NO-GO</span>
+        <h3>規範平坦環域純量矩與帶號輸運缺口</h3>
+        <p>排除全平坦零輸運分支,確立有限環域純量輸運為強制項且具嚴格帶號週期缺口。</p>
+      </a>
+      <a class="case-card" href="./p/dual-current-criticality-characteristic-window/">
+        <span class="k">DCRP47 · 臨界</span>
+        <h3>雙流臨界標度與特徵窗口</h3>
+        <p>證明兩個強制環域流恰好落在同一臨界縮放軌道,量級矛盾封閉,真障礙轉為特徵相容方程。</p>
+      </a>
+      <a class="case-card" href="./p/pressure-driven-response-slope-telescoping/">
+        <span class="k">DCRP48 · 修正</span>
+        <h3>壓力驅動響應斜率與混合海森伸縮</h3>
+        <p>證明響應窗口由壓力海森驅動,而非獨立相容方程支配。</p>
+      </a>
+      <a class="case-card" href="./p/pfet-neumann-independence-off-central-response-defect/">
+        <span class="k">DCRP49 · 反例</span>
+        <h3>PFET–諾伊曼獨立性與非中心剛性</h3>
+        <p>首度正式銜接 X72 第36、37、41–43 輪,以顯式仿射反例證明兩壓力通道無普遍代數耦合。</p>
+      </a>
+      <a class="case-card" href="./p/central-response-affine-no-go-wave-eikonal/">
+        <span class="k">DCRP50 · NO-GO</span>
+        <h3>中心響應仿射不可行性與三分量前沿</h3>
+        <p>證明中心剛性定理:典範仿射薄餅與非零平面渦度不可並存。</p>
+      </a>
+      <a class="case-card" href="./p/wave-pseudo-eikonal-null-hessian-rigidity/">
+        <span class="k">DCRP51 · 限縮</span>
+        <h3>波動偽程函剛性與零海森倖存錐</h3>
+        <p>證明活躍週期分支受限於邏輯斯振幅帶,非仿射點受制於秩一零海森特徵錐。</p>
+      </a>
+      <a class="case-card" href="./p/null-envelope-integrability-x72-lift/">
+        <span class="k">DCRP52 · 結構刻畫</span>
+        <h3>零黑塞包絡可積性與X72提升</h3>
+        <p>證明正扇區局部仿射剛性為假,每個非仿射區塊是可展包絡正規形式。</p>
+      </a>
+      <a class="case-card" href="./p/global-cylindricity-x72-visibility-slice/">
+        <span class="k">DCRP53 · 整體排除</span>
+        <h3>整體柱面性與X72四分之一可見切片</h3>
+        <p>用 Hartman–Nirenberg 柱面定理證明非零整體中心完美響應解不存在。</p>
+      </a>
+      <a class="case-card" href="./p/localized-x72-visibility-shell-leakage/">
+        <span class="k">DCRP54 · 洩漏證明</span>
+        <h3>局部X72可見度缺陷與殼層洩漏</h3>
+        <p>證明任何緊緻局部化都會在截斷殼層產生 r⁻³ 洩漏源項。</p>
+      </a>
+      <a class="case-card" href="./p/multipole-compensation-rank-lift-tail-escape/">
+        <span class="k">DCRP55 · 分支</span>
+        <h3>多極補償、秩提升與尾流逃逸</h3>
+        <p>證明有限補償不可能,問題分裂為秩提升環或無窮渦度尾流兩支。</p>
+      </a>
+      <a class="case-card" href="./p/rank-three-cylindrical-tail/">
+        <span class="k">DCRP56 · 精化</span>
+        <h3>秩三共變量提升與圓柱尾流</h3>
+        <p>把有限透明補償精確定量為各向同性秩三共變量。</p>
+      </a>
+      <a class="case-card" href="./p/isotropic-residual-straight-cylinder-no-go-twist-tail/">
+        <span class="k">DCRP57 · NO-GO</span>
+        <h3>各向同性殘差、直柱NO-GO與扭轉尾流</h3>
+        <p>證明整體筆直圓柱尾流與 DSS 亞線性能量律矛盾。</p>
+      </a>
+      <a class="case-card" href="./p/cylindrical-tail-elimination-outer-equality-closure/">
+        <span class="k">DCRP58 · 封閉缺口</span>
+        <h3>圓柱透明尾流消去與外部封閉</h3>
+        <p>徹底排除筆直、扭轉、仿射鉸鏈在內的一切固定平面透明尾流,秩二零殘差分支整體封閉。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-2">
+    <h2 class="doc-h2">第二階段:DCRP/X72 複合編號正式起算(DCRP60-77)</h2>
+    <p class="section-note">DCRP60 原文自陳秩二局部幾何窮盡,複合編號由此起算。從應力投影與 Floquet 中性模態出發,一路收斂 N⇒X∨T,再把 X 分支壓成 Floquet 調製剛性,最終在 DCRP77 證明「首次穿越」必須支付硬性代價。</p>
+    <nav class="case-grid" aria-label="NS-INRS 第二階段">
+      <a class="case-card" href="./p/rank-two-closure-package-x72-frontier/">
+        <span class="k">DCRP60 · 轉向</span>
+        <h3>秩二封閉套件與X72前沿選擇</h3>
+        <p>正式關閉秩二子專案,選定非仿射伸展與 X72 非局部應力投影的耦合為新前沿——複合編號起點。</p>
+      </a>
+      <a class="case-card" href="./p/stress-projection-aligned-neutral-floquet/">
+        <span class="k">DCRP61/X72R44 · 反例</span>
+        <h3>應力投影與對齊中性Floquet模態</h3>
+        <p>推翻「N⇒X∨T」的普遍蘊涵,找到對 X72 投影攻擊隱形的本徵對齊等式方向。</p>
+      </a>
+      <a class="case-card" href="./p/aligned-neutral-pressure-gap-xt-confluence/">
+        <span class="k">DCRP62/X72R45 · 收斂</span>
+        <h3>對齊中性壓力相容與N分支收斂</h3>
+        <p>證明隱形對齊模態無法同時維持完美壓力響應,N 分支完全收斂吸收進 X∨T。</p>
+      </a>
+      <a class="case-card" href="./p/pressure-oscillation-floquet-modulation/">
+        <span class="k">DCRP63/X72R46 · 壓縮</span>
+        <h3>軸向壓力振盪與Floquet伸展調製</h3>
+        <p>證明對齊壓力缺陷無法免費維持,必須產生空間振盪或時間 Floquet 越界。</p>
+      </a>
+      <a class="case-card" href="./p/constant-defect-no-go-forced-increment-budget/">
+        <span class="k">DCRP64/X72R47 · NO-GO</span>
+        <h3>常數缺陷零通道排除與強制壓力遞增</h3>
+        <p>關閉 X72 Round38 的 N1 零通道,證明對齊分支必須攜帶嚴格為正的壓力缺陷遞增預算。</p>
+      </a>
+      <a class="case-card" href="./p/single-factor-null-closure-correlation-frontier/">
+        <span class="k">DCRP65/X72R48 · 封閉缺口</span>
+        <h3>壓力源平坦性否證與零通道封閉</h3>
+        <p>關閉剩餘的 N2、N3 零通道,X72 Round38 三個逐因子零通道全部關閉。</p>
+      </a>
+      <a class="case-card" href="./p/cofactor-null-repair-two-stress-correlation/">
+        <span class="k">DCRP66/X72R49 · 修正</span>
+        <h3>餘因子零通道修補與雙應力關聯</h3>
+        <p>修正真正進入三重遞增對易子的是餘因子而非壓力響應缺陷,補上遺漏的零通道。</p>
+      </a>
+      <a class="case-card" href="./p/aligned-two-stress-self-lock-geometry/">
+        <span class="k">DCRP67/X72R50 · 延續</span>
+        <h3>對齊雙應力譜幾何與軸對稱自鎖模態</h3>
+        <p>求出對齊譜幾何,篩選出兩種零自轉軸對稱候選模態。</p>
+      </a>
+      <a class="case-card" href="./p/axisymmetric-director-integrability-collapse/">
+        <span class="k">DCRP68/X72R51 · NO-GO</span>
+        <h3>軸對稱導向可積性崩潰</h3>
+        <p>兩個候選模態皆因可積性相容方程被關閉,存活分支必具正測度餘因子形狀活動。</p>
+      </a>
+      <a class="case-card" href="./p/phase-lock-normal-form-pressure-floor/">
+        <span class="k">DCRP69/X72R52 · 正規形式</span>
+        <h3>餘因子相位鎖定正規形式</h3>
+        <p>分類出唯一精確相位鎖定等式模態,唯一決定局部壓力張量。</p>
+      </a>
+      <a class="case-card" href="./p/double-integrability-straight-tube-energy-no-go/">
+        <span class="k">DCRP70/X72R53 · NO-GO</span>
+        <h3>雙重可積性剛性與直渦管能量否證</h3>
+        <p>雙重可積性強迫直渦管,與 DSS 次線性能量增長矛盾,全域相位鎖定分支關閉。</p>
+      </a>
+      <a class="case-card" href="./p/morrey-audit-critical-twisting-tail/">
+        <span class="k">DCRP71/X72R54 · 修正</span>
+        <h3>端點能量稽核與臨界扭轉殘留</h3>
+        <p>區分原生 Morrey 界與需額外假設的 Xue 尾,修補加強多項既有排除結果。</p>
+      </a>
+      <a class="case-card" href="./p/critical-twist-collapse-cylinder-mosaic/">
+        <span class="k">DCRP72/X72R55 · NO-GO</span>
+        <h3>臨界扭轉崩潰與多軸鑲嵌殘留</h3>
+        <p>真正光滑的扭轉在原生 Morrey 端點被完全排除,唯一存活收斂為多軸圓柱鑲嵌。</p>
+      </a>
+      <a class="case-card" href="./p/cylinder-mosaic-absorbed-into-turnover/">
+        <span class="k">DCRP73/X72R56 · 封閉缺口</span>
+        <h3>圓柱鑲嵌併入翻轉分支</h3>
+        <p>證明圓柱鑲嵌端點完全併入 T 翻轉分支,全域前沿還原為「X 活躍 vs. 物質翻轉」二分。</p>
+      </a>
+      <a class="case-card" href="./p/vector-annulus-tax-counterflow-conveyor/">
+        <span class="k">DCRP74/X72R57 · 正規形式</span>
+        <h3>向量環域稅與逆流輸送正規形式</h3>
+        <p>證明 T 分支背負兩個獨立義務,構成標度匹配的逆流輸送帶正規形式。</p>
+      </a>
+      <a class="case-card" href="./p/packet-centered-pressure-t-to-x-bridge/">
+        <span class="k">DCRP75/X72R58 · 封閉缺口</span>
+        <h3>封包定心壓力功與匯合橋</h3>
+        <p>證明實際的圓柱鑲嵌狀態其實已經是一個 X72 缺陷狀態,T 與 X 在此交會。</p>
+      </a>
+      <a class="case-card" href="./p/2gamma-stretch-selection-infinite-conveyor/">
+        <span class="k">DCRP76/X72R59 · 轉向</span>
+        <h3>2γ伸展共振與無限輸送帶</h3>
+        <p>證明有限材料循環被排除,唯一殘存路徑逼成無限的 2γ 伸展篩選輸送帶。</p>
+      </a>
+      <a class="case-card" href="./p/stretch-selection-first-crossing-tilt-x-gap/">
+        <span class="k">DCRP77/X72R60 · 證明</span>
+        <h3>方向伸展首次穿越與傾斜代價</h3>
+        <p>證明跨越中性伸展門檻必須支付至少 γκ/2 的硬性代價。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-3">
+    <h2 class="doc-h2">第三階段:無X材料鏈的緊性攻防(DCRP78-91)</h2>
+    <p class="section-note">正面攻堅「無 X」的傾轉/漂移分支,逐一證明其無法保持緊性,把八種非緊逃逸型錄悉數吸收回既有終端座標,最終把整條同親代材料再生分支收斂到有限尺度/狀態/儲庫座標的遞迴預算問題。</p>
+    <nav class="case-grid" aria-label="NS-INRS 第三階段">
+      <a class="case-card" href="./p/tilt-pressure-coherent-return-no-go/">
+        <span class="k">DCRP78/X72R61 · NO-GO</span>
+        <h3>傾轉-壓力方程與共振回歸不可行</h3>
+        <p>證明即使 X72 響應缺陷完全消失,移動標架系統仍無週期共振回歸解。</p>
+      </a>
+      <a class="case-card" href="./p/secular-compact-chain-no-go-noncompact-catalogue/">
+        <span class="k">DCRP79/X72R62 · NO-GO</span>
+        <h3>無限材料鏈緊性NO-GO與非緊型錄</h3>
+        <p>不需回歸定理即證明漂移支與緊性矛盾,列出八種非緊逃逸型錄。</p>
+      </a>
+      <a class="case-card" href="./p/noncompact-absorption-terminal-compiler/">
+        <span class="k">DCRP80/X72R63 · 化約</span>
+        <h3>非緊逃逸吸收與終端編譯器</h3>
+        <p>八種逃逸模式全部吸收進既有四個終端座標,篩出唯一純納維-史托克斯座標 R_K。</p>
+      </a>
+      <a class="case-card" href="./p/kelvin-residue-sgs-comm-bridge/">
+        <span class="k">DCRP81/X72R64 · 化約</span>
+        <h3>介尺度Kelvin分解與SGS環量橋接</h3>
+        <p>把 Kelvin 殘量三項分解,證明其為濾波渦度交換子力在張成曲面上的配對。</p>
+      </a>
+      <a class="case-card" href="./p/codim2-trace-barrier-kelvin-concentration/">
+        <span class="k">DCRP82/X72R65 · 反例</span>
+        <h3>餘維二跡障礙與Kelvin濃度缺陷</h3>
+        <p>構造餘維二運動學反例,證明不存在通用的跡對體積不等式。</p>
+      </a>
+      <a class="case-card" href="./p/subfilter-trace-reroot-atom-trichotomy/">
+        <span class="k">DCRP83/X72R66 · 三分</span>
+        <h3>子濾波跡重根與拋物原子三分法</h3>
+        <p>證明直接重根 NO-GO,建立三分法,篩出最強殘存分支匹配原子。</p>
+      </a>
+      <a class="case-card" href="./p/log-capacity-matched-atom-scale-escape/">
+        <span class="k">DCRP84/X72R67 · 封閉缺口</span>
+        <h3>對數容量、匹配原子與尺度逸出</h3>
+        <p>不存在獨立的 Kelvin/跡/線原子終端機制,問題收斂為尺度逸出座標。</p>
+      </a>
+      <a class="case-card" href="./p/scale-gap-debt-ckn-finite-chain/">
+        <span class="k">DCRP85/X72R68 · 轉向</span>
+        <h3>尺度缺口債務與CKN有限鏈</h3>
+        <p>把沉默幾何逸出轉化為可量化的線性有限鏈債務。</p>
+      </a>
+      <a class="case-card" href="./p/hardy-annularization-one-component-work-gap/">
+        <span class="k">DCRP86/X72R69 · 修正</span>
+        <h3>Hardy環化與單分量作功缺口</h3>
+        <p>修正代價包用法,證明重疊本身不是真正障礙但打包無法得到強制性全域預算。</p>
+      </a>
+      <a class="case-card" href="./p/recurrent-work-observability/">
+        <span class="k">DCRP87/X72R70 · 證明</span>
+        <h3>遞迴作功不可見性剛性定理</h3>
+        <p>在同親代遞迴緊緻類別上證明可觀測性已封閉,但明確區分全域耗盡問題仍未封閉。</p>
+      </a>
+      <a class="case-card" href="./p/kelvin-regeneration-ancestry-depth/">
+        <span class="k">DCRP88/X72R71 · 封閉缺口</span>
+        <h3>Kelvin環量再生深度與世系逃逸</h3>
+        <p>證明定階壞性無法藉緊緻材料世系無限再生,必在有限反向深度內脫離。</p>
+      </a>
+      <a class="case-card" href="./p/ancestry-exit-tail-energy-supplier-speed/">
+        <span class="k">DCRP89/X72R72 · 量化</span>
+        <h3>世系脫離定價與供體速度標準形</h3>
+        <p>為首次脫離定價,產生線速供體傳送帶或供體多重性發散兩種新量化標準形。</p>
+      </a>
+      <a class="case-card" href="./p/finite-time-tail-transport-no-go/">
+        <span class="k">DCRP90/X72R73 · NO-GO</span>
+        <h3>有限時間尾端輸運不可行定理</h3>
+        <p>線速供體完全吸收進既有缺陷,不存在獨立的稀疏尾端傳送帶。</p>
+      </a>
+      <a class="case-card" href="./p/filamentation-scale-direction-diffusion-compiler/">
+        <span class="k">DCRP91/X72R74 · 封閉缺口</span>
+        <h3>絲化終端消除與方向擴散編譯器</h3>
+        <p>材料絲化逃逸不是獨立終端座標,同親代材料再生分支只終結於已宣告座標。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-4">
+    <h2 class="doc-h2">第四階段:聯合偵測子與譜遷移審計(DCRP92-105,目前前沿)</h2>
+    <p class="section-note">把散落的有限尺度分支壓成單一聯合偵測子,經齊性正負原則、克爾文重置圖、雙鎖半正定錐,最終匯回 X72 伴隨檢驗與消失黏性極限的譜遷移審計——DCRP105/X72-R88 是目前最新前沿。</p>
+    <nav class="case-grid" aria-label="NS-INRS 第四階段">
+      <a class="case-card" href="./p/finite-scale-confluence-joint-detector/">
+        <span class="k">DCRP92/X72R75 · 證明</span>
+        <h3>有限尺度合流與聯合偵測子</h3>
+        <p>把三個有限尺度分支壓成單一聯合偵測子向量,證明必有固定座標以正密度重複出現。</p>
+      </a>
+      <a class="case-card" href="./p/homogeneity-sign-critical-replacement-conveyor/">
+        <span class="k">DCRP93/X72R76 · NO-GO</span>
+        <h3>齊性正負原則與臨界替換傳送帶</h3>
+        <p>證明正密度加固定正代價不能強迫無限物理預算(齊性指數決定一切)。</p>
+      </a>
+      <a class="case-card" href="./p/kelvin-reset-graph-nonpositive-sidecar/">
+        <span class="k">DCRP94/X72R77 · 證明</span>
+        <h3>克爾文重置圖與非正齊性邊車定理</h3>
+        <p>證明傳送帶必須搭配環量重置邊車才能構成完整的同親再生機制。</p>
+      </a>
+      <a class="case-card" href="./p/sgs-phase-slip-total-variation/">
+        <span class="k">DCRP95/X72R78 · NO-GO</span>
+        <h3>SGS相位滑移與全變差審計</h3>
+        <p>證明同號一致的粗化環量通量傳送帶,但渦絲未量子化,不存在有限交叉容量矛盾。</p>
+      </a>
+      <a class="case-card" href="./p/circulation-young-nematic-lock/">
+        <span class="k">DCRP96/X72R79 · NO-GO</span>
+        <h3>環量楊測度與向列鎖定</h3>
+        <p>推翻重心偏移猜想,真正的剛性變數是偏量二階矩協方差鎖定。</p>
+      </a>
+      <a class="case-card" href="./p/dual-lock-psd-pancake-gap/">
+        <span class="k">DCRP97/X72R80 · 修正</span>
+        <h3>雙鎖半正定錐與煎餅缺口</h3>
+        <p>修正增量協方差與濾波渦度協方差的混淆,雙鎖倖存者與舊有煎餅/X72 流形保持橫截距離。</p>
+      </a>
+      <a class="case-card" href="./p/moving-pancake-gap-xnt-confluence/">
+        <span class="k">DCRP98/X72R81 · 修正</span>
+        <h3>移動煎餅缺口與XNT合流</h3>
+        <p>修正前一輪過強的排除結論,雙鎖傳送帶重新匯流回舊有 X72/N/T 編譯器。</p>
+      </a>
+      <a class="case-card" href="./p/x-kelvin-bounded-lag-synchronization/">
+        <span class="k">DCRP99/X72R82 · 證明</span>
+        <h3>X72-克爾文有界延遲同步</h3>
+        <p>把定性的「無限緊緻無 X 材料鏈不存在」升級為定量的均勻有限命中視界。</p>
+      </a>
+      <a class="case-card" href="./p/finite-lag-duhamel-rotational-sgs-kernel/">
+        <span class="k">DCRP100/X72R83 · 反例</span>
+        <h3>有限延遲杜哈梅與旋轉SGS核</h3>
+        <p>以顯式反例證明克爾文重置不直接導致 X72 缺陷,篩出傳輸–里斯高槓桿分支。</p>
+      </a>
+      <a class="case-card" href="./p/joint-path-young-second-third-moment-lock/">
+        <span class="k">DCRP101/X72R84 · 反例</span>
+        <h3>聯合路徑楊測度與二三階矩鎖定</h3>
+        <p>拉德馬赫耦合反例證明二階矩不足以決定傳輸–里斯符號,轉為聯合路徑協方差鎖。</p>
+      </a>
+      <a class="case-card" href="./p/backward-adjoint-copula-cone/">
+        <span class="k">DCRP102/X72R85 · NO-GO</span>
+        <h3>後向伴隨動態與聯結錐</h3>
+        <p>證明不存在通用不變號半空間,新二分法:支付正角作用量或落入本徵鎖定核。</p>
+      </a>
+      <a class="case-card" href="./p/adjoint-eigen-lock-five-ray-classification/">
+        <span class="k">DCRP103/X72R86 · 證明</span>
+        <h3>伴隨本徵鎖與五射線分類</h3>
+        <p>完整求解局部張量代數,給出五射線譜完整分類。</p>
+      </a>
+      <a class="case-card" href="./p/riesz-self-consistency-shear-polarization/">
+        <span class="k">DCRP104/X72R87 · NO-GO</span>
+        <h3>Riesz自洽性與剪切極化倖存者</h3>
+        <p>同軸節點全域 L² 本徵鎖恆為零並徹底排除,倖存者分裂為剪切/軸對稱三支。</p>
+      </a>
+      <a class="case-card" href="./p/vanishing-viscosity-shear-tr-residual-matching/">
+        <span class="k">DCRP105/X72R88 · 前沿(目前最新)</span>
+        <h3>消失黏性殘差匹配與譜遷移審計</h3>
+        <p>證明正黏性 NO-GO 在消失極限下無需頻率遷移即可近似倖存,結尾列出下一輪八項待辦,進行中。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      63 篇原始檔案都已是投遞資料夾(<code>drops/NTLA-O/</code>)中的獨立 <code>.md</code>,不需拆封。
+      同一資料夾裡另外還有 10 篇「NTLA-O」為名的檔案——逐一核對位元組大小後確認,這 10 篇與已建置的
+      <a href="../ntla-o/">NTLA-O</a> 九篇正式系列(含一篇早期草稿)完全相同,只是原始中文檔名版本,
+      不是新內容,故未重複建置。
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

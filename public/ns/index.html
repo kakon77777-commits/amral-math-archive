@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS 研究特區 · AMRAL</title>
-<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。全部 15 條已建置:其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_RMRM 是 Cycle VIII(DCRP)本身的原始過程日誌而非獨立血緣，NS_X72 是規模最大的獨立純連續證明路線實驗(71 輪、缺 11/14)，NS_O、NTLA-O 為另兩條獨立線。子線規模仍可能持續增長，誠實列出目前進度。">
+<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 16 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。全部 16 條已建置:其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_RMRM 是 Cycle VIII(DCRP)本身的原始過程日誌而非獨立血緣，NS-INRS 是藏在 NTLA-O 資料夾裡、實為 DCRP/X72 平行延續研究的第十六條子線(63 輪)，NS_X72 是規模最大的獨立純連續證明路線實驗(71 輪、缺 11/14)，NS_O、NTLA-O 為另兩條獨立線。子線規模仍可能持續增長，誠實列出目前進度。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -36,8 +36,10 @@
     <p class="lede">
       這裡原本只有一條子線(<code>NS_O</code>,framework+C1 至 C6,共 67 篇,已完整建置)。2026-08-30 盤點原始
       投遞資料夾時發現,實際累積的 Navier–Stokes 相關研究遠不只這一條——<code>NS_O</code> 之外另外還確認
-      <strong>14 條獨立子線</strong>,全站合計 <strong>15 條子線、約 529 個原始檔案</strong>,而且數量仍在持續增加中,
-      確切總數尚未封頂。這個頁面是所有子線的統一入口:先列出目前的盤點狀態,子線內容會依序逐步建置上線,不是一次到位。
+      <strong>15 條獨立子線</strong>,全站合計 <strong>16 條子線、約 529 個原始檔案</strong>,而且數量仍在持續增加中,
+      確切總數尚未封頂(其中第 16 條 <a href="inrs/">NS-INRS</a> 是 2026-08-31 建置 NTLA-O 時,發現原本被算進
+      NTLA-O 檔案數裡的 63 個檔案其實是獨立研究,才拆分出來的——不是新發現的原始檔案,是重新分類)。
+      這個頁面是所有子線的統一入口:先列出目前的盤點狀態,子線內容會依序逐步建置上線,不是一次到位。
     </p>
     <p class="lede">
       子線之間偶有名稱相似但內容不同的情況——例如兩批不同的 <code>NS_DCRP</code> 編號檔案,是研究者用不同理論視角
@@ -61,20 +63,30 @@
       篇修正為完整 55 篇。
     </p>
     <p class="notice">
+      <strong>2026-08-31,同一天內又發現第十六條子線</strong>:建置 <a href="ntla-o/">NTLA-O</a> 時,原本以為它的
+      117 個「交叉引用檔案」是研究者用 NTLA-O 觀察者視角重新處理 NS-DCRP 同編號論文的平行結果。逐篇讀取
+      frontmatter 後發現這個說法只對一部分成立——實際上是 63 篇自稱「Independent Navier–Stokes Research
+      Series」的真正新研究,從 DCRP42 分支出去,一路編號到 DCRP105,原文自己在 DCRP60 明講「DCRP/X72 複合編號
+      正式起算」。已獨立建成 <a href="inrs/">NS-INRS</a> 子線,不再算作 NTLA-O 的附屬項目。
+    </p>
+    <p class="notice">
       <strong>關於作者歸屬</strong>:AMRAL(Autonomous Mathematical Research Agent Loop)本質上是 AI 自主研究
       迴圈——絕大多數輪次的具體數學推導、證明策略、乃至許多輪次自己提出的技術框架,都是 AI 在研究者設定的方向下
       自主產出的,不是研究者本人逐行推導。原始檔案的 <code>author</code> 欄位一律寫「Neo.K / EveMissLab」,
       這是計畫掛名,不區分「這篇是研究者自己想的」與「這篇是 AI 自主研發的」——兩者在檔案層級無法單靠 metadata
       分辨。目前站上唯一明確標記為研究者本人原創理論的是 <a href="ntla-o/">NTLA-O</a>(把「兩個結構是否不同」
       提升為「相對哪個觀察者才判定為不同」的核心構想)——凡是頁面上寫著「研究者原創理論」的地方,指的就是這個
-      意義下的作者原創,其餘子線(包含十一段接力血緣、NS-RMRM、NS-X72)都應讀作 AI 主導的系統性研究成果。
+      意義下的作者原創,其餘子線(包含十一段接力血緣、NS-RMRM、NS-X72、NS-INRS)都應讀作 AI 主導的系統性研究成果——
+      即使 NS-INRS 早期輪次直接運用了 NTLA-O 的觀察者/規範區分工具,實際的數學推導與證明策略仍是 AI 產出的。
       這條界線目前只有這一項明確記錄,如果之後想起還有其他子線的核心構想是研究者本人提出的,回來告訴我們,
       這裡會補上。
     </p>
     <p class="notice">
-      2026-08-31 完成最後一條子線 <a href="x72/">NS-X72</a>——全站規模最大的單一子線,71 輪「純連續證明路線」
-      實驗加 2 篇方法論基礎文件,與十一段接力血緣完全獨立。至此 15 條子線<strong>全部已建置上線</strong>,
-      不再有「已盤點、尚未建置」的項目——子線規模本身仍可能持續增長,但目前已知的每一條都有對應網站內容。
+      2026-08-31 完成 <a href="x72/">NS-X72</a>——71 輪「純連續證明路線」實驗加 2 篇方法論基礎文件,與十一段接力
+      血緣完全獨立,規模是當時全站最大的單一子線。同一天稍後,建置 <a href="ntla-o/">NTLA-O</a> 時又拆分出
+      <a href="inrs/">NS-INRS</a>(63 輪,見上方說明),成為規模第二大的子線。至此 16 條子線
+      <strong>全部已建置上線</strong>,不再有「已盤點、尚未建置」的項目——子線規模本身仍可能持續增長,但目前
+      已知的每一條都有對應網站內容。
     </p>
   </header>
 
@@ -89,7 +101,12 @@
       <a class="case-card" href="ntla-o/">
         <span class="k">NTLA-O · 九篇系列 · 2026-08 核心系列 COMPLETE</span>
         <h3>NTLA-O:廣義嵌套拓樸觀察者論</h3>
-        <p>研究者原創理論,把「兩個結構是否不同」提升為「相對哪個觀察者才判定為不同」。九篇正式系列已上線;另有 117 個以此視角重新處理 NS-DCRP 的交叉引用檔案尚待分類。</p>
+        <p>研究者原創理論,把「兩個結構是否不同」提升為「相對哪個觀察者才判定為不同」。九篇正式系列已上線;其應用在 NS 問題上的完整研究已拆分獨立成 NS-INRS。</p>
+      </a>
+      <a class="case-card" href="inrs/">
+        <span class="k">NS-INRS · 63 篇(DCRP43-58/43-QC/60-105)· 2026-08 COMPLETE</span>
+        <h3>NS-INRS:獨立研究系列</h3>
+        <p>原本藏在 NTLA-O 資料夾裡、被誤認為交叉引用檔案的 DCRP/X72 平行延續研究。DCRP43-58 是同號平行分支,DCRP60 起原文自陳「複合編號正式起算」,一路推進到目前前沿 DCRP105/X72-R88。</p>
       </a>
       <a class="case-card" href="dcrp/">
         <span class="k">NS-DCRP · Cycle VIII · 55 篇(01-55、59)· 2026-08 COMPLETE</span>

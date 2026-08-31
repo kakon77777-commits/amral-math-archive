@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP90 / X72R73:有限時間尾端輸運不可行定理 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP89 留下的唯一馴順尾端存活者——線速供體傳送帶 S_tail^lin,本輪檢驗其是否能與 DCRP88 的有限世系深度動力學相容,並運用 DCRP21 遠場放大、DCRP31 的 PFET、DCRP71 時間切片 Morrey 律及 DCRP82–85 增量/跡/尺度編譯器。證明定理 D90.8(有限時間材料尾端輸運 NO-GO):材料迴路弧若到達半徑 R 並在均勻上界 T*=N*S0 內返回緊緻核心,由相似流變參數公式必須支付 O(R) 速度作用量;在固定濾波尺度下拆分,若濾波誤差承載此作用量則強迫 O(R⁴) 增量跡(已是既知缺陷),若由濾波速度承載,則在有界伸展/馴順世界片上需付出 O(R²) 體積管能量——但原生時間切片 Morrey 律在同一有界時間內只提供 O(R) 能量,對大 R 產生矛盾,由此得出馴順尾端半徑上限 R_tame<∞。結論:D89 的線速供體被完全吸收進增量/絲化/狀態缺陷,不存在獨立的稀疏尾端傳送帶;材料支撐逃逸分支已大致封閉,而 D21 的遠場歐拉源與 D31 的 PFET 則保持獨立、各自成立的">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP90_X72R73_FiniteTimeTailTransport_NoGo_2026-08-19.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP90 / X72R73 · 有限時間尾端輸運不可行定理</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP90 / X72R73</span>
+      <span class="tag">NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP90 / X72R73:有限時間尾端輸運不可行定理</h1>
+    <p class="h1-sub">承接 DCRP89 留下的唯一馴順尾端存活者——線速供體傳送帶 S_tail^lin,本輪檢驗其是否能與 DCRP88 的有限世系深度動力學相容,並運用 DCRP21 遠場放大、DCRP31 的 PFET、DCRP71 時間切片 Morrey 律及 DCRP82–85 增量/跡/尺度編譯器。證明定理 D90.8(有限時間材料尾端輸運 NO-GO):材料迴路弧若到達半徑 R 並在均勻上界 T*=N*S0 內返回緊緻核心,由相似流變參數公式必須支付 O(R) 速度作用量;在固定濾波尺度下拆分,若濾波誤差承載此作用量則強迫 O(R⁴) 增量跡(已是既知缺陷),若由濾波速度承載,則在有界伸展/馴順世界片上需付出 O(R²) 體積管能量——但原生時間切片 Morrey 律在同一有界時間內只提供 O(R) 能量,對大 R 產生矛盾,由此得出馴順尾端半徑上限 R_tame<∞。結論:D89 的線速供體被完全吸收進增量/絲化/狀態缺陷,不存在獨立的稀疏尾端傳送帶;材料支撐逃逸分支已大致封閉,而 D21 的遠場歐拉源與 D31 的 PFET 則保持獨立、各自成立的義務,留給 DCRP91 檢驗剩餘的材料絲化逃逸 R_fil 本身是否獨立或可化約。</p>
+    <div class="claim-box">
+      本輪狀態:NO-GO
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../ancestry-exit-tail-energy-supplier-speed/">DCRP89 / X72R72 · 世系脫離定價與供體速度標準形</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../filamentation-scale-direction-diffusion-compiler/">DCRP91 / X72R74 · 絲化終端消除與方向擴散編譯器</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>48 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP90_X72R73_FiniteTimeTailTransport_NoGo_2026-08-19.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP90_X72R73_FiniteTimeTailTransport_NoGo_2026-08-19.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

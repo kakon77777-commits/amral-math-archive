@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP62 / X72R45:對齊中性壓力相容與N分支收斂 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP61 找到的隱形本徵對齊 Floquet 等式模態(中性平均率 λ*=(2−3γ)/2),追問這個模態能否同時維持完美壓力響應。將本徵向量關係沿材料導數微分,推導出恰當的壓力-黑塞相容條件 E_pΩ=−(λ'+λ+|Ω|²/6)Ω,證明在中性 Floquet 平均下,此壓力缺陷的單週期方向積分嚴格為正,即該模態無法同時滿足無周轉、壓力完美、同宗週期重現三個條件;DCRP61 打開的非仿射伸展「N 分支」因此作為獨立終端分支被關閉,完全收斂吸收進 X∨T 之中。STOP-D62 把秩二延拓壓縮成僅剩 X(X72 壓力/投影缺陷)與 T(同宗周轉)兩條全域出口,交給 DCRP63 判斷何者具有更尖銳的新結構、優先攻擊。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP62_X72R45_AlignedNeutral_PressureGap_XTConfluence_2026-08-18.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP62 / X72R45 · 對齊中性壓力相容與N分支收斂</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP62 / X72R45</span>
+      <span class="tag">收斂</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP62 / X72R45:對齊中性壓力相容與N分支收斂</h1>
+    <p class="h1-sub">承接 DCRP61 找到的隱形本徵對齊 Floquet 等式模態(中性平均率 λ*=(2−3γ)/2),追問這個模態能否同時維持完美壓力響應。將本徵向量關係沿材料導數微分,推導出恰當的壓力-黑塞相容條件 E_pΩ=−(λ'+λ+|Ω|²/6)Ω,證明在中性 Floquet 平均下,此壓力缺陷的單週期方向積分嚴格為正,即該模態無法同時滿足無周轉、壓力完美、同宗週期重現三個條件;DCRP61 打開的非仿射伸展「N 分支」因此作為獨立終端分支被關閉,完全收斂吸收進 X∨T 之中。STOP-D62 把秩二延拓壓縮成僅剩 X(X72 壓力/投影缺陷)與 T(同宗周轉)兩條全域出口,交給 DCRP63 判斷何者具有更尖銳的新結構、優先攻擊。</p>
+    <div class="claim-box">
+      本輪狀態:收斂
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../stress-projection-aligned-neutral-floquet/">DCRP61 / X72R44 · 應力投影與對齊中性Floquet模態</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../pressure-oscillation-floquet-modulation/">DCRP63 / X72R46 · 軸向壓力振盪與Floquet伸展調製</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>20 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP62_X72R45_AlignedNeutral_PressureGap_XTConfluence_2026-08-18.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP62_X72R45_AlignedNeutral_PressureGap_XTConfluence_2026-08-18.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

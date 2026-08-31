@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP50:中心響應仿射不可行性與三分量前沿 · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP49 的中心響應化約 c=B_q=1/2,並結合 DCRP38 仿射/非仿射應變殘量分解、DCRP41 定平面零形變張量,與 X72 第37、42–43 輪的仿射壓力響應缺陷、渦度應力可實現性前沿。將 c=1/2 代回平坦純量表示,證明混合壓力海森 ∇_hP_z 自動為零(五維 X72 缺陷中兩個混合分量恆消),餘下缺陷精確壓縮為三分量;並證明中心剛性定理——典範仿射薄餅(S=A_pan)與非零平面渦度不可並存,仿射應變將強迫渦度為零,構成明確的「精確仿射不可行」。STOP-D50 確立此餘因子不可見中心響應無法實現帶非零渦度的逐點典範仿射薄餅,每個活躍中心倖存者必須攜帶非仿射應變、周轉/抵銷、剩餘三分量壓力缺陷,或求解完整非線性波動-偽程函系統,留待 DCRP51 分析該系統是否強迫 q 為仿射。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP50_CentralResponse_AffineNoGo_WaveEikonal_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP50 · 中心響應仿射不可行性與三分量前沿</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP50</span>
+      <span class="tag">NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP50:中心響應仿射不可行性與三分量前沿</h1>
+    <p class="h1-sub">承接 DCRP49 的中心響應化約 c=B_q=1/2,並結合 DCRP38 仿射/非仿射應變殘量分解、DCRP41 定平面零形變張量,與 X72 第37、42–43 輪的仿射壓力響應缺陷、渦度應力可實現性前沿。將 c=1/2 代回平坦純量表示,證明混合壓力海森 ∇_hP_z 自動為零(五維 X72 缺陷中兩個混合分量恆消),餘下缺陷精確壓縮為三分量;並證明中心剛性定理——典範仿射薄餅(S=A_pan)與非零平面渦度不可並存,仿射應變將強迫渦度為零,構成明確的「精確仿射不可行」。STOP-D50 確立此餘因子不可見中心響應無法實現帶非零渦度的逐點典範仿射薄餅,每個活躍中心倖存者必須攜帶非仿射應變、周轉/抵銷、剩餘三分量壓力缺陷,或求解完整非線性波動-偽程函系統,留待 DCRP51 分析該系統是否強迫 q 為仿射。</p>
+    <div class="claim-box">
+      本輪狀態:NO-GO
+      <span class="note">— 取自檔案自身的 Executive result / STOP 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../pfet-neumann-independence-off-central-response-defect/">DCRP49 · PFET–諾伊曼獨立性與非中心剛性</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../wave-pseudo-eikonal-null-hessian-rigidity/">DCRP51 · 波動偽程函剛性與零海森倖存錐</a></div>
+      <div class="conn-card"><span class="k">NS-INRS 進度</span>9 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP50_CentralResponse_AffineNoGo_WaveEikonal_2026-08-17.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP50_CentralResponse_AffineNoGo_WaveEikonal_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
