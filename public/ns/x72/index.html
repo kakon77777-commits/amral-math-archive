@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-X72 · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-X72 子線:對 Navier–Stokes 全域正則性問題發動的「純連續證明路線」實戰系列,以廣義結構連續統假設(GSCH)為方法論——離散索引在被證明本質離散前,先假設它可被無損連續重積,禁止離散時間步、有限分割、子序列封閉、可數歸納等工具。71 輪中 69 輪已建置(缺 11、14,原始資料夾與所有封存包內皆確認不存在),每輪測試一條純連續路線直到第一個嚴格可定位的 STOP/TRANSITION/ILLEGAL 節點,交棒下一輪,目前累積 75 個 STOP-C 節點。Round 71 是目前前沿,自身列出九項具體待辦,非路線中止。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-X72</p>
+    <h1>NS-X72</h1>
+    <p class="subtitle">Pure-Continuous Proof-Route Experiment · 71 輪中 69 輪已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-X72 是全站規模最大的 NS 子線(71 輪 + 2 篇方法論基礎文件),但它不屬於 <a href="rfp/">NS-RFP</a> 到
+      <a href="rkap/">NS-RKAP</a> 那條十一段接力研究血緣,是完全獨立的另一套實驗方法論。起點是兩篇方法論基礎文件:
+      <strong>《廣義結構連續統假設》(GSCH)</strong>主張整數階、模式序號、有限分割等離散表示,在被證明「本質離散」
+      之前,應先檢驗是否存在無損、動力學閉合的連續重積;《離散本體證明責任原則》把同一原則推廣成一般認識論義務。
+      X72 系列把 GSCH 當成嚴格的證明遊戲規則:每一輪只能使用連續時間、連續空間、連續尺度、PDE/distribution、
+      Lebesgue/Sobolev/Lorentz 類函數空間、積分恆等式、微分不等式等連續工具,<strong>明文禁止</strong>離散時間步、
+      有限分割作為核心步驟、子序列作為封閉機制、可數歸納,直到第一個嚴格可定位的
+      <strong>STOP / TRANSITION / ILLEGAL 節點</strong>——路線走不下去、必須轉向、或被迫偷渡離散工具的那一點。
+    </p>
+    <p class="lede">
+      每一輪從上一輪的 STOP 節點接手,71 輪累積出 75 個編號 STOP-C 節點(部分輪次一次產生兩個),形成一條長長的
+      單向接力鏈,但走法迂迴——常常在某個方向撞牆後回頭,或在兩個獨立方向間來回,而不是單調逼近。名稱裡的
+      「72」來自 Round 01 標題本身的「NS × X 積分 × 24/72 範式實戰」標記,指向幾份未收錄在本次投遞中的內部
+      「X 積分」與「24/72 計算範式」基礎文件(Round 01 自己的來源錨點有列出篇名);「X」則是這條路線追蹤的
+      NS 種子物件本身。這批 checkpoint 系列與 <a href="rmrm/">NS-RMRM</a> 同期展開且互相引用——Round 01 自己的
+      來源錨點就列了一份 <code>NS_RMRM_Proof_Process_Checkpoint_v2</code>,兩條線在方法論上互相參照,但關注的
+      NS 障礙結構彼此獨立,不是同一條血緣的兩個化名。
+    </p>
+    <p class="notice">
+      <strong>誠實揭露</strong>:Round 11 與 Round 14 在原始投遞資料夾與所有 <code>.zip</code> 封存包內都逐一確認
+      不存在(汲取 <a href="dcrp/">NS-DCRP</a> 先前 01/02 兩輪被誤判為「zip 內無法取出」的教訓,這次已逐一拆封
+      核對,不是單憑檔名判斷),是真正的資料缺口,71 輪中實際建置 69 輪。Round 15 自己的交接段落提到 Round 14
+      已建立的臨界商載體 <code>Q(t)</code>、非線性規範與成長恆等式,讓讀者仍能從下一輪的引用間接得知缺失內容
+      的輪廓。從 Round 49 起,約半數輪次(共 23 篇)額外附有 <code>verify_*.py</code> 數值驗證腳本,其中 14 篇
+      再附 <code>.csv</code> 數值/證書資料——這批輪次的「證明」逐漸帶有嚴格區間算術或事後驗證證書的數值成分,
+      不是傳統意義的純解析推導;本頁在對應輪次的摘要中註明「附有數值驗證腳本」,但比照 DCRP 對 CHANGELOG/schema
+      等專案管理文件的處理方式,不逐篇把 23 個 .py + 14 個 .csv 個別建成下載連結。
+    </p>
+    <p class="notice">
+      <strong>目前前沿</strong>:<a href="p/secant-riccati-o-nu-bridge-green-majorant/">Round 71</a> 自己的第 16 節
+      明白列出下一輪「Directional Green Cone / Final Secant Closure」的九項具體待辦,清楚標示為進行中,不是
+      路線中止或判定失敗——這點特別在本頁如實保留,避免讀者誤以為系列已經走到死路。
+    </p>
+  </header>
+
+  <section id="foundations">
+    <h2 class="doc-h2">方法論基礎 · 2 篇</h2>
+    <p class="section-note">全系列 71 輪共用的方法論起點,不是編號 Round,建議先讀這兩篇再進入 Round 01。</p>
+    <div class="case-grid" aria-label="NS-X72 方法論基礎">
+      <a class="case-card" href="p/generalized-structural-continuum-hypothesis/">
+        <span class="k">方法論 · 開篇</span>
+        <h3>廣義結構連續統假設(GSCH)</h3>
+        <p>離散索引在被證明本質離散之前,應先檢驗是否存在無損、動力學閉合的連續重積,並給出三條件與判定標準。</p>
+      </a>
+      <a class="case-card" href="p/ontological-discreteness-proof-obligation/">
+        <span class="k">方法論 · 開篇</span>
+        <h3>離散本體證明責任原則</h3>
+        <p>把 GSCH 推廣成一般認識論義務:主張世界本體離散者,須證明其離散性在所有無損等價表示下都不可消除。</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="phase-1">
+    <h2 class="doc-h2">第一階段:能量、臨界載體與規範幾何(Round 01-15,缺 14)</h2>
+    <p class="section-note">從最直接的能量優先封閉出發,依序測試臨界 carrier、關係幾何、非局部壓力、譜協方差、Gevrey 解析重積、傅立葉三元相位,最終轉入臨界商空間的規範/Hodge 結構。</p>
+    <nav class="case-grid" aria-label="NS-X72 第一階段">
+      <a class="case-card" href="p/01-pure-continuous-energy-route/">
+        <span class="k">X72-01 · 開篇</span>
+        <h3>純連續能量路徑</h3>
+        <p>設定 Pure-Continuous 實驗規則,能量優先路線止於 STOP-C01(能量-臨界標度落差)與 STOP-C02(渦度伸展強制力缺口)。</p>
+      </a>
+      <a class="case-card" href="p/critical-carrier-barrier/">
+        <span class="k">X72-02 · 受阻</span>
+        <h3>純臨界連續載體障壁</h3>
+        <p>測試三條臨界 carrier(H^{1/2}、L^∞_tL^3_x、Kato 不動點),證明臨界載體形成不等於全域控制,三個障壁共同止步。</p>
+      </a>
+      <a class="case-card" href="p/relational-geometry/">
+        <span class="k">X72-03 · 反例</span>
+        <h3>關係幾何與強制缺口</h3>
+        <p>證明單一標量振幅無法保存非線性生成的符號(拒單測定理),幾何已恢復符號判準但動力學尚無強迫定理。</p>
+      </a>
+      <a class="case-card" href="p/geometry-evolution-pressure-constraint/">
+        <span class="k">X72-04 · 轉向</span>
+        <h3>局部幾何非局部壓力缺口</h3>
+        <p>證明壓力海森矩陣本質非局部,局部有限幾何閉合被否證,首次確立局部連續被逼入全域非局部連續的轉變。</p>
+      </a>
+      <a class="case-card" href="p/nonlocal-cancellation-gradient-stress-alignment/">
+        <span class="k">X72-05 · 修正</span>
+        <h3>非局部消去與梯度應力對齊</h3>
+        <p>用應變-渦度正交性投影消去壓力,得到精確 H¹ 應變成長恆等式,梯度應力張量半正定,止於對齊係數強制性缺口。</p>
+      </a>
+      <a class="case-card" href="p/continuous-hierarchy-spectral-covariance/">
+        <span class="k">X72-06 · 延續</span>
+        <h3>連續階層與譜協方差</h3>
+        <p>把導數階層提升為連續實數座標上的場,證明黏性耗散精確等於譜變異數阻尼,無限階層已表示但未被強制封閉。</p>
+      </a>
+      <a class="case-card" href="p/gevrey-analytic-radius-budget/">
+        <span class="k">X72-07 · 證明</span>
+        <h3>連續階層解析重積</h3>
+        <p>證明 Gevrey 生成載體的連續階層重積定理,無限導數階層本身非本質障礙,止於解析半徑預算是否耗盡的缺口。</p>
+      </a>
+      <a class="case-card" href="p/transfer-dispersion-feedback/">
+        <span class="k">X72-08 · 反例</span>
+        <h3>轉移頻散協方差回饋</h3>
+        <p>以顯式反例否證譜變異數在純擴散下必然單調遞減,問題壓縮成協方差比較 ζ_τ,s 是否 ≤1。</p>
+      </a>
+      <a class="case-card" href="p/fourier-triad-phase-coherence/">
+        <span class="k">X72-09 · 反例</span>
+        <h3>傅立葉三元相位相干</h3>
+        <p>證明相位符號靈活性引理:翻轉相對相位即可使遷移量變號,頻率幾何與振幅本身不足以決定符號。</p>
+      </a>
+      <a class="case-card" href="p/triad-phase-dynamics-phase-locking/">
+        <span class="k">X72-10 · 證明</span>
+        <h3>三元相位動力鎖相</h3>
+        <p>證明黏性中性相位旋轉定理(黏性只阻尼振幅不轉相位),持續同號遷移需要相位鎖定,交互作用階數首次浮現。</p>
+      </a>
+      <a class="case-card" href="p/critical-dual-cancellation-tradeoff/">
+        <span class="k">X72-12 · NO-GO</span>
+        <h3>臨界對偶消去取捨</h3>
+        <p>證明 L² 是唯一同時保有投影相容性與輸運反對稱性的度量,但 L² 並非尺度臨界,確立臨界性-消去取捨受限 no-go。</p>
+      </a>
+      <a class="case-card" href="p/critical-quotient-gauge-covariance/">
+        <span class="k">X72-13 · 修正</span>
+        <h3>臨界商空間規範協變</h3>
+        <p>證明真正的臨界對偶是商空間 L^{3/2}/G_{3/2},但逐分量輸運不保持梯度規範,只有純剛性旋轉能兩者兼顧。</p>
+      </a>
+      <a class="case-card" href="p/p-hodge-gauge-hessian-distortion/">
+        <span class="k">X72-15 · 證明</span>
+        <h3>規範黑塞矩陣失真</h3>
+        <p>證明曲率支付二分律與非線性 Hodge 梯度畢氏恆等式,得到成長必要條件 Ξ_Q=Q²H/(ν²D)≳1;Round 14 缺失,但交接內容可由本輪引用間接得知。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-2">
+    <h2 class="doc-h2">第二階段:連續分層、障礙匯流與鎖定動力學(Round 16-30)</h2>
+    <p class="section-note">把危險判準連續分層,證明 Hodge 相干恆等式,追到與 Round 03 最初應變-渦度障礙重新匯流的迴圈,再把匯流核心動力化成角相位鎖定問題,最後量化維持鎖定所需的框架強迫預算。</p>
+    <nav class="case-grid" aria-label="NS-X72 第二階段">
+      <a class="case-card" href="p/layer-cake-superlevel-distortion/">
+        <span class="k">X72-16 · 延續</span>
+        <h3>連續分層與超水平畸變</h3>
+        <p>以連續振幅門檻做 layer-cake 分解,證明全域畸變比是各連續層的加權平均,止於邊界通量缺口。</p>
+      </a>
+      <a class="case-card" href="p/level-surface-hodge-coherence/">
+        <span class="k">X72-17 · 收斂</span>
+        <h3>水平曲面霍奇相干性</h3>
+        <p>證明 Level Hodge-Coherence Identity,把累積通量重新積回整體相干性,文中自陳「這仍非閉合」。</p>
+      </a>
+      <a class="case-card" href="p/weighted-strain-vorticity-obstruction-confluence/">
+        <span class="k">X72-18 · 匯流</span>
+        <h3>加權應變渦度障礙匯流</h3>
+        <p>證明這條長路線與 Round 03 最初的應變-渦度障礙核心重新匯流,形成障礙匯流迴圈而非論證循環。</p>
+      </a>
+      <a class="case-card" href="p/coupled-confluence-middle-strain-quotient-amplitude/">
+        <span class="k">X72-19 · 限縮</span>
+        <h3>耦合匯流中應變商振幅</h3>
+        <p>證明危險活動只能「與 quotient amplitude 重疊」或「逃入低振幅退化」兩者擇一。</p>
+      </a>
+      <a class="case-card" href="p/low-amplitude-degeneracy-intermittency/">
+        <span class="k">X72-20 · NO-GO</span>
+        <h3>低振幅退化間歇性</h3>
+        <p>證明二階矩無法無條件控制四階矩,構造仿射見證顯示零集本身並非自動安全分支。</p>
+      </a>
+      <a class="case-card" href="p/critical-mass-replicator-intermittency-dynamics/">
+        <span class="k">X72-21 · 澄清</span>
+        <h3>臨界質量複製間歇動力學</h3>
+        <p>建立臨界質量 replicator-diffusion 方程,證明黏性提供精確反間歇機制,但 NS 相對源符號未定。</p>
+      </a>
+      <a class="case-card" href="p/relative-source-tilt-curvature/">
+        <span class="k">X72-22 · 分解</span>
+        <h3>相對源連續傾斜曲率</h3>
+        <p>把相對源拆成六項精確分量,把離散矩重積成連續矩階傾斜族,導出精確對數間歇律。</p>
+      </a>
+      <a class="case-card" href="p/confluence-feedback-spectral-gap-leakage/">
+        <span class="k">X72-23 · 條件證明</span>
+        <h3>匯流回饋譜隙洩漏</h3>
+        <p>逐點自閉合猜想被推翻,但證明條件式 Spectral-Gap Trapping Theorem——若 Poincaré 常數有限則條件封閉。</p>
+      </a>
+      <a class="case-card" href="p/critical-mass-conductance-dynamics/">
+        <span class="k">X72-24 · 反例</span>
+        <h3>臨界質量電導動力學</h3>
+        <p>證明「正性不等於混合」,構造 thin-neck witness 顯示純黏性頸部恢復速率可隨分離距離任意變慢。</p>
+      </a>
+      <a class="case-card" href="p/nonlocal-cross-blob-virtual-connectivity/">
+        <span class="k">X72-25 · 解耦</span>
+        <h3>非局部跨團虛擬連接</h3>
+        <p>量出非局部代數耦合可主導高斯頸部通訊,但虛擬連接不蘊含正電導,區分兩個獨立概念。</p>
+      </a>
+      <a class="case-card" href="p/signed-kernel-quadrupole-coherence/">
+        <span class="k">X72-26 · NO-GO</span>
+        <h3>帶號核四極相干性</h3>
+        <p>證明壓力與跨應變核在球面平均下皆零均值有限方差,危險中間應變不蘊含同步號,同步下界被排除。</p>
+      </a>
+      <a class="case-card" href="p/coherence-dynamics-angular-phase-locking/">
+        <span class="k">X72-27 · 動力化</span>
+        <h3>相干動力角相位鎖定</h3>
+        <p>把靜態符號問題轉成角度演化方程,建立非平穩角度消去引理與精確鎖定條件。</p>
+      </a>
+      <a class="case-card" href="p/lock-manifold-stability-dual-strain-saddle/">
+        <span class="k">X72-28 · 證明</span>
+        <h3>鎖定流形雙應變鞍點</h3>
+        <p>證明 Common-Lock Saddle Theorem:凍結應變的主導動力學本身不可能漸近吸引共同鎖定。</p>
+      </a>
+      <a class="case-card" href="p/lock-work-frame-forcing-budget/">
+        <span class="k">X72-29 · 量化</span>
+        <h3>鎖定功與框架強迫預算</h3>
+        <p>定義臨界應變隙暴露量作為不穩定時鐘,證明精確不變鎖定雖可能存在但指數級不穩健。</p>
+      </a>
+      <a class="case-card" href="p/lock-budget-recycling-trace-gap/">
+        <span class="k">X72-30 · 轉向</span>
+        <h3>鎖定預算回收軌跡缺口</h3>
+        <p>證明 Budget Recycling Theorem(框架供給可由既有量控制),但發現真正新障礙是 Eulerian–Lagrangian 缺口。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-3">
+    <h2 class="doc-h2">第三階段:消去重正化與渦度應力可見度(Round 31-45)</h2>
+    <p class="section-note">把鎖定佔據問題化為消去預算的無損記帳,逐步審計每一條「補給通道」是否免費,最後轉向渦度應力的 visible/invisible 分解,測試雙散度自由限制與實際渦度可實現性。</p>
+    <nav class="case-grid" aria-label="NS-X72 第三階段">
+      <a class="case-card" href="p/persistent-lock-occupancy-capacity/">
+        <span class="k">X72-31 · 封閉缺口</span>
+        <h3>持續鎖佔據容量問題</h3>
+        <p>證明 Source–Occupancy Lemma 與 Vanishing-Occupancy Singularization Dichotomy,有條件封閉 Round 30 缺口。</p>
+      </a>
+      <a class="case-card" href="p/source-participation-renormalization/">
+        <span class="k">X72-32 · 封閉缺口</span>
+        <h3>源參與動力學重正化</h3>
+        <p>證明 smooth positive source 具普遍黏性反濃聚結構,但行列式源、正 Q 源、pair kernel 三類危險源無法同機制控制。</p>
+      </a>
+      <a class="case-card" href="p/signed-source-cancellation-renormalization/">
+        <span class="k">X72-33 · 轉向</span>
+        <h3>帶號源消去重正化</h3>
+        <p>改以 Jordan 分解建立帶號源無損記帳系統,提出 Cancellation-First Principle。</p>
+      </a>
+      <a class="case-card" href="p/cancellation-budget-dynamics/">
+        <span class="k">X72-34 · 延續</span>
+        <h3>消去預算的動力學</h3>
+        <p>證明 Kato Equal-Removal Law:擴散只會侵蝕 cancellation reserve,持續消去必須由少數符號一側補給。</p>
+      </a>
+      <a class="case-card" href="p/cancellation-replenishment-closure/">
+        <span class="k">X72-35 · NO-GO</span>
+        <h3>消去補給的封閉性</h3>
+        <p>審計兩條補給供電線,證明均非免費資源,universal Kato absorption 為假。</p>
+      </a>
+      <a class="case-card" href="p/cofactor-pressure-coherence-dynamics/">
+        <span class="k">X72-36 · 反例</span>
+        <h3>餘因子壓力相干動力學</h3>
+        <p>以顯式仿射應變見證直接推翻「universal dephasing」,完美局部仿射鎖定確實可能發生。</p>
+      </a>
+      <a class="case-card" href="p/pressure-response-defect-energy/">
+        <span class="k">X72-37 · 延續</span>
+        <h3>壓力響應缺陷能量</h3>
+        <p>定義仿射響應缺陷並推導精確 PDE,證明局部應變耦合並非 coercive,臨界控制落在 S∈L_t²L_x³。</p>
+      </a>
+      <a class="case-card" href="p/transport-riesz-triple-increment-depletion/">
+        <span class="k">X72-38 · 修正</span>
+        <h3>輸運Riesz交換子消耗</h3>
+        <p>證明 Pressure Self-Commutator Null Identity,把 regularity burden 精確降為 one-total-derivative 臨界端點。</p>
+      </a>
+      <a class="case-card" href="p/critical-endpoint-dini-hardy-compensation/">
+        <span class="k">X72-39 · NO-GO</span>
+        <h3>臨界端點Dini補償</h3>
+        <p>證明不可壓縮性給出 Hardy 補償但無自動 Dini/log 增益,兩條分配路徑都留下對數模數缺口。</p>
+      </a>
+      <a class="case-card" href="p/hardy-bmo-dual-commutator/">
+        <span class="k">X72-40 · 修正</span>
+        <h3>Hardy-BMO對偶交換子</h3>
+        <p>改走對偶路線,化簡到特殊 cofactor commutator,但標準 CRW 估計給不出所需 BMO 目標。</p>
+      </a>
+      <a class="case-card" href="p/special-cofactor-affine-jet-piola-vorticity/">
+        <span class="k">X72-41 · 證明</span>
+        <h3>特殊餘因子與Piola渦度</h3>
+        <p>證明仿射一階增量精確抵消,但二階 jet 曲率非零,分解出 Piola 型渦度應力缺陷。</p>
+      </a>
+      <a class="case-card" href="p/piola-vorticity-visible-invisible-stress/">
+        <span class="k">X72-42 · 證明</span>
+        <h3>Piola渦度可見應力</h3>
+        <p>建立 visible/invisible 正交分解與 Vorticity-Stress Visibility Pythagorean 恆等式。</p>
+      </a>
+      <a class="case-card" href="p/div-div-free-stress-full-wave-cone-potential-gauge/">
+        <span class="k">X72-43 · NO-GO</span>
+        <h3>雙散度自由應力波錐規範</h3>
+        <p>證明 divdiv 算子 wave cone 是滿的,二次 Hardy 型增益不存在——divdiv constraint alone is too weak。</p>
+      </a>
+      <a class="case-card" href="p/vorticity-stress-actual-triad-realizability/">
+        <span class="k">X72-44 · 反例</span>
+        <h3>渦度應力三元可實現性</h3>
+        <p>用真正無散度渦度三元組構造反例,推翻靜態幾何捷徑,static realizability depletion 被駁斥。</p>
+      </a>
+      <a class="case-card" href="p/visibility-replicator-quartic-alignment-dynamics/">
+        <span class="k">X72-45 · 延續</span>
+        <h3>可見度複製子動力學</h3>
+        <p>研究可見度比的精確動力學,證明不存在普遍可見度演化方向,存在週期 Beltrami 純不可見不變分支。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-4">
+    <h2 class="doc-h2">第四階段:貝爾特拉米不可見流形與 Floquet 救援(Round 46-58)</h2>
+    <p class="section-note">把可見應力完全純量化,系統性搜尋「純不可見」不變分支,逐輪排除隱藏候選族,最後用嚴格無限維伴隨尾端論證封閉正性問題——這是系列第一次出現嚴格數值驗證腳本作為輔助證據。</p>
+    <nav class="case-grid" aria-label="NS-X72 第四階段">
+      <a class="case-card" href="p/invisible-escape-amplitude-beltrami-tension/">
+        <span class="k">X72-46 · 純量化簡</span>
+        <h3>不可見逃逸純量化與貝爾特拉米張力消去</h3>
+        <p>把可見應力完全純量化為單一載體,證明近貝爾特拉米逃逸與強間歇性構成逃逸二分法。</p>
+      </a>
+      <a class="case-card" href="p/beltrami-tension-source-lock-dynamics/">
+        <span class="k">X72-47 · 源鎖動力</span>
+        <h3>貝爾特拉米張力消去動力學與源鎖</h3>
+        <p>區分「狀態層級消去」與「源層級消去」,證明貝爾特拉米不變分支同時滿足兩層級。</p>
+      </a>
+      <a class="case-card" href="p/beltrami-normal-hidden-invisible-directions/">
+        <span class="k">X72-48 · 反例</span>
+        <h3>貝爾特拉米法向非強制性與隱藏方向</h3>
+        <p>算出完整 Floquet 法向符號,推翻商強制性,構造「黃金混合貝爾特拉米」純不可見態族。</p>
+      </a>
+      <a class="case-card" href="p/hidden-invisible-source-lock-golden-transversality/">
+        <span class="k">X72-49 · 排除</span>
+        <h3>隱藏不可見流形源鎖與黃金橫截性</h3>
+        <p>證明非線性源在黃金流形上恆非零,排除第一個深層有限振幅隱藏候選族。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/invisible-manifold-source-lock-characteristic-geometry/">
+        <span class="k">X72-50 · 特徵縮減</span>
+        <h3>不可見流形源鎖特徵幾何</h3>
+        <p>建立第二個線性濾波器做特徵分類,存活兩個非貝爾特拉米源隱藏圓。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/second-order-invisible-manifold-viscous-curvature/">
+        <span class="k">X72-51 · NO-GO</span>
+        <h3>二階不可見流形修正與黏性曲率障礙</h3>
+        <p>證明最小修正類存在恆不為零的黏性曲率障礙,但未排除更高邊帶救援。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/coupled-floquet-rescue-source-debt-export/">
+        <span class="k">X72-52 · 轉向</span>
+        <h3>耦合 Floquet 救援與源債輸出</h3>
+        <p>證明救援確實存在但必然向相鄰邊帶輸出源債,救援並非真正封閉。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/floquet-rescue-tail-asymptotics/">
+        <span class="k">X72-53 · 漸近分類</span>
+        <h3>Floquet 救援級聯尾端漸近</h3>
+        <p>證明典型單邊救援遞迴數值上落入成長支而非極小支,完整救援須靠雙側自由度。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/two-sided-minimal-floquet-fredholm-defect/">
+        <span class="k">X72-54 · 數值證據</span>
+        <h3>雙側極小 Floquet 匹配與 Fredholm 缺陷</h3>
+        <p>物理有限截斷穩定顯示兩個局域源隱藏模與伴隨核模的非零目標缺陷。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/adjoint-minimal-symmetry-pairing-reduction/">
+        <span class="k">X72-55 · 對稱化簡</span>
+        <h3>伴隨極小 Floquet 模式與對稱配對化簡</h3>
+        <p>用反射/反線性對稱把目標配對壓縮成單一中央係數的正負號問題。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/rigorous-adjoint-tail-positive-central-coefficient/">
+        <span class="k">X72-56 · 證明</span>
+        <h3>嚴格伴隨尾端界定與中央係數正性</h3>
+        <p>首次以無限維巴拿赫不動點嚴格論證(非數值外插)封閉單一黏性值下的救援問題。附數值驗證腳本。</p>
+      </a>
+      <a class="case-card" href="p/viscosity-continuation-adjoint-positivity-map/">
+        <span class="k">X72-57 · 參數掃描</span>
+        <h3>黏性延拓與伴隨正性分岔映射</h3>
+        <p>證明正性若失敗只能發生在有限核心,八個數量級對數掃描顯示恆為正。附數值驗證腳本與 CSV 資料。</p>
+      </a>
+      <a class="case-card" href="p/small-viscosity-bounded-neutral-adjoint-limit/">
+        <span class="k">X72-58 · 修正</span>
+        <h3>小黏性奇異伴隨極限與有界中性修正項</h3>
+        <p>導出正確端點系統,指出前一輪外插常數其實是截斷污染的假象,修正推論依據。附數值驗證腳本與 CSV 資料。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase-5">
+    <h2 class="doc-h2">第五階段:端點正性與小黏性極限的嚴格化(Round 59-71,目前前沿)</h2>
+    <p class="section-note">把小黏性極限問題轉成嚴格區間算術與事後驗證證書,逐段把黏性參數線從一整段延拓到極小黏性,最終收斂為單一符號錐/散射導數問題——每輪都附數值驗證腳本與 CSV 資料。</p>
+    <nav class="case-grid" aria-label="NS-X72 第五階段">
+      <a class="case-card" href="p/endpoint-jost-graph-rigorous-positive-functional/">
+        <span class="k">X72-59 · 封閉缺口</span>
+        <h3>端點Jost正格林泛函定理</h3>
+        <p>以區間算術嚴格證得中心 Green 泛函正性,封閉端點正性子缺口。</p>
+      </a>
+      <a class="case-card" href="p/singular-boundary-layer-wkb-matching/">
+        <span class="k">X72-60 · 數值驗證</span>
+        <h3>奇異邊界層WKB匹配律</h3>
+        <p>發現真正的衰減尺度是三次 WKB 律 ν^(-1/3),數值驗證匹配收斂但尚未升格為定理。</p>
+      </a>
+      <a class="case-card" href="p/fast-slow-stable-bundle-optimal-matching-exponent/">
+        <span class="k">X72-61 · 修正</span>
+        <h3>快慢穩定叢最佳匹配指數</h3>
+        <p>把三維極小叢降為一維,重新平衡誤差項得到修正的最佳 overlap 指數 α*=2/7。</p>
+      </a>
+      <a class="case-card" href="p/neutral-cancellation-restored-quarter-power-matching/">
+        <span class="k">X72-62 · 精化</span>
+        <h3>中性殘差消去與四分冪匹配律</h3>
+        <p>證明中性殘差精確抵消至三次階,把最佳指數修回 α*=1/4,恢復四分之一冪匹配律。</p>
+      </a>
+      <a class="case-card" href="p/fast-difference-schur-symmetrized-slow-gauge/">
+        <span class="k">X72-63 · 證明</span>
+        <h3>快差分Schur消去與對稱慢規範</h3>
+        <p>證明 Fast-Difference Schur Theorem,快扇區被算子層級精確消去,缺口收斂為單一慢投影選取問題。</p>
+      </a>
+      <a class="case-card" href="p/validated-viscosity-half-line-positive-adjoint/">
+        <span class="k">X72-64 · 證明</span>
+        <h3>驗證黏性半線正伴隨定理</h3>
+        <p>首次把一整段正黏性參數線(ν≥10⁻⁴)升格為定理,而非零星取樣點。</p>
+      </a>
+      <a class="case-card" href="p/banded-validated-viscosity-extend-to-1e6/">
+        <span class="k">X72-65 · 延續</span>
+        <h3>帶寬事後驗證黏性延拓</h3>
+        <p>以帶寬證書降低驗證成本,把定理範圍延拓到 ν≥10⁻⁶。</p>
+      </a>
+      <a class="case-card" href="p/fixed-size-jost-riccati-microscopic-anchor/">
+        <span class="k">X72-66 · 轉向</span>
+        <h3>固定尺寸Jost-Riccati圖錨定</h3>
+        <p>證明 Central Riccati Readout Theorem,證書記憶體降為 O(1),徹底移除儲存瓶頸。</p>
+      </a>
+      <a class="case-card" href="p/log-viscosity-riccati-tangent-scattering-derivative/">
+        <span class="k">X72-67 · 縮減</span>
+        <h3>對數黏性Riccati切向散射導數</h3>
+        <p>把橋接弱化為對散射導數積分的粗略有界性要求,數值診斷遠低於粗糙充分界。</p>
+      </a>
+      <a class="case-card" href="p/central-sign-cone-coarse-bridge-target/">
+        <span class="k">X72-68 · 粗化</span>
+        <h3>中央符號錐粗糙橋接目標</h3>
+        <p>把待證極小量換算成兩個 O(1) 鄰近量的符號問題,實際數值餘裕達三至五個數量級。</p>
+      </a>
+      <a class="case-card" href="p/rank-one-scattering-tangent-affine-endpoint-repair/">
+        <span class="k">X72-69 · 修正</span>
+        <h3>秩一散射切向與仿射端點修正</h3>
+        <p>修正前幾輪端點代理的技術缺陷,證明一階運動只有單一純量自由度。</p>
+      </a>
+      <a class="case-card" href="p/dual-scalar-volterra-rescaled-riccati-kernel/">
+        <span class="k">X72-70 · 精化</span>
+        <h3>對偶秩一Riccati核</h3>
+        <p>證明局部黏性切向源精確為秩一,數值核絕對和遠低於所需充分界。</p>
+      </a>
+      <a class="case-card" href="p/secant-riccati-o-nu-bridge-green-majorant/">
+        <span class="k">X72-71 · 前沿(目前最新)</span>
+        <h3>正割Riccati線性黏性Jost橋</h3>
+        <p>證明 Secant Riccati Volterra Identity,將關鍵不等式壓成單一「方向性 Green 因子錐」猜想,自陳九項具體待辦,進行中。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      Round 01-64 的原始檔案多數已是資料夾中的獨立 <code>.md</code>;Round 65-71 只以
+      <code>Round_and_Checkpoint.zip</code> 封存包形式存在(每包含論文 <code>.md</code>、對應的巨型 checkpoint
+      日誌、部分含 <code>verify_*.py</code> 與 <code>.csv</code>)。與 <a href="rmrm/">NS-RMRM</a> 相同,X72
+      也有一份持續增長的 52 版本 <code>PureContinuous_Checkpoint</code> 日誌(v2 至 v64,同樣缺 v15,最大版本
+      已逾 1.5MB),checkpoint 版本號同樣與本系列 Round 編號大致對應——但因 Round 論文本身已個別發布且逐篇易讀,
+      本頁不再重複揭露整份 checkpoint 日誌,只在此註記其存在與規模,原始資料夾保留完整版本。
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

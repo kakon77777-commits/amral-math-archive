@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-15:規範黑塞矩陣失真 · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="承接Round14(本資料夾中缺失,但本輪交接段落載明已建立臨界商載體Q(t)、最優代表元v=u+∇q之非線性規範div(|v|v)=0,及成長恆等式(1/3)dQ³/dt+νD=I_Q),本輪直接分析規範對∇²q的限制。證明曲率支付二分律(正向規範曲率須由物理壓縮或橫向規範凹性支付)與加權跡消去∫r³Δq=0,顯示只有偏斜規範曲率才驅動臨界成長;並證明非線性Hodge梯度畢氏恆等式E_U^{(M)}=D+H(H為非負規範黑塞失真能量),得到成長必要條件Ξ_Q=Q²H/(ν²D)≳1,同時以顯式軸對稱漩渦場反例證明規範條件並不自動蘊含權重的A_2正則性。本輪止於STOP-C19(加權規範黑塞/商耗散缺口):尚缺H≲Q^{-2}ν²D或其可積替代式,交棒下一輪透過連續layer-cake分解追蹤Ξ_Q的動力學。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round15_PureContinuous_pHodge_GaugeHessianDistortion_v0.1_2026-08-16.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-15 · 規範黑塞矩陣失真</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · 15</span>
+      <span class="tag">證明</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-15:規範黑塞矩陣失真</h1>
+    <p class="h1-sub">承接Round14(本資料夾中缺失,但本輪交接段落載明已建立臨界商載體Q(t)、最優代表元v=u+∇q之非線性規範div(|v|v)=0,及成長恆等式(1/3)dQ³/dt+νD=I_Q),本輪直接分析規範對∇²q的限制。證明曲率支付二分律(正向規範曲率須由物理壓縮或橫向規範凹性支付)與加權跡消去∫r³Δq=0,顯示只有偏斜規範曲率才驅動臨界成長;並證明非線性Hodge梯度畢氏恆等式E_U^{(M)}=D+H(H為非負規範黑塞失真能量),得到成長必要條件Ξ_Q=Q²H/(ν²D)≳1,同時以顯式軸對稱漩渦場反例證明規範條件並不自動蘊含權重的A_2正則性。本輪止於STOP-C19(加權規範黑塞/商耗散缺口):尚缺H≲Q^{-2}ν²D或其可積替代式,交棒下一輪透過連續layer-cake分解追蹤Ξ_Q的動力學。</p>
+    <div class="claim-box">
+      本輪狀態:證明
+      <span class="note">— 取自檔案自身的 objective / STOP-TRANSITION-ILLEGAL 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../critical-quotient-gauge-covariance/">X72-13 · 臨界商空間規範協變</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../layer-cake-superlevel-distortion/">X72-16 · 連續分層與超水平畸變</a></div>
+      <div class="conn-card"><span class="k">NS-X72 進度</span>Round 15 / 71(全系列缺 11、14,共 69 篇已上線)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round15_PureContinuous_pHodge_GaugeHessianDistortion_v0.1_2026-08-16.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round15_PureContinuous_pHodge_GaugeHessianDistortion_v0.1_2026-08-16.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

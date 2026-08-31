@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-71:正割Riccati線性黏性Jost橋 · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="承接Round70在極小ν下切向核與局部源產生不必要抵消的困境(STOP-C74),本輪改比較正割差ΔR_n=R_n^ν-R_n^0而非切向導數,證明「Secant Riccati Volterra Identity」(精確有限差分、無Taylor餘項):局部源由O(ν)降為O(ν²),對寬度~ν^(-1/3)的過渡層求和後,中心圖位移自然得到R₁^ν-R₁^0=O(ν),與Round60數值觀測的線性匹配律吻合;並在Round69修正後的仿射端點座標(條件數僅1.447、1.579)下建立「Central Secant-Cone Bridge Lemma」——若‖R₁^ν-R₁^0‖≤8×10⁴ν對0<ν≤10⁻⁶成立,則整段a₃,±(ν)>0。本輪嚴格證明(非取樣)兩纖維的代數尾係數界與三次WKB包絡求和界(<34、與黏性無關),合併得n≥100源預算<5.51×10⁴ν,但支撐此結論所需的「方向性Green因子錐」不等式本身尚未證明,缺口為STOP-C75,明確標示T_C→D=尚未到達。本輪第16節明白列出下一輪(Directional G">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round71_PureContinuous_SecantRiccati_ONuBridge_GreenMajorant_v0.1_2026-08-18.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-71 · 正割Riccati線性黏性Jost橋</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · 71</span>
+      <span class="tag">前沿(目前最新)</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-71:正割Riccati線性黏性Jost橋</h1>
+    <p class="h1-sub">承接Round70在極小ν下切向核與局部源產生不必要抵消的困境(STOP-C74),本輪改比較正割差ΔR_n=R_n^ν-R_n^0而非切向導數,證明「Secant Riccati Volterra Identity」(精確有限差分、無Taylor餘項):局部源由O(ν)降為O(ν²),對寬度~ν^(-1/3)的過渡層求和後,中心圖位移自然得到R₁^ν-R₁^0=O(ν),與Round60數值觀測的線性匹配律吻合;並在Round69修正後的仿射端點座標(條件數僅1.447、1.579)下建立「Central Secant-Cone Bridge Lemma」——若‖R₁^ν-R₁^0‖≤8×10⁴ν對0<ν≤10⁻⁶成立,則整段a₃,±(ν)>0。本輪嚴格證明(非取樣)兩纖維的代數尾係數界與三次WKB包絡求和界(<34、與黏性無關),合併得n≥100源預算<5.51×10⁴ν,但支撐此結論所需的「方向性Green因子錐」不等式本身尚未證明,缺口為STOP-C75,明確標示T_C→D=尚未到達。本輪第16節明白列出下一輪(Directional Green Cone/Final Secant Closure)的九項具體待辦——包括改用快Schur架構、證明n⁻²代數因子、以Round60穩定乘子建立過渡後指數衰減、認證前99層並殺死終端正割配對——顯示此路線在系列目前最後一輪內仍被視為進行中、尚未收尾或放棄,並非判定失敗或改道;附有數值驗證腳本與CSV資料。</p>
+    <div class="claim-box">
+      本輪狀態:前沿(目前最新)
+      <span class="note">— 取自檔案自身的 objective / STOP-TRANSITION-ILLEGAL 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../dual-scalar-volterra-rescaled-riccati-kernel/">X72-70 · 對偶秩一Riccati核</a></div>
+      
+      <div class="conn-card"><span class="k">NS-X72 進度</span>Round 71 / 71(全系列缺 11、14,共 69 篇已上線)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round71_PureContinuous_SecantRiccati_ONuBridge_GreenMajorant_v0.1_2026-08-18.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round71_PureContinuous_SecantRiccati_ONuBridge_GreenMajorant_v0.1_2026-08-18.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

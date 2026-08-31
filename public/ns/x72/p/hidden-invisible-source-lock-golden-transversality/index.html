@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-49:隱藏不可見流形源鎖與黃金橫截性 · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="承接Round48找到的黃金混合貝爾特拉米純不可見流形,本輪直接測試該流形上狀態消去是否也蘊含源消去。結果證明黏性源在黃金比例根上精確相切,但非線性源在任何非平凡混合下都不為零,可見度以正的二階曲率精確噴出,故整個黃金隱藏流形除了純貝爾特拉米軸線之外都不是真正的NS不變分支,從而排除了第一個深層有限振幅隱藏候選族。Route停在STOP-C53(隱藏狀態/非線性源橫截性缺口):狀態層級的隱藏並不蘊含動力學上的隱藏,交由下一輪把源消去線性化並建在整個不可見流形上做系統性分類;本輪並附有數值驗證腳本。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round49_PureContinuous_HiddenInvisible_SourceLock_GoldenTransversality_v0.1_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-49 · 隱藏不可見流形源鎖與黃金橫截性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · 49</span>
+      <span class="tag">排除</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-49:隱藏不可見流形源鎖與黃金橫截性</h1>
+    <p class="h1-sub">承接Round48找到的黃金混合貝爾特拉米純不可見流形,本輪直接測試該流形上狀態消去是否也蘊含源消去。結果證明黏性源在黃金比例根上精確相切,但非線性源在任何非平凡混合下都不為零,可見度以正的二階曲率精確噴出,故整個黃金隱藏流形除了純貝爾特拉米軸線之外都不是真正的NS不變分支,從而排除了第一個深層有限振幅隱藏候選族。Route停在STOP-C53(隱藏狀態/非線性源橫截性缺口):狀態層級的隱藏並不蘊含動力學上的隱藏,交由下一輪把源消去線性化並建在整個不可見流形上做系統性分類;本輪並附有數值驗證腳本。</p>
+    <div class="claim-box">
+      本輪狀態:排除
+      <span class="note">— 取自檔案自身的 objective / STOP-TRANSITION-ILLEGAL 節點,原意照登,非全文逐字翻譯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一輪</span><a href="../beltrami-normal-hidden-invisible-directions/">X72-48 · 貝爾特拉米法向非強制性與隱藏方向</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../invisible-manifold-source-lock-characteristic-geometry/">X72-50 · 不可見流形源鎖特徵幾何</a></div>
+      <div class="conn-card"><span class="k">NS-X72 進度</span>Round 49 / 71(全系列缺 11、14,共 69 篇已上線)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round49_PureContinuous_HiddenInvisible_SourceLock_GoldenTransversality_v0.1_2026-08-17.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round49_PureContinuous_HiddenInvisible_SourceLock_GoldenTransversality_v0.1_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

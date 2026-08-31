@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS 研究特區 · AMRAL</title>
-<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。已建置 14 條,其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_RMRM 是 Cycle VIII(DCRP)本身的原始過程日誌而非獨立血緣，NS_O、NTLA-O 為另兩條獨立線。其餘 1 條子線(NS_X72)尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
+<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。全部 15 條已建置:其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_RMRM 是 Cycle VIII(DCRP)本身的原始過程日誌而非獨立血緣，NS_X72 是規模最大的獨立純連續證明路線實驗(71 輪、缺 11/14)，NS_O、NTLA-O 為另兩條獨立線。子線規模仍可能持續增長，誠實列出目前進度。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -59,6 +59,11 @@
       發現 NS-DCRP 首頁先前漏建 DCRP-01、02 兩輪(誤植為「只有 zip、無法建頁」),已回頭補建,NS-DCRP 從 53
       篇修正為完整 55 篇。
     </p>
+    <p class="notice">
+      2026-08-31 完成最後一條子線 <a href="x72/">NS-X72</a>——全站規模最大的單一子線,71 輪「純連續證明路線」
+      實驗加 2 篇方法論基礎文件,與十一段接力血緣完全獨立。至此 15 條子線<strong>全部已建置上線</strong>,
+      不再有「已盤點、尚未建置」的項目——子線規模本身仍可能持續增長,但目前已知的每一條都有對應網站內容。
+    </p>
   </header>
 
   <section id="flagship">
@@ -83,6 +88,11 @@
         <span class="k">NS-RMRM · Cycle VIII 過程日誌 · 1 篇框架定義 · 2026-08</span>
         <h3>NS-RMRM:數學家逆向研究矩陣</h3>
         <p>不是獨立血緣,而是 NS-DCRP 的 52 版本原始研究日誌——checkpoint 版本號與 DCRP 輪次一一對應。已建置其中真正獨立的方法論貢獻:RMRM 路由框架本身(11 primitives+38 operators+28 dynamics+10 數學家 fingerprint 模式)。</p>
+      </a>
+      <a class="case-card" href="x72/">
+        <span class="k">NS-X72 · 獨立方法論 · 71 篇(缺 11、14)+ 2 篇基礎文件 · 2026-08</span>
+        <h3>NS-X72:純連續證明路線實驗</h3>
+        <p>全站規模最大的子線,與十一段接力血緣完全獨立。以廣義結構連續統假設(GSCH)為方法論規則,逐輪測試純連續證明路線直到 STOP/TRANSITION/ILLEGAL 節點,累積 75 個編號 STOP-C 節點。Round 71 目前前沿,自陳九項待辦、進行中。</p>
       </a>
       <a class="case-card" href="idrp/">
         <span class="k">NS-IDRP · Cycle IX · 4 篇 · 2026-08 COMPLETE</span>
@@ -137,23 +147,9 @@
     </div>
   </section>
 
-  <section id="pending">
-    <h2 class="doc-h2">已盤點,尚未建置</h2>
-    <p class="section-note">
-      以下子線的原始檔案已確認存在於研究資料夾中,但尚未讀取、分類、建成網站內容——誠實列出檔案數與初步定位,不是佔位符也不是承諾建置順序。
-    </p>
-    <div class="case-grid" aria-label="尚未建置子線">
-      <div class="case-card placeholder">
-        <span class="k">156 個檔案</span>
-        <h3>NS_X72</h3>
-        <p>目前規模最大、也是最後一條未建子線,與 <a href="ntla-o/">NTLA-O</a>、<a href="dcrp/">NS-DCRP</a> 兩條子線在檔名中互有交叉編號(如 X72R83),彼此關聯尚待整理釐清。</p>
-      </div>
-    </div>
-  </section>
-
   <p class="notice">
-    盤點時間 2026-08-30,以上為原始投遞資料夾的即時檔案計數,非最終定案——子線數量與規模預期會持續變動。
-    子線內容陸續建置時會回來更新此頁,已建置的子線會從「尚未建置」移到上方「已建置」區塊。
+    盤點時間 2026-08-30,建置完成 2026-08-31——15 條子線全部已建置上線。子線規模本身(尤其是原始研究仍在
+    持續產出的部分)預期還會變動,若發現新增內容會回來更新此頁。
   </p>
 
   <footer class="sitefoot">
