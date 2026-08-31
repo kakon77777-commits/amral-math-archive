@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-CFOP · NS · AMRAL</title>
+<meta name="description" content="AMRAL's NS-CFOP (Navier–Stokes Causal Forest Obstruction Program) sub-line: Cycle V, all 3 rounds live. Continues NS-ANP Cycle IV's horizon causal forest, proving a normalized causal-cutset capacity theorem and a spatial-scale forest capacity bound; the final audit in CFOP-03 finds that standard finite budgets are summable per scale and cannot exclude an infinite cascade, defining the 'Forest Coercive Budget Problem' and handing off to NS-FCBP. Global regularity remains fully OPEN.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/cfop/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/cfop/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/cfop/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About (中文)</a>
+  <a class="link" href="../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../ns/cfop/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS Zone</a> · NS-CFOP</p>
+    <h1>NS-CFOP</h1>
+    <p class="subtitle">Navier–Stokes Causal Forest Obstruction Program · Cycle V · 3/3 built · global regularity OPEN</p>
+    <p class="lede">
+      NS-CFOP continues from <a href="../anp/"><strong>NS-ANP Cycle IV</strong></a>: relative to ANP's own
+      definitions, ANP proved CN_Forest (an actual horizon causal forest exists), but atomic-level necessity (CN3)
+      remains OPEN — the true pre-singular causal object may be a horizon-unbounded DAG/forest, not a single
+      persistent lineage. CFOP therefore recasts the problem from "can every infinite path be blocked?" to "can the
+      entire causal forest traverse every causal cutset without paying an impossible total dynamical cost?" Three
+      rounds carry this forward: <strong>CFOP-01</strong> proves a normalized causal-cutset capacity theorem and an
+      action–congestion duality; <strong>CFOP-02</strong> quantifies the forest's available spatial-scale capacity;
+      <strong>CFOP-03</strong> completes the Cycle V final audit.
+    </p>
+    <p class="notice">
+      CFOP-03's audit concludes that <strong>standard finite Navier–Stokes budgets cannot close the forest
+      obstruction</strong> — the Leray enstrophy-time budget and the energy-class negative-Sobolev forcing budget
+      are each summable per parabolic scale (O(R) and O(R^(4/3)) respectively), and neither alone can exclude an
+      infinite geometric cascade. It formally defines the <strong>"Forest Coercive Budget Problem"</strong> and
+      hands off to <strong>"NS-FCBP: Navier–Stokes Forest Coercive Budget Program."</strong> CFOP is the middle
+      segment of this relay: <a href="../anp/">NS-ANP</a> (Cycle IV) → <a href="../cfop/">NS-CFOP</a> (Cycle V) →
+      <a href="../fcbp/">NS-FCBP</a> (Cycle VI) → <a href="../morp/">NS-MORP</a> (Cycle VII) →
+      <a href="../dcrp/">NS-DCRP</a>.
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle V, three rounds · The Three-Paper Cycle</h2>
+    <p class="section-note">
+      Dependency chain: causal-cutset capacity → spatial-scale capacity → universal budget audit and closure. Reading in order is recommended — each round takes the previous one's results as given.
+    </p>
+    <nav class="case-grid" aria-label="NS-CFOP three rounds">
+      <a class="case-card" href="./p/01-diffuse-horizon-forest-cutsets/">
+        <span class="k">CFOP-01</span>
+        <h3>Diffuse Horizon Causality, Causal Cutsets, and Action–Congestion Duality</h3>
+        <p>Proves a normalized causal-cutset capacity theorem and an action–congestion duality inequality, yielding a conditional forest-cutset obstruction principle. Opens Cycle V.</p>
+      </a>
+      <a class="case-card" href="./p/02-spatial-scale-forest-capacity/">
+        <span class="k">CFOP-02</span>
+        <h3>Spatial-Scale Atomization, Forest Capacity, and Diffuse-Cascade Rigidity</h3>
+        <p>Quantifies the forest's available spatial-scale capacity, proves bounded capacity forces a strong atom to exist, and introduces the SPARSE-GUARD regularization interface.</p>
+      </a>
+      <a class="case-card" href="./p/03-finite-forest-obstruction-audit/">
+        <span class="k">CFOP-03 · final audit</span>
+        <h3>Finite Forest Obstruction, Universal Budget Audit, and Cycle-V Closure</h3>
+        <p>The audit finds standard finite budgets are summable per scale and cannot exclude an infinite cascade. Defines the Forest Coercive Budget Problem and hands off to NS-FCBP.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">On the source file format</h2>
+    <p class="section-note">
+      The three rounds exist in the source drop only as <code>.zip</code> release bundles (each containing the
+      paper <code>.md</code>, a versioned roadmap, CHANGELOG, etc). This page extracts and publishes only each
+      round's core paper <code>.md</code> and the Cycle V final handoff document; the roadmap/CHANGELOG/schema
+      files inside each bundle are internal project-management documents and are not published.
+      <a href="./files/NS_CFOP_CYCLE_V_HANDOFF_v1.0.md" download>Download the Cycle V handoff, original .md (English)</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS Zone</a>
+    <span>SHA-256-verified per round · original bytes, not repackaged</span>
+  </footer>
+</div>
+</body>
+</html>

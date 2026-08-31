@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFOP-02: Spatial-Scale Atomization, Forest Capacity, Enstrophy Cutsets, Driver Interfaces, and Diffuse-Cascade Rigidity · NS-CFOP · NS · AMRAL</title>
+<meta name="description" content="CFOP series round 2, Cycle V. Quantifies the forest's available spatial-scale capacity: bounded weight mass across a footprint and dyadic shells forces a strong spatial-scale atom to exist, or forces shell-span/scale-span growth or state-tail escape. Introduces the SPARSE-GUARD regularization interface.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/cfop/p/02-spatial-scale-forest-capacity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/cfop/p/02-spatial-scale-forest-capacity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/cfop/p/02-spatial-scale-forest-capacity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/cfop/p/02-spatial-scale-forest-capacity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CFOP</a>
+    <span>/</span>
+    <span>CFOP-02 · Spatial-Scale Atomization, Forest Capacity, Enstrophy Cutsets, Driver Interfaces, and Diffuse-Cascade Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle V</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CFOP-02: Spatial-Scale Atomization, Forest Capacity, Enstrophy Cutsets, Driver Interfaces, and Diffuse-Cascade Rigidity</h1>
+    <p class="h1-sub">Spatial–Scale Atomization, Forest Capacity, Enstrophy Cutsets, Driver Interfaces, and Diffuse-Cascade Rigidity</p>
+    <p class="h1-sub">CFOP-01 proved a forest-cutset inequality on source-dominated dangerous cutsets, and also proved that fresh-source atomization forces effective multiplicity and branch entropy to grow. The next question: can the forest push causal congestion arbitrarily small simply by spreading itself across more and more locations and scales? This paper quantifies the forest's available spatial-scale capacity. Introducing wavelength cells and spatial-scale forest capacity, it proves: for a state with weight mass compact within a radius-R footprint and W dyadic shells, there must be a strongest spatial-scale atom of relative size at least c(1-ε)/(W(1+2^J R)³) — so without a strong atom, either the shell span/scale span must grow or the state tail must escape. It defines effective spatial-scale multiplicity and an entropy upper bound, localizes CFOP-01's dual congestion to the wavelength-cell level, and proves both a source-side action–congestion duality and a new propagation-side "state–congestion duality" — the latter coupling directly to the Leray finite-enstrophy-time budget, giving a universal measure upper bound on low-congestion propagation-dominated cutsets. On source-dominated cutsets, high effective dual capacity under a fixed total-load cap forces the coercive action to be proportional to the capacity per unit cutset duration. It introduces the SPARSE-GUARD interface: if the spatial atomization satisfies an existing one-dimensional sparseness/analytic-regularity criterion, that branch enters regularization; otherwise it remains a non-sparse capacity branch.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../01-diffuse-horizon-forest-cutsets/">CFOP-01 · Diffuse Horizon Causality, Causal Cutsets, Action–Congestion Duality, and Forest Obstruction</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../03-finite-forest-obstruction-audit/">CFOP-03 · Finite Forest Obstruction, Universal Budget Audit, Negative-Sobolev Forcing, Sparse/Dense Geometry, and Cycle-V Closure</a></div>
+      <div class="conn-card"><span class="k">NS-CFOP progress</span>2 / 3</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CFOP</a>
+    <a href="../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
