@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-RFP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-RFP(Navier–Stokes Reverse Formation Program)子線:Cycle I,整條研究血緣(RFP 到 RKAP,共十一段)最早的起點,全 12 篇已上線。定義 State/Edge/Guard/Escape/Closure 形式架構與 Chain Necessity、Finite Obstruction 兩終極義務,把 NS_O 自身的 C3-J 到 C3-O 系列正式整合為防護庫,終審把危險核心化簡成三重發散作用交集,交棒 NS-CSP(Cycle II)。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-RFP</p>
+    <h1>NS-RFP</h1>
+    <p class="subtitle">Navier–Stokes Reverse Formation Program · Cycle I · 12/12 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-RFP 是整條研究血緣(CSP 到 RKAP)可追溯到的<strong>最早起點</strong>,也是唯一一條與
+      <a href="../o/">NS_O</a> 自身內容直接交織的子線:RFP-01 開篇明講「此前的研究主線分析了臨界範數、應變幾何、
+      佔據率、Betchov 結構、邊界修正、伴隨平衡、算子耗盡」,並以 <strong>C3-O 的核心 NO-GO 作為本系列的直接起點</strong>。
+      RFP-06 把 C3-O 的伴隨截止正式升級為形成傳輸工具,RFP-08 進一步把 <strong>C3-J 到 C3-N</strong> 系列的防護結果
+      正式整合進 RFP 的防護庫——這些都是 <a href="../o/">NS_O</a> 自己 C3 系列裡已經上線的輪次,RFP 把它們當作
+      既有工具重新利用,不是重複或抄襲。十二篇一路推進:<strong>RFP-01</strong> 定義 State/Edge/Guard/Escape/Closure
+      形式架構,<strong>RFP-02~05</strong> 建立首次穿越骨架與精確母世系,<strong>RFP-06~08</strong> 實現邊間橋接、
+      整合 C3-J..O、解析記憶深度,<strong>RFP-09~10</strong> 把逃逸機制壓成九個核心稅並稽核完備性,
+      <strong>RFP-11~12</strong> 引入路徑式強制作用,完成 Cycle I 終審。
+    </p>
+    <p class="notice">
+      RFP-12 的結論是:假設有限時間奇異點存在,在共同定理假設下可化簡到「三重發散作用核心」
+      𝔯_danger = 𝔇_RFP ∩ D_mid ∩ D_SV ∩ D_freq 中的一條路徑,但<strong>這個危險核心目前無法被證明為空</strong>——
+      用已建立的不等式辦不到。正式把嚴謹結果重編譯成標準 PDE 語言,交棒給 <strong>「NS-CSP:Navier–Stokes 強制同步
+      計畫」(Cycle II)</strong>——RFP-12 的三重作用核心正是 CSP-01 開篇同步的兩個目標(𝒜_mid 中應變作用、
+      𝒜_freq,ε 移動頻率視窗作用)。至此整條研究血緣完整:<a href="../rfp/">NS-RFP</a>(I)→
+      <a href="../csp/">NS-CSP</a>(II)→ <a href="../drc/">NS-DRC</a>(III)→ <a href="../anp/">NS-ANP</a>(IV)→
+      <a href="../cfop/">NS-CFOP</a>(V)→ <a href="../fcbp/">NS-FCBP</a>(VI)→ <a href="../morp/">NS-MORP</a>(VII)→
+      <a href="../dcrp/">NS-DCRP</a>(VIII)→ <a href="../idrp/">NS-IDRP</a>(IX)→ <a href="../tskr/">NS-TSKR</a>(X)→
+      <a href="../rkap/">NS-RKAP</a>(XI,目前前沿)——十一段接力,從最早的起點到目前的研究前沿全部上線。
+    </p>
+    <p class="notice">
+      <strong>誠實揭露一項發現</strong>:本子線的原始資料夾中,除了 12 輪發布包之外,還單獨放著一份
+      <code>NS_C3O_AdjointCore_BalanceDynamicsSeparation_v0.2.md</code>——比 <a href="../o/">NS_O</a> 網站目前
+      實際上線的 <code>v0.1</code> 版本更新。v0.2 的修訂說明明確寫著「本版相對 v0.1 的核心修正不是文句潤飾,
+      而是 theorem-safety 強化」,包含修正符號碰撞、把部分恆等式改寫成可直接核對的逐點散度引理、修正一處漸近記號方向
+      錯誤(需要下界卻標成上界)、把 ρ→0 的結論從可能過度宣稱改成誠實的「不可辨識性/NO-GO」。這代表 NS_O 網站上的
+      C3-O 輪次目前可能不是最新版本——已一併存檔於本頁,是否回頭更新 NS_O 的 C3-O 頁面,留待後續決定。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle I 十二篇 · The Twelve-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:形式架構 → 首次穿越骨架 → 精確母世系 → 邊間橋接 → 高原壓縮 → 記憶深度 → 統一稅收 → 防護稽核 →
+      路徑式作用 → 封階。建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-RFP 十二篇">
+      <a class="case-card" href="./p/01-singularity-formation-ancestry/">
+        <span class="k">RFP-01</span>
+        <h3>奇異點形成世系與有限障礙架構</h3>
+        <p>定義 State/Edge/Guard/Escape/Closure 形式架構,以 C3-O 的核心 NO-GO 為起點。Cycle I 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-critical-uv-first-passage/">
+        <span class="k">RFP-02</span>
+        <h3>臨界紫外首次穿越骨架與非線性來源債務</h3>
+        <p>證明臨界紫外逃逸產生正則鄰近尺度首次穿越骨架,每條非同步邊上有方程層級來源債務。</p>
+      </a>
+      <a class="case-card" href="./p/03-dual-witness-parent-ledger/">
+        <span class="k">RFP-03</span>
+        <h3>雙見證母帳本與載體深度逃逸</h3>
+        <p>用雙歸一見證構造精確帶號二進母輸出帳本,證明母抵銷/多重性債務。</p>
+      </a>
+      <a class="case-card" href="./p/04-adjoint-spacetime-tube-ledger/">
+        <span class="k">RFP-04</span>
+        <h3>伴隨時空管帳本與定量一致母緊性</h3>
+        <p>建立伴隨時空管精煉,證明壓力相容帶通 Leray 交換子估計,導出定量尾端界。</p>
+      </a>
+      <a class="case-card" href="./p/05-witness-persistence-finite-branching/">
+        <span class="k">RFP-05</span>
+        <h3>見證持續性與無窮世系路徑萃取</h3>
+        <p>證明門檻化見證圖的有限分支路徑萃取定理,分離持續無窮世系與瓶頸崩塌逃逸。</p>
+      </a>
+      <a class="case-card" href="./p/06-inter-edge-bridge-realization/">
+        <span class="k">RFP-06</span>
+        <h3>邊間橋接實現與持續性瓶頸分解</h3>
+        <p>把 C3-O 的伴隨截止升級為正式形成傳輸工具,構造精確場值接縫封包。</p>
+      </a>
+      <a class="case-card" href="./p/07-synchronous-plateau-compression/">
+        <span class="k">RFP-07</span>
+        <h3>同步高原壓縮與快前緣來源債務</h3>
+        <p>證明固定門檻同步邊只形成有限高原,高原內部是精確頻譜空白。</p>
+      </a>
+      <a class="case-card" href="./p/08-memory-depth-time-lag-resolution/">
+        <span class="k">RFP-08</span>
+        <h3>記憶深度、時間延遲解析與高原穿越橋</h3>
+        <p>建構世代年齡分解,證明條件式有限記憶封閉。正式整合 C3-J 到 C3-N 的防護結果。</p>
+      </a>
+      <a class="case-card" href="./p/09-unified-tax-ledger/">
+        <span class="k">RFP-09</span>
+        <h3>壓力/遠場、伴隨扭曲與統一稅收帳本</h3>
+        <p>定義有限尺度不變核心稅收向量,把十餘個逃逸機制壓進伴隨扭曲/交互作用效率稅。</p>
+      </a>
+      <a class="case-card" href="./p/10-guard-library-consolidation/">
+        <span class="k">RFP-10</span>
+        <h3>防護庫整合與有限障礙稽核</h3>
+        <p>整合防護庫,證明純邊界 NO-GO。九稅家族憑證緊緻性完備,但尚非動力學完備的有限障礙家族。</p>
+      </a>
+      <a class="case-card" href="./p/11-pathwise-coercive-actions/">
+        <span class="k">RFP-11</span>
+        <h3>路徑式強制作用與危險核心過濾</h3>
+        <p>整合 Miller 應變—渦度作用與 Bradshaw–Grujic 頻率視窗作用,化簡為三重發散作用核心的交集。</p>
+      </a>
+      <a class="case-card" href="./p/12-dangerous-core-realizability/">
+        <span class="k">RFP-12 · 終審</span>
+        <h3>危險核心可實現性與標準 PDE 重編譯</h3>
+        <p>證明兩個同步 NO-GO 結果,危險核心未被證明為空。重編譯成標準 PDE 語言,交棒 NS-CSP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      十二篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化系列路線圖、CHANGELOG 等)。發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      本頁另外收錄了資料夾中單獨存放的 C3-O v0.2 修訂版(見上方誠實揭露段落)。
+      <a href="./files/NS_RFP_CYCLE_I_HANDOFF_v1.0.md" download>下載 Cycle I Handoff 原始 .md</a> ·
+      <a href="./files/NS_C3O_AdjointCore_BalanceDynamicsSeparation_v0.2.md" download>下載 C3-O v0.2 修訂版原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

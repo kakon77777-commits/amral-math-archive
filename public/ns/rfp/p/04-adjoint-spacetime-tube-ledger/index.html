@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFP-04:伴隨時空管帳本、壓力相容局部化與定量一致母緊性 · NS-RFP · NS · AMRAL</title>
+<meta name="description" content="RFP 系列第 4 篇。為母帳本建立伴隨時空管精煉,證明壓力相容帶通 Leray 交換子估計,導出尺度不變定量尾端界,在耗散輸出預算有界時升級母緊性。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RFP_04_SpatialTube_PressureCompatible_UniformParentTightness_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RFP</a>
+    <span>/</span>
+    <span>RFP-04 · 伴隨時空管帳本、壓力相容局部化與定量一致母緊性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle I</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>RFP-04:伴隨時空管帳本、壓力相容局部化與定量一致母緊性</h1>
+    <p class="h1-sub">Adjoint Spacetime Tube Ledger, Pressure-Compatible Localization, and Quantitative Uniform Parent Tightness</p>
+    <p class="h1-sub">RFP-03 已把每條 PF-A 支付來源首次穿越邊的總非線性來源債務,升級成精確帶號二進母輸出帳本 R_J=Σ Λ^(J)_(k;p,q)≥d_J,其中 (k;p,q) 是精確的二進輸出—母標籤。本文為 RFP-03 的母帳本建立精確的伴隨時空管精煉;證明壓力相容帶通 Leray 交換子估計與擬局部性;導出尺度不變的定量尾端界,只要耗散輸出預算有界,就能升級母緊性。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../03-dual-witness-parent-ledger/">RFP-03 · 雙見證母帳本、精確三元世系與載體深度逃逸</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../05-witness-persistence-finite-branching/">RFP-05 · 見證持續性、有限分支、倖存者遞迴與無窮世系路徑萃取</a></div>
+      <div class="conn-card"><span class="k">NS-RFP 進度</span>4 / 12</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RFP</a>
+    <a href="../../files/NS_RFP_04_SpatialTube_PressureCompatible_UniformParentTightness_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RFP_04_SpatialTube_PressureCompatible_UniformParentTightness_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

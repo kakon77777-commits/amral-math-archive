@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFP-05:見證持續性、有限分支、倖存者遞迴與無窮世系路徑萃取 · NS-RFP · NS · AMRAL</title>
+<meta name="description" content="RFP 系列第 5 篇。證明門檻化見證圖的有限分支路徑萃取定理,給出精確倒退倖存者遞迴與有限視界障礙憑證,分離持續無窮世系與瓶頸崩塌逃逸。圖論部分精確,PDE 橋接仍開放。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RFP</a>
+    <span>/</span>
+    <span>RFP-05 · 見證持續性、有限分支、倖存者遞迴與無窮世系路徑萃取</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle I</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>RFP-05:見證持續性、有限分支、倖存者遞迴與無窮世系路徑萃取</h1>
+    <p class="h1-sub">Witness Persistence, Finite Branching, Survivor Recursion, and Infinite Ancestry Path Extraction</p>
+    <p class="h1-sub">RFP-02 建立首次穿越層級與非線性來源債務;RFP-03 建立精確帶號母輸出帳本;RFP-04 再建立伴隨時空管精煉與定量母緊性。本文證明:對門檻化的 RFP 見證圖,存在有限分支路徑萃取定理;給出精確的倒退倖存者遞迴與有限視界障礙憑證;把持續無窮世系與瓶頸崩塌逃逸分離開來。圖論定理在提供節點與相容性憑證後即為精確定理,但完整世系相容性所需的 PDE 橋接分數仍是開放的。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../04-adjoint-spacetime-tube-ledger/">RFP-04 · 伴隨時空管帳本、壓力相容局部化與定量一致母緊性</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../06-inter-edge-bridge-realization/">RFP-06 · 邊間橋接實現、來源—庫存傳播與持續性瓶頸分解</a></div>
+      <div class="conn-card"><span class="k">NS-RFP 進度</span>5 / 12</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RFP</a>
+    <a href="../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
