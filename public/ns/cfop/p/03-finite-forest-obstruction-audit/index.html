@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFOP-03:有限森林障礙、普遍預算稽核、負 Sobolev 強迫、稀疏/稠密幾何與 Cycle V 封階 · NS-CFOP · NS · AMRAL</title>
+<meta name="description" content="CFOP 系列第 3 篇,Cycle V 終審。證明能量類負 Sobolev 強迫預算,尺度稽核顯示標準有限預算(Leray 恩斯特羅菲時間、H^-2 強迫)每尺度成本皆可加總,單靠兩者無法排除無窮串級。定義「森林強制預算問題」,交棒 NS-FCBP。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CFOP_03_FiniteForestObstruction_Audit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CFOP</a>
+    <span>/</span>
+    <span>CFOP-03 · 有限森林障礙、普遍預算稽核、負 Sobolev 強迫、稀疏/稠密幾何與 Cycle V 封階</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle V · 終審</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CFOP-03:有限森林障礙、普遍預算稽核、負 Sobolev 強迫、稀疏/稠密幾何與 Cycle V 封階</h1>
+    <p class="h1-sub">Finite Forest Obstruction, Universal Budget Audit, Negative-Sobolev Forcing, Sparse/Dense Geometry, and Cycle-V Closure</p>
+    <p class="h1-sub">CFOP-02 把視界無界的瀰散因果森林化簡成五類殘差(R_F-ACT、R_F-CONG、R_F-CAP、R_F-TAIL、R_F-NSPARSE)。本文問決定性的問題:標準 Navier–Stokes 理論是否提供了能封閉這五類的普遍有限預算?答案是不。但稽核確實排除了幾個殘差作為原始項,並指認出真正缺失的估計形式。證明能量類負 Sobolev 非線性強迫預算:速度非線性項屬於 L_t^(4/3) H_x^(-1),渦度強迫屬於 L_t^(4/3) H_x^(-2),上界由動能與耗散控制。把來源主導的森林切割重寫成「有限弱強迫」或「高階對偶壅塞」的二選一,證明無窮多個不相交的來源主導切割會迫使四次 H² 對偶壅塞發散,而不是強迫作用本身發散。將加權狀態尾端逃逸重新分類為適應性空間容量增長。執行尺度稽核,顯示 Leray 恩斯特羅菲時間預算與能量類 H^(-2) 強迫預算在每個拋物尺度上的成本都是可加總的(分別是 O(R) 與 O(R^(4/3)))——因此單靠這兩者都無法排除無窮幾何串級。局部正則性與幾何稀疏性結果只作為外部條件式防護/校準引入。結論:目前標準的有限預算不能得出完整的有限森林障礙,缺失的定理是一個具近臨界尺度且有普遍 Navier–Stokes 有限上界的森林強制預算——正式定義「森林強制預算問題」,交棒 NS-FCBP。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../02-spatial-scale-forest-capacity/">CFOP-02 · 空間—尺度原子化、森林容量、恩斯特羅菲切割集、驅動介面與瀰散串級剛性</a></div>
+      
+      <div class="conn-card"><span class="k">NS-CFOP 進度</span>3 / 3</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CFOP</a>
+    <a href="../../files/NS_CFOP_03_FiniteForestObstruction_Audit_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CFOP_03_FiniteForestObstruction_Audit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

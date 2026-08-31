@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFOP-02:空間—尺度原子化、森林容量、恩斯特羅菲切割集、驅動介面與瀰散串級剛性 · NS-CFOP · NS · AMRAL</title>
+<meta name="description" content="CFOP 系列第 2 篇。量化森林可用的空間—尺度容量,證明有界容量迫使強原子存在,證明狀態—壅塞對偶耦合到 Leray 有限恩斯特羅菲時間預算,引入 SPARSE-GUARD 正則化介面。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CFOP</a>
+    <span>/</span>
+    <span>CFOP-02 · 空間—尺度原子化、森林容量、恩斯特羅菲切割集、驅動介面與瀰散串級剛性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle V</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CFOP-02:空間—尺度原子化、森林容量、恩斯特羅菲切割集、驅動介面與瀰散串級剛性</h1>
+    <p class="h1-sub">Spatial–Scale Atomization, Forest Capacity, Enstrophy Cutsets, Driver Interfaces, and Diffuse-Cascade Rigidity</p>
+    <p class="h1-sub">CFOP-01 在來源主導的危險切割上證明了森林切割不等式,也證明新鮮來源原子化會迫使有效多重性與分支熵增長。下一個問題是:森林能否單純靠把自己散布到越來越多的位置與尺度,把因果壅塞壓到任意小?本文量化森林可用的空間—尺度容量。引入波長胞元與空間—尺度森林容量,證明:在半徑 R 足跡與 W 個二進殼層內權重質量緊緻的狀態,必有一個相對大小至少 c(1-ε)/(W(1+2^J R)³) 的最強空間—尺度原子——因此沒有強原子就會迫使殼層跨度/尺度跨度增長或狀態尾端逃逸。定義有效空間—尺度多重性與熵上限,把 CFOP-01 的對偶壅塞局部化到波長胞元,證明來源端的作用—壅塞對偶與傳播端的新「狀態—壅塞對偶」——後者直接耦合到 Leray 有限恩斯特羅菲時間預算,對低壅塞傳播主導切割給出普遍測度上界。對來源主導切割,固定總負載上限下的高有效對偶容量會迫使強迫作用正比於單位切割時長的容量。引入 SPARSE-GUARD 介面:若空間原子化滿足既有一維稀疏性/解析正則性判準,該分支即進入正則化;否則仍是非稀疏容量分支。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../01-diffuse-horizon-forest-cutsets/">CFOP-01 · 瀰散視界因果性、因果切割集、作用—壅塞對偶與森林障礙</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../03-finite-forest-obstruction-audit/">CFOP-03 · 有限森林障礙、普遍預算稽核、負 Sobolev 強迫、稀疏/稠密幾何與 Cycle V 封階</a></div>
+      <div class="conn-card"><span class="k">NS-CFOP 進度</span>2 / 3</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CFOP</a>
+    <a href="../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CFOP_02_SpatialScale_ForestCapacity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

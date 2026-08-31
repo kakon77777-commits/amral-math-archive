@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-CFOP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-CFOP(Navier–Stokes Causal Forest Obstruction Program)子線:Cycle V 全 3 篇已上線。承接 ANP Cycle IV 的視界因果森林,證明歸一化因果切割容量定理與空間—尺度森林容量,終審於 CFOP-03 稽核發現標準有限預算的每尺度成本皆可加總、無法排除無窮串級,定義「森林強制預算問題」並交棒 NS-FCBP。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-CFOP</p>
+    <h1>NS-CFOP</h1>
+    <p class="subtitle">Navier–Stokes Causal Forest Obstruction Program · Cycle V · 3/3 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-CFOP 承接 <strong>NS_ANP Cycle IV</strong> 的結果:ANP 相對於自身定義證明了 CN_Forest(實際視界因果森林存在),
+      但原子性的 CN3 仍是 OPEN——真正的前奇異點因果對象可能是視界無界的 DAG/森林,不是單一持續世系。CFOP 因此把問題
+      從「每條無窮路徑能否被阻斷」改問成「整個因果森林能否穿越每個因果切割而不支付不可能的總體動力學成本」。
+      三篇一路推進:<strong>CFOP-01</strong> 證明歸一化因果切割容量定理與作用—壅塞對偶,<strong>CFOP-02</strong>
+      量化森林可用的空間—尺度容量,<strong>CFOP-03</strong> 完成 Cycle V 終審稽核。
+    </p>
+    <p class="notice">
+      CFOP-03 的稽核結論是<strong>標準 Navier–Stokes 有限預算無法封閉森林障礙</strong>——Leray 恩斯特羅菲時間預算與
+      能量類負 Sobolev 強迫預算,每個拋物尺度上的成本都可加總(分別是 O(R) 與 O(R^(4/3))),單靠兩者都無法排除
+      無窮幾何串級。正式定義<strong>「森林強制預算問題」</strong>,交棒給
+      <strong>「NS-FCBP:Navier–Stokes 森林強制預算計畫」</strong>。CFOP 是目前站上已建置、可追溯到的研究鏈最早一段:
+      <a href="../cfop/">NS-CFOP</a>(Cycle V)→ <a href="../fcbp/">NS-FCBP</a>(Cycle VI)→
+      <a href="../morp/">NS-MORP</a>(Cycle VII)→ <a href="../dcrp/">NS-DCRP</a>。CFOP 自身文件顯示還有更早的
+      <strong>NS_ANP(Cycle IV)</strong>存在,尚未讀取分類。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle V 三篇 · The Three-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:因果切割容量 → 空間—尺度容量 → 普遍預算稽核與封階。建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-CFOP 三篇">
+      <a class="case-card" href="./p/01-diffuse-horizon-forest-cutsets/">
+        <span class="k">CFOP-01</span>
+        <h3>瀰散視界因果性、因果切割集與作用—壅塞對偶</h3>
+        <p>證明歸一化因果切割容量定理與作用—壅塞對偶不等式,得到條件式森林切割障礙原理。Cycle V 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-spatial-scale-forest-capacity/">
+        <span class="k">CFOP-02</span>
+        <h3>空間—尺度原子化、森林容量與瀰散串級剛性</h3>
+        <p>量化森林可用的空間—尺度容量,證明有界容量迫使強原子存在,引入 SPARSE-GUARD 正則化介面。</p>
+      </a>
+      <a class="case-card" href="./p/03-finite-forest-obstruction-audit/">
+        <span class="k">CFOP-03 · 終審</span>
+        <h3>有限森林障礙、普遍預算稽核與 Cycle V 封階</h3>
+        <p>稽核發現標準有限預算每尺度成本皆可加總,無法排除無窮串級。定義森林強制預算問題,交棒 NS-FCBP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      三篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。本頁只抽取並上線每輪的核心論文 <code>.md</code> 與 Cycle V 終審交接文件,
+      發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_CFOP_CYCLE_V_HANDOFF_v1.0.md" download>下載 Cycle V Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
