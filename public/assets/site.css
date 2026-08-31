@@ -41,6 +41,11 @@ nav.sitenav .brand { font-weight: 700; letter-spacing: 0.03em; text-decoration: 
 nav.sitenav a.link { text-decoration: none; color: var(--ink-dim); border-bottom: 1px solid transparent; padding-bottom: 2px; }
 nav.sitenav a.link:hover { color: var(--ink); }
 nav.sitenav a.link.active { color: var(--ink); border-bottom-color: var(--ink); font-weight: 700; }
+nav.sitenav a.lang-switch {
+  text-decoration: none; font-size: 0.72rem; font-weight: 700; color: var(--ink-dim);
+  border: 1px solid var(--line); padding: 3px 9px; letter-spacing: 0.03em;
+}
+nav.sitenav a.lang-switch:hover { color: var(--ink); border-color: var(--ink-dim); }
 
 /* ---- header block (root / case-study / methodology landing) ---- */
 header.page { padding: 44px 0 30px; border-bottom: 1px solid var(--line); }
