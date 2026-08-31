@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS 研究特區 · AMRAL</title>
-<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。NS_O 67/67、NTLA-O 九篇系列、NS-DCRP 53/53、NS-MORP 5/5、NS-FCBP 6/6、NS-CFOP 3/3、NS-ANP 10/10、NS-DRC 7/7、NS-CSP 8/8 已完整建置上線；其餘 6 條子線(NS_X72、NS_RMRM 等)為 2026-08-30 盤點時新確認、尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
+<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。已建置 12 條,其中 CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十條組成單一條完整研究血緣(Cycle II 到 XI,接力交棒)，NS_O、NTLA-O 為另兩條獨立線。其餘 3 條子線(NS_X72、NS_RMRM、NS_RFP)尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -43,6 +43,14 @@
       子線之間偶有名稱相似但內容不同的情況——例如兩批不同的 <code>NS_DCRP</code> 編號檔案,是研究者用不同理論視角
       重新處理「同一批編號論文」所產生的平行結果,不是重複或版本衝突,兩批都會保留。
     </p>
+    <p class="notice">
+      建置過程中逐輪讀取各子線自身的「交接文件」,拼出一條完整的十段研究血緣——每一輪封階時都會明講交棒給下一個
+      計畫,像接力賽一樣:<a href="csp/">NS-CSP</a>(Cycle II)→ <a href="drc/">NS-DRC</a>(III)→
+      <a href="anp/">NS-ANP</a>(IV)→ <a href="cfop/">NS-CFOP</a>(V)→ <a href="fcbp/">NS-FCBP</a>(VI)→
+      <a href="morp/">NS-MORP</a>(VII)→ <a href="dcrp/">NS-DCRP</a>(VIII)→ <a href="idrp/">NS-IDRP</a>(IX)→
+      <a href="tskr/">NS-TSKR</a>(X)→ <a href="rkap/">NS-RKAP</a>(XI,目前前沿)。十段全部已建置上線,
+      每一輪的關聯都是從原始檔案裡讀出來確認的,不是憑編號猜的。
+    </p>
   </header>
 
   <section id="flagship">
@@ -59,9 +67,24 @@
         <p>研究者原創理論,把「兩個結構是否不同」提升為「相對哪個觀察者才判定為不同」。九篇正式系列已上線;另有 117 個以此視角重新處理 NS-DCRP 的交叉引用檔案尚待分類。</p>
       </a>
       <a class="case-card" href="dcrp/">
-        <span class="k">NS-DCRP · 53 篇(03-55、59)· 2026-08 COMPLETE</span>
+        <span class="k">NS-DCRP · Cycle VIII · 53 篇(03-55、59)· 2026-08 COMPLETE</span>
         <h3>NS-DCRP:瀰散載體剛性計畫</h3>
         <p>單一連續、逐輪修正推進的研究鏈,從對數模型錐債務到薄層/煎餅幾何黏性下界。53 篇已上線,全域正則性仍完全 OPEN。是 NS-MORP 的直接接續。</p>
+      </a>
+      <a class="case-card" href="idrp/">
+        <span class="k">NS-IDRP · Cycle IX · 4 篇 · 2026-08 COMPLETE</span>
+        <h3>NS-IDRP:脈衝缺陷復發計畫</h3>
+        <p>四篇處理奇異點形成的時間性問題,終審把倖存障礙化簡成切向奇異脈衝幻影,交棒 NS-TSKR。首次證實 NS-DCRP 正是 Cycle VIII。</p>
+      </a>
+      <a class="case-card" href="tskr/">
+        <span class="k">NS-TSKR · Cycle X · 4 篇 · 2026-08 COMPLETE</span>
+        <h3>NS-TSKR:切向奇異核剛性計畫</h3>
+        <p>四篇攻擊切向來源幾何與奇異殘差核,終審把障礙壓縮成至多一維的雙曲不匹配纖維,交棒 NS-RKAP。</p>
+      </a>
+      <a class="case-card" href="rkap/">
+        <span class="k">NS-RKAP · Cycle XI · 1 篇 · 目前研究前沿</span>
+        <h3>NS-RKAP:殘差核與振幅計畫</h3>
+        <p>目前整條研究鏈(CSP 到 RKAP,共十段)最新的一輪。證明共變輸運橫向性與雙側 PSD 提升稅定理;規劃中的 RKAP-02 尚未成文,誠實標記為前沿。</p>
       </a>
       <a class="case-card" href="morp/">
         <span class="k">NS-MORP · Cycle VII · 5 篇 · 2026-08 COMPLETE</span>
@@ -91,7 +114,7 @@
       <a class="case-card" href="csp/">
         <span class="k">NS-CSP · Cycle II · 8 篇 · 2026-08 COMPLETE</span>
         <h3>NS-CSP:強制同步計畫</h3>
-        <p>八篇同步中應變作用與移動頻率視窗作用,終審以明確四機制殘餘核心收尾,交棒 NS-DRC。目前站上可追溯到的研究鏈最早一段:CSP → DRC → ANP → CFOP → FCBP → MORP → DCRP。</p>
+        <p>八篇同步中應變作用與移動頻率視窗作用,終審以明確四機制殘餘核心收尾,交棒 NS-DRC。目前站上可追溯到的研究鏈最早一段。</p>
       </a>
     </div>
   </section>
@@ -115,21 +138,6 @@
       <div class="case-card placeholder">
         <span class="k">15 個檔案</span>
         <h3>NS_RFP</h3>
-        <p>尚未讀取分類。</p>
-      </div>
-      <div class="case-card placeholder">
-        <span class="k">4 個檔案</span>
-        <h3>NS-IDRP</h3>
-        <p>尚未讀取分類。</p>
-      </div>
-      <div class="case-card placeholder">
-        <span class="k">4 個檔案</span>
-        <h3>NS_TSKR</h3>
-        <p>尚未讀取分類。</p>
-      </div>
-      <div class="case-card placeholder">
-        <span class="k">1 個檔案</span>
-        <h3>NS_RKAP</h3>
         <p>尚未讀取分類。</p>
       </div>
     </div>

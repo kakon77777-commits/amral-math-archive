@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDRP-03:相對隱形爆發核、對偶相容爆發到缺陷實現、振幅歸一化稽核與時間剛性 · NS-IDRP · NS · AMRAL</title>
+<meta name="description" content="IDRP 系列第 3 篇。透過有限窗來源商證明部分 BDR 下界,證明緊緻族移動視窗定理(排除相對隱形爆發),證明振幅歸一化沒有免費午餐定理——歸一化移除核幾何的振幅,但移除不了任何物理耗盡律的振幅。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_IDRP_03_RelativeInvisibleBurst_BDR_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-IDRP</a>
+    <span>/</span>
+    <span>IDRP-03 · 相對隱形爆發核、對偶相容爆發到缺陷實現、振幅歸一化稽核與時間剛性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IX</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>IDRP-03:相對隱形爆發核、對偶相容爆發到缺陷實現、振幅歸一化稽核與時間剛性</h1>
+    <p class="h1-sub">Relative Invisible Burst Kernels, Dual-Compatible Burst-to-Defect Realization, Amplitude-Normalized Audit, and Temporal Rigidity</p>
+    <p class="h1-sub">IDRP-02 建立:快速過濾痕跡損失⟹明確機制爆發;新鮮因果來源配對⟹L_t^(4/3) 弱來源作用爆發。剩下的橋接是爆發到缺陷實現(BDR)。本文透過有限窗來源商的精確原生路線,部分封閉 BDR 問題:在有限維 Hilbert 來源座標模型中,若因果強迫爆發誘導的來源對偶對乾淨/模型來源子空間有固定橫向分量,就迫使定量的來源商距離——若銳利封包範數支配這個原生來源座標,即得到非重言的 BDR 下界。證明近似因果—稽核對偶相容編譯器,把因果來源配對轉移成原生稽核殘差配對。證明緊緻族移動視窗定理:運算子範數預緊緻加上每個極限映射的無核性,給出一致的正最小奇異值,排除每個相對隱形爆發。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../02-burst-visibility-moving-window/">IDRP-02 · 來源脈衝可見性、過濾痕跡變異、PFET 爆發耦合、對數原子增厚與移動視窗耗盡</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../04-transversality-kernel-final-audit/">IDRP-04 · 來源橫向性、伴隨同步、奇異極限核、物理爆發振幅與 Cycle IX 封階稽核</a></div>
+      <div class="conn-card"><span class="k">NS-IDRP 進度</span>3 / 4</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-IDRP</a>
+    <a href="../../files/NS_IDRP_03_RelativeInvisibleBurst_BDR_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_IDRP_03_RelativeInvisibleBurst_BDR_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

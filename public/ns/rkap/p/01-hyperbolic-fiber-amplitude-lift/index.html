@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RKAP-01:雙曲不匹配纖維、共變輸運橫向性、雙側 PSD 提升稅、振幅臨界提升與殘差復發 · NS-RKAP · NS · AMRAL</title>
+<meta name="description" content="RKAP 系列第 1 篇,Cycle XI 開篇,目前站上這整條研究線最新的一輪。承接 TSKR Cycle X 的「雙側殘差幻影」,證明共變輸運橫向性(Hu=|u|²w 在 |u|≥m 上定量單射)與精確的雙側 PSD 提升稅定理(把變號應力寫成兩個半正定共變包之差,提升成本恰為 ‖H‖_*)。證明條件式線性振幅提升編譯器與對數級數門檻 s≤1/3,但也證明提升稅沒有免費午餐——不是自動望遠縮並。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RKAP_01_HyperbolicFiber_AmplitudeLift_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RKAP</a>
+    <span>/</span>
+    <span>RKAP-01 · 雙曲不匹配纖維、共變輸運橫向性與振幅臨界提升</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle XI · 開篇 · 目前前沿</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>RKAP-01:雙曲不匹配纖維、共變輸運橫向性、雙側 PSD 提升稅、振幅臨界提升與殘差復發</h1>
+    <p class="h1-sub">Hyperbolic Mismatch Fibers, Covariance-Transport Transversality, Two-Sided PSD Lift Tax, Amplitude Critical Lift, and Residual Recurrence</p>
+    <p class="h1-sub">
+      Cycle X 把倖存的切向/殘差障礙化簡成「雙側殘差幻影」(TSRP),其主要非平凡幾何分支是雙曲雙側不匹配纖維:在再現的非零基
+      U=u、R=0 處,一階精確來源切向給出 H=u⊗w+w⊗u,能量—痕跡不可見給出 w⊥u,通量不可見進一步給出 w∥u×Su。
+      本文用外部有限窗線性化能量觀察(即使對變號形式應力變異,仍保留共變輸運項 Ṙ·U)證明「共變輸運橫向性」:
+      Hu=|u|²w,故 |Hu|=(|u|/√2)‖H‖_F——在 |u|≥m&gt;0 的區域上,原生共變輸運向量在整個雙曲纖維上(包含應變退化集)定量單射。
+      引入輸運分離有限窗能量測試條件,證明緊緻纖維反核定理:若選定的線性化能量平衡測試分離共變輸運項(對已控制的速度、壓力、
+      通量、局部化項取模),則沒有非零雙曲不匹配能倖存。另把變號應力提升回正共變幾何:證明精確的「雙側 PSD 提升稅」定理——
+      對每個對稱 H,inf{trA+trB : A,B半正定,A-B=H}=‖H‖_*;對雙曲纖維這等於 2|u||w|。因此把變號不匹配實現成兩個正共變
+      封包之差,即使 trH=0,仍攜帶線性非負的提升成本——這在幾何層級繞過了線性符號抵銷。但既有的線性 PFET 缺陷能量偵測器
+      作用在差上,不會自動對兩個正提升能量的和收費,所以提升稅是原生的雙封包非線性稅候選,尚非全域望遠縮並的耗盡律。
+      證明條件式的線性振幅提升編譯器:若遞迴稽核/耗盡能對兩個正共變提升收取非負權重 λ_n,則振幅 ρ_n 的物理雙曲殘差至少
+      支付 cλ_nρ_n——當 Σλ_nρ_n 發散時排除復發。對對數 ρ_n~n^(-2/3),這只需要 λ_n 在冪律層級不快於 n^(-1/3) 衰減。
+      也證明提升稅沒有免費午餐:沒有單調/望遠縮並的雙封包共變—能量預算,重複的提升成本可以復發,本身不與有限能量矛盾。
+    </p>
+    <div class="claim-box">
+      本篇是目前站上整條研究鏈(CSP 到 RKAP)最新的一輪——RKAP 自己的路線圖規劃了「RKAP-02」(輸運測試缺口穩定性、
+      正提升可實現性、雙封包能量耗盡、雙曲退化集、線性振幅堆疊),但投遞資料夾裡沒有對應檔案,尚未寫出。
+      <span class="note">— 誠實標記為研究前沿,不是本頁遺漏。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">NS-RKAP 進度</span>1 / 1(已知規劃 RKAP-02,尚未成文)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RKAP</a>
+    <a href="../../files/NS_RKAP_01_HyperbolicFiber_AmplitudeLift_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RKAP_01_HyperbolicFiber_AmplitudeLift_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

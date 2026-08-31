@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-TSKR · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-TSKR(Navier–Stokes Tangent Singular Kernel Rigidity Program)子線:Cycle X 全 4 篇已上線。承接 NS-IDRP(Cycle IX)的「切向奇異脈衝幻影」,終審於 TSKR-04 把倖存障礙壓縮成「雙側殘差幻影」(至多一維的雙曲不匹配纖維),正式交棒 NS-RKAP(Cycle XI)。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-TSKR</p>
+    <h1>NS-TSKR</h1>
+    <p class="subtitle">Navier–Stokes Tangent Singular Kernel Rigidity Program · Cycle X · 4/4 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-TSKR 承接 <a href="../idrp/"><strong>NS-IDRP Cycle IX</strong></a> 的結果:IDRP 把倖存的脈衝障礙化簡成
+      「切向奇異脈衝幻影」(TSIP),失效模式拆成 TANG(切向分類)、ADJ(伴隨同步)、SKER(奇異核分類)、AMP(振幅)。
+      核心問題:若來源爆發落在乾淨/模型幾何內、因此不是缺陷,它的動力學是否必須透過另一個原生通道變得可見?
+      四篇一路推進:<strong>TSKR-01</strong> 證明僅靠壓力無法普遍恢復強迫來源方向,<strong>TSKR-02</strong> 用真正
+      的二次來源幾何證明秩一衰減剛性與全域粗粒化固定點剛性,<strong>TSKR-03</strong> 處理局部化版本並發現真正的
+      調和分支,<strong>TSKR-04</strong> 完成 Cycle X 終審。
+    </p>
+    <p class="notice">
+      TSKR-04 的結論是:能量與通量不可見把雙側不匹配應力壓縮成<strong>至多一維的雙曲不匹配纖維</strong>
+      w∥u×Su,二階零基退化重新進入秩一衰減定理而被大致排除,調和壓力尾端復發被路由進既有的調和尾端帳本。
+      Cycle X 因此把 TRSK 化簡成<strong>「雙側殘差幻影」(TSRP)</strong>,正式交棒給
+      <strong>「NS-RKAP:Navier–Stokes 殘差核與振幅計畫」</strong>。目前確認的完整研究鏈:
+      <a href="../csp/">NS-CSP</a>(II)→ <a href="../drc/">NS-DRC</a>(III)→ <a href="../anp/">NS-ANP</a>(IV)→
+      <a href="../cfop/">NS-CFOP</a>(V)→ <a href="../fcbp/">NS-FCBP</a>(VI)→ <a href="../morp/">NS-MORP</a>(VII)→
+      <a href="../dcrp/">NS-DCRP</a>(VIII)→ <a href="../idrp/">NS-IDRP</a>(IX)→ <a href="../tskr/">NS-TSKR</a>(X)→
+      <a href="../rkap/">NS-RKAP</a>(XI)。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle X 四篇 · The Four-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:切向來源幾何 → 二次固定點剛性 → 局部化版本 → 封階稽核。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-TSKR 四篇">
+      <a class="case-card" href="./p/01-tangent-source-singular-kernel/">
+        <span class="k">TSKR-01</span>
+        <h3>切向來源幾何與變號應力核</h3>
+        <p>證明僅靠壓力無法普遍恢復強迫相關的來源方向,定義切向再現原理。Cycle X 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-quadratic-tangency-reproduction-rigidity/">
+        <span class="k">TSKR-02</span>
+        <h3>二次來源切向性與粗粒化固定點分類</h3>
+        <p>用真正的二次來源幾何證明秩一衰減剛性定理與全域粗粒化固定點剛性定理。</p>
+      </a>
+      <a class="case-card" href="./p/03-localized-fixed-points-linearized-kernel/">
+        <span class="k">TSKR-03</span>
+        <h3>局部化二次固定點與調和秩一剛性</h3>
+        <p>發現全域固定點定理的樸素局部化是錯的,存在真正的調和分支,證明解析節點符號剛性定理。</p>
+      </a>
+      <a class="case-card" href="./p/04-two-sided-residual-final-audit/">
+        <span class="k">TSKR-04 · 終審</span>
+        <h3>雙側不匹配應力與 Cycle X 封階稽核</h3>
+        <p>把雙側不匹配應力壓縮成至多一維的雙曲不匹配纖維。化簡出雙側殘差幻影,交棒 NS-RKAP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      四篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_TSKR_CYCLE_X_HANDOFF_v1.0.md" download>下載 Cycle X Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

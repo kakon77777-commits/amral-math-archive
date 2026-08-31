@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-IDRP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-IDRP(Navier–Stokes Impulsive Defect Recurrence Program)子線:Cycle IX 全 4 篇已上線。承接 NS-DCRP(Cycle VIII)的倖存正規形式「瀰散脈衝復發」,終審於 IDRP-04 把倖存障礙化簡成「切向奇異脈衝幻影」,正式交棒 NS-TSKR(Cycle X)。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-IDRP</p>
+    <h1>NS-IDRP</h1>
+    <p class="subtitle">Navier–Stokes Impulsive Defect Recurrence Program · Cycle IX · 4/4 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-IDRP 是研究鏈裡第一條<strong>接續在 NS-DCRP 之後</strong>的子線——本文自己開篇就寫著
+      「DCRP Cycle VIII 以倖存正規形式 𝒦_IDR(瀰散脈衝復發)收尾」,首次明確證實 <a href="../dcrp/">NS-DCRP</a>
+      正是 <strong>Cycle VIII</strong>。核心新問題是時間性的:每個正向載體是否只能存在於孤立時刻,使每個時空預算都
+      保持可加總?四篇一路推進:<strong>IDRP-01</strong> 分離持續性與爆發債務,<strong>IDRP-02</strong> 證明過濾痕跡
+      快速損失並非機制不可見,<strong>IDRP-03</strong> 部分封閉爆發到缺陷實現(BDR)問題,<strong>IDRP-04</strong>
+      完成 Cycle IX 終審。
+    </p>
+    <p class="notice">
+      IDRP-04 的結論是:僅靠壓力的來源橫向性一般不可能,更強的「強迫配對到來源缺陷」定理也不成立,普遍弱來源作用
+      預算在尺度上可加總——因此本身無法提供物理臨界提升。Cycle IX 把倖存障礙化簡成一個<strong>切向奇異脈衝幻影
+      (TSIP)</strong>,正式交棒給<strong>「NS-TSKR:Navier–Stokes 切向奇異核剛性計畫」</strong>。目前確認的完整
+      研究鏈:<a href="../csp/">NS-CSP</a>(II)→ <a href="../drc/">NS-DRC</a>(III)→ <a href="../anp/">NS-ANP</a>
+      (IV)→ <a href="../cfop/">NS-CFOP</a>(V)→ <a href="../fcbp/">NS-FCBP</a>(VI)→ <a href="../morp/">NS-MORP</a>
+      (VII)→ <a href="../dcrp/">NS-DCRP</a>(VIII)→ <a href="../idrp/">NS-IDRP</a>(IX)→
+      <a href="../tskr/">NS-TSKR</a>(X)→ <a href="../rkap/">NS-RKAP</a>(XI)。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle IX 四篇 · The Four-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:持續性/爆發二選一 → 爆發可見性 → 爆發到缺陷實現 → 封階稽核。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-IDRP 四篇">
+      <a class="case-card" href="./p/01-impulse-persistence-trace-thickening/">
+        <span class="k">IDRP-01</span>
+        <h3>脈衝持續性、痕跡增厚與復發缺陷正規形式</h3>
+        <p>分離持續性與爆發債務,證明能量類持續性下限,但一般模數太弱、無法迫使拋物厚化。Cycle IX 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-burst-visibility-moving-window/">
+        <span class="k">IDRP-02</span>
+        <h3>來源脈衝可見性與移動視窗耗盡</h3>
+        <p>證明過濾渦度痕跡的快速損失並非機制不可見,定義爆發到缺陷實現(BDR)橋接問題。</p>
+      </a>
+      <a class="case-card" href="./p/03-relative-invisible-burst-bdr/">
+        <span class="k">IDRP-03</span>
+        <h3>相對隱形爆發核與對偶相容 BDR</h3>
+        <p>透過有限窗來源商證明部分 BDR 下界,證明緊緻族移動視窗定理排除相對隱形爆發。</p>
+      </a>
+      <a class="case-card" href="./p/04-transversality-kernel-final-audit/">
+        <span class="k">IDRP-04 · 終審</span>
+        <h3>來源橫向性、伴隨同步與 Cycle IX 封階稽核</h3>
+        <p>證明僅靠壓力的來源橫向性不可能。化簡出切向奇異脈衝幻影,交棒 NS-TSKR。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      四篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_IDRP_CYCLE_IX_HANDOFF_v1.0.md" download>下載 Cycle IX Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDRP-04:來源橫向性、伴隨同步、奇異極限核、物理爆發振幅與 Cycle IX 封階稽核 · NS-IDRP · NS · AMRAL</title>
+<meta name="description" content="IDRP 系列第 4 篇,Cycle IX 終審。證明僅靠壓力的來源橫向性不可能,證明普遍強迫配對到來源缺陷 NO-GO,證明弱來源作用預算可加總。化簡出「切向奇異脈衝幻影」(TSIP),正式交棒 NS-TSKR(Cycle X)。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_IDRP_04_Transversality_Kernel_FinalAudit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-IDRP</a>
+    <span>/</span>
+    <span>IDRP-04 · 來源橫向性、伴隨同步、奇異極限核、物理爆發振幅與 Cycle IX 封階稽核</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IX · 終審</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>IDRP-04:來源橫向性、伴隨同步、奇異極限核、物理爆發振幅與 Cycle IX 封階稽核</h1>
+    <p class="h1-sub">Source Transversality, Adjoint Synchronization, Singular Limit Kernels, Physical Burst Amplitude, and Cycle-IX Closure Audit</p>
+    <p class="h1-sub">IDRP-03 把剩餘的爆發問題化簡成四項 PDE 義務:TRAN、DUAL、KERN、AMP。本文執行 Cycle IX 封階稽核,結果不是完全封閉,而是證明:(1)僅靠壓力的來源橫向性一般不可能——構造光滑傅立葉局部化對稱來源張量,主動壓力符號為零但 Leray 投影強迫非零;(2)更強的「普遍強迫配對到來源缺陷」NO-GO:大的因果強迫配對可能完全來自乾淨/模型來源子空間,因此單靠強迫配對大小的定理不能蘊含原生來源商距離;(3)因果與稽核伴隨同步時,對偶相容性精確成立,否則受擾動控制;(4)在外部反核假說下,正共變/能量方向不能填入穩定的奇異 PFET 極限核;(5)普遍弱來源作用預算在尺度上可加總,因此本身無法提供物理臨界提升。Cycle IX 把倖存障礙化簡成一個切向/失步/奇異核/振幅可加總的脈衝幻影,正式交棒 NS-TSKR。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../03-relative-invisible-burst-bdr/">IDRP-03 · 相對隱形爆發核、對偶相容爆發到缺陷實現、振幅歸一化稽核與時間剛性</a></div>
+      
+      <div class="conn-card"><span class="k">NS-IDRP 進度</span>4 / 4</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-IDRP</a>
+    <a href="../../files/NS_IDRP_04_Transversality_Kernel_FinalAudit_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_IDRP_04_Transversality_Kernel_FinalAudit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

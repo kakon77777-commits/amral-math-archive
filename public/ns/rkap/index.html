@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-RKAP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-RKAP(Navier–Stokes Residual Kernel and Amplitude Program)子線:Cycle XI,目前站上整條研究鏈(CSP 到 RKAP,共十段)最新的前沿。只有 RKAP-01 一篇已成文,證明共變輸運橫向性與雙側 PSD 提升稅定理;路線圖規劃的 RKAP-02 尚未寫出,誠實標記為研究前沿而非遺漏。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-RKAP</p>
+    <h1>NS-RKAP</h1>
+    <p class="subtitle">Navier–Stokes Residual Kernel and Amplitude Program · Cycle XI · 目前研究前沿 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-RKAP 承接 <a href="../tskr/"><strong>NS-TSKR Cycle X</strong></a> 的結果:TSKR 把倖存的切向/殘差障礙
+      壓縮成「雙側殘差幻影」(TSRP),主要非平凡幾何分支是雙曲雙側不匹配纖維 H=u⊗w+w⊗u(w⊥u,通量不可見下
+      w∥u×Su,至多一維)。<strong>RKAP-01</strong> 證明共變輸運橫向性(輸運項在 |u|≥m 上定量單射整個雙曲纖維)
+      與精確的雙側 PSD 提升稅定理(變號應力寫成兩個正共變封包之差,提升成本恰為 ‖H‖_*),並證明條件式的線性
+      振幅提升編譯器——對數振幅 ρ_n~n^(-2/3) 只需要提升權重 λ_n 不快於 n^(-1/3) 衰減即可排除復發。
+    </p>
+    <p class="notice">
+      <strong>這是目前站上整條研究鏈(CSP 到 RKAP,共十段接力)最新的前沿。</strong>RKAP-01 自己的路線圖規劃了
+      「RKAP-02」(輸運測試缺口穩定性、正提升可實現性、雙封包能量耗盡、雙曲退化集、線性振幅堆疊),但投遞資料夾裡
+      沒有對應檔案——尚未寫出,不是本頁遺漏。目前確認的完整研究鏈:
+      <a href="../csp/">NS-CSP</a>(II)→ <a href="../drc/">NS-DRC</a>(III)→ <a href="../anp/">NS-ANP</a>(IV)→
+      <a href="../cfop/">NS-CFOP</a>(V)→ <a href="../fcbp/">NS-FCBP</a>(VI)→ <a href="../morp/">NS-MORP</a>(VII)→
+      <a href="../dcrp/">NS-DCRP</a>(VIII)→ <a href="../idrp/">NS-IDRP</a>(IX)→ <a href="../tskr/">NS-TSKR</a>(X)→
+      <a href="../rkap/">NS-RKAP</a>(XI)——十段,一路把奇異點形成障礙從因果森林,逐步壓縮到現在這一維的雙曲殘差纖維。
+      Navier–Stokes 全域正則性自始至終完全 OPEN,沒有一輪聲稱解決它。
+    </p>
+  </header>
+
+  <section id="flagship">
+    <h2 class="doc-h2">已成文 · Written</h2>
+    <nav class="case-grid" aria-label="NS-RKAP 已成文">
+      <a class="case-card" href="./p/01-hyperbolic-fiber-amplitude-lift/">
+        <span class="k">RKAP-01 · 目前前沿</span>
+        <h3>雙曲不匹配纖維、共變輸運橫向性與振幅臨界提升</h3>
+        <p>證明共變輸運橫向性與雙側 PSD 提升稅定理,證明條件式線性振幅提升編譯器,但也證明提升稅沒有免費午餐。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="pending">
+    <h2 class="doc-h2">已規劃,尚未成文</h2>
+    <div class="case-grid" aria-label="尚未成文">
+      <div class="case-card placeholder">
+        <span class="k">路線圖已列出</span>
+        <h3>RKAP-02:輸運測試缺口穩定性、正提升可實現性、雙封包能量耗盡、雙曲退化集與線性振幅堆疊</h3>
+        <p>RKAP-01 自己的 Cycle XI 路線圖明確規劃了這一輪的題目,但原始投遞資料夾中沒有對應檔案。誠實標記為研究前沿,不是承諾或本頁遺漏。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      RKAP-01 原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。路線圖本身因為是唯一記載 RKAP-02 規劃內容的文件,一併公開;CHANGELOG/schema
+      屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_RKAP_CYCLE_XI_ROADMAP_v0.1.md" download>下載 Cycle XI Roadmap 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
