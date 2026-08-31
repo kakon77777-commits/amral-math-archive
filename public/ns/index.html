@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS 研究特區 · AMRAL</title>
-<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。已建置 13 條,其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_O、NTLA-O 為另兩條獨立線。其餘 2 條子線(NS_X72、NS_RMRM)尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
+<meta name="description" content="AMRAL 的 Navier–Stokes 研究特區:目前確認全站共 15 條獨立子線(含 NS_O)、約 529 個原始檔案，遠大於單一 NS_O(framework+C1-C6)系列。已建置 14 條,其中 RFP、CSP、DRC、ANP、CFOP、FCBP、MORP、DCRP、IDRP、TSKR、RKAP 十一條組成單一條完整研究血緣(Cycle I 到 XI,接力交棒，RFP 並與 NS_O 自身 C3 系列直接交織)，NS_RMRM 是 Cycle VIII(DCRP)本身的原始過程日誌而非獨立血緣，NS_O、NTLA-O 為另兩條獨立線。其餘 1 條子線(NS_X72)尚未建置。子線數量與規模仍在持續增長中，誠實列出目前進度，不假裝已經建完。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../assets/site.css">
@@ -53,6 +53,12 @@
       這條起點還與 <a href="o/">NS_O</a> 自身的 C3 系列直接交織,建置過程中意外發現 NS_O 現行上線的 C3-O 輪次
       可能不是最新版本,細節見 <a href="rfp/">NS-RFP</a> 頁面。
     </p>
+    <p class="notice">
+      建置 <a href="rmrm/">NS-RMRM</a> 時發現它不是第十二條血緣,而是 <a href="dcrp/">NS-DCRP</a>(Cycle VIII)
+      本身的 52 版本過程日誌——checkpoint 版本號與 DCRP 輪次一一對應,已如實揭露而非重複建置。同一次核對也
+      發現 NS-DCRP 首頁先前漏建 DCRP-01、02 兩輪(誤植為「只有 zip、無法建頁」),已回頭補建,NS-DCRP 從 53
+      篇修正為完整 55 篇。
+    </p>
   </header>
 
   <section id="flagship">
@@ -69,9 +75,14 @@
         <p>研究者原創理論,把「兩個結構是否不同」提升為「相對哪個觀察者才判定為不同」。九篇正式系列已上線;另有 117 個以此視角重新處理 NS-DCRP 的交叉引用檔案尚待分類。</p>
       </a>
       <a class="case-card" href="dcrp/">
-        <span class="k">NS-DCRP · Cycle VIII · 53 篇(03-55、59)· 2026-08 COMPLETE</span>
+        <span class="k">NS-DCRP · Cycle VIII · 55 篇(01-55、59)· 2026-08 COMPLETE</span>
         <h3>NS-DCRP:瀰散載體剛性計畫</h3>
-        <p>單一連續、逐輪修正推進的研究鏈,從對數模型錐債務到薄層/煎餅幾何黏性下界。53 篇已上線,全域正則性仍完全 OPEN。是 NS-MORP 的直接接續。</p>
+        <p>單一連續、逐輪修正推進的研究鏈,從載體熵濃度恢復到薄層/煎餅幾何黏性下界。55 篇已上線,全域正則性仍完全 OPEN。是 NS-MORP 的直接接續,原始過程日誌見 NS-RMRM。</p>
+      </a>
+      <a class="case-card" href="rmrm/">
+        <span class="k">NS-RMRM · Cycle VIII 過程日誌 · 1 篇框架定義 · 2026-08</span>
+        <h3>NS-RMRM:數學家逆向研究矩陣</h3>
+        <p>不是獨立血緣,而是 NS-DCRP 的 52 版本原始研究日誌——checkpoint 版本號與 DCRP 輪次一一對應。已建置其中真正獨立的方法論貢獻:RMRM 路由框架本身(11 primitives+38 operators+28 dynamics+10 數學家 fingerprint 模式)。</p>
       </a>
       <a class="case-card" href="idrp/">
         <span class="k">NS-IDRP · Cycle IX · 4 篇 · 2026-08 COMPLETE</span>
@@ -135,12 +146,7 @@
       <div class="case-card placeholder">
         <span class="k">156 個檔案</span>
         <h3>NS_X72</h3>
-        <p>目前規模最大的未建子線,與 <a href="ntla-o/">NTLA-O</a>、<a href="dcrp/">NS-DCRP</a> 兩條子線在檔名中互有交叉編號(如 X72R83),彼此關聯尚待整理釐清。</p>
-      </div>
-      <div class="case-card placeholder">
-        <span class="k">54 個檔案</span>
-        <h3>NS_RMRM</h3>
-        <p>尚未讀取分類。</p>
+        <p>目前規模最大、也是最後一條未建子線,與 <a href="ntla-o/">NTLA-O</a>、<a href="dcrp/">NS-DCRP</a> 兩條子線在檔名中互有交叉編號(如 X72R83),彼此關聯尚待整理釐清。</p>
       </div>
     </div>
   </section>

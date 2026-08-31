@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMRM-01:數學家逆向研究矩陣作為研究 Router · NS-RMRM · NS · AMRAL</title>
+<meta name="description" content="RMRM 框架本身的定義段落,摘自 52 版本 checkpoint 過程文件第 55 版(v55)Part III。把卓越數學研究方法拆成 11 個 cognitive primitives、38 個 operators、28 個 dynamics,加上 10 個 phase-aware 數學家 fingerprint 模式(Tao/Grothendieck/Ramanujan/Erdős/Thurston/Mirzakhani/Gowers/Bourgain/Perelman/Noether),並提出研究動作價值函數 J(a|S_t) 作為動態路由選擇律,而非靜態拼接多位數學家人格。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RMRM_Part3_RouterFramework_extracted_from_v55.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RMRM</a>
+    <span>/</span>
+    <span>RMRM-01 · 數學家逆向研究矩陣作為研究 Router</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">摘自 checkpoint v55 · Part III</span>
+      <span class="tag">框架定義</span>
+      <span class="tag">2026-08-17</span>
+    </div>
+    <h1>RMRM-01:數學家逆向研究矩陣作為研究 Router</h1>
+    <p class="h1-sub">Reverse-engineered Mathematician Research Matrix as a Research Router</p>
+    <p class="h1-sub">
+      RMRM 的目標不是模仿數學家人格,而是把卓越數學研究方法拆成可組合、可路由、可驗證的 research operators:
+      目前框架含 11 個 cognitive primitives、38 個 operators、28 個 dynamics,加上 10 個 phase-aware 數學家
+      fingerprint 模式——Tao(Obstruction)、Grothendieck(Relational Structure)、Ramanujan(Result Seed)、
+      Erdős(Problem/Obligation)、Thurston(Manipulable Understanding)、Mirzakhani(Global Law/Research Hub)、
+      Gowers(Diagnostic Research State)、Bourgain(Quantitative Interface)、Perelman(Closure-Bearing Structure)、
+      Noether(Structural Carrier/Theorem Architecture)。核心論點:真正的 composite mathematician 不是靜態疊加
+      「Tao+Noether+Perelman」,而是研究狀態相依的動態路由(Problem State → 對應方法論 → 新狀態 → 再路由),
+      並提出研究動作價值函數 J(a|S_t) = α·G_closure + β·Δ_frontier + γ·G_transfer − λ·ΔV − μ·C_correlation
+      作為每一步「該用哪個數學家模式」的選擇律 a*_t = argmax_a J(a|S_t)。
+    </p>
+    <div class="claim-box">
+      本篇不是一個獨立的 NS 攻擊結果,而是研究方法論本身——是 52 版本 checkpoint 過程文件裡,銜接 MORP(Cycle VII)
+      收尾與 DCRP(Cycle VIII)攻擊之間的路由框架定義。文件本身在提出 RMRM 之後(Part IV 起)立刻用它發動第一輪
+      「Composite-Mathematician NS 攻擊」,其產出後來逐輪演變成正式發布的 <a href="../../../dcrp/">NS-DCRP</a> 系列。
+      <span class="note">— 詳見 NS-RMRM 首頁的完整揭露。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他部分的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上文</span>Part I-II:壓縮回顧 Cycle I-VII(CSP/DRC/ANP/CFOP/FCBP/MORP,已個別建置)</div>
+      <div class="conn-card"><span class="k">下文</span>Part IV 起:用 RMRM 發動 UV route 攻擊,逐版演變成 <a href="../../../dcrp/">NS-DCRP</a></div>
+      <div class="conn-card"><span class="k">NS-RMRM 進度</span>1 / 1(框架定義本身;其餘內容為過程日誌,見首頁揭露)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RMRM</a>
+    <a href="../../files/NS_RMRM_Part3_RouterFramework_extracted_from_v55.md" download>下載原始 .md(節錄)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RMRM_Part3_RouterFramework_extracted_from_v55.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

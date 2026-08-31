@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DCRP-51:彎曲薄層不確定性與抗碎裂二階擴散活化 · NS-DCRP · NS · AMRAL</title>
-<meta name="description" content="封閉 DCRP-50 的漏洞(梯度率可能很大但薄層恩斯特羅菲載體質量趨零),證明薄層碎裂無法降低倒數厚度擴散帳單,把多薄層過濾梯度和編譯回真正未過濾的 Navier–Stokes 二階擴散。">
+<title>DCRP-02:跨尺度交互圖與遷移供給剛性 · NS-DCRP · NS · AMRAL</title>
+<meta name="description" content="承接 DCRP-01 的來源遷移定理,把遷移後的非線性供給表示成載體格之間的有向交互圖,證明夥伴度數補償定理——固定輸出、原子份額消失則子加權夥伴度數必須發散;並證明可比殼層偏移下 Biot–Savart 擬局部性給出有界圖度數,瀰散載體同樣無法單靠有界跨尺度伸展維持定階供給。另證明可比環域恢復定理與條件式交換子相干定理。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
-<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP_51_SheetUncertainty_HarmonicThickness_SecondOrderActivation_2026-08-17.md">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP_02_InteractionGraph_SupplyMigration_v0.1.md">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="stylesheet" href="../../../../assets/site.css">
 </head>
@@ -34,19 +34,19 @@
   <p class="crumb">
     <a href="../../">← NS-DCRP</a>
     <span>/</span>
-    <span>DCRP-51 · 彎曲薄層不確定性與抗碎裂二階擴散活化</span>
+    <span>DCRP-02 · 跨尺度交互圖與遷移供給剛性</span>
   </p>
 
   <header class="pkg">
     <div class="idline">
-      <span class="tag">NS-DCRP · 51</span>
-      <span class="tag">封閉漏洞</span>
+      <span class="tag">NS-DCRP · 02</span>
+      <span class="tag">延續</span>
       <span class="tag">2026-08</span>
     </div>
-    <h1>DCRP-51:彎曲薄層不確定性與抗碎裂二階擴散活化</h1>
-    <p class="h1-sub">封閉 DCRP-50 的漏洞(梯度率可能很大但薄層恩斯特羅菲載體質量趨零),證明薄層碎裂無法降低倒數厚度擴散帳單,把多薄層過濾梯度和編譯回真正未過濾的 Navier–Stokes 二階擴散。</p>
+    <h1>DCRP-02:跨尺度交互圖與遷移供給剛性</h1>
+    <p class="h1-sub">承接 DCRP-01 的來源遷移定理,把遷移後的非線性供給表示成載體格之間的有向交互圖,證明夥伴度數補償定理——固定輸出、原子份額消失則子加權夥伴度數必須發散;並證明可比殼層偏移下 Biot–Savart 擬局部性給出有界圖度數,瀰散載體同樣無法單靠有界跨尺度伸展維持定階供給。另證明可比環域恢復定理與條件式交換子相干定理。</p>
     <div class="claim-box">
-      本輪狀態:封閉漏洞
+      本輪狀態:延續
       <span class="note">— 取自檔案自身的 objective / Executive result 區塊,原意照登,非全文逐字翻譯。</span>
     </div>
   </header>
@@ -55,9 +55,9 @@
     <h2 class="doc-h2">連接 · Connections</h2>
     <p class="section-note">跟系列其他輪次的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
     <div class="connections">
-      <div class="conn-card"><span class="k">上一輪</span><a href="../50-thickness-curvature-vorticity-direction-compiler/">DCRP-50 · 厚度尺度曲率與過濾渦度方向編譯器</a></div>
-      <div class="conn-card"><span class="k">下一輪</span><a href="../52-palinstrophy-criticality-gaussian-batchelor/">DCRP-52 · 類恩斯特羅菲臨界性稽核與高斯 Batchelor 回歸剛性</a></div>
-      <div class="conn-card"><span class="k">NS-DCRP 進度</span>50 / 55</div>
+      <div class="conn-card"><span class="k">上一輪</span><a href="../01-carrier-entropy-concentration-recovery/">DCRP-01 · 載體熵與非線性濃度恢復</a></div>
+      <div class="conn-card"><span class="k">下一輪</span><a href="../03-log-cone-debt-scale-return/">DCRP-03 · 對數模型錐債務與尺度回歸排除</a></div>
+      <div class="conn-card"><span class="k">NS-DCRP 進度</span>2 / 55</div>
     </div>
   </section>
 
@@ -67,7 +67,7 @@
 
   <footer class="sitefoot">
     <a href="../../">← NS-DCRP</a>
-    <a href="../../files/NS_DCRP_51_SheetUncertainty_HarmonicThickness_SecondOrderActivation_2026-08-17.md" download>下載原始 .md</a>
+    <a href="../../files/NS_DCRP_02_InteractionGraph_SupplyMigration_v0.1.md" download>下載原始 .md</a>
   </footer>
 </div>
 
@@ -79,7 +79,7 @@
 (async () => {
   const el = document.getElementById("doc");
   try {
-    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP_51_SheetUncertainty_HarmonicThickness_SecondOrderActivation_2026-08-17.md"));
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP_02_InteractionGraph_SupplyMigration_v0.1.md"));
     amralRenderMath(el);
   } catch (e) {
     el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;

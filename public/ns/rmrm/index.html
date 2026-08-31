@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-RMRM · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-RMRM 子線:不是獨立研究線,而是 Cycle VIII(NS-DCRP)的原始研究過程日誌——52 個版本化 checkpoint(v3 至 v55,缺 v15),逐版對應 DCRP-02 到 DCRP-55 逐輪成文的即時記錄。其中 Part III 定義的 RMRM(數學家逆向研究矩陣)框架本身是獨立於 DCRP 的方法論貢獻,已建成本頁唯一一篇正式內容;其餘內容與已建置的 Cycle I-VIII 高度重複,誠實揭露而非逐版建置。建置本子線時另外發現 NS-DCRP 首頁遺漏 DCRP-01/02 兩輪,已回頭補建。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-RMRM</p>
+    <h1>NS-RMRM</h1>
+    <p class="subtitle">Reverse-engineered Mathematician Research Matrix · Cycle VIII 過程日誌 · 1 篇框架定義已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-RMRM 資料夾裡的 54 個檔案,結構跟站上其他子線完全不同:不是一批獨立編號的論文,而是<strong>單一份持續增長
+      文件的 52 個版本化 checkpoint</strong>(檔名 <code>..._Checkpoint_v3_...</code> 到 <code>..._v55_...</code>,
+      缺 v15),檔案大小從 v3 的 61,610 bytes 一路長到 v55 的 1,509,041 bytes。讀取後確認:這<strong>不是第十二條
+      獨立研究線</strong>,而是 <a href="../dcrp/">NS-DCRP</a>(Cycle VIII)本身的原始研究過程日誌——用
+      <code>grep</code> 逐行核對 v55 內部標記,「Checkpoint v2 Update — DCRP-02」「Checkpoint v3 Update — DCRP-03」
+      一路到「Checkpoint v55 Update — DCRP-55」,checkpoint 版本號與 DCRP 輪次編號完全一一對應;資料夾裡一份
+      額外的 <code>NS_DCRP_37_and_Checkpoint_v37_2026-08-17.zip</code> 更是把 DCRP-37 論文與 checkpoint v37
+      直接打包在一起發布,是這個對應關係最直接的證據。
+    </p>
+    <p class="lede">
+      v55 的結構本身說明了它的定位:Part I-II 是 Cycle I-VII(CSP、DRC、ANP、CFOP、FCBP、MORP)的壓縮回顧,
+      Part III 定義 RMRM 框架本身,Part IV 起用這個框架發動「Composite-Mathematician NS 攻擊」,產出逐版
+      演變成正式發布的 NS-DCRP 系列。換句話說:<strong>RMRM 是銜接 MORP 收尾與 DCRP 開篇之間,研究者真正
+      使用的方法論路由器</strong>,DCRP 的 55 篇正式論文則是這個路由過程篩選、修訂、正式化後的產出。
+    </p>
+    <p class="notice">
+      因此本頁只建置<strong>一篇正式內容</strong>——<a href="./p/01-router-framework/">RMRM-01</a>,節錄自 v55
+      的 Part III,定義 RMRM 框架本身(11 個 cognitive primitives、38 個 operators、28 個 dynamics、10 個
+      phase-aware 數學家 fingerprint 模式、研究動作價值函數)。這是整份 checkpoint 日誌裡<strong>真正獨立於
+      DCRP 之外的方法論貢獻</strong>。其餘內容——Part I-II 的 Cycle 回顧、Part IV 以後逐步演變成 DCRP 的攻擊
+      過程——與站上已個別建置的 <a href="../csp/">CSP</a>、<a href="../drc/">DRC</a>、<a href="../anp/">ANP</a>、
+      <a href="../cfop/">CFOP</a>、<a href="../fcbp/">FCBP</a>、<a href="../morp/">MORP</a>、
+      <a href="../dcrp/">DCRP</a> 高度重複,不再逐版拆成 52 個分頁重複建置——這樣做只會複製已上線內容,不是新增。
+    </p>
+    <p class="notice">
+      <strong>意外發現並已修正</strong>:核對 checkpoint 版本號與 DCRP 輪次的對應關係時,發現
+      <a href="../dcrp/">NS-DCRP</a> 首頁先前只建置了 03-55、59(53 篇),誤植「01、02 只有 zip 封存、無法建成
+      分頁」——實際上 01、02 的 <code>release.zip</code> 封存包內都有完整論文 <code>.md</code>,跟 03 之後每一輪
+      結構相同,只是先前沒拆開確認。已回頭補建 DCRP-01、DCRP-02 兩篇,NS-DCRP 現在是完整的 55 篇(01-55、59)。
+    </p>
+    <p class="notice">
+      <strong>另一項誠實揭露</strong>:v55 的 Part V 標題是「DCRP-01:Singular-Rooted Compactness Rigidity」,
+      但正式發布的 <code>NS_DCRP_01_v0.1_release.zip</code> 裡,DCRP-01 的實際標題是「Carrier Entropy、Rényi
+      Concentration、Nonlinear Concentration Recovery、Source Migration 與 Atomic Reprofiling Thresholds」——
+      兩者不同。這代表 DCRP-01 這一輪在最終定稿前至少被整個重寫過一次;過程日誌保留了較早的嘗試,正式發布版
+      (已建置於 <a href="../dcrp/p/01-carrier-entropy-concentration-recovery/">DCRP-01</a>)才是定稿。日誌與
+      定稿不一致時,以站上其他子線的原則,一律以 <code>release.zip</code> 的正式發布版為準。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">已建置 · 框架定義</h2>
+    <nav class="case-grid" aria-label="NS-RMRM 已建置">
+      <a class="case-card" href="./p/01-router-framework/">
+        <span class="k">RMRM-01 · 框架定義 · 摘自 v55 Part III</span>
+        <h3>數學家逆向研究矩陣作為研究 Router</h3>
+        <p>11 個 cognitive primitives + 38 個 operators + 28 個 dynamics,加上 10 個 phase-aware 數學家 fingerprint 模式,以及動態路由選擇律 J(a|S_t)。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式與未逐版建置的部分</h2>
+    <p class="section-note">
+      資料夾內 52 個 <code>.md</code> checkpoint(v3-v55,缺 v15)全部是同一份文件持續增長的快照,不是 52 篇
+      獨立論文。本頁只把最早(v3,61,610 bytes)與最新(v55,1,509,041 bytes)兩個版本原始存檔供下載,呈現
+      成長軌跡的頭尾;中間 50 個版本內容與這兩端高度重疊(逐版新增而非取代),不個別提供下載,原始資料夾本身
+      保留完整 52 版。另有兩個非 <code>.md</code> 檔案:<code>NS_DCRP_37_and_Checkpoint_v37_2026-08-17.zip</code>
+      是 DCRP-37 論文與 checkpoint v37 的合併備份包(內容與已個別存在的兩份檔案相同);
+      <code>NS_RMRM_Proof_Process_Checkpoint_2026-08-16.zip</code> 是比 v3 更早、未編號的最初 checkpoint 嘗試
+      (21,198 bytes),已被 v3 之後的版本化序列取代。兩者都不含 52 版之外的新內容,未收錄。
+      <a href="./files/NS_RMRM_Proof_Process_Checkpoint_v3_2026-08-16.md" download>下載 v3(最早)原始 .md</a> ·
+      <a href="./files/NS_RMRM_Proof_Process_Checkpoint_v55_2026-08-17.md" download>下載 v55(最新)原始 .md</a> ·
+      <a href="./files/NS_RMRM_Part3_RouterFramework_extracted_from_v55.md" download>下載 RMRM-01 節錄 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

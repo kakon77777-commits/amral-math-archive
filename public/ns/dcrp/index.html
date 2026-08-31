@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NS-DCRP · NS · AMRAL</title>
-<meta name="description" content="AMRAL 的 NS-DCRP 子線:53 篇已建置(原始編號 03-55、59,15 與 56-58 在投遞資料夾中缺失),圍繞 Navier–Stokes 全域正則性問題的一條連續、逐輪修正推進的研究鏈——從對數模型錐債務出發,經耗散供給世系、過濾渦度次網格能量、Type-II Euler 重整、Kelvin 環量、仿射噴流渦度共變剛性,推進到薄層/煎餅幾何與黏性厚度底限。全域正則性依然完全 OPEN。與 NTLA-O 內含的 117 個交叉引用檔案為同編號論文的另一視角處理,兩批平行保留。">
+<meta name="description" content="AMRAL 的 NS-DCRP 子線:55 篇已建置(原始編號 01-55、59,15 與 56-58 在投遞資料夾中缺失),圍繞 Navier–Stokes 全域正則性問題的一條連續、逐輪修正推進的研究鏈——從載體熵與濃度恢復出發,經對數模型錐債務、耗散供給世系、過濾渦度次網格能量、Type-II Euler 重整、Kelvin 環量、仿射噴流渦度共變剛性,推進到薄層/煎餅幾何與黏性厚度底限。全域正則性依然完全 OPEN。與 NTLA-O 內含的 117 個交叉引用檔案為同編號論文的另一視角處理,兩批平行保留。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../../assets/site.css">
@@ -32,7 +32,7 @@
   <header class="page">
     <p class="eyebrow"><a href="../">← NS 特區</a> · NS-DCRP</p>
     <h1>NS-DCRP</h1>
-    <p class="subtitle">Navier–Stokes Diffuse Carrier Rigidity Program · Cycle VIII · 53/53 已建置 · 全域正則性 OPEN</p>
+    <p class="subtitle">Navier–Stokes Diffuse Carrier Rigidity Program · Cycle VIII · 55/55 已建置 · 全域正則性 OPEN</p>
     <p class="lede">
       NS-DCRP 是一條連續、逐輪修正推進的研究鏈:每一輪都直接稽核、修正或延伸前一輪的結論——不是獨立主題的合輯。
       原始編號從 03 到 59,本頁下方依主題脈絡分成七個階段,方便循序閱讀,但骨幹仍是單一條依賴鏈。
@@ -44,10 +44,13 @@
       (X)→ <a href="../rkap/">NS-RKAP</a>(XI)。
     </p>
     <p class="lede">
-      誠實揭露兩類缺口:(1)編號 01、02 的原始檔案只以 <code>.zip</code> 封存(release/checkpoint 壓縮包)存在,
-      沒有獨立的 <code>.md</code> 論文可供建成本頁的獨立分頁,故未列入;(2)編號 15 與 56–58 被後續輪次多次引用
-      (例如 DCRP-16 明確接續「DCRP-15 的缺口」,DCRP-59 明確引用 DCRP-56/57/58),但原始投遞資料夾中並不存在
-      對應檔案——可能遺失、可能只存在於某個 <code>.zip</code> 封存包內尚未拆封確認。兩者都不是本頁疏漏,如實標記。
+      <strong>更正</strong>:本頁先前誤植編號 01、02 的原始檔案「只以 <code>.zip</code> 封存、無法建成獨立分頁」——
+      建置 <a href="../rmrm/">NS-RMRM</a> 子線時發現,DCRP-01、DCRP-02 的 <code>release.zip</code> 封存包內其實各自
+      含有完整的論文 <code>.md</code>(與 03 之後每一輪的封存包結構完全相同),只是先前建置本頁時沒有拆開這兩個
+      封存包確認——不是檔案真的缺失,是本頁自己的疏漏,現已拆開補建,DCRP 系列正確的完整起點是 01,不是 03。
+      誠實揭露另一類缺口:編號 15 與 56–58 被後續輪次多次引用(例如 DCRP-16 明確接續「DCRP-15 的缺口」,DCRP-59
+      明確引用 DCRP-56/57/58),但原始投遞資料夾中並不存在對應檔案——可能遺失、可能只存在於某個 <code>.zip</code>
+      封存包內尚未拆封確認。這一類是真正的資料缺口,不是本頁疏漏。
     </p>
     <p class="notice">
       與 <a href="ntla-o/">NTLA-O</a> 內含的 117 個「以 NTLA-O 觀察者視角重新處理 NS-DCRP 同編號論文」交叉引用檔案,
@@ -56,9 +59,19 @@
   </header>
 
   <section id="early-chain">
-    <h2 class="doc-h2">早期供給鏈(Rounds 3-14)</h2>
-    <p class="section-note">從對數模型錐債務出發,一路把耗散邊界供給殼層從瞬時頻率標記逐步收緊為真正有實際歷史因果性的非線性 Navier–Stokes 世系,最終建成有限維無散痕跡窗。</p>
+    <h2 class="doc-h2">早期供給鏈(Rounds 01-14)</h2>
+    <p class="section-note">從 MORP Cycle VII 倖存的瀰散載體出發,先證明熵本身不是障礙、找到真正的濃度恢復機制與跨尺度交互圖(DCRP-01/02),再以對數模型錐債務取代原始稅收累積路線,一路把耗散邊界供給殼層從瞬時頻率標記逐步收緊為真正有實際歷史因果性的非線性 Navier–Stokes 世系,最終建成有限維無散痕跡窗。</p>
     <nav class="case-grid" aria-label="NS-DCRP 早期供給鏈">
+      <a class="case-card" href="./p/01-carrier-entropy-concentration-recovery/">
+        <span class="k">DCRP-01 · 開篇</span>
+        <h3>載體熵與非線性濃度恢復</h3>
+        <p>從 MORP Cycle VII 的倖存正規形式(最小、零稅、核飽和瀰散載體)出發,證明熵本身不構成動力學障礙,找到真正的非線性濃度泛函,證明同殼對角渦度伸展的濃度恢復定理。DCRP 系列真正的開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-interaction-graph-supply-migration/">
+        <span class="k">DCRP-02 · 延續</span>
+        <h3>跨尺度交互圖與遷移供給剛性</h3>
+        <p>把遷移後的非線性供給表示成載體格之間的有向交互圖,證明夥伴度數補償定理與可比殼層偏移下的有界圖度數,另證明可比環域恢復定理與條件式交換子相干定理。</p>
+      </a>
       <a class="case-card" href="./p/03-log-cone-debt-scale-return/">
         <span class="k">DCRP-03 · CLOSED 兩項難題</span>
         <h3>對數模型錐債務與尺度回歸排除</h3>
