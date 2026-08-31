@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-01:來源—核心世系、伴隨因果管、尺度分解渦度更新與 C2→C3 缺口 · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP 系列第 2 篇(01 號)。改用無壓力渦度方程加終端核心錨定伴隨截止,證出加權正向因果世系恆等式——輸出局部的來源—核心世系在加權伴隨意義下得證(真正的 C2 PDE 因果邊)。幾何母來源定位仍開放,C2→C3 缺口未封閉。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-01 · 來源—核心世系、伴隨因果管、尺度分解渦度更新與 C2→C3 缺口</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-01:來源—核心世系、伴隨因果管、尺度分解渦度更新與 C2→C3 缺口</h1>
+    <p class="h1-sub">Source–Core Provenance, Adjoint Causal Tubes, Scale-Resolved Vorticity Renewal, and the C2→C3 Gap</p>
+    <p class="h1-sub">ANP-00 把已證明的遞迴因果世系邊定義為 C3 邊:正向 PDE 貢獻加同分支世系加遞迴母節點合法性。Type-I DRC 架構已給出後期奇異核心狀態、局部絕對紫外下界、全域高通狀態、逐節點全域來源世系。未解問題是:來源世系能否連到後期奇異核心本身?本文改用無壓力的渦度方程與終端核心錨定的伴隨截止,而非直接局部化含壓力的應變方程,證出第一個嚴謹的世系橋——一個精確的加權正向因果世系恆等式。在 Type-I 弱 L³ 界下,伴隨足跡具有守恆質量、核心尺度高影響體積,且其重心在一個拋物時間內維持在奇異中心 O_M(R) 範圍內——因此輸出局部的來源—核心世系在加權伴隨意義下得證。幾何母來源定位、擴散低影響來源貢獻的抑制、選定母節點的遞迴重用仍是開放問題。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../00-pre-singularity-causal-relation-domain/">ANP-00 · 前奇異點因果關係域、混合連續性、合法性、類相變與因果詮釋</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../02-recursive-edge-footprint-recapture/">ANP-02 · 遞迴邊相容性、伴隨足跡孔徑、正則足跡節點與母來源定位缺口</a></div>
+      <div class="conn-card"><span class="k">NS-ANP 進度</span>2 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

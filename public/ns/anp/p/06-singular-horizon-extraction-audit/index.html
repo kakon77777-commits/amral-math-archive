@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-06:奇異視界無窮世系萃取、雙傳播子修正、視界持續性與鏈必要性封閉稽核 · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP 系列第 7 篇(06 號)。修正 ANP-05 的繼承判準,改用精確雙傳播子 Duhamel 貢獻,證明有限深度可實現不蘊含無窮分支存在,定義視界持續節點,指認缺失定理為視界持續標記分支的萃取。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_06_SingularHorizon_ExtractionAudit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-06 · 奇異視界無窮世系萃取、雙傳播子修正、視界持續性與鏈必要性封閉稽核</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-06:奇異視界無窮世系萃取、雙傳播子修正、視界持續性與鏈必要性封閉稽核</h1>
+    <p class="h1-sub">Singular-Horizon Infinite Ancestry Extraction, Dual-Propagator Correction, Horizon Persistence, and Chain-Necessity Closure Audit</p>
+    <p class="h1-sub">ANP-05 聲稱對任意 N,存在深度 N 的相容 C3 世系路徑,也正確指出這不蘊含存在一條無窮鏈。但在嘗試無窮萃取之前,有一個繼承步驟需要修正:條件 e_k^χ(a)>0 只證明更早狀態存在,不足以證明這個更早狀態對後期子觀測量有正向傳播貢獻——該狀態可能已被耗散/抵銷,後期狀態是被強迫重建的。本文首先修補這條因果帳本:用精確的雙傳播子 Duhamel 貢獻取代單純的更早加權殼能量正性,證明真正的正向因果繼承/來源二選一,以及對偶/足跡因果節點類別修正後的有限深度延續定理。抽象地證明:任意有限深度可實現不蘊含存在無有限分支、緊緻性或視界持續性的無窮分支。分離平凡的全解因果脊柱與 Chain Necessity 真正要找的強標記/來源世系形成鏈。定義視界持續節點,證明實際奇異視界鏈的充分遞迴持續性判準。指認缺失的定理是保存/萃取一條視界持續的標記 C3 分支,而不是局部來源母存在性。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../05-arbitrary-depth-c3-paths/">ANP-05 · 任意深度相容 C3 路徑、無終端節點、適應性世代重整化與奇異視界緊緻性缺口</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../07-horizon-persistent-branch-extraction/">ANP-07 · 視界持續分支萃取、強子緊緻性、因果邊封閉與更新率替代</a></div>
+      <div class="conn-card"><span class="k">NS-ANP 進度</span>7 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_06_SingularHorizon_ExtractionAudit_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_06_SingularHorizon_ExtractionAudit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

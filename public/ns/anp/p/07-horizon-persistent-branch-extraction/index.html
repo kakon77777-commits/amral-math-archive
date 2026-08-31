@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-07:視界持續分支萃取、強子緊緻性、因果邊封閉與更新率替代 · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP 系列第 8 篇(07 號)。把視界持續性失效拆成傳輸退化(D_HTRANS)與緊緻性退化(D_HCOMP)兩種機制,證明視界切割對偶帳本定理與局部因果邊封閉定理。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-07 · 視界持續分支萃取、強子緊緻性、因果邊封閉與更新率替代</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-07:視界持續分支萃取、強子緊緻性、因果邊封閉與更新率替代</h1>
+    <p class="h1-sub">Horizon-Persistent Branch Extraction, Strong-Child Compactness, Causal Edge Closure, and the Renewal-Rate Alternative</p>
+    <p class="h1-sub">ANP-06 把強鏈必要性化簡成視界持續性義務 HP1、HP2、HP3、HP4。本文問:究竟是什麼阻止一條視界持續的標記因果分支被萃取出來?答案現在拆成兩種根本不同的失效機制:D_HTRANS(傳輸退化)與 D_HCOMP(緊緻性/邊封閉退化)。證明抽象的有限子與緊緻子視界持續子判準——在門檻有限的強子分支下,HPC 失效會迫使視界傳輸崩塌。證明視界切割對偶帳本定理:若在收縮終端窗上傳播繼承很小,歸一化新鮮來源率必須至少以逆窗長速度發散。在強局部緊緻性與受控核膨脹足跡下,為歸一化有界相對頻率、頻寬受限的 C3_W 邊建立局部因果邊封閉定理——在一致傳輸下界下,非平凡邊極限成立。臨界剖面分解與 Type-I 古老解文獻只作為外部緊緻性校準,並未證明原始解中實際世系鏈的封閉。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../06-singular-horizon-extraction-audit/">ANP-06 · 奇異視界無窮世系萃取、雙傳播子修正、視界持續性與鏈必要性封閉稽核</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../08-horizon-transmission-rigidity/">ANP-08 · 視界傳輸剛性、新鮮來源串級、預算化 CN3 與實際分支映照稽核</a></div>
+      <div class="conn-card"><span class="k">NS-ANP 進度</span>8 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

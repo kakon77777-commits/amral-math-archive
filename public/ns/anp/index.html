@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-ANP · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-ANP(Navier–Stokes Ancestry Necessity Program)子線:Cycle IV 全 10 篇已上線。從定義前奇異點因果關係域出發,逐步建成加權 C3 因果世系邊、任意有限深度相容路徑,終審於 ANP-09 證明實際的視界因果森林必要性定理(CN_Forest)——但原子性 CN3 仍 OPEN,前沿可能是森林而非單一世系,正式交棒 NS-CFOP。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-ANP</p>
+    <h1>NS-ANP</h1>
+    <p class="subtitle">Navier–Stokes Ancestry Necessity Program · Cycle IV · 10/10 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-ANP 是目前 AMRAL 站上已建置、可追溯到的研究鏈最早一段。ANP-00 自身文件提到「前一個 Cycle(III)
+      封閉了 Type-I 儲庫機制分類層」,說明還有更早的 Cycle III 存在,但目前尚未能對應到站上任何一條已盤點的子線,
+      誠實標記為未知,不強行猜測名稱。十篇一路建構前奇異點因果世系的正式理論:<strong>ANP-00</strong> 定義因果關係域,
+      <strong>ANP-01~03</strong> 逐步把來源—核心世系從加權伴隨貢獻升級到真正的 C3 因果母邊,
+      <strong>ANP-04</strong> 補完非 Type-I 入口,<strong>ANP-05~08</strong> 處理任意深度路徑、繼承判準修正、
+      視界持續性與傳輸剛性,<strong>ANP-09</strong> 完成 Cycle IV 終審。
+    </p>
+    <p class="notice">
+      ANP-09 證明真正的<strong>視界因果森林必要性定理(CN_Forest)</strong>:在假設有限奇異點下,
+      實際存在一個前奇異點因果 DAG,終端出現在任意晚時刻與無界奇異尺度上。但<strong>原子性 CN3(單一無窮因果世系)
+      仍是 OPEN</strong>——不可化簡的前沿是瀰散視界分支,危險因果性可能是一整片森林,而非單一世系。正式交棒給
+      <strong>「NS-CFOP:Navier–Stokes 因果森林障礙計畫」</strong>。這是目前站上可追溯到的研究鏈最早一段:
+      <a href="../anp/">NS-ANP</a>(Cycle IV)→ <a href="../cfop/">NS-CFOP</a>(Cycle V)→
+      <a href="../fcbp/">NS-FCBP</a>(Cycle VI)→ <a href="../morp/">NS-MORP</a>(Cycle VII)→
+      <a href="../dcrp/">NS-DCRP</a>。多輪文件中反覆引用一個既有的「DRC 耗散波數架構」(殼分組、耗散跨度/驅動債)
+      作為既有機制,可能與待建的 <strong>NS_DRC</strong> 子線相關,但這裡只是引用既有工具,不是像其他四段那樣
+      明確的「Cycle N-1」交接,故不列入上面的接力鏈。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle IV 十篇 · The Ten-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:因果關係域 → 來源—核心世系 → C3 因果母邊 → 普遍入口 → 任意深度路徑 → 繼承修正 → 視界持續性 →
+      傳輸剛性 → 因果森林終審。建議照順序讀,每一篇都以前一篇的結果為前提。ANP-05 的原始繼承判準後來被
+      ANP-06 隨附的 v0.2 修正說明指出過強,已在該篇頁面附上修正文件連結。
+    </p>
+    <nav class="case-grid" aria-label="NS-ANP 十篇">
+      <a class="case-card" href="./p/00-pre-singularity-causal-relation-domain/">
+        <span class="k">ANP-00</span>
+        <h3>前奇異點因果關係域、混合連續性與因果詮釋</h3>
+        <p>定義正則因果原子物件與每條世系邊必須滿足的規則。純框架性文件,Cycle IV 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/01-source-core-provenance-adjoint-tube/">
+        <span class="k">ANP-01</span>
+        <h3>來源—核心世系、伴隨因果管與 C2→C3 缺口</h3>
+        <p>證出加權正向因果世系恆等式,得到真正的 C2 PDE 因果邊。幾何母來源定位仍開放。</p>
+      </a>
+      <a class="case-card" href="./p/02-recursive-edge-footprint-recapture/">
+        <span class="k">ANP-02</span>
+        <h3>遞迴邊相容性、伴隨足跡孔徑與母來源定位缺口</h3>
+        <p>引入在倒退遞迴下穩定的正則足跡頻譜節點,證明泛函分析 NO-GO:伴隨權重局部化不蘊含來源局部化。</p>
+      </a>
+      <a class="case-card" href="./p/03-source-parent-recapture-c3-upgrade/">
+        <span class="k">ANP-03</span>
+        <h3>來源母重新捕獲、核膨脹足跡與 C3 因果升級</h3>
+        <p>對強來源原子證出加權 C3 因果母邊——首次真正的世系升級(限加權擬局部足跡節點類別)。</p>
+      </a>
+      <a class="case-card" href="./p/04-non-type-i-adaptive-entry/">
+        <span class="k">ANP-04</span>
+        <h3>非 Type-I 世系入口與普遍因果狀態初始化</h3>
+        <p>證明非 Type-I 失敗不阻止因果狀態初始化,得到普遍的雙分支因果狀態入口定理。</p>
+      </a>
+      <a class="case-card" href="./p/05-arbitrary-depth-c3-paths/">
+        <span class="k">ANP-05 · 見修正</span>
+        <h3>任意深度相容 C3 路徑與無終端節點</h3>
+        <p>證明無終端節點定理與任意有限深度相容 C3 路徑存在性。原始繼承判準後被 v0.2 修正說明指出過強。</p>
+      </a>
+      <a class="case-card" href="./p/06-singular-horizon-extraction-audit/">
+        <span class="k">ANP-06</span>
+        <h3>奇異視界無窮世系萃取與雙傳播子修正</h3>
+        <p>修正 ANP-05 的繼承判準,證明有限深度可實現不蘊含無窮分支存在,定義視界持續節點。</p>
+      </a>
+      <a class="case-card" href="./p/07-horizon-persistent-branch-extraction/">
+        <span class="k">ANP-07</span>
+        <h3>視界持續分支萃取與因果邊封閉</h3>
+        <p>把視界持續性失效拆成傳輸退化與緊緻性退化兩種機制,證明局部因果邊封閉定理。</p>
+      </a>
+      <a class="case-card" href="./p/08-horizon-transmission-rigidity/">
+        <span class="k">ANP-08</span>
+        <h3>視界傳輸剛性與實際分支映照稽核</h3>
+        <p>證明視界傳輸崩塌不是獨立障礙;給出剖面緊緻性不映照實際鏈的明確反例。</p>
+      </a>
+      <a class="case-card" href="./p/09-scale-fragmentation-cn3-final-audit/">
+        <span class="k">ANP-09 · 終審</span>
+        <h3>尺度碎裂剛性、因果森林必要性與 CN3 終審</h3>
+        <p>證明視界因果森林必要性定理(CN_Forest)。原子性 CN3 仍 OPEN,交棒 NS-CFOP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      十篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。ANP-06 的發布包額外含有對 ANP-05 的 v0.2 修正說明,已一併上線並在
+      ANP-05 頁面附上連結。發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,未一併公開。
+      <a href="./files/NS_ANP_CYCLE_IV_HANDOFF_v1.0.md" download>下載 Cycle IV Handoff 原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
