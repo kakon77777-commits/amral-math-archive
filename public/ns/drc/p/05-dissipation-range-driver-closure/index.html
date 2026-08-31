@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRC-05:耗散範圍儲庫封閉、低模驅動包、邊界駐留與強迫層級黏性強制性 · NS-DRC · NS · AMRAL</title>
+<meta name="description" content="DRC 系列第 5 篇。證明耗散殘差不是獨立機制:移除黏性小量扇區後,強更新皆受低模驅動作用控制或世系重新生根。R_DISS 吸收進標準低模驅動作用,主要殘差化簡為 R_DIL。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-DRC</a>
+    <span>/</span>
+    <span>DRC-05 · 耗散範圍儲庫封閉、低模驅動包、邊界駐留與強迫層級黏性強制性</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle III</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>DRC-05:耗散範圍儲庫封閉、低模驅動包、邊界駐留與強迫層級黏性強制性</h1>
+    <p class="h1-sub">Dissipation-Range Reservoir Closure, Low-Mode Driver Packets, Boundary Residence, and Forcing-Level Viscous Coercivity</p>
+    <p class="h1-sub">DRC-04 把主要動態殘差核心化簡成 R_DISS∪R_DIL。耗散殘差含低模驅動主導、Q(t) 周圍過渡帶強迫、大耗散邊界跨度 Q_I^+-J、深耗散部分已證明黏性小量的重複高頻更新。本文問這些是否真是相異的儲庫機制——答案是:不是。用 Cheskidov–Shvydkoy 耗散波數結構證明,移除 DRC-03/04 已證明可黏性吸收的深高頻扇區後,剩餘的二次渦度強迫被一個強低模渦度/梯度驅動乘以高頻應變梯度狀態所控制。強更新包因此要嘛攜帶定量的低模驅動作用包,要嘛揭露一個更大的更早高頻狀態,必須世系重新生根。重複回溯到固定光滑早期時間區域會迫使一個驅動作用祖先。另證明邊界高度駐留定理:大耗散邊界跨度只能維持指數短的歸一化駐留,除非支付大驅動作用。R_DISS 因此被吸收成標準低模驅動作用(非證明為不可能),主要未解動態儲庫殘差化簡為 R_DIL。</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟系列其他篇的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../04-cancellation-many-parent-coherence/">DRC-04 · 抵銷剛性、多母聚合、淨殼相干性與耗散跨度壓縮</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../06-persistent-core-dilution-core-reuse/">DRC-06 · 持續核心稀釋、倒退集中、絕對紫外核心載體與核心重用剛性</a></div>
+      <div class="conn-card"><span class="k">NS-DRC 進度</span>5 / 7</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-DRC</a>
+    <a href="../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

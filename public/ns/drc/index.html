@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-DRC · NS · AMRAL</title>
+<meta name="description" content="AMRAL 的 NS-DRC(Navier–Stokes Dynamic Reservoir Closure Program)子線:Cycle III 全 7 篇已上線。逐一吸收、壓縮、重分類 Cycle II 留下的四個儲庫/來源殘差類別,終審於 DRC-07 完成 Type-I 分支的儲庫機制分類封閉,但稽核發現儲庫封閉不蘊含鏈必要性,正式交棒 NS-ANP(Cycle IV)。全域正則性仍完全 OPEN。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 特區</a> · NS-DRC</p>
+    <h1>NS-DRC</h1>
+    <p class="subtitle">Navier–Stokes Dynamic Reservoir Closure Program · Cycle III · 7/7 已建置 · 全域正則性 OPEN</p>
+    <p class="lede">
+      NS-DRC 解決了上一輪留下的懸案:<a href="../anp/">NS-ANP</a> 多輪文件引用一個既有的「DRC 耗散波數架構」,
+      當時只能標記為可能相關、尚待確認。實際讀取後確認:<strong>DRC 就是 Cycle III</strong>(第七個發布包的檔名
+      本身就是 <code>NS_DRC_07_CYCLE_III</code>),而它的終審文件明確寫著「Cycle-IV launch:
+      Navier–Stokes Ancestry Necessity Program(NS-ANP)」——與 ANP-00 自己提到「前一個 Cycle III」完全吻合。
+      七篇一路吸收 Cycle II 留下的四個儲庫/來源殘差類別(R_EXP、R_DISS、R_DIL、R_SRC):
+      <strong>DRC-01</strong> 移除指數預載作為獨立機制,<strong>DRC-02~04</strong> 逐步把來源更新升級成精確母帳本、
+      證明抵銷不需有界即可萃取母載體,<strong>DRC-05</strong> 吸收耗散範圍殘差,<strong>DRC-06</strong> 修正核心稀釋的
+      歸一化錯誤,<strong>DRC-07</strong> 完成 Cycle III 封階稽核。
+    </p>
+    <p class="notice">
+      DRC-07 的結論是:在 <strong>Type-I 分支的儲庫機制分類層上完全封閉</strong>(不再有無法解釋的儲庫殘差類別),
+      但這<strong>不蘊含鏈必要性</strong>——儲庫封閉只是逐節點的世系存在性,不是單一相容、可溯源的無窮鏈。
+      指認來源—核心世系(SCPB)、遞迴邊相容性(REC)、非 Type-I 入口為主要的鏈必要性缺口,正式交棒給
+      <strong>「NS-ANP:Navier–Stokes 世系必要性計畫」</strong>。DRC-01 自身文件提到還有更早的 <strong>Cycle II</strong>
+      存在(留下 R_EXP、R_DISS、R_DIL、R_SRC 四個殘差),但同樣沒有給出簡稱,誠實標記為已知存在、尚未識別對應子線,
+      不強行猜測。目前確認的完整研究鏈:<a href="../drc/">NS-DRC</a>(Cycle III)→ <a href="../anp/">NS-ANP</a>
+      (Cycle IV)→ <a href="../cfop/">NS-CFOP</a>(Cycle V)→ <a href="../fcbp/">NS-FCBP</a>(Cycle VI)→
+      <a href="../morp/">NS-MORP</a>(Cycle VII)→ <a href="../dcrp/">NS-DCRP</a>,共六段接力。
+    </p>
+  </header>
+
+  <section id="series">
+    <h2 class="doc-h2">Cycle III 七篇 · The Seven-Paper Cycle</h2>
+    <p class="section-note">
+      依賴鏈:指數預載移除 → 母帳本升級 → 頻率加權分離 → 抵銷剛性 → 耗散範圍吸收 → 核心稀釋修正 → 封階稽核。
+      建議照順序讀,每一篇都以前一篇的結果為前提。
+    </p>
+    <nav class="case-grid" aria-label="NS-DRC 七篇">
+      <a class="case-card" href="./p/01-exponential-preload-prehistory-renewal/">
+        <span class="k">DRC-01</span>
+        <h3>指數預載、史前更新與高頻母世系</h3>
+        <p>證明指數預載本身必須由史前 Duhamel 強迫產生,移除為獨立殘餘機制。Cycle III 開篇。</p>
+      </a>
+      <a class="case-card" href="./p/02-source-to-state-efficiency-renewal-chain/">
+        <span class="k">DRC-02</span>
+        <h3>來源到狀態效率、母多重性與更新鏈壓縮</h3>
+        <p>把更新分支升級成精確帶號母帳本,導出雙線性母狀態包絡,得到有限分支更新鏈判準。</p>
+      </a>
+      <a class="case-card" href="./p/03-source-amplification-dissipation-coupling/">
+        <span class="k">DRC-03</span>
+        <h3>來源放大、交互作用利用與耗散範圍耦合</h3>
+        <p>分離確定性頻率加權與真正的來源/狀態不匹配,把利用崩塌重分類為憑證低效而非原始機制。</p>
+      </a>
+      <a class="case-card" href="./p/04-cancellation-many-parent-coherence/">
+        <span class="k">DRC-04</span>
+        <h3>抵銷剛性、多母聚合與耗散跨度壓縮</h3>
+        <p>證明帶號抵銷不需一致有界就能萃取高母載體,移除 R_CAN 與 R_MULT 作為獨立殘差類別。</p>
+      </a>
+      <a class="case-card" href="./p/05-dissipation-range-driver-closure/">
+        <span class="k">DRC-05</span>
+        <h3>耗散範圍儲庫封閉與低模驅動包</h3>
+        <p>證明強更新皆受低模驅動作用控制或世系重新生根,R_DISS 吸收進標準低模驅動作用。</p>
+      </a>
+      <a class="case-card" href="./p/06-persistent-core-dilution-core-reuse/">
+        <span class="k">DRC-06</span>
+        <h3>持續核心稀釋與核心重用剛性</h3>
+        <p>指出全域機率份額不是奇異核心世系的正確主變數,改用絕對局部核心載體,R_DIL 重分類為歸一化缺陷。</p>
+      </a>
+      <a class="case-card" href="./p/07-unified-reservoir-cover-cycle-iii-closure/">
+        <span class="k">DRC-07 · 終審</span>
+        <h3>統一動態儲庫覆蓋與 Cycle III 封階</h3>
+        <p>完成 Type-I 分支儲庫分類封閉,但稽核發現儲庫封閉不蘊含鏈必要性。正式交棒 NS-ANP。</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="notes">
+    <h2 class="doc-h2">關於原始檔案格式</h2>
+    <p class="section-note">
+      七篇原始檔案在投遞資料夾中只以 <code>.zip</code> 發布包形式存在(每包含論文 <code>.md</code>、
+      版本化路線圖、CHANGELOG 等)。第七篇的發布包額外含有一份「標準 PDE 重編譯」總覽文件,把整個 Cycle III
+      的成果用標準 PDE 語言重新摘要一次——一併上線供參考。發布包內的路線圖/CHANGELOG/schema 屬專案內部管理文件,
+      未一併公開。
+      <a href="./files/NS_DRC_CYCLE_III_HANDOFF_v1.0.md" download>下載 Cycle III Handoff 原始 .md</a> ·
+      <a href="./files/NS_DRC_CYCLE_III_STANDARD_PDE_RECOMPILATION_v1.0.md" download>下載標準 PDE 重編譯原始 .md</a>
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 特區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
