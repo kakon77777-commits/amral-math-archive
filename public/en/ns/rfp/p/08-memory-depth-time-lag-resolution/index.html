@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFP-08: Memory-Depth, Time-Lag Resolution, Packet-Complete Closure, and Plateau-Crossing Bridges · NS-RFP · NS · AMRAL</title>
+<meta name="description" content="RFP series round 8. Builds a generation-age decomposition for plateau-compressed edges, proves conditional finite-memory closure, upgrades to a field-packet-complete bridging criterion, derives a plateau-crossing depth debt. Formally integrates the C3-J through C3-N guard results.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RFP_08_MemoryDepth_TimeResolution_PacketClosure_PlateauBridge_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/rfp/p/08-memory-depth-time-lag-resolution/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/rfp/p/08-memory-depth-time-lag-resolution/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/rfp/p/08-memory-depth-time-lag-resolution/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/rfp/p/08-memory-depth-time-lag-resolution/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RFP</a>
+    <span>/</span>
+    <span>RFP-08 · Memory-Depth, Time-Lag Resolution, Packet-Complete Closure, and Plateau-Crossing Bridges</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle I</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>RFP-08: Memory-Depth, Time-Lag Resolution, Packet-Complete Closure, and Plateau-Crossing Bridges</h1>
+    <p class="h1-sub">Memory-Depth, Time-Lag Resolution, Packet-Complete Closure, and Plateau-Crossing Bridges</p>
+    <p class="h1-sub">RFP-06 splits inter-edge PF-A persistence failure into an untracked prior packet, legacy stock, or fresh same-edge source, plus bridge multiplicity, thermal decay, or interaction inefficiency. RFP-07 then proves fixed-threshold PF-B is never a permanently independent synchronous branch, but a finite spectral plateau. This round builds an exact generation-age decomposition for plateau-compressed PF-A edges; proves conditional finite-memory closure from viscous-age separation; upgrades scalar witness tracking into a field-packet-complete bridging criterion under bounded packet amplification; derives a plateau-crossing depth debt. This round formally migrates and integrates the guard results of the C3-J through C3-N series.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../07-synchronous-plateau-compression/">RFP-07 · Synchronous Plateau Compression, Carrier-Depth Propagation, and Fast-Front Source Debt</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../09-unified-tax-ledger/">RFP-09 · Pressure/Far-Field, Adjoint Distortion, Interaction Efficiency, and Unified Tax Ledger</a></div>
+      <div class="conn-card"><span class="k">NS-RFP progress</span>8 / 12</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RFP</a>
+    <a href="../../files/NS_RFP_08_MemoryDepth_TimeResolution_PacketClosure_PlateauBridge_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RFP_08_MemoryDepth_TimeResolution_PacketClosure_PlateauBridge_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

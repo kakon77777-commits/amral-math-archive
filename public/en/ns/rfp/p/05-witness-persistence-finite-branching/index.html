@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFP-05: Witness Persistence, Finite Branching, Survivor Recursion, and Infinite Ancestry Path Extraction · NS-RFP · NS · AMRAL</title>
+<meta name="description" content="RFP series round 5. Proves a finite-branching path-extraction theorem for thresholded witness graphs, gives an exact backward survivor recursion and a finite-horizon obstruction certificate, separates persistent infinite ancestry from bottleneck-collapse escape. Graph theory side is exact, the PDE bridge remains open.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/rfp/p/05-witness-persistence-finite-branching/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/rfp/p/05-witness-persistence-finite-branching/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/rfp/p/05-witness-persistence-finite-branching/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/rfp/p/05-witness-persistence-finite-branching/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-RFP</a>
+    <span>/</span>
+    <span>RFP-05 · Witness Persistence, Finite Branching, Survivor Recursion, and Infinite Ancestry Path Extraction</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle I</span>
+      <span class="tag">2026-08-14</span>
+    </div>
+    <h1>RFP-05: Witness Persistence, Finite Branching, Survivor Recursion, and Infinite Ancestry Path Extraction</h1>
+    <p class="h1-sub">Witness Persistence, Finite Branching, Survivor Recursion, and Infinite Ancestry Path Extraction</p>
+    <p class="h1-sub">RFP-02 builds the first-passage level and nonlinear source debt; RFP-03 builds the exact signed parent-output ledger; RFP-04 further builds the adjoint spacetime tube refinement and quantitative parent tightness. This round proves: for a thresholded RFP witness graph, a finite-branching path-extraction theorem holds; gives an exact backward survivor recursion and a finite-horizon obstruction certificate; separates persistent infinite ancestry from bottleneck-collapse escape. The graph-theoretic theorem is exact once nodes and compatibility certificates are supplied, but the PDE-bridge fraction required for full ancestry compatibility remains open.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-adjoint-spacetime-tube-ledger/">RFP-04 · Adjoint Spacetime Tube Ledger, Pressure-Compatible Localization, and Quantitative Uniform Parent Tightness</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-inter-edge-bridge-realization/">RFP-06 · Inter-Edge Bridge Realization, Source–Stock Propagation, and Persistence Bottleneck Decomposition</a></div>
+      <div class="conn-card"><span class="k">NS-RFP progress</span>5 / 12</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-RFP</a>
+    <a href="../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
