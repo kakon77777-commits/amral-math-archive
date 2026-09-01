@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper 8: NTLA-O VII: Complete Separation, Canonical Invariants, Locally Finite Reconstruction, and the Continuous Separation Problem · NTLA-O · NS · AMRAL</title>
+<meta name="description" content="NTLA-O series Paper 8. Poses the Complete Separation Problem: a complete separator genuinely exists for finite relational structures (canonical form equal iff isomorphic), but existence does not imply an efficient algorithm; the continuous version (Continuous Separation Problem) is explicitly left as an open problem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NTLA-O_VII_Paper08_CompleteSeparationCanonicalInvariants.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/ntla-o/p/08-ntla-o-vii/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/ntla-o/p/08-ntla-o-vii/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/ntla-o/p/08-ntla-o-vii/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/ntla-o/p/08-ntla-o-vii/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NTLA-O</a>
+    <span>/</span>
+    <span>Paper 8 · NTLA-O VII: Complete Separation, Canonical Invariants, Locally Finite Reconstruction, and the Continuous Separation Problem</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1 Formal Draft</span>
+      <span class="tag">2026-08-17</span>
+      <span class="tag">prerequisite: NTLA-O VI</span>
+    </div>
+    <h1>Paper 8: NTLA-O VII: Complete Separation, Canonical Invariants, Locally Finite Reconstruction, and the Continuous Separation Problem</h1>
+    <p class="h1-sub">Complete Separation, Canonical Invariants, Locally Finite Reconstruction, and the Continuous Separation Problem</p>
+    <p class="h1-sub">NTLA-O series Paper 8. Directly poses the Complete Separation Problem: if NTLA claims two structures are different, can some observation actually be constructed that necessarily separates them? The first part restricts to finite relational structures, defining a canonical form as the lexicographically smallest encoding over all admissible relabelings, and proves two structures' canonical forms are equal if and only if they are isomorphic — i.e., a complete separator genuinely exists for finite structure domains (the document explicitly notes: the existence of a complete invariant does not imply an efficient canonization algorithm — these are different problems). The second part handles connected, rooted, locally finite, countable structures, extending the result with finite observation balls plus a König-type compactness argument. The document explicitly does not presume the Continuous Separation Problem (the version for continuous topological/geometric object classes) has a simple solution in general, and leaves it as an open problem.</p>
+    <div class="claim-box">
+      This paper's core question: when is an observation system sufficient for complete classification?
+      <span class="note">— from Paper 9 (the unifying paper), Section 1's series structure table, quoted verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../07-ntla-o-vi/">Paper 7 · NTLA-O VI: Inverse Systems, Observer Tower, Inverse Limit, and Pro-Observer Identity</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../09-unified/">Paper 9 / 9 · NTLA-O: Unification — Unified Axioms, Identity Hierarchies, Mathematical Interfaces, Completeness, and Research Boundaries</a></div>
+      <div class="conn-card"><span class="k">NTLA-O progress</span>8 / 9</div>
+    </div>
+    <blockquote class="cite">The preceding eight papers' foundation, observer, set theory, topology, local–global, path, inverse system, and separability are now all in place, handed to Paper 9 for unified closure.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NTLA-O</a>
+    <a href="../../files/NTLA-O_VII_Paper08_CompleteSeparationCanonicalInvariants.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NTLA-O_VII_Paper08_CompleteSeparationCanonicalInvariants.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

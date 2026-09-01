@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper 5: NTLA-O IV: Local–Global Observation, Presheaves, Sheaves, Stalks, and Descent · NTLA-O · NS · AMRAL</title>
+<meta name="description" content="NTLA-O series Paper 5. Represents the internal observer as a local section on the observer topology, uses presheaf/sheaf language to study when local observational data can compatibly glue into a global state, and the reconstruction obstruction when gluing fails.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NTLA-O_IV_Paper05_LocalGlobalSheafDescent.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/ntla-o/p/05-ntla-o-iv/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/ntla-o/p/05-ntla-o-iv/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/ntla-o/p/05-ntla-o-iv/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/ntla-o/p/05-ntla-o-iv/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NTLA-O</a>
+    <span>/</span>
+    <span>Paper 5 · NTLA-O IV: Local–Global Observation, Presheaves, Sheaves, Stalks, and Descent</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1 Formal Draft</span>
+      <span class="tag">2026-08-17</span>
+      <span class="tag">prerequisite: NTLA-O III</span>
+    </div>
+    <h1>Paper 5: NTLA-O IV: Local–Global Observation, Presheaves, Sheaves, Stalks, and Descent</h1>
+    <p class="h1-sub">Local-to-Global Observation — Presheaves, Sheaves, Stalks, Germs, and Descent</p>
+    <p class="h1-sub">NTLA-O series Paper 5. Represents the internal observer as a local section over open sets of the observer topology, defining, for each open set, an admissible local observational-state set and restriction map. Studies when data from different local observers can compatibly glue into a global state (the sheaf condition), and the global reconstruction obstruction when gluing fails (descent obstruction).</p>
+    <div class="claim-box">
+      This paper's core question: how does a local observer form global data?
+      <span class="note">— from Paper 9 (the unifying paper), Section 1's series structure table, quoted verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-ntla-o-iii/">Paper 4 · NTLA-O III: Observer Topology, Indistinguishability Kernels, and Quotient Spaces</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-ntla-o-v/">Paper 6 · NTLA-O V: Path Identity, Fundamental Groupoids, Coverings, Monodromy, and Holonomy</a></div>
+      <div class="conn-card"><span class="k">NTLA-O progress</span>5 / 9</div>
+    </div>
+    <blockquote class="cite">Once local data successfully glues, the next question is: for the same endpoints but different paths, is the transported observational state still the same? That is the next paper's topic.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NTLA-O</a>
+    <a href="../../files/NTLA-O_IV_Paper05_LocalGlobalSheafDescent.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NTLA-O_IV_Paper05_LocalGlobalSheafDescent.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

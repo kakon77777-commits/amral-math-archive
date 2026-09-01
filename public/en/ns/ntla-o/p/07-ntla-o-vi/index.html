@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper 7: NTLA-O VI: Inverse Systems, Observer Tower, Inverse Limit, and Pro-Observer Identity · NTLA-O · NS · AMRAL</title>
+<meta name="description" content="NTLA-O series Paper 7. Builds Observer Tower Theory: a sequence of progressively refined kernels forms a standard inverse system, proves a natural injection from the quotient of the kernels' intersection to the inverse limit. Core thesis: limit identity does not imply tower identity.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NTLA-O_VI_Paper07_InverseSystemsProObserverIdentity.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/ntla-o/p/07-ntla-o-vi/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/ntla-o/p/07-ntla-o-vi/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/ntla-o/p/07-ntla-o-vi/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/ntla-o/p/07-ntla-o-vi/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NTLA-O</a>
+    <span>/</span>
+    <span>Paper 7 · NTLA-O VI: Inverse Systems, Observer Tower, Inverse Limit, and Pro-Observer Identity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1 Formal Draft</span>
+      <span class="tag">2026-08-17</span>
+      <span class="tag">prerequisite: NTLA-O V</span>
+    </div>
+    <h1>Paper 7: NTLA-O VI: Inverse Systems, Observer Tower, Inverse Limit, and Pro-Observer Identity</h1>
+    <p class="h1-sub">Inverse Systems, Observer Towers, Inverse Limits, and Pro-Observer Identity — Resolution Histories Beyond Limit Equivalence</p>
+    <p class="h1-sub">NTLA-O series Paper 7. The preceding five papers establish four observational dimensions — Role, Locality, Resolution, Transport — where observation resolution is described by a family of progressively refined kernels. This paper formally establishes Observer Tower Theory: each layer's kernel produces a quotient, kernel inclusion gives a surjection, forming a standard inverse system. The first major result is a natural injection from the quotient of the kernels' intersection to the inverse limit. The title itself states the paper's core thesis: "limit identity does not imply tower identity" — reaching the same limiting kernel does not mean the entire resolution-refinement history (the pro-object) is the same object.</p>
+    <div class="claim-box">
+      This paper's core question: how does resolution history form an inverse/pro system?
+      <span class="note">— from Paper 9 (the unifying paper), Section 1's series structure table, quoted verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-ntla-o-v/">Paper 6 · NTLA-O V: Path Identity, Fundamental Groupoids, Coverings, Monodromy, and Holonomy</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-ntla-o-vii/">Paper 8 · NTLA-O VII: Complete Separation, Canonical Invariants, Locally Finite Reconstruction, and the Continuous Separation Problem</a></div>
+      <div class="conn-card"><span class="k">NTLA-O progress</span>7 / 9</div>
+    </div>
+    <blockquote class="cite">Once the inverse system and the tower's limiting behavior are established, the next paper directly addresses when an observation system is actually sufficient for complete classification.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NTLA-O</a>
+    <a href="../../files/NTLA-O_VI_Paper07_InverseSystemsProObserverIdentity.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NTLA-O_VI_Paper07_InverseSystemsProObserverIdentity.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
