@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCBP-01: Critical Forest Coercivity, One-Derivative Gap, Dual Congestion Renormalization, and Structural Cancellation · NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="FCBP series round 1, opening Cycle VI. Proves the energy-class forcing upper bound and the critical forcing topology differ by exactly one spatial derivative, proves a weighted-to-unweighted critical-lift NO-GO, integrates three external cancellation modules, defines this cycle's core 'critical lift problem.' Continues from CFOP Cycle V.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/fcbp/p/01-critical-forest-coercivity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/fcbp/p/01-critical-forest-coercivity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/fcbp/p/01-critical-forest-coercivity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/fcbp/p/01-critical-forest-coercivity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-FCBP</a>
+    <span>/</span>
+    <span>FCBP-01 · Critical Forest Coercivity, One-Derivative Gap, Dual Congestion Renormalization, and Structural Cancellation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle VI · opening round</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>FCBP-01: Critical Forest Coercivity, One-Derivative Gap, Dual Congestion Renormalization, and Structural Cancellation</h1>
+    <p class="h1-sub">Critical Forest Coercivity, One-Derivative Gap, Dual Congestion Renormalization, and Structural Cancellation</p>
+    <p class="h1-sub">Continuing from the forest coercive budget problem left by CFOP Cycle V (finding a forest functional that is simultaneously globally finite, near-critical on the dangerous cut, and stable under branching/fragmentation), FCBP does not add a new forest taxonomy but asks: can the precise Navier–Stokes structure "lift" an already-known finite-scale weak budget into a critical or non-summable coercive budget? Proves a scaling theorem for the velocity and vorticity nonlinear forcing in Sobolev dual space, identifying that — at the same time exponent p=4/3 — the universal energy-class forcing upper bound and the scale-critical forcing topology differ by exactly one spatial derivative; proves a "weighted-to-unweighted critical lift" NO-GO that holds for every summable positive scale weight. Integrates three external Navier–Stokes-specific cancellation modules (Miller strain–vorticity orthogonality, diffusive absorption of filtered vortex stretching, pressure–flux weighted finite-chain telescoping); these cancellations exhibit genuine structural derivative/coercivity recovery, but leave explicit gaps in the model cone, far-field/commutator/localization, backscatter, observability, and weighted stacking. Defines the "critical lift problem": without assuming regularity, converting the universally finite scale-weighted cancellation ledger into a non-summable near-critical forest-cut budget — this round does not prove such a lift; the finite forest obstruction and regularity remain OPEN.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+
+      <div class="conn-card"><span class="k">Next</span><a href="../02-filtered-stretching-critical-lift/">FCBP-02 · Filtered Stretching Coercivity, Comparable-Annulus Barrier, Signed Affine-Jet Lift, Commutator Recurrence, and Critical-Lift No-Go</a></div>
+      <div class="conn-card"><span class="k">NS-FCBP progress</span>1 / 6</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-FCBP</a>
+    <a href="../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_FCBP_01_CriticalForest_Coercivity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

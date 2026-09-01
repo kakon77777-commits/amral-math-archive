@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCBP-03: Signed Pressure–Flux Work, Variable-Radius Telescoping, Slow-Scale Critical Lift, Filter-Switch Defects, and Model-Cone Recurrence · NS-FCBP · NS · AMRAL</title>
+<meta name="description" content="FCBP series round 3. This cycle's first real breakthrough: generalizes pressure–flux telescoping from geometric to arbitrary radii, proving that choosing r_k=r_0(k+1)^(-β) yields a non-summable 'slow-scale critical lift window.' Also finds a new compatibility problem between fixed and moving filters (the filter-switch defect).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_FCBP_03_SignedWork_SlowScale_Telescoping_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/fcbp/p/03-signed-work-slow-scale-telescoping/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/fcbp/p/03-signed-work-slow-scale-telescoping/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/fcbp/p/03-signed-work-slow-scale-telescoping/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/fcbp/p/03-signed-work-slow-scale-telescoping/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-FCBP</a>
+    <span>/</span>
+    <span>FCBP-03 · Signed Pressure–Flux Work, Variable-Radius Telescoping, Slow-Scale Critical Lift, Filter-Switch Defects, and Model-Cone Recurrence</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle VI · breakthrough</span>
+      <span class="tag">2026-08-16</span>
+    </div>
+    <h1>FCBP-03: Signed Pressure–Flux Work, Variable-Radius Telescoping, Slow-Scale Critical Lift, Filter-Switch Defects, and Model-Cone Recurrence</h1>
+    <p class="h1-sub">Signed Pressure–Flux Work, Variable-Radius Telescoping, Slow-Scale Critical Lift, Filter-Switch Defects, and Model-Cone Recurrence</p>
+    <p class="h1-sub">FCBP-02 proves the filtering route has a complete conditional compiler, but still lacks a global critical stack. The pressure–flux work architecture is attractive because it is sign-preserving by construction and gives an exact endpoint telescoping. The published theorem uses geometric radii r_k=θ^k r_0; the first question is whether the resulting summable weight is intrinsic to the telescoping itself or merely an artifact of the chosen geometric schedule. The answer: it is not intrinsic to the telescoping — this is the first genuinely non-summable schedule found within the FCBP architecture. This round generalizes the exact pressure–flux endpoint telescoping algebra from geometric radii to arbitrary strictly decreasing radii, proving an interior "variable-radius pressure–flux telescoping"; choosing r_k=r_0(k+1)^(-β) (1/2&lt;β≤1) yields a finite total parabolic time but a divergent sum of telescoping weights, producing a genuinely non-summable "slow-scale critical lift window" — this cycle's first breakthrough. It also identifies the main compatibility problem: a single fixed physical filter preserves exact telescoping but loses scale-relative resolution as r_k→0; a scale-relative moving filter preserves critical resolution but breaks exact endpoint telescoping. Proves an exact moving-filter telescoping theorem, with an explicit positive filter-switch defect.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-filtered-stretching-critical-lift/">FCBP-02 · Filtered Stretching Coercivity, Comparable-Annulus Barrier, Signed Affine-Jet Lift, Commutator Recurrence, and Critical-Lift No-Go</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-moving-filter-horizon-alignment/">FCBP-04 · Moving-Filter Telescoping, Continuous Filter Drift, Horizon Alignment, Time-Thickness Barrier, and Borderline Critical Lift</a></div>
+      <div class="conn-card"><span class="k">NS-FCBP progress</span>3 / 6</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-FCBP</a>
+    <a href="../../files/NS_FCBP_03_SignedWork_SlowScale_Telescoping_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_FCBP_03_SignedWork_SlowScale_Telescoping_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
