@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSP-07: Preloaded Reservoir Transport, Viscous Survival, Replenishment Debt, and Core Dilution · NS-CSP · NS · AMRAL</title>
+<meta name="description" content="CSP series round 7. Proves the PRELOAD branch must either survive by exponential amplification or pay a high-frequency Duhamel replenishment debt; the debt further splits into two forcing sources, giving a partial source–state synchronization theorem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CSP_07_PreloadedReservoir_Transport_Replenishment_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/csp/p/07-preloaded-reservoir-transport/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/csp/p/07-preloaded-reservoir-transport/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/csp/p/07-preloaded-reservoir-transport/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/csp/p/07-preloaded-reservoir-transport/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CSP</a>
+    <span>/</span>
+    <span>CSP-07 · Preloaded Reservoir Transport, Viscous Survival, Replenishment Debt, and Core Dilution</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle II</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CSP-07: Preloaded Reservoir Transport, Viscous Survival, Replenishment Debt, and Core Dilution</h1>
+    <p class="h1-sub">Preloaded Reservoir Transport, Viscous Survival, Replenishment Debt, and Core Dilution</p>
+    <p class="h1-sub">CSP-06 reduces the stale mid-strain event to a model-cone-deviation-or-PRELOAD dichotomy. The PRELOAD branch represents: the strain-gradient capacity needed to support a later mid-strain spike already exists at the half-layer Besov escape instant τ_t. CSP-06 further proves excess preload must lie at UV depth. The remaining question: can a UV preload reservoir simply survive to the later spike without paying any additional dynamical cost? The answer: only if its initial amplitude grows exponentially with viscous age. This round proves CSP-06's PRELOAD branch splits into either exponentially amplified legacy-stock survival, or a quantitative high-frequency Duhamel replenishment debt; the replenishment debt further splits into strain–vorticity model residual forcing or high-frequency vorticity parent forcing, giving a partial source–state synchronization theorem. Derives a viscous-turnover law for super-parabolic micro-packing and a Type-I core-dilution energy budget.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-stale-floor-model-cone-synchronization/">CSP-06 · Stale-Floor / Model-Cone Synchronization, Preloaded Reservoir Depth, and Band-Passed Core Alignment</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-cycle-ii-closure/">CSP-08 · Unified Reservoir/Alignment Cover, Exponential Preload Audit, and Cycle-II Closure</a></div>
+      <div class="conn-card"><span class="k">NS-CSP progress</span>7 / 8</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CSP</a>
+    <a href="../../files/NS_CSP_07_PreloadedReservoir_Transport_Replenishment_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CSP_07_PreloadedReservoir_Transport_Replenishment_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

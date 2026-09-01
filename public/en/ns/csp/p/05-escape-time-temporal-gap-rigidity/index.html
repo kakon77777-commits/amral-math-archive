@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSP-05: Escape-Time Synchronization, Besov Recovery Packets, and Temporal Gap Rigidity · NS-CSP · NS · AMRAL</title>
+<meta name="description" content="CSP series round 5. Builds an escape-time calculus for the critical Besov norm, proves every half-layer escape carries a universal recovery-action packet, reduces the time defect to bounded-delay synchronization or stale-floor separation.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/csp/p/05-escape-time-temporal-gap-rigidity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/csp/p/05-escape-time-temporal-gap-rigidity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/csp/p/05-escape-time-temporal-gap-rigidity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/csp/p/05-escape-time-temporal-gap-rigidity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-CSP</a>
+    <span>/</span>
+    <span>CSP-05 · Escape-Time Synchronization, Besov Recovery Packets, and Temporal Gap Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle II</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>CSP-05: Escape-Time Synchronization, Besov Recovery Packets, and Temporal Gap Rigidity</h1>
+    <p class="h1-sub">Escape-Time Synchronization, Besov Recovery Packets, and Temporal Gap Rigidity</p>
+    <p class="h1-sub">CSP-04 proves that on the Bradshaw–Grujic active escape set I_BG, the moving frequency window satisfies Φ_(1/2)(t)≥½B(t) — so once a wavelength-localized mid-strain carrier exists, same-instant mid-frequency synchronization holds on I_BG. The main remaining global time defect is the escape gap. This round builds a continuous-level escape-time calculus for the critical ε=1/2 Besov norm, proves every half-layer escape carries a universal moving-window recovery-action packet, reducing the remaining mid-strain escape-gap defect to bounded parabolic-delay synchronization or stale-floor accumulated-Besov-action separation. Also proves a rapid-evolution debt for onset-layer gap spikes. Does not exclude stale-floor separation, does not synchronize action density to exactly the same instant in the gap case.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-moving-window-dissipation-wavenumber/">CSP-04 · Moving-Window Capture, Dissipation-Wavenumber Geometry, Escape Intervals, and UV Stock Placement</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-stale-floor-model-cone-synchronization/">CSP-06 · Stale-Floor / Model-Cone Synchronization, Preloaded Reservoir Depth, and Band-Passed Core Alignment</a></div>
+      <div class="conn-card"><span class="k">NS-CSP progress</span>5 / 8</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-CSP</a>
+    <a href="../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_CSP_05_EscapeTime_TemporalGap_Rigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
