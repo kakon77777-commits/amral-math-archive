@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRC-03: Source Amplification, Interaction Utilization, Spectral State Share, and Dissipation-Range Coupling · NS-DRC · NS · AMRAL</title>
+<meta name="description" content="DRC series round 3. Separates deterministic frequency weighting from genuine source/state mismatch in the source amplification ratio, proves a scale-local cluster-envelope bound and a dissipation-range absorption estimate, reclassifies utilization collapse as certificate inefficiency rather than a primitive mechanism.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DRC_03_SourceAmplification_Utilization_DissipationCoupling_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/drc/p/03-source-amplification-dissipation-coupling/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/drc/p/03-source-amplification-dissipation-coupling/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/drc/p/03-source-amplification-dissipation-coupling/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/drc/p/03-source-amplification-dissipation-coupling/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-DRC</a>
+    <span>/</span>
+    <span>DRC-03 · Source Amplification, Interaction Utilization, Spectral State Share, and Dissipation-Range Coupling</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle III</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>DRC-03: Source Amplification, Interaction Utilization, Spectral State Share, and Dissipation-Range Coupling</h1>
+    <p class="h1-sub">Source Amplification, Interaction Utilization, Spectral State Share, and Dissipation-Range Coupling</p>
+    <p class="h1-sub">DRC-02 compresses the generalized source residual into R_CAN, R_UTIL, R_MULT, R_AMP. The comparison of source-envelope share against unweighted time-integrated high-parent enstrophy share, 𝔄_(J,h)^SE, conflates two effects: genuine source/state mismatch, and deterministic derivative/Bernstein frequency weighting. This round removes the latter first: proves a scale-local cluster-envelope bound with the natural 2^(5h/2) weight, proves a high-to-low dissipation-range absorption estimate relative to the Cheskidov–Shvydkoy dissipation wavenumber, and splits utilization exactly into three factors — time sign, dual witness, and geometric overlap. A spatial-separation construction shows utilization collapse can be caused purely by parent non-overlap, so utilization is reclassified as exhaustion/certificate inefficiency rather than a primitive dangerous mechanism. R_AMP is absorbed into scale-corrected finite cluster state support or dissipation/driver geometry.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-source-to-state-efficiency-renewal-chain/">DRC-02 · Source-to-State Efficiency, Parent Multiplicity, Cancellation Geometry, and Renewal-Chain Compression</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-cancellation-many-parent-coherence/">DRC-04 · Cancellation Rigidity, Many-Parent Aggregation, Net-Shell Coherence, and Dissipation-Span Compression</a></div>
+      <div class="conn-card"><span class="k">NS-DRC progress</span>3 / 7</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-DRC</a>
+    <a href="../../files/NS_DRC_03_SourceAmplification_Utilization_DissipationCoupling_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DRC_03_SourceAmplification_Utilization_DissipationCoupling_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

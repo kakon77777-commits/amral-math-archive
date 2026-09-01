@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRC-05: Dissipation-Range Reservoir Closure, Low-Mode Driver Packets, Boundary Residence, and Forcing-Level Viscous Coercivity · NS-DRC · NS · AMRAL</title>
+<meta name="description" content="DRC series round 5. Proves the dissipation residual is not an independent mechanism: once the viscosity-small sector is removed, every strong renewal is either controlled by low-mode driver action or forces ancestry re-rooting. R_DISS is absorbed into standard low-mode driver action, main residual reduces to R_DIL.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/drc/p/05-dissipation-range-driver-closure/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/drc/p/05-dissipation-range-driver-closure/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/drc/p/05-dissipation-range-driver-closure/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/drc/p/05-dissipation-range-driver-closure/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-DRC</a>
+    <span>/</span>
+    <span>DRC-05 · Dissipation-Range Reservoir Closure, Low-Mode Driver Packets, Boundary Residence, and Forcing-Level Viscous Coercivity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle III</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>DRC-05: Dissipation-Range Reservoir Closure, Low-Mode Driver Packets, Boundary Residence, and Forcing-Level Viscous Coercivity</h1>
+    <p class="h1-sub">Dissipation-Range Reservoir Closure, Low-Mode Driver Packets, Boundary Residence, and Forcing-Level Viscous Coercivity</p>
+    <p class="h1-sub">DRC-04 reduces the core of the main dynamic residual to R_DISS∪R_DIL. The dissipation residual contains low-mode-driver dominance, forcing in the transition band around Q(t), a large dissipation-boundary span Q_I^+-J, and repeated high-frequency renewal in the deep-dissipation part already proven viscosity-small. This round asks whether these are really distinct reservoir mechanisms — the answer is: no. Using the Cheskidov–Shvydkoy dissipation-wavenumber structure, proves that once the deep high-frequency sector already shown viscously absorbable by DRC-03/04 is removed, the remaining quadratic vorticity forcing is controlled by a strong low-mode vorticity/gradient driver multiplied by a high-frequency strain-gradient state. A strong renewal packet must therefore either carry a quantitative low-mode driver-action packet, or reveal an even larger, earlier high-frequency state, forcing ancestry re-rooting. Repeated backtracking to a fixed smooth early time region forces a driver-action ancestor. Also proves a boundary-height residence theorem: a large dissipation-boundary span can only sustain an exponentially short normalized residence unless it pays a large driver action. R_DISS is therefore absorbed into a standard low-mode driver action (not proven impossible), and the main unresolved dynamic reservoir residual is reduced to R_DIL.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-cancellation-many-parent-coherence/">DRC-04 · Cancellation Rigidity, Many-Parent Aggregation, Net-Shell Coherence, and Dissipation-Span Compression</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-persistent-core-dilution-core-reuse/">DRC-06 · Persistent Core Dilution, Backward Concentration, Absolute UV Core Carriers, and Core-Reuse Rigidity</a></div>
+      <div class="conn-card"><span class="k">NS-DRC progress</span>5 / 7</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-DRC</a>
+    <a href="../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DRC_05_DissipationRange_DriverClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
