@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-04: Non-Type-I Ancestry Entry, Adaptive Weak-L³ Seeds, UV Square-Tail Extraction, and Universal Causal-State Initialization · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP series paper 5 (round 04). Handles the branch with no uniform Type-I constant, extracts a quantitative UV vorticity square-tail lower bound, proves non-Type-I failure does not block causal-state initialization (only makes the causal time step adaptive), obtains a universal two-branch causal-state entry theorem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_04_NonTypeI_AdaptiveLorentzEntry_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/anp/p/04-non-type-i-adaptive-entry/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/anp/p/04-non-type-i-adaptive-entry/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/anp/p/04-non-type-i-adaptive-entry/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/anp/p/04-non-type-i-adaptive-entry/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-04 · Non-Type-I Ancestry Entry, Adaptive Weak-L³ Seeds, UV Square-Tail Extraction, and Universal Causal-State Initialization</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-04: Non-Type-I Ancestry Entry, Adaptive Weak-L³ Seeds, UV Square-Tail Extraction, and Universal Causal-State Initialization</h1>
+    <p class="h1-sub">Non-Type-I Ancestry Entry, Adaptive Weak-L3 Seeds, UV Square-Tail Extraction, and Universal Causal-State Initialization</p>
+    <p class="h1-sub">ANP-00 through 03 build a recursively legal weighted C3 causal edge on the Type-I branch, conditioned on a strongly selected source atom. The remaining universal-entry problem: on the branch sup_(t&lt;T*) ‖u(t)‖_(L^(3,∞))=∞, no single finite constant can define a uniform Type-I core geometry. This round proves this does not block causal-state initialization. The correct substitute is adaptive: adaptive amplitude, adaptive frequency, adaptive footprint, adaptive causal time step. From weak-L³ super-level-set geometry and the global finite-energy bound, extracts instants t_n→T*, amplitude levels λ_n→∞, a contracting effective volume scale r_n, and a dyadic threshold J_n→∞ such that low frequencies cannot account for the super-level-set amplitude, obtaining a quantitative global UV vorticity square-tail lower bound of order M_n⁴/E_2². Although no globally uniform weak-L³ bound exists, every pre-singularity seed admits an adaptive backward causal window Δ_n~R_n²/(1+M̄_n) over which ANP-02's footprint aperture remains uniformly controlled. Combined with the Type-I core entry, obtains a universal two-branch causal-state entry theorem.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../03-source-parent-recapture-c3-upgrade/">ANP-03 · Source-Parent Recapture, Kernel-Inflated Footprints, Weighted Parent-State Extraction, and the C3 Causal Upgrade</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../05-arbitrary-depth-c3-paths/">ANP-05 · Arbitrary-Depth Compatible C3 Paths, No-Terminal-Node, Adaptive Generation Renormalization, and the Singular-Horizon Compactness Gap</a></div>
+      <div class="conn-card"><span class="k">NS-ANP progress</span>5 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_04_NonTypeI_AdaptiveLorentzEntry_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_04_NonTypeI_AdaptiveLorentzEntry_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

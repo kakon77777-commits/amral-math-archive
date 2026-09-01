@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-07: Horizon-Persistent Branch Extraction, Strong-Child Compactness, Causal Edge Closure, and the Renewal-Rate Alternative · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP series paper 8 (round 07). Splits horizon-persistence failure into transmission degeneration (D_HTRANS) and compactness degeneration (D_HCOMP); proves a horizon-cut dual-ledger theorem and a local causal-edge closure theorem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/anp/p/07-horizon-persistent-branch-extraction/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/anp/p/07-horizon-persistent-branch-extraction/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/anp/p/07-horizon-persistent-branch-extraction/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/anp/p/07-horizon-persistent-branch-extraction/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-07 · Horizon-Persistent Branch Extraction, Strong-Child Compactness, Causal Edge Closure, and the Renewal-Rate Alternative</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-07: Horizon-Persistent Branch Extraction, Strong-Child Compactness, Causal Edge Closure, and the Renewal-Rate Alternative</h1>
+    <p class="h1-sub">Horizon-Persistent Branch Extraction, Strong-Child Compactness, Causal Edge Closure, and the Renewal-Rate Alternative</p>
+    <p class="h1-sub">ANP-06 reduces strong-chain necessity to horizon-persistence obligations HP1, HP2, HP3, HP4. This round asks: what exactly prevents a horizon-persistent marked causal branch from being extracted? The answer now splits into two fundamentally different failure mechanisms: D_HTRANS (transmission degeneration) and D_HCOMP (compactness/edge-closure degeneration). Proves an abstract finite-child and compact-child horizon-persistent-child criterion — under a finite-threshold strong-child branch, HPC failure forces horizon-transmission collapse. Proves a horizon-cut dual-ledger theorem: if propagation inheritance is small on a contracting terminal window, the normalized fresh-source rate must diverge at least at the inverse-window-length rate. Under strong local compactness and a controlled kernel-inflated footprint, establishes a local causal-edge closure theorem for normalized-bounded-relative-frequency, bandwidth-limited C3_W edges — under a uniform transmission lower bound, a nontrivial edge limit holds. Critical-profile decomposition and the Type-I ancient-solution literature serve only as an external compactness calibration, and do not prove closure of the actual ancestry chain in the original solution.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-singular-horizon-extraction-audit/">ANP-06 · Singular-Horizon Infinite Ancestry Extraction, Dual-Propagator Correction, Horizon Persistence, and Chain-Necessity Closure Audit</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-horizon-transmission-rigidity/">ANP-08 · Horizon Transmission Rigidity, Fresh-Source Cascade, Budgeted CN3, and Actual-Branch Shadowing Audit</a></div>
+      <div class="conn-card"><span class="k">NS-ANP progress</span>8 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_07_HorizonPersistent_BranchExtraction_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

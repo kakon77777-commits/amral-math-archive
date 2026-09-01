@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANP-01: Source–Core Provenance, Adjoint Causal Tubes, Scale-Resolved Vorticity Renewal, and the C2→C3 Gap · NS-ANP · NS · AMRAL</title>
+<meta name="description" content="ANP series paper 2 (round 01). Uses the pressure-free vorticity equation plus a terminal core-anchored adjoint cutoff, proves an exact weighted forward causal-ancestry identity - output-local source-core ancestry proven in the weighted adjoint sense (a genuine C2 PDE causal edge). Geometric parent-source localization remains open, the C2→C3 gap unclosed.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/anp/p/01-source-core-provenance-adjoint-tube/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/anp/p/01-source-core-provenance-adjoint-tube/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/anp/p/01-source-core-provenance-adjoint-tube/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/anp/p/01-source-core-provenance-adjoint-tube/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-ANP</a>
+    <span>/</span>
+    <span>ANP-01 · Source–Core Provenance, Adjoint Causal Tubes, Scale-Resolved Vorticity Renewal, and the C2→C3 Gap</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v0.1</span>
+      <span class="tag">Cycle IV</span>
+      <span class="tag">2026-08-15</span>
+    </div>
+    <h1>ANP-01: Source–Core Provenance, Adjoint Causal Tubes, Scale-Resolved Vorticity Renewal, and the C2→C3 Gap</h1>
+    <p class="h1-sub">Source–Core Provenance, Adjoint Causal Tubes, Scale-Resolved Vorticity Renewal, and the C2→C3 Gap</p>
+    <p class="h1-sub">ANP-00 defines a proven recursive causal-ancestry edge as a C3 edge: forward PDE contribution plus same-branch ancestry plus recursive parent-node legality. The Type-I DRC architecture already provides a late-time singular-core state, an absolute local UV lower bound, a global high-pass state, and node-by-node global source ancestry. The open question: can source ancestry connect to the late-time singular core itself? This round instead uses the pressure-free vorticity equation with a terminal core-anchored adjoint cutoff, rather than directly localizing the pressure-bearing strain equation, and proves the first rigorous ancestry bridge — an exact weighted forward causal-ancestry identity. Under the Type-I weak-L³ bound, the adjoint footprint carries conserved mass, core-scale high-influence volume, and its center of mass stays within O_M(R) of the singular center over one parabolic time — so output-local source–core ancestry is proven in the weighted adjoint sense. Geometric parent-source localization, suppression of diffuse low-influence source contributions, and recursive reuse of the selected parent node remain open problems.</p>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../00-pre-singularity-causal-relation-domain/">ANP-00 · Pre-Singularity Causal Relation Domain, Hybrid Continuity, Legality, Phase-Like Transitions, and Causal Interpretation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../02-recursive-edge-footprint-recapture/">ANP-02 · Recursive Edge Compatibility, Adjoint-Footprint Aperture, Canonical Footprint Nodes, and the Parent-Localization Gap</a></div>
+      <div class="conn-card"><span class="k">NS-ANP progress</span>2 / 10</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-ANP</a>
+    <a href="../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ANP_01_SourceCore_Provenance_AdjointTube_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
