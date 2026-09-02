@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP105 / X72R88: Vanishing-Viscosity Residual Matching and the Spectral-Migration Audit · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="Following the shear/axisymmetric nonlocal survivor branches left by DCRP104, and that round's result that the eigen-lock is identically zero under fixed positive viscosity, this round audits whether this positive-viscosity NO-GO becomes a uniform obstruction as ε→0, and concludes that it does not (No-Forced-Spectral-Migration): the viscous residual of the same fixed, normalized inviscid profile is merely R_ε=ε|ξ|²Φ, of order O(ε), which can survive approximately with no frequency migration required; the true critical quantity is Θ_ε=η_ε/ε — a fixed frequency-band mass requires η_ε≳ε, and only η_ε=o(ε) forces the entire Fourier mass to migrate toward a low-frequency, large-scale escape. It also checks DCRP102's transport–Riesz angular cone and DCRP95's Kelvin nematic lock, proving that neither can locally exclude the off-resonance shear survivor, and so fixes the surviving state as the viscosity-matched shear/polarization conveyor. The round closes, in the same 'Next autonomous step' format used by the preceding 13 rounds, with eight concrete tasks proposing the next round, DCRP106/X72-R89 (first-order Fredholm / radial spectral narrowing); nowhere in the text is there any statement that the series is being deliberately halted, shelved, or has a planned endpoint — on its own terms this is still a mid-course checkpoint that proposes further steps, and its status as the 'current' frontier comes from the fact that this batch of files stops at 105 and does not include DCRP106, not from any self-declared conclusion in the text.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP105_X72R88_VanishingViscosity_ShearTR_ResidualMatching_2026-08-20.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/inrs/p/vanishing-viscosity-shear-tr-residual-matching/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/inrs/p/vanishing-viscosity-shear-tr-residual-matching/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/inrs/p/vanishing-viscosity-shear-tr-residual-matching/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/inrs/p/vanishing-viscosity-shear-tr-residual-matching/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP105 / X72R88 · Vanishing-Viscosity Residual Matching and the Spectral-Migration Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP105 / X72R88</span>
+      <span class="tag">Frontier (current)</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP105 / X72R88: Vanishing-Viscosity Residual Matching and the Spectral-Migration Audit</h1>
+    <p class="h1-sub">Following the shear/axisymmetric nonlocal survivor branches left by DCRP104, and that round's result that the eigen-lock is identically zero under fixed positive viscosity, this round audits whether this positive-viscosity NO-GO becomes a uniform obstruction as ε→0, and concludes that it does not (No-Forced-Spectral-Migration): the viscous residual of the same fixed, normalized inviscid profile is merely R_ε=ε|ξ|²Φ, of order O(ε), which can survive approximately with no frequency migration required; the true critical quantity is Θ_ε=η_ε/ε — a fixed frequency-band mass requires η_ε≳ε, and only η_ε=o(ε) forces the entire Fourier mass to migrate toward a low-frequency, large-scale escape. It also checks DCRP102's transport–Riesz angular cone and DCRP95's Kelvin nematic lock, proving that neither can locally exclude the off-resonance shear survivor, and so fixes the surviving state as the viscosity-matched shear/polarization conveyor. The round closes, in the same 'Next autonomous step' format used by the preceding 13 rounds, with eight concrete tasks proposing the next round, DCRP106/X72-R89 (first-order Fredholm / radial spectral narrowing); nowhere in the text is there any statement that the series is being deliberately halted, shelved, or has a planned endpoint — on its own terms this is still a mid-course checkpoint that proposes further steps, and its status as the 'current' frontier comes from the fact that this batch of files stops at 105 and does not include DCRP106, not from any self-declared conclusion in the text.</p>
+    <div class="claim-box">
+      This round's status: Frontier (current)
+      <span class="note">— Taken from the file's own Executive result / STOP node, meaning preserved, not a full verbatim translation. The original paper itself was authored directly in English; only this page's own commentary (title, status, and summary) is translated here.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../riesz-self-consistency-shear-polarization/">DCRP104 / X72R87 · Riesz Self-Consistency and the Shear-Polarization Survivors</a></div>
+      
+      <div class="conn-card"><span class="k">NS-INRS progress</span>63 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP105_X72R88_VanishingViscosity_ShearTR_ResidualMatching_2026-08-20.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP105_X72R88_VanishingViscosity_ShearTR_ResidualMatching_2026-08-20.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

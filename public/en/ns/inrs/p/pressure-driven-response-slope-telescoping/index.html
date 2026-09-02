@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP48: Pressure-Driven Response Slope and Mixed-Hessian Telescoping · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="Building on the response slope c=B_q that DCRP47 derived from the constitutive relation w=B(q,s)-2a(s)z, together with its divergence equation and the [0,1] response window, this round first corrects it. It proves that DCRP47's current J_c is actually ∂_z(∇·V)=0 — merely a differentiated restatement of the constitutive relation under incompressibility, not an independent equation. The genuinely new dynamics comes from the vertical self-similar Euler momentum equation D_sc=-P_{zq}: the mixed pressure Hessian must be parallel to ∇_hq and is the sole driver of response-slope evolution. This yields a pressure-Poisson source identity, and shows that a zero mixed-pressure offset, together with DSS scaling and q=0 continuity, forces the response slope to be constant. STOP-D48 establishes that the response window is governed not by an independent compatibility equation but by the pressure Hessian: leaving [0,1] requires a finite pressure-Neumann flux, while staying inside it requires obeying a bounded telescoping budget, left to DCRP49 to compare this pressure-Neumann gap against DCRP31's PFET gap on the same annulus.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/inrs/p/pressure-driven-response-slope-telescoping/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/inrs/p/pressure-driven-response-slope-telescoping/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/inrs/p/pressure-driven-response-slope-telescoping/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/inrs/p/pressure-driven-response-slope-telescoping/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP48 · Pressure-Driven Response Slope and Mixed-Hessian Telescoping</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP48</span>
+      <span class="tag">Correction</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP48: Pressure-Driven Response Slope and Mixed-Hessian Telescoping</h1>
+    <p class="h1-sub">Building on the response slope c=B_q that DCRP47 derived from the constitutive relation w=B(q,s)-2a(s)z, together with its divergence equation and the [0,1] response window, this round first corrects it. It proves that DCRP47's current J_c is actually ∂_z(∇·V)=0 — merely a differentiated restatement of the constitutive relation under incompressibility, not an independent equation. The genuinely new dynamics comes from the vertical self-similar Euler momentum equation D_sc=-P_{zq}: the mixed pressure Hessian must be parallel to ∇_hq and is the sole driver of response-slope evolution. This yields a pressure-Poisson source identity, and shows that a zero mixed-pressure offset, together with DSS scaling and q=0 continuity, forces the response slope to be constant. STOP-D48 establishes that the response window is governed not by an independent compatibility equation but by the pressure Hessian: leaving [0,1] requires a finite pressure-Neumann flux, while staying inside it requires obeying a bounded telescoping budget, left to DCRP49 to compare this pressure-Neumann gap against DCRP31's PFET gap on the same annulus.</p>
+    <div class="claim-box">
+      This round's status: Correction
+      <span class="note">— Taken from the file's own Executive result / STOP node, meaning preserved, not a full verbatim translation. The original paper itself was authored directly in English; only this page's own commentary (title, status, and summary) is translated here.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../dual-current-criticality-characteristic-window/">DCRP47 · Dual-Current Critical Scaling and the Characteristic Window</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../pfet-neumann-independence-off-central-response-defect/">DCRP49 · PFET–Neumann Independence and Off-Central Rigidity</a></div>
+      
+      <div class="conn-card"><span class="k">NS-INRS progress</span>7 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP48_PressureDriven_ResponseSlope_Telescoping_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

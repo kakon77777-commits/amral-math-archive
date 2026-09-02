@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCRP87/X72R70: Recurrent-Work Unobservability Rigidity Theorem · NS-INRS · NS · AMRAL</title>
+<meta name="description" content="Continuing from DCRP86's narrowing of the late-stage forest problem to 'does already-resolved CKN badness imply signed pressure-flux work' — an implication left explicitly open in the external 2026 Yu source, owing to possibilities such as pressure-flux cancellation, harmonic pressure tails, coherent low-frequency profiles, leakage, and backscatter — this round proves it, but only on the narrower class of shared-ancestry recurrent-compact solutions, not on the full class of suitable weak solutions. It proves Theorem D87.8 (no-recurrent-work unobservable resolved-bad limit): any configuration that is work-silent in the distributional sense, with local kinetic-energy recurrence and vanishing leakage, must have zero resolved dissipation, forcing the velocity to be spatially constant; if the subfilter residue vanishes as well, the only possible limit is a bulk translation plus an affine harmonic pressure, and the native global Morrey law rules out any nonzero translation — so positive CKN badness on this class cannot coexist with a zero-work detector. Compactness further reduces the infinite-test observability gap to a finite family of active tests, giving an explicit forward-work/backscatter dichotomy. However, it explicitly distinguishes (Theorem D87.14): observability is closed, but the global exhaustion problem is not — the exhaustion inequality's weights w_k=r_k/r_0 are geometrically summable, so even a uniform work lower bound does not contradict an infinite geometric chain — left for DCRP88 to test whether shared-ancestry regeneration can convert this geometrically weighted signed-work budget into a non-summable debt.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/inrs/p/recurrent-work-observability/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/inrs/p/recurrent-work-observability/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/inrs/p/recurrent-work-observability/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/inrs/p/recurrent-work-observability/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-INRS</a>
+    <span>/</span>
+    <span>DCRP87/X72R70 · Recurrent-Work Unobservability Rigidity Theorem</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-INRS · DCRP87/X72R70</span>
+      <span class="tag">Proof</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>DCRP87/X72R70: Recurrent-Work Unobservability Rigidity Theorem</h1>
+    <p class="h1-sub">Continuing from DCRP86's narrowing of the late-stage forest problem to 'does already-resolved CKN badness imply signed pressure-flux work' — an implication left explicitly open in the external 2026 Yu source, owing to possibilities such as pressure-flux cancellation, harmonic pressure tails, coherent low-frequency profiles, leakage, and backscatter — this round proves it, but only on the narrower class of shared-ancestry recurrent-compact solutions, not on the full class of suitable weak solutions. It proves Theorem D87.8 (no-recurrent-work unobservable resolved-bad limit): any configuration that is work-silent in the distributional sense, with local kinetic-energy recurrence and vanishing leakage, must have zero resolved dissipation, forcing the velocity to be spatially constant; if the subfilter residue vanishes as well, the only possible limit is a bulk translation plus an affine harmonic pressure, and the native global Morrey law rules out any nonzero translation — so positive CKN badness on this class cannot coexist with a zero-work detector. Compactness further reduces the infinite-test observability gap to a finite family of active tests, giving an explicit forward-work/backscatter dichotomy. However, it explicitly distinguishes (Theorem D87.14): observability is closed, but the global exhaustion problem is not — the exhaustion inequality's weights w_k=r_k/r_0 are geometrically summable, so even a uniform work lower bound does not contradict an infinite geometric chain — left for DCRP88 to test whether shared-ancestry regeneration can convert this geometrically weighted signed-work budget into a non-summable debt.</p>
+    <div class="claim-box">
+      This round's status: Proof
+      <span class="note">— Taken from the file's own Executive result / STOP node, meaning preserved, not a full verbatim translation. The original paper itself was authored directly in English; only this page's own commentary (title, status, and summary) is translated here.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../hardy-annularization-one-component-work-gap/">DCRP86/X72R69 · Hardy Annularization and the Single-Component Work Gap</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../kelvin-regeneration-ancestry-depth/">DCRP88/X72R71 · Kelvin Circulation Regeneration Depth and Ancestry Escape</a></div>
+      
+      <div class="conn-card"><span class="k">NS-INRS progress</span>45 / 63</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-INRS</a>
+    <a href="../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_DCRP87_X72R70_RecurrentWorkObservability_2026-08-18.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
