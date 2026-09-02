@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connecting Column Generation to PairCeiling · CPL · AMRAL</title>
+<meta name="description" content="Formally connects the small-N toy LP back to Anthropic's certificate language: the toy primal/dual and PairCeiling's configuration-wise certificate inequality are discretizations of the same convex-duality structure — not an analogy. Column generation's pricing problem is equivalent to automatically searching for certificate counterexamples. Numerical candidate floors for N=4..7 (69.82%→68.71%) converge toward the official 68.18%, and the one-double defect pattern is found to dominate late-stage pricing.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_Column_Generation_and_Primal_Dual_Certificate.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/06-column-generation/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/06-column-generation/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/06-column-generation/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/06-column-generation/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>06 · Connecting Column Generation to PairCeiling</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v4</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">Structural derivation confirmed</span>
+    </div>
+    <h1>Column Generation, Continuous Pricing, and Primal/Dual Duality with PairCeiling</h1>
+    <p class="h1-sub">The previous round only knew that the small-$N$ toy LP “looked a lot like” Anthropic's bandwidth-one adversarial law; this round connects the two precisely — after redefining the discrete certificate samples of the toy primal's LP dual as $r_N(j/N):=Ny_j$, the dual constraint becomes exactly the discretized form of the configuration-wise certificate inequality used by `PairCeiling`, and the dual objective's Riemann-sum limit as $N\to\infty$ is precisely Anthropic's continuum certificate value — the document explicitly stresses that “this is not an analogy, but a discretization of the same convex-duality structure.” This gives column generation a precise meaning: a negative reduced cost $RC(\mathcal C)&lt;0$ in the master LP is exactly finding a counterexample configuration that invalidates the current dual certificate, so the pricing problem itself is an automatic search for certificate counterexamples. After relaxing to continuous positions and running numerical column generation, the candidate floors for $N=4,\ldots,7$ (69.82%→68.71%) do converge quickly toward the official 68.18%, but the document also lists four reasons that limit how strongly this can be claimed: it only reaches $N=7$, pricing uses numerical global optimisation, there is no interval/exact-rational global-optimality certificate, and whether the configuration class exactly matches the official generator remains unproven. Another structural finding is that the $(2,1,1,\ldots,1)$ one-double-defect pattern persistently dominates late-stage pricing, tentatively understood as “trading sparse multiplicity defects for a large gain in pair-spectrum adjustability.”</p>
+    <div class="claim-box">
+      our primal/dual toy LP ⟶ Anthropic PairCeiling certificate: not an analogy, but a discretization of the same convex-duality structure
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-smalln-toy-lp/">05 · First Reproduction of the Small-N Toy LP</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-bernstein-certificate/">07 · The N=4 Exact-Rational Bernstein Certificate</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>7 / 15</div>
+    </div>
+  <blockquote class="cite">“Column pricing = certificate counterexample search. This lets the entire Claude bandwidth-one ceiling be reunderstood as a computable, iterable convex research programme to which information constraints can be progressively added.” — from this document's “10. Conclusion of This Round” section.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/06_Column_Generation_and_Primal_Dual_Certificate.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_Column_Generation_and_Primal_Dual_Certificate.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

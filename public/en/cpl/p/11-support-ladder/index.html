@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconstructing the 1.04/1.26/1.70 Support Ladder · CPL · AMRAL</title>
+<meta name="description" content="Reconstructs Claude's Remark 1.1 support thresholds 1.04/1.26/1.70 as arising from the generalized one-delta extremal operator q(σ)=1-1/⟨1,A_σ^{-1}1⟩; the numerical reconstruction matches the paper's rough values almost exactly (σ70≈1.04263, σ80≈1.25785, σ90≈1.70146), and extends to σ95≈2.26 and σ99≈4.19, which the paper does not list — explicitly flagged as a numerical reconstruction, not a new theorem stated in Claude's paper.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/11_Reconstructing_Claude_Support_Ladder.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/11-support-ladder/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/11-support-ladder/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/11-support-ladder/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/11-support-ladder/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>11 · Reconstructing the 1.04/1.26/1.70 Support Ladder</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v8</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">mathematical structure reconstruction + numerical operator solve</span>
+    </div>
+    <h1>Reconstructing Claude's $1.04/1.26/1.70$ Support Ladder</h1>
+    <p class="h1-sub">Claude's Remark 1.1 only says “roughly” in giving $70\%\to\sigma\approx1.04$, $80\%\to\sigma\approx1.26$, $90\%\to\sigma\approx1.70$; this document works out the mechanism that generates these three numbers — it generalizes the support of the Montgomery–Taylor/CCLM one-delta extremal problem from $\sigma=1$ to arbitrary $\sigma$, and uses a Lagrange-multiplier / reproducing-kernel argument to obtain the closed form $q(\sigma)=1-1/\langle\mathbf1,A_\sigma^{-1}\mathbf1\rangle$, where for $\sigma\le1$ the kernel is untruncated and degenerates to the cosine closed-form solution of Claude §7.1; for $\sigma&gt;1$ the kernel becomes a truncated triangular-kernel Fredholm equation, and the $\sigma\le1$ formula cannot simply be extrapolated (exactly the pitfall hit earlier when computing 90%). Using a midpoint-Nyström numerical reconstruction: $\sigma_{70}\approx1.04263$, $\sigma_{80}\approx1.25785$, $\sigma_{90}\approx1.70146$ — matching the paper's rough values almost exactly. The document also draws a clear boundary: the extended values $\sigma_{95}\approx2.26079$ and $\sigma_{99}\approx4.1872$ are a numerical reconstruction this research carried out under the same structure, <strong>not a new theorem stated in Claude's paper</strong>. Finally, it reformulates the entire ladder as a “proportion ↔ information-bandwidth” map, and splits out two entirely distinct proof obligations: the extremal requirement ($\sigma_q$ itself, already numerically reconstructible) and arithmetic realizability (whether support $\sigma$ can actually be legitimately supplied — this is the real number-theoretic wall).</p>
+    <div class="claim-box">
+      q(σ) = 1 − 1/⟨1, A_σ⁻¹ 1⟩; σ70≈1.04263, σ80≈1.25785, σ90≈1.70146 (matches), σ95≈2.26, σ99≈4.19 (extension, not a theorem in the paper)
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../10-refined-b70-certificate/">10 · Refined Exact B70 Certificate</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../12-arithmetic-realizability/">12 · Arithmetic Realizability Bridge</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>12 / 15</div>
+    </div>
+  <blockquote class="cite">“σ70≈1.043 does not mean ‘just 4.3% more computing power away.’ It represents having to cross a structural boundary in the arithmetic information currently available.” — from this document's Section 7, “Important: This Is Not an Unconditional Result.”</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/11_Reconstructing_Claude_Support_Ladder.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/11_Reconstructing_Claude_Support_Ladder.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

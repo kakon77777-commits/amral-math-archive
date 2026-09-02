@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular Reconstruction of the Proof Chain · CPL · AMRAL</title>
+<meta name="description" content="Breaks the proof of Claude's 67.25% paper into three independently trackable modules — Z (Zero Side), L (Linear Algebra), and P (Prime Side) — which together give the baseline 2/3 at λ=1 and 67.25% after window optimisation. Given fourth moments, under the conditional HL*(4,λ) hypothesis this could reach 13/18≈72.22%. The page closes with 5 Proof Obligations that each require independent re-verification.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/01_Proof_Graph_Claude_67_25.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/01-proof-graph/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/01-proof-graph/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/01-proof-graph/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/01-proof-graph/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>01 · Modular Reconstruction of the Proof Chain</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v1 · 01</span>
+      <span class="tag">2026-08-11</span>
+    </div>
+    <h1>Modular Reconstruction of the Proof Chain: The Z / L / P Modules</h1>
+    <p class="h1-sub">Breaks the proof of Claude's paper into three independently trackable modules. <strong>Module Z (Zero Side)</strong>: restricts the Weil Hermitian form to a finite-dimensional test family, then uses the functional equation to symmetrically decompose it into P⪰0 plus a hyperbolic block Q controlled by off-line pairs; adding the two gives the compression G̃=P+Q. <strong>Module L (Linear Algebra)</strong>: Claude's Lemma 3.2 uses the von Neumann trace inequality to give a rank lower-bound inequality in terms of rank P≤r and n₊(Q)≤b, which takes a concrete form when c=2. <strong>Module P (Prime Side)</strong>: uses the explicit formula to turn the traces of the compression into prime-power/archimedean integrals, unconditionally giving tr G̃~N and tr G̃²~(1/λ+λ/3)N, with λ≤1 as the key structural boundary. Together, the three modules give the baseline flat window value of 2/3 at λ=1; after optimising the window density in §7.1 (the Euler extremal problem yields v*_λ(s)=cos(√2λs)), this reaches c₁*=0.753296… at λ=1, corresponding to 67.25%. It also notes that the existing unconditional main proof really only uses low-order moments — if fourth moments were known, under the conditional HL*(4,λ) hypothesis this could reach 13/18≈72.22%, showing that P_70 has a very concrete conditional-moment route. The page closes with 5 Proof Obligations (PO-01 through PO-05) that each require independent re-verification, including the 0.68185 constant (PO-05), whose complete derivation has still not been located in the main text.</p>
+    <div class="claim-box">
+      Proof reconstruction · 5 Proof Obligations pending independent re-verification
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../00-overview/">00 · Starting from Claude's 67.25%</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../02-targets/">02 · The 70%/80%/90%/99% Target Ladder</a></div>
+      <div class="conn-card"><span class="k">v1 progress</span>2 / 4</div>
+    </div>
+  <blockquote class="cite">“Claude uses CCLM17's one-delta extremal result to show that, when only the values of Montgomery's F(α) on [-1,1] are used and a §7.1-style window extremisation is maintained, the Montgomery–Taylor kernel is already extremal; hence this subframework cannot be pushed further simply by changing the window.” — from this document's “6. Window optimisation” section.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/01_Proof_Graph_Claude_67_25.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/01_Proof_Graph_Claude_67_25.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Majorant–Inertia Problem · CPL · AMRAL</title>
+<meta name="description" content="Re-examines the tail-sign technique by which CGdL improve the Montgomery-Taylor constant from 1.3275 to 1.3208 under RH (67.25%→67.92%), and pairs it with a newly available 2024 unconditional prime-side non-negativity result to define the Matrix Majorant-Inertia Problem (MMIP): whether tail-sign prime control can be combined with Claude's off-axis block signature to improve on 67.25% unconditionally, without relying on RH. Explicitly states that this document does not prove a new proportion for zeta zeros — it only locates a research direction. The CPL v1-v11 series pauses here for now.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/15_Matrix_Majorant_Inertia_Hybrid_Route.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/15-matrix-majorant-inertia/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/15-matrix-majorant-inertia/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/15-matrix-majorant-inertia/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/15-matrix-majorant-inertia/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>15 · Matrix Majorant–Inertia Problem</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v11</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">literature audit + new research proposal</span>
+    </div>
+    <h1>Matrix Majorant–Inertia Problem (MMIP): Seeking an Unconditional Improvement via CGdL's Tail-Sign SDP and Claude's Off-Axis Signature</h1>
+    <p class="h1-sub">Re-examines the technique by which Chirre–Gonçalves–de Laat (CGdL) improve the Montgomery–Taylor multiplicity constant from 1.3275 to 1.3208 under RH (i.e., 67.25%→67.92%): relax the bandlimited condition to require only $\widehat f(\alpha)\le0$ (for $|\alpha|\ge1$), and use $F(\alpha,T)\ge0$ so that the integral over the unknown band can only help the upper bound — using “the sign of the unknown region, not its magnitude.” The document notes that Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh already made the prime-side non-negativity result unconditional in 2024, but this cannot directly make CGdL's 67.92% unconditional — the gap isn't on the prime side, it's on the zero side: CGdL's scalar proof relies on RH to make every zero ordinate real, which is what gives termwise non-negativity; once RH is dropped, this scalar argument no longer holds automatically. The document observes that Claude's paper resolves the zero side differently — using block signature (critical-line zeros contribute a PSD block, and each off-axis functional-equation pair contributes an indefinite block with a (1,1) signature) together with an inertia + rank–trace inequality, rather than scalar termwise positivity. From this it defines MMIP: whether one can simultaneously achieve tail-sign prime control (M1), preserve Claude's off-axis block signature (M2), and build a matrix certificate that turns both into a lower bound on $N_0^s/N$ (M3). The document gives an explicit table of constant targets (beating the 68.185% ceiling requires $C&lt;1.31815$ — CGdL's known 1.3208 is not yet enough; reaching 70% requires $C\le1.30$), and proposes an MVP path that first tests, in a toy world, whether tail-sign and inertia produce a synergistic gain. <strong>The document explicitly states: this document does not prove a new proportion for the zeros of ζ — it only locates a hybrid research direction that may be able to avoid the α&gt;1 asymptotic.</strong></p>
+    <div class="claim-box">
+      Tail sign + Matrix inertia ⟹? An unconditional improvement not relying on RH (research proposal, not a result)
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../14-exact-kernel-barrier/">14 · The Exact O1 Kernel and an Unconditional Audit</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>15 / 15 (the entire v1-v11 series is now live)</div>
+    </div>
+  <blockquote class="cite">“This document does not prove a new proportion for the zeros of ζ — it only locates a hybrid route that may be able to avoid the α&gt;1 asymptotic.” — from the “Not a Claim of Result” statement at the start of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/15_Matrix_Majorant_Inertia_Hybrid_Route.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/15_Matrix_Majorant_Inertia_Hybrid_Route.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

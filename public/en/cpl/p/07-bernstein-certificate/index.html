@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The N=4 Exact-Rational Bernstein Certificate · CPL · AMRAL</title>
+<meta name="description" content="The first rigorously proved small-N PairCeiling analogue: for the N=4 toy configuration class (mark∈{1,2}, continuous positions, observing only j=1,2,3), an exact-rational dual certificate combined with exact Bernstein subdivision over three multiplicity patterns rigorously proves p_min ≥ 0.6982110925 = 69.82110925%. This is not a lower bound produced by a numerical optimiser.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/07_N4_Exact_Rational_Bernstein_Certificate.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/07-bernstein-certificate/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/07-bernstein-certificate/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/07-bernstein-certificate/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/07-bernstein-certificate/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>07 · The N=4 Exact-Rational Bernstein Certificate</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v5</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">exact-rational finite certificate</span>
+    </div>
+    <h1>The Exact-Rational Bernstein Certificate for the N=4 Continuous Toy PairCeiling</h1>
+    <p class="h1-sub">Elevates a numerical candidate to a rigorous, machine-recheckable lower bound: within the toy configuration class defined by $N=4$, $m_i\in\{1,2\}$, positions anywhere on the unit circle, and constraints only on the open band $j=1,2,3$, an exact-rational dual $(c_0,y_1,y_2,y_3)$ is chosen, and positivity is proved for all three multiplicity patterns — the $(1,1,1,1)$ pattern directly by symbolic checking, the $(2,2)$ pattern by a 3-step exact Bernstein subdivision (minimum terminal coefficient $\approx0.00481$), and the $(2,1,1)$ pattern by an exact bivariate Bernstein subdivision over 77 internal boxes (minimum terminal coefficient $\approx5.7\times10^{-6}$) — yielding the rigorous lower bound $p_{\min}\ge0.6982110925=69.82110925\%$. The document stresses that this is not a lower bound from a numerical optimiser but the result of weak duality plus an exact positivity proof; the candidate floor from the previous round's numerical column generation was about 69.82311%, leaving only a very narrow gap to this rigorous lower bound — the upper side of that gap is still a numerical candidate, not a rigorous upper bound. The document also lays out the full pipeline — “numerical discovery → rationalize with margin → derive exact polynomial → Bernstein subdivision → exact positivity certificate” — clearly, to serve as a fixed template for later certificates of the same kind.</p>
+    <div class="claim-box">
+      p_min ≥ 0.6982110925 = 69.82110925%
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-column-generation/">06 · Connecting Column Generation to PairCeiling</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-boundary-escape-frontier/">08 · The Toy P70 Minimal Boundary-Escape Frontier</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>8 / 15</div>
+    </div>
+  <blockquote class="cite">“This is our first certified small-N PairCeiling analogue so far.” — from this document's “6. What Has This Actually Proved?” section.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/07_N4_Exact_Rational_Bernstein_Certificate.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/07_N4_Exact_Rational_Bernstein_Certificate.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

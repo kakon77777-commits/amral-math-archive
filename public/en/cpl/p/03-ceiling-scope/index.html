@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scope of 67.25% and 68.185% · CPL · AMRAL</title>
+<meta name="description" content="It's not valid to argue that just because 67.25%&lt;68.185%, “optimising a bit more would get you to 68.185%.” 67.25% is the extremal value of the §7.1 window-optimisation subframework; 68.185% is the broader bandwidth-one-class upper bound given by Remark 1.1, but the main paper's text never expands it into a recomputable closed-form formula, so it is flagged OPEN-RECONSTRUCTION-01. P_70 can only be reached by violating at least one of these assumptions.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_Ceiling_Scope_67_25_vs_68_185.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/03-ceiling-scope/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/03-ceiling-scope/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/03-ceiling-scope/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/03-ceiling-scope/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>03 · The Scope of 67.25% and 68.185%</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v1 · 03</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">Final v1 entry</span>
+    </div>
+    <h1>67.25% and 68.185%: The Scope of Two Ceilings</h1>
+    <p class="h1-sub">Why the two must be kept separate: you cannot argue that because 67.25%&lt;68.185%, “optimising Claude's window a bit further would reach 68.185%.” This page precisely dissects the scope of each — 67.25% is the extremal value of the §7.1 window-optimisation/two-trace subframework (block structure + two traces + primes up to T), for which CCLM17 Corollary 14 guarantees that the Montgomery–Taylor kernel is extremal within this subframework. 68.185% is the upper bound of the broader bandwidth-one, configuration-by-configuration certificate class given by Remark 1.1 — using only mean density, pair-correlation data with Fourier support (-1,1), and multiplicity integrality, required to hold for every configuration — but the main paper's text never expands it into a directly recomputable closed-form formula the way it does for c₁*, so it is flagged <strong>OPEN-RECONSTRUCTION-01</strong>: the research task is not to doubt this number but to find the extremal law's complete definition, variables, constraints, optimizer, and a path to numerical reproduction. §7.5 also gives a finite-dimensional dimension cap (rank P≤d≈λN), and notes that a certificate relying only on the first/second trace is not even positive when λ≤1/2, while unconditional higher moments are in turn constrained by the Rudnick–Sarnak range kλ&lt;2 — showing that “just computing more moments” is not free even in the unconditional bandwidth-one regime. Conclusion: P_70 already lies outside 70%&gt;68.185%, so if Remark 1.1's certificate-class assumptions apply in full, P_70 must violate at least one of these constraints — more support, more correlation information, or a richer, non-configuration-wise global structure.</p>
+    <div class="claim-box">
+      Scope split · 67.25% window-optimisation extremum ≠ 68.185% broader-class upper bound
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-targets/">02 · The 70%/80%/90%/99% Target Ladder</a></div>
+      <div class="conn-card"><span class="k">v1 progress</span>4 / 4 (final entry in this batch)</div>
+    </div>
+  <blockquote class="cite">“The research task is not to doubt the number, but to find the extremal law's complete definition, variables, constraints, optimizer, and a path to numerical reproduction.” — from this document's “3. How Precisely Is 68.185% Known” section.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/03_Ceiling_Scope_67_25_vs_68_185.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_Ceiling_Scope_67_25_vs_68_185.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

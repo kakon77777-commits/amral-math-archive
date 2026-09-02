@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconstructing the 68.185% Ceiling · CPL · AMRAL</title>
+<meta name="description" content="Reads the exact-rational simple-point fraction p0=0.681828687463832... (68.182868746383%) directly out of Zeta23/PairCeiling/ in Anthropic's official Lean companion repo, and reconstructs the stability identity, the near-CUE law, and the signed ceiling formula, defining the Bandwidth-One Escape Problem (BOEP) and five escape classes toward 70%. The official external JSON certificate cert_N256_blk_b128m.json is not currently included in the public repo.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/04_Reconstructing_68_185_Ceiling.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/04-reconstructing-ceiling/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/04-reconstructing-ceiling/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/04-reconstructing-ceiling/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/04-reconstructing-ceiling/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>04 · Reconstructing the 68.185% Ceiling</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v2</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">First-round structural reconstruction</span>
+    </div>
+    <h1>Reconstructing the Bandwidth-One 68.185% Ceiling</h1>
+    <p class="h1-sub">Starting from a single Remark, this page goes directly into <code>Zeta23/PairCeiling/</code> in Anthropic's official Lean companion repository and reads out a verifiable exact-rational constant: the simple-point fraction recorded in <code>LawN256.lean</code> is p0=0.681828687463832…, already very close to the 0.68185 used in the paper's Remark 1.1. The document reconstructs three layers of machinery — the stability identity that lifts discrete near-CUE rows to a continuous certificate value (Abel summation plus two integrations by parts), the near-CUE law that quantifies “near-CUE” into an error bound, and the signed ceiling inequality that combines the two into a directly citable form. The core insight is an information-indistinguishability obstruction: bandwidth-one pair observables being nearly identical does not mean the simple fraction approaches 1 — `LawN256.lean` is itself a deliberately constructed probability law whose average pair-correlation almost perfectly mimics CUE, yet whose average simple-point fraction is only about 68.18%. The document also honestly records the first gap: the external certificate <code>cert_N256_blk_b128m.json</code> specified by the official source (SHA-256 known) is listed as “available from the authors,” but the public repo does not currently include it, so the full chain — configuration generation → exact-rational LP solve → external JSON certificate — cannot yet be rerun end to end.</p>
+    <div class="claim-box">
+      p0 = 0.681828687463832… = 68.182868746383%
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../03-ceiling-scope/">03 · The Scope of 67.25% and 68.185%</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../05-smalln-toy-lp/">05 · First Reproduction of the Small-N Toy LP</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>5 / 15</div>
+    </div>
+  <blockquote class="cite">“bandwidth-one pair observables being nearly identical ⇏ simple fraction &gt; 68.2% — this is, in fact, an information-indistinguishability obstruction.” — from this document, Section 6.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/04_Reconstructing_68_185_Ceiling.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/04_Reconstructing_68_185_Ceiling.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical-Line Proportion Ladder · AMRAL</title>
+<meta name="description" content="AMRAL case: Critical-Line Proportion Ladder (CPL). Built on a real, published Anthropic paper — Claude, &quot;More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line&quot; (2026-08-10) — which unconditionally pushes the proportion of critical-line zeros from 41.6% to 67.25%, explicitly without affecting the Riemann Hypothesis itself. Neo.K's follow-on research: reconstructing the 68.185% ceiling constant the paper itself leaves unaddressed, and rigorously auditing whether existing literature can reach the 70% threshold.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link active" href="./">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../skew-field/">Skew Field</a>
+  <a class="link" href="../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../cpl/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-HILBERT-23 · H08 extension line</p>
+    <h1>Critical-Line Proportion Ladder</h1>
+    <p class="subtitle">Critical-Line Proportion Ladder (CPL)</p>
+    <p class="lede">
+      This line is built on a real, published Anthropic paper — Claude, "More Than Two Thirds of the Zeros of
+      the Riemann Zeta Function Lie on the Critical Line" (2026-08-10,
+      <a href="https://github.com/anthropics/zeta-23-lean">official Lean companion repo</a>). The paper
+      unconditionally pushes the lower bound on the proportion of critical-line zeros from 41.6%
+      (Pratt–Robles–Zaharescu–Zeindler) to 67.25%, the largest single-step jump known in this direction —
+      but the paper itself, and subsequent coverage, both state plainly: <strong>this does not resolve the Riemann
+      Hypothesis</strong>, makes no claim about the remaining 32.8% of zeros, and has no directional bearing on RH
+      itself.
+    </p>
+    <p class="lede">
+      Neo.K's CPL research is the follow-on exploration: can a constant the paper itself leaves unaddressed (the
+      68.185% certificate ceiling) be independently reconstructed? Can 67.25% be pushed to 70%, 80%, 90%, or even
+      approaching 100%? Every step strictly distinguishes "proven," "conditionally provable," "open," and
+      "extrapolation forbidden" — engineering progress is never swapped in for a mathematical theorem.
+    </p>
+    <p class="notice">
+      A single relay-style research line — v1 through v11 (15 documents) are all now live as pages — first
+      reconstructing the 68.185% ceiling, then attacking the support axis, and finally translating support
+      requirements into arithmetic-input requirements and auditing the literature. v11's MMIP is an as-yet-unopened
+      research proposal, not a closed conclusion; later versions await a new package from Neo.K.
+    </p>
+    <p class="notice">
+      This is the same mathematical object as the <a href="../../riemann/">Riemann Hypothesis</a> case
+      (Chinese) (zeros of the Riemann zeta function), but a different kind of research — not an attempt to prove
+      or disprove RH, but an extension of an already-published, already-verified external result.
+    </p>
+  </header>
+
+  <section id="v1">
+    <h2 class="doc-h2">v1 · Starting from 67.25%</h2>
+    <p class="section-note">2026-08-11 · Definitions, proof-chain reconstruction, the target ladder, splitting the ceiling's scope · the full v1-v11 series, 15/15 documents, is now live</p>
+    <nav class="case-grid" aria-label="v1 documents">
+      <a class="case-card" href="./p/00-overview/">
+        <span class="k">00</span>
+        <h3>Starting from Claude's 67.25%</h3>
+        <p>Semantic lock-in: the percentage is not RH completion. A P0–P6 priority research list.</p>
+      </a>
+      <a class="case-card" href="./p/01-proof-graph/">
+        <span class="k">01</span>
+        <h3>Modular Reconstruction of the Proof Chain</h3>
+        <p>The Z/L/P three-module breakdown, 5 proof obligations awaiting independent re-proof.</p>
+      </a>
+      <a class="case-card" href="./p/02-targets/">
+        <span class="k">02</span>
+        <h3>The 70%/80%/90%/99% Target Ladder</h3>
+        <p>A two-dimensional (σ,k) research plane; P99 explicitly forbids linear extrapolation.</p>
+      </a>
+      <a class="case-card" href="./p/03-ceiling-scope/">
+        <span class="k">03</span>
+        <h3>The Scopes of 67.25% and 68.185%</h3>
+        <p>The two ceilings must not be conflated. OPEN-RECONSTRUCTION-01.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="v2-v7">
+    <h2 class="doc-h2">v2 → v7 · Scaffolding for Reconstructing the 68.185% Ceiling</h2>
+    <p class="section-note">Found the exact value 0.681828687463832… in the official Lean source; built a toy LP that first reproduces the "open-band adversarial law"; an N=4 exact-rational toy first strictly breaks 70%. A complete N=256 external certificate has still not been obtained as of the latest version.</p>
+    <nav class="case-grid" aria-label="v2-v7 documents">
+      <a class="case-card" href="./p/04-reconstructing-ceiling/">
+        <span class="k">04</span>
+        <h3>Reconstructing the 68.185% Ceiling</h3>
+        <p>The exact value p0=68.182868746383% from the official Lean source. The external JSON certificate is not included in the public repo.</p>
+      </a>
+      <a class="case-card" href="./p/05-smalln-toy-lp/">
+        <span class="k">05</span>
+        <h3>First Reproduction via a Small-N Toy LP</h3>
+        <p>N=4, M=24 gives a 70.18% adversarial law; discovers the Boundary-Spike Obstruction.</p>
+      </a>
+      <a class="case-card" href="./p/06-column-generation/">
+        <span class="k">06</span>
+        <h3>Column Generation Meets the PairCeiling</h3>
+        <p>The toy LP's dual = the Anthropic PairCeiling certificate, not a metaphor.</p>
+      </a>
+      <a class="case-card" href="./p/07-bernstein-certificate/">
+        <span class="k">07</span>
+        <h3>An N=4 Exact-Rational Bernstein Certificate</h3>
+        <p>The first strict proof: p_min ≥ 69.82110925%.</p>
+      </a>
+      <a class="case-card" href="./p/08-boundary-escape-frontier/">
+        <span class="k">08</span>
+        <h3>The Toy P70 Minimal Boundary-Escape Frontier</h3>
+        <p>A numerical squeeze 3.65 &lt; B*_70 &lt; 3.67 (not a theorem).</p>
+      </a>
+      <a class="case-card" href="./p/09-exact-p70-certificate/">
+        <span class="k">09</span>
+        <h3>First Strict Breakthrough Past 70%</h3>
+        <p>B_cert≈3.667778, an exact Bernstein certificate covering all three patterns.</p>
+      </a>
+      <a class="case-card" href="./p/10-refined-b70-certificate/">
+        <span class="k">10</span>
+        <h3>A Refined Exact B70 Certificate</h3>
+        <p>Safety margin compressed to 8.0×10⁻⁸; records one genuine QCI case.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="v8-v9">
+    <h2 class="doc-h2">v8 → v9 · The Support Axis and Arithmetic-Input Scale</h2>
+    <p class="section-note">Reconstructs the general operator behind the support ladder (1.04/1.26/1.70), numerically extending to σ95≈2.26 and σ99≈4.19 (self-declared as "not a new theorem stated explicitly in the paper"). Converts support requirements into prime-pair displacement scale.</p>
+    <nav class="case-grid" aria-label="v8-v9 documents">
+      <a class="case-card" href="./p/11-support-ladder/">
+        <span class="k">11</span>
+        <h3>Reconstructing the 1.04/1.26/1.70 Support Ladder</h3>
+        <p>A closed-form reconstruction of q(σ), matching the paper's numbers almost one for one, extending to σ95/σ99.</p>
+      </a>
+      <a class="case-card" href="./p/12-arithmetic-realizability/">
+        <span class="k">12</span>
+        <h3>The Arithmetic Realizability Bridge</h3>
+        <p>P95 (σ≈2.26) is the first node that genuinely steps outside the classical strong-HL range.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="v10-v11">
+    <h2 class="doc-h2">v10 → v11 · Weakened Hypotheses and a Literature Audit</h2>
+    <p class="section-note">Proposes test-specific hypotheses WSPC/WPPH, far weaker than the full Hardy-Littlewood conjecture. Personally audits existing unconditional literature — Zaccagnini, Matomäki–Radziwiłł–Shao–Tao–Teräväinen (2024), and others — concluding: none of the ranges line up, and P70 currently cannot be derived unconditionally from existing results.</p>
+    <nav class="case-grid" aria-label="v10-v11 documents">
+      <a class="case-card" href="./p/13-weighted-pair-hypothesis/">
+        <span class="k">13</span>
+        <h3>The Test-Specific Weighted Pair Hypothesis</h3>
+        <p>P70 does not need the full HL conjecture; the unknown strip's Fourier mass is only about 0.114%.</p>
+      </a>
+      <a class="case-card" href="./p/14-exact-kernel-barrier/">
+        <span class="k">14</span>
+        <h3>The Exact O1 Kernel and an Unconditional Barrier</h3>
+        <p>P70 needs a wedge, not a single shift; existing unconditional literature's ranges don't match.</p>
+      </a>
+      <a class="case-card" href="./p/15-matrix-majorant-inertia/">
+        <span class="k">15</span>
+        <h3>The Matrix Majorant–Inertia Problem</h3>
+        <p>A new research proposal, not a claimed result. The entire v1-v11 series of existing documents is now live.</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 verified per document · original bytes, not repackaged</span>
+  </footer>
+</div>
+</body>
+</html>

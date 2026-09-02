@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Rigorous Break Past 70% · CPL · AMRAL</title>
+<meta name="description" content="The N=4 continuous toy model's first rigorous proof that E[p]≥70%: taking the exact dual (c0, y1, y2, y3, μ), it shows that for B≤B_cert=11254781/3068556≈3.667777612662112, all three multiplicity patterns ((2,2)/(2,1,1)/(1,1,1,1)) hold configuration-wise, yielding an exact-rational certificate for the P70 escape via weak duality. Explicitly flagged as a toy marked-configuration theorem defined by this research, not a new theorem about the zeros of the Riemann zeta function.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/09_Exact_P70_Boundary_Escape_Certificate.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/09-exact-p70-certificate/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/09-exact-p70-certificate/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/09-exact-p70-certificate/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/09-exact-p70-certificate/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>09 · First Rigorous Break Past 70%</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v6</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">exact-rational finite certificate</span>
+    </div>
+    <h1>Exact $P_{70}$ Boundary-Escape Certificate</h1>
+    <p class="h1-sub">The $N=4$ continuous toy model's first rigorous crossing of 70% — continuing from 08's numerical frontier, it takes the exact dual $c_0=1.12269224$, $y_1=-0.38437941$, $y_2=-0.25114540$, $y_3=-0.11796917$, $\mu=-0.03068556$ and runs exact Bernstein subdivision on each of the three multiplicity patterns in turn: the $(2,2)$ pattern passes on all 8 terminal intervals; the $(2,1,1)$ pattern passes on all 62 terminal boxes; the $(1,1,1,1)$ pattern, after using Newton's identities to reduce to three real variables, passes a 3D Bernstein subdivision of 180 terminal boxes on a superset box larger than the true root configuration, with minimum terminal coefficient $5\times10^{-5}&gt;0$. With all three branches proved positive, this yields $\boxed{B_{cert}=11254781/3068556=3.667777612662112\ldots}$, rigorously giving $\mathbb E[p]\ge70\%$ for all $B\le B_{cert}$. The document repeatedly emphasizes that this is an $N=4$ toy marked-configuration theorem defined by this research, not a new theorem about the zeros of the Riemann zeta function — and it also spells out the relationship to Claude's actual paper very clearly: the real problem needs the Fourier support to expand from 1 to about 1.04 to reach 70%, and this toy theorem cannot derive 1.04, but it does rigorously prove the corresponding mechanism claim — once an observable that constrains the boundary spike is added, the bandwidth-one ceiling can be broken through.</p>
+    <div class="claim-box">
+      B_cert = 11254781/3068556 ≈ 3.667777612662112 ⟹ E[p] ≥ 70%
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../08-boundary-escape-frontier/">08 · The Toy P70 Minimal Boundary-Escape Frontier</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../10-refined-b70-certificate/">10 · Refined Exact B70 Certificate</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>10 / 15</div>
+    </div>
+  <blockquote class="cite">“Once an observable that constrains the boundary spike is added, the bandwidth-one ceiling can be broken through.” — from this document's Section 8, “The Research Significance of This Result.”</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/09_Exact_P70_Boundary_Escape_Certificate.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/09_Exact_P70_Boundary_Escape_Certificate.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

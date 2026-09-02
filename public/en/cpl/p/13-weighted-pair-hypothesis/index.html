@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test-Specific Weighted Pair-Correlation Hypothesis · CPL · AMRAL</title>
+<meta name="description" content="P70 does not need the full Hardy-Littlewood conjecture — only one high-leverage weighted moment. Defines WSPC (a one-test weighted SPC) and WPPH (for the specific weighted double sum Claude actually uses); numerically finds that the P70 optimal test uses only about 0.114% of its Fourier mass on the unknown strip, but this share rises rapidly as the proportion target increases (about 51% for P99).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/13_Test_Specific_Weighted_Pair_Hypothesis.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/13-weighted-pair-hypothesis/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/13-weighted-pair-hypothesis/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/13-weighted-pair-hypothesis/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/13-weighted-pair-hypothesis/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>13 · Test-Specific Weighted Pair-Correlation Hypothesis</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v10</span>
+      <span class="tag">2026-08-11</span>
+      <span class="tag">source-grounded derivation</span>
+    </div>
+    <h1>Test-Specific Weighted Pair-Correlation Hypothesis: $P_{70}$ Does Not Need the Full Hardy–Littlewood Conjecture</h1>
+    <p class="h1-sub">The Montgomery strong prime-pair hypothesis, as recorded by Goldston, requires square-root-level error at every shift; the document points out that this is clearly too strong for a proof that only ever needs one designated extremal test $R_\sigma^\star$ — what's actually needed is just the correct asymptotic for the single linear functional $\int_{1&lt;|\alpha|\le\sigma}\widehat R_\sigma^\star(\alpha)F(\alpha,T)\,d\alpha$. The document defines WSPC (Weighted Strong Pair Correlation, which constrains only one linear functional and has far lower information dimension than the full SPC) and, matched to Claude's actual $O_1$ formula, WPPH (Weighted Prime-Pair Hypothesis, which only requires the one specific weighted double sum Claude actually uses to be correct, allowing errors in different $h$ and different $m$ ranges to cancel against each other). The most striking numerical finding: the optimal test for $P_{70}$ ($\sigma_{70}\approx1.042628$) uses only about 0.114% of its total normalized Fourier mass on the unknown strip $|\alpha|&gt;1$ — the difficulty comes from “crossing the boundary” itself, not from “needing a large amount of new band.” But this dependence rises quickly as the proportion increases: $P_{80}\approx2.89\%$, $P_{90}\approx12.36\%$, $P_{95}\approx24.32\%$, $P_{99}\approx51.07\%$, showing that $P_{70}$ and $P_{99}$ are not “the same thing done a few more times.” The document also gives a practical version: taking $\sigma=1.05$ (rather than sitting exactly at $\sigma_{70}$) buys an error tolerance of $|\mathcal J_{1.05}(T)|\le0.0044$, forming the first support–accuracy frontier.</p>
+    <div class="claim-box">
+      The P70 optimal test's Fourier mass on the unknown strip is only about 0.114% — the difficulty comes from crossing the boundary itself, not from the amount of information
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../12-arithmetic-realizability/">12 · Arithmetic Realizability Bridge</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../14-exact-kernel-barrier/">14 · The Exact O1 Kernel and an Unconditional Audit</a></div>
+      <div class="conn-card"><span class="k">CPL progress</span>14 / 15</div>
+    </div>
+  <blockquote class="cite">“The support genuinely does have to cross past 1; but the total Fourier mass the optimal test actually uses on the unknown strip is only about one part in a thousand. The difficulty comes from ‘crossing the boundary,’ not from ‘needing a large amount of new band.’” — from this document's Section 4, “What's Surprising About P70.”</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/13_Test_Specific_Weighted_Pair_Hypothesis.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/13_Test_Specific_Weighted_Pair_Hypothesis.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

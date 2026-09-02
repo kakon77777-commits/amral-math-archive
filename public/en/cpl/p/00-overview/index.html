@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starting from Claude's 67.25% · CPL · AMRAL</title>
+<meta name="description" content="Critical-Line Proportion Ladder overview. Starting from Claude's unconditional 67.25% result of 2026-08-10, this project studies what it would take to reach 70/80/90/99%. Semantic lock: the percentage is not a measure of how much of the Riemann Hypothesis is proved. Proof structure: Weil explicit formula → finite Gabor compression → zero-side inertia → prime-side traces → rank-trace certificate. 67.25% and 68.185% are two ceilings that must not be confused; the latter has not yet been independently reconstructed (OPEN-RECONSTRUCTION-01).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/00_README.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/cpl/p/00-overview/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/cpl/p/00-overview/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/cpl/p/00-overview/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../cpl/p/00-overview/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CPL</a>
+    <span>/</span>
+    <span>00 · Starting from Claude's 67.25%</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v1 · 00</span>
+      <span class="tag">2026-08-11</span>
+    </div>
+    <h1>Critical-Line Proportion Ladder: Starting from Claude's 67.25%</h1>
+    <p class="h1-sub">Starting from Claude's unconditional 67.25% result of 2026-08-10, this page studies the conditions needed to reach 70%/80%/90%/99%. The first order of business is a semantic lock: the percentages in this project <strong>are not a measure of how much of the Riemann Hypothesis is proved</strong> — P_q is defined as the liminf lower limit of the proportion of zeros that are simple and on the critical line, so even reaching P₁ (density one) still would not equal the pointwise, universally-quantified statement of RH. The core proof structure compresses to: Weil explicit formula → finite Gabor compression → zero-side inertia → prime-side traces → rank-trace certificate. The baseline flat-window certificate gives H(1)=2/3 at λ=1; after window optimisation in §7.1, this improves to c₁*=0.753296…, corresponding to 2-1/c₁*=0.672500…, i.e. 67.25%. It draws a sharp distinction between two ceilings that must not be conflated: 67.25% is the extremal value of the window-optimisation/two-trace subframework (the paper states outright that no window does better); 68.185% is the broader bandwidth-one-class upper bound given by Remark 1.1, but this batch has not yet found a complete derivation sufficient to independently reconstruct that constant, and it is flagged <strong>OPEN-RECONSTRUCTION-01</strong>. The page closes with a P0–P6 priority research list and points to Anthropic's official Lean companion repo (github.com/anthropics/zeta-23-lean).</p>
+    <div class="claim-box">
+      Batch 01 · Literature + Proof Reconstruction
+      <span class="note">— Stage status as self-reported by the source document, reproduced verbatim.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next</span><a href="../01-proof-graph/">01 · Modular Reconstruction of the Proof Chain</a></div>
+      <div class="conn-card"><span class="k">v1 progress</span>1 / 4</div>
+    </div>
+  <blockquote class="cite">“The percentages in this project are not a measure of how much of the Riemann Hypothesis is proved. …Even reaching P₁ only gives density-one simple critical zeros, which still does not equal the pointwise, universally-quantified statement of RH.” — from this document's “0. Semantic Lock” section.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CPL</a>
+    <a href="../../files/00_README.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/00_README.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
