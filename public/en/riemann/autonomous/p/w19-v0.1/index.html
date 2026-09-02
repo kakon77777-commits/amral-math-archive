@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-19 · Reproducibility and Adversarial Certificate Audit · AMRAL</title>
+<meta name="description" content="RH-W-19 Engineering Package: Establishes a zoo of 17 classes of erroneous certificates, with 16 classes correctly rejected and 1 class of "simultaneous collusion between verifier and artifact" deliberately marked as expected to survive—a fundamental limitation of self-certifying systems, requiring an external root of trust. Includes an empirical demonstration of a 14th-order Hilbert matrix that is exactly positive definite but misjudged as negative by floating-point eigenvalues. RH_CLAIM=False.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-19_可重現性與對抗性證書審計_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w19-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w19-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w19-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w19-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w19-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w19-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w19-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w19-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-19</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">ADVERSARIAL_REPRODUCIBILITY_AUDIT_OK</span>
+    </div>
+    <h1>RH-W-19: Reproducibility and Adversarial Certificate Audit</h1>
+    <p class="h1-sub">Placing the W-18 unified backend into a replayable attack model — establishing a zoo of 17 classes of false certificates (Z01–Z17). 16 classes of attacks that should be rejected were all correctly rejected. The 17th class, "simultaneous collusion of verifier and artifact," is deliberately marked as <code>EXPECTED_SURVIVAL</code>: a self-certifying system itself cannot rule out this kind of attack and must introduce an external root of trust. Accompanied by a concrete empirical proof — a 14th-order Hilbert matrix is proven positive-definite using exact rational LDL<sup>T</sup>, yet the double-precision eigenvalue solver in this environment returns a negative minimum eigenvalue.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The claim status self-reported by the verifier within the package, reproduced here as is. "RH-W-19 establishes a 'certificate of certificate failure'. It does not elevate any RH truth value claims, but only improves the identifiability of research artifacts against errors, tampering, and overclaims."</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v2.2_對抗性可重現審計_完整包.zip">Research Starting Point v2.2 · Adversarial Reproducible Audit</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w18-v0.1/">RH-W-18: Unified Certificate Backend and Single Verification Entry</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w20-v0.1/">RH-W-20: Batch 01 Integration and AI Autonomous Math Research Platform Case 0001 Release</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>19 / 20</div>
+    </div>
+    <blockquote class="cite">"If an attacker simultaneously modifies the certificate, verifier, manifest, artifact index, and all hashes, and makes the verifier print only the expected token, there is no root inside the package not controlled by the attacker that can identify it. This is not a patchable minor bug in this backend, but a fundamental limitation of self-certifying systems." — Excerpt from the "External Trust Boundary" section of Document 01 in this package.</blockquote>
+  </section>
+
+  <section id="zoo">
+    <h2 class="doc-h2">Erroneous Certificate Zoo · Z01–Z17</h2>
+    <p class="section-note">Sourced from <code>adversarial_zoo_catalog.csv</code> within the package, reproduced item by item from the original data, not a summary rewritten by me after the fact.</p>
+    <div class="datatable-wrap" id="csv-zoo"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP Ledger</h2>
+    <p class="section-note">Sourced from <code>RH-W-19_subgaps_v0.1.csv</code> within the package; the status and descriptions are recorded by the package itself, not judgments added by me after the fact.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Unified backend verification → Run full adversarial zoo → Individually verify this round's records:</div>
+      <pre><code>python rhcert.py verify
+python redteam_zoo.py
+python rhcert.py verify --record RH-W-19</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Reproducibility and Adversarial Certificate Audit</h2>
+    <p class="doc-meta">Main Document — Six new protections added in backend v0.2, main empirical demonstrations (floating-point false negatives, tail term omissions, inward intervals), external trust boundaries, and the four-stage verification chain.</p>
+    <div class="doc" id="doc01-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · Error Certificate Zoo and Detection Matrix</h2>
+    <p class="doc-meta">Four-layer error classification (package execution layer / mathematical semantic layer / interval numerical layer / external trust layer), detection principle comparison table, and five core prohibitions.</p>
+    <div class="doc" id="doc02-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · External Root of Trust and Dual-Implementation Route</h2>
+    <p class="doc-meta">The boundaries of self-certification, the four-tier trust upgrade recommended for Batch 02 (signed release manifest / reproducible build / independent verifier / external mirror), and the boundaries against overclaiming.</p>
+    <div class="doc" id="doc03-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-04">
+    <h2 class="doc-h2">04 · GAP Updates and Batch 01 Progress</h2>
+    <p class="doc-meta">Completed/pending items, Batch 01 progress 19/20, next node W-20 (packaging Batch 01, with no commitment to prove or disprove RH).</p>
+    <div class="doc" id="doc04-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">Verification Output</h2>
+    <p class="doc-meta">From <code>ADVERSARIAL_AUDIT.txt</code> (itemized results for 17 classes) and <code>VALIDATION.txt</code> within the package, reproduced line by line.</p>
+    <pre class="validation-block" id="validation-out"><code>Loading...</code></pre>
+    <pre class="validation-block" id="audit-out" style="margin-top:8px"><code>Loading...</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">This package similarly archives all original documents from W-04 through W-17 (<code>records/</code>), which are not listed individually but are all included in the complete zip file; for the specific contents of each package, please see their corresponding detail pages.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_19_工程包_v0.1_完整包.zip" download>Download Full Package (1.27 MB)</a>
+    <p class="zip-note">sha256 07a2312a8a78a6783438165d5adc23c86bc81ad5c7947b72385f550374ffc893</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status === "REJECTED") return "CLOSED";
+  if (status === "EXPECTED_SURVIVAL") return "OPEN";
+  if (status.startsWith("DONE")) return "CLOSED";
+  if (status.startsWith("OPEN")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">Load Failed:${e.message}</code>`;
+  }
+}
+
+async function loadZoo() {
+  const el = document.getElementById("csv-zoo");
+  try {
+    const rows = amralParseCSV(await F("adversarial_zoo_catalog.csv"));
+    const [head, ...body] = rows;
+    const idx = { id: 0, case: 1, layer: 2, expected_result: 3, meaning: 4 };
+    const trs = body.map((r) => `
+      <tr>
+        <td><span class="pill ${pillClass(r[idx.expected_result])}">${amralEsc(r[idx.expected_result])}</span></td>
+        <td>${amralEsc(r[idx.id])}<br><span style="color:var(--ink-dim)">${amralEsc(r[idx.case])}</span></td>
+        <td>${amralEsc(r[idx.layer])}</td>
+        <td>${amralEsc(r[idx.meaning])}</td>
+      </tr>`).join("");
+    el.innerHTML = `<table class="ledger">
+      <thead><tr><th>Expected Results</th><th>Case</th><th>Hierarchy</th><th>Significance</th></tr></thead>
+      <tbody>${trs}</tbody>
+    </table>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-19_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, description]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}</td>
+        <td>${amralEsc(description)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("DONE")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Sub-GAP</th><th>Description</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Completed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      if (f.path.startsWith("records/")) continue;
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-19_可重現性與對抗性證書審計_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-19_錯誤證書動物園與偵測矩陣_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-19_外部信任根與雙重實作路線_v0.1.md");
+loadDoc("doc04-body", "04_RH-W-19_GAP更新與Batch01進度_v0.1.md");
+loadPre("validation-out", "VALIDATION.txt");
+loadPre("audit-out", "ADVERSARIAL_AUDIT.txt");
+loadZoo();
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

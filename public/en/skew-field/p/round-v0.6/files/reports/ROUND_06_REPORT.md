@@ -143,11 +143,11 @@ Increase relative to Round 5:
 2.2980%.
 \]
 
-![Area Sequence](../figures/03_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v0.6/files/figures/03_area_sequence.png)
 
-![Attack vs Net Increment](../figures/04_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v0.6/files/figures/04_attack_vs_net_increment.png)
 
-![Absorption and Novelty Coefficient](../figures/05_absorption_novelty.png)
+![Absorption and Novelty Coefficient](../../../../skew-field/p/round-v0.6/files/figures/05_absorption_novelty.png)
 
 ---
 
@@ -169,7 +169,7 @@ The Round 6 attack curve itself still retains a:
 
 leave-one-out exposed area; therefore, it is not a curve that becomes immediately redundant upon addition.
 
-![Active Ledger](../figures/07_leave_one_out.png)
+![Active Ledger](../../../../skew-field/p/round-v0.6/files/figures/07_leave_one_out.png)
 
 ---
 
@@ -278,7 +278,7 @@ and has:
 
 Its exposed area is higher than the formal attack of this round, so there is currently no evidence of approximate closure.
 
-![Residual Candidate](../figures/08_residual_challenger.png)
+![Residual Candidate](../../../../skew-field/p/round-v0.6/files/figures/08_residual_challenger.png)
 
 ---
 

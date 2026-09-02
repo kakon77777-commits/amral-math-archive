@@ -58,9 +58,9 @@ Therefore, this round does not compare the total individual areas, but rather co
 3. Contact-saturated smooth spiral with a local radius of curvature reaching \(\rho\);
 4. Finite-width curvature stratum obtained via finite-budget max-min search.
 
-![Four Centerlines](../figures/01_centerline_families.png)
+![Four Centerlines](../../../../skew-field/p/round-v0.1/files/figures/01_centerline_families.png)
 
-![Curvature Profiles](../figures/02_curvature_profiles.png)
+![Curvature Profiles](../../../../skew-field/p/round-v0.1/files/figures/02_curvature_profiles.png)
 
 | Curve Family | Max Curvature | Min Local Radius of Curvature | Endpoint Radius | Individual Convexified Thickened Area |
 |---|---:|---:|---:|---:|
@@ -160,9 +160,9 @@ Relative increment:
 }.
 \]
 
-![Common Container Area](../figures/04_common_container_area.png)
+![Common Container Area](../../../../skew-field/p/round-v0.1/files/figures/04_common_container_area.png)
 
-![Optimized Common Container](../figures/08_optimized_common_container.png)
+![Optimized Common Container](../../../../skew-field/p/round-v0.1/files/figures/08_optimized_common_container.png)
 
 ---
 
@@ -177,9 +177,9 @@ For each family, a common container is first built using the other three familie
 | Contact-saturated smooth spiral | 0.000973210 | 0.000274087 | 1.4583% |
 | Finite-width curvature stratum | 0.046058168 | 0.011344824 | 55.5556% |
 
-![Leave-one-out Tension](../figures/05_leave_one_out_tension.png)
+![Leave-one-out Tension](../../../../skew-field/p/round-v0.1/files/figures/05_leave_one_out_tension.png)
 
-![Leave-one-out Area Increment](../figures/06_leave_one_out_area_increment.png)
+![Leave-one-out Area Increment](../../../../skew-field/p/round-v0.1/files/figures/06_leave_one_out_area_increment.png)
 
 ---
 
@@ -204,7 +204,7 @@ In the audit of \(1440\) directions for the four-family common container:
 \end{aligned}
 \]
 
-![Active Support Shares](../figures/07_active_support_shares.png)
+![Active Support Shares](../../../../skew-field/p/round-v0.1/files/figures/07_active_support_shares.png)
 
 This indicates that the common container is primarily supported by two complementary geometries:
 
@@ -320,7 +320,7 @@ does not imply conservation of universal accommodation cost.}
 }
 \]
 
-![Equiareal Heteromorphic Comparison](../figures/03_individual_area_comparison.png)
+![Equiareal Heteromorphic Comparison](../../../../skew-field/p/round-v0.1/files/figures/03_individual_area_comparison.png)
 
 ---
 

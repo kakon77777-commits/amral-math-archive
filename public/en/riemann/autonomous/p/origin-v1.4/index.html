@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Starting Point v1.4 · Kernel Sensitivity-Regularity Duality · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH AI Research Starting Point v1.4: Generalizing the 7th-order soft activation of v1.3 to the entire B-spline kernel family, proving that the prime boundary activation order r=m+n+1 simultaneously controls local amplitude, boundary regularity, Fourier decay, and tail bound cost. The response of the linear kernel to prime-3 is over 10^16 times greater than that of the cubic kernel. There is no single optimal kernel.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_AI_研究起點_v1.4.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.4/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/origin-v1.4/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#origin-v1.4">Research Starting Point</a>
+    <span>/</span>
+    <span>v1.4 · Kernel Sensitivity Regularity Duality</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Research Starting Point</span>
+      <span class="tag">v1.4</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">KERNEL_SENSITIVITY_ORDER_CLOSED</span>
+    </div>
+    <h1>Riemann Hypothesis AI Research Starting Point v1.4: Kernel Sensitivity–Regularity Duality</h1>
+    <p class="h1-sub">The integration package includes the complete content of <a href="../w11-v0.1/">W-11</a>. It generalizes the discovery of the single cubic kernel in v1.3 to the entire centered cardinal B-spline kernel family: the prime boundary activation order <code>r=m+n+1</code> simultaneously controls the local amplitude O(ε^r), boundary regularity C^(r-1), Fourier decay, and tail bound cost — there is no single optimal kernel. The response of the linear kernel (m=1) to prime-3 is approximately <code>1.65×10¹⁶</code> times greater than that of the cubic kernel (m=3).</p>
+    <div class="claim-box">
+      KERNEL_SENSITIVITY_ORDER_CLOSED
+      <span class="note">— The phased status self-reported by the documents within the package, reproduced here as is. "What this version accomplishes is the engineering of the kernel selection GAP: rewriting 'smoother is better' into a computable, comparable, and relayable Pareto problem."</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">The relationship with other packages, using the words from its own documents as much as possible, not my interpretation. The complete W-11 content incorporated into this package is identical to its independent page and is not rendered again here.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Version</span><a href="../origin-v1.3/">Research Starting Point v1.3 · Prime Boundary 7th-Order Soft Activation</a></div>
+      <div class="conn-card"><span class="k">Next Version</span><a href="../origin-v1.5/">Research Starting Point v1.5 · Mixed-Order Cross-Cancellation</a></div>
+      <div class="conn-card"><span class="k">Merged into</span><a href="../w11-v0.1/">W-11</a></div>
+      <div class="conn-card"><span class="k">Research Starting Point Series</span>14 / 23</div>
+    </div>
+    <blockquote class="cite">"Smoother ⟹ easier to certificate, but harder to see new prime layers. Sharper ⟹ more sensitive, but tail bounds and condition control are more expensive. There is no single degree that is simultaneously optimal." — Excerpt from Section 2 "The True Trade-off of Kernel Design" in the main document of this package.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">v1.4 Core Content</h2>
+    <p class="doc-meta">Milestones of this version (r=m+n+1 general formula), the true trade-off in kernel design, the 16 orders of magnitude difference, next-generation mixed-order dictionary design, and boundary declarations.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The complete <code>RH_W_11_工程包_v0.1/</code> folder merged into this package is identical to the <a href="../w11-v0.1/">W-11 page</a>; only the filenames are listed here for verification.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.4_核靈敏度正則性對偶_完整包.zip" download>Download Complete Package (59.2 KB)</a>
+    <p class="zip-note">sha256 67cf922734fb016bec41475eb61f7d114761c98784ef0df130db47fb0b884188</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = `<div class="filegroup"><ul class="filelist">
+      ${idx.files.filter((f) => f.path !== "RH_AI_Research Starting Point_v1.4.md").map((f) => `<li>${amralEsc(f.path)}<span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+    </ul></div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+loadDoc("doc-main-body", "RH_AI_研究起點_v1.4.md");
+loadFiles();
+</script>
+</body>
+</html>

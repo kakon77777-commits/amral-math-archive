@@ -1,0 +1,127 @@
+{
+  "schema": "RH-CLAIM-LEDGER-v0.1",
+  "claims": [
+    {
+      "claim_id": "B01-C01",
+      "nodes": [
+        "RH-W-01",
+        "RH-W-02"
+      ],
+      "statement": "Within the specified compactly supported smooth class, the range of $D(D+1)$ is exactly the double vanishing moment kernel $\\mathcal C_{00}$.",
+      "status": "PROVED_IN_DOCUMENTED_DERIVATION",
+      "scope": "FUNCTION_SPACE_CORE",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C02",
+      "nodes": [
+        "RH-W-02"
+      ],
+      "statement": "On the double vanishing moment correlation kernel, the Bombieri/Clay arithmetic normalization aligns with the Weil covariance normalization.",
+      "status": "PROVED_IN_DOCUMENTED_DERIVATION",
+      "scope": "NORMALIZATION",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C03",
+      "nodes": [
+        "RH-W-03"
+      ],
+      "statement": "If RH is false, the full Weil test framework possesses a negative witness with finite logarithmic support.",
+      "status": "LITERATURE_GROUNDED_STRUCTURAL_RESULT",
+      "scope": "FULL_WEIL_CORE_NOT_C00_ONLY",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C04",
+      "nodes": [
+        "RH-W-04"
+      ],
+      "statement": "Under the specified dense finite dictionary and continuous quadratic form assumptions, a true finite negative direction can eventually be detected by a finite subspace and a rational witness.",
+      "status": "PROTOCOL_AND_CONDITIONAL_ARGUMENT",
+      "scope": "FINITE_CERTIFICATE_PROTOCOL",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C05",
+      "nodes": [
+        "RH-W-05",
+        "RH-W-07",
+        "RH-W-08",
+        "RH-W-09"
+      ],
+      "statement": "Real Weil interval matrices on multiple specified finite B-spline subspaces are rigorously proved to be positive definite.",
+      "status": "EXACT_NUMERICAL_CERTIFICATES",
+      "scope": "ONLY_LISTED_FINITE_SUBSPACES",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C06",
+      "nodes": [
+        "RH-W-10",
+        "RH-W-11"
+      ],
+      "statement": "The prime-boundary activation order of the B-spline correlation is $m+n+1$, forming a duality with regularity and tail bound orders.",
+      "status": "EXACT_STRUCTURAL_IDENTITY",
+      "scope": "CENTERED_CARDINAL_B_SPLINE_DICTIONARY",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C07",
+      "nodes": [
+        "RH-W-12",
+        "RH-W-13"
+      ],
+      "statement": "The specified 10D mixed-regularity dictionary exhibits a rigorous near-zero positive spectral band $10^{-8}<\\lambda_{min}<5\\times10^{-8}$.",
+      "status": "EXACT_NUMERICAL_CERTIFICATE",
+      "scope": "FIXED_10D_DICTIONARY",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C08",
+      "nodes": [
+        "RH-W-14",
+        "RH-W-15",
+        "RH-W-16"
+      ],
+      "statement": "The aforementioned near-zero positive spectrum can be consistently proved within specified 2D and 3D rational parameter regions.",
+      "status": "EXACT_PARAMETER_REGION_CERTIFICATES",
+      "scope": "SMALL_CERTIFIED_PARAMETER_BOXES",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C09",
+      "nodes": [
+        "RH-W-17"
+      ],
+      "statement": "Certificates can cross specified spline polynomial-piece event surfaces, forming a hole-free closed-interval chamber coverage.",
+      "status": "EXACT_CHAMBER_COVER_CERTIFICATE",
+      "scope": "LOCAL_EVENT_4D_EQUALS_LOG2",
+      "formalized": false,
+      "rh_claim": false
+    },
+    {
+      "claim_id": "B01-C10",
+      "nodes": [
+        "RH-W-18",
+        "RH-W-19",
+        "RH-W-20"
+      ],
+      "statement": "The executable certificates of Batch 01 can be replayed by the unified backend and can reject listed error categories; however, same-package collusion attacks require an external root of trust.",
+      "status": "BACKEND_AND_ADVERSARIAL_AUDIT",
+      "scope": "PACKAGED_ARTIFACTS_ONLY",
+      "formalized": false,
+      "rh_claim": false
+    }
+  ],
+  "global_claim": "FINITE_RESEARCH_ENGINEERING_ONLY",
+  "rh_claim": false
+}

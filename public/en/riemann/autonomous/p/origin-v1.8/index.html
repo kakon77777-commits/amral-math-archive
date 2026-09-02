@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Starting Point v1.8 · Interval-Taylor Parameter Tube Expansion · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH AI Research Starting Point v1.8: RH-W-15 uses strict four-corner matrices + bilinear convex combination + second-order Taylor remainder to expand the parameter tube radius from 4×10^-12 to 10^-7 (25,000 times in each direction). Retrospection revealed that the Archimedean first derivative bound in W-14 undercounted the tail terms outside the spline support; this has been corrected and reproven. The W-14 conclusion is retained, but the constants are replaced by the corrected version.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_AI_研究起點_v1.8.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.8/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.8/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.8/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.8/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.8/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.8/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/origin-v1.8/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#origin-v1.8">Research Starting Point</a>
+    <span>/</span>
+    <span>v1.8 · Interval-Taylor Parameter Tube Expansion</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Research Starting Point</span>
+      <span class="tag">v1.8</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">RH_CLAIM = False</span>
+    </div>
+    <h1>RH AI Research Starting Point v1.8: Interval–Taylor Parameter Tube</h1>
+    <p class="h1-sub">The integration package includes the complete contents of <a href="../w15-v0.1/">W-15</a>. It switches to "four-corner rigorous matrices + bilinear convex combination + second-order Taylor remainder", expanding the parameter tube radius from 4×10⁻¹² to 10⁻⁷ —— a 25,000-fold expansion in each direction, and a 6.25×10⁸-fold expansion in area. Retrospective correction: It was discovered that the Archimedean first derivative bound in W-14 undercounted the tail terms outside the spline support; this has been corrected and recertified.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The self-reported fields of the document in the package, reproduced exactly as is. "Finite-dimensional parameter tube does not imply RH." This version includes a retrospective correction to the conclusion of the previous round (W-14), not a covered-up error.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding the relationship with other packages, try to use the words from its own documents, not my interpretation. The content of W-15 fully merged into this package is identical to its independent page, so it is not rendered repeatedly here.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Version</span><a href="../origin-v1.7/">Research Starting Point v1.7 · Strict 2D Parameter Tube</a></div>
+      <div class="conn-card"><span class="k">Next Version</span><a href="../origin-v1.9/">Research Starting Point v1.9 · 3-Parameter Near-Zero Spectral Tube</a></div>
+      <div class="conn-card"><span class="k">Merged into</span><a href="../w15-v0.1/">W-15</a></div>
+      <div class="conn-card"><span class="k">Research Starting Point Series</span>18 / 23</div>
+    </div>
+    <blockquote class="cite">"The archimedean first derivative bound of RH-W-14 missed the -2f(0) normalization tail that still exists outside the spline support. The exact tail is ∫[R,∞] dx/(eˣ-e⁻ˣ) = artanh(e⁻ᴿ)... After re-executing the exact LDLᵀ, the original parameter tube conclusion of RH-W-14 still holds; the old derivation is replaced by the corrected version." — Excerpt from the "Important Retroactive Correction" section in the main document of this package.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">v1.8 Core Content</h2>
+    <p class="doc-meta">New in this version (parameter tube expanded 25,000 times), method upgrades, important retroactive corrections (Archimedean tail correction), W-15 second-order bounds, chambers, claim boundaries, and the next node (RH-W-16 Three-Parameter Box).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The complete <code>RH_W_15_Engineering_Package_v0.1/</code> folder merged into this package is identical to the <a href="../w15-v0.1/">W-15 page</a>; only the filenames are listed here for verification.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.8_IntervalTaylor參數管_完整包.zip" download>Download Complete Package (827.9 KB)</a>
+    <p class="zip-note">sha256 e211a6829be124a8cbbb4913a068bdbf3d10956219b24e8727f5bec7ae4f5beb</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = `<div class="filegroup"><ul class="filelist">
+      ${idx.files.filter((f) => f.path !== "RH_AI_Research Starting Point_v1.8.md").map((f) => `<li>${amralEsc(f.path)}<span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+    </ul></div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "RH_AI_研究起點_v1.8.md");
+loadFiles();
+</script>
+</body>
+</html>

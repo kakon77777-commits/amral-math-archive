@@ -123,11 +123,11 @@ Relative increase:
 2.2603%.
 \]
 
-![Area Sequence](../figures/01_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v0.8/files/figures/01_area_sequence.png)
 
-![Attack vs Net Increment](../figures/02_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v0.8/files/figures/02_attack_vs_net_increment.png)
 
-![Absorption and Novelty](../figures/03_absorption_novelty.png)
+![Absorption and Novelty](../../../../skew-field/p/round-v0.8/files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -168,9 +168,9 @@ of leave-one-out exposure; thus, it does not become immediately redundant upon i
 
 The Archimedean family only retains exposure at the level of numerical noise.
 
-![Final Container](../figures/06_final_container.png)
+![Final Container](../../../../skew-field/p/round-v0.8/files/figures/06_final_container.png)
 
-![Active Ledger](../figures/08_leave_one_out.png)
+![Active Ledger](../../../../skew-field/p/round-v0.8/files/figures/08_leave_one_out.png)
 
 ---
 
@@ -196,7 +196,7 @@ Optimal refined value for the B-spline holdout pool:
 
 Thus, both Fourier parents can still generate positive-exposure candidates, whereas this batch of smooth B-spline perturbations is nearly completely absorbed.
 
-![Dual Pool Audit](../figures/07_dual_pool_audit.png)
+![Dual Pool Audit](../../../../skew-field/p/round-v0.8/files/figures/07_dual_pool_audit.png)
 
 ---
 
@@ -257,9 +257,9 @@ Its spatial phenotype:
 
 It is a hybrid attack and has been saved as the initial seed for Round 9.
 
-![Clearance Deficits](../figures/05_clearance_deficits.png)
+![Clearance Deficits](../../../../skew-field/p/round-v0.8/files/figures/05_clearance_deficits.png)
 
-![Residual Challenger](../figures/09_residual_challenger.png)
+![Residual Challenger](../../../../skew-field/p/round-v0.8/files/figures/09_residual_challenger.png)
 
 ---
 

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-17 · Chamber-Aware Slicing and Event Thin Layers · AMRAL</title>
+<meta name="description" content="RH-W-17 Engineering Package: Chamber-aware slicing and event thin layers. Fixing a ten-dimensional mixed-order Weil dictionary, establishing the first parameter certificate across a spline knot event surface. RH_CLAIM=False.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-17_腔室感知切分與事件薄層_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w17-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w17-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w17-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w17-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w17-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w17-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w17-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w17-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-17</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">CERTIFIED_CHAMBER_AWARE_EVENT_SUBDIVISION</span>
+    </div>
+    <h1>RH-W-17: Chamber-Aware Slicing and Event Thin Layer</h1>
+    <p class="h1-sub">Fixing a 10-dimensional mixed-order Weil dictionary, it establishes the first parameter certificate crossing a spline knot event surface — the three closed intervals of the left chamber, the event thin layer, and the right chamber are all verified to have λ<sub>min</sub> &gt; 10⁻⁸.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The claim status self-reported by the verification script within the package, reproduced here as is. This package neither proves nor disproves the Riemann Hypothesis.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v2.0_腔室感知切分_完整包.zip">Research Starting Point v2.0 · Chamber-Aware Segmentation</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w16-v0.1/">RH-W-16: Three-Parameter Near-Zero Spectral Tube</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w18-v0.1/">RH-W-18: Unified Certificate Backend and Single Verification Entry</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>17 / 20</div>
+    </div>
+    <blockquote class="cite">"The parameter tubes from RH-W-14 to RH-W-16 all require the entire parameter box to be located within the same spline polynomial chamber; once a ±log p^k sample might cross a spline knot, the old pipeline rejects the entire box." — Excerpt from the opening of the 01 document in this package, explaining which limitation it addresses.</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">Result Ledger · Result Ledger</h2>
+    <p class="section-note">Sourced from <code>RH-W-17_subgaps_v0.1.csv</code> within the package — reproduced item by item as-is. The status and evidence files are recorded by the package itself, not judgments added by me after the fact.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Verification (purely rational, no high-precision library required):</div>
+      <pre><code>python verify_chamber_subdivision.py</code></pre>
+      <div>Select high-precision cross-check (mpmath):</div>
+      <pre><code>python crosscheck_w17_mpmath.py</code></pre>
+      <div>Regenerate the four endpoint matrices (more expensive, supports point-by-point JSON caching):</div>
+      <pre><code>python build_chamber_subdivision.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">01 · Chamber-Aware Slicing and Event Thin Layers</h2>
+    <p class="doc-meta">Main document — Methods, event equation, three-interval segmentation, and strict matrix certificate.</p>
+    <div class="doc" id="doc01"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-addendum">
+    <h2 class="doc-h2">02 · Excursus: Multi-Regularity Central Knot Events</h2>
+    <p class="doc-meta">The algebraic forms of the same event across different correlation kernels (degree 3/5/7), and why the activation graph is insufficient to define chamber identity.</p>
+    <div class="doc" id="doc02"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-progress">
+    <h2 class="doc-h2">03 · GAP Updates and Batch 01 Progress</h2>
+    <p class="doc-meta">What this package closed, what it partially closed, and what open problems it still leaves.</p>
+    <div class="doc" id="doc03"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="data">
+    <h2 class="doc-h2">Data</h2>
+    <p class="section-note">Two small data tables, directly from the CSVs in the package.</p>
+    <h3 style="font-size:0.85rem;font-weight:700;margin:0 0 8px;">event_surface_catalog.csv</h3>
+    <div class="datatable-wrap" id="csv-events"><p class="loading">Loading...</p></div>
+    <h3 style="font-size:0.85rem;font-weight:700;margin:22px 0 8px;">local_chamber_spectrum.csv</h3>
+    <div class="datatable-wrap" id="csv-spectrum"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">Large certificate JSONs (chamber_subdivision_certificate.json, four point_d_*.json) and compilation caches are not listed individually; they are all in the complete zip file.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_17_工程包_v0.1_完整包.zip" download>Download Complete Package (168.6 KB)</a>
+    <p class="zip-note">sha256 7035bbb7faaacee8d2b19b0301f0be101fd8a21307b7deb6031978cafcbfb802</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The format for the package-by-package detailed pages is first tested on this package. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+function csvTable(rows, { statusCol } = {}) {
+  const [head, ...body] = rows;
+  const th = head.map((h) => `<th>${amralEsc(h)}</th>`).join("");
+  const trs = body.map((r) => {
+    const tds = r.map((v, i) => {
+      if (statusCol === i) return `<td><span class="pill ${v}">${v}</span></td>`;
+      return `<td>${amralEsc(v)}</td>`;
+    }).join("");
+    return `<tr>${tds}</tr>`;
+  }).join("");
+  return `<table class="data"><thead><tr>${th}</tr></thead><tbody>${trs}</tbody></table>`;
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-17_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    // one row's description has an unquoted comma inside "[2,3,4]" — the
+    // source CSV isn't quote-escaped there, so reconstruct robustly: id and
+    // status are always the first two fields, evidence (a filename, never
+    // containing a comma) is always the last; everything between is the
+    // description, rejoined with the same commas that split it apart.
+    const normalized = body.map(([id, status, ...rest]) => {
+      const evidence = rest.pop();
+      return [id, status, rest.join(","), evidence];
+    });
+    const trs = normalized.map(([id, status, desc, evidence]) => `
+      <tr>
+        <td><span class="pill ${status}">${status}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(desc)}</span></td>
+        <td><a class="evidence-link" href="./files/${encodeURIComponent(evidence)}">${amralEsc(evidence)}</a></td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1] === "CLOSED").length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Items</th><th>Evidence</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Closed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadCSVTable(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = csvTable(amralParseCSV(await F(file)));
+    if (file.includes("local_chamber_spectrum")) {
+      el.insertAdjacentHTML("afterend",
+        '<p class="rigor-note">rigor = FLOATING_OBSERVATION_ONLY — This table is merely for exploratory observation and did not enter the certificate.</p>');
+    }
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01", "01_RH-W-17_腔室感知切分與事件薄層_v0.1.md");
+loadDoc("doc02", "02_RH-W-17_多正則性中央結事件_v0.1.md");
+loadDoc("doc03", "03_RH-W-17_GAP更新與Batch01進度_v0.1.md");
+loadLedger();
+loadCSVTable("csv-events", "event_surface_catalog.csv");
+loadCSVTable("csv-spectrum", "local_chamber_spectrum.csv");
+loadFiles();
+</script>
+</body>
+</html>

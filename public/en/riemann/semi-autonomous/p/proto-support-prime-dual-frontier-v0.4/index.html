@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support-Prime Dual Frontier · Semi-Autonomous Research · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH Semi-Autonomous Research Engineering Package: Support–Prime Dual Frontier v0.4. Four support radii R=10.25/12/14/16 are all blocked by dual witnesses, and it was discovered that a coarse axis grid produces false escapes — after densifying the grid, α reverted from 0.99 to 1.19. Prime enumeration at R=16 has approached 79 trillion terms.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH支撐質數對偶前沿_軸網格假逃逸與頻譜缺口轉向_v0.4_半AI自主研究稿.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/semi-autonomous/p/proto-support-prime-dual-frontier-v0.4/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Semi-Autonomous Research</a>
+    <span>/</span>
+    <a href="../../#proto-support-prime-dual-frontier-v0.4">Engineering Record</a>
+    <span>/</span>
+    <span>Support–Prime Dual Frontier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Engineering Record</span>
+      <span class="tag">v0.4</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">ALL_FOUR_RADII_BLOCKED</span>
+    </div>
+    <h1>Support–Prime Dual Frontier</h1>
+    <p class="h1-sub">Support–Prime Dual Frontier v0.4 — Expands the dual witness method to four support radii, all of which are blocked by safe lower bounds (2.62 → 1.09), while catching a methodological trap: coarse axis grids generate false escapes. The prime enumeration cost at R=16 has reached 79 trillion terms.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The files in the package self-report "not a proof of RH, not a disproof of RH, nor an interval certificate for the continuous analytic problem", reproduced here as-is. The safe lower bounds for all four radii are strictly greater than 1, and all 12 witnesses are floating-reconstructed and remain PSD.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">This package generalizes the dual witness method of the previous package to multiple support radii, quoting its decisions as-is.</p>
+    <blockquote class="cite">"Increasing R is no longer the primary direction. The next node co-designs axis notches, dictionary, and cover, and requires any α&lt;1 result to undergo a dense-axis audit." — Excerpted from this package's RESULTS.md § Decision.</blockquote>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Node · v0.3</span><a href="../proto-axis-target-dual-obstruction-v0.3/">Axis-Target Dual Obstruction</a></div>
+      <div class="conn-card"><span class="k">Next Node · v0.5</span><a href="../proto-axis-notch-cover-codesign-v0.5/">Axis Notch and Cover Co-design</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Technical Notes</h2>
+    <p class="doc-meta">Main Document — Uniform frontier scanning, joint dual optimization of 288 sub-rectangles, coarse-axis grid false escape diagnostics, actual prime enumeration, and spectral gap steering decisions.</p>
+    <div class="doc" id="doc-tech"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="results">
+    <h2 class="doc-h2">Result Data</h2>
+    <p class="doc-meta">Safe lower bound table for four radii, coarse grid false escape comparison, uniform frontier summary, and prime costs, from <code>RESULTS.md</code> within the package.</p>
+    <div class="doc" id="doc-results"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="trust">
+    <h2 class="doc-h2">Trust Boundaries</h2>
+    <p class="doc-meta">From <code>TRUST_BOUNDARY.md</code> within the package.</p>
+    <div class="doc" id="doc-trust"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The large-scale spectral scan data (<code>uniform_frontier.json</code> 186 KB) and prime histograms (<code>prime_histograms.npz</code>) are not listed individually; they are all in the full zip file.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/semi-autonomous/packages/RH_Support_Prime_Dual_Frontier_v0.4.zip" download>Download Complete Package (176.7 KB)</a>
+    <p class="zip-note">sha256 dc8240726dd87779e367c40b13d12060ba7cfeda6741dfafdedc790859366363</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Semi-autonomous track package-by-package detail page, following the format of the <a href="../proto-axis-target-dual-obstruction-v0.3/">previous package</a>. <a href="../../">Back to Semi-Autonomous Research</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Handoff": [], "Structured Metadata": [], "Data": [], "Program": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (f.path === "NEXT_NODE_AXIS_NOTCH_CODESIGN.md") groups["Handoff"].push(f);
+      else if (f.path.startsWith("metadata/")) groups["Structured Metadata"].push(f);
+      else if (ext === "md") groups["Document"].push(f);
+      else if (f.path.startsWith("data/") || f.path.startsWith("outputs/")) groups["Data"].push(f);
+      else if (ext === "py" || ext === "txt") groups["Program"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-tech", "RH支撐質數對偶前沿_軸網格假逃逸與頻譜缺口轉向_v0.4_半AI自主研究稿.md");
+loadDoc("doc-results", "RESULTS.md");
+loadDoc("doc-trust", "TRUST_BOUNDARY.md");
+loadFiles();
+</script>
+</body>
+</html>

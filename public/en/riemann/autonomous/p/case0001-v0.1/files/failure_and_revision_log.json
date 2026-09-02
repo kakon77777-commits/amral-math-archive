@@ -1,0 +1,78 @@
+{
+  "schema": "RH-FAILURE-REVISION-LOG-v0.1",
+  "events": [
+    {
+      "event_id": "F01",
+      "node": "RH-W-02",
+      "category": "INVALID_COMPLETION_SPACE",
+      "finding": "Bare $L^2$ does not guarantee continuity for point values, prime samples, and explicit formula functionals, and cannot serve as an unconditional completion space.",
+      "disposition": "REJECTED_ROUTE",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F02",
+      "node": "RH-W-10",
+      "category": "FALSE_CAUSAL_ATTRIBUTION",
+      "finding": "The prime-3 7th-order soft start amount is too small to explain the existing near-zero modes.",
+      "disposition": "NEGATIVE_RESULT_RETAINED",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F03",
+      "node": "RH-W-13",
+      "category": "GAUGE_PARAMETER",
+      "finding": "The global channel scaling $\\alpha$ is a congruence gauge, not a true generalized spectral direction.",
+      "disposition": "REMOVED_FROM_TRUE_PARAMETER_SPACE",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F04",
+      "node": "RH-W-13",
+      "category": "PARAMETER_IDENTITY_MISMATCH",
+      "finding": "M using quantized parameters while G used unquantized parameters caused a false negative of approximately $-3.32\\times10^{-7}$; it became positive after consistent reconstruction.",
+      "disposition": "RED_ALERT_FIXED",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F05",
+      "node": "RH-W-14",
+      "category": "OMITTED_ARCHIMEDEAN_EXTERIOR_TAIL",
+      "finding": "The first-order derivative bound missed the out-of-support $-2f(0)$ tail.",
+      "disposition": "SUPERSEDED_AND_RECERTIFIED_BY_W15",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F06",
+      "node": "RH-W-16",
+      "category": "PACKAGING_DEPENDENCY",
+      "finding": "The W-15 public package previously missed including shared modules, preventing independent replay after extraction.",
+      "disposition": "SELF_CONTAINED_PACKAGING_RESTORED",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F07",
+      "node": "RH-W-18",
+      "category": "LEGACY_MISSING_ARTIFACT",
+      "finding": "W-06 is missing the original 2×2 interval JSON.",
+      "disposition": "LEGACY_INCOMPLETE_NOT_GREENWASHED",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F08",
+      "node": "RH-W-19",
+      "category": "FLOAT_FALSE_NEGATIVE",
+      "finding": "The 14th-order Hilbert matrix is exactly positive definite, but the double eigensolver returns a negative minimum eigenvalue.",
+      "disposition": "FLOAT_SIGN_NOT_ACCEPTED_AS_CERTIFICATE",
+      "rh_claim": false
+    },
+    {
+      "event_id": "F09",
+      "node": "RH-W-19",
+      "category": "SELF_AUTHENTICATION_LIMIT",
+      "finding": "If an attacker simultaneously controls the certificate, verifier, manifest, and hash, internal consistency checks can be colluded against.",
+      "disposition": "EXTERNAL_TRUST_ROOT_REQUIRED",
+      "rh_claim": false
+    }
+  ],
+  "rh_claim": false
+}

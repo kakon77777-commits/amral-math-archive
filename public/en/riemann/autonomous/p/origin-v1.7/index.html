@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Starting Point v1.7 · Strict Two-Dimensional Parameter Tube · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH AI Research Starting Point v1.7: RH-W-14 expands the 10-dimensional near-zero single-point certificate of v1.6 into the first continuous 2D parameter tube, proving 10^-8&lt;λmin&lt;5×10^-8 for the entire (d,σ) rectangle. It was discovered that the current tube width is primarily limited by the conservatism of the certificate (requiring a reserved matrix perturbation of 2.3e-8), rather than by the observed spectral instability (actual drift is only 2e-16).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_AI_研究起點_v1.7.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.7/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.7/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.7/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.7/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/origin-v1.7/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/origin-v1.7/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/origin-v1.7/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#origin-v1.7">Research Starting Point</a>
+    <span>/</span>
+    <span>v1.7 · Strict Two-Dimensional Parameter Tube</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Research Starting Point</span>
+      <span class="tag">v1.7</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">RH_CLAIM = False</span>
+    </div>
+    <h1>RH AI Research Starting Point v1.7: Strict Two-Dimensional Parameter Tube</h1>
+    <p class="h1-sub">The integration package includes the complete contents of <a href="../w14-v0.1/">W-14</a>. It expands the 10-dimensional near-zero single-point certificate of v1.6 into the first continuous 2D parameter tube: fixing h, it proves <code>10⁻⁸&lt;λmin(M(d,σ),G(d,σ))&lt;5×10⁻⁸</code> for the entire (d,σ) rectangle (radius 4×10⁻¹²). Conservativeness finding: the tube width is primarily limited by the conservativeness of the certificate, not by observed spectral instability.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— Self-reported fields from the files in the package, reproduced here as-is. "This version only proves a continuous near-zero positive spectral band on a fixed 10-dimensional mixed B-spline subspace. It does not prove RH, nor does it provide a counterexample to RH."</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents as much as possible, not my interpretation. The content of W-14 fully merged into this package is identical to its independent page and is not rendered again here.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Version</span><a href="../origin-v1.6/">Research Starting Point v1.6 · Cross-Regularity Near-Zero Spectral Band</a></div>
+      <div class="conn-card"><span class="k">Next Version</span><a href="../origin-v1.8/">Research Starting Point v1.8 · IntervalTaylor Parameter Tube Expansion</a></div>
+      <div class="conn-card"><span class="k">Merged</span><a href="../w14-v0.1/">W-14</a></div>
+      <div class="conn-card"><span class="k">Research Starting Point Series</span>17 / 23</div>
+    </div>
+    <blockquote class="cite">"High-precision samples show that the actual drift of the lowest spectrum within the tube is only about 2×10⁻¹⁶, but the global exact envelope must reserve a matrix perturbation of about 2.3×10⁻⁸. Therefore, the current tube width is primarily limited by the conservatism of the certificate, not by the observed spectral instability." — Excerpt from the "Conservatism Discovery" section in the main document of this package.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">v1.7 Core Content</h2>
+    <p class="doc-meta">New in this version (2D parameter tube certificate), main methodology (seven steps), chamber stability, conservativeness findings, certificate status, declaration boundaries, and next node (RH-W-15 Interval-Taylor Expansion).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The complete <code>RH_W_14_工程包_v0.1/</code> folder merged into this package is identical to the <a href="../w14-v0.1/">W-14 page</a>; only the filenames are listed here for verification.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.7_嚴格二維參數管_完整包.zip" download>Download Full Package (562.2 KB)</a>
+    <p class="zip-note">sha256 80cfa1cc1ee2145546f9832ae00e27837dd460361988e2be65cecb338f6b2237</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = `<div class="filegroup"><ul class="filelist">
+      ${idx.files.filter((f) => f.path !== "RH_AI_Research Starting Point_v1.7.md").map((f) => `<li>${amralEsc(f.path)}<span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+    </ul></div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "RH_AI_研究起點_v1.7.md");
+loadFiles();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "hero_title": "AI Autonomous Mathematics Research Case Study 0001: Riemann Hypothesis Weil Engineering Relay",
+  "hero_subtitle": "Twenty rounds do not constitute an \"AI proof,\" but rather a replayable, falsifiable research chain that preserves failures and corrections.",
+  "status_badge": "BATCH 01 COMPLETE — RH NOT PROVED OR DISPROVED",
+  "sections": [
+    {
+      "id": "what",
+      "title": "What this case study did",
+      "body": "Starting from the test function kernel, it progressively built real Weil interval matrices, prime-power chambers, mixed-regularity near-zero spectra, parameter tubes, event-surface slicing, a unified certificate backend, and adversarial auditing."
+    },
+    {
+      "id": "why",
+      "title": "Why this is an AI autonomous research case study",
+      "body": "The AI did not just generate text; it selected research nodes, generated code and certificates, discovered false negatives and missing terms, corrected previous rounds, retained failures, and formed the next batch of structured handoffs for continuation."
+    },
+    {
+      "id": "boundary",
+      "title": "What it did not do",
+      "body": "It did not prove or disprove RH; it did not pass off finite-dimensional positivity as global positivity; it did not treat floating-point negative values as counterexamples; it did not pass off internal hashes as external authenticity."
+    }
+  ],
+  "recommended_views": [
+    "20-round timeline",
+    "typed research graph",
+    "certificate explorer",
+    "failure and revision museum",
+    "Batch 02 handoff"
+  ],
+  "rh_claim": false
+}

@@ -109,11 +109,11 @@ Relative to the single tubular area:
 7.8381%.
 \]
 
-![Curve Comparison](../figures/01_curve_comparison.png)
+![Curve Comparison](../../../../skew-field/p/round-v0.5/files/figures/01_curve_comparison.png)
 
-![Curvature Profiles](../figures/02_curvature_profiles.png)
+![Curvature Profiles](../../../../skew-field/p/round-v0.5/files/figures/02_curvature_profiles.png)
 
-![Attack Configuration](../figures/03_attack_against_round4.png)
+![Attack Configuration](../../../../skew-field/p/round-v0.5/files/figures/03_attack_against_round4.png)
 
 ---
 
@@ -197,9 +197,9 @@ Relative to Round 4:
 1.4721%.
 \]
 
-![Area Response](../figures/04_attack_response_area.png)
+![Area Response](../../../../skew-field/p/round-v0.5/files/figures/04_attack_response_area.png)
 
-![Pressure Decomposition](../figures/07_recovery_decomposition.png)
+![Pressure Decomposition](../../../../skew-field/p/round-v0.5/files/figures/07_recovery_decomposition.png)
 
 ---
 
@@ -229,7 +229,7 @@ A_{\mathrm{sc}}
 
 The container is valid and connected.
 
-![Final Container](../figures/05_final_container.png)
+![Final Container](../../../../skew-field/p/round-v0.5/files/figures/05_final_container.png)
 
 ---
 
@@ -244,7 +244,7 @@ Using a leave-one-out exposed area of \(10^{-3}\) as the activity threshold, the
 
 See the machine-readable ledger and charts for the detailed exposure of each family.
 
-![Activity Ledger](../figures/06_leave_one_out.png)
+![Activity Ledger](../../../../skew-field/p/round-v0.5/files/figures/06_leave_one_out.png)
 
 This indicates that the newly added curve in Round 5 does not merely replace the old skeleton, but becomes the fourth major source of non-convex activity.
 
@@ -281,7 +281,7 @@ Therefore:
 
 This curve has been saved as the attack seed for Round 6.
 
-![Holdout Candidate](../figures/08_holdout_challenger.png)
+![Holdout Candidate](../../../../skew-field/p/round-v0.5/files/figures/08_holdout_challenger.png)
 
 ---
 

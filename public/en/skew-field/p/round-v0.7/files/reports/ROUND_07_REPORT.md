@@ -147,11 +147,11 @@ Absorption rate:
 18.3098%.
 \]
 
-![Area Sequence](../figures/01_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v0.7/files/figures/01_area_sequence.png)
 
-![Attack vs Net Increment](../figures/02_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v0.7/files/figures/02_attack_vs_net_increment.png)
 
-![Absorption and Novelty](../figures/03_absorption_novelty.png)
+![Absorption and Novelty](../../../../skew-field/p/round-v0.7/files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -194,11 +194,11 @@ Therefore:
 }
 \]
 
-![Clearance Deficit Profiles](../figures/05_clearance_deficit_profiles.png)
+![Clearance Deficit Profiles](../../../../skew-field/p/round-v0.7/files/figures/05_clearance_deficit_profiles.png)
 
-![Spatial Dispersion](../figures/06_spatial_dispersion.png)
+![Spatial Dispersion](../../../../skew-field/p/round-v0.7/files/figures/06_spatial_dispersion.png)
 
-![Effective Spectral Modes](../figures/09_effective_spectral_modes.png)
+![Effective Spectral Modes](../../../../skew-field/p/round-v0.7/files/figures/09_effective_spectral_modes.png)
 
 ---
 
@@ -222,7 +222,7 @@ The Round 7 attack still retains:
 
 of leave-one-out exposure; thus, it does not become immediately redundant upon inclusion.
 
-![Final Container](../figures/07_final_container.png)
+![Final Container](../../../../skew-field/p/round-v0.7/files/figures/07_final_container.png)
 
 ---
 
@@ -279,7 +279,7 @@ The effective deficit box count is only:
 
 It is dominated by a deep and concentrated deficit, which differs from the dispersed multi-lobe attack of Round 7.
 
-![Residual Challenger](../figures/08_residual_challenger.png)
+![Residual Challenger](../../../../skew-field/p/round-v0.7/files/figures/08_residual_challenger.png)
 
 ---
 

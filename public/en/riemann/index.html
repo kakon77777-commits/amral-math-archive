@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="AMRAL Case One: Riemann Hypothesis. Two separately tracked research lines — AI Autonomous Research (Batch 01 / Case 0001) and Semi-Autonomous Research (led by Neo).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link active" href="./">Riemann Hypothesis</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../skew-field/">Skew Field</a>
+  <a class="link" href="../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../riemann/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · Case One</p>
+    <h1>Riemann Hypothesis</h1>
+    <p class="subtitle">Riemann Hypothesis · H08</p>
+    <p class="lede">
+      The same problem, two separately recorded research tracks — who leads the research direction
+      differs, and the data is never merged. For methodology (RIITG / RAB / KCPE / AMRAL) see the
+      <a href="../methodology/">Methodology page</a>.
+    </p>
+  </header>
+
+  <nav class="case-grid" aria-label="Research tracks" id="tracks">
+    <a class="case-card" href="./autonomous/">
+      <span class="k">Track One · Batch 01 · Case 0001</span>
+      <h3>AI Autonomous Research</h3>
+      <p id="autonomous-summary">Loading…</p>
+    </a>
+    <a class="case-card" href="./semi-autonomous/">
+      <span class="k">Track Two · Neo-Led</span>
+      <h3>Semi-Autonomous Research</h3>
+      <p id="semi-autonomous-summary">Loading…</p>
+    </a>
+  </nav>
+
+  <p class="notice">
+    Track One is a twenty-round engineering relay run autonomously by AI — the proof did not close,
+    but the process data survives intact. Track Two is directed by Neo himself; the results likewise
+    fell short of expectations, and the raw process data is archived as-is, fed back into the
+    AI-autonomous-research line. Neither track claims to prove or disprove the Riemann Hypothesis.
+  </p>
+
+  <footer class="sitefoot">
+    <span>Each track is independently verified; neither overrides the other</span>
+  </footer>
+</div>
+
+<script>
+async function summarize(track, elId, emptyNote) {
+  const el = document.getElementById(elId);
+  try {
+    const res = await fetch(`./${track}/manifest.json`);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const m = await res.json();
+    if (!m.counts.total) {
+      el.textContent = emptyNote;
+      return;
+    }
+    const mb = (m.total_size / (1024 * 1024)).toFixed(1);
+    el.textContent = `${m.counts.total} raw packages · ${mb} MB, preserved round by round.`;
+  } catch (e) {
+    el.textContent = "Failed to load listing.";
+  }
+}
+summarize("autonomous", "autonomous-summary", "No packages published yet.");
+summarize("semi-autonomous", "semi-autonomous-summary", "Content in preparation — no packages published yet.");
+</script>
+</body>
+</html>

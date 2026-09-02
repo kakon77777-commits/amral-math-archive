@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-04 · Finite-Dimensional Completeness and Rational Negative Certificates · AMRAL</title>
+<meta name="description" content="RH-W-04 Engineering Package: Constructs a cutoff–Fourier finite-dimensional dictionary and proves that the Rayleigh–Ritz limit converges to the true spectral bottom, reducing the strict negative certificate to "rational vector + rational interval matrix + purely rational verifier". Demonstrates the verifier correctly accepting exact negative certificates and rejecting floating-point candidates.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-04_有限維完備性與負證書_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w04-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w04-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w04-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w04-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w04-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w04-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w04-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w04-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-04</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">SPECIFICATION_COMPLETE / ENTRY_ENCLOSURES_OPEN</span>
+    </div>
+    <h1>RH-W-04: Finite-Dimensional Completeness and Rational Negative Certificate</h1>
+    <p class="h1-sub">Constructs an explicit nested cutoff–Fourier finite-dimensional dictionary, proving that its Rayleigh–Ritz minimum must converge to the true spectral bottom. It also reduces the rigorous negative certificate to "a rational vector + a set of rational interval matrices + a small verifier using only <code>fractions.Fraction</code>". The demonstration verifier correctly accepts exact negative certificates and correctly rejects floating-point candidates that appear to be negative.</p>
+    <div class="claim-box">
+      SPECIFICATION_COMPLETE / ENTRY_ENCLOSURES_OPEN
+      <span class="note">— The positioning stated by the document in the package: "Not an RH proof; establishes the finite-dimensional reachability of the Weil quadratic form and machine-verifiable negative certificates," reproduced exactly as is. The rigorous interval envelope of the genuine zeta Weil matrix is not yet complete.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v0.7_有限維負證書_完整包.zip">Research Starting Point v0.7 · Finite-Dimensional Negative Certificate</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w03-v0.1/">RH-W-03: Compact Support Separation, Negative Witness Existence, and Dual-Core Architecture</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w05-v0.1/">RH-W-05: First Genuine Weil Matrix Rational Interval</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>4 / 20</div>
+    </div>
+    <blockquote class="cite">"This round rewrites the problem from: 'Finite-dimensional scanning might forever miss the true negative direction,' to: 'The specified cutoff–Fourier dictionary is complete under the form norm; if a negative direction exists, finite dimensions will eventually reach it. The only remaining problem is how to strictly bound the matrix elements.'" — Excerpt from Section 12, "Conclusion," of Document 01 in this package.</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP Ledger</h2>
+    <p class="section-note">Sourced from <code>RH-W-04_subgaps_v0.1.csv</code> within the package; the status and next steps are recorded by the package itself, not judgments added by me after the fact.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Pure rational negative certificate verifier using only <code>fractions.Fraction</code>:</div>
+      <pre><code>python verify_negative_certificate.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Finite-Dimensional Completeness and Rational Negative Certificates</h2>
+    <p class="doc-meta">Main Document — Fixed-support Weil form, cutoff–Fourier complete dictionary, Rayleigh–Ritz reachability theorem, rational witness simplification, component interval negative certificates, firewall from floating-point candidates to rational witnesses, and the minimum credible boundary for a true RH certificate.</p>
+    <div class="doc" id="doc01-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · Real Weil Matrix Envelope Work Breakdown</h2>
+    <p class="doc-meta">Next round work breakdown — Six sub-work packages: endpoint/prime/Archimedean/singular/Hermitian/hash, separation of search and verification layers, and accept/reject rules.</p>
+    <div class="doc" id="doc02-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">Verification Output</h2>
+    <p class="doc-meta">From <code>VALIDATION.txt</code> in the package — Exact demonstration certificates (<code>CERTIFIED_NEGATIVE</code>, exact fractional computation) and floating-point candidates that should be rejected (<code>REJECTED_NOT_RIGOROUS</code>), reproduced line by line.</p>
+    <pre class="validation-block" id="validation-out"><code>Loading...</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_04_工程包_v0.1_完整包.zip" download>Download Complete Package (18.1 KB)</a>
+    <p class="zip-note">sha256 30de96d27c7a25e6e7fa637c614ac2bdb3903624498f119413817c4d15f3ed4a</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">Load Failed:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-04_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, parent, status, severity, statement, next]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(statement)}</span></td>
+        <td>Next Steps:${amralEsc(next)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[2].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Items</th><th>Next Steps</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Closed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-04_有限維完備性與負證書_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-04_矩陣包絡工作分解_v0.1.md");
+loadPre("validation-out", "VALIDATION.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-10 · Prime Boundary Local Mode and Seventh-Order Soft Start · AMRAL</title>
+<meta name="description" content="RH-W-10 Engineering Package: Precisely characterizes the soft-start law of prime-3 at the log3 support boundary —— a seventh-order soft switch that is C6 but not C7, overturning the intuition that "the matrix jumps sharply as soon as a prime enters." Both 15-dimensional chambers before and after the boundary are proven with pure rationals to have a positive margin of 10^-9. RH_CLAIM=False.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-10_素數邊界局部模態_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w10-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w10-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w10-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w10-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w10-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w10-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w10-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w10-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-10</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">LOCAL_ACTIVATION_LAW_CLOSED</span>
+    </div>
+    <h1>RH-W-10: Prime Boundary Local Modes and Seventh-Order Soft Start</h1>
+    <p class="h1-sub">Precisely derived the soft-start law of prime-3 at the <code>log3=d+4h</code> support boundary — new matrix elements soft-start with <code>(μ₊)⁷</code>, with regularity exactly C⁶ but not C⁷. This overturns the intuition that "the matrix jumps sharply as soon as a prime enters," and proves that the direct magnitude upon entry (about 10⁻²⁸) is far smaller than the current near-zero spectral bottom of 10⁻⁹. Therefore, the searcher approaching the boundary is a genuine geometric phenomenon, not caused by this entry event.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The claim status output by the verifier within the package itself, reproduced exactly as is. Both complete fifteen-dimensional chambers before and after the boundary (θ₋, θ₊) are proven by pure rationals to have a positive margin &gt;10⁻⁹; local scanning did not observe an avoided crossing, but this is a numerical diagnostic, not a full-parameter interval theorem.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents as much as possible, not my interpretation. The attribution listed at the beginning of the main document of this package is worth reproducing exactly as is: "Original research concept: Neo.K; Mathematical engineering, derivation, and implementation: Aletheia (GPT-5.6 Thinking)" — this is the first appearance of a named division of labor in this W-series of documents, different from the previous nine packages. Quoting it exactly does not imply my endorsement or denial of its authenticity.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.3_素數邊界七階軟啟動_完整包.zip">Research Starting Point v1.3 · Prime Boundary 7th-Order Soft Activation</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w09-v0.1/">RH-W-09: Adaptive Chamber Continuation</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w11-v0.1/">RH-W-11: Kernel Sensitivity and Regularity Duality</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>10 / 20</div>
+    </div>
+    <blockquote class="cite">"One might initially intuit that as soon as a prime power enters, the matrix will immediately exhibit sharp spectral changes. This round proves that this intuition does not hold for the current B-spline dictionary... Geometric support crossing the threshold ⇏ low-order non-smooth spectral jumps. The smoothness of the threshold is determined by the vanishing order of the test function at the support boundary." — Excerpt from Section 7 of Document 01 in this package.</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP Ledger</h2>
+    <p class="section-note">From <code>RH-W-10_subgaps_v0.1.csv</code> in the package; the status and dependencies are all recorded by the package itself, not my retrospective judgments.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Local exploration → prime-3 soft-start certificate → purely rational verification before and after the boundary:</div>
+      <pre><code>python local_boundary_exploration.py
+python build_prime3_activation_certificate.py
+python verify_prime3_activation.py
+python verify_theta_minus.py
+python build_theta_plus_certificate.py
+python verify_theta_plus.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Prime Boundary Local Mode and Seventh-Order Soft Start</h2>
+    <p class="doc-meta">Main Document — Local boundary parameter μ, prime-3 exact soft-start law and regularity proof, action signs on arbitrary finite-dimensional directions, direct change magnitude of the current lowest mode, three states before, during, and after the boundary (θ₋/θ₀/θ₊), and whether an avoided crossing exists.</p>
+    <div class="doc" id="doc01-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · Certificates and Local Scan Audit</h2>
+    <p class="doc-meta">Three mutually isolated evidence paths (symbolic resolution / rigorous interval / floating-point exploration), local prime-3 interval after the boundary, why the full matrix still needs reconstruction, and software trust boundaries.</p>
+    <div class="doc" id="doc02-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">Verification Output</h2>
+    <p class="doc-meta">From <code>ALL_VERIFY.txt</code> within the package (merged output of three segments: prime-3 soft-start certificate + θ₋ + θ₊), reproduced line by line.</p>
+    <pre class="validation-block" id="validation-out"><code>Loading...</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The complete 15-dimensional interval certificates before and after the boundary (<code>theta_minus_15x15_interval.json</code>, <code>theta_plus_15x15_interval.json</code>) exceed the size threshold for individual listing and are all included in the full zip.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_10_工程包_v0.1_完整包.zip" download>Download Full Package (168.2 KB)</a>
+    <p class="zip-note">sha256 4d3eef6a73e1d43d40f787d8c3a1ac87a26f78c9d0d6a142554b4b34268822ec</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED" || status.startsWith("CERTIFIED")) return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">Load Failed:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-10_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, title, status, dependency, next]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(title)}</span></td>
+        <td>Dependencies:${amralEsc(dependency)}<br><span style="color:var(--ink-dim)">Next Steps:${amralEsc(next)}</span></td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[2].startsWith("CLOSED") || r[2].startsWith("CERTIFIED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Sub-GAP</th><th>Dependencies / Next Steps</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Closed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-10_素數邊界局部模態_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-10_證書與局部掃描審計_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

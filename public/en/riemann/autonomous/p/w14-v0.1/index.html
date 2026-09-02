@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-14 · Strict 2D Parameter Tube · AMRAL</title>
+<meta name="description" content="RH-W-14 Engineering Package: Expands the 10-dimensional near-zero single-point certificate of W-13 into the first continuous 2D parameter tube, using the B-spline global Lipschitz bound to prove that 10^-8<λ<5×10^-8 is strictly satisfied throughout the entire (d,σ) rectangle. RH_CLAIM=False.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-14_嚴格二維參數管_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w14-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w14-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w14-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w14-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w14-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w14-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w14-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w14-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-14</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-23</span>
+      <span class="status">CERTIFIED_2D_NEAR_ZERO_PARAMETER_TUBE</span>
+    </div>
+    <h1>RH-W-14: Strict Two-Dimensional Parameter Tube</h1>
+    <p class="h1-sub">Expanded the near-zero single-point certificate of the W-13 10-dimensional mixed-order dictionary into the first continuous 2D parameter tube — using the B-spline global first-order Lipschitz bound to simultaneously control the variations of the Weil matrix and the Gram metric, providing a purely rational proof of <code>10⁻⁸&lt;λ_min&lt;5×10⁻⁸</code> for the entire rectangle <code>|d−893/5000|≤4×10⁻¹²,|σ|≤4×10⁻¹²</code>.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The claim status output by the verifier within the package itself, reproduced exactly as is. Finite-dimensional continuous near-zero spectral band ⇏ RH; the tube width of 10⁻¹² is a conservative scale guaranteed by the global Lipschitz bound, which does not mean the true low spectral band can only be this narrow (the subsequent W-15 expanded the radius by 25,000 times).</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.7_嚴格二維參數管_完整包.zip">Research Starting Point v1.7 · Strict 2D Parameter Tube</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w13-v0.1/">RH-W-13: Cross-Regularity Continuation and Canonical Parameters</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w15-v0.1/">RH-W-15: Interval–Taylor Parameter Tube Expansion</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>14 / 20</div>
+    </div>
+    <blockquote class="cite">"This means that the near-zero value of RH-W-13 is not an isolated single point, nor is it a numerical coincidence valid only at a single rational parameter; at least within a two-dimensional rectangle of strictly non-zero area, it forms a continuous near-zero positive spectral band." — Excerpt from Section 9 of Document 01 in this package.</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP Ledger</h2>
+    <p class="section-note">From <code>RH-W-14_subgaps_v0.1.csv</code> within the package; the status and descriptions are recorded by the package itself, not my retrospective judgments.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Parameter tube construction → Cross-regularity verification → Parameter tube purely rational exact verifier → Independent cross-check:</div>
+      <pre><code>python build_parameter_tube.py
+python verify_cross_regularity.py
+python verify_parameter_tube.py
+python crosscheck_parameter_tube.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Strict Two-Dimensional Parameter Tube</h2>
+    <p class="doc-meta">Main Document — Why α is not counted as a parameter dimension, B-spline global derivative bounds, central Lipschitz bounds for Weil matrix elements (L₃≤175, L₅≤215, L₇≤253), upper and lower bound certificates for the entire parameter tube, and the prime-power chamber remaining invariant within the tube.</p>
+    <div class="doc" id="doc01-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · Lipschitz Certificates and Conservativeness Audit</h2>
+    <p class="doc-meta">The certificate is not corner interpolation, why M and G must vary together, the huge gap between the strict bound and actual floating-point drift (2.3×10⁻⁸ vs. 2×10⁻¹⁶), and why floating-point stationarity cannot be directly treated as a large-tube certificate.</p>
+    <div class="doc" id="doc02-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · Continuous Near-Zero Spectral Band and GAP Update</h2>
+    <p class="doc-meta">Closed/unclosed sub-nodes, significance to the overall GAP map (fixed test kernel → finite matrix → prime-power chamber → automated search → mixed regularity → near-zero single point → rigorous continuous parameter tube).</p>
+    <div class="doc" id="doc03-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">Verification Output</h2>
+    <p class="doc-meta">From <code>ALL_VERIFY.txt</code> in the package (merged output of the three stages: construction + center verification + parameter tube verification), reproduced line by line.</p>
+    <pre class="validation-block" id="validation-out"><code>Loading...</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_14_工程包_v0.1_完整包.zip" download>Download Complete Package (219.2 KB)</a>
+    <p class="zip-note">sha256 1c0dc36620ce44cd75cdc13764b8f86e266777e7188a2795e667d434efc2040d</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">Load Failed:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-14_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, description]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}</td>
+        <td>${amralEsc(description)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Sub-GAP</th><th>Description</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Closed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-14_嚴格二維參數管_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-14_Lipschitz證書與保守性審計_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-14_連續近零譜帶與GAP更新_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadFiles();
+</script>
+</body>
+</html>

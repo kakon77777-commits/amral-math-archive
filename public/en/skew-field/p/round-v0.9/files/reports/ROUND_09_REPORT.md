@@ -125,11 +125,11 @@ Increase relative to Round 8:
 1.1793\%.
 \]
 
-![Area Sequence](../figures/01_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v0.9/files/figures/01_area_sequence.png)
 
-![Attack vs Net Increment](../figures/02_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v0.9/files/figures/02_attack_vs_net_increment.png)
 
-![Absorption and Novelty](../figures/03_absorption_novelty.png)
+![Absorption and Novelty](../../../../skew-field/p/round-v0.9/files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -183,7 +183,7 @@ This establishes:
 }
 \]
 
-![Transient Forcing](../figures/10_transient_forcing.png)
+![Transient Forcing](../../../../skew-field/p/round-v0.9/files/figures/10_transient_forcing.png)
 
 ---
 
@@ -201,9 +201,9 @@ The Round 9 formal attack did not make this list.
 
 Thus, the final static skeleton and the attack history must be preserved separately.
 
-![Final Container](../figures/06_final_container.png)
+![Final Container](../../../../skew-field/p/round-v0.9/files/figures/06_final_container.png)
 
-![Activity Ledger](../figures/08_leave_one_out.png)
+![Activity Ledger](../../../../skew-field/p/round-v0.9/files/figures/08_leave_one_out.png)
 
 ---
 
@@ -268,7 +268,7 @@ Thus:
 
 This indicates that residual exposure does not exist solely within the Fourier homologous curvature family.
 
-![Pool Audit](../figures/07_pool_audit.png)
+![Pool Audit](../../../../skew-field/p/round-v0.9/files/figures/07_pool_audit.png)
 
 ---
 
@@ -315,7 +315,7 @@ Effective gap box count:
 
 It has been saved as the initial attack for Round 10.
 
-![Residual Challengers](../figures/09_residual_challengers.png)
+![Residual Challengers](../../../../skew-field/p/round-v0.9/files/figures/09_residual_challengers.png)
 
 ---
 

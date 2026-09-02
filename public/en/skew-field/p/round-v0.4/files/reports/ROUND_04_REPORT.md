@@ -82,7 +82,7 @@ From the 8-mode to the 10-mode, it still increases by:
 
 Therefore, the Fourier dimension has not yet shown clear convergence.
 
-![Mode Tension](../figures/01_tension_vs_modes.png)
+![Mode Tension](../../../../skew-field/p/round-v0.4/files/figures/01_tension_vs_modes.png)
 
 ---
 
@@ -137,7 +137,7 @@ Tubular area replay error:
 -9.320805660629e-08.
 \]
 
-![Curvature Profiles](../figures/02_fourier_curvature_profiles.png)
+![Curvature Profiles](../../../../skew-field/p/round-v0.4/files/figures/02_fourier_curvature_profiles.png)
 
 ---
 
@@ -155,9 +155,9 @@ Therefore:
 \text{Container tension sensitivity}.
 \]
 
-![Coefficient Spectrum](../figures/03_mode_amplitudes.png)
+![Coefficient Spectrum](../../../../skew-field/p/round-v0.4/files/figures/03_mode_amplitudes.png)
 
-![Gradient Spectrum](../figures/04_mode_sensitivity.png)
+![Gradient Spectrum](../../../../skew-field/p/round-v0.4/files/figures/04_mode_sensitivity.png)
 
 ---
 
@@ -207,7 +207,7 @@ Relative \(L^2\) error:
 1.194240584988e-03.
 \]
 
-![Adjoint Verification](../figures/08_adjoint_verification.png)
+![Adjoint Verification](../../../../skew-field/p/round-v0.4/files/figures/08_adjoint_verification.png)
 
 ---
 
@@ -231,7 +231,7 @@ A_{\mathrm{convex}}
 0.305379358034.
 \]
 
-![Convex Container](../figures/05_convex_pair_container.png)
+![Convex Container](../../../../skew-field/p/round-v0.4/files/figures/05_convex_pair_container.png)
 
 ---
 
@@ -261,9 +261,9 @@ Reduction relative to the convex container:
 37.3094%.
 \]
 
-![Non-Convex Container](../figures/06_nonconvex_all_families.png)
+![Non-Convex Container](../../../../skew-field/p/round-v0.4/files/figures/06_nonconvex_all_families.png)
 
-![Area Comparison](../figures/07_container_area_comparison.png)
+![Area Comparison](../../../../skew-field/p/round-v0.4/files/figures/07_container_area_comparison.png)
 
 ---
 

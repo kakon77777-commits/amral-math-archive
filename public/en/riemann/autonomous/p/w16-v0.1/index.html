@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH-W-16 · Three-Parameter Near-Zero Spectral Tube · AMRAL</title>
+<meta name="description" content="RH-W-16 Engineering Package: Incorporates the kernel scale h itself into the parameter domain, establishing the first 3D rational box (h,d,σ). The real Weil interval matrices at the eight corner points, combined with trilinear convex interpolation and second-order Taylor remainders, exactly prove 10^-8<λ<5×10^-8 for the entire box. Batch 01 progress 16/20. RH_CLAIM=False.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/01_RH-W-16_三參數近零譜管_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w16-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w16-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w16-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/w16-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/w16-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/w16-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/w16-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#w16-v0.1">W Engineering Package</a>
+    <span>/</span>
+    <span>W-16</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">W Engineering Package</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">EXACT_THREE_PARAMETER_TUBE_CERTIFICATE_OK</span>
+    </div>
+    <h1>RH-W-16: Three-Parameter Near-Zero Spectral Tube</h1>
+    <p class="h1-sub">Incorporating the kernel scale <code>h</code> itself into the parameter domain, establishing the first 3D rational box <code>|h−1797/10000|≤10⁻⁸, |d−893/5000|≤10⁻⁷, |σ|≤10⁻⁷</code> — the eight corner points each assemble a complete true Weil interval matrix, with trilinear convex interpolation plus second-order Taylor remainder, providing an exact proof that <code>10⁻⁸&lt;λ_min&lt;5×10⁻⁸</code> is strictly satisfied throughout the entire non-degenerate 3D volume.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The claim status output by the verifier within the package itself, reproduced as is. 3D finite parameter tube ⇏ RH; no true Weil negative witness was found.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Regarding its relationship with other packages, I try to use the words from its own documents, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Belongs to</span><a href="../../../../../riemann/autonomous/packages/RH_AI_研究起點_v1.9_三參數近零譜管_完整包.zip">Research Starting Point v1.9 · Three-Parameter Near-Zero Spectral Tube</a></div>
+      <div class="conn-card"><span class="k">Previous Package</span><a href="../w15-v0.1/">RH-W-15: Interval–Taylor Parameter Tube Expansion</a></div>
+      <div class="conn-card"><span class="k">Next Package</span><a href="../w17-v0.1/">RH-W-17: Chamber-Aware Slicing and Event Thin Layer</a></div>
+      <div class="conn-card"><span class="k">Batch 01</span>16 / 20</div>
+    </div>
+    <blockquote class="cite">"This round established the first 3D continuous near-zero positive spectral parameter box... It proves that the near-zero positive spectral structure exists not only at a single point or a fixed-scale plane, but extends to at least a non-degenerate 3D volume. However, it remains merely a finite-dimensional result on a fixed 10-dimensional dictionary: a 3D finite parameter tube ⇏ RH." — Excerpt from Section 10 of Document 01 in this package.</blockquote>
+  </section>
+
+  <section id="ledger">
+    <h2 class="doc-h2">GAP Ledger</h2>
+    <p class="section-note">From <code>RH-W-16_subgaps_v0.1.csv</code> in the package; the status and evidence are recorded by the package itself, not my retrospective judgment.</p>
+    <div id="ledger-table"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="corners">
+    <h2 class="doc-h2">Octagonal Non-Rigorous Spectral Observation</h2>
+    <p class="section-note">From <code>corner_spectrum_observation.csv</code> in the package — Midpoint generalized eigenvalues of the eight corner points, for exploratory observation only, not participating in the certificate.</p>
+    <div class="datatable-wrap" id="csv-corners"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="reproduce">
+    <h2 class="doc-h2">Reproduce</h2>
+    <div class="reproduce">
+      <div>Purely rational exact verifier (does not regenerate transcendental matrices, only uses stored intervals):</div>
+      <pre><code>python verify_three_parameter_tube.py</code></pre>
+      <div>Complete reconstruction of the eight-corner matrix (slower, requires regenerating eight sets of jump-resolved Archimedean matrices):</div>
+      <pre><code>python build_three_parameter_tube.py</code></pre>
+    </div>
+  </section>
+
+  <section id="doc-01">
+    <h2 class="doc-h2">01 · Three-Parameter Near-Zero Spectral Tube</h2>
+    <p class="doc-meta">Main document — why h is a genuinely new direction (simultaneously changing support width/sampling position/Gram/endpoints/prime-power/Archimedean tail), the trilinear corner architecture, the second derivative in the scale direction, and the exact upper and lower bound certificate.</p>
+    <div class="doc" id="doc01-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-02">
+    <h2 class="doc-h2">02 · Scale Curvature Certificate and Computational Architecture</h2>
+    <p class="doc-meta">The added computational burden in this round (the octagon requires eight sets of Archimedean data), reusable data layers, separation of certificates and exploration, and the next engineering problem (chamber-aware subdivision).</p>
+    <div class="doc" id="doc02-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-03">
+    <h2 class="doc-h2">03 · GAP Updates and Batch 01 Progress</h2>
+    <p class="doc-meta">Closed/kept open sub-nodes, Batch 01 progress 16/20, remaining nodes (W-17 Chamber-Aware Slicing, W-18 Certificate Backend Unification, W-19 Adversarial Reproducibility Audit, W-20 Batch 01 Integration).</p>
+    <div class="doc" id="doc03-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="validation">
+    <h2 class="doc-h2">Verification Output</h2>
+    <p class="doc-meta">From <code>ALL_VERIFY.txt</code> in the package, reproduced line by line.</p>
+    <pre class="validation-block" id="validation-out"><code>Loading...</code></pre>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The octagonal complete interval certificate (<code>three_parameter_tube_certificate.json</code>) is relatively large and is not listed individually; it is in the full zip file.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_W_16_工程包_v0.1_完整包.zip" download>Download Complete Package (299.6 KB)</a>
+    <p class="zip-note">sha256 479c91f6238865578e8743d2631d7d2397c1d8b39ab5a60f085a7790091dd68d</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+function pillClass(status) {
+  if (status.startsWith("CLOSED") || status === "REJECTED") return "CLOSED";
+  if (status.startsWith("PARTIAL") || status.startsWith("REFERENCE")) return "PARTIAL";
+  return "OPEN";
+}
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadPre(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    const text = await F(file);
+    el.innerHTML = "";
+    const code = document.createElement("code");
+    code.textContent = text;
+    el.appendChild(code);
+  } catch (e) {
+    el.innerHTML = `<code class="error">Load Failed:${e.message}</code>`;
+  }
+}
+
+async function loadLedger() {
+  const el = document.getElementById("ledger-table");
+  try {
+    const rows = amralParseCSV(await F("RH-W-16_subgaps_v0.1.csv"));
+    const [, ...body] = rows;
+    const trs = body.map(([id, status, summary, evidence]) => `
+      <tr>
+        <td><span class="pill ${pillClass(status)}">${amralEsc(status)}</span></td>
+        <td>${amralEsc(id)}<br><span style="color:var(--ink-dim)">${amralEsc(summary)}</span></td>
+        <td>${amralEsc(evidence)}</td>
+      </tr>`).join("");
+    const closed = body.filter((r) => r[1].startsWith("CLOSED")).length;
+    el.innerHTML = `
+      <table class="ledger">
+        <thead><tr><th>Status</th><th>Sub-GAP</th><th>Evidence</th></tr></thead>
+        <tbody>${trs}</tbody>
+      </table>
+      <div class="batch-progress">
+        Within this Package ${closed}/${body.length} Closed
+        <div class="bar"><i style="width:${(closed / body.length) * 100}%"></i></div>
+      </div>`;
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadCornersTable() {
+  const el = document.getElementById("csv-corners");
+  try {
+    const rows = amralParseCSV(await F("corner_spectrum_observation.csv"));
+    const [head, ...body] = rows;
+    const th = head.map((h) => `<th>${amralEsc(h)}</th>`).join("");
+    const trs = body.map((r) => `<tr>${r.map((v) => `<td>${amralEsc(v)}</td>`).join("")}</tr>`).join("");
+    el.innerHTML = `<table class="data"><thead><tr>${th}</tr></thead><tbody>${trs}</tbody></table>`;
+    el.insertAdjacentHTML("afterend",
+      '<p class="rigor-note">rigor = FLOATING_POINT_ONLY — This table is merely for exploratory observation and did not enter the certificate.</p>');
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Data": [], "Program": [], "Verification Record": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py") groups["Program"].push(f);
+      else groups["Verification Record"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc01-body", "01_RH-W-16_三參數近零譜管_v0.1.md");
+loadDoc("doc02-body", "02_RH-W-16_尺度曲率證書與計算架構_v0.1.md");
+loadDoc("doc03-body", "03_RH-W-16_GAP更新與Batch01進度_v0.1.md");
+loadPre("validation-out", "ALL_VERIFY.txt");
+loadLedger();
+loadCornersTable();
+loadFiles();
+</script>
+</body>
+</html>

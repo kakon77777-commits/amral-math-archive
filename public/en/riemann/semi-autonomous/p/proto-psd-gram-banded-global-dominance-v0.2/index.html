@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSD Gram Banded Global Dominance · Semi-Autonomous Research · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH Semi-Autonomous Research Engineering Package: PSD Gram Banded Global Domination v0.2. Replaces the diagonal ray cone with PSD Gram variables, reducing the sample budget by an average of 21%, but still falling 64 to 143 times short of the target, with the [18,23] axis band being the main source of cost. The next step pivots to the dual problem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/PSD_Gram分帶全域支配_RH交叉項增益與軸帶轉移障礙_v0.2_半AI自主研究稿.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/semi-autonomous/p/proto-psd-gram-banded-global-dominance-v0.2/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Semi-Autonomous Research</a>
+    <span>/</span>
+    <a href="../../#proto-psd-gram-banded-global-dominance-v0.2">Engineering Record</a>
+    <span>/</span>
+    <span>PSD Gram Banded Global Dominance</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Engineering Record</span>
+      <span class="tag">v0.2</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">STILL_64X_TO_143X_OVER_BUDGET</span>
+    </div>
+    <h1>PSD Gram Banded Global Dominance</h1>
+    <p class="h1-sub">PSD Gram Banded Global Dominance v0.2 — Replaces the diagonal ray cone of the previous package with full PSD Gram variables. The cross terms are indeed effective (sample budget reduced by 21.08% on average), but the improvement is far from sufficient to approach the target; the [18,23] axial band accounts for an average of 61.73% of the sample target.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The execution environment lacks a convex SDP solver; the package uses A=LL^T decomposition + multi-start SLSQP for constructive solving, claiming neither global SDP optimality nor interval certificates, reproduced as is. This is not an RH proof, nor is it a global zero-side certificate.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">This package executes the upgrade suggestions left by the previous package, quoted as-is; at the end, it precisely defines the dual problem specifications for the next package.</p>
+    <blockquote class="cite">"This improvement is far from sufficient to approach the global budget... Therefore, this round does not recommend aimlessly increasing the rank, number of rays, or grid density anymore, but should pivot to the dual problem: proving or disproving 'how much positive mass a unit negative direction in the target region must force to appear on [18,23]'." — Excerpt from the technical notes summary of this package.</blockquote>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Node · v0.1</span><a href="../proto-banded-multitest-cover-certificates-v0.1/">Banded Multi-Test Functions and Adaptive Cover Certificate Families</a></div>
+      <div class="conn-card"><span class="k">Next Node · v0.3</span><a href="../proto-axis-target-dual-obstruction-v0.3/">Axis–Target Dual Obstruction</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Technical Notes</h2>
+    <p class="doc-meta">Main Document — Three conclusions: cross terms have a real effect, the improvement is not caused by high-rank mixing, and the improvement is far from sufficient to approach the global budget; it also precisely defines the direction of the dual problem for the next step.</p>
+    <div class="doc" id="doc-tech"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="results">
+    <h2 class="doc-h2">Result Data</h2>
+    <p class="doc-meta">Statistics on the reduction magnitude of Gram compared to the diagonal baseline, and the failure scale table, from <code>RESULTS.md</code> in the package.</p>
+    <div class="doc" id="doc-results"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="handoff">
+    <h2 class="doc-h2">Next Node Handoff Specifications</h2>
+    <p class="doc-meta">From <code>NEXT_NODE_DUAL_SPEC.md</code> within the package — finite grid primal problem, exact cone duality, first experimental steps, verification route, and decision thresholds.</p>
+    <div class="doc" id="doc-handoff"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="trust">
+    <h2 class="doc-h2">Trust Boundaries</h2>
+    <p class="doc-meta">From <code>TRUST_BOUNDARY.md</code> within the package.</p>
+    <div class="doc" id="doc-trust"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">Large data files such as the diagonal/Gram diagnostic JSONs for each of the 18 cells (<code>outputs/patches/</code>, approx. 20 KB each), <code>rank_study.json</code> (346 KB), and <code>gram_results.json</code> (388 KB) are not listed individually; they are all included in the complete zip file.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/semi-autonomous/packages/RH_PSD_Gram_Banded_Global_Dominance_v0.2.zip" download>Download Complete Package (559.0 KB)</a>
+    <p class="zip-note">sha256 88c80a16ba08e1847e3e87e72ffa6747aa6ee2f8e3ca5b1c63bc437b7602c7c9</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Semi-autonomous track package-by-package detail page, following the format of the <a href="../proto-banded-multitest-cover-certificates-v0.1/">previous package</a>. <a href="../../">Back to Semi-Autonomous Research</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Handoff": [], "Structured Metadata": [], "Data": [], "Program": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (f.path === "NEXT_NODE_DUAL_SPEC.md") continue;
+      if (f.path.startsWith("metadata/")) groups["Structured Metadata"].push(f);
+      else if (ext === "md") groups["Document"].push(f);
+      else if (f.path.startsWith("data/") || f.path.startsWith("outputs/")) groups["Data"].push(f);
+      else if (ext === "py" || ext === "txt") groups["Program"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-tech", "PSD_Gram分帶全域支配_RH交叉項增益與軸帶轉移障礙_v0.2_半AI自主研究稿.md");
+loadDoc("doc-results", "RESULTS.md");
+loadDoc("doc-handoff", "NEXT_NODE_DUAL_SPEC.md");
+loadDoc("doc-trust", "TRUST_BOUNDARY.md");
+loadFiles();
+</script>
+</body>
+</html>

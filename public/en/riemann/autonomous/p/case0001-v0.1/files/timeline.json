@@ -1,0 +1,186 @@
+{
+  "schema": "RH-TIMELINE-v0.1",
+  "entries": [
+    {
+      "order": 1,
+      "node_id": "RH-W-01",
+      "title": "Fixation of the Weil test function space and generating family",
+      "status": "DOCUMENTED_DERIVATION",
+      "node_type": "ANALYTIC_FOUNDATION",
+      "summary": "Fixed the Bombieri/Clay multiplicative group formulation; generated a compactly supported kernel with double vanishing moments using $D(D+1)$, and established Mellin–Fourier and correlation closure interfaces.",
+      "rh_claim": false
+    },
+    {
+      "order": 2,
+      "node_id": "RH-W-02",
+      "title": "Kernel range, topology, and normalization closure",
+      "status": "DOCUMENTED_DERIVATION",
+      "node_type": "ANALYTIC_FOUNDATION",
+      "summary": "Proved $D(D+1)C_c^\\infty(0,\\infty)=\\mathcal C_{00}$, providing explicit inversion and LF continuity; aligned $Q_{B0}=W=\\langle\\cdot,\\cdot\\rangle_W$ on the double vanishing moment kernel.",
+      "rh_claim": false
+    },
+    {
+      "order": 3,
+      "node_id": "RH-W-03",
+      "title": "Compact support separation and dual-kernel architecture",
+      "status": "LITERATURE_GROUNDED_STRUCTURAL_RESULT",
+      "node_type": "STRUCTURAL_BRIDGE",
+      "summary": "Formalized the separation logic that under $\\neg RH$, the full Weil kernel possesses a negative witness with finite logarithmic support; distinguished between the full kernel and the endpoint-zero simplified kernel, establishing specifications for finite-support spectral scanning.",
+      "rh_claim": false
+    },
+    {
+      "order": 4,
+      "node_id": "RH-W-04",
+      "title": "Finite-dimensional completeness and rational negative certificate protocol",
+      "status": "PROTOCOL_ONLY",
+      "node_type": "PROTOCOL",
+      "summary": "Established a conditional completeness framework where negative directions will eventually become visible under a finite dictionary, along with a minimal verification format for rational negative quadratic form witnesses.",
+      "rh_claim": false
+    },
+    {
+      "order": 5,
+      "node_id": "RH-W-05",
+      "title": "The first real zeta 2D Weil interval matrix",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Constructed a 2×2 rational interval matrix using the full explicit formula; with support below $\\log2$, all prime terms resolve to zero, proving positive definiteness for the fixed 2D subspace.",
+      "rh_claim": false
+    },
+    {
+      "order": 6,
+      "node_id": "RH-W-06",
+      "title": "First prime activation and 5D stabilization",
+      "status": "LEGACY_INCOMPLETE",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Isolated $n=2$ in the $\\log2<R<\\log3$ chamber; demonstrated that a prime-free witness can be negative, but positivity is restored after adding $n=2$.",
+      "rh_claim": false
+    },
+    {
+      "order": 7,
+      "node_id": "RH-W-07",
+      "title": "Multi-prime-power chamber compiler",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Constructed a 9D Toeplitz matrix with activated indices $2,3,4,5,7$; explicitly computed prime powers separately.",
+      "rh_claim": false
+    },
+    {
+      "order": 8,
+      "node_id": "RH-W-08",
+      "title": "Automated chamber search and rigorous refinement",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Selected a 13D chamber after searching 122 candidates, proving $Q(c)>10^{-5}c^TGc$; improved the leading error term of the Archimedean tail from $O(K^{-2})$ to $O(K^{-3})$.",
+      "rh_claim": false
+    },
+    {
+      "order": 9,
+      "node_id": "RH-W-09",
+      "title": "Adaptive continuation and one-in-a-billion margin",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Constructed a 15D chamber and proved $Q(c)>10^{-9}c^TGc$; approached the $n=3$ boundary at lag-1.",
+      "rh_claim": false
+    },
+    {
+      "order": 10,
+      "node_id": "RH-W-10",
+      "title": "Prime boundary local modes and 7th-order soft start",
+      "status": "VERIFIED",
+      "node_type": "STRUCTURAL_IDENTITY_AND_MATRIX",
+      "summary": "Proved that the prime-3 activation amount for degree-7 correlation appears as $\\mu_+^7/7!$, hence the boundary is $C^6$ rather than $C^7$; positivity is maintained both before and after the boundary.",
+      "rh_claim": false
+    },
+    {
+      "order": 11,
+      "node_id": "RH-W-11",
+      "title": "Kernel sensitivity and regularity duality",
+      "status": "VERIFIED",
+      "node_type": "STRUCTURAL_IDENTITY",
+      "summary": "Derived the activation order $r=m+n+1$ from $\\beta_m*\\beta_n=\\beta_{m+n+1}$, simultaneously controlling boundary regularity, Fourier decay, and tail bound order, proposing a mixed-order dictionary.",
+      "rh_claim": false
+    },
+    {
+      "order": 12,
+      "node_id": "RH-W-12",
+      "title": "Mixed-order dictionary and cross-cancellation modes",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Constructed a 10D mixed dictionary with $m=1/3$, proving $1/2000<\\lambda_{min}<1/1000$; discovered cross-regularity cancellations where self-channels are positive and cross-channels are negative.",
+      "rh_claim": false
+    },
+    {
+      "order": 13,
+      "node_id": "RH-W-13",
+      "title": "Cross-regularity near-zero spectral band and consistent quantization auditing",
+      "status": "VERIFIED",
+      "node_type": "NUMERICAL_MATRIX",
+      "summary": "Identified the channel scaling $\\alpha$ as a generalized spectral gauge parameter; corrected false negatives caused by M/G parameter identity mismatches; proved $10^{-8}<\\lambda_{min}<5\\times10^{-8}$.",
+      "rh_claim": false
+    },
+    {
+      "order": 14,
+      "node_id": "RH-W-14",
+      "title": "The first rigorous 2D low-spectral parameter tube",
+      "status": "SUPERSEDED_RECERTIFIED",
+      "node_type": "PARAMETER_REGION",
+      "summary": "Fixed $h$ and proved the same near-zero positive spectral bounds for a minimal $(d,\\sigma)$ rational rectangle. The original first-order Archimedean bound missed the out-of-support tail, which was later corrected by W-15 and retroactively re-proved.",
+      "rh_claim": false
+    },
+    {
+      "order": 15,
+      "node_id": "RH-W-15",
+      "title": "Interval–Taylor parameter tube expansion and tail correction",
+      "status": "VERIFIED",
+      "node_type": "PARAMETER_REGION",
+      "summary": "Added the $\\operatorname{artanh}(e^{-R})$ out-of-support tail; expanded the 2D radius by 25,000 times using a four-corner convex combination plus a second-order remainder, still proving $10^{-8}<\\lambda_{min}<5\\times10^{-8}$.",
+      "rh_claim": false
+    },
+    {
+      "order": 16,
+      "node_id": "RH-W-16",
+      "title": "Three-parameter near-zero spectral tube",
+      "status": "VERIFIED",
+      "node_type": "PARAMETER_REGION",
+      "summary": "Incorporated the scale $h$, proving the same spectral bounds for a non-degenerate $(h,d,\\sigma)$ 3D box using an eight-corner convex combination and a second-order remainder.",
+      "rh_claim": false
+    },
+    {
+      "order": 17,
+      "node_id": "RH-W-17",
+      "title": "Chamber-aware slicing and event thin layers",
+      "status": "VERIFIED",
+      "node_type": "CHAMBER_COVER",
+      "summary": "Traversed the spline central knot at $4d=\\log2$, slicing the interval into a left chamber, an event thin layer, and a right chamber; the three closed intervals provided complete coverage and proved $\\lambda_{min}>10^{-8}$.",
+      "rh_claim": false
+    },
+    {
+      "order": 18,
+      "node_id": "RH-W-18",
+      "title": "Unified certificate backend and historical state model",
+      "status": "VERIFIED",
+      "node_type": "CERTIFICATE_BACKEND",
+      "summary": "Unified types such as NUMERICAL_MATRIX, PARAMETER_REGION, CHAMBER_COVER, STRUCTURAL_IDENTITY, and PROTOCOL_ONLY, providing a single CLI and layered states.",
+      "rh_claim": false
+    },
+    {
+      "order": 19,
+      "node_id": "RH-W-19",
+      "title": "Reproducibility and adversarial certificate auditing",
+      "status": "VERIFIED",
+      "node_type": "ADVERSARIAL_AUDIT",
+      "summary": "Created an erroneous certificate zoo; 16/16 expected errors were rejected, and a 14th-order Hilbert exact positive-definite / double false-negative example was used to illustrate that floating-point negative values cannot serve as negative certificates.",
+      "rh_claim": false
+    },
+    {
+      "order": 20,
+      "node_id": "RH-W-20",
+      "title": "Batch 01 integration and AI Autonomous Mathematics Research Platform Case 0001 release",
+      "status": "VERIFIED_RELEASE",
+      "node_type": "BATCH_RELEASE",
+      "summary": "Packaged the research graph, claims ledger, failures and corrections, certificate index, platform import data, and Batch 02 handoff for W-01 to W-20; replayed the W-19 backend and adversarial auditing.",
+      "rh_claim": false
+    }
+  ],
+  "rh_claim": false
+}

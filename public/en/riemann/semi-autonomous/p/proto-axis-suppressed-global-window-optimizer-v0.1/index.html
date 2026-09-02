@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axis Suppression and Full-Window Leakage-Aware Optimizer · Semi-Autonomous Research · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH Semi-Autonomous Research Engineering Package: Axis Suppression and Full-Window Leakage-Aware Optimizer v0.1. Proves that finite critical line cancellation compresses the arithmetic positive cone dimension, completely vanishing at q=15; full-window non-positivization fails in the existing basis. Does not constitute a proof of the Riemann Hypothesis.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/軸抑制與全窗洩漏感知最佳化器_v0.1_技術說明.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/semi-autonomous/p/proto-axis-suppressed-global-window-optimizer-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Semi-Autonomous Research</a>
+    <span>/</span>
+    <a href="../../#proto-axis-suppressed-global-window-optimizer-v0.1">Engineering Record</a>
+    <span>/</span>
+    <span>Axis Suppression and Full-Window Leakage-Aware Optimizer</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Engineering Record</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">CONTROL_WINDOW_NONPOSITIVITY_FAILED</span>
+    </div>
+    <h1>Axis Suppression and Full-Window Leakage-Aware Optimizer</h1>
+    <p class="h1-sub">Axis-Suppressed Global-Window Optimizer v0.1 — After adding the finite critical line cancellation condition, the arithmetic positive direction dimension rapidly collapsed from 12 to 0; the target rectangle negativity was preserved, but no feasible solution was found for the non-positivization of the full control window.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The <code>selected_candidate_summary.json</code> in the package self-reports <code>status="target-negative and arithmetic-positive, but finite control-window nonpositivity failed"</code>, reproduced here as-is. This is a finite-dimensional floating-point diagnostic prototype, not an interval certificate, and not a proof of RH.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">The summary of this package explicitly states from the beginning that it is responding to the questions left by the previous package, quoted exactly as is.</p>
+    <blockquote class="cite">"The previous round has already quantified: the negative margin of the existing local negative certificate is far smaller than the positive mass generated by the critical line zeros. Therefore, this round no longer solely maximizes the negativity of a single target rectangle, but establishes a joint optimization prototype that simultaneously features finite critical line sampling elimination, arithmetic quadratic lower bound, target rectangle negativity, and finite off-axis control window exchange limits." — Excerpt from the technical notes summary in this package.</blockquote>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Package · v0.1</span><a href="../proto-zero-side-leakage-budget-v0.1/">Zero-Side Leakage Budget</a></div>
+      <div class="conn-card"><span class="k">Integration Node · v1.0</span><a href="../proto-equivariant-arithmetic-obstruction-integration-v1.0/">Equivariant Arithmetic Obstruction Integration Overview</a></div>
+      <div class="conn-card"><span class="k">Corresponding Theory</span><a href="../../papers/p4-arithmetic-separation/">Sequence ③ · Equivariant Arithmetic Separation §12</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Technical Notes</h2>
+    <p class="doc-meta">Main Document — Identity theorem argument for why the control window cannot stick to the critical line, paired-bump basis modification, arithmetic positive direction collapse scanning, target rectangle and full-window exchange method, selection of the q=12 candidate, geometric interpretation, and next step recommendations.</p>
+    <div class="doc" id="doc-tech"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="results">
+    <h2 class="doc-h2">Result Data</h2>
+    <p class="doc-meta">Collapse table of arithmetic positive direction dimensions with respect to the elimination number q, from <code>RESULTS.md</code> within the package.</p>
+    <div class="doc" id="doc-results"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="trust">
+    <h2 class="doc-h2">Trust Boundaries</h2>
+    <p class="doc-meta">From <code>TRUST_BOUNDARY.md</code> within the package.</p>
+    <div class="doc" id="doc-trust"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="figures">
+    <h2 class="doc-h2">Figures</h2>
+    <p class="section-note">Three out of five images from <code>outputs/</code> in the package, reproduced exactly as is, without post-processing.</p>
+    <div class="figure-grid">
+      <figure>
+        <img src="./files/outputs/positive_dimension_tradeoff.png" alt="Arithmetic-positive dimension under axis constraints — The number of arithmetic-positive eigen-directions decreases linearly to zero as the number of eliminated critical line samples q increases." loading="lazy">
+        <figcaption>Arithmetic positive direction collapse: as q increases from 0 to 15, the positive characteristic directions drop from 12 to 0.</figcaption>
+      </figure>
+      <figure>
+        <img src="./files/outputs/target_axis_tradeoff.png" alt="Target negativity versus residual axis leakage — Logarithmic coordinate comparison between target negative margin (blue) and residual axis mass (orange); the gap between the two maintains several orders of magnitude under all q." loading="lazy">
+        <figcaption>Target negative margin (blue) vs. residual on-axis mass (orange): The gap is maintained by several orders of magnitude across all q.</figcaption>
+      </figure>
+      <figure>
+        <img src="./files/outputs/selected_test_function.png" alt="Selected q=12 paired-bump test function — Graph of the selected candidate test function psi(t), composed of 24 real even paired-bump bases." loading="lazy">
+        <figcaption>Test function ψ(t) for the selected q=12 candidate: composed of 24 real-even paired-bump bases.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The complete dense grid data for the control window/target rectangle (<code>selected_control_grid.csv</code> 593 KB, <code>selected_target_grid.csv</code> 731 KB) are not listed individually, but are all included in the complete zip.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/semi-autonomous/packages/RH_Axis_Suppressed_Global_Window_Optimizer_v0.1.zip" download>Download Full Package (766.3 KB)</a>
+    <p class="zip-note">sha256 496474dedba4d922f33ddf9614e9653f04487ca5ad3c93d186f60818908c4881</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Semi-autonomous track package-by-package detail page, following the format of the <a href="../proto-zero-side-leakage-budget-v0.1/">previous package</a>. <a href="../../">Back to Semi-Autonomous Research</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Charts": [], "Data": [], "Program": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "png" || ext === "jpg" || ext === "svg") groups["Charts"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py" || ext === "txt") groups["Program"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-tech", "軸抑制與全窗洩漏感知最佳化器_v0.1_技術說明.md");
+loadDoc("doc-results", "RESULTS.md");
+loadDoc("doc-trust", "TRUST_BOUNDARY.md");
+loadFiles();
+</script>
+</body>
+</html>

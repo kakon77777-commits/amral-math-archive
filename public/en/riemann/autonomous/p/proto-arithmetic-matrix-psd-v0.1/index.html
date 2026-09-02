@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arithmetic Matrix Positive Semi-Definite Prototype · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH Arithmetic Matrix/PSD Prototype v0.1: The second engineering prototype in the "Off-Axis Positivity Obstructions in the Explicit Formula" series. Establishes the arithmetic matrix M_arith=M∞+M_fin on a real even compactly supported basis, scanning the support radius R from 0.25 to 1.0, with the minimum eigenvalue of the total matrix remaining positive throughout—although finite places have obvious negative directions, they are compensated by the archimedean contribution. The final package of Batch 01, 48/48 fully completed.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/README.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/autonomous/p/proto-arithmetic-matrix-psd-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← AI Autonomous Research Archive</a>
+    <span>/</span>
+    <a href="../../#proto-arithmetic-matrix-psd-v0.1">Branch Prototype</a>
+    <span>/</span>
+    <span>Arithmetic Matrix Positive Semi-Definite Prototype</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Branch Prototype</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">BATCH 01 = 48 / 48</span>
+    </div>
+    <h1>Arithmetic Matrix and Positive Semi-Definite Certificate Prototype</h1>
+    <p class="h1-sub">Arithmetic Matrix / PSD Prototype v0.1 — Establishes M_arith(R) = M∞(R) + M_fin(R) on a real even compactly supported basis, calculating the minimum eigenvalue for each support radius R∈{0.25,...,1.00}. The finite position matrix itself has clear negative directions, but after adding the Archimedean part, the total matrix maintains a positive minimum eigenvalue throughout the currently scanned subspace.</p>
+    <div class="claim-box">
+      This is not an RH proof, nor is it a strict PSD certificate
+      <span class="note">— The phased status stated by the document in the package, reproduced exactly as is. "numerical_psd=true only indicates that no negative eigenvalues were found under the current discretization." This package is the last one in the entire Batch 01 (48 original engineering packages) to have a detailed page added.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">The relationship with other packages, using the words from its own documents as much as possible, not my interpretation. This is a cross-track connection: this package and the first side-branch prototype together form a complete executable closed loop for the semi-autonomous track's theoretical draft.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Theoretical Source (Semi-Autonomous Track)</span><a href="../../../semi-autonomous/papers/p5-explicit-formula/">Off-Axis Positivity Obstructions in the Explicit Formula</a></div>
+      <div class="conn-card"><span class="k">Previous Prototype</span><a href="../proto-regional-phase-shaping-v0.1/">Regional Phase Shaping Prototype</a></div>
+      <div class="conn-card"><span class="k">Side-Branch Prototype Series</span>2 / 2 · Full Series Completed</div>
+    </div>
+    <blockquote class="cite">"The first package establishes c^T M_orb(w) c &lt; 0 (w∈K). This package establishes a finite-dimensional numerical check for c^T M_arith(R) c ≥ 0. The next core engineering problem is to have both packages use the same set of bases, the same support scale, and the same coefficient vector to directly solve: sup_{w∈K} c^T M_orb(w) c &lt; 0 ∧ c^T M_arith(R) c ≥ 0." — Excerpt from Section 7 of the technical notes in this package, "Relationship with the Regional Phase Shaping Package", on how the two prototypes form a complete feasibility check for both the positive and negative sides.</blockquote>
+  </section>
+
+  <section id="doc-readme">
+    <h2 class="doc-h2">Overview and Usage · README</h2>
+    <p class="doc-meta">Implemented normalizations (archimedean principal computation, spectral cross-check), finite place activation conditions, constraints (G(i/2)=G(0)=0), execution methods, output descriptions, important limitations, and main references (Connes-Consani, Connes).</p>
+    <div class="doc" id="doc-readme-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-method">
+    <h2 class="doc-h2">Methodology and Audit Boundaries · METHOD</h2>
+    <p class="doc-meta">Logarithmic coordinate setup, correlation matrix field, compactly supported time-domain formula derivation for the Archimedean matrix, spectral cross-check, finite position matrix, constrained projection, distinction between structural vs. numerical parts, and v0.2 planning goals.</p>
+    <div class="doc" id="doc-method-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="doc-notes">
+    <h2 class="doc-h2">Technical Notes</h2>
+    <p class="doc-meta">Purpose and three engineering problems, support and prime activation thresholds, full matrix decomposition process, v0.1 actual scan result table (7 R values), grid sensitivity recheck, output field descriptions, relationship with the regional phase shaping package, and parts still uncompleted.</p>
+    <div class="doc" id="doc-notes-body"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/autonomous/packages/RH_Arithmetic_Matrix_PSD_v0.1.zip" download>Download Complete Package (141.7 KB)</a>
+    <p class="zip-note">sha256 7cec23a386c0496eaf1eeaabd5ebad96ba8dac241af245a6ff00ba75e72bdec7</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Per-package detail page format follows <a href="../w17-v0.1/">W-17</a>. <a href="../../">Back to AI Autonomous Research Archive</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Program": [], "Data": [], "Settings": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (["README.md", "METHOD.md", "Arithmetic Matrix and Positive Semi-Definite Certificate Prototype_v0.1_Technical Notes.md"].includes(f.path)) continue;
+      if (ext === "py") groups["Program"].push(f);
+      else if (f.path.startsWith("outputs/") || f.path.startsWith("examples/")) groups["Data"].push(f);
+      else if (ext === "txt") groups["Settings"].push(f);
+      else groups["Document"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-readme-body", "README.md");
+loadDoc("doc-method-body", "METHOD.md");
+loadDoc("doc-notes-body", "算術矩陣與半正定證書原型_v0.1_技術說明.md");
+loadFiles();
+</script>
+</body>
+</html>

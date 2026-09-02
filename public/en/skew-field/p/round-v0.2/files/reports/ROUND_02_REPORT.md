@@ -104,9 +104,9 @@ Local margin relative to \(\rho=0.04\):
 8.018970729117e-05.
 \]
 
-![Shape Comparison](../figures/01_old_vs_limit_shape.png)
+![Shape Comparison](../../../../skew-field/p/round-v0.2/files/figures/01_old_vs_limit_shape.png)
 
-![Curvature Profiles](../figures/02_curvature_profiles.png)
+![Curvature Profiles](../../../../skew-field/p/round-v0.2/files/figures/02_curvature_profiles.png)
 
 ---
 
@@ -160,7 +160,7 @@ Multiplier:
 1.841516.
 \]
 
-![Chirality Phase Landscape](../figures/03_chirality_phase_landscape.png)
+![Chirality Phase Landscape](../../../../skew-field/p/round-v0.2/files/figures/03_chirality_phase_landscape.png)
 
 ---
 
@@ -192,7 +192,7 @@ Exceeds the next phase local minimum in the mirrored direction by:
 0.000126740211.
 \]
 
-![Boundary Equalization](../figures/04_boundary_equalization.png)
+![Boundary Equalization](../../../../skew-field/p/round-v0.2/files/figures/04_boundary_equalization.png)
 
 ---
 
@@ -249,7 +249,7 @@ For pairs of sample points separated by an arc length of at least \(0.1\), no no
 
 This supports that the reach is controlled by the local radius of curvature, but it is still not an interval reach certificate.
 
-![Tubular Audit](../figures/08_tube_audit.png)
+![Tubular Audit](../../../../skew-field/p/round-v0.2/files/figures/08_tube_audit.png)
 
 ---
 
@@ -296,9 +296,9 @@ Support direction proportions:
 \end{aligned}
 \]
 
-![Dual-Skeleton Container](../figures/06_final_pair_container.png)
+![Dual-Skeleton Container](../../../../skew-field/p/round-v0.2/files/figures/06_final_pair_container.png)
 
-![Support Ownership](../figures/07_support_ownership.png)
+![Support Ownership](../../../../skew-field/p/round-v0.2/files/figures/07_support_ownership.png)
 
 ---
 
@@ -362,7 +362,7 @@ Ratio to the single full tubular area:
 3.171062.
 \]
 
-![Area Progression](../figures/05_container_area_progression.png)
+![Area Progression](../../../../skew-field/p/round-v0.2/files/figures/05_container_area_progression.png)
 
 ---
 

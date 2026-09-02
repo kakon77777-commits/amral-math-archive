@@ -82,11 +82,11 @@ The relative container area increased by only:
 
 This is the smallest net area increment from Rounds 5 to 11.
 
-![Area Sequence](../figures/01_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v1.1/files/figures/01_area_sequence.png)
 
-![Attack vs Net Increment](../figures/02_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v1.1/files/figures/02_attack_vs_net_increment.png)
 
-![Absorption and Novelty](../figures/03_absorption_novelty.png)
+![Absorption and Novelty](../../../../skew-field/p/round-v1.1/files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -122,9 +122,9 @@ Thus, it is a genuinely persistent skeleton; the small net increment is not beca
 
 The curves from Rounds 6 and 9 currently exert transient pressure; their final state activity may be zero, but they are still retained in the historical test set.
 
-![Final Container](../figures/04_final_container.png)
+![Final Container](../../../../skew-field/p/round-v1.1/files/figures/04_final_container.png)
 
-![Activity Ledger](../figures/05_leave_one_out.png)
+![Activity Ledger](../../../../skew-field/p/round-v1.1/files/figures/05_leave_one_out.png)
 
 ---
 
@@ -160,7 +160,7 @@ A uniform subdivision estimate requires approximately:
 
 cells, indicating that a naive perimeter Lipschitz branch-and-bound approach is infeasible.
 
-![Placement Bounds](../figures/06_placement_bracket.png)
+![Placement Bounds](../../../../skew-field/p/round-v1.1/files/figures/06_placement_bracket.png)
 
 ---
 
@@ -195,7 +195,7 @@ e_{11}^{\mathrm{res}}
 
 Therefore, Round 11 represents a local near-equilibrium of the container in response to the formal attack, rather than a closure of the function space.
 
-![Reserve Pool](../figures/07_pool_audit.png)
+![Reserve Pool](../../../../skew-field/p/round-v1.1/files/figures/07_pool_audit.png)
 
 ---
 
@@ -228,7 +228,7 @@ It has four exposed components, with the largest component accounting for:
 
 It has been saved as the formal attack seed for Round 12.
 
-![Round 12 Seed](../figures/08_round12_seed.png)
+![Round 12 Seed](../../../../skew-field/p/round-v1.1/files/figures/08_round12_seed.png)
 
 ---
 
@@ -250,7 +250,7 @@ are not identical.
 
 Container updates utilize the complete historical pressure set, whereas final state interpretations rely solely on the active set.
 
-![Historical Memory](../figures/09_historical_pressure_memory.png)
+![Historical Memory](../../../../skew-field/p/round-v1.1/files/figures/09_historical_pressure_memory.png)
 
 ---
 
@@ -278,7 +278,7 @@ Therefore:
 }
 \]
 
-![Increment Sequence](../figures/10_increment_sequence.png)
+![Increment Sequence](../../../../skew-field/p/round-v1.1/files/figures/10_increment_sequence.png)
 
 ---
 

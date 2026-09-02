@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validated Intersection Certificate · Semi-Autonomous Research · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="RH Semi-Autonomous Research Engineering Package: Strict Intersection Certificate v0.2. Upgraded the floating-point candidates of v0.1 into validated-numerics certificates—continuous rectangular negative upper bounds and arithmetic positive intervals, using the same explicit test function, with replayable verification. Does not constitute a proof of the Riemann Hypothesis.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/嚴格交集證書_v0.2_技術說明.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link active" href="../../../">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../riemann/semi-autonomous/p/proto-validated-intersection-certificate-v0.2/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Semi-Autonomous Research</a>
+    <span>/</span>
+    <a href="../../#proto-validated-intersection-certificate-v0.2">Engineering Record</a>
+    <span>/</span>
+    <span>Validated Intersection Certificate</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Engineering Record</span>
+      <span class="tag">v0.2</span>
+      <span class="tag">2026-07-24</span>
+      <span class="status">CERTIFICATE_PASSED</span>
+    </div>
+    <h1>Validated Intersection Certificate</h1>
+    <p class="h1-sub">Validated Separation–Positivity Intersection Certificate v0.2 — Reconstructs the floating-point candidates of v0.1 into explicit piecewise linear functions, establishing interval certificates for both the regional negative direction and arithmetic positivity separately; all 480 sub-rectangles are certified, with 0 pending.</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">— The <code>certificate_summary.txt</code> within the package self-reports <code>certificate_passed=True</code>, and the <code>scope_warning</code> field defined by <code>CERTIFICATE_SCHEMA.md</code> explicitly states the non-RH status, reproduced exactly as is. This is a replayable validated-numerics certificate, not a verified formal proof; it neither proves nor disproves the Riemann Hypothesis.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">The technical notes of this package self-report right at the beginning which version it succeeds and what loopholes it corrects, quoted as is.</p>
+    <blockquote class="cite">"v0.1 has found the same set of floating-point coefficients... but this still has two loopholes: 1. Negative values on a grid do not imply that the continuous rectangular region is negative everywhere; 2. Positive floating-point values cannot be directly treated as strict arithmetic lower bounds. v0.2 no longer uses black-box arrays, but reconstructs the candidate into an explicit piecewise linear function, and then establishes interval certificates for both signs separately." — Excerpt from §1 of the technical notes in this package.</blockquote>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Package · v0.1</span><a href="../proto-separation-positivity-intersection-v0.1/">Separation-Positivity Intersection Solver</a></div>
+      <div class="conn-card"><span class="k">Next Package · v0.1</span><a href="../proto-zero-side-leakage-budget-v0.1/">Zero-Side Leakage Budget</a></div>
+      <div class="conn-card"><span class="k">Corresponding Theory</span><a href="../../papers/p5-explicit-formula/">Sequence ④ · Off-Axis Positive Obstructions in Explicit Formulas §7</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Technical Notes</h2>
+    <p class="doc-meta">Main document — explicit test function, closed form of the Fourier transform, interval subdivision of the continuous rectangle negative certificate, interval bounds for finite position terms and Archimedean terms, and intersection conclusions.</p>
+    <div class="doc" id="doc-tech"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="results">
+    <h2 class="doc-h2">Result Data</h2>
+    <p class="doc-meta">Continuous region upper bounds, arithmetic intervals, and certified sub-rectangle statistics, from <code>RESULTS.md</code> in the package.</p>
+    <div class="doc" id="doc-results"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="trust">
+    <h2 class="doc-h2">Trust Boundaries</h2>
+    <p class="doc-meta">Which components are trusted, which trust dependencies were reduced compared to v0.1, and what is still lacking to reach the proof assistant level, from <code>TRUST_BOUNDARY.md</code> within the package.</p>
+    <div class="doc" id="doc-trust"><p class="loading">Loading...</p></div>
+  </section>
+
+  <section id="figures">
+    <h2 class="doc-h2">Figures</h2>
+    <p class="section-note">Three images from <code>outputs/</code> within the package, reproduced as is, without post-processing.</p>
+    <div class="figure-grid">
+      <figure>
+        <img src="./files/outputs/validated_test_function.png" alt="Validated piecewise-linear test function — Graph of the explicitly defined piecewise-linear test function psi(t)" loading="lazy">
+        <figcaption>Explicit test function ψ(t): a superposition of 601 node hat functions, not a black-box array.</figcaption>
+      </figure>
+      <figure>
+        <img src="./files/outputs/certified_region_cover.png" alt="Adaptive continuous-region certificate cover — Adaptive interval subdivision cover heatmap of the target rectangle" loading="lazy">
+        <figcaption>Adaptive continuous region covering: all 480 sub-rectangles certified, with a maximum subdivision depth of 3 layers.</figcaption>
+      </figure>
+      <figure>
+        <img src="./files/outputs/arithmetic_intervals.png" alt="Arithmetic certificate intervals — Interval error bar chart of finite position terms, Archimedean terms, and the sum, with the sum maintained on the right side of zero." loading="lazy">
+        <figcaption>Arithmetic certificate intervals: finite, Archimedean terms, and the sum; the sum interval remains on the right side of zero.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files</h2>
+    <p class="section-note">The raw node data (<code>corrected_nodes.csv</code>, <code>certified_region_cells.csv</code>) and the complete <code>certificate.json</code> are not listed individually; they are all in the full zip file.</p>
+    <div id="filelist-out"><p class="loading">Loading...</p></div>
+    <a class="zip-dl" href="../../../../../riemann/semi-autonomous/packages/RH_Validated_Intersection_Certificate_v0.2.zip" download>Download Complete Package (195.0 KB)</a>
+    <p class="zip-note">sha256 b935b9c1d69d7b4aa5219304920729a2f53cebb46022d429093d9d7285de4e8f</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>Semi-autonomous track package-by-package detail page, following the format of the <a href="../proto-separation-positivity-intersection-v0.1/">previous package</a>. <a href="../../">Back to Semi-Autonomous Research</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load Failed:${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Document": [], "Charts": [], "Data": [], "Program": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Document"].push(f);
+      else if (ext === "png" || ext === "jpg" || ext === "svg") groups["Charts"].push(f);
+      else if (ext === "csv" || ext === "json") groups["Data"].push(f);
+      else if (ext === "py" || ext === "txt") groups["Program"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="./files/${encodeURIComponent(f.path)}" download>${amralEsc(f.path)}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load:${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-tech", "嚴格交集證書_v0.2_技術說明.md");
+loadDoc("doc-results", "RESULTS.md");
+loadDoc("doc-trust", "TRUST_BOUNDARY.md");
+loadFiles();
+</script>
+</body>
+</html>

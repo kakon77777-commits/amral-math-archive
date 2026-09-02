@@ -84,11 +84,11 @@ Relative to Round 9:
 1.1331\%.
 \]
 
-![Area Sequence](../figures/01_area_sequence.png)
+![Area Sequence](../../../../skew-field/p/round-v1.0/files/figures/01_area_sequence.png)
 
-![Attack vs Net Increment](../figures/02_attack_vs_net_increment.png)
+![Attack vs Net Increment](../../../../skew-field/p/round-v1.0/files/figures/02_attack_vs_net_increment.png)
 
-![Absorption and Novelty](../figures/03_absorption_novelty.png)
+![Absorption and Novelty](../../../../skew-field/p/round-v1.0/files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -133,7 +133,7 @@ With a threshold of \(10^{-3}\):
 5. `round8_fourier16`: 0.001996811390
 6. `round10_fourier20`: 0.002307467379
 
-![Terminal Activity](../figures/06_leave_one_out.png)
+![Terminal Activity](../../../../skew-field/p/round-v1.0/files/figures/06_leave_one_out.png)
 
 ---
 
@@ -151,7 +151,7 @@ e_n,\quad
 
 Round 9 represents transient pressure, and Round 10 represents a persistent skeleton.
 
-![Historical Pressure Memory](../figures/09_historical_pressure_memory.png)
+![Historical Pressure Memory](../../../../skew-field/p/round-v1.0/files/figures/09_historical_pressure_memory.png)
 
 ---
 
@@ -177,7 +177,7 @@ Overestimated by approximately:
 
 Therefore, non-convex hard cases must first pass the falsification of the congruent placer.
 
-![Placement Failure](../figures/08_placement_failure.png)
+![Placement Failure](../../../../skew-field/p/round-v1.0/files/figures/08_placement_failure.png)
 
 ---
 
@@ -220,9 +220,9 @@ Conservative radius of curvature:
 
 It has been saved as the attack seed for Round 11.
 
-![Retention Pool](../figures/07_pool_audit.png)
+![Retention Pool](../../../../skew-field/p/round-v1.0/files/figures/07_pool_audit.png)
 
-![Round 11 Seed](../figures/10_round11_seed.png)
+![Round 11 Seed](../../../../skew-field/p/round-v1.0/files/figures/10_round11_seed.png)
 
 ---
 

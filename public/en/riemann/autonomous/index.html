@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Autonomous Research · Riemann Hypothesis · AMRAL</title>
+<meta name="description" content="AMRAL Riemann Hypothesis case, AI Autonomous Research track (Batch 01 / Case 0001). Raw engineering packages, unaltered, preserved round by round, with verification and hashes. The proof did not close; the process data is archived as-is.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/autonomous/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/riemann/autonomous/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/autonomous/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../">Riemann Hypothesis</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../skew-field/">Skew Field</a>
+  <a class="link" href="../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../riemann/autonomous/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← Riemann Hypothesis</a> · AI Autonomous Research Track</p>
+    <h1>AI Autonomous Research</h1>
+    <p class="subtitle">Riemann Hypothesis · Batch 01 · Case 0001</p>
+    <p class="lede">
+      This collects the raw engineering packages — markdown reports, Python verification scripts, JSON
+      certificates, CSV data tables — archived round by round, unaltered.
+      The proof <strong>did not close</strong>, but the process data itself survives. Every package ships
+      with a full file hash, so you can verify for yourself whether it has been tampered with.
+      For methodology (RIITG / RAB / KCPE / AMRAL) see the <a href="../../../methodology/">Methodology page</a>.
+      The other track is <a href="../semi-autonomous/">Semi-Autonomous Research</a>.
+    </p>
+    <div class="stats" id="stats" aria-label="Archive statistics"></div>
+    <p class="notice">Per-package detail pages are now complete for every entry (cards marked "→ Detail Page" link through to the full content).</p>
+  </header>
+
+  <div id="content">
+    <p class="loading">Loading listing…</p>
+  </div>
+
+  <footer class="sitefoot">
+    <span>SHA-256 verified round by round · original bytes, not repackaged</span>
+    <span id="generated-note"></span>
+  </footer>
+</div>
+
+<script>
+const fmtSize = (b) => {
+  if (b < 1024) return b + " B";
+  if (b < 1024 * 1024) return (b / 1024).toFixed(1) + " KB";
+  return (b / (1024 * 1024)).toFixed(2) + " MB";
+};
+const fmtDate = (iso) => {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleString("en-US", {
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).replace(/\//g, "-");
+};
+
+function cardHTML(pkg, seriesTagLabel) {
+  const stamp = pkg.stamp
+    ? `<span class="stamp ${pkg.stamp.kind}">${pkg.stamp.label}</span>`
+    : "";
+  const href = "./packages/" + encodeURIComponent(pkg.filename);
+  const shortHash = pkg.sha256.slice(0, 16) + "…";
+  const titleInner = pkg.has_detail_page
+    ? `<a class="title-link" href="./p/${pkg.id}/">${pkg.title} <span class="detail-hint">→ Detail Page</span></a>`
+    : pkg.title;
+  return `
+    <article class="card" id="${pkg.id}">
+      <div class="card-top">
+        <span class="tag">${seriesTagLabel}</span>
+        <span class="version">v${pkg.version}</span>
+        ${stamp}
+      </div>
+      <div class="title">${titleInner}</div>
+      <div class="meta">
+        <span>${fmtDate(pkg.generated_at)} UTC</span>
+        <span>${fmtSize(pkg.size)} · ${pkg.file_count} files</span>
+      </div>
+      <button class="hash" type="button" data-hash="${pkg.sha256}" title="Click to copy full SHA-256: ${pkg.sha256}">
+        sha256 ${shortHash}
+      </button>
+      <a class="dl" href="${href}" download="${pkg.filename}">Download ${fmtSize(pkg.size)}</a>
+    </article>`;
+}
+
+const PAGE_SIZE = 20;
+
+function pagerHTML(sectionId, page, totalPages) {
+  if (totalPages <= 1) return "";
+  let nums = "";
+  for (let i = 0; i < totalPages; i++) {
+    nums += `<button class="page-btn ${i === page ? "active" : ""}" data-section="${sectionId}" data-page="${i}">${i + 1}</button>`;
+  }
+  return `<div class="pager">
+    <button class="page-btn" data-section="${sectionId}" data-page="${page - 1}" ${page === 0 ? "disabled" : ""}>‹ Previous</button>
+    ${nums}
+    <button class="page-btn" data-section="${sectionId}" data-page="${page + 1}" ${page === totalPages - 1 ? "disabled" : ""}>Next ›</button>
+  </div>`;
+}
+
+function sectionHTML(id, title, note, packages, tagLabelFor, page) {
+  if (!packages.length) return "";
+  const totalPages = Math.ceil(packages.length / PAGE_SIZE);
+  const shown = packages.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const cards = shown.map((p) => cardHTML(p, tagLabelFor(p))).join("");
+  return `
+    <section class="series" id="${id}">
+      <div class="series-head">
+        <h2>${title}</h2>
+        <span class="count">${packages.length} packages${totalPages > 1 ? ` · page ${page + 1}/${totalPages}` : ""}</span>
+      </div>
+      <p class="series-note">${note}</p>
+      <div class="grid">${cards}</div>
+      ${pagerHTML(id, page, totalPages)}
+    </section>`;
+}
+
+const SECTIONS = [
+  ["origin", "Origin Line",
+    "The main-line narrative, recording the evolution of the whole research state in sequence (S₀ → S₁ → … → Sₜ). Version numbers are continuous; recommended to read in order.",
+    (m) => m.origin, () => "Origin Line"],
+  ["engineering", "W Engineering Packages",
+    "Computation and verification output for individual sub-problems — kernel functions, parameter tubes, chamber subdivisions, etc. — supporting every step of the main line above.",
+    (m) => m.engineering, (p) => "W-" + String(p.number).padStart(2, "0")],
+  ["platform", "Platform Import Package",
+    "Batch 01's consolidated structured data — research nodes, dependency graph, timeline, certificate index, failure & revision log, trust boundary, Batch 02 handoff.",
+    (m) => m.platform, () => "Platform Import"],
+  ["prototype", "Side Prototypes",
+    "Independent exploratory prototypes outside the formal W-01–20 numbered sequence, each with its own README, tests, and output data.",
+    (m) => m.prototype, () => "Side Prototype"],
+];
+
+let manifest = null;
+const pageState = {};
+
+function renderSections() {
+  const content = document.getElementById("content");
+  content.innerHTML = SECTIONS
+    .map(([id, title, note, getPackages, tagLabelFor]) =>
+      sectionHTML(id, title, note, getPackages(manifest), tagLabelFor, pageState[id] || 0))
+    .join("");
+}
+
+// which section+page a given card id lives on, for hash deep-links
+function locate(id) {
+  for (const [sectionId, , , getPackages] of SECTIONS) {
+    const list = getPackages(manifest);
+    const idx = list.findIndex((p) => p.id === id);
+    if (idx !== -1) return { sectionId, page: Math.floor(idx / PAGE_SIZE) };
+  }
+  return null;
+}
+
+async function boot() {
+  const content = document.getElementById("content");
+  try {
+    const res = await fetch("./manifest.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    manifest = await res.json();
+  } catch (e) {
+    content.innerHTML = `<p class="error">Failed to load listing: ${e.message}</p>`;
+    return;
+  }
+  const m = manifest;
+
+  const first = [...m.origin, ...m.engineering]
+    .map((p) => p.generated_at).filter(Boolean).sort()[0];
+  const last = [...m.origin, ...m.engineering]
+    .map((p) => p.generated_at).filter(Boolean).sort().slice(-1)[0];
+
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><span class="n">${m.counts.total}</span><span class="l">archived packages</span></div>
+    <div class="stat"><span class="n">${(m.total_size / (1024 * 1024)).toFixed(1)} MB</span><span class="l">total size</span></div>
+    <div class="stat"><span class="n">${m.counts.origin}</span><span class="l">origin-line versions</span></div>
+    <div class="stat"><span class="n">${m.counts.engineering}</span><span class="l">W engineering packages</span></div>
+  `;
+  document.getElementById("generated-note").textContent =
+    first && last ? `${fmtDate(first)} → ${fmtDate(last)} UTC` : "";
+
+  // hash deep-link (e.g. #w17-v0.1) needs its section on the right page BEFORE render
+  if (location.hash.length > 1) {
+    const hit = locate(decodeURIComponent(location.hash.slice(1)));
+    if (hit) pageState[hit.sectionId] = hit.page;
+  }
+
+  renderSections();
+
+  if (location.hash.length > 1) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ block: "center" });
+  }
+
+  content.addEventListener("click", (ev) => {
+    const pageBtn = ev.target.closest(".page-btn");
+    if (pageBtn) {
+      if (pageBtn.disabled) return;
+      pageState[pageBtn.dataset.section] = Number(pageBtn.dataset.page);
+      renderSections();
+      document.getElementById(pageBtn.dataset.section)?.scrollIntoView({ block: "start" });
+      return;
+    }
+    const btn = ev.target.closest(".hash");
+    if (!btn) return;
+    navigator.clipboard?.writeText(btn.dataset.hash).then(() => {
+      btn.classList.add("copied");
+      const original = btn.textContent;
+      btn.textContent = "Full hash copied ✓";
+      setTimeout(() => { btn.classList.remove("copied"); btn.textContent = original; }, 1400);
+    });
+  });
+}
+
+boot();
+</script>
+</body>
+</html>
