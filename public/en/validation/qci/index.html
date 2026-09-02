@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QCI — Quantitative Closure Interface · Validation · AMRAL</title>
+<meta name="description" content="QCI: a legitimacy, admissibility, estimate-precision, error-control, and uniform-quantification layer that a proof strategy relying primarily on qualitative, topological, geometric, algebraic, or combinatorial structure must pass through before being promoted to a global analytic/arithmetic claim. T → (Φ) → A_admissible → (Q) → R. QCI debt has nine components: definition, admissibility, quantitative bound, uniformity, error budget, tail, global, consistency, formalization.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/validation/qci/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/validation/qci/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/validation/qci/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">About</a>
+  <a class="link" href="../../methodology/">Methodology</a>
+  <a class="link" href="../../protocols/">Protocols</a>
+  <a class="link active" href="../">Validation</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../validation/qci/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb"><a href="../">← Validation</a></p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Validation framework</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-08-11</span>
+    </div>
+    <h1>QCI — Quantitative Closure Interface</h1>
+    <p class="h1-sub">A legitimacy, admissibility, estimate-precision, error-control, and uniform-quantification layer that a proof strategy relying primarily on qualitative, topological, geometric, algebraic, or combinatorial structure must pass through before being promoted to a global analytic/arithmetic claim. Qualitative arguments often "feel right" intuitively, but don't account for whether constants are uniform, whether error is controlled, whether tails have been handled, or whether local results can actually glue into a global one — QCI fixes these questions into a checklist that must be answered item by item, rather than leaving it to the reader to fill in the gaps.</p>
+    <div class="claim-box">
+      T → Φ → A_admissible → Q → R
+      <span class="note">— The qualitative argument T is filtered by Φ into an admissible form A_admissible, then quantified by Q, yielding the result R.</span>
+    </div>
+  </header>
+
+  <section id="pipeline">
+    <h2 class="doc-h2">Core Pipeline</h2>
+    <div class="doc">
+      <p>\[ \mathcal T \xrightarrow{\Phi} \mathcal A_{\mathrm{admissible}} \xrightarrow{Q} \mathcal R \]</p>
+      <p>Where \(\mathcal T\) is the original qualitative/structural argument, \(\Phi\) is the map that filters and rewrites it into an admissible form, \(\mathcal A_{\mathrm{admissible}}\) is the intermediate form that has passed the legitimacy check, \(Q\) is the quantification operator, and \(\mathcal R\) is the final, checkable quantitative result.</p>
+    </div>
+  </section>
+
+  <section id="debt">
+    <h2 class="doc-h2">QCI Debt</h2>
+    <div class="doc">
+      <p>Any argument that claims to have achieved QCI closure must be able to account for the status of each of the following nine components:</p>
+      <p>\[
+      D^{\mathrm{QCI}} = (
+      D_{\mathrm{def}},
+      D_{\mathrm{adm}},
+      D_{\mathrm{quant}},
+      D_{\mathrm{uniform}},
+      D_{\mathrm{error}},
+      D_{\mathrm{tail}},
+      D_{\mathrm{global}},
+      D_{\mathrm{consistency}},
+      D_{\mathrm{formal}}
+      )
+      \]</p>
+      <ul>
+        <li><code>D_def</code> — whether the object has a clear definition (well-definedness);</li>
+        <li><code>D_adm</code> — whether it passes the admissibility check;</li>
+        <li><code>D_quant</code> — whether there is a clear quantitative bound;</li>
+        <li><code>D_uniform</code> — whether the bound is uniform across the relevant parameter range;</li>
+        <li><code>D_error</code> — whether error terms have been estimated and controlled (error budget);</li>
+        <li><code>D_tail</code> — whether tail behavior has been handled;</li>
+        <li><code>D_global</code> — whether local results genuinely glue into a global conclusion (local-to-global);</li>
+        <li><code>D_consistency</code> — whether it is consistent with known results and special cases;</li>
+        <li><code>D_formal</code> — whether it has (or needs) formal verification (formalization).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="status-ui">
+    <h2 class="doc-h2">QCI Status Display Format</h2>
+    <p class="section-note">If a case applies QCI, the suggested item-by-item status display is as follows (not yet applied to any existing case):</p>
+    <div class="doc">
+      <pre><code>QCI
+✓ Well-definedness
+✓ Admissibility
+△ Quantitative bound
+✗ Uniformity
+△ Error budget
+N/A Tail
+✗ Local-to-global
+✓ Consistency
+○ Formalization</code></pre>
+      <p>The overall status is fixed to one of five values: <code>CLOSED</code> / <code>PARTIAL</code> / <code>OPEN</code> / <code>FAILED</code> / <code>N/A</code>.</p>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← Validation</a>
+    <a href="../../../about/files/AMRAL_Research_Lab_Website_Upgrade_Handoff_v0.1.md" download>Download the hand-off document, original .md (Chinese)</a>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>amralRenderMath(document.body);</script>
+</body>
+</html>

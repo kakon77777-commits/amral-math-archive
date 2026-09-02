@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Access · AMRAL</title>
+<meta name="description" content="AMRAL offers two different paths, corresponding to the same underlying research, for human readers and AI/agent readers. Humans: this website — paginated HTML, with each document's original .md/.zip downloadable. AI/agents: connect directly to the GitHub data area behind it — amral-research-trees (a mirrored raw research tree) and the optional amral-research-trees-mcp (an unauthenticated remote MCP with tools to list branches, read READMEs, and fetch files). Honestly lists where the mirror currently lags, rather than claiming the data is synced in real time.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/data-access/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/data-access/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/data-access/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="./">Data Access</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../data-access/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a></p>
+    <h1>Data Access</h1>
+    <p class="subtitle">Data Access · Humans take this website, AI takes the GitHub below</p>
+    <p class="lede">
+      This website (<code>amral.evemisslab.com</code>) is built for <strong>humans</strong>: every case is built
+      round by round into paginated HTML, with KaTeX math rendering, contextual connections, and source citations
+      — every page can download its original <code>.md</code> at the bottom. This path is not going away, and it
+      is not a secondary option.
+    </p>
+    <p class="lede">
+      But if you're an <strong>AI or agent</strong>, what you usually want isn't the formatting — it's the raw
+      text. In that case, the more direct path is the two GitHub resources below; there's no need to crawl the
+      HTML first and guess where a <code>download</code> link might be.
+    </p>
+  </header>
+
+  <section id="research-trees">
+    <h2 class="doc-h2">amral-research-trees · The Mirrored Raw Research Tree</h2>
+    <p class="section-note">The raw .md behind every curated document on this site, mirrored here by research line, in original bytes, not repackaged.</p>
+    <div class="doc">
+      <p>
+        Repo:
+        <a href="https://github.com/kakon77777-commits/amral-research-trees" target="_blank" rel="noopener">
+          github.com/kakon77777-commits/amral-research-trees
+        </a>
+      </p>
+      <p>
+        Remote MCP (unauthenticated, 5 tools to list branches / read READMEs / fetch files):
+        <code>https://amral-research-trees-mcp.neokpolaris.workers.dev/mcp</code>
+      </p>
+      <p class="notice">
+        Honest status (2026-08-18): the mirror currently lags behind the site itself. The <code>agent/bsd</code>
+        and <code>agent/cpl</code> branches exist but have not yet been merged into <code>main</code>; everything
+        after BSD Phase1 v0.4, all of Phase2, CPL v2-v11, and CCM have not yet been mirrored in. This describes the
+        access path as designed, not a claim that the data is synced in real time.
+      </p>
+    </div>
+  </section>
+
+  <section id="math-archive">
+    <h2 class="doc-h2">amral-math-archive · The Upstream, Unsorted Drop Folder</h2>
+    <p class="section-note">Different from the above — this is where the researcher drops raw papers/data bundles directly; nothing here has been read yet or built into site content.</p>
+    <div class="doc">
+      <p>
+        Repo:
+        <a href="https://github.com/kakon77777-commits/amral-math-archive" target="_blank" rel="noopener">
+          github.com/kakon77777-commits/amral-math-archive
+        </a>
+      </p>
+      <p class="notice">
+        Nothing here carries any quality or completeness guarantee — it's purely a drop folder. The version
+        that's actually been verified, organized, and written up with claim-box source citations appears in
+        <code>amral-research-trees</code> above and on this website itself.
+      </p>
+    </div>
+  </section>
+
+  <section id="ns-symbols">
+    <h2 class="doc-h2">ns-symbols.json · The Global NS PROGRAM Symbol Cross-Reference</h2>
+    <p class="section-note">
+      Different from the two above — this isn't a mirror of raw research prose, it's a pure machine-readable
+      symbol table: every symbol defined or centrally used anywhere across the whole NS PROGRAM
+      (Navier–Stokes global-regularity) series, with its LaTeX, Chinese/English definitions, and the round it
+      first appears in. Designed so an AI/agent reading any single round's <code>.md</code> doesn't have to
+      manually page through dozens of other rounds to find where some symbol was first defined and what it means.
+    </p>
+    <div class="doc">
+      <p>
+        Direct fetch:
+        <a href="/data/symbols/ns-symbols.json" target="_blank" rel="noopener">
+          amral.evemisslab.com/data/symbols/ns-symbols.json
+        </a>
+      </p>
+      <p>
+        Plain JSON, no dependency on SEDB or any database to read; the content is regenerated from an
+        independently maintained SEDB entity store (see <code>SEDB/projects/amral-ns-symbols/</code>, not
+        publicly mirrored) — the two are deliberately kept in sync rather than treated as each other's sole
+        source of truth.
+      </p>
+      <p class="notice">
+        Honest status (2026-08-28): 1,845 entries total, covering the framework's shared notation plus C1, C2,
+        C3 (A–Y, all 25 rounds), C4 (A–J, no H, all 9 rounds), C5 (A–M, all 13 rounds), and C6 (A–Q, all 17
+        rounds) — every one of NS PROGRAM's 67 published papers is included. It currently covers only the NS
+        research line; BSD, Moser's Worm/skew-field, P/NP duality, GLC, CPL, CCM, and the other series don't yet
+        have a table. Symbol spaces are deliberately not assumed shared across different series (the same Greek
+        letter may mean a completely different quantity in two different series).
+      </p>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>Both paths point to the same underlying research, not two different bodies of content</span>
+  </footer>
+</div>
+</body>
+</html>

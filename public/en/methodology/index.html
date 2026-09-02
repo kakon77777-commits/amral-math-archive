@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology (AMRAL-Core) · AMRAL</title>
+<meta name="description" content="AMRAL-Core methodology summary: Result-Induced Intermediate Theorem Generation (RIITG), Reverse Axiom Backfilling (RAB), Knowledge-Conditioned Proof-Space Enumeration (KCPE), and the Autonomous Mathematical Research Agent Loop (AMRAL). This is AMRAL Research Lab's original core methodology, not a mandatory requirement for every research case. Includes links to all three original papers in full.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/methodology/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/methodology/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/methodology/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link active" href="./">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../methodology/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a></p>
+    <h1>Methodology</h1>
+    <p class="subtitle">AMRAL-Core · RIITG · RAB · KCPE · AMRAL Loop</p>
+    <p class="notice">
+      This is AMRAL Research Lab's original core methodology, called <strong>AMRAL-Core</strong> — it is not a
+      mandatory requirement for every research case on the site. Other cases on the platform may instead use
+      direct search, computational exploration, the <a href="../protocols/trp/">TRP triadic-agent protocol</a>,
+      and so on; see <a href="../about/">About AMRAL</a>.
+    </p>
+    <p class="lede">
+      All three papers are <strong>methodology drafts</strong>, not proved theorems — each one's own integrity
+      statement says explicitly that it does not claim to have been proven to generalize, and only proposes a
+      falsifiable framework and propositions still to be verified. The case study (real measured data from the
+      Riemann Hypothesis case) is on the <a href="../../riemann/">Riemann Hypothesis page</a>.
+    </p>
+  </header>
+
+  <section id="summary">
+    <h2 class="doc-h2">Basic Methodology Summary</h2>
+    <p class="doc-meta">The following is a summary that consolidates the propositions of all three papers together — it is not the original text, which is left word-for-word unchanged in the three links below.</p>
+    <div class="doc">
+      <p><strong>Starting point</strong> — a throwaway attempt at "inventing new number theory to prove the Riemann Hypothesis" produced five plausible-looking self-invented axioms. Rather than discarding them as junk or accepting them as genuine axioms, the three papers reposition them: every self-invented axiom is not a permanent premise but a <strong>transient bridging proposition</strong> — induced in reverse from the target result, which must then be demoted to a proof obligation and have its genuine foundations sought and backfilled term by term. The operation of "first inventing enough of a world, then proving that world holds" is what these three papers are actually studying.</p>
+
+      <p><strong>RIITG (Result-Induced Intermediate Theorem Generation)</strong> — given a target proposition P, instead of searching directly for a proof of P, it generates in reverse a set of candidate intermediate propositions M: "if what held, would make P almost automatically true?" This is a search operator, not an inference rule — candidate propositions need not already exist in the current knowledge base.</p>
+
+      <p><strong>RAB (Reverse Axiom Backfilling)</strong> — every candidate M is immediately demoted to a proof obligation; it is not allowed to sit as "provisionally true." A more basic support T is then sought, such that T⟹M. The whole process is bound by five ground rules: sufficiency (the conjunction of candidates must be able to derive P), non-circularity (P cannot be its own ancestor), backfillability (some T must genuinely exist), decreasing burden (proving M must be easier than proving P), and controllable semantic breadth.</p>
+
+      <p><strong>Mesoscale semantic window</strong> — if the candidate space is too wide, it combinatorially explodes; too narrow, and the correct path may be deleted before the search even begins. All three papers consistently argue: effective intermediate propositions fall in a controllable range between the two, not "the more specific the better."</p>
+
+      <p><strong>KCPE (Knowledge-Conditioned Proof-Space Enumeration)</strong> — not an enumeration of every possible proof, but a dynamic construction of a local candidate space Ω<sub>t</sub> based on current knowledge, failure history, the semantic window, and the computational budget. Web search here is not "looking up the answer," but an expansion operator on the base knowledge space: triggered only when a clear gap is found, with the expanded knowledge fed back into candidate generation.</p>
+
+      <p><strong>AMRAL (Autonomous Mathematical Research Agent Loop)</strong> — wraps the three above into a repeatable nine-step loop: analyze, generate, enumerate, retrieve, backfill, compute, verify, refute, update. The core stance is to model mathematical research itself as a dynamical system over research states (S<sub>t</sub> → S<sub>t+1</sub>), rather than a one-shot proof output; dividing labor across multiple agent roles (bridge generation, counterexample search, dependency auditing, ...) lets different intermediate propositions be attacked in parallel.</p>
+
+      <p><strong>What isn't claimed</strong> — all three papers state plainly in their appendices: every benefit above is still to be verified, with no general proof. An unbackfilled bridge must not be written up as a theorem; finite computation must not masquerade as infinite proof; content retrieved from the web is not automatically treated as true. The Riemann Hypothesis case genuinely ran a round on this path — and did not prove the conjecture; the process data is on the <a href="../../riemann/">Riemann Hypothesis page</a>.</p>
+    </div>
+  </section>
+
+  <section id="papers">
+    <h2 class="doc-h2">The Three Original Papers</h2>
+    <p class="section-note">Ordered by the author's own version notes; the original wording is unchanged.</p>
+    <div class="case-grid">
+      <a class="case-card" href="./genesis/">
+        <span class="k">① Series Paper One · v1.0</span>
+        <h3>From Transient Axioms to Backfillable Bridges</h3>
+        <p>Result-induced intermediate-proposition reconstruction in the Riemann Hypothesis case — a non-proof-bearing reverse-structural-design experiment.</p>
+      </a>
+      <a class="case-card" href="./riitg-rab/">
+        <span class="k">② Series Paper Two · v1.0</span>
+        <h3>Result-Induced Intermediate Theorem Generation and Reverse Axiom Backfilling</h3>
+        <p>The general methodology draft — the complete formal framework, verification conditions, and falsifiability of RIITG and RAB.</p>
+      </a>
+      <a class="case-card" href="./amral/">
+        <span class="k">③ v0.1</span>
+        <h3>Autonomous Mathematical Research Agent Loop</h3>
+        <p>AMRAL / KCPE — packages the methodology into a repeatable agent loop and multi-agent architecture.</p>
+      </a>
+    </div>
+    <p class="notice">
+      Each of the first two papers' own version notes foreshadowed "Paper Three: a blind-testing experiment on a
+      known but non-trivial proposition" — that paper was never written. What actually followed instead is this
+      AMRAL/KCPE paper (also advancing RIITG/RAB further, but in the direction of "packaging it into a repeatable
+      agent loop," not the originally planned blind-verification study).
+    </p>
+  </section>
+
+  <footer class="sitefoot">
+    <span>All three papers are marked as draft methodology, not proved results</span>
+    <a href="../../riemann/">→ See the Riemann Hypothesis case's real measured data</a>
+  </footer>
+</div>
+</body>
+</html>
