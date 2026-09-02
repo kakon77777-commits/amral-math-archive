@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P/NP Dynamic Four-Layer Closure Framework (GLC) · AMRAL</title>
+<meta name="description" content="AMRAL case: P/NP Dynamic Four-Layer Closure Framework. Re-projects P vs. NP onto four layers: Global Computational Complexity (GCC), Universal State-Rate Transformation (USRT), Universal Sufficient-Sequence Generation (USEG), and Global Lossless Closure (GLC). A heuristic re-description, not a proof. Presents two handoff plans side by side: the traditional order with GCC first, and GLC-first (define what closure means before discussing how to close).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/glc-framework/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/glc-framework/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/glc-framework/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link active" href="./">GLC</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../glc-framework/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-P-VS-NP</p>
+    <h1>P/NP Dynamic Four-Layer Closure Framework</h1>
+    <p class="subtitle">Dynamic Four-Layer Closure Framework · Led by Neo.K, collaboratively organized with Aletheia</p>
+    <p class="lede">
+      The next reformulation the researcher proposed after the <a href="../../p-np-dual/">24-round dual rehearsal (Chinese)</a>:
+      splitting the traditional P vs. NP problem into four interrelated, functionally distinct observation planes —
+      the Global Computational Complexity state <code>GCC</code>, the Universal State-Rate Transformation state
+      <code>USRT</code>, the Universal Sufficient-Sequence Generation state <code>USEG</code>, and the Global Lossless
+      Closure state <code>GLC</code>, which serves as the capping acceptance condition. The core engineering-style
+      statement is: <strong>"the process is free, the final ledger is not free."</strong> An algorithm may switch
+      paths, change representations, roll back, and recompute midway, but must ultimately deliver a result that is
+      correct, complete, has zero semantic loss, and passes resource-ledger accounting. The document explicitly
+      states its own position — <strong>a heuristic re-description plus a formalization research agenda, not a
+      completed proof of P vs. NP</strong> — and lists seven or eight research red lines it explicitly does not
+      license.
+    </p>
+    <p class="notice">
+      This page presents both "research handoff" documents side by side rather than picking a side for the
+      researcher — the two are different execution-order proposals for the same four-layer framework, differing
+      on whether GLC should serve as the final acceptance layer or be moved to the front as the semantic foundation.
+    </p>
+  </header>
+
+  <section id="main-paper">
+    <h2 class="doc-h2">Main Paper · Heuristic Research Proposal</h2>
+    <div class="case-grid">
+      <a class="case-card" href="./p/main-paper/">
+        <span class="k">v1.0 · 2026-08-02</span>
+        <h3>P/NP Dynamic Four-Layer Closure Framework: A Heuristic Re-description</h3>
+        <p>Proposes the three-phase equivalence program GCC ⟺ USRT ⟺ USEG, plus GLC's standard and robust versions as the capping acceptance condition. Explicitly lists eight things this paper does not claim.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="handoffs">
+    <h2 class="doc-h2">Two Handoff Plans · Two Handoff Plans</h2>
+    <p class="section-note">Same framework, two different research execution orders — both written for "the AI picking this up next," so the handoff lets the work continue without re-guessing the project's intent.</p>
+    <div class="case-grid">
+      <a class="case-card" href="./p/handoff-gcc-first/">
+        <span class="k">Plan A · Traditional Order</span>
+        <h3>Research Handoff and Follow-on Implementation Recommendations</h3>
+        <p>GCC→USRT→USEG→GLC. Eight parallel research lines (axiomatization, equivalence arrows, non-circularity, formal proof, algorithmic implementation, counterexample testing, model invariance, obstruction mapping), a four-phase research plan, seven research red lines.</p>
+      </a>
+      <a class="case-card" href="./p/handoff-glc-first/">
+        <span class="k">Plan B · GLC-First</span>
+        <h3>GLC-First Research Handoff and Implementation Recommendations</h3>
+        <p>GLC→{GCC,USRT,USEG}. Defines "what genuine completion means" first (five GLC axioms, standard/robust versions, the non-circularity principle) — the other three layers are then built on top of GLC.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="verification">
+    <h2 class="doc-h2">Engineering Verification Trail · Engineering Verification Trail</h2>
+    <p class="section-note">A separate research line independent of the two documents above: adversarial verification of a related engineering candidate by 7 AI roles, ongoing since 2026-08-09.</p>
+    <div class="case-grid">
+      <a class="case-card" href="./verification/">
+        <span class="k">v0.2 → v0.2.6 · CANDIDATE_UNPROMOTED / FAIL</span>
+        <h3>Seven-Role Adversarial Verification</h3>
+        <p>AI-1 coordination, AI-2 red team, AI-3 formal/Lean, AI-4 engineering, AI-5 independent replay, plus AI-6/AI-7 two independent scholars. Still had not passed overall acceptance as of v0.2.6.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <span>SHA-256 verified round by round · original bytes, not repackaged</span>
+  </footer>
+</div>
+</body>
+</html>

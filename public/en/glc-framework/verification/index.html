@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Verification Trail v0.2→v0.2.6 · GLC Closure Framework · AMRAL</title>
+<meta name="description" content="Adversarial verification trail for an engineering candidate related to the P/NP Dynamic Four-Layer Closure Framework: 7 AI roles (coordination, red team, formal/Lean, engineering, independent replay, and two independent scholars) divided the work; v0.2 through v0.2.6, 7 versions, at least 12 distinct blockers found and fixed. As of v0.2.6: status is CANDIDATE_UNPROMOTED / FAIL — AI-1 (coordination) and AI-5 (independent replay) still judge FAIL; AI-2's PASS is strictly scoped and does not constitute overall acceptance. The independent scholars' judgment: engineering closure cannot be promoted to mathematical closure, and there is currently no evidence supporting either P=NP or P≠NP.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/glc-framework/verification/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/glc-framework/verification/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/glc-framework/verification/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">About</a>
+  <a class="link" href="../../methodology/">Methodology</a>
+  <a class="link" href="../../protocols/">Protocols</a>
+  <a class="link" href="../../validation/">Validation</a>
+  <a class="link active" href="../">GLC</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../glc-framework/verification/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../">← GLC Closure Framework</a>
+    <span>/</span>
+    <span>Engineering Verification Trail</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Engineering Verification Trail</span>
+      <span class="tag">v0.2 → v0.2.6</span>
+      <span class="tag">2026-08-09</span>
+      <span class="status">CANDIDATE_UNPROMOTED / FAIL</span>
+    </div>
+    <h1>Engineering Verification Trail: Seven-Role Adversarial Verification, v0.2 → v0.2.6</h1>
+    <p class="h1-sub">
+      This is a research line independent of the rest of this page: starting 2026-08-09, 7 AI roles divided the work
+      to repeatedly run adversarial verification on an engineering candidate related to the "P/NP Dynamic Four-Layer
+      Closure Framework" — AI-1 makes the coordinating ruling, AI-2 (red team) does read-only checks against frozen
+      evidence, AI-3 reviews the formal interface (including Lean 4 formalization), AI-4 builds the candidate itself,
+      AI-5 trusts none of the candidate's own built-in verifier and independently rewrites the logic checks from
+      scratch, and AI-6/AI-7, two independent scholars, do blind-read assessments from traditional complexity theory.
+      From v0.2 to v0.2.6, across 7 version tags, at least 12 distinct, uniquely-named blockers were found and fixed
+      — this reads as genuine round-by-round deepening scrutiny, where fixing one hole exposes a new one at the next
+      layer, not the same issue stuck in place, nor a left-hand-checks-right-hand rubber stamp. As of v0.2.6:
+      <strong>AI-1 (coordination) and AI-5 (independent replay) still rule FAIL</strong>; AI-2's PASS is strictly
+      scoped to consistency checks against existing frozen evidence, explicitly excluding independent re-verification
+      or any P/NP inference. The two independent scholars' judgment cuts deeper still: even if this entire
+      engineering-verification line turned fully green, it would not constitute any conclusion about P/NP.
+    </p>
+    <div class="claim-box">
+      CANDIDATE_UNPROMOTED / FAIL
+      <span class="note">— per AI-1's coordinating report (v0.2.6); the other role reports on this page stand as parallel evidence and do not represent overall acceptance.</span>
+    </div>
+  </header>
+
+  <section id="roles">
+    <h2 class="doc-h2">Five Engineering Roles · v0.2.6 Status</h2>
+    <p class="section-note">The "PASS" column is each role's own strictly-scoped result, not the overall acceptance outcome — see each role's note below.</p>
+    <table class="ledger">
+      <thead>
+        <tr><th>Role</th><th>Responsibility</th><th>v0.2.6 Result</th><th>Scope Note</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-1<br>Coordination</td>
+          <td>Checks consistency of every party's disposition and manifest; rules on disagreements</td>
+          <td><span class="pill OPEN">FAIL</span></td>
+          <td>2 blockers: CLOSURE-OPAQUE-LEAF-TERMINAL-01 (adopting AI-3's ruling) + ACCEPTANCE-PACKET-IMPORT-EDGE-COUNT-01 (adopting AI-5's ruling). The document states plainly: 'no Board success is published, no shared repo is established, the next version is not started.'</td>
+        </tr>
+        <tr>
+          <td>AI-2<br>Red team / consistency</td>
+          <td>Read-only check of frozen evidence, signatures, and existing test data</td>
+          <td><span class="pill CLOSED">PASS</span></td>
+          <td>Strictly scoped: only re-checks the 3 old judgments assigned by AI-1, plus new-field consistency. The document states plainly it 'does not represent promotion,' explicitly excluding isolated replay (AI-5's responsibility), independent algorithmic re-verification of the 1500 cases, or any P/NP inference.</td>
+        </tr>
+        <tr>
+          <td>AI-3<br>Formal / Lean</td>
+          <td>Reviews completeness of the canonical judgment graph + Lean 4 formalization</td>
+          <td><span class="pill OPEN">FAIL</span></td>
+          <td>The <code>OpaqueLeaf</code> node (genuinely reachable) has no terminal-state mapping to PASS/FAIL/UNKNOWN, yet the executable verifier silently treats it as PASS and keeps running. The Lean side compiles and the kernel audit shows no sorry/admit, but it explicitly does not touch the four-layer framework's core claims — it is basic scaffolding only.</td>
+        </tr>
+        <tr>
+          <td>AI-4<br>Engineering</td>
+          <td>Builds the candidate itself</td>
+          <td><span class="pill PARTIAL">Self-test all passed</span></td>
+          <td>22/22 unit tests, 1500/1500 SAT-case replays with 0 mismatches — but these are all the candidate's own self-tests, not third-party verification. The candidate's documentation states twice that it 'does not claim any P=NP or P≠NP conclusion,' and its status field reads <code>CANDIDATE_UNPROMOTED</code>.</td>
+        </tr>
+        <tr>
+          <td>AI-5<br>Independent replay</td>
+          <td>Trusts none of the candidate's own verifier; independently rewrites and checks the logic from scratch</td>
+          <td><span class="pill OPEN">FAIL</span></td>
+          <td>216 hashes, 31 import edges, 112 evidence hashes, and all 1500 cases passed independent recomputation — except one document inside the candidate package states 29 import edges (the other four sources all say 31), which alone causes the overall FAIL. It has never given a clean PASS since v0.2.1.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="blockers">
+    <h2 class="doc-h2">The Two Blockers in v0.2.6</h2>
+    <div class="doc">
+      <p><strong>CLOSURE-OPAQUE-LEAF-TERMINAL-01</strong> (AI-3) — in the candidate's canonical judgment graph, <code>OpaqueLeaf</code> is a target branch of <code>SupportedTraversal.child_dispatch</code>, but there is no definition of which terminal state — PASS/FAIL/UNKNOWN — it should map to. This is not a hypothetical concern: AI-3 found a piece of data in the frozen test set that genuinely walks into this branch, and the executable verifier silently treats it as PASS and keeps running — this is an interface gap between the "canonical graph" and "actual execution," not an admission bypass, a correctness counterexample, or a P/NP conclusion. This is, in fact, the next layer's gap, exposed for the first time only because the judgment graph, after the previous round's (v0.2.5) fix of CLOSURE-SUPPORTED-RELATION-RESULT-01, genuinely reached this next node for the first time.</p>
+      <p><strong>ACCEPTANCE-PACKET-IMPORT-EDGE-COUNT-01</strong> (AI-5) — inside the candidate package, <code>CURRENT-v0.2.6-candidate.md</code> states "29 local import edges," but the machine descriptor, the official self-check, <code>VALIDATION-REPORT-v0.2.6-candidate.md</code> in the same package, and AI-5's own independent AST-based recount all agree on 31. This is a plain documentation-count inconsistency, not a correctness error, but under the process rules it still constitutes a promotion blocker.</p>
+    </div>
+  </section>
+
+  <section id="scholars">
+    <h2 class="doc-h2">The Two Independent Scholars' Judgment</h2>
+    <p class="section-note">AI-6 (a traditional complexity-theory scholar) and AI-7 (a cross-paradigm bridging scholar) are entirely separate from the engineering-verification line above, each doing a blind review without seeing the other's draft.</p>
+    <div class="doc">
+      <blockquote>"This is not a failed proof of P/NP; nor is it currently a proof of P/NP." — AI-6, first-round blind read. The second-round re-review upholds the original verdict: the research program may continue and is more mature than in the first round, but as a submission of a P/NP characterization theorem it would need "at least a major revision"; as material claiming to have proven P=NP, P≠NP, or established a new complexity class, it "does not hold."</blockquote>
+      <blockquote>"Engineering closure cannot be promoted to mathematical closure." — AI-7, cross-paradigm bridging report. A second-round item-by-item check of whether AI-6's judgment had been overturned by subsequent engineering and formalization progress concluded it had not: "each result can move up at most one layer … the sheer number of green engineering lights cannot leap directly to a P/NP conclusion."</blockquote>
+      <p>Both specifically caution: no known complexity-theoretic barrier (relativization, etc.) has actually been engaged yet; although the Lean side compiles cleanly, lemmas such as <code>zeroDebt</code> may be vacuously satisfiable and thereby lose their meaning, so "successful compilation" on its own should not be over-read; GLC's "robust" semantics has so far only been tested on a single deterministic run, which is not the same as having verified general fault-tolerant / non-deterministic semantics.</p>
+    </div>
+  </section>
+
+  <section id="trajectory">
+    <h2 class="doc-h2">Version Trajectory</h2>
+    <div class="doc">
+      <p>v0.2 through v0.2.6 spans 7 version tags and at least 12 distinctly-named blocker IDs (PROV-DERIVE-01, REF-TYPE-01, CLOSURE-CLASS-01, CLOSURE-EDGE-SCOPE-01, ORACLE-DECL-FAMILY-01, CLOSURE-JUDGMENT-COMPLETENESS-01, ADVICE-DECL-LEDGER-01, plus v0.2.5 and v0.2.6's own new blockers), with no name repeated. v0.2.3 was briefly marked PASS before being corrected to FAIL by an ADDENDUM. Read as a whole, it looks like a continuous hardening process — fixing old gaps round by round while review depth also deepens round by round, exposing new gaps in turn — rather than the same defect recurring, or the verification side simply rubber-stamping whatever engineering hands it.</p>
+    </div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Original Documents</h2>
+    <p class="section-note">Extracted from each role's complete output directory, the files most directly relevant to the v0.2.6 status ruling — original bytes, not repackaged, each verified by SHA-256. The complete output (including historical versions v0.2 through v0.2.5, code, and test data) is outside the scope of this mirror.</p>
+    <table class="ledger">
+      <thead>
+        <tr><th>Role</th><th>Document</th><th>Size</th><th>SHA-256</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-1 Integration</td>
+          <td><a href="../../../glc-framework/verification/files/AI-1_I0_v0.2.6_統籌有界驗收_FAIL_v0.1.md" download>AI-1 Coordinating Bounded Acceptance v0.2.6 — FAIL (overall status) (Chinese)</a></td>
+          <td>8.0 KB</td>
+          <td><code>ded0c20aa77d3d8e…</code></td>
+        </tr>
+        <tr>
+          <td>AI-2 Red team</td>
+          <td><a href="../../../glc-framework/verification/files/AI-2_I0_v0.2.6_bounded_local_conformance_PASS_v0.1.md" download>AI-2 Bounded Local Conformance v0.2.6 — PASS (scope-limited) (Chinese)</a></td>
+          <td>7.3 KB</td>
+          <td><code>96581b8c4c4dd703…</code></td>
+        </tr>
+        <tr>
+          <td>AI-3 Formal</td>
+          <td><a href="../../../glc-framework/verification/files/AI-3_I0_v0.2.6_bounded_形式接口唯讀驗收_FAIL_CLOSURE-OPAQUE-LEAF-TERMINAL-01_v0.1.md" download>AI-3 Bounded Formal-Interface Read-Only Acceptance v0.2.6 — FAIL (CLOSURE-OPAQUE-LEAF-TERMINAL-01) (Chinese)</a></td>
+          <td>13.0 KB</td>
+          <td><code>ebe92cf3a070ccb1…</code></td>
+        </tr>
+        <tr>
+          <td>AI-3 Formal</td>
+          <td><a href="../../../glc-framework/verification/files/AI3_Phase1_Lean4_Addendum_v0.1.md" download>AI-3 Lean 4 Formalization Addendum (Chinese)</a></td>
+          <td>6.4 KB</td>
+          <td><code>01d3eb4c9583ee06…</code></td>
+        </tr>
+        <tr>
+          <td>AI-4 Engineering</td>
+          <td><a href="../../../glc-framework/verification/files/CURRENT-v0.2.6-candidate.md" download>AI-4 Candidate Specification v0.2.6 (Chinese)</a></td>
+          <td>1.7 KB</td>
+          <td><code>18ac00879641cadd…</code></td>
+        </tr>
+        <tr>
+          <td>AI-4 Engineering</td>
+          <td><a href="../../../glc-framework/verification/files/VALIDATION-REPORT-v0.2.6-candidate.md" download>AI-4 Candidate Self-Test Report v0.2.6 (Chinese)</a></td>
+          <td>1.8 KB</td>
+          <td><code>8fd61e2871628245…</code></td>
+        </tr>
+        <tr>
+          <td>AI-4 Engineering</td>
+          <td><a href="../../../glc-framework/verification/files/SHA256SUMS-v0.2.6-candidate.txt" download>AI-4 Candidate 216-File Hash Manifest v0.2.6 (Chinese)</a></td>
+          <td>24.9 KB</td>
+          <td><code>2e1c58a5ce85833d…</code></td>
+        </tr>
+        <tr>
+          <td>AI-5 Independent replay</td>
+          <td><a href="../../../glc-framework/verification/files/AI5_v026_bounded_engineering_package_acceptance_v0.8.md" download>AI-5 Independent Engineering Replay Acceptance v0.2.6 — FAIL (ACCEPTANCE-PACKET-IMPORT-EDGE-COUNT-01) (Chinese)</a></td>
+          <td>8.4 KB</td>
+          <td><code>3831f8464c5b4811…</code></td>
+        </tr>
+        <tr>
+          <td>AI-6 Scholar</td>
+          <td><a href="../../../glc-framework/verification/files/AI-6_現況覆審報告_v2.0.md" download>AI-6 Traditional-Complexity Scholar Re-Review Report v2.0 (Chinese)</a></td>
+          <td>36.2 KB</td>
+          <td><code>15332569b7f430aa…</code></td>
+        </tr>
+        <tr>
+          <td>AI-7 Scholar</td>
+          <td><a href="../../../glc-framework/verification/files/AI-7_盲審對照與橋接報告_v2.0.md" download>AI-7 Cross-Paradigm Bridging Scholar Cross-Check Report v2.0 (Chinese)</a></td>
+          <td>42.8 KB</td>
+          <td><code>55a8204c89e79cd3…</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← GLC Closure Framework</a>
+    <span>Page status summary and role/blocker descriptions are written by AMRAL, not any single original document; see the table above for links to each original document</span>
+  </footer>
+</div>
+</body>
+</html>

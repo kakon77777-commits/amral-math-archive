@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan B · GLC-First Research Handoff and Implementation Recommendations · GLC Closure Framework · AMRAL</title>
+<meta name="description" content="Research handoff document for the P/NP Dynamic Four-Layer Closure Framework, Plan B: reorders it to GLC-first — defining ‘what genuine completion means’ before the GCC/USRT/USEG layers are built on top of GLC. GLC is split into five core axioms (semantic correctness, eventual completion, semantic losslessness, final-ledger validity, admissible execution closure); the first version requires resource-neutrality, forbidding an early smuggled-in polynomial-time requirement.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/P_NP_動態四層閉合框架_GLC優先研究交接與實行建議_v1.0.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/glc-framework/p/handoff-glc-first/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/glc-framework/p/handoff-glc-first/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/glc-framework/p/handoff-glc-first/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">GLC</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../glc-framework/p/handoff-glc-first/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← GLC Closure Framework</a>
+    <span>/</span>
+    <span>Plan B · GLC-First Handoff</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">v1.0</span>
+      <span class="tag">Plan B</span>
+      <span class="tag">Handoff document</span>
+    </div>
+    <h1>GLC-First Research Handoff and Implementation Recommendations: GLC → {GCC, USRT, USEG}</h1>
+    <p class="h1-sub">Core revision: reverses the research order from ‘first three layers → GLC capping’ to ‘GLC first → the other three layers built on top of GLC.’ The reasoning: if GLC is not strictly defined first, GCC will lack an objective function, USRT will lack a completion state, and USEG will lack a ‘decision-sufficiency’ standard. The first version of GLC (denoted GLC₀) must be ‘resource-neutral’ — it cannot demand polynomial time from the outset, or that would amount to smuggling GCC into GLC's own base definition. Splits GLC into five core axioms, and requires at least 5 positive examples, 5 counterexamples, and a preliminary formalization before GLC Foundation v1.0 counts as complete.</p>
+    <div class="claim-box">
+      Long-term research-handoff / execution-order revision document; currently positioned as a heuristic Characterization Program, not claiming to have proven P=NP or P≠NP
+      <span class="note">— the document's own stated nature, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <div class="connections">
+    <div class="conn-card"><span class="k">Related main paper</span><a href="../main-paper/">Heuristic Research Proposal</a></div>
+    <div class="conn-card"><span class="k">Alternative plan</span><a href="../handoff-gcc-first/">Plan A · Traditional-Order Handoff</a></div>
+  </div>
+  <blockquote class="cite">「GLC defines what completion means; the other three layers study how to achieve it.」 — from this paper's Section 0, ‘This Revision's Most Important Architectural Change.’ Core philosophy: ‘define what completion means before discussing how to achieve it.’</blockquote>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← GLC Closure Framework</a>
+    <a href="../../files/P_NP_動態四層閉合框架_GLC優先研究交接與實行建議_v1.0.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/P_NP_動態四層閉合框架_GLC優先研究交接與實行建議_v1.0.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
