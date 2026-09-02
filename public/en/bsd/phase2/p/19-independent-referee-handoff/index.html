@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independent Referee / Local Agent Handoff · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The final document of v0.3, with the goal explicitly written as "first attempt to overthrow the 696.e1 family theorem" rather than searching for more curves. Designs six independent referees: A re-verifies Theorem 2.14 conditions item by item; B re-verifies the odd branch using only the non-semistable alternatives explicitly permitted by Banwait Remark 2.10; C prioritizes FW's simpler Theorem 1.1 over the self-rewritten Theorem 1.7; D prioritizes published Manin-constant results over the unpublished Edixhoven remark; E independently recalculates the entire Chebotarev computation; F performs a numerical scan for q<10^7 to find counterexamples (explicitly stating that numerical scanning is not a theorem proof, only a bug hunt). Stopping rule: A-E must all pass to upgrade to DERIVED THEOREM/PREPRINT CANDIDATE; if any item fails, expansion is frozen and rolled back to the exact failed lemma.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/19_Independent_Referee_Handoff.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/19-independent-referee-handoff/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/19-independent-referee-handoff/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/19-independent-referee-handoff/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/19-independent-referee-handoff/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>19 · Independent Referee / Local Agent Handoff</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 19</span>
+      <span class="tag">v0.3 · 19</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">v0.3 Last Document · Six adversarial referees</span>
+    </div>
+    <h1>Independent Referee / Local Agent Handoff</h1>
+    <p class="h1-sub">The wrap-up document for the v0.3 series, with an extremely clear goal: do not search for more curves; first try to overthrow the <code>696.e1 family theorem</code>. It designs six independent referees, each targeting a different link in the argument, with a posture of "finding loopholes" rather than "confirming": Referee A re-verifies item by item the base conditions of Theorem 2.14 and the splitting conditions for symbolic $q\in\mathcal P$, outputting PASS/FAIL; Referee B re-verifies the odd ordinary/additive branches using only the non-semistable alternatives explicitly permitted by Banwait–Huang Remark 2.10; Referee C prioritizes using the stronger but simpler sufficient hypotheses of FW Theorem 1.1 rather than rewriting the most general Theorem 1.7 themselves, avoiding "grading one's own homework"; Referee D proves that the period does not divide the Manin-period discrepancy, and explicitly requires prioritizing published Manin-constant results, not relying on the unpublished Edixhoven remark; Referee E independently recalculates the entire Chebotarev computation from scratch (discriminant, Galois group, resolvent, fiber product degree, conjugacy class size, density); Referee F writes a program to scan all $\mathcal P$ primes for $q&lt;10^7$ to find counterexamples, but the document explicitly reminds itself: a numerical sweep is not a theorem proof, it is only for finding implementation/case bugs. Finally, the document gives a clear stopping rule: if Referees A-E all PASS, upgrade to <code>DERIVED THEOREM / PREPRINT CANDIDATE</code>; if any item FAILs, freeze expansion and revert to that exact failed lemma.</p>
+    <div class="claim-box">
+      Six adversarial referees, with a posture of "first try to overthrow"; C/D specifically require prioritizing weaker but published/simpler sources to avoid grading one's own homework; F explicitly states that numerical scanning is not a proof; A-E must all pass to upgrade, and if one fails, it reverts to the exact lemma.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../18-provisional-derived-theorem/">18 · Provisional Derived Family Theorem</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../20-adversarial-referee-verdict/">20 · Adversarial Referee Verdict</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>19 / 40 (v0.3 Concluded)</div>
+    </div>
+    <blockquote class="cite">"A numerical sweep is not a theorem proof, it is only for finding implementation/case bugs." — Excerpt from the Referee F section of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/19_Independent_Referee_Handoff.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/19_Independent_Referee_Handoff.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>696.e1 All-Prime Router · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Concretely applies the abstract routing table of document 12 to E_q (the twist family of 696.e1). All four cases are verified: Case A (p=q, additive, witness ℓ=29 is valid), Case B (good ordinary, p≠3, 29, also using 29 as the witness), Case C (fixed multiplicative p=3 or 29, using each other as mutual witnesses), Case D (good supersingular — the branch where semistability was originally truly stuck, FW-H1/H2/H3 all verified and passed). Honestly handles the period/Manin issue: a good supersingular p is a good-reduction prime, so there is no p-adic Manin contribution. The Exhaustion section at the end proves that odd primes can only fall into these four categories, and the prime router has not missed any branches.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/17_696e1_All_Prime_Router.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/17-696e1-all-prime-router/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/17-696e1-all-prime-router/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/17-696e1-all-prime-router/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/17-696e1-all-prime-router/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>17 · 696.e1 All-Prime Router</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 17</span>
+      <span class="tag">v0.3 · 17</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Last piece of today's third round · Exhaustive verification of four branch categories</span>
+    </div>
+    <h1>696.e1 All-Prime Router</h1>
+    <p class="h1-sub">Apply the abstract routing table from document 12 specifically to $E_q$ ($q\in\mathcal P$, the twist family of 696.e1) and verify class by class. Taking $d=q$, Theorem 2.14 already gives $L(E_q,1)\ne0$ and $\operatorname{BSD}(E_q,2)$, so now we only need to handle odd primes. Case A ($p=q$, additive): witness $\ell=29$ is valid; since $v_{29}(\Delta_E)=1$, we have $q\nmid v_{29}(\Delta_E)$, residual ramified, and $29$ splits in $\mathbb Q(\sqrt q)$ making the local twist trivial at $29$. Case B (good ordinary, $p\nmid q$): quadratic twist preserves residual irreducibility; except for $p=3,29$ (which are already bad primes and will not occur), all other $p$ can uniformly use $29$ as a witness, since $p\nmid1=v_{29}(\Delta_E)$. Case C (fixed multiplicative, only $p=3,29$): for $p=3$ take $q_0=29$, for $p=29$ take $q_0=3$; both valuations are $1$, and residual ramification holds. Case D (good supersingular) is the branch specifically highlighted by the document—"this is the branch where semistability originally truly got stuck": FW-H1 (good supersingular local representation irreducible, hence global residual absolutely irreducible), FW-H2 (local residual irreducible, cannot be semisimplified into a forbidden type), FW-H3 (taking $\ell=29$, nonsplit multiplicative and $v_{29}(\Delta)=1$, any good supersingular odd prime $p\ne29$ has $p\nmid1$, residual Steinberg extension ramified) are all successfully verified. The document also honestly addresses the period/Manin issue: a good supersingular $p$ is a good-reduction prime ($p\nmid N_{E_q}$), hence there is no $p$-adic Manin contribution (citing existing Manin-constant support results); all mod-$\ell$ images of the base curve are maximal, and the twist preserves odd-$\ell$ irreducibility and the 2-torsion field, thus $E_q$ has no rational prime-degree isogeny. The final Exhaustion paragraph concludes: odd primes for $E_q$ can only fall into one of these four classes—additive, good ordinary, multiplicative $3/29$, good supersingular—all four classes are covered, and the prime router has no missing branches.</p>
+    <div class="claim-box">
+      All four cases (A additive/B good ordinary/C fixed multiplicative/D good supersingular) verified and passed one by one; Exhaustion proves that odd primes will not fall outside these four categories, and the prime router has no missing branches.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../16-696e1-chebotarev-support/">16 · 696.e1 Chebotarev Support Family</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../18-provisional-derived-theorem/">18 · Provisional Derived Family Theorem</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>17 / 40</div>
+    </div>
+    <blockquote class="cite">"This is the branch where semistability was originally truly stuck... odd p for E_q can only be one of four categories... the prime router has no missing branches." — Excerpt from the Case D and Exhaustion paragraphs in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/17_696e1_All_Prime_Router.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/17_696e1_All_Prime_Router.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

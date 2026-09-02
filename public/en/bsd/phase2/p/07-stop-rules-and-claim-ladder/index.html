@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Rules and Claim Ladder · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The v0.1 concluding document, defining Phase 2's own seven-level certificate ladder: C0 literature map, C1 hypothesis compiler, C2 fixed (E,p) certificate, C3 twist-uniform fixed p, C4 finite exceptional prime reduction, C5 all odd primes, C6 complete strong-BSD twist family. Prohibited upgrade list: testing p<1000 does not equal C4/C5; 99.9% of primes does not equal C5; residual image "looking generic" does not equal a theorem; non-semistable sample success does not equal all non-semistable curves; the existence of the Fouquet-Wan theorem does not mean it has been algorithmized. Three-round stopping rule: if for three consecutive rounds only checked primes/curves are added while the H2/H3 exact meaning makes no progress, database expansion is frozen, returning to the local Galois lemma—avoiding "running more and more data, but the global quantifier hasn't shrunk at all."">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/07_Stop_Rules_and_Claim_Ladder.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/07-stop-rules-and-claim-ladder/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/07-stop-rules-and-claim-ladder/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/07-stop-rules-and-claim-ladder/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/07-stop-rules-and-claim-ladder/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>07 · Stopping Rules and Claim Ladder</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 07</span>
+      <span class="tag">v0.1 · 07</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">v0.1 Last Document</span>
+    </div>
+    <h1>Stopping Rules and Claim Ladder</h1>
+    <p class="h1-sub">The concluding document of the v0.1 series, gathering the entire Phase 2 odd-$p$ problem into its own seven-level certificate ladder, whose roles correspond to the C0-C10 ladder defined in Phase 0 for the entire BSD research line, but precisely scaled down to this single Phase 2 subproblem: C0 (literature map, only knowing which theorems might be relevant) → C1 (hypothesis compiler, every FW hypothesis has an exact executable meaning) → C2 (fixed $(E,p)$ rigorously proving $\mathrm{FW}(E,p)$) → C3 (twist-uniform fixed $p$, proving $\forall d\in\mathcal D(E),\ \mathrm{FW}(E_d,p)$) → C4 (finite exceptional prime reduction, proving $p\notin P_E\Rightarrow\mathrm{FW}(E,p)$ and $P_E$ is finite and computable) → C5 (closing $p\in P_E$ item by item to obtain $\forall p>2$) → C6 (splicing with Banwait's 2-part/nonvanishing to obtain full $\forall d,\ \operatorname{BSD}(E_d)$). The document directly lists the five most easily committed conceptual bait-and-switches as a "forbidden upgrade" list: testing $p&lt;1000$ does not equal C4/C5; 99.9% of primes does not equal C5; residual image "looking generic" does not equal a theorem; non-semistable sample success does not equal all non-semistable curves; the existence of the Fouquet–Wan theorem does not mean it has been algorithmized. The final "three-round stopping rule" is the most practical research workflow design of the whole piece: if for three consecutive rounds it only increases the checked primes or the number of curves, while the exact meaning of H2/H3 makes no progress and the finite exceptional set is not theoremized, then database scale expansion must be frozen, retreating back to local Galois lemma work—the document explicitly names this to avoid repeating the failure mode of "running more and more data, but the global quantifier hasn't shrunk at all".</p>
+    <div class="claim-box">
+      C0-C6 seven-level claim ladder; five prohibited upgrade rules; three-round stopping rule—avoiding "running more and more data, but the global quantifier hasn't shrunk at all".
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-phase2-agent-experiment/">06 · Phase 2 First Agent Experiment</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-fw-weight2-exact-translation/">08 · FW Theorem 1.7: Weight-2 Exact Translation</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>07 / 40 (v0.1 completed)</div>
+    </div>
+    <blockquote class="cite">"This avoids repeating 'running more and more data, but the global quantifier hasn't shrunk at all.'" — Excerpt from the "Three-round stopping rule" in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/07_Stop_Rules_and_Claim_Ladder.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/07_Stop_Rules_and_Claim_Ladder.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

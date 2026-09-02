@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 2 First Agent Experiment · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Seven-step experimental design FW-Hypothesis-Compiler/Weight-2 Elliptic Curves. Step 1 only picks 60 curves (20 semistable known to pass + 20 non-semistable rank-0 + 20 deliberate bad/control groups), solely for compiler correctness, not for statistics. Steps 3/4 assign independent Agents to perform symbolic derivation for H2 and H3 respectively; H3 explicitly requires outputting one of three choices: exact equivalence/strict implication/not equivalent, and must not default to being identical to the Banwait criterion. Step 7 finally scans the 895,988 database curves, and UNKNOWN must not be swallowed. The success Gate explicitly states that v0.1 does not need to find new curves, as long as the H2/H3 exact specialisation + twist-invariance lemmas + finite-prime reduction for at least one nontrivial curve class are completed.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_Phase2_Agent_Experiment.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/06-phase2-agent-experiment/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/06-phase2-agent-experiment/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/06-phase2-agent-experiment/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/06-phase2-agent-experiment/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>06 · Phase 2 First Agent Experiment</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 06</span>
+      <span class="tag">v0.1 · 06</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">First Document of Today's Third Round</span>
+    </div>
+    <h1>Phase 2 First Agent Experiment</h1>
+    <p class="h1-sub">Transforms the compiler goals from documents 02 and 04 into a seven-step experimental design, named <code>FW-Hypothesis-Compiler / Weight-2 Elliptic Curves</code>. Step 1 deliberately avoids scanning the full database, selecting only 60 curves (20 semistable known to pass, 20 non-semistable analytic-rank-0, 20 deliberately chosen bad/control groups); the document explicitly states this is solely for compiler correctness, not for statistics. Step 2 builds a local prime table for each curve over a fixed set of small primes plus rational isogeny primes and bad reduction primes. Steps 3 and 4 are the core of the document: assigning independent Agents to perform symbolic derivation for H2 and H3 respectively. H2's task is to specialise Fouquet–Wan's local semisimplification prohibition to weight-2 elliptic curves, deriving computable local criteria classified by the four reduction types (good ordinary/supersingular/multiplicative/additive), and requires outputting a lemma, proof, allowed assumptions, counterexamples, and a Sage predicate, rather than writing code first. H3's task is to compare Fouquet–Wan's auxiliary $\ell$ condition with Banwait's existing $p\nmid v_\ell(\Delta_E)$ criterion, aiming for one of three outcomes—exact equivalence, strict implication, or not equivalent—and the document explicitly forbids assuming they are the same by default. Step 5 formalises the three bridge lemmas, recommending dual output in Lean/theorem-style prose. Step 6 searches for a finite exceptional prime theorem, but if no theorem guarantees completeness, it must not be marked complete. Step 7 finally scans the search pool of about 895,988 non-semistable analytic-rank-0 curves; the first database output must be in the three-state format <code>FW_COMPILER_PASS/FAIL/UNKNOWN</code>, and UNKNOWN must not be swallowed. Finally, the document explicitly relaxes the success Gate for v0.1: finding new curves is not required; as long as the H2/H3 exact specialisation is completed, twist-invariance lemmas are completed, and finite-prime reduction holds on at least one nontrivial curve class, it already constitutes a new mathematical result in standard language.</p>
+    <div class="claim-box">
+      Seven-step experiment; independent Agents assigned for H2/H3 symbolic derivation, H3 must not default to being identical to the Banwait criterion; the 895,988 database curves are only scanned after the compiler passes, UNKNOWN must not be swallowed.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-nonsemistable-family-theorem-schema/">05 · Non-Semistable Family Theorem Schema</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-stop-rules-and-claim-ladder/">07 · Stopping Rules and Claim Ladder</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>06 / 40</div>
+    </div>
+    <blockquote class="cite">"The success of Phase 2 v0.1 does not require finding a new curve... this is already a new standard-language mathematical result." — Excerpt from the "Success Gate" in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/06_Phase2_Agent_Experiment.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_Phase2_Agent_Experiment.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

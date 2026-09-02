@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD Certificate Ladder · BSD Phase 0 · AMRAL</title>
+<meta name="description" content="Core principle: each curve must not just store a boolean "BSD true/false", but must store "which level has been closed by what certificate". C0 (identity) to C5 (algebraic rank bounds), C6 (weak BSD certificate), C7 (single-prime strong BSD), C8 (Sha finite and exact), C9 (full strong BSD), C10 (family theorem). Five absolute prohibitions, the most important being that analytic_sha must not be written as proved_sha, and one must not label a curve as full strong BSD just because some p-part holds.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_BSD_Certificate_Ladder.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase0/p/03-certificate-ladder/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase0/p/03-certificate-ladder/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase0/p/03-certificate-ladder/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase0/p/03-certificate-ladder/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 0</a>
+    <span>/</span>
+    <span>03 · BSD Certificate Ladder</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 0 · 03</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>BSD Certificate Ladder: C0 to C10</h1>
+    <p class="h1-sub">Core principle: each curve must not just store a boolean "BSD true/false," but must store "which layer has been closed by what certificate." From C0 (Identity, minimal Weierstrass model, conductor, CM status), C1 (local arithmetic, bad primes, reduction type, Tamagawa numbers), C2 (numerical analytic rank, evidence only, not necessarily having a rigorous zero-order certificate), C3 (rigorous analytic rank), C4/C5 (algebraic rank lower/upper bounds, given by descent/Selmer yielding r_alg=r), C6 (weak BSD certificate, r_alg=r_an), C7 (single-prime strong BSD, p-part for a specified p), C8 (Sha is finite and exact, cannot use BSD back-calculated values as proof), C9 (full strong BSD, all components closed, including convention, Manin constant, all prime parts, no unproved assumptions), to C10 (family theorem, establishing a uniform theorem for an infinite family). It also lists a certificate status dictionary — unknown, numerical, conditional, theorem_applicable, proved_component, proved_curve, proved_family, refuted_data — and five absolute prohibitions: writing analytic_sha as proved_sha; treating rank() returning an integer as a full proof; tagging full strong BSD just because a certain p-part holds; applying rank 0/1 theorems to rank 2; and treating LMFDB data completeness as BSD completeness.</p>
+    <div class="claim-box">
+      Grading Architecture · C0 (Identity) → C9 (Complete Strong BSD) → C10 (Family Theorem)
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-closure-map/">02 · Known Theorem Closure Map</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-route-matrix/">04 · External Research Route Matrix</a></div>
+      <div class="conn-card"><span class="k">Phase 0 Progress</span>4 / 9</div>
+    </div>
+    <blockquote class="cite">"Strictly prohibited: writing analytic_sha as proved_sha; labeling full strong BSD just because some p-part holds; applying rank 0/1 theorems to rank 2; treating LMFDB data completeness as BSD completeness." — Excerpt from the "Strictly Prohibited" list at the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 0</a>
+    <a href="../../files/03_BSD_Certificate_Ladder.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_BSD_Certificate_Ladder.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

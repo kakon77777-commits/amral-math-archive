@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theorem 2.18 Condition Map · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Lists point by point the seven eligibility conditions for the base curve (E1-E7: semistable, small prime trace, no rational isogeny, ramification, optimality, analytic rank zero, BSD(E,2)), the respective conditions for the two 2-torsion branches (8a/8b), and the common and branch-specific conditions for twist d. Explicitly states that the output semantics is a one-way implication: admissible ⟹ BSD is deduced from cited theorems; not admissible does not imply BSD is false.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/01_Theorem_2_18_Condition_Map.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/01-condition-map/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/01-condition-map/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/01-condition-map/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/01-condition-map/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>01 · Theorem 2.18 Condition Map</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 01</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Theorem 2.18 Condition Map</h1>
+    <p class="h1-sub">Fully unfolds the eligibility conditions of Banwait–Huang Theorem 2.18 into an item-by-item auditable checklist. The base curve $E$ must simultaneously satisfy seven conditions (E1 semistable, E2 small prime trace $a_3(E)\in\{-2,\ldots,2\}$, E3 excludes rational isogenies for $p\in\{3,5,7\}$, E4 ramification conditions at multiplicative primes, E5 $\Gamma_0(N)$-optimal representative, E6 analytic rank is zero, E7 $\operatorname{BSD}(E,2)$ unconditionally verified). The curves are then split into two branches based on 2-torsion structure: branch 8a (no rational 2-torsion, handled by Zhai-type results) and branch 8b (exactly one rational 2-torsion point, requiring $E'=E/E(\mathbb Q)[2]$ to satisfy $\Sha(E')[2]=0$ and $E'(\mathbb Q)[2]\cong\mathbb Z/2\mathbb Z$). For the twist $d$, besides common conditions like being square-free, coprime to $3N$, and $d\equiv1\pmod4$, the Zha16 branch and CLZ20 branch each have their own conditions for primes being inert/split in specific fields. Finally, the document explicitly pins down the directionality of the output semantics: Algorithm 2 does not return "all twists satisfying BSD", but rather a theorem-guaranteed subfamily—admissible implies BSD follows from the cited theorems, but not admissible does not imply BSD is false. This unidirectionality is the core discipline of the entire Phase 1 pipeline.</p>
+    <div class="claim-box">
+      admissible ⟹ BSD follows from cited theorems; not admissible ⇏ BSD false (unidirectional implication)
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../00-consensus/">00 · Phase 1 Consensus Adjudication</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../02-paper-vs-code-audit/">02 · Paper vs. Official Code Audit</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>3 / 24</div>
+    </div>
+    <blockquote class="cite">"admissible ⟹ BSD follows from cited theorems. The converse does not hold: not admissible ⇏ BSD false." — Excerpt from this document's "G. Output Semantics".</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/01_Theorem_2_18_Condition_Map.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/01_Theorem_2_18_Condition_Map.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

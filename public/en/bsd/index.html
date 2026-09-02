@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD Conjecture · AMRAL</title>
+<meta name="description" content="AMRAL Case: Birch and Swinnerton-Dyer Conjecture (one of the Clay Millennium Prize problems). Does not claim to prove BSD—establishes a curve-level certificate ladder (C0-C10), precisely grading exactly which level each curve and each prime has been proven to. All four sub-lines are online: Phase 0 global enclosure framework, P5 deep technical work on strong BSD for the rank-2 curve 389.a1 at prime p=11 (core comparison still OPEN), Phase 1 reproduction of the Banwait-Huang 2026 algorithmized census (COMPLETE), and Phase 2 construction of the explicit twist family for the non-semistable curve 696.e1, 40/40 COMPLETE, status DERIVED THEOREM CANDIDATE.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">About</a>
+  <a class="link" href="../../methodology/">Methodology</a>
+  <a class="link" href="../../protocols/">Protocols</a>
+  <a class="link" href="../../validation/">Validation</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../skew-field/">Skew Field</a>
+  <a class="link" href="../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="./">BSD Conjecture</a>
+  <a class="link" href="../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../bsd/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-BSD</p>
+    <h1>BSD Conjecture</h1>
+    <p class="subtitle">Birch and Swinnerton-Dyer Conjecture · One of the Clay Millennium Prize Problems</p>
+    <p class="lede">
+      Does not claim to prove BSD, nor treats numerical matches as proofs. The core tool is a <strong>curve-level certificate ladder</strong> (C0 identity → C6 weak BSD →
+      C7 single-prime strong form → C8 Sha finite and exact → C9 full strong BSD → C10 family theorem)—for every curve and every prime, it precisely marks
+      exactly which level has been proven, rather than just storing a boolean "BSD true/false" value. During the research process, the system conducted a formal audit on the researcher's own old claims ("lattice rank convergence")
+      and rejected them, which is the point of highest discipline in this line.
+    </p>
+    <p class="notice">
+      All four sub-threads are now online: Phase 0, P5, Phase 1, Phase 2 (40/40 COMPLETE) — the current true status of each line is listed below; the P5 core comparison remains OPEN, and completion is not claimed in advance.
+    </p>
+  </header>
+
+  <section id="phase0">
+    <h2 class="doc-h2">Phase 0 · Global Enclosure</h2>
+    <p class="section-note">2026-08-12 · Verdict: GO, enter Phase 1 · All nine documents are online</p>
+    <nav class="case-grid" aria-label="Phase 0">
+      <a class="case-card" href="./phase0/">
+        <span class="k">Framework · 9 Documents</span>
+        <h3>Split BSD-W/F/S, establish certificate ladder and route matrix</h3>
+        <p>Rejects Neo.K's old "lattice rank convergence" claim; determines Strong-BSD Twist-Family Reproduction as the top choice route; locks onto sample curve 389.a1.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="p5">
+    <h2 class="doc-h2">P5 · 389.a1 at $p=11$</h2>
+    <p class="section-note">2026-08-14 · All ten documents are online · Core comparisons (P5-CANON-BocID, P5-CPLX-GPR) remain OPEN</p>
+    <nav class="case-grid" aria-label="P5">
+      <a class="case-card" href="./p5/">
+        <span class="k">Single-Prime Strong BSD · 10 Documents</span>
+        <h3>Single-prime leading-term formula for the rank-2 curve 389.a1</h3>
+        <p>Starting from the Rank-Uniform Zeta-Primitivity Bridge architecture, closing Sha[11^∞]=0, compressing into two uGPR11 bits, anomalous prime localization establishing the Selmer skeleton, and most recently reaching the determinant Kurihara semi-local closure—the complex leading coefficient comparison remains unclosed.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase1">
+    <h2 class="doc-h2">Phase 1 · Banwait–Huang Reproduction</h2>
+    <p class="section-note">2026-08-12 · All 25 documents are online, 25/25 COMPLETE · Reproduction = COMPLETE</p>
+    <nav class="case-grid" aria-label="Phase 1">
+      <a class="case-card" href="./phase1/">
+        <span class="k">Strong-BSD Twist-Family Reproduction · 25 Documents</span>
+        <h3>arXiv:2601.16044 Full 500K Algorithmized Census</h3>
+        <p>36,687 base curves, 247,391 admissible twist pairs, global twist accounting identity 46,091=46,091 exact PASS. v0.3-v0.6 layer-by-layer corrections: using precise one-commit diffs to find the first-failure of the 13 removed curves, amplifying the small-sample effect to a 500K full-scale measurement, and finally using exact replay to prove that Algorithm 2's expand mechanism was never triggered in the real data domain — the stable domain is a pure monotonic reduction, correcting the earlier guess made from the source diff. Three concrete routes have been proposed for Phase 2 (High-rank wall atlas / strong-BSD coverage expansion / 2-primary frontier).</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="phase2">
+    <h2 class="doc-h2">Phase 2 · 696.e1 Non-Semistable Family</h2>
+    <p class="section-note">2026-08-18 · All 40 documents are online, 40/40 COMPLETE · Status: DERIVED THEOREM CANDIDATE, novelty pending check</p>
+    <nav class="case-grid" aria-label="Phase 2">
+      <a class="case-card" href="./phase2/">
+        <span class="k">Non-Semistable Family · 40 Documents</span>
+        <h3>Curve 696.e1 Explicit Twist Family</h3>
+        <p>Constructs explicit infinite twist families (density 1/24) for non-semistable curves not covered by the Banwait–Huang method. The 29 main thread documents conclude at "DERIVED THEOREM CANDIDATE" (after adversarial review by 6 sub-referees, catching and correcting one citation error, with novelty pending independent external review); the 11 independent side branch documents (Witness-Network/FW_H2) generalize the single-curve result into a reusable seven-condition criterion, ultimately standardizing the FW-H2 criterion into an executable function that requires a complete, replayable output, explicitly prohibiting floating-point approximations and heuristic upgrades.</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 Document-by-Document Verification · Raw bytes, no repackaging</span>
+  </footer>
+</div>
+</body>
+</html>

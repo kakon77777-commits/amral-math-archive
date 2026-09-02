@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delta-Only Algorithm1 Verifier · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Engineering efficiency strategy: since old→current is only one commit, and the Algorithm 1 theorem predicate diff has no other loosen/tighten gates, there is no need to rerun all the old filters like L-value merge, 2-descent, E' descent, and S sets—one only needs to check the new strict isogeny gate and a3 gate curve by curve on the old accepted set, making it an incremental proof replay. Defines the success gate: input 40,749 curves, expected PASS=36,687, FAIL=4,062, and output the full failure histogram. Equally important is the failure significance paragraph: if the delta-only verifier cannot reconstruct the official current set, it means one of five possibilities exists, such as a missed semantic difference; at this point, one should stop and not proceed directly into a full replay.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/12_Delta_Only_Algorithm1_Verifier.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/19-delta-only-verifier/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/19-delta-only-verifier/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/19-delta-only-verifier/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/19-delta-only-verifier/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>19 · Delta-Only Algorithm1 Verifier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 19</span>
+      <span class="tag">v0.4 · 12</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Delta-Only Algorithm1 Verifier</h1>
+    <p class="h1-sub">An engineering efficiency strategy document: there is no need to rerun all old filters like L-value merge, 2-descent, $E'$ descent, and $\mathcal S$ right from the start, because every curve in the old output has already passed the old Algorithm 1. Since there is only one commit from old to current, and the theorem predicate diff of Algorithm 1 has no other loosen/tighten gates, for known old PASS rows, the new membership is exactly equal to the intersection of the "strict-isogeny gate $\land$ $a_3$ gate"—this is a delta-only proof replay, eliminating the need to redo unchanged proof obligations. The input fields are minimized to just three: <code>cremona_label</code>, <code>a3</code>, and <code>isogeny_degrees</code>. The success gate is explicitly defined: inputting the old version's 40,749 curves, the expected PASS=36,687, FAIL=4,062, and it requires outputting a full failure histogram (P_ISOGENY_3/5/7, A3_ABS_3, multi-failure), termed the "first 500K semantic-cause census." The document equally emphasizes what to do upon failure: if the delta-only verifier cannot obtain the official current set, it means at least one of five things (missed semantic differences, different LMFDB release, old and new outputs are not from the same data snapshot, metadata mapping error, or the implementation has unrecorded side effects) is true; at this point, one should stop and not proceed directly to a full replay.</p>
+    <div class="claim-box">
+      Incremental proof replay: new membership = strict-isogeny gate ∧ a3 gate; expected PASS=36,687/FAIL=4,062; if they do not match, it should stop and not proceed directly to full replay.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../18-500k-one-commit-impact/">18 · 500K One-Commit Global Impact</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../20-500k-twist-nonmonotonicity/">20 · 500K Twist Output Non-Monotonicity</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>19 / 25</div>
+    </div>
+    <blockquote class="cite">"It should stop at this point, and not proceed directly to full replay." — Excerpt from the end of the "Meaning of failure" paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/12_Delta_Only_Algorithm1_Verifier.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/12_Delta_Only_Algorithm1_Verifier.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

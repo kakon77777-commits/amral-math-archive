@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Agent Handoff · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Splits Phase 1 v0.2 among six roles: Agent A Sage environment builder, Agent B Algorithm 1 reproducer (saving row counts filter by filter), Agent C 2-Descent referee (forbidding treating dim Sha[2] as ord_2(Sha)), Agent D Algorithm 2 cross-checker, Agent E paper/code version auditor, Agent F global bounding referee (only answering whether theorem coverage is expanded each round; if only enumeration volume is increased, it stops after three consecutive rounds).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_Local_Agent_Handoff.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/06-local-agent-handoff/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/06-local-agent-handoff/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/06-local-agent-handoff/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/06-local-agent-handoff/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>06 · Local Agent Handoff</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 06</span>
+      <span class="tag">v0.1 Last Document</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Local Agent Handoff</h1>
+    <p class="h1-sub">Splits the follow-up work of Phase 1 among six roles, bridging the stopping rules defined in Document 05. Agent A (Sage Environment Builder) first sets up the Sage version, LMFDB release, database connection, and PARI/mwrank state, starting from conductor&lt;150; Agent B (Algorithm 1 Reproducer) outputs the row count after each filter (initial → semistable/optimal/composite conductor → a3 → p-isogeny → ramification → rank/L-value → CLZ branch → Zhai branch → BSD(E,2)), saving the pass/fail reason for each curve; Agent C (2-Descent Referee) specifically monitors <code>check_BSD_at_2</code>—confirming the analytic Sha valuation, saving the bounds of each backend, verifying <code>sha_an_ord_2 != 0 -&gt; False</code>, checking if timeouts cause false negatives, and explicitly forbidding treating $\dim\Sha[2]$ as $\operatorname{ord}_2\#\Sha$; Agent D (Algorithm 2 Cross-Checker) runs both the official Sage code and the pure-Python mirror of this package simultaneously, categorizing discrepancies into six types (number-field index issue, Kronecker convention, negative twist convention, finite-field point count, source-branch mismatch, official code drift); Agent E (Paper/Code Version Auditor) pins the arXiv version, GitHub file SHA, LMFDB release, and runtime flags, outputting the semantic diff between the paper's pseudocode and the current codebase; Agent F (Global Enclosure Referee) asks only three questions per round—did this round expand theorem coverage? Did it increase certificate strength? Or did it merely increase the enumeration volume?—if it is only enumeration volume, stop after three consecutive rounds and directly execute the stopping rules from Document 05.</p>
+    <div class="claim-box">
+      Six-role handoff: Sage environment / Algorithm 1 reproduction / 2-Descent referee / Algorithm 2 cross-check / Version audit / Global enclosure referee.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-enclosure-and-stop-rules/">05 · Global Enclosure and Stop Rules</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-v02-consensus/">07 · Phase 1 v0.2 Convergence Ruling</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>7 / 24</div>
+    </div>
+    <blockquote class="cite">"Not allowed to treat dim Sha[2] as ord_2(#Sha)." — Excerpt from the "Agent C — 2-Descent Referee" duty list in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/06_Local_Agent_Handoff.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_Local_Agent_Handoff.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

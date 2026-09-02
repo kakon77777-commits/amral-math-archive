@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Finite-Exception Witness-Network Criterion · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Completes the two generalization directions pointed out at the end of document 30 all at once. Replaces the valuation-one witness with gcd(g_mult, g_-), proving that odd prime factors will not reject the entire curve, but will only generate a finite exceptional prime table R_mult∪R_-. Explicitly states that this is strictly stronger than the old condition of "both gcds are powers of 2." Generalizes from single-prime twists to arbitrary squarefree products d. Sections 7-8 are the biggest breakthrough: allowing fixed odd additive primes, citing published results from Edixhoven/Česnavičius-Neururer-Saha to provide a period-safe subclass (p≥11 and not of specific Kodaira types). Theorem Schema 9.1 is the general theorem with the complete six conditions. The ending condenses the situation of the entire research line into one sentence: the mathematical bottleneck is no longer the infinite prime quantifier, but a finite local-certificate compiler.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/31_Witness_Network_Criterion_v0.2.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/31-witness-network-criterion/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/31-witness-network-criterion/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/31-witness-network-criterion/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/31-witness-network-criterion/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>31 · A Finite-Exception Witness-Network Criterion</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 31</span>
+      <span class="tag">Side Branch · Witness-Network v0.2</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Neo.K named · The most important piece of the side branch</span>
+    </div>
+    <h1>A Finite-Exception Witness-Network Criterion for Strong BSD in Non-Semistable Quadratic-Twist Families</h1>
+    <p class="h1-sub">Completing the two generalization directions called out at the end of Document 30 all at once, this is the most mathematically dense piece of the entire side branch. The first generalization: replacing the old valuation-one witness with $g_{\mathrm{mult}}=\gcd_{\ell\in\mathcal M}n_\ell$ and $g_-=\gcd_{\ell\in\mathcal M^-}n_\ell$. Lemmas 2.1 and 2.2 prove that odd prime factors will not reject the entire curve, but only generate a finite exceptional prime set $R_{\mathrm{mult}}\cup R_-$—the document explicitly states this is strictly stronger than the old condition "both gcds are powers of 2". The second generalization: expanding from single-prime twists to supporting any squarefree product $d$ over the refined prime set $\mathcal P_E^\circ$, and finite deletion does not change the Chebotarev density. Section 6 provides the complete Route Q/O/M/S prime routing; Route O specifically introduces the Burungale–Castella–Skinner good-ordinary theorem to handle exceptional primes, replacing the old multiplicative-ramification assumption with its <code>(im)</code> residual-image condition. Sections 7-8 represent the biggest breakthrough of the entire text, and the first time the entire side branch truly transcends the "only additive prime is 2" restriction: allowing fixed odd additive primes, providing four local certificates (A1)-(A4), and citing the published results of Edixhoven's theorem (as organized by Česnavičius–Neururer–Saha)—when $p\ge11$ and the local reduction is not potentially ordinary Kodaira type II/III/IV, $p$ automatically does not divide the Manin constant—while honestly warning: for additive primes $3,5,7$ or the excluded Kodaira types, period compatibility still requires explicit finite certificates and "cannot be silently assumed to hold". Theorem Schema 9.1 is the final general theorem of the whole piece, with six conditions covering all the aforementioned mechanisms. Section 10 converges the entire progress using a three-stage progression diagram: valuation-one witnesses ⇓ power-of-two gcd witnesses ⇓ arbitrary witness gcds + finite exceptional-prime routing—and explicitly marks the last step as the strongest: an odd prime factor no longer means "rejecting this curve", it only means "putting this prime into the finite exception table". The concluding Section 11 condenses the situation of the entire research line into a single sentence: the mathematical bottleneck is no longer an infinite prime quantifier, but a finite local-certificate compiler.</p>
+    <div class="claim-box">
+      gcd replaces valuation-1 (strictly stronger); squarefree product replaces single prime; first time allowing fixed odd additive primes (citing Edixhoven's published results); Theorem Schema 9.1 general theorem; conclusion: the bottleneck shifts from an infinite quantifier to a finite compiler.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../30-two-witness-criterion/">30 · A Two-Witness Criterion</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../32-gcd-witness-lemmas/">32 · GCD Witness Lemmas</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>31 / 40</div>
+    </div>
+    <blockquote class="cite">"The mathematical bottleneck is no longer an infinite prime quantifier. It is a finite local-certificate compiler." — Excerpt from the end of Section 11 of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/31_Witness_Network_Criterion_v0.2.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/31_Witness_Network_Criterion_v0.2.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

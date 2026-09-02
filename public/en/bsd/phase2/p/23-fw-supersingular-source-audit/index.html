@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fouquet–Wan Supersingular Source Audit · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The actual audit results from Referee C, re-verifying FW-H1/H2/H3 for any odd good supersingular prime p of E_q, this time directly checking against the normalization in the original FW paper without guessing. The reasons for H1 and H2 PASS are consistent with before. The audit of H3 is the most meticulous: instead of guessing the representation normalization, it finds the explicit definition of Assumption 3 in the original text near FW Theorem 1.1—the local automorphic representation is special Steinberg, and the twist by an unramified character maps ℓ to (-1)ℓ^(k/2-1). When weight k=2, this value is exactly equal to -1, corresponding to a_ℓ=-1 for the elliptic curve newform, i.e., nonsplit multiplicative—this is exactly the actual state of 696.e1 at 29, and the verification passes. The period issue is explicitly left for the next audit.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/23_FW_Supersingular_Source_Audit.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/23-fw-supersingular-source-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/23-fw-supersingular-source-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/23-fw-supersingular-source-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/23-fw-supersingular-source-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>23 · Fouquet–Wan Supersingular Source Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 23</span>
+      <span class="tag">v0.4 · 23</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Referee C Audit Results</span>
+    </div>
+    <h1>Fouquet–Wan Supersingular Source Audit</h1>
+    <p class="h1-sub">The actual audit results from Referee C, re-verifying FW-H1, FW-H2, and FW-H3 for any odd good supersingular prime $p$ of $E_q$. The approach this time is to directly cross-reference the normalization in the original Fouquet–Wan paper, rather than trusting the previously self-derived version. H1: FW requires the global residual representation to be absolutely irreducible; the mod-$p$ image of the base <code>696.e1</code> is maximal, and the quadratic twist preserves absolute irreducibility, PASS. H2: FW Theorem 1.7 excludes the form $\bar\rho|_{G_{\mathbf Q_p}}^{ss}=\chi\oplus\chi_{\rm cyc}\chi$; the good supersingular local residual representation is an irreducible niveau-2 type and cannot be a character direct sum, PASS. The audit of H3 is the most detailed and the focal point of the entire document: instead of guessing the representation normalization, it directly locates the explicit definition of Assumption 3 near FW Theorem 1.1 in the original text—the local automorphic representation is special Steinberg, the twist by an unramified character sends $\ell$ to $(-1)\ell^{k/2-1}$, and the residual representation is ramified. Substituting weight $k=2$: $(-1)\ell^0=-1$, which for an elliptic curve newform means $a_\ell=-1$, i.e., nonsplit multiplicative. Taking $\ell=29$, <code>696.e1</code> is exactly nonsplit multiplicative at $29$, and an admissible $q$ makes $29$ split in $\mathbf Q(\sqrt q)$, rendering the local quadratic twist trivial; furthermore, $v_{29}(\Delta)=1$, so for any odd prime $p\ne29$ the residual remains ramified, PASS. Finally, the document strings together the BSD conclusion: Theorem 2.14 first gives $L(E_q,1)\ne0$, and Fouquet–Wan Corollary 1.10 thus provides the corresponding $p$-part BSD, with the period issue explicitly left for the next audit to handle.</p>
+    <div class="claim-box">
+      H1/H2/H3 are re-verified one by one against the normalization in the original FW paper, all PASS; H3 precisely verifies that weight k=2 gives a_ℓ=-1 (nonsplit multiplicative), matching the actual state of 696.e1 at 29; the period issue is left for the next audit.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../22-odd-prime-source-audit/">22 · Odd Prime Source Audit</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../24-manin-period-audit/">24 · Manin / Period Audit</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>23 / 40</div>
+    </div>
+    <blockquote class="cite">"No need to guess representation normalization. The original text near FW Theorem 1.1 explicitly states that Assumption 3 is equivalent to..." — Excerpt from the beginning of the H3 paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/23_FW_Supersingular_Source_Audit.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/23_FW_Supersingular_Source_Audit.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

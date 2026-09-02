@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fouquet–Wan Hypothesis Compiler · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Formally turns Fouquet-Wan's "unclear how to algorithmically verify" conditions into a compiler problem. Level 0 defines three per-odd-prime hypotheses: FW-H1 absolute irreducibility (state EXACT/THEOREM, directly using Sage/LMFDB metadata), FW-H2 local residual non-degeneracy at p (guessing equivalent conditions in the first round is forbidden; must be derived from theorem/local representation formalism), and FW-H3 auxiliary multiplicative prime (finer than Banwait's p∤ord_ℓ(Δ_E) criterion). Level 1 defines the JSON schema for the base curve→prime certificate. Level 2 is the quantifier compression goal: ∃P_E finite: p∉P_E ⟹ FW(E,p). The core conclusion is that "infinite prime quantifier → finite certificate" is the true Phase 2 mathematical advancement, not curve counting.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/02_Fouquet_Wan_Hypothesis_Compiler.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/02-fouquet-wan-hypothesis-compiler/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/02-fouquet-wan-hypothesis-compiler/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/02-fouquet-wan-hypothesis-compiler/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/02-fouquet-wan-hypothesis-compiler/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>02 · Fouquet–Wan Hypothesis Compiler</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 02</span>
+      <span class="tag">v0.1 · 02</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">v0.1 Last Document</span>
+    </div>
+    <h1>Fouquet–Wan Hypothesis Compiler</h1>
+    <p class="h1-sub">Fouquet–Wan proved the Iwasawa Main Conjecture for modular motives with arbitrary reduction, giving a $p$-part BSD corollary in the weight 2/elliptic curve case, but the paper itself admits "it is not immediately apparent how to algorithmically verify these conditions"—this document formally turns this statement into a compiler problem. Level 0 chooses to first compile a stronger but easier-to-implement sufficient hypothesis package, defining three conditions that must be preserved for every odd prime $p$: FW-H1 (absolutely irreducible $\bar\rho_{E,p}$, state is directly <code>EXACT/THEOREM</code>, using Sage/LMFDB Galois-image/isogeny metadata instead of wildly guessing from a few Frobenius traces), FW-H2 (local residual non-degeneracy at $p$, the document explicitly forbids guessing equivalent conditions like <code>a_p != something</code> in the first round; it must first be derived from the theorem/local representation formalism and then compiled into a predicate—this is exactly why the entire subsequent <code>FW_H2_Local_Isogeny_Compiler</code> sub-series exists), FW-H3 (auxiliary multiplicative prime $\ell\ne p,\ \ell\parallel N$, the document specifically warns that Fouquet–Wan's precise local condition is finer than Banwait's $p\nmid\operatorname{ord}_\ell(\Delta_E)$ criterion and cannot be directly borrowed). Level 1 defines the JSON schema output for each $(E,p)$, where the claim field is tri-state: <code>FW_APPLICABLE / FW_NOT_APPLICABLE / UNKNOWN</code>. Level 2 is the true mathematical goal: instead of scanning $p&lt;1000$ and declaring completion, it aims to establish the form of a "generic large prime theorem + finite exceptional prime list" such as $\exists P_E\text{ finite}: p\notin P_E\Rightarrow\mathrm{FW}(E,p)$. If this cannot be achieved, it must honestly output "FW verified for tested primes" and cannot be upgraded to full BSD. The document condenses the true goal of the entire piece into a single sentence: infinite prime quantifier → finite certificate is the real Phase 2 mathematical advancement, not a count of a million curves.</p>
+    <div class="claim-box">
+      FW-H1 (EXACT) / FW-H2 (must be derived from theory, guessing forbidden) / FW-H3 three hypotheses; the true goal is infinite prime quantifier → finite certificate, not curve counting.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../01-route-matrix/">01 · Phase 2 Route Matrix</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../03-quadratic-twist-invariance-bridge/">03 · Quadratic-Twist Invariance Bridge</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>02 / 40 (Today's first round final document)</div>
+    </div>
+    <blockquote class="cite">"The ideal outcome is not a one-million curve count, but a standard language lemma... infinite prime quantifier → finite certificate. This is the true Phase 2 mathematical advancement." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/02_Fouquet_Wan_Hypothesis_Compiler.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/02_Fouquet_Wan_Hypothesis_Compiler.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

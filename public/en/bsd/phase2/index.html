@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 2 · Non-Semistable Family · BSD Conjecture · AMRAL</title>
+<meta name="description" content="BSD Phase 2: Constructing explicit strong-BSD twist families for non-semistable curves not covered by the Banwait-Huang method. The core tool is compiling Fouquet-Wan's arbitrary-reduction odd-p hypotheses into finite, replayable predicates. 40/40 COMPLETE. The true total is 40 (29 mainline documents + 11 Witness-Network/FW_H2 auxiliary branch documents), corrected from the originally estimated 33. The mainline concludes with "DERIVED THEOREM CANDIDATE" (696.e1 explicit twist family, density 1/24), and the side branch concludes by standardising the FW_H2 criterion into an executable certify_fw_h2 function. Does not claim to prove BSD.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../">BSD Conjecture</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../bsd/phase2/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← BSD Conjecture</a> · Phase 2</p>
+    <h1>Phase 2: Non-Semistable Families</h1>
+    <p class="subtitle">Curve 696.e1 Explicit Twist Family · <strong>40 / 40 COMPLETE</strong></p>
+    <p class="lede">
+      The Banwait–Huang method itself requires the structural restriction of semistability. The goal of Phase 2 is to construct explicit strong-BSD twist families for the non-semistable curves it does not cover, using Fouquet–Wan's arbitrary-reduction Iwasawa Main Conjecture. The core difficulty is compressing the infinite quantifier "must verify for $\forall p>2$" into a finite, replayable exceptional-prime certificate — not claiming to prove BSD, each document only answers which curves/primes the clearly compiled conditions hold for.
+    </p>
+    <p class="notice">
+      <strong>40 / 40 COMPLETE.</strong> Read in the order of the original documents. The true total is 40 documents (corrected from the initial estimate of 33): 29 main thread documents (v0.1
+      NonSemistable Bridge → v0.2 FW Compiler → v0.3 First NonSemistable Family → v0.4 696e1 Referee Audit,
+      consecutively numbered 00-28), plus an independent "Witness-Network / FW_H2" auxiliary branch of 11 documents (three theorem-note papers credited to Neo.K + the local isogeny compiler for the FW-H2 condition) — this branch was completely missed in the initial estimate and was filled in after discovery. The main thread concludes at
+      "DERIVED THEOREM CANDIDATE" (696.e1 explicit twist family, novelty pending check), and the side branch concludes by standardizing the FW_H2 criterion into an
+      executable function that requires a complete, replayable output.
+    </p>
+  </header>
+
+  <section id="docs">
+    <h2 class="doc-h2">Online Documents · Mainline</h2>
+    <nav class="case-grid" aria-label="Phase 2 主線文件">
+      <a class="case-card" href="./p/00-global-enclosure-consensus/">
+        <span class="k">00</span>
+        <h3>Phase 2 Global Enclosure Consensus</h3>
+        <p>Cut the three mainlines of higher 2-descent/full 2-torsion/rank 1, GO into Fouquet-Wan Hypothesis Compiler.</p>
+      </a>
+      <a class="case-card" href="./p/01-route-matrix/">
+        <span class="k">01</span>
+        <h3>Phase 2 Route Matrix</h3>
+        <p>Complete comparison table of eight routes. The sorting is by "expandability", not by mathematical difficulty.</p>
+      </a>
+      <a class="case-card" href="./p/02-fouquet-wan-hypothesis-compiler/">
+        <span class="k">02</span>
+        <h3>Fouquet–Wan Hypothesis Compiler</h3>
+        <p>FW-H1/H2/H3 three hypotheses. True goal: infinite prime quantifier → finite certificate.</p>
+      </a>
+      <a class="case-card" href="./p/03-quadratic-twist-invariance-bridge/">
+        <span class="k">03</span>
+        <h3>Quadratic-Twist Invariance Bridge</h3>
+        <p>Three candidate lemmas prove FW(E,p) ⟹ FW(E_d,p). Only solves ∀d, ∀p&gt;2 is untouched.</p>
+      </a>
+      <a class="case-card" href="./p/04-finite-exceptional-prime-problem/">
+        <span class="k">04</span>
+        <h3>Finite Exceptional Prime Problem</h3>
+        <p>H1 is finite, H3 has a heuristic, H2 is the least clear. Failure criterion: must not use "tested up to B" to replace the universal quantifier.</p>
+      </a>
+      <a class="case-card" href="./p/05-nonsemistable-family-theorem-schema/">
+        <span class="k">05</span>
+        <h3>Non-Semistable Family Theorem Schema</h3>
+        <p>Candidate theorem complete proof obligations. Two major gaps: ∀p&gt;2 unclosed, period/Manin constant splicing.</p>
+      </a>
+      <a class="case-card" href="./p/06-phase2-agent-experiment/">
+        <span class="k">06</span>
+        <h3>Phase 2 First Agent Experiment</h3>
+        <p>Seven-step experiment design. H2/H3 each assigned an independent Agent for symbolic derivation, must not default to being the same as the Banwait criteria.</p>
+      </a>
+      <a class="case-card" href="./p/07-stop-rules-and-claim-ladder/">
+        <span class="k">07</span>
+        <h3>Stopping Rules and Claim Ladder</h3>
+        <p>Phase 2's own C0-C6 seven-level certificate ladder. Three-round stop rules: avoiding running more and more data without shrinking the quantifier. v0.1 Complete.</p>
+      </a>
+      <a class="case-card" href="./p/08-fw-weight2-exact-translation/">
+        <span class="k">08</span>
+        <h3>FW Theorem 1.7:Weight-2 Exact Translation</h3>
+        <p>H2 is truly derived: H2 FAIL ⟺ αβ⁻¹∈{χ_cyc,χ_cyc⁻¹}. H3 is also precisely specialized. Opening of v0.2.</p>
+      </a>
+      <a class="case-card" href="./p/09-fw-h3-exact-compiler/">
+        <span class="k">09</span>
+        <h3>FW-H3 Exact Elliptic-Curve Compiler</h3>
+        <p>Uniform certificate: g_-(E)=2^a ⟹ for all p&gt;2, H3=PASS. ∀p&gt;2 is compressed into a finite check on a single hypothesis for the first time.</p>
+      </a>
+      <a class="case-card" href="./p/10-fw-h2-and-ordinary-obstruction/">
+        <span class="k">10</span>
+        <h3>FW-H2 Compiler and Ordinary Obstruction</h3>
+        <p>Good supersingular: H1/H2 automatically PASS. Ordinary has no clean finite-exception theorem; FW scope narrows to additive+supersingular.</p>
+      </a>
+      <a class="case-card" href="./p/11-derived-supersingular-fw-bridge/">
+        <span class="k">11</span>
+        <h3>Derived Supersingular FW Bridge</h3>
+        <p>∀p&gt;2 is truly closed over the entire good supersingular branch for the first time. Safe period condition: first version requires c_E=1.</p>
+      </a>
+      <a class="case-card" href="./p/12-hybrid-odd-prime-router/">
+        <span class="k">12</span>
+        <h3>Hybrid Odd-Prime Router</h3>
+        <p>P0-P5 six classes of routing tables, each assigned the most appropriate existing tool. Splitting ∀p&gt;2 into four pieces is the only feasible quantifier compression.</p>
+      </a>
+      <a class="case-card" href="./p/13-candidate-nonsemistable-strong-bsd-family/">
+        <span class="k">13</span>
+        <h3>Candidate Non-Semistable Strong-BSD Family Schema</h3>
+        <p>B0-B5 six verifiable conditions. Six uncompleted proof obligations, explicitly states it will not upgrade to theorem. v0.2 concluded.</p>
+      </a>
+      <a class="case-card" href="./p/14-candidate-sieve/">
+        <span class="k">14</span>
+        <h3>Candidate Sieve: Why did 696.e1 emerge?</h3>
+        <p>696.e1 makes its first appearance, paired with the control group 116.b1 to precisely locate the truly necessary conditions. Opening of v0.3.</p>
+      </a>
+      <a class="case-card" href="./p/15-696e1-base-certificate/">
+        <span class="k">15</span>
+        <h3>696.e1 Base Certificate</h3>
+        <p>Complete base certificate. BSD(E,2) is inherited from existing conductor≤5000 literature, not newly proven in this series.</p>
+      </a>
+      <a class="case-card" href="./p/16-696e1-chebotarev-support/">
+        <span class="k">16</span>
+        <h3>696.e1 Chebotarev Support Family</h3>
+        <p>Exact Chebotarev density 1/24. The first concretely verified twist parameter d=241.</p>
+      </a>
+      <a class="case-card" href="./p/17-696e1-all-prime-router/">
+        <span class="k">17</span>
+        <h3>696.e1 All-Prime Router</h3>
+        <p>All four branches (additive/ordinary/multiplicative/supersingular) are exhaustively verified and passed, with no omissions.</p>
+      </a>
+      <a class="case-card" href="./p/18-provisional-derived-theorem/">
+        <span class="k">18</span>
+        <h3>Provisional Derived Family Theorem</h3>
+        <p>Candidate theorem drafted for the first time: ∀q∈P, BSD(E_q). 11 items CLOSED, 5 items pending independent referee check. v0.3 opening.</p>
+      </a>
+      <a class="case-card" href="./p/19-independent-referee-handoff/">
+        <span class="k">19</span>
+        <h3>Independent Referee / Local Agent Handoff</h3>
+        <p>Six adversarial referees, with a stance of "first attempt to overthrow". A-E must all pass to upgrade; if one fails, roll back to the exact lemma. v0.3 concluded.</p>
+      </a>
+      <a class="case-card" href="./p/20-adversarial-referee-verdict/">
+        <span class="k">20</span>
+        <h3>Adversarial Referee Verdict</h3>
+        <p>The proof router was not killed, but a real citation error was caught. Claim level upgraded to DERIVED THEOREM CANDIDATE. Opening of v0.4.</p>
+      </a>
+      <a class="case-card" href="./p/21-base-bsd-anchor-repair/">
+        <span class="k">21</span>
+        <h3>Base BSD Anchor Repair</h3>
+        <p>Miller's "most" was miscited as "all", repaired by switching citation to Creutz-Miller Theorem 1.1 (unconditional version).</p>
+      </a>
+      <a class="case-card" href="./p/22-odd-prime-source-audit/">
+        <span class="k">22</span>
+        <h3>Odd Prime Source Audit</h3>
+        <p>The three branches are traced back one by one to named theorems (BSTW 9.21c, Skinner Theorem C) and re-verified, all PASS.</p>
+      </a>
+      <a class="case-card" href="./p/23-fw-supersingular-source-audit/">
+        <span class="k">23</span>
+        <h3>Fouquet–Wan Supersingular Source Audit</h3>
+        <p>Re-verified H1/H2/H3 against the normalization in the original FW paper, all PASS. The period issue is left for the next audit.</p>
+      </a>
+      <a class="case-card" href="./p/24-manin-period-audit/">
+        <span class="k">24</span>
+        <h3>Manin / Period Audit</h3>
+        <p>good supersingular p automatically has p∤c_{E_q}, period issue closed. The isogeny class of E_q is a singleton, automatically optimal.</p>
+      </a>
+      <a class="case-card" href="./p/25-chebotarev-referee-audit/">
+        <span class="k">25</span>
+        <h3>Chebotarev Referee Audit</h3>
+        <p>Independently recalculated the entire Chebotarev argument, the density is also 1/24, the two calculations corroborating each other.</p>
+      </a>
+      <a class="case-card" href="./p/26-novelty-search-log/">
+        <span class="k">26</span>
+        <h3>Novelty Search Log</h3>
+        <p>arXiv search found no directly corresponding results, but explicitly states NO HIT ≠ NOVELTY PROOF.</p>
+      </a>
+      <a class="case-card" href="./p/27-revised-derived-theorem-candidate/">
+        <span class="k">27</span>
+        <h3>Revised Derived Theorem Candidate</h3>
+        <p>Final proof router: six categories of primes each correspond to named theorems, exhaustively covered. Claim label = DERIVED THEOREM CANDIDATE.</p>
+      </a>
+      <a class="case-card" href="./p/28-submission-gate/">
+        <span class="k">28</span>
+        <h3>Submission / Publication Gate</h3>
+        <p>Five tasks before publication; suggested phrasing explicitly avoids "brand new theorem" claims. <strong>Main line 00-28 completed, 29/29.</strong></p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="witness-network">
+    <h2 class="doc-h2">Online Documents · Witness-Network / FW_H2 Side Branch</h2>
+    <p class="section-note">
+      Another line parallel to the mainline, with the same 696.e1 result, but written as a formal paper with Neo.K named, numbered Lemmas/Propositions, and real literature citations,
+      abstracting the proof for a single curve into a reusable general criterion version by version. 11 documents, consecutively numbered.
+    </p>
+    <nav class="case-grid" aria-label="Phase 2 Witness-Network 側線文件">
+      <a class="case-card" href="./p/29-theorem-note-696e1/">
+        <span class="k">29</span>
+        <h3>696.e1 Theorem Note v1.0</h3>
+        <p>Complete paper named by Neo.K. Theorem 1.1 + six lemmas + real numerical sanity check (27667/664579 vs 1/24).</p>
+      </a>
+      <a class="case-card" href="./p/30-two-witness-criterion/">
+        <span class="k">30</span>
+        <h3>A Two-Witness Criterion</h3>
+        <p>Abstracts the single-curve proof into a reusable criterion of seven conditions T1-T7. 696.e1 is downgraded to a concrete Corollary.</p>
+      </a>
+      <a class="case-card" href="./p/31-witness-network-criterion/">
+        <span class="k">31</span>
+        <h3>A Finite-Exception Witness-Network Criterion</h3>
+        <p>The most important side-branch document: gcd replaces valuation-1, allowing fixed odd additive primes for the first time. "The bottleneck shifts from an infinite quantifier to a finite compiler."</p>
+      </a>
+      <a class="case-card" href="./p/32-gcd-witness-lemmas/">
+        <span class="k">00</span>
+        <h3>GCD Witness Lemmas</h3>
+        <p>Streamlined quick-reference version of Section 2 from document 31: all three lemmas reduce to the same gcd lemma.</p>
+      </a>
+      <a class="case-card" href="./p/33-odd-additive-period-barrier/">
+        <span class="k">01</span>
+        <h3>Odd Additive Period Barrier</h3>
+        <p>Why fixed additive primes are harder than good supersingular: period normalization, not the Iwasawa theorem itself.</p>
+      </a>
+      <a class="case-card" href="./p/34-next-compiler-targets/">
+        <span class="k">02</span>
+        <h3>Next Compiler Targets</h3>
+        <p>Four priorities handed off to the next package. Requires five-state output, UNKNOWN must be visible. <strong>Witness-Network Complete.</strong></p>
+      </a>
+      <a class="case-card" href="./p/35-fw-h2-jordan-holder-lemma/">
+        <span class="k">03</span>
+        <h3>FW-H2 Jordan–Hölder Lemma</h3>
+        <p>Exact lemma: FW17-H2 FAIL ⟺ a certain Jordan-Hölder character is quadratic or trivial. First formal proof.</p>
+      </a>
+      <a class="case-card" href="./p/36-local-p-isogeny-kernel-criterion/">
+        <span class="k">04</span>
+        <h3>Local p-Isogeny Kernel Criterion</h3>
+        <p>Abstract criteria translated into computable isogeny kernel conditions. Only one isogeny + dual is needed, without needing to enumerate all.</p>
+      </a>
+      <a class="case-card" href="./p/37-kodaira-prefilters-and-nogo/">
+        <span class="k">05</span>
+        <h3>Kodaira Prefilters and No-Go Results</h3>
+        <p>Three computation-free shortcuts + formally prohibits unproven Kodaira-only inference tables.</p>
+      </a>
+      <a class="case-card" href="./p/38-witness-network-v03-integration/">
+        <span class="k">06</span>
+        <h3>Witness-Network v0.3 Integration</h3>
+        <p>Assembled into complete FW_PROFILE pseudocode. A2 H2 UNKNOWN → exact finite local isogeny test.</p>
+      </a>
+      <a class="case-card" href="./p/39-local-agent-implementation-spec/">
+        <span class="k">07</span>
+        <h3>Local Agent Implementation Spec</h3>
+        <p>FW_H2 criterion normalized into an implementable function, forbidding floating-point approximation and heuristic upgrades. <strong>Phase 2 all 40/40 completed.</strong></p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← BSD Conjecture</a>
+    <span>SHA-256 Document-by-Document Verification · Raw bytes, no repackaging</span>
+  </footer>
+</div>
+</body>
+</html>

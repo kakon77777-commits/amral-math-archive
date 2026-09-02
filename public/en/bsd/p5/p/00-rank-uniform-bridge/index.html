@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rank-Uniform Zeta-Primitivity Bridge · BSD P5 · AMRAL</title>
+<meta name="description" content="The architectural starting point for the entire P5 line: splits BSD into three non-interchangeable propositions: BSD-W (rank equality) / BSD-F (Sha finiteness) / BSD-S (leading term formula), establishes the curve-level certificate ladder C0-C10, proves two methodological no-gos (global quantifier compression is not a proof mechanism; lattice/function limits do not preserve zero multiplicity), defines the Rank-Uniform Global Zeta-Primitivity Bridge (RUGZPB), and proves a conditional theorem: if RUGZPB holds, then full BSD holds. Does not claim to have proven or disproven BSD.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_Rank_Uniform_Zeta_Primitivity_Reduction_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/00-rank-uniform-bridge/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/00-rank-uniform-bridge/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/00-rank-uniform-bridge/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/00-rank-uniform-bridge/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>00 · Rank-Uniform Zeta-Primitivity Bridge</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 00</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">Foundation Document</span>
+    </div>
+    <h1>Global Compression and High-Rank Irreducible Frontier of BSD: Rank-Uniform Zeta Primitivity Reduction</h1>
+    <p class="h1-sub">The architectural starting point for the entire P5 (and subsequent high-rank BSD research). The document first breaks BSD down into three non-interchangeable propositions: BSD-W (rank equality r_alg=r_an), BSD-F (Sha is finite), and BSD-S (leading coefficient formula). It then proves two methodological no-gos: First, writing "BSD holds for all curves" as a single non-negative global quantity (faithful positive atomic compression), while logically equivalent, still requires a completely new arithmetic vanishing mechanism for "defect quantity is zero"; quantifier compression is not a collapse of proof complexity. Second, latticization or limits of function sequences do not preserve zero multiplicity (giving the explicit counterexample f_a(z)=z(z+a)→z², where the order of vanishing jumps from 1 to 2). Therefore, any route that deduces BSD by directly taking the limit from lattice/discrete L-functions must separately prove a multiplicity stabilization theorem — this is exactly the source of the theoretical basis for the document later (see document 05) rejecting Neo.K's old "lattice rank convergence" claim. On the positive side, the document defines a certificate ladder from C0 (identity) to C10 (family theorem), and proposes the Rank-Uniform Global Zeta-Primitivity Bridge (RUGZPB, eight conditions R1-R8), proving the conditional Theorem 13.1: if RUGZPB holds for a curve, then the full BSD (BSD-W+BSD-F+BSD-S) for that curve holds simultaneously. The document explicitly states this is not a BSD proof — RUGZPB itself remains an open candidate theorem target; Theorem 13.1 merely compresses the scattered high-rank obligations into an interface that can be attacked item by item, formalized, and can fail. Finally, the document selects 389.a1 (rank 2) as the wall probe, leaving seven subsequent proof obligations P1-P7, among which P4 (single-prime rank-2 closure) is exactly the direct starting point for the subsequent v0.2 RUGZPB update and the entire P5 v0.3-v1.3 series.</p>
+    <div class="claim-box">
+      Theorem 13.1: ∀E/ℚ, RUGZPB(E) ⟹ BSD(E) — a conditional reduction, not a BSD proof.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next</span><a href="../01-sha-closure-p4/">01 · P4 Single-Prime Sha Finiteness Closure</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>1 / 10</div>
+    </div>
+    <blockquote class="cite">"The final verdict of this document is not: BSD solved. Rather, it is: the current high-rank global frontier of BSD can be compressed into a rank-uniform analytic-to-integral zeta-primitivity bridge." — Excerpt from Section "26. Conclusion" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_Rank_Uniform_Zeta_Primitivity_Reduction_v0.1.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_Rank_Uniform_Zeta_Primitivity_Reduction_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

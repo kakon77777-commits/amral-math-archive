@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm 2 Independent Reproduction · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Establishes a mirror relying only on the Python standard library, replaying squarefree/gcd/a_p/finite-field point count/2-adic valuation/quadratic splitting/cubic 2-division inertness/sign condition. 46a1 gets exactly the same 7 twists as the official, 106d1 gets exactly the same 21 twists as the official, exact list match. Explicitly marks that the inertness determination uses the simplification of cubic reduction mod p; formal certificates should use the Sage number-field backend as the authority.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_Algorithm2_Independent_Reproduction.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/03-algorithm2-reproduction/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/03-algorithm2-reproduction/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/03-algorithm2-reproduction/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/03-algorithm2-reproduction/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>03 · Algorithm 2 Independent Reproduction</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 03</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Algorithm 2 Independent Reproduction</h1>
+    <p class="h1-sub">Builds a mirror relying only on the Python standard library, replaying squarefree, gcd, $a_p$, finite field point counts, 2-adic valuation, quadratic splitting, cubic 2-division inertness, and sign condition — deliberately not implementing the descent/isogeny/optimality/L-value parts of Algorithm 1, precisely locking the scope to the branch logic of Algorithm 2. Finite field point counts are calculated directly using the discriminant $D_x=(a_1x+a_3)^2+4(x^3+a_2x^2+a_4x+a_6)$ paired with the Legendre symbol, and the ordinary test checks $p\nmid a_p(E)$. The CLZ branch for 46a1 yields the exact same 7 twists as the official one ($1,185,265,305,745,785,905$), and the Zhai branch for 106d1 uses the cubic of the 2-torsion $x$-coordinate to determine inert primes, yielding the exact same 21 twists as the official one — both are exact list matches, not just matching counts. The document honestly marks the technical limitations of this mirror: cubic reduction modulo $p$ is only a simplified determination of inertness; formal number field computations should use full $p\mathcal O_F$ factorization or Sage's <code>is_prime()</code>. The reason this test can use the simplified version is that the theorem's own $(d,3N)=1$ condition has already excluded the relevant ramified bad primes — but the full production version should still use the Sage number-field backend as the authority, not this simplified mirror.</p>
+    <div class="claim-box">
+      46a1: 7 twists exact match; 106d1: 21 twists exact match—Algorithm 2 branch logic can be independently replayed.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-paper-vs-code-audit/">02 · Paper and Official Code Audit</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-environment-and-gaps/">04 · Algorithm 1 Execution Environment and Gaps</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>6 / 24</div>
+    </div>
+    <blockquote class="cite">"full production should still treat the Sage number-field backend as authoritative." — Excerpt from this document's "5. Limitations".</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/03_Algorithm2_Independent_Reproduction.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_Algorithm2_Independent_Reproduction.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

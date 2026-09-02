@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finite Exceptional Prime Problem · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Directly dismantles the "mother problem" of how ∀p>2, FW(E,p) turns into a finite certificate. H1 is finite: absolute reducibility is equivalent to the existence of a rational p-isogeny, which only occurs at finitely many primes and can generate a finite set P_red(E) via LMFDB/Sage. H3 has a finite-exception heuristic: P_ram(E) is the intersection of multiple witness primes ℓ, but the document warns that FW-H3 is finer than pure ramification; this formula can only serve as a compiler heuristic, not directly as a theorem. H2 is currently the least clear part, being the first true algebraic task of Phase 2. Success criteria: all three obstruction sets are finite/effectively computable/certificate-producing. Failure criteria are given equally explicitly: if incompressible local Galois computations are required for infinitely many p, the route must be downgraded to a "per-prime theorem", and "tested up to B" must not be used to replace the universal quantifier.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/04_Finite_Exceptional_Prime_Problem.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/04-finite-exceptional-prime-problem/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/04-finite-exceptional-prime-problem/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/04-finite-exceptional-prime-problem/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/04-finite-exceptional-prime-problem/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>04 · Finite Exceptional Prime Problem</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 04</span>
+      <span class="tag">v0.1 · 04</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Finite Exceptional Prime Problem</h1>
+    <p class="h1-sub">Directly dismantling the mother problem left by document 00: how does $\forall p>2,\ \mathrm{FW}(E,p)$ become a finite certificate? The document examines the "finiteness" of each of the three hypotheses point by point. H1 is good news: absolute reducibility (i.e., $\bar\rho_{E,p}$ is reducible) is equivalent to the existence of a residual stable line of rational $p$-isogeny type, which for a given $E/\mathbb Q$ only occurs at finitely many primes, and can be directly generated as a finite set $P_{\rm red}(E)$ from LMFDB isogeny/Galois-image metadata, Sage isogeny classes, and known rational isogeny theorems. H3 has a finite-exception heuristic: if a fixed multiplicative $\ell\parallel N$ can serve as a witness, then residual ramification is often related to $p\nmid v_\ell(\Delta_E)$, and multiple witness candidates can intersect to form $P_{\rm ram}(E)$—but the document explicitly warns that Fouquet–Wan's precise H3 condition is finer than pure ramification; this formula can only serve as a compiler heuristic and cannot be directly treated as a theorem. H2 is directly singled out by the document as the most unclear part at present; whether it can be reduced to $a_p$ congruences, local reduction types, or a finite exceptional set requires formal derivation—this is exactly the first real algebraic task of Phase 2. The document gives a precise success criterion: find a theorem such that $p\notin P_{\rm red}(E)\cup P_{\rm loc}(E)\cup P_{\rm ram}(E)\Rightarrow\mathrm{FW}(E,p)$, and the three sets on the right are all finite, effectively computable, and certificate-producing. Equally precise is the failure criterion: if the precise conditions for H2/H3 require incompressible local Galois computations for infinitely many $p$, and there is no generic-large-$p$ theorem, the route can only be downgraded to a "per-prime theorem, not a full-BSD family closure"—the document explicitly forbids using "tested up to $B$" as a substitute for the universal quantifier.</p>
+    <div class="claim-box">
+      H1 is finite (P_red can be calculated directly from LMFDB); H3 has a heuristic but is finer than pure ramification; H2 is the least clear and is the first true algebraic task of Phase 2; the failure criteria explicitly prohibit substituting "tested up to B" for the universal quantifier.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../03-quadratic-twist-invariance-bridge/">03 · Quadratic-Twist Invariance Bridge</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../05-nonsemistable-family-theorem-schema/">05 · Non-Semistable Family Theorem Schema</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>04 / 40</div>
+    </div>
+    <blockquote class="cite">"route remains a per-prime theorem, not full-BSD family closure. At this point it must be downgraded, and 'tested up to B' must not be used to replace the universal quantifier." — Excerpt from this document's "Failure Criteria".</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/04_Finite_Exceptional_Prime_Problem.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/04_Finite_Exceptional_Prime_Problem.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

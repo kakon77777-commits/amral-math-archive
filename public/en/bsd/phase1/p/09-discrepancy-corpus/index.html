@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Discrepancy Corpus · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The official repository explains the current Algorithm 1 rejection reasons predicate by predicate for four curves (62a1, 66b1, 105a1, 141c1)—all four jointly pass all other gates, but individually fail on four specific predicates: ord_2 L^alg value, 2-torsion structure, rational square condition, and non-emptiness of the S set. Positioned as an adversarial regression corpus for the theorem-router: if a future version suddenly accepts these four, the first label should be REGRESSION?, not NEW BSD BREAKTHROUGH!">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/02_Official_Discrepancy_Corpus.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/09-discrepancy-corpus/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/09-discrepancy-corpus/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/09-discrepancy-corpus/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/09-discrepancy-corpus/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>09 · Official Discrepancy Corpus</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 09</span>
+      <span class="tag">v0.2 · 02</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Official Discrepancy Corpus</h1>
+    <p class="h1-sub">The official repository preserves a dedicated diagnostic report explaining predicate by predicate why the current Algorithm 1 rejects four curves: 62a1, 66b1, 105a1, and 141c1. These four curves all passed semistability, isogeny exclusion, ramification, optimality, the rank-zero gate, the 2-descent gate for $E'$, and the current $\operatorname{BSD}(E,2)$ gate, but each failed on four specific predicates: $\operatorname{ord}_2 L^{\mathrm{alg}}=-2$ (CLZ20 requires $-1$), the 2-torsion structure of $E'(\mathbb Q)_{\mathrm{tors}}$ is $(2,2)$ (failing the required cyclic condition), $f'(x_0)$ is the square of a rational number, and the $\mathcal S$ non-emptiness gate failed. The document explicitly positions this data as an adversarial regression corpus for the theorem-router, and provides a precise, directly quotable discipline: if a future version suddenly accepts these four curves, the first tag applied should be <code>REGRESSION?</code>, not <code>NEW BSD BREAKTHROUGH!</code> — this is exactly applying the discipline of "reason=OPEN, do not guess" from document 08 in reverse to the scenario of "unexpectedly passing."</p>
+    <div class="claim-box">
+      Exact rejection predicates for the four curves 62a1/66b1/105a1/141c1; if they unexpectedly pass in the future ⟹ mark as REGRESSION? first, not BREAKTHROUGH.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../08-fixture-regression/">08 · Small-Sample Version Regression: 25 → 12</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../10-soundness-gates/">10 · Algorithm 1 Soundness Gates</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>10 / 24</div>
+    </div>
+    <blockquote class="cite">"If a future version suddenly accepts these four curves, the first label should be REGRESSION?, not NEW BSD BREAKTHROUGH!" — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/02_Official_Discrepancy_Corpus.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/02_Official_Discrepancy_Corpus.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

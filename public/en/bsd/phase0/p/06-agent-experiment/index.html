@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 Agent Experiment Specifications · BSD Phase 0 · AMRAL</title>
+<meta name="description" content="Experimental specifications for Certificate Atlas + Strong-BSD Twist-Family Reproduction. The goal is not to compute a BSD ratio for millions of curves, but to generate theorem-applicability, certificate levels, and unclosed items for every isogeny class in the complete finite domain (N_E<500,000). The first rank-2 sample is 389.a1, and the first family reproduction is reproducing the Banwait–Huang 2026 algorithm. The success conditions explicitly do not require a new BSD theorem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_Phase1_Agent_Experiment.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase0/p/06-agent-experiment/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase0/p/06-agent-experiment/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase0/p/06-agent-experiment/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase0/p/06-agent-experiment/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 0</a>
+    <span>/</span>
+    <span>06 · Phase 1 Agent Experiment Specifications</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 0 · 06</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Phase 1 Agent Experiment Specifications: Certificate Atlas + Twist-Family Reproduction</h1>
+    <p class="h1-sub">The goal is not to "calculate a BSD ratio for millions of curves," but to generate theorem-applicability, certificate levels, and unclosed items for every isogeny class in a complete finite domain (N_E<500,000, full LMFDB coverage). The workflow is divided into five steps: Ingest (fetching LMFDB/Cremona label, a-invariants, rank, regulator, etc.), Evidence typing (tagging each field as exact/rigorous_computation/numerical/BSD_inferred/unknown), Theorem router (checking GZK, BSTW zeta-element, Banwait–Huang, main conjecture, p-converse, etc. item by item), Certificate level (tagging according to C0–C10), and Wall classification (restricting unclosed reasons to a controlled vocabulary). Testing is divided into three groups: R0 (rank 0, testing weak BSD known theorems and p-parts), R1 (rank 1, testing Heegner point/Kolyvagin applicability), and R2+ (rank≥2, not seeking comprehensive closure, only finding where theorem coverage suddenly drops). The first rank-2 sample is 389.a1 (LMFDB gives r_alg=r_an=2, numerical leading term matches), but the Agent's task is not to recalculate it, but to answer item by item the source of the certificates, whether generators are saturated, whether Sha_an=1 is an actual proof, and which p-parts are known. The first family reproduction is reproducing the Banwait–Huang 2026 algorithm, first running the authors' samples and then all conductor≤500,000, performing an adversarial audit on discrepancies. The success conditions explicitly do not require a new BSD theorem, only a complete schema, certificates for at least three classes of curves, algorithm reproducibility, the ability to distinguish evidence/theorem for each result, and finding the top three common bottlenecks for high rank.</p>
+    <div class="claim-box">
+      Experiment Specifications · Benchmark: N_E &lt; 500,000, sample curve 389.a1
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-lattice-audit/">05 · Audit of Neo.K's Old Lattice Rank Convergence Route</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-globalizer/">07 · BSD Certificate Globalizer</a></div>
+      <div class="conn-card"><span class="k">Phase 0 Progress</span>7 / 9</div>
+    </div>
+    <blockquote class="cite">"Not: computing a BSD ratio for millions of curves. But rather: generating theorem-applicability, certificate levels, and unclosed items for every isogeny class in a complete finite domain." — Excerpt from "0. Goal" in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 0</a>
+    <a href="../../files/06_Phase1_Agent_Experiment.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_Phase1_Agent_Experiment.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

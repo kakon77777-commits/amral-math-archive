@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500K One-Commit Global Impact · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Amplifies the "exactly one commit" effect discovered in document 14 to the official full conductor<500,000 dataset: the same commit caused a net removal of 4062 curves from ec_labels_500k.txt, accepted base curves dropped from 40,749 to 36,687, and the pre-candidate pool acceptance rate dropped from 22.8460% to 20.5686% (a drop of about 2.28 percentage points), with an impact of about 0.1325 percentage points on all 3,064,705 curves. Set-level closure: every removed curve must fall into new strict isogeny failure ∪ {|a3|=3}, but the exact histogram remains unknown, and the 9/2/1/1 ratio from <150 cannot be extrapolated to 500K. Core conclusion: semantic versioning is not supplementary engineering, but a part of mathematical soundness.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/11_500K_One_Commit_Global_Impact.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/18-500k-one-commit-impact/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/18-500k-one-commit-impact/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/18-500k-one-commit-impact/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/18-500k-one-commit-impact/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>18 · 500K One-Commit Global Impact</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 18</span>
+      <span class="tag">v0.4 · 11</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>500K One-Commit Global Impact</h1>
+    <p class="h1-sub">Amplifies the "exactly one commit" effect discovered in the small <code>&lt;150</code> sample in Document 14 directly onto the official full-scale <code>conductor&lt;500,000</code> dataset for measurement. The paper reports that out of 3,064,705 curves, 1,170,876 have analytic rank 0; narrowing down to semistable/optimal/conductor with at least two prime factors leaves 178,364 pre-candidates, and the current Algorithm 1 accepts 36,687 (about 20.5686%). Git compare shows that the same commit caused a net change of <code>+2/-4064</code> in <code>ec_labels_500k.txt</code>; after deducting metadata lines, this exactly corresponds to 4062 curve rows being removed, reconstructing the old accepted count of 40,749—a removal rate of 9.9683%, dropping the pre-candidate acceptance rate from 22.8460% to 20.5686% (a drop of about 2.28 percentage points), with an impact on all curves of about 0.1325 percentage points. Because Algorithm 1 in this commit has only two theorem-level changes (strict $3/5/7$ isogeny exclusion + independent $a_3\ne\pm3$), every removed curve must fall into the union of these two—this is set-level closure, but the exact per-gate histogram at the 500K scale remains unknown, and the document explicitly warns against directly extrapolating the $9/2/1/1$ ratio from <code>&lt;150</code>.</p>
+    <div class="claim-box">
+      The same commit caused 4062/40749 (≈9.97%) accepted curves to be removed at the 500K scale; set-level closure ⊆ isogeny-failure ∪ {|a3|=3}, but the exact histogram is unknown and cannot be extrapolated to the <150 ratio.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../17-phase1-gate-v03/">17 · Phase 1 Gate v0.3</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../19-delta-only-verifier/">19 · Delta-Only Algorithm1 Verifier</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>18 / 25</div>
+    </div>
+    <blockquote class="cite">"A seemingly minor correction to the theorem predicate can change about 10% of the old accepted base-curve universe... semantic versioning is not an add-on engineering task, but a part of mathematical soundness." — Excerpt from Section "Research Interpretation" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/11_500K_One_Commit_Global_Impact.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/11_500K_One_Commit_Global_Impact.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

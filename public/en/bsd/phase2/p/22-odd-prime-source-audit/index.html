@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odd Prime Source Audit · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The actual audit results of Referee B, tracing the four branches of document 17 one by one back to named theorem sources. p=q additive: Banwait-Huang Proposition 2.9 Item 1 reduces to BSTW Theorem 9.21(c), which PASSes after item-by-item verification for 696.e1. good ordinary p: directly uses Skinner Theorem C, witness ℓ=29, PASS. multiplicative p=3, p=29: Skinner Theorem C explicitly writes p≥3, taking each other as the witness respectively, PASS. Provides an important simplification: because the mod-ℓ image of the base curve is maximal for all ℓ, and the quadratic twist only tensors a scalar character, irreducibility is automatically preserved, so the ordinary branch no longer needs to be split into reducible/irreducible subcases.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/22_Odd_Prime_Source_Audit.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/22-odd-prime-source-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/22-odd-prime-source-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/22-odd-prime-source-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/22-odd-prime-source-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>22 · Odd Prime Source Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 22</span>
+      <span class="tag">v0.4 · 22</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Referee B Audit Results</span>
+    </div>
+    <h1>Odd Prime Source Audit</h1>
+    <p class="h1-sub">The actual audit results of Referee B trace the three branches of Case A/B/C from Document 17 back to named theorem sources one by one, rather than trusting previous self-derivations. $p=q$ additive: Banwait–Huang Proposition 2.9 Item 1 directly attributes this case to BSTW Theorem 9.21(c), whose proof lists five conditions ($p\ge5$, $p\nmid6N$, $p$ good ordinary for base $E$, $\bar\rho_{E,p}$ irreducible, existence of $\ell\parallel N$ such that $\ell\nmid D_K$ and residual ramified); checking <code>696.e1</code> item by item (support inertness implies ordinary, base mod-$q$ image maximal gives irreducible, taking $\ell=29$, $v_{29}(\Delta)=1$ hence $q\nmid1$, $29\nmid D_K=q$) all PASS, and citing Banwait Remark 2.10 confirms that semistability in this Item is only used to automatically generate a ramified witness; for non-semistable cases, treating the witness as a hypothesis is sufficient. Good ordinary $p$: directly applies the five conditions of Skinner Theorem C, taking witness $\ell=29$, PASS. Multiplicative $p=3$ and $p=29$: Skinner Theorem C explicitly states $p\ge3$, and the two mutually take each other as witnesses ($p=3$ takes $\ell=29$; $p=29$ takes $\ell=3$, since $v_3(\Delta)=1$), PASS. The document provides an important simplification that directly impacts the complexity of subsequent documents: because the mod-$\ell$ image of the base curve is maximal for all $\ell$, and a quadratic twist only tensors a scalar character, irreducibility is automatically preserved, so the ordinary branch absolutely does not need to be split into reducible/irreducible subcases anymore.</p>
+    <div class="claim-box">
+      Three branches are individually traced back to named theorems (BSTW 9.21c, Skinner Theorem C) and re-verified, all PASS; important simplification: mod-ℓ image all maximal ⟹ twist preserves irreducibility, ordinary branch no longer needs to be split into subcases.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../21-base-bsd-anchor-repair/">21 · Base BSD Anchor Repair</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../23-fw-supersingular-source-audit/">23 · Fouquet–Wan Supersingular Source Audit</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>22 / 40</div>
+    </div>
+    <blockquote class="cite">"Because the base curve mod-ℓ image is maximal for all ℓ... therefore the ordinary branch no longer needs to be split into reducible/irreducible subcases." — Excerpt from the "Important simplification" paragraph of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/22_Odd_Prime_Source_Audit.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/22_Odd_Prime_Source_Audit.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

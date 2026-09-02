@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Removed 13 First-Failure Closure · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Directly answers the 25→12 fixture regression problem left by yesterday's Document 08: v0.3 uses an exact one-commit diff, official old/current fixture mapping, LMFDB/Cremona data, and an exact finite-field count to complete the first-failure closure of the 13 removed curves. Histogram: 9× P_ISOGENY_3, 2× P_ISOGENY_5, 1× P_ISOGENY_7, 1× A3_ABS_3. 26b1 has a secondary a_3=-3, but the production pipeline runs the strict isogeny gate first, so the first failure is recorded as P_ISOGENY_7. Conclusion: all 13 curves are explained by the new Algorithm 1 criteria; it is no longer a black-box version drift.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/08_Removed_13_First_Failure_Closure.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/15-removed-13-closure/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/15-removed-13-closure/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/15-removed-13-closure/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/15-removed-13-closure/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>15 · Removed 13 First-Failure Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 15</span>
+      <span class="tag">v0.3 · 08</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">First Document of Today's Third Round</span>
+    </div>
+    <h1>Removed 13 First-Failure Closure</h1>
+    <p class="h1-sub">Directly addresses the problem left by document 08 yesterday: v0.2 conservatively tagged 13 removed curves as <code>VERSION_REGRESSION_REMOVED</code>, <code>reason = OPEN</code>, not daring to guess the reason. This document uses the one-commit diff precisely located in document 14, combined with the official old/current fixture mapping, LMFDB/Cremona primary curve/isogeny data, and an exact finite-field count, to calculate the precise first-failure criterion for each of the 13 curves, completing the closure. Histogram statistics: $9\times$ <code>P_ISOGENY_3</code>, $2\times$ <code>P_ISOGENY_5</code>, $1\times$ <code>P_ISOGENY_7</code>, $1\times$ <code>A3_ABS_3</code>. The document attaches a complete table listing the Cremona labels, LMFDB labels, and first failure criteria for all 13 curves. Among them, <code>26b1</code> is somewhat special: it simultaneously has the secondary condition $a_3=-3$, but the production pipeline executes the strict isogeny gate first, so its first failure is still recorded as <code>P_ISOGENY_7</code>, not <code>A3_ABS_3</code> — this is a concrete demonstration of "first failure depends on gate execution order." Finally, the document encapsulates the conclusion in a box: the small-sample $25\to12$ is no longer a black-box version drift; the 13 removed curves are fully explained by the new Algorithm 1 criteria.</p>
+    <div class="claim-box">
+      All 13 removed curves are explained by the new Algorithm 1 criteria (9×P_ISOGENY_3, 2×P_ISOGENY_5, 1×P_ISOGENY_7, 1×A3_ABS_3); no longer a black-box version drift.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../14-one-commit-autopsy/">14 · One-Commit Semantic Autopsy</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../16-algorithm2-twist-diff/">16 · Algorithm 2 Twist Semantic Diff</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>15 / 24</div>
+    </div>
+    <blockquote class="cite">"The small-sample 25→12 is no longer a black-box version drift: 13 removed curves are fully explained by the new Algorithm1 predicates." — Excerpt from Section "Key Conclusions" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/08_Removed_13_First_Failure_Closure.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/08_Removed_13_First_Failure_Closure.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

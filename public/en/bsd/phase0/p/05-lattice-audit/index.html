@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit of Neo.K's Old "Lattice Rank Convergence" Route · BSD Phase 0 · AMRAL</title>
+<meta name="description" content="Item-by-item deconstruction of the logic chain in Neo.K's old draft: latticizing elliptic curves, taking a→0, and claiming continuity guarantees the equality holds. The audit points out at least two layers of circularity risk — if the proof of the lattice BSD inequality itself already uses classical BSD-type connections, it is circular; rank is an integer-valued global arithmetic invariant and will not automatically converge as a→0; the order of vanishing is discontinuous under infinitesimal perturbations; "both sides converge" does not imply "limits are equal." Verdict: archived as an exploratory analogy, not to be used as a Phase 1 proof route.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/05_Internal_Grid_Rank_Audit.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase0/p/05-lattice-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase0/p/05-lattice-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase0/p/05-lattice-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase0/p/05-lattice-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 0</a>
+    <span>/</span>
+    <span>05 · Audit of Neo.K's Old Lattice Rank Convergence Route</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 0 · 05</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Self-Review</span>
+    </div>
+    <h1>Audit of Neo.K's Old "Lattice Rank Convergence" Route</h1>
+    <p class="h1-sub">Dismantles the logic chain of the old draft item by item: lattice-ifying the elliptic curve, calculating the lattice L-function, defining the lattice rank and order of vanishing, taking a→0, and claiming "continuity guarantees the equality holds". The audit points out at least two layers of circularity risk: if the proof of the lattice BSD inequality (rank_a(E)≤ord_{s=1}L_a(E,s)) itself already uses classical BSD-type connections, it is circular. The second layer is technical—rank is an integer-valued global arithmetic invariant; "approximate point counts" and "matrix rank" on a numerical lattice will not automatically converge to the Mordell-Weil rank as a→0; one must first establish the equivalence "lattice certificate ⟺ rational point independence/Selmer bounds"; even if L_a(E,s)→L(E,s) converges in some region, it does not automatically imply convergence of the order of vanishing, because the order of vanishing is discontinuous with respect to small perturbations; "both sides converge" does not imply "limits are equal" unless every a has a valid relation A_a=B_a—but if this is exactly lattice BSD, the hard problem is merely moved to the lattice level and not truly solved. Salvaging this requires four independent theorems: GR-1 (faithful discretization, lattice objects must preserve rational points/group law/torsion/height/local reduction), GR-2 (rank certificate equivalence, not visual/numerical rank), GR-3 (analytic order stability, the lattice L-function order of vanishing must be preserved by a rigorous analytic certificate), and GR-4 (non-circular bridging, the equality between GR-2 and GR-3 cannot presuppose BSD). Currently, all four remain uncompleted.</p>
+    <div class="claim-box">
+      Internal Audit · Ruling: Archived as exploratory analogy
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-route-matrix/">04 · External Research Route Matrix</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-agent-experiment/">06 · Phase 1 Agent Experiment Specifications</a></div>
+      <div class="conn-card"><span class="k">Phase 0 Progress</span>6 / 9</div>
+    </div>
+    <blockquote class="cite">"Archive as exploratory analogy; do not use as Phase 1 proof route." — Excerpt from the "Verdict" at the end of this document. Engineering ideas (multi-scale checks, exact certificate, limit audit) can be retained, but the theorem claim that "continuity guarantees BSD equality" cannot be retained.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 0</a>
+    <a href="../../files/05_Internal_Grid_Rank_Audit.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/05_Internal_Grid_Rank_Audit.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

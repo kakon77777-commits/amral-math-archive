@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-Commit Semantic Autopsy · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The old fixture commit and the current commit differ by exactly one commit. Dissecting the mathematical semantics of this single commit line by line: Algorithm 1 changed the conditional exclusion set A_old to an unconditional {3,5,7} and added the a3≠±3 condition, which is a substantive tightening of the theorem predicate, not a performance refactoring. Algorithm 2 simultaneously tightened the gcd condition and removed the old twist-side disc_valuation_condition — shrink and expand mechanisms coexist within the same commit, so it cannot be summarized in the single direction of "the new version is stricter."">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/07_One_Commit_Semantic_Autopsy.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/14-one-commit-autopsy/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/14-one-commit-autopsy/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/14-one-commit-autopsy/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/14-one-commit-autopsy/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>14 · One-Commit Semantic Autopsy</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 14</span>
+      <span class="tag">v0.3 · 07</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Today's second round final document</span>
+    </div>
+    <h1>One-Commit Semantic Autopsy</h1>
+    <p class="h1-sub">Directly answering the question left by document 13: the old fixture commit (<code>1a0489c…</code>) and the current commit (<code>31fae20…</code>) differ by exactly one commit, and the document dissects line by line what mathematical semantics this single commit actually changed. The change in Algorithm 1 is the most critical: the old version did not uniformly exclude $3,5,7$-isogenies, but established a conditional set $A_{\mathrm{old}}=\{3:3\mid N\text{ or }|a_3|=3\}\cup\{5:5\mid N\}\cup\{7:7\mid N\}$, only excluding rational $p$-isogenies for primes falling into this set; the new version changed to an unconditional $A_{\mathrm{new}}=\{3,5,7\}$, and additionally added the independent condition $a_3(E)\ne\pm3$—the document explicitly judges this as a substantive tightening of the theorem predicate, not a performance refactoring. The change in Algorithm 2 is more subtle: the same commit tightened $\gcd(M,N)=1$ to $\gcd(M,3N)=1$, but simultaneously removed the old version's twist-side <code>disc_valuation_condition</code>—so in Algorithm 2, a shrink mechanism and an expand mechanism exist simultaneously, and the effect of the entire commit cannot be simply summarized in the single direction of "the new version is stricter." This document truly advances the discipline of "reason=OPEN, no guessing" from document 08 a step further: instead of guessing the reason, it precisely pinpoints the single commit and dissects its mathematical consequences line by line.</p>
+    <div class="claim-box">
+      Exactly one commit apart; Algorithm 1 substantively tightened, Algorithm 2 simultaneously shrank and expanded — cannot be summarized in a single direction.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../13-semantic-version-changelog/">13 · Semantic Version Changelog</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../15-removed-13-closure/">15 · Removed 13 First-Failure Closure</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>14 / 24 (Last document of today's second round)</div>
+    </div>
+    <blockquote class="cite">"Algorithm 2 simultaneously contains a shrink mechanism and an expand mechanism. It cannot be summarized in the single direction of 'the new version is stricter.'" — Excerpt from the end of the "Algorithm 2" paragraph in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/07_One_Commit_Semantic_Autopsy.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/07_One_Commit_Semantic_Autopsy.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

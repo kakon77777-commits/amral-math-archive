@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Determinant Kurihara Semi-Local Closure · BSD P5 · AMRAL</title>
+<meta name="description" content="The current latest progress of P5. Constructs the finite anomalous norm-Bockstein operator, precisely calculates the rank-2 determinant 2X_397X_991, which falls on the same mixed augmentation direction line as the modular form side initial form 6X_397X_991 (differing by a factor of 3, explicitly not upgraded to a canonical invariant). Cites external inputs from Chan-Ho Kim's semi-local theorem and Castella-Sano's 2026 refined non-vanishing theorem to close three finite rank-2 facts, but formally states that this document does not prove the rank-2 complex leading coefficient formula, nor does it prove the local-to-global Bockstein regulator identification.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_P5_Determinantal_Kurihara_Semilocal_389a1_p11_v1.3.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/09-determinantal-kurihara-semilocal/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/09-determinantal-kurihara-semilocal/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/09-determinantal-kurihara-semilocal/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/09-determinantal-kurihara-semilocal/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>09 · Determinantal Kurihara Semilocal Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 09</span>
+      <span class="tag">v1.3</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">exact finite determinant theorem</span>
+    </div>
+    <h1>Determinantal Kurihara–Semilocal Closure for $389.a1$ at $p=11$</h1>
+    <p class="h1-sub">The latest document in P5. Inheriting M_loc=[[1,2],[1,4]] (determinant 2) from document 08, this document formally constructs the finite anomalous norm-Bockstein operator B_N:V→W⊗I/I² (where V is the Selmer space, W is the direct sum of two local quotients, and I is the group ring augmentation ideal), giving the matrix [[X_397,2X_397],[X_991,4X_991]] relative to the basis. Pushing it to I²/I³ using exterior product multiplication, it precisely calculates the rank-2 determinant det(B_N)(P∧Q)=det(M_loc)(e_397∧e_991)⊗X_397X_991=2(e_397∧e_991)⊗X_397X_991—nonzero, primitive in the mixed augmentation direction. Meanwhile, the initial term on the modular form side (inherited from an earlier version) is 6X_397X_991; both fall exactly on the same mixed line 𝓛_397,991=F₁₁·X_397X_991, with a quotient of 3∈F₁₁×—the document explicitly states that this 3 "is not promoted to a canonical invariant," because changing the primitive root, generators, or determinant basis would rescale these coefficients by units; the only truly invariant facts are "generating the same line" and "being nonzero." The document invokes Chan-Ho Kim's semilocal theorem (under standard residual surjectivity, Manin constant, local-p-torsion, and Tamagawa hypotheses, the minimal-order nonzero mod-p Kurihara witness gives an isomorphism from the Selmer group to the local quotient) to verify that all hypotheses hold for 389.a1 at p=11, as well as the Castella-Sano 2026 refined nonvanishing theorem (reformulating the refined Kurihara conjecture in the form of Selmer complex determinants, closing the refined nonvanishing/integrality side independently of the complex rank-2 leading term issue)—three finite rank-2 facts are thus closed: P5-KUR-SEMILOC, P5-FIN-BocDET, P5-MIXEDLINE (all up to units). The document formally states that it does not prove that the finite operator B_N is exactly identical to the Bockstein regulator in the Burns-Kurihara-Sano or Nekovář Selmer complex determinant formalism under canonical normalization (P5-CANON-BocID remains OPEN), let alone that even with this identification, the complex rank-2 leading term comparison P5-CPLX-GPR is still unresolved.</p>
+    <div class="claim-box">
+      det(B_N) = 2X_397X_991, falls on the same mixed line as the modular form initial form (quotient 3, non-canonical); P5-CANON-BocID and P5-CPLX-GPR remain OPEN.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../08-norm-selmer-core-vertex/">08 · Norm-Selmer Core Vertex</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>10 / 10 (Current latest progress)</div>
+    </div>
+    <blockquote class="cite">"Do not recompute the finite group law or Kurihara sum. The next step is to trace the canonical determinant map through one of the following theorem interfaces." — Excerpt from Section "8. Next research target" of this document.</blockquote>
+    <p class="notice">This marks the latest available progress for the P5 series (v0.1 to v1.3, 10 articles in total) — the core objectives P5-CANON-BocID and P5-CPLX-GPR (comparison between the complex rank-2 leading term and the local Selmer determinant) remain OPEN, not closed conclusions. Pages for subsequent versions (if any) will be created once Neo.K brings new packages.</p>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_P5_Determinantal_Kurihara_Semilocal_389a1_p11_v1.3.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_P5_Determinantal_Kurihara_Semilocal_389a1_p11_v1.3.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

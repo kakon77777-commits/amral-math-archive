@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manin / Period Audit · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The actual audit by Referee D, resolving the period issue left by document 23. Citing modern results: the Manin constant of an optimal parametrization can only be supported by additive reduction primes. For E_q, the additive primes are exactly 2 and the twist prime q, while FW is only used at good supersingular p, so p∉{2,q} and p∤c_{E_q}—the modular period and Néron period are identical in p-adic valuation. Incidentally handles optimality: the mod-ℓ image of the base 696.e1 is maximal for all ℓ, and the twist preserves irreducibility, hence E_q has no rational prime-degree isogeny, its Q-isogeny class has no other non-isomorphic curve, and E_q itself is the optimal representative. The period argument does not rely on arbitrarily picking an isogenous model.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/24_Manin_Period_Audit.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/24-manin-period-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/24-manin-period-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/24-manin-period-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/24-manin-period-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>24 · Manin / Period Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 24</span>
+      <span class="tag">v0.4 · 24</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Referee D Audit Results · Today's (2026-08-18) First Round</span>
+    </div>
+    <h1>Manin / Period Audit</h1>
+    <p class="h1-sub">The actual audit results from Referee D, directly resolving the period issue left at the end of document 23. The formula in FW Corollary 1.10 uses the modular-form period, while the elliptic curve's Néron period differs from it by a Manin constant—the document cites modern results: the Manin constant of an optimal parametrization can only be supported by additive reduction primes. For $E_q$, there are exactly two additive primes: $2$ from the base curve itself, and the twist prime $q$. Since FW is only used on the **good supersingular $p$** branch, such $p$ automatically satisfy $p\notin\{2,q\}$, hence $p\nmid c_{E_q}$—the modular period and the Néron period are completely identical in $p$-adic valuation, and the period issue is thus closed. The document then addresses an incidental optimality issue: because the mod-$\ell$ image of the base curve <code>696.e1</code> is maximal for all $\ell$, and quadratic twisting preserves residual irreducibility, $E_q$ has no rational prime-degree isogeny—there is no other non-isomorphic curve in its $\mathbb Q$-isogeny class, so $E_q$ itself is automatically the optimal representative, eliminating the need to arbitrarily choose among multiple isogenous models, making this period argument robust.</p>
+    <div class="claim-box">
+      Good supersingular p automatically satisfies p∉{2,q}, hence p∤c_{E_q}, and the period issue is closed; the isogeny class of E_q is a singleton, so it is itself the optimal representative.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../23-fw-supersingular-source-audit/">23 · Fouquet–Wan Supersingular Source Audit</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../25-chebotarev-referee-audit/">25 · Chebotarev Referee Audit</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>24 / 40</div>
+    </div>
+    <blockquote class="cite">"E_q itself is the optimal representative, so this period argument does not rely on arbitrarily picking an isogenous model." — Excerpt from the end of the "Optimality" paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/24_Manin_Period_Audit.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/24_Manin_Period_Audit.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

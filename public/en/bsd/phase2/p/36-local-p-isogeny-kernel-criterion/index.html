@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local p-Isogeny Kernel Criterion · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Translates the abstract Jordan-Hölder criteria from document 35 into concrete, computable isogeny kernel conditions. If E[p]|_{G_Qp} is reducible, choosing a stable cyclic subgroup yields a local isogeny φ:E→E'. It proves that λ²=1 if and only if the kernel polynomial of φ has a linear factor in Q_p. The other Jordan-Hölder character corresponds to the kernel of the dual isogeny. Therefore, FW17-H2 FAIL if and only if the kernel polynomial of φ or its dual has a linear factor in Q_p—one only needs to check one isogeny plus its dual, without needing to enumerate all local p-isogenies.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/04_Local_p_Isogeny_Kernel_Criterion.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/36-local-p-isogeny-kernel-criterion/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/36-local-p-isogeny-kernel-criterion/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/36-local-p-isogeny-kernel-criterion/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/36-local-p-isogeny-kernel-criterion/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>36 · Local p-Isogeny Kernel Criterion</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 36</span>
+      <span class="tag">Side Line · FW_H2 · 04</span>
+      <span class="tag">2026-08-13</span>
+    </div>
+    <h1>Local p-Isogeny Kernel Criterion</h1>
+    <p class="h1-sub">Translates the abstract Jordan–Hölder criterion from document 35 into a concrete, directly computable isogeny kernel condition. Assuming $E[p]|_{G_{\mathbf Q_p}}$ is reducible, choose a stable cyclic subgroup $C\simeq\mathbf Z/p$ to obtain a local isogeny $\phi:E\to E'$, and let $\sigma(P)=\lambda(\sigma)P$. The document proves a precise chain of equivalences: since $x(P)=x(-P)$ and $p$ is odd, $x(P)\in\mathbf Q_p$ if and only if $\sigma(P)=\pm P$ holds for all $\sigma$, if and only if $\lambda(G_{\mathbf Q_p})\subset\{\pm1\}$, if and only if $\lambda^2=1$—therefore, $\lambda^2=1$ if and only if the kernel polynomial of $\ker\phi$ has a linear factor in $\mathbf Q_p$, which is a concrete condition that can be directly verified using Tate's algorithm or local field computations. The other Jordan–Hölder character $\mu=\omega\lambda^{-1}$ corresponds to the kernel character of the dual isogeny $\widehat\phi:E'\to E$. Thus, $\mathrm{FW17\text{-}H2\ FAIL}$ if and only if the kernel polynomial of $\phi$ or its dual has a linear factor in $\mathbf Q_p$. Finally, the document explains why it is sufficient to check just one isogeny plus its dual, without needing to enumerate all local $p$-isogenies: for a nonsplit reducible extension, the original $E[p]$ has only one stable line, and the quotient constituent will appear in the dual kernel; for a split representation, the two constituents are directly captured by $\phi$ and $\widehat\phi$ respectively.</p>
+    <div class="claim-box">
+      λ²=1 ⟺ the kernel polynomial of φ has a linear factor in Q_p (directly computable); FW17-H2 FAIL ⟺ φ or its dual satisfies this condition; only one isogeny + dual is needed, no need to enumerate all.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../35-fw-h2-jordan-holder-lemma/">35 · FW-H2 Jordan–Hölder Lemma</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../37-kodaira-prefilters-and-nogo/">37 · Kodaira Prefilters and No-Go Results</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>36 / 40</div>
+    </div>
+    <blockquote class="cite">"No need to enumerate all local p-isogenies." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/04_Local_p_Isogeny_Kernel_Criterion.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/04_Local_p_Isogeny_Kernel_Criterion.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm 1 Soundness Gates · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Formally encodes previously scattered disciplines into six soundness gates: S1 analytic Sha must not masquerade as actual Sha; S2 dim Sha[2] must not masquerade as ord_2(#Sha); S3 timeout is UNKNOWN, not a theorem failure; S4 once a testing flag is enabled, the entire run certificate is automatically downgraded; S5 non-emptiness of the S set uses a deterministic criterion, not a bounded search; S6 every PASS must preserve complete provenance (predicate/value/evidence_type/backend/semantic_version/file SHA/timestamp).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_Algorithm1_Soundness_Gates.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/10-soundness-gates/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/10-soundness-gates/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/10-soundness-gates/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/10-soundness-gates/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>10 · Algorithm 1 Soundness Gates</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 10</span>
+      <span class="tag">v0.2 · 03</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Discipline Encoding</span>
+    </div>
+    <h1>Algorithm 1 Soundness Gates</h1>
+    <p class="h1-sub">Formally converges the disciplines scattered across previous documents into six directly citable soundness gates. S1: analytic $\Sha$ must not masquerade as actual $\Sha$—the <code>sha</code> field can only serve as an analytic prediction/gate input, and the certificate must preserve the descent source. S2: $\dim\Sha[2]$ must not masquerade as $\operatorname{ord}_2\#\Sha$—the current safety policy only accepts $\operatorname{BSD}(E,2)$ when $v_2(\Sha_{\mathrm{an}})=0$ and descent strictly pins down $\Sha[2]=0$; positive valuations must be marked "OPEN / higher 2-power descent needed". S3: timeout is UNKNOWN—an mwrank timeout is not a theorem failure and must not be misread as a mathematical rejection. S4: testing flag contamination—once <code>skip_filter_S</code> or <code>skip_BSD_at_2_check</code> is enabled, the entire run certificate is automatically downgraded; you cannot downgrade just a single curve. S5: deterministic theorem gate—the production gate for $\mathcal S\ne\varnothing$ uses a deterministic criterion; bounded search can only serve as cross-validation/witness and cannot be the primary certificate. S6: provenance—every PASS must preserve a complete record of seven items: predicate, value, evidence_type, backend, semantic_version, file/commit SHA, and timestamp. Together, these six rules constitute the concrete implementation of the entire Phase 1 pipeline's goal to "prevent engineering output from being secretly swapped for mathematical theorems".</p>
+    <div class="claim-box">
+      S1-S6: analytic≠actual, Sha[2] dimension≠ord_2(Sha), timeout=UNKNOWN, testing flag global downgrade, deterministic gate, complete provenance.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../09-discrepancy-corpus/">09 · Official Discrepancy Corpus</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../11-500k-preflight/">11 · 500K Preflight</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>11 / 24</div>
+    </div>
+    <blockquote class="cite">"S4 — Testing flag contamination: when skip_filter_S or skip_BSD_at_2_check is enabled, the entire run certificate is automatically downgraded." — Excerpt from this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/03_Algorithm1_Soundness_Gates.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_Algorithm1_Soundness_Gates.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

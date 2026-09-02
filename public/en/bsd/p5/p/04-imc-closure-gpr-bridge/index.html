@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMC Closure and GPR Bridge · BSD P5 · AMRAL</title>
+<meta name="description" content="Uses the Burungale-Castella-Skinner theorem to prove the full cyclotomic Iwasawa Main Conjecture closure for 389.a1 at p=11, and precisely verifies its additional image condition using an explicit unipotent element. Combined with the already closed Sha[11^∞]=0, it closes all the Burns-Kurihara-Sano standard hypotheses. The remaining conceptual obstacles are precisely localized to the rank-2 Generalized Perrin-Riou comparison (P5-GPR11 OPEN) and a finite Bockstein non-vanishing computational gate (P5-BOC-NZ11).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_P5_IMC_Closure_and_GPR_Bridge_v0.5.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/04-imc-closure-gpr-bridge/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/04-imc-closure-gpr-bridge/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/04-imc-closure-gpr-bridge/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/04-imc-closure-gpr-bridge/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>04 · IMC Closure and GPR Bridging</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 04</span>
+      <span class="tag">v0.5</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">theorem/reduction</span>
+    </div>
+    <h1>Cyclotomic IMC Closure and the Rank-2 Generalized Perrin–Riou Bridge</h1>
+    <p class="h1-sub">The main result of this piece is establishing that "the full cyclotomic Iwasawa Main Conjecture for (389.a1, 11) is no longer an open gate"—the Burungale-Castella-Skinner theorem applies to elliptic curves with p>3 good ordinary reduction and residual irreducibility, but requires an additional image condition: there exists σ fixing ℚ(μ_p^∞) such that T/(σ-1)T≅ℤ_p. The document explicitly constructs the unipotent element u=[[1,1],[0,1]] using the maximal 11-adic image (GL₂(ℤ₁₁)) to verify this condition—deducing from the Weil pairing that det u=1 means the corresponding σ fixes the entire cyclotomic extension, and directly calculating (u-1)T=ℤ₁₁e₁ yields T/(u-1)T≅ℤ₁₁, completing the proof. Combining this with the previously closed Sha[11^∞]=0, rank=2>0, and residual irreducibility automatically satisfying the BKS standard hypothesis package, the document deduces P5-ALG₁₁=CLOSED UP TO UNIT (the algebraic Iwasawa-to-Bockstein relation is closed up to an 11-adic unit). The document also clearly delineates two derivative directions that must not be confused—the cyclotomic p-adic derivative D²_cyc L₁₁(E) and the complex spectral parameter derivative d²/ds² L(E,s)|_{s=1}—no Kurihara derivative or Iwasawa characteristic element will automatically identify the two; this is exactly the missing rank-2 Generalized Perrin-Riou (GPR) comparison. The document marks P5-GPR11=OPEN, which is currently the main conceptual barrier. It additionally isolates a purely finite computational Bockstein non-zero gate P5-BOC-NZ11; the included SageMath script is honestly marked as PENDING_LOCAL_SAGE_REPLAY because the execution environment lacks SageMath, not pretending it is already completed.</p>
+    <div class="claim-box">
+      P5-IMC₁₁=CLOSED (Burungale-Castella-Skinner + explicit image condition verification); P5-GPR₁₁=OPEN (main obstacle).
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../03-etnc-escape-audit/">03 · ETNC Escape Audit</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../05-ugpr-minimal-gate/">05 · uGPR Minimal Gate</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>5 / 10</div>
+    </div>
+    <blockquote class="cite">"A nonzero Kurihara derivative, a Mazur-Tate augmentation coefficient, or an Iwasawa characteristic element does not by itself identify these two derivatives." — Excerpt from this document's "6.2 The two derivative directions must not be conflated".</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_P5_IMC_Closure_and_GPR_Bridge_v0.5.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_P5_IMC_Closure_and_GPR_Bridge_v0.5.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

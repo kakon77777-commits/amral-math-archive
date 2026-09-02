@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500K Twist Output Non-Monotonicity · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Amplifies the Algorithm 2 semantic split from document 16 to a 500K-scale measurement: the same commit caused twists_of_ec_labels_500k.json to generate a diff of +1899/-53404 lines, far exceeding the scale that could be explained purely by base curves being removed, proving that the Algorithm 2 semantic changes were indeed triggered in the large-scale data domain. However, the document simultaneously points out rigorously: git diff line counts do not equal the proven unique twist count (JSON contains structural lines like keys/brackets/commas); a complete entry-level census requires materialising the old/current JSONs and then parsing the set difference. For the 12 curves currently <150, the small fixture observed 0 output deltas—this is exactly why v0.3 must add synthetic tests, and v0.4 requires a full-file entry census.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/13_500K_Twist_Output_NonMonotonicity.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/20-500k-twist-nonmonotonicity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/20-500k-twist-nonmonotonicity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/20-500k-twist-nonmonotonicity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/20-500k-twist-nonmonotonicity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>20 · 500K Twist Output Non-Monotonicity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 20</span>
+      <span class="tag">v0.4 · 13</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>500K Twist Output Non-Monotonicity</h1>
+    <p class="h1-sub">Amplifies the coexisting tightening/relaxing effects of Algorithm 2 discovered in small samples in document 16 to a 500K-scale observation. The same commit caused <code>twists_of_ec_labels_500k.json</code> to generate a diff of <code>+1899/-53404</code> lines—yet the base-curve set of Algorithm 1 only shrinks. If the twist JSON changed solely because base curves were removed, the number of added lines should approach zero, not 1899. Therefore, the full-scale output proves that the semantic changes in Algorithm 2 were indeed triggered in the large-scale data domain. The document also demonstrates the consistent rigorous self-restraint of this research line: git diff counts "lines", and the JSON contains key lines, bracket/comma structural lines, twist integer lines, and entire deleted base blocks all at once. Thus, 1899 is merely added diff lines, not a proven unique new twist count—a complete entry-level census requires truly materialising the old/current JSONs and performing a parse set difference. The document also honestly records the coverage failure of the small-sample fixture: for the 12 surviving curves currently <code>&lt;150</code>, $T_{\rm old}(E)=T_{\rm new}(E)$ holds curve by curve, meaning the branch coverage of the small positive fixture for this Algorithm 2 semantic difference yielded 0 observed deltas—this is exactly the direct reason why v0.3 must add synthetic semantic tests, and v0.4 requires a full-file entry census.</p>
+    <div class="claim-box">
+      +1899/-53404 lines prove that Algorithm 2 semantic changes were indeed triggered at the 500K scale, but line count ≠ proven unique twist count; the <150 small sample coverage is 0, hence a full-file entry census is required.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../19-delta-only-verifier/">19 · Delta-Only Algorithm1 Verifier</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../21-phase1-next-low-cost-gate/">21 · Phase 1 Next Lowest-Cost Gate</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>20 / 25</div>
+    </div>
+    <blockquote class="cite">"This is why v0.3 added synthetic semantic tests, while v0.4 requires a full-file entry census." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/13_500K_Twist_Output_NonMonotonicity.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/13_500K_Twist_Output_NonMonotonicity.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

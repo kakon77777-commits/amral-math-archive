@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>v0.5 Exact Census Report · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The precise report of the complete execution of Gate A + Gate B from the three-stage strategy in document 21. First discovers a provenance detail: the OLD twist JSON is actually older than the OLD base file, with 1355 curves lacking corresponding twist entries. Core results: base curves old=40749/new=36687/removed=4062/added=0; Algorithm 1 failure classification ISOGENY_ONLY=1353, A3_ONLY=2707, BOTH=2, UNEXPLAINED=0; stable-domain Algorithm 2 is a pure reduction of removed=21306/added=0; curve-level UNCHANGED=31250, SHRINK_ONLY=5437, EXPAND_ONLY=0, MIXED=0; global twist accounting identity 46091=46091 exact PASS. All 26 completion gates are true. Conclusion: this is a precise archived output census of theory-generated computation, not an end-to-end re-execution of every OLD curve, nor a proof of the BSD conjecture for all elliptic curves.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/V0_5_EXACT_CENSUS_REPORT.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/22-exact-census-report/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/22-exact-census-report/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/22-exact-census-report/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/22-exact-census-report/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>22 · v0.5 Exact Census Report</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 22</span>
+      <span class="tag">v0.5 · Results Report</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">results/, not docs/ numbered documents</span>
+    </div>
+    <h1>v0.5 Exact Census Report</h1>
+    <p class="h1-sub">Within the three-stage strategy defined in document 21, Gate A (delta-only base verifier) and Gate B (twist JSON parser diff) are truly executed here, yielding precise numbers—the content of this page is located in the suite's <code>results/</code> directory rather than <code>docs/</code>, making it one of the few documents in this series without a <code>docs/NN</code> number, but it belongs to actual research output rather than intermediate scaffolding, so it is still included separately. The document first reveals a provenance detail: the OLD twist JSON was actually frozen before the OLD base file (originating from an earlier generator commit), resulting in 1355 OLD base curves having no corresponding twist entries; the document explicitly points out that this is an "archived output artifact," not a fresh end-to-end execution on the OLD source tree. Core precise results: base curves are old=40,749, new=36,687, removed=4,062, added=0; Algorithm 1 failure classification ISOGENY_ONLY=1,353, A3_ONLY=2,707, BOTH=2, UNEXPLAINED=0 (individual: 3-isogeny 1,233, 5-isogeny 115, 7-isogeny 7); the precise change for Algorithm 2 in the stable-domain is a pure reduction of removed=21,306, added=0, with curve-level classification UNCHANGED=31,250, SHRINK_ONLY=5,437, EXPAND_ONLY=0, MIXED=0; global twist accounting identity 46,091=46,091 exact PASS. All 26 items on the completion gate checklist are true.</p>
+    <div class="claim-box">
+      old=40749→new=36687 (removed=4062, added=0); Algorithm1 UNEXPLAINED=0; stable-domain Algorithm2 removed=21306/added=0 pure reduction; accounting identity 46091=46091 PASS; 26/26 completion checks true
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../21-phase1-next-low-cost-gate/">21 · Phase 1 Next Lowest-Cost Gate</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../23-fresh-algorithm2-semantic-replay/">23 · Fresh Algorithm2 Semantic Replay</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>22 / 25</div>
+    </div>
+    <blockquote class="cite">"This is an exact archived-output census of a theorem-producing computation. It is not a fresh end-to-end rerun of every OLD curve, and it is not a proof of the Birch–Swinnerton-Dyer conjecture for all elliptic curves." — Excerpt from the conclusion of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/V0_5_EXACT_CENSUS_REPORT.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/V0_5_EXACT_CENSUS_REPORT.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

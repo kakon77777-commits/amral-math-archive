@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revised Derived Theorem Candidate · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The final theorem statement after all audits are completed: for the prime family P of density 1/24, ∀q∈P, BSD(E^(q)) holds. Attached is the complete proof router table: p=2 uses Banwait-Huang Theorem 2.14+Creutz-Miller; p=q uses BSTW Theorem 9.21(c)+witness 29; odd good ordinary, p=3, and p=29 all use Skinner Theorem C, each paired with the corresponding witness; odd good supersingular uses Fouquet-Wan Theorem 1.7+Corollary 1.10, witness 29. All primes are exhaustively covered. The claim label is currently DERIVED THEOREM CANDIDATE; if the novelty/citation referee passes, it can advance to PREPRINT CANDIDATE. Whether to call it a "new theorem" must be decided separately by the novelty audit.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/27_Revised_Derived_Theorem_Candidate.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/27-revised-derived-theorem-candidate/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/27-revised-derived-theorem-candidate/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/27-revised-derived-theorem-candidate/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/27-revised-derived-theorem-candidate/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>27 · Revised Derived Theorem Candidate</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 27</span>
+      <span class="tag">v0.4 · 27</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Final Statement After Full Audit</span>
+    </div>
+    <h1>Revised Derived Theorem Candidate</h1>
+    <p class="h1-sub">The final, clean theorem statement after all six referees have completed their audits. Let $E:y^2=x^3+x^2+8x-16$, $\mathcal P=\{q\text{ prime}: q\equiv1\pmod{24},\ (\frac q{29})=1,\ x^3+x^2+8x-16\text{ irreducible mod }q\}$, then $\delta(\mathcal P)=\frac1{24}$, and the derived theorem candidate is $\forall q\in\mathcal P,\ \operatorname{BSD}(E^{(q)})$, where $E^{(q)}$ is the quadratic twist by $q$. The document attaches a complete, compact proof router table, precisely mapping each prime class to a named theorem: $p=2$ uses Banwait–Huang Theorem 2.14 plus Creutz–Miller's base full BSD; $p=q$ uses the quadratic-twist clause of BSTW Theorem 9.21(c) plus rank-zero descent, with witness $29$; odd good ordinary $p$ uses Skinner Theorem C, witness $29$; $p=3$ also uses Skinner Theorem C, witness $29$; $p=29$ uses Skinner Theorem C, witness $3$; odd good supersingular $p$ uses Fouquet–Wan Theorem 1.7 plus Corollary 1.10, nonsplit Steinberg witness $29$—the document explicitly marks "all primes exhaustive." The claim label is currently set to <code>DERIVED THEOREM CANDIDATE</code>; if the novelty/citation referee (the four tasks listed in document 26) also passes, it can advance to <code>PREPRINT CANDIDATE</code>; as for whether it can be called a "new theorem," the document explicitly states that this must be determined separately by the novelty audit, and is not something to be declared here.</p>
+    <div class="claim-box">
+      Final proof router: six classes of primes each correspond to a named theorem + witness, providing exhaustive coverage. Claim label = DERIVED THEOREM CANDIDATE; whether it is a "new theorem" is left for the novelty audit to decide.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../26-novelty-search-log/">26 · Novelty Search Log</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../28-submission-gate/">28 · Submission / Publication Gate</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>27 / 40</div>
+    </div>
+    <blockquote class="cite">"Whether to call it a 'new theorem' must be separately decided by a novelty audit." — Excerpt from Section "Claim label" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/27_Revised_Derived_Theorem_Candidate.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/27_Revised_Derived_Theorem_Candidate.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

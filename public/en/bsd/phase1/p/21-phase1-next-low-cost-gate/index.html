@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 Next Lowest-Cost Gate · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The concluding document of v0.4, defining a three-stage lowest-cost strategy: Gate A (delta-only base verifier, 40,749→36,687), Gate B (twist JSON parser diff, materializing the old/current full JSON, categorizing into six types: removed base keys/stable keys/gcd-only removed/disc-gate-only added/both-effect), and Gate C (only if both A and B match the official output are all the expensive Sage descents rerun). Core rationale: the official runtime of the full Algorithm 1 itself only takes a dozen minutes and is not expensive; what is truly expensive is the rework caused by research semantic errors—the delta-first strategy confirms that the same theorem version is understood before investing in full proof-engineering.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/14_Phase1_Next_Low_Cost_Gate.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/21-phase1-next-low-cost-gate/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/21-phase1-next-low-cost-gate/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/21-phase1-next-low-cost-gate/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/21-phase1-next-low-cost-gate/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>21 · Phase 1 Next Lowest-Cost Gate</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 21</span>
+      <span class="tag">v0.4 · 14</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">v0.4 Last Document</span>
+    </div>
+    <h1>Phase 1 Next Lowest-Cost Gate</h1>
+    <p class="h1-sub">The wrap-up document for the v0.4 series, converging the 500K-scale observations accumulated in documents 18-20 into a three-stage minimum-cost execution strategy. Gate A is a delta-only base verifier: inputting the old accepted list plus two cheap fields, <code>a3</code>/<code>isogeny_degrees</code>, with the goal of precisely reproducing $40{,}749\to36{,}687$. Gate B is a twist JSON parser diff: directly materializing the old/current <code>twists_of_ec_labels_500k.json</code> files, calculating removed base keys, stable base keys, stable curves with twist changes, twists removed solely due to $\gcd(\cdot,3N)$, twists added solely due to the deletion of the old disc gate, and curves affected by both effects simultaneously, totaling six categories. Gate C is to rerun all the expensive Sage descents only when both A and B are completely identical to the current output of the official repository. The document encapsulates the rationale for the entire strategy into a directly quotable maxim: the full Algorithm 1 official paper runtime itself is about ten minutes, which is not actually expensive; what is truly expensive is the rework caused by semantic errors — a delta-first strategy can first confirm "we are understanding the same theorem version" before investing in full proof-engineering, rather than the other way around.</p>
+    <div class="claim-box">
+      Three-stage strategy: Gate A (delta-only, cheap) → Gate B (twist JSON parser diff, six classifications) → Gate C (full Sage replay only if the two match); what is truly expensive is the rework of semantic errors, not the runtime.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../20-500k-twist-nonmonotonicity/">20 · 500K Twist Output Non-Monotonicity</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../22-exact-census-report/">22 · v0.5 Exact Census Report</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>21 / 25 (v0.4 Concluded)</div>
+    </div>
+    <blockquote class="cite">"The full Algorithm1 current paper runtime of about ten minutes is not actually expensive in itself. What is truly expensive is the rework caused by semantic errors." — Excerpt from Section "Why?" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/14_Phase1_Next_Low_Cost_Gate.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/14_Phase1_Next_Low_Cost_Gate.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

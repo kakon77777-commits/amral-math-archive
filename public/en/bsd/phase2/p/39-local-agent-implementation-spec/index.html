@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Agent Implementation Spec · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The FW_H2 sub-series concludes, which is also the final document of the entire Phase 2 (40/40): it formally specifies the criteria from documents 35-38 into an implementable function certify_fw_h2(E, p, profile), requiring the output of a complete replayable JSON (not just returning a boolean). Four backend rules: prioritize existing certified local isogeny machinery in Sage/Magma, and floating-point approximation must not be used to determine Q_p roots; merely determining "isogeny exists" is not enough, kernel character evidence must be produced; linear factors of the kernel polynomial must be an exact p-adic factorization or a Hensel certificate; if the local irreducible certificate itself is merely a heuristic, it can only return UNKNOWN and must not be upgraded to PASS. Six sets of regression fixtures (A-F) are attached. The document concludes by explicitly listing four prohibited inference shortcuts: Kodaira type alone, no Q_p rational p-torsion, potentially supersingular, and global irreducible implying local irreducible—none of these may be used alone to judge a PASS.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/07_Local_Agent_Implementation_Spec.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/39-local-agent-implementation-spec/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/39-local-agent-implementation-spec/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/39-local-agent-implementation-spec/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/39-local-agent-implementation-spec/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>39 · Local Agent Implementation Spec</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 39</span>
+      <span class="tag">Side Branch · FW_H2 · 07 (Final Piece)</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Phase 2 Full 40/40 Complete</span>
+    </div>
+    <h1>Local Agent Implementation Spec</h1>
+    <p class="h1-sub">The FW_H2 sub-series (documents 35-39) concludes, which is also the final document of the entire Phase 2. It formally specifies the abstract criteria from the previous four documents into a function requiring implementation, <code>certify_fw_h2(E, p, profile="FW17_EXACT")</code>, explicitly demanding that "the output must be replayable, not just returning a boolean"—the returned JSON includes <code>global_abs_irreducible</code>, <code>potentially_multiplicative</code>, <code>local_reducibility_Fp</code>, the kernel polynomials of <code>phi</code>/<code>dual_phi</code> and whether they have a <code>Q_p</code>-linear factor, the final <code>fw17_h2</code> verdict, plus an <code>evidence</code> array. Four backend rules: Rule 1 prioritizes existing certified local isogeny/factorization machinery in Sage/Magma, and floating-point approximation must not be used to determine <code>Q_p</code> roots; Rule 2 states that if the backend can only determine "local $p$-isogeny exists" but cannot produce kernel character evidence, this cannot be used as an H2 verdict; Rule 3 requires that linear factors of the kernel polynomial must be an exact $p$-adic factorization or a Hensel certificate; Rule 4 states that if the local irreducible certificate itself is merely a heuristic, it can only return <code>UNKNOWN</code> and must not be upgraded to <code>PASS</code>. Six sets of regression fixtures are attached (A through F, covering $p=3$ reducible, potentially multiplicative additive, two FAIL cases with rational roots for the kernel, a PASS case with no rational roots for either, and a PASS case for local irreducible). The document concludes with a "Do not infer" paragraph explicitly listing four prohibited inference shortcuts: <code>Kodaira type alone → PASS</code>, <code>no Q_p rational p-torsion → PASS</code>, <code>potentially supersingular → PASS</code>, and <code>global irreducible → local irreducible</code>—none of these may be used alone to judge a PASS.</p>
+    <div class="claim-box">
+      The FW_H2 criterion is formally standardised into an implementable function, requiring complete replayable output; four backend rules prohibit floating-point approximations and heuristic upgrades; six sets of regression fixtures; explicitly lists four prohibited inference shortcuts. Phase 2 (696.e1 non-semistable explicit twist family) all 40 documents concluded.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../38-witness-network-v03-integration/">38 · Witness-Network v0.3 Integration</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>40 / 40 (All Concluded)</div>
+    </div>
+    <blockquote class="cite">"Output must be replayable, cannot just return boolean." — Excerpt from the "Goal" paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/07_Local_Agent_Implementation_Spec.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/07_Local_Agent_Implementation_Spec.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explicit Local Unit Cancellation · BSD P5 · AMRAL</title>
+<meta name="description" content="Precisely calculates every explicitly computable local factor for 389.a1 at p=11 (good prime truncation factor 16/11, bad prime 389 truncation factor 388/389, valuation of the 11-adic logarithm), proving that the combination of the three is exactly an 11-adic unit, with a residue of 4 mod 11. Conclusion: there are no hidden 11-local denominators needing explanation; the remaining obstacle is purely the order-reduction/unit property of the normalized complex scalar itself.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_P5_Explicit_Local_Unit_Cancellation_389a1_p11_v0.8.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/06-local-unit-cancellation/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/06-local-unit-cancellation/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/06-local-unit-cancellation/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/06-local-unit-cancellation/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>06 · Explicit Local Unit Cancellation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 06</span>
+      <span class="tag">v0.8</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">exact local-arithmetic reduction</span>
+    </div>
+    <h1>Explicit Local-Unit Cancellation for $389.a1$ at $p=11$</h1>
+    <p class="h1-sub">Following up on v0.7 (which was not separated into its own suite; this document explains its own preamble) which compressed the problem down to the local descent gates P5-DESC11 and P5-VAL011, the goal of this document is to individually isolate every explicitly computable 11-local factor in the Burns-Kurihara-Sano rank-2 element to see if there are still invisible denominators hiding. Using the minimal model, it precisely calculates #E(F₁₁)=16, a₁₁=-4, and the good prime truncation factor L₁₁(E,1)⁻¹=16/11 (valuation -1); the split multiplicative truncation factor for the bad prime 389 is 388/389 (valuation 0). The true technical core is precisely calculating the valuation of the 11-adic logarithm: using standard parameters of the formal group, it precisely calculates that 16P' falls into the formal group and v₁₁(t(16P'))=1. Combined with the property that the formal logarithm on t∈11ℤ₁₁ agrees with t itself modulo 11², it deduces v₁₁(log_ω(P))=1 with a residue of 4 mod 11. Multiplying the three factors: v₁₁(u_loc)=(-1)+0+1=0, and u_loc≡4 (mod 11)—which is exactly an 11-adic unit. This means that under the already fixed normalization, multiplying by u_loc changes neither the domain barrier nor the valuation, hence β_ξ·u_loc∈ℚ₁₁ ⟺ β_ξ∈ℚ₁₁, and their valuations are equal. The document explicitly states: this does not prove β_ξ∈ℚ₁₁ nor does it prove its valuation is zero; the only confirmed positive result is that "there are no hidden 11-local denominators needing explanation"—eliminating an entire erroneous direction that could have otherwise consumed research time.</p>
+    <div class="claim-box">
+      u_loc = (16/11)(388/389)log_ω(P) ∈ ℤ₁₁×, residue 4 mod 11—no hidden 11-local denominators.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-ugpr-minimal-gate/">05 · uGPR Minimal Gate</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-anomalous-norm-localization/">07 · Anomalous Prime Norm Localization</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>7 / 10</div>
+    </div>
+    <blockquote class="cite">"there is no hidden 11-local denominator left to explain. The remaining wall is genuinely the descent/unit property of the normalized complex rank-2 leading scalar." — Excerpt from Section "7. Refining the P5 Frontier" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_P5_Explicit_Local_Unit_Cancellation_389a1_p11_v0.8.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_P5_Explicit_Local_Unit_Cancellation_389a1_p11_v0.8.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

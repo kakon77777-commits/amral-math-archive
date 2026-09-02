@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small-Sample Version Regression: 25 → 12 · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Old fixture (2026-05-22) 25 curves (10 CLZ20 + 15 Zha16), current fixture (2026-06-03) 12 curves (7 CLZ20 + 5 Zha16). exact diff: kept 12, removed 13, added 0. Lists the labels of the 13 removed curves. Explicitly states that one must not over-interpret — before a filter-by-filter replay, they are uniformly tagged VERSION_REGRESSION_REMOVED / reason = OPEN, and mathematical reasons cannot be filled in via intuition, branch distribution, or commit messages.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/01_Small_Fixture_Version_Regression.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/08-fixture-regression/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/08-fixture-regression/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/08-fixture-regression/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/08-fixture-regression/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>08 · Small-Sample Version Regression: 25 → 12</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 08</span>
+      <span class="tag">v0.2 · 01</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Last Document of Today's Third Round</span>
+    </div>
+    <h1>Small-Sample Version Regression: 25 → 12</h1>
+    <p class="h1-sub">The old fixture (2026-05-22) has a total of 25 curves, of which 10 are CLZ20 and 15 are Zha16; the current fixture (2026-06-03) has a total of 12 curves, of which 7 are CLZ20 and 5 are Zha16. Exact diff: kept 12, removed 13, added 0—the labels of the 13 removed curves are 106a1, 110b1, 110c1, 142d1, 142e1, 14a1, 26a1, 26b1, 34a1, 35a1, 38a1, 38b1, 66c1. The core discipline of the document is in the final paragraph: this diff can only state that a certain curve "changed from PASS in the old version to non-PASS in the current version"; before a filter-by-filter replay, they must all be marked as <code>VERSION_REGRESSION_REMOVED</code>, <code>reason = OPEN</code>, and mathematical reasons cannot be filled in from commit messages, branch distributions, or intuition—this is exactly a concrete instance of the distinction between Corpus A and Corpus B in document 07: membership change (this diff) does not equal theorem-level rejection reasons (which requires the official discrepancy_report.txt to list them predicate by predicate).</p>
+    <div class="claim-box">
+      Removal list: 106a1, 110b1, 110c1, 142d1, 142e1, 14a1, 26a1, 26b1, 34a1, 35a1, 38a1, 38b1, 66c1——reason = OPEN
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../07-v02-consensus/">07 · Phase 1 v0.2 Consensus Verdict</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>9 / 24 (Today's third round, and also today's final document)</div>
+    </div>
+    <blockquote class="cite">"Before a filter-by-filter replay, always label as: VERSION_REGRESSION_REMOVED, reason = OPEN. You cannot fill in the mathematical reasons from commit messages, branch distributions, or intuition." — Excerpt from this document's "Do not over-interpret".</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/01_Small_Fixture_Version_Regression.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/01_Small_Fixture_Version_Regression.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

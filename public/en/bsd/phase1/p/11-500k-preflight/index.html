@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500K Preflight · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The five-step checklist before scaling up to the full conductor<500000 rerun: lock Sage/LMFDB/Git SHA/descent backend, exact replay of conductor<150, first-failure replay of the 13 old-version curves, and exact rejection replay of the four discrepancy curves, before the 500K can be run. The 500K run must output seven machine-readable artifacts, and unknown.csv must not be discarded. The success criterion is not "the final count is very close", but that all four items hold simultaneously.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/04_500K_Preflight.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/11-500k-preflight/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/11-500k-preflight/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/11-500k-preflight/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/11-500k-preflight/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>11 · 500K Preflight</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 11</span>
+      <span class="tag">v0.2 · 04</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Last piece of today's first round</span>
+    </div>
+    <h1>500K Preflight</h1>
+    <p class="h1-sub">The document begins by stating that this runtime did not independently recompute the official 500K output. Before scaling up, five steps must be completed in order: lock down environmental variables like Sage/LMFDB/Git SHA/descent backend; perform an exact replay on <code>conductor&lt;150</code>; perform a first-failure replay on the 13 curves present only in the old version; perform an exact rejection replay on the four discrepancy curves from document 07 (upcoming); and only then run <code>conductor&lt;500000</code>. After the 500K run is completed, seven machine-readable artifacts must be output: <code>passed.csv</code>, <code>failed.csv</code>, <code>unknown.csv</code>, <code>predicate_trace.jsonl</code>, <code>descent_certificates/</code>, <code>run_manifest.json</code>, and <code>hashes.txt</code>—the document specifically emphasizes that <code>unknown.csv</code> must not be discarded, otherwise a timeout or backend failure would be misread as a mathematical rejection, which is exactly the concrete implementation requirement of the S3 clause in document 10. Finally, it defines the precise standard for "success," explicitly not a vague judgment like "the final count is very close," but four things holding simultaneously: final set exact (not approximate), stage counts reproducible (counts at each filter stage can be reproduced), adversarial corpus stable (results for the adversarial corpus from document 09 are stable), and certificate semantics stable (certificate semantics do not drift across versions).</p>
+    <div class="claim-box">
+      Success = final set exact + stage counts reproducible + adversarial corpus stable + certificate semantics stable (all four simultaneously).
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../10-soundness-gates/">10 · Algorithm 1 Soundness Gates</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>11 / 24 (Last piece of today's first round)</div>
+    </div>
+    <blockquote class="cite">"unknown.csv cannot be discarded, otherwise timeouts / backend failures will be misread as mathematical rejections." — Excerpt from this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/04_500K_Preflight.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/04_500K_Preflight.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

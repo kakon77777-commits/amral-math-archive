@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rank-2 Scalar Collapse · BSD P5 · AMRAL</title>
+<meta name="description" content="Uses the newly closed Sha[11^∞]=0 to compress the P5 target into a real quantity B_∞(E)=[L''(E,1)/2]/[Ω_E·Reg(E)], splitting it into two strictly layered gates: P5-RAT (whether this quantity is rational) and P5-VAL11 (whether the 11-adic valuation is zero). Uses LMFDB numerical values to calculate B_∞(E)≈1.0000000000000000000003, but explicitly marks that this is not a proof, and provides an escape route for denominator-bound rational reconstruction.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_P5_Rank2_Scalar_Collapse_389a1_p11_v0.3.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/02-rank2-scalar-collapse/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/02-rank2-scalar-collapse/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/02-rank2-scalar-collapse/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/02-rank2-scalar-collapse/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>02 · Rank-2 Scalar Collapse</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 02</span>
+      <span class="tag">v0.3</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">REDUCED, NOT PROVED</span>
+    </div>
+    <h1>P5 Rank-2 Scalar Collapse and Archimedean Comparison Boundary</h1>
+    <p class="h1-sub">After importing Sha[11^∞]=0 from Document 01, the 11-primary contributions on the arithmetic side (Sha, Tamagawa, torsion) of the strong BSD leading coefficient formula are all trivial, so the problem converges to a real quantity: B_∞(E) := [L''(E,1)/2!] / [Ω_E·Reg^NT(E)]. The document proves Proposition 2.1: once B_∞(E) has a canonical rational realization, the 11-primary valuation proposition of strong BSD is equivalent to v_11(B_∞(E))=0. But it then points out a more fundamental problem—B_∞(E) is initially just a real number, and there is no canonical v_11 operation for general real numbers, so the proposition must first pass the "rationality" gate (P5-RAT: B_∞(E)∈ℚ×) before reaching the "valuation" gate (P5-VAL11). The document audits four possible shortcuts one by one (Burns-Kurihara-Sano's Generalized Perrin-Riou, Castella-Hsieh's rank-2 Kato classes, Chan-Ho Kim's higher Gross-Zagier, Kim-Pollack's refined Tamagawa conjecture), concluding that they all provide powerful Selmer/discrete-side tools, but none provides the missing archimedean comparison of "complex higher derivatives → classical Néron-Tate determinant". Using LMFDB display values yields B_∞^disp(E)≈1.0000000000000000000003, making the natural candidate B_∞(E)=1, but the document explicitly emphasizes that this is not a proof—arbitrarily strong real approximations do not imply exact equality unless there is a discreteness/rationality theorem. The document provides a concrete escape route (Lemma 7.1): if one can prove B_∞(E)=a/b with a denominator bound B, combined with sufficiently precise interval arithmetic |B_∞(E)-1|&lt;1/(2B²), one can rigorously force the equality using rational separation.</p>
+    <div class="claim-box">
+      P5 → P5-RAT + P5-VAL11; numerical candidate B_∞(E)=1, but rationality is not proven.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../01-sha-closure-p4/">01 · P4 Single-Prime Sha Finiteness Closure</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../03-etnc-escape-audit/">03 · ETNC Escape Audit</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>3 / 10</div>
+    </div>
+    <blockquote class="cite">"arbitrarily strong real approximation ⇏ exact equality, without a discreteness/rationality theorem." — Excerpt from "6. Numerical scalar witness" in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_P5_Rank2_Scalar_Collapse_389a1_p11_v0.3.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_P5_Rank2_Scalar_Collapse_389a1_p11_v0.3.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

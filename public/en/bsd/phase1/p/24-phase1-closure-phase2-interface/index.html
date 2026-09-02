@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 Closure and Phase 2 Interface · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="The formal capstone document of Phase 1. It lists eight completed tasks (Theorem 2.18 predicate map, Algorithm 2 independent reproduction, paper/current-code soundness audit, <150 version regression, first-failure closure of 13 removed curves, 500K exact artifact census, closure of removal reasons for 4062 Algorithm 1 curves, stable-domain OLD→CURRENT Algorithm 2 semantic replay), declaring Banwait–Huang Reproduction = COMPLETE. It honestly explains that reconstructing the 1,355 historical curves has low marginal benefit for BSD itself, unless the purpose pivots to a repository history paper or proof-engineering case study. It proposes three concrete routes for Phase 2: Route A high-rank wall atlas, Route B strong-BSD coverage expansion (which may generate new external mathematical results), and Route C 2-primary unsolved frontier—this is the most natural new mathematical interface left by Phase 1.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/16_Phase1_Closure_and_Phase2_Interface.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/24-phase1-closure-phase2-interface/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/24-phase1-closure-phase2-interface/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/24-phase1-closure-phase2-interface/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/24-phase1-closure-phase2-interface/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>24 · Phase 1 Capstone and Phase 2 Interface</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 24</span>
+      <span class="tag">v0.6 · 16</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Phase 1 Final Piece · All 25 pieces completed</span>
+    </div>
+    <h1>Phase 1 Closure and Phase 2 Interface</h1>
+    <p class="h1-sub">The formal capstone document for the entire Phase 1 series. It lists eight completed tasks: Theorem 2.18 predicate map, independent reproduction of Algorithm 2, paper/current-code soundness audit, <code>&lt;150</code> version regression, first-failure closure of the 13 removed curves, 500K exact artifact census, closure of the removal reasons for Algorithm 1's 4,062 curves, and Algorithm 2 semantic replay of OLD→CURRENT in the stable domain — and formally declares in a box: <strong>Banwait–Huang Reproduction = COMPLETE</strong>. The document also honestly delineates the boundary of what is "no longer worth attacking": twist reconstruction of the 1,355 OLD-only historical curves can be done, but they are no longer in the CURRENT Algorithm 1 accepted universe. Unless the research goal shifts to a repository history paper, a proof-engineering case study, or a complete historical reproducibility archive, the marginal benefit for BSD itself is low. Finally, it proposes three concrete routes for Phase 2, rather than vague "future work": Route A "High-rank wall atlas," starting from rank $\ge2$ curves to build rigorous analytic rank, Mordell–Weil rank upper/lower bounds, Selmer, $\Sha$ finiteness/$p$-parts, and leading coefficient component by component; Route B "strong-BSD coverage expansion," asking whether known theorems from 2024–2026 can be used to further expand the eligible family of Banwait–Huang Algorithm 1 rather than just reproducing the original algorithm, with the document specifically noting that this is where new external mathematical results might begin to emerge; Route C "2-primary unresolved frontier," where the current program conservatively rejects positive analytic $v_2(\Sha)$, and one could study which rejections are merely due to insufficient computation/certificates, and whether existing theorems or Magma/Sage exact descent can expand the certified set — the document calls this the most natural new mathematical interface left by Phase 1.</p>
+    <div class="claim-box">
+      Banwait–Huang Reproduction = COMPLETE; Phase 2 three routes: Route A High-rank wall atlas, Route B strong-BSD coverage expansion (may produce new results), Route C 2-primary frontier.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../23-fresh-algorithm2-semantic-replay/">23 · Fresh Algorithm2 Semantic Replay</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>24 / 25 · <strong>Complete</strong> (Phase 2 pending setup)</div>
+    </div>
+    <blockquote class="cite">"Banwait–Huang Reproduction = COMPLETE." — Excerpt from the "Phase 1 Completed" paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/16_Phase1_Closure_and_Phase2_Interface.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/16_Phase1_Closure_and_Phase2_Interface.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

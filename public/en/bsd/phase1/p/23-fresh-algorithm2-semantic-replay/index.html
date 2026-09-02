@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Algorithm2 Semantic Replay · BSD Phase 1 · AMRAL</title>
+<meta name="description" content="Tracing from the generator commit 7286794 back to OLD (1a0489) and then to CURRENT (31fae2) across three semantic nodes, performing a complete replay on all 39,394 generator curves and 293,482 twist pairs. Key correction: previously, it was inferred from the source diff that Algorithm 2 might simultaneously have both shrink and expand directions; now, exact replay proves that the expand mechanism was not triggered in this actual data domain. The precise 2x2 gate partition table matches cell by cell, and the OLD→CURRENT delta in the stable domain is entirely attributed to the new gcd(d,3N)=1 condition, with 0 mismatch. All observed semantic changes fall into the Zha16 branch, with the CLZ20 branch delta being zero. Recommends capping off Phase 1 reproduction in v0.6.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/15_Fresh_Algorithm2_Semantic_Replay.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/p/23-fresh-algorithm2-semantic-replay/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/p/23-fresh-algorithm2-semantic-replay/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/p/23-fresh-algorithm2-semantic-replay/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase1/p/23-fresh-algorithm2-semantic-replay/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 1</a>
+    <span>/</span>
+    <span>23 · Fresh Algorithm2 Semantic Replay</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 1 · 23</span>
+      <span class="tag">v0.6 · 15</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Fresh Algorithm2 Semantic Replay</h1>
+    <p class="h1-sub">Pushing the timeline one step further back, we trace to three semantic nodes: generator commit 7286794 ($G$), OLD commit 1a0489 ($O$), and CURRENT commit 31fae2 ($C$). $G\to O$ added the disc-valuation condition $D(E,d)$; $O\to C$ removed $D(E,d)$ and tightened $\gcd(d,N)=1$ to $\gcd(d,3N)=1$. Because the generator archived twist JSON is itself the output of generator Algorithm 2 on real curves, we only need to apply $D(E,d)$ to it to precisely reconstruct OLD, without recomputing unchanged gates like $a_p$, 2-division fields, or Kronecker conditions. Applying $D$ pair-by-pair to all $39{,}394$ generator curves and $293{,}482$ twist pairs yielded $0$ failures, proving that $T_O(E)=T_G(E)$ holds in this data domain. For the $36{,}687$ stable curves, an exact $2\times2$ gate contingency table was built: $D{=}1,G_3{=}1$ has $247{,}391$ pairs (common), $D{=}1,G_3{=}0$ has $21{,}306$ pairs (removed by the new gcd gate), and both $D{=}0,G_3{=}1$ and $D{=}0,G_3{=}0$ are $0$ — curve-by-curve mismatch is $0$. **This is the most critical correction in the entire document**: previously, documents 07/09/13 inferred from the source diff that Algorithm 2 might simultaneously have both tightening and relaxing directions. Now, exact replay with real data proves that the expand mechanism was never triggered in this actual data domain. The CURRENT semantic update is purely a monotonic reduction in the stable domain, and all observed deltas fall in the Zha16 branch (the CLZ20 branch's twist primes inherently exclude $p=3$, so its delta is always zero). The document honestly delineates the boundaries of knowledge: there are still 1,355 OLD-only curves that cannot be covered by this replay because they were added to the OLD base file after the generator twist JSON was generated. However, these curves have all been excluded by CURRENT's Algorithm 1 isogeny gate, so for the "current theorem-qualified universe," the replay is closed; completing those 1,355 only holds value for historical reconstruction. Finally, a stopping rule is given: the three-layer closure of artifact diff → exact census → source semantic replay is complete, and it is recommended to cap the Phase 1 reproduction at v0.6.</p>
+    <div class="claim-box">
+      Exact replay proves: the expand mechanism was not triggered in the real data domain, and the stable domain is a pure monotonic reduction (0 mismatch); all deltas fall into the Zha16 branch; recommends capping off at v0.6.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../22-exact-census-report/">22 · v0.5 Exact Census Report</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../24-phase1-closure-phase2-interface/">24 · Phase 1 Closure and Phase 2 Interface</a></div>
+      <div class="conn-card"><span class="k">Phase 1 Progress</span>23 / 25</div>
+    </div>
+    <blockquote class="cite">"Previously inferred from the source diff that there might be both shrink + expand directions, now exact replay proves: the expand mechanism was not triggered in this actual data domain." — Excerpt from Section 7 of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 1</a>
+    <a href="../../files/15_Fresh_Algorithm2_Semantic_Replay.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/15_Fresh_Algorithm2_Semantic_Replay.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

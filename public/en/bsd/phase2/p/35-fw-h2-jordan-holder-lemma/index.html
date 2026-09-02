@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FW-H2 Jordan–Hölder Lemma · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Opening of FW_H2_Local_Isogeny_Compiler, formally answering the first step of the "Additive FW-H2 compiler" from document 34. If the local representation V=E[p]|_{G_Qp} is reducible, write V^ss=λ⊕μ, with λμ=ω by the Weil pairing. Proof: V^ss falls into the FW Theorem 1.7 forbidden type χ⊕ωχ if and only if λ²=1 or μ²=1. The precise conclusion is encapsulated in a box: FW17-H2 FAILs if and only if a Jordan-Hölder character is quadratic or trivial. If V is irreducible over F_p, it automatically cannot be a character direct sum, and H2 automatically PASSes.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_FW_H2_Jordan_Holder_Lemma.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/35-fw-h2-jordan-holder-lemma/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/35-fw-h2-jordan-holder-lemma/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/35-fw-h2-jordan-holder-lemma/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/35-fw-h2-jordan-holder-lemma/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>35 · FW-H2 Jordan–Hölder Lemma</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 35</span>
+      <span class="tag">Side Branch · FW_H2 · 03</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">FW_H2_Local_Isogeny_Compiler Opening</span>
+    </div>
+    <h1>FW-H2 Jordan–Hölder Lemma</h1>
+    <p class="h1-sub">Formally answers the "Additive FW-H2 compiler" problem listed as the first priority in Document 34. Let $V=E[p]|_{G_{\mathbf Q_p}}$, $\omega=\bar\chi_{\rm cyc}$; if $V$ is reducible, write $V^{ss}=\lambda\oplus\mu$, and from the Weil pairing we get $\lambda\mu=\omega$. The local forbidden form of Fouquet–Wan Theorem 1.7 is $\chi\oplus\omega\chi$. The core lemma precisely proves: $V^{ss}\simeq\chi\oplus\omega\chi$ (for some $\chi$) if and only if $\lambda^2=1$ or $\mu^2=1$—the proof utilizes determinant comparison ($\omega=\omega\chi^2\Rightarrow\chi^2=1$) and reverse construction ($\lambda^2=1\Rightarrow\mu=\omega\lambda^{-1}=\omega\lambda$) in both directions, symmetrically handling the $\mu^2=1$ case. The conclusion is boxed: $\mathrm{FW17\text{-}H2\ FAIL}\iff$ some Jordan–Hölder character is quadratic or trivial. The document finally adds a sentence directly echoing a key fact from all previous branches: if $V$ is irreducible over $\mathbf F_p$, it cannot be a character direct sum, hence H2 automatically PASSes—this is exactly the mathematical reason why the good supersingular branch could get H2 for free from the very beginning, which is now formally proven rather than just cited.</p>
+    <div class="claim-box">
+      Precise lemma: FW17-H2 FAIL ⟺ some Jordan-Hölder character is quadratic or trivial (λ²=1 or μ²=1); irreducible automatically PASSes is formally proven for the first time, no longer just cited.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../34-next-compiler-targets/">34 · Next Compiler Targets</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../36-local-p-isogeny-kernel-criterion/">36 · Local p-Isogeny Kernel Criterion</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>35 / 40</div>
+    </div>
+    <blockquote class="cite">"FW17-H2 FAIL ⟺ a Jordan–Hölder character is quadratic or trivial." — Excerpt from this document's core conclusion.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/03_FW_H2_Jordan_Holder_Lemma.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_FW_H2_Jordan_Holder_Lemma.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

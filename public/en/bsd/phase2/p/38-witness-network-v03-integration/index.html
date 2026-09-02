@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Witness-Network v0.3 Integration · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Assembles the three independent results from documents 35-37 into a complete, executable FW_PROFILE pseudocode: GLOBAL_H1 checks for absolute irreducibility; LOCAL_H2 sequentially checks potentially multiplicative (automatically FAIL), local irreducible (automatically PASS), otherwise constructs φ and dual φ̂ to check if the kernel has a Q_p-linear root; H3 checks for a nonsplit multiplicative witness; PERIOD checks p-adic compatibility; FINAL requires all to PASS for a fixed additive p to be certificated by Fouquet-Wan. It confirms that odd additive primes still only generate a finite table, and ∀p does not re-inflate. The true improvement of v0.3 is summarized in one sentence: A2 H2 UNKNOWN becomes an exact finite local isogeny test.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_Witness_Network_v03_Integration.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/38-witness-network-v03-integration/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/38-witness-network-v03-integration/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/38-witness-network-v03-integration/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/38-witness-network-v03-integration/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>38 · Witness-Network v0.3 Integration</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 38</span>
+      <span class="tag">Side Branch · FW_H2 · 06</span>
+      <span class="tag">2026-08-13</span>
+    </div>
+    <h1>Witness-Network v0.3 Integration</h1>
+    <p class="h1-sub">Assembles the independent results from documents 35-37 into a complete, executable <code>FW_PROFILE</code> pseudocode, serving as the concluding integration of the entire FW_H2 sub-series. The flow is as follows: <code>GLOBAL_H1</code> checks if $E[p]$ is absolutely irreducible over $G_{\mathbf Q}$; <code>LOCAL_H2</code> first checks if it is potentially multiplicative (automatic FAIL, echoing Shortcut 1 in document 37), then checks if the local $E[p]$ is irreducible over $\mathbf F_p$ (automatic PASS), otherwise it constructs a local $p$-isogeny $\phi$ and its dual $\widehat\phi$, checking if either kernel has a linear root in $\mathbf Q_p$ (echoing document 36)—if either is YES then FAIL, if both are NO then PASS; <code>H3</code> checks for the existence of a nonsplit multiplicative witness $\ell\ne p$ such that $p\nmid v_\ell(\Delta)$; <code>PERIOD</code> checks the $p$-adic compatibility of the modular/Néron periods; <code>FINAL</code> requires all to PASS for this fixed additive $p$ to be formally certificated by Fouquet–Wan. The document confirms a crucial global property: odd additive primes still only generate a finite table $\mathcal A_{\rm odd}(E)$, so $\forall p$ does not re-inflate back into an infinite quantifier. The document encapsulates the true improvement of this v0.3 round into a precise boxed statement: A2 H2 UNKNOWN becomes an exact finite local isogeny test—this is exactly what transforms the condition "local Fouquet-Wan nondegeneracy" from document 31 (A2) from an abstract hypothesis requiring verification into a truly executable finite algorithm.</p>
+    <div class="claim-box">
+      Complete FW_PROFILE pseudocode assembling three independent results; confirms that odd additive primes still only generate a finite table, and ∀p does not re-inflate; the true improvement of v0.3: A2 H2 UNKNOWN → exact finite local isogeny test.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../37-kodaira-prefilters-and-nogo/">37 · Kodaira Prefilters and No-Go Results</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../39-local-agent-implementation-spec/">39 · Local Agent Implementation Spec</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>38 / 40</div>
+    </div>
+    <blockquote class="cite">"A2 H2 UNKNOWN → exact finite local isogeny test." — Excerpt from the "Global consequence" paragraph in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/06_Witness_Network_v03_Integration.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_Witness_Network_v03_Integration.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

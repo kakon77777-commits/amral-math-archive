@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 2 Global Enclosure Consensus · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The opening adjudication document for Phase 2. It first cuts three candidate main lines: higher 2-power descent (HOLD/TOOLBOX ONLY, no curves with positive v2(Sha) in the frontier), full rational 2-torsion (HOLD, lacks a general strong-BSD family theorem), and analytic rank 1 (YELLOW, (Im) condition is difficult to determine algorithmically). The one ruled GO is the Fouquet-Wan Hypothesis Compiler: whether FW's odd-p hypotheses can be compiled into finite, replayable base-curve-level predicates, allowing Banwait-Huang's 2-part twist family and the odd-p full-BSD closure to be spliced back together. The largest unclosed quantifier is ∀p>2; one cannot bait-and-switch to full BSD just because most p are good or p≤B are good; a finite exceptional-prime reduction must be found.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/00_Phase2_Global_Enclosure_Consensus.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/00-global-enclosure-consensus/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/00-global-enclosure-consensus/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/00-global-enclosure-consensus/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/00-global-enclosure-consensus/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>00 · Phase 2 Global Enclosure Consensus</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 00</span>
+      <span class="tag">v0.1 · 00</span>
+      <span class="tag">2026-08-12</span>
+      <span class="tag">Opening Verdict</span>
+    </div>
+    <h1>Phase 2 Global Enclosure Consensus</h1>
+    <p class="h1-sub">The opening ruling document for Phase 2, playing a role corresponding to the Global Enclosure of Phase 0, but narrowing the scope to "non-semistable curves"—an area not covered by the Banwait–Huang method itself. The document first cuts three candidate mainlines: higher $2$-power descent, while generally important, is sidelined because Banwait–Huang Remark 2.19 already points out that all LMFDB curves that actually reach the final <code>check_BSD_at_2</code> in Algorithm 1 have $\operatorname{ord}_2(\#\Sha_{\rm an})=0$; a positive $v_2(\Sha_{\rm an})$ simply hasn't appeared in the current 500K frontier, ruled HOLD / TOOLBOX ONLY. Full rational $2$-torsion ($E(\mathbb Q)[2]\cong(\mathbb Z/2)^2$) is valuable but lacks a corresponding general strong-BSD family theorem version, ruled HOLD. Analytic rank 1 is ruled YELLOW, not the first engineering task, because Banwait–Huang themselves admit that <code>(Im)</code>-class residual-image conditions are difficult to determine algorithmically. The true structural limitation is semistability itself—Banwait–Huang Remark 2.10 directly calls it "a strong restriction", whereas Fouquet–Wan can precisely handle arbitrary reduction type at $p$, except their residual hypotheses have not yet been algorithmised. The document writes the main problem of Phase 2 as a precise implication: $\mathrm{BH2}(E,d)+\forall p>2\,\mathrm{FW}(E_d,p)\Longrightarrow\mathrm{BSD}(E_d)$, and honestly points out that the real difficulty is not "most $p$ are good" or "all $p\le B$ are good", but the quantifier itself—$\forall p>2$—which requires finding a finite exceptional-prime reduction, otherwise one can only admit that this route yields a "$p$-part theorem for a fixed finite prime set". Final ruling: GO into the Fouquet–Wan Hypothesis Compiler, STOP directly attacking the higher 2-descent mainline, HOLD full 2-torsion and rank 1.</p>
+    <div class="claim-box">
+      GO: Fouquet-Wan Hypothesis Compiler (odd-p route); STOP: higher 2-descent mainline; HOLD: full 2-torsion / rank 1; the core difficulty is the ∀p&gt;2 quantifier.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next</span><a href="../01-route-matrix/">01 · Phase 2 Route Matrix</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>00 / 40 (Today's first round first document)</div>
+    </div>
+    <blockquote class="cite">"You cannot secretly swap in full BSD just because most p are good, all p≤B are good, or the residual representation is generically surjective." — Excerpt from this document's "The Largest Unclosed Quantifier" paragraph.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/00_Phase2_Global_Enclosure_Consensus.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/00_Phase2_Global_Enclosure_Consensus.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

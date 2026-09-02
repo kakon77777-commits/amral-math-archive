@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kodaira Prefilters and No-Go Results · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Three precise, directly applicable computation-free shortcuts, plus one formal prohibition. Shortcut one: a potentially multiplicative curve twisted back to a Tate curve falls exactly into the FW forbidden types, so ADDITIVE+POTENTIALLY_MULTIPLICATIVE automatically yields FW17_H2_FAIL, without needing a local backend. Shortcut two: when p=3, F_3^×={±1}, so any 1-dimensional local constituent is automatically quadratic/trivial, hence LOCAL_REDUCIBLE automatically yields FAIL, and LOCAL_IRREDUCIBLE automatically yields PASS. Shortcut three: the existence of rational local p-torsion automatically yields FAIL, but there is an explicit warning that the converse does not hold—no rational p-torsion does not equal H2 PASS. The conclusion formally prohibits any "Kodaira-only" inference tables unsupported by residual-character theorems; Kodaira types can only be used for prioritization, and the final verdict must come down to local irreducibility or a p-isogeny kernel certificate.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/05_Kodaira_Prefilters_and_NoGo.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/37-kodaira-prefilters-and-nogo/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/37-kodaira-prefilters-and-nogo/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/37-kodaira-prefilters-and-nogo/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/37-kodaira-prefilters-and-nogo/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>37 · Kodaira Prefilters and No-Go Results</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 37</span>
+      <span class="tag">Side Branch · FW_H2 · 05</span>
+      <span class="tag">2026-08-13</span>
+    </div>
+    <h1>Kodaira Prefilters and No-Go Results</h1>
+    <p class="h1-sub">Provides three precise, directly applicable computation-free shortcuts, followed by a formal ban to conclude. Shortcut 1: Exact no-go (potentially multiplicative): a potentially multiplicative curve twisted by a quadratic character $\psi$ becomes a Tate curve, its residual semisimplification is $1\oplus\omega$, and twisting back yields $\psi\oplus\psi\omega$. Since $\psi^2=1$, this falls exactly into the prohibited form of FW Theorem 1.7—therefore <code>ADDITIVE + POTENTIALLY_MULTIPLICATIVE ⟹ FW17_H2_FAIL</code>, requiring absolutely no local backend computation. Shortcut 2 ($p=3$): Since $\mathbf F_3^\times=\{\pm1\}$, any 1-dimensional local constituent is automatically quadratic or trivial, so <code>p=3+LOCAL_REDUCIBLE⟹FAIL</code> and <code>p=3+LOCAL_IRREDUCIBLE⟹PASS</code>, again requiring no general algorithm. Shortcut 3 (rational local $p$-torsion): If $E(\mathbf Q_p)[p]\ne0$, a trivial line exists, automatically yielding FAIL, which can be cheaply detected using Pannekoek's method—but the document specifically emphasizes that the converse does not hold: <code>NO rational p-torsion ≠ H2 PASS</code>, because the kernel character could still be nontrivial quadratic. Finally, the document formally rejects an entire class of "Kodaira-only" inference tables (such as unproven shortcuts like "potentially supersingular⟹PASS"), explicitly stating they must not be used unless supported by another residual-character theorem; Kodaira/potential-reduction information can only be used for prioritization, and the final determination must fall back on local residual irreducibility or the $p$-isogeny character/kernel certificates established in documents 35 and 36.</p>
+    <div class="claim-box">
+      Three computation-free shortcuts (potentially multiplicative automatically FAILs, p=3 special case, rational p-torsion automatically FAILs but the converse does not hold); formally prohibits unproven Kodaira-only inference tables.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../36-local-p-isogeny-kernel-criterion/">36 · Local p-Isogeny Kernel Criterion</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../38-witness-network-v03-integration/">38 · Witness-Network v0.3 Integration</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>37 / 40</div>
+    </div>
+    <blockquote class="cite">"NO rational p-torsion != H2 PASS. Because the kernel character could still be nontrivial quadratic." — Excerpt from the "rational local p-torsion" paragraph in this text.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/05_Kodaira_Prefilters_and_NoGo.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/05_Kodaira_Prefilters_and_NoGo.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

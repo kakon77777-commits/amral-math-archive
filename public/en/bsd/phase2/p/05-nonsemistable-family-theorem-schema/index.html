@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Semistable Family Theorem Schema · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The v0.1 concluding document, explicitly stating "this document is not a theorem claim, but lists the complete proof obligations." It outlines the full shape of the candidate theorem: for an optimal, analytic-rank-0, not necessarily semistable E, and for d in the squarefree twist family D(E), if one can prove ∀p>2 BSD(E_d,p), then BSD(E_d) holds. It lists five bridge hypotheses and honestly points out the two most dangerous gaps: Gap A (∀p>2 is not yet finite-ized), Gap B (Fouquet-Wan's modular-form period and Banwait's Néron period/Manin constant require clean splicing at small primes). It provides a pragmatic hybrid strategy: FW handles large/generic odd primes, retaining Banwait's existing 3/5/7 small-prime theorems, and p=2 retains Theorem 2.14—this might be an easier route for publication and verification.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/05_NonSemistable_Family_Theorem_Schema.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/05-nonsemistable-family-theorem-schema/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/05-nonsemistable-family-theorem-schema/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/05-nonsemistable-family-theorem-schema/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/05-nonsemistable-family-theorem-schema/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>05 · Non-Semistable Family Theorem Schema</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 05</span>
+      <span class="tag">v0.1 · 05</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Non-Semistable Family Theorem Schema</h1>
+    <p class="h1-sub">The document sets a self-limitation right at the beginning: "This document is not a theorem claim, but a list of complete proof obligations." The shape of the candidate theorem is: let $E/\mathbb Q$ be an optimal, analytic-rank-0 elliptic curve, not required to be semistable; let $\mathcal D(E)$ be a squarefree twist parameter family that satisfies a branch of Banwait–Huang Theorem 2.14; for $d\in\mathcal D(E)$, the candidate outputs $L(E_d,1)\ne0$ and $\operatorname{BSD}(E_d,2)$ are known; if we can further prove $\forall p>2,\ \operatorname{BSD}(E_d,p)$, then $\operatorname{BSD}(E_d)$ holds. The document lists five bridge hypotheses (FW-H1/H2/H3 hold for the base $E$, H1/H2 are preserved under twist, the splitting conditions of $d$ locally preserve the H3 witness, the period/Manin normalization of the FW Corollary is compatible with the Banwait BSD convention, and $L(E_d,1)\ne0$ can directly feed into the FW rank-zero corollary), all of which must hold to obtain $\forall d\in\mathcal D(E),\ \mathrm{BSD}(E_d)$. The document honestly calls out the two most dangerous current gaps: Gap A is the $\forall p>2$ repeatedly emphasized in documents 03 and 04, which has not yet been finite-ized; Gap B is new — the transition from the modular-form period to the Néron period in the Fouquet–Wan Corollary requires clean splicing for the Manin constant treatment at small primes $p$, and the two BSD conventions cannot be taken for granted as directly compatible. Finally, the document provides a pragmatic first-version strategy: use FW to handle "large/generic odd primes," retain Banwait's existing small-prime theorems to handle $3,5,7$, and retain the original Theorem 2.14 for $p=2$ — this kind of hybrid theorem might be easier to publish and verify than attempting to handle everything with a single framework.</p>
+    <div class="claim-box">
+      Candidate theorem shape (not a claim, lists proof obligations); two major gaps: A (∀p&gt;2 not finite-ized), B (period/Manin constant splicing); suggests a hybrid strategy: FW handles large primes, Banwait's existing results handle 3/5/7, Theorem 2.14 handles p=2.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../04-finite-exceptional-prime-problem/">04 · Finite Exceptional Prime Problem</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../06-phase2-agent-experiment/">06 · Phase 2 First Agent Experiment</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>05 / 40 (Last document of today's second round)</div>
+    </div>
+    <blockquote class="cite">"This might form a hybrid theorem that is easier to publish and verify." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/05_NonSemistable_Family_Theorem_Schema.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/05_NonSemistable_Family_Theorem_Schema.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

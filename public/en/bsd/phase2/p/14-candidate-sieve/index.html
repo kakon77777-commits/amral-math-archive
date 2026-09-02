@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate Sieve: Why did 696.e1 pop up? · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Opening of v0.3, curve 696.e1=[0,1,0,8,-16] appears for the first time. Switches to a cheap-then-expensive filtering order, avoiding expensive local Galois analysis on every curve upfront. 696.e1: rank 0, torsion trivial, optimal, Manin 1, conductor 696, Sha_an=1, Tamagawa 1, L^alg(E,1)=1 holds exactly, falling into the Theorem 2.14 branch; odd prime bad reduction at 3 (split mult), 29 (nonsplit mult), W_mult^odd={3,29}, W_-={29}, all relevant gcds are 1; LMFDB records maximal image for all primes, extremely clean. Simultaneously provides a crucial control group: 116.b1 has beautiful conditions across the board, yet because it only has one odd multiplicative reservoir (29) and lacks a second witness, it is eliminated in the fixed multiplicative check—precisely pointing out that the real key to 696.e1 is not "having a nonsplit prime", but "at least two odd multiplicative reservoirs, at least one nonsplit".">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/14_Candidate_Sieve.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/14-candidate-sieve/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/14-candidate-sieve/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/14-candidate-sieve/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/14-candidate-sieve/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>14 · Candidate Sieve: Why did 696.e1 emerge?</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 14</span>
+      <span class="tag">v0.3 · 14</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Last piece of today's second round · 696.e1 debuts</span>
+    </div>
+    <h1>Candidate Sieve: Why did 696.e1 emerge?</h1>
+    <p class="h1-sub">Opening of v0.3, and the first time the titular Phase 2 curve 696.e1 truly appears. The document first alters the filtering order: it adopts a cheap-to-expensive sequence of "rank/optimal/Manin → 2-part $L^{alg}$ valuation → base $\operatorname{BSD}(E,2)$ → odd multiplicative reservoirs → fixed additive primes → residual images → finally local Iwasawa/FW", rather than performing expensive local Galois analysis on every curve upfront. The base data for $E=696.\mathrm{e}1=[0,1,0,8,-16]$ is extremely clean: rank $0$, torsion trivial, optimal, Manin constant $1$, conductor $696&lt;5000$, $\Sha_{\rm an}=1$, Tamagawa product $1$, yielding exactly $L^{alg}(E,1)=1,\ v_2(L^{alg})=0$, which falls perfectly into the "irrational 2-torsion, negative discriminant" branch of Theorem 2.14. Local structure at odd primes: $2$ is additive $\mathrm{II}^*$ ($v_\Delta=11$), $3$ is split multiplicative $\mathrm I_1$, $29$ is nonsplit multiplicative $\mathrm I_1$, hence $W_{\rm mult}^{\rm odd}=\{3,29\}$, $W_-=\{29\}$, and all relevant gcds are exactly $1$. LMFDB records maximal residual images for all primes; support prime irreducibility, fixed multiplicative irreducibility, no rational isogeny, and twist irreducibility preservation are all extremely clean. The document then provides a truly valuable control group: $116.\mathrm b1$ also has rank $0$, a beautiful 2-part anchor, and a nonsplit multiplicative $29$, but its odd bad structure has only $29$ as a single multiplicative reservoir. The fixed multiplicative check fails to find another $q\ne29,\ q\parallel N$ at $p=29$ to serve as a residual-ramification witness, thus it is eliminated by <code>FAIL_FIXED_MULTIPLICATIVE_WITNESS</code>. This comparison precisely points out that the real key to 696.e1 is not simply "having a nonsplit prime", but rather "at least two odd multiplicative reservoirs, at least one of which is nonsplit".</p>
+    <div class="claim-box">
+      696.e1=[0,1,0,8,-16] debuts, base data and odd prime structure are extremely clean; control group 116.b1 is eliminated due to lacking a second witness, precisely locating the true necessary condition: at least two odd multiplicative reservoirs, at least one nonsplit.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../13-candidate-nonsemistable-strong-bsd-family/">13 · Candidate Non-Semistable Strong-BSD Family Schema</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../15-696e1-base-certificate/">15 · 696.e1 Base Certificate</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>14 / 40 (Last document of today's second round; opening of v0.3)</div>
+    </div>
+    <blockquote class="cite">"The key to 696.e1 is not simply 'having a nonsplit prime,' but having at least two odd multiplicative reservoirs, at least one of which is nonsplit." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/14_Candidate_Sieve.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/14_Candidate_Sieve.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

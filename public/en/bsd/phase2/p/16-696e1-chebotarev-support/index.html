@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>696.e1 Chebotarev Support Family · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="Defines the prime family P={q: q≡1(mod24), (q/29)=1, f_2 mod q irreducible}, proving that this set of congruence conditions precisely makes all conductor primes 2, 3, and 29 split in Q(√q). Uses the fiber-product Galois group to calculate the exact Chebotarev density 2/48=1/24. Proves that curves with q∈P are automatically good ordinary (not supersingular, otherwise contradicting the Hasse bound). Gives the first concretely verified twist parameter d=241, including the direct point count a_241(E)=-7.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/16_696e1_Chebotarev_Support.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/16-696e1-chebotarev-support/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/16-696e1-chebotarev-support/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/16-696e1-chebotarev-support/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/16-696e1-chebotarev-support/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>16 · 696.e1 Chebotarev Support Family</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 16</span>
+      <span class="tag">v0.3 · 16</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">True analytic number theory computation</span>
+    </div>
+    <h1>696.e1 Chebotarev Support Family</h1>
+    <p class="h1-sub">Define the prime family $\mathcal P=\{q\text{ prime}: q\equiv1\pmod{24},\ (\frac q{29})=1,\ f_2\bmod q\text{ irreducible}\}$. The document first proves why this set of congruence conditions is effective: $q\equiv1\pmod{24}$ gives $q\equiv1\pmod8$ and $q\equiv1\pmod3$, making $2,3$ split in $\mathbb Q(\sqrt q)$; adding $(\frac q{29})=1$ makes $29$ split as well—all three primes of the conductor, $2,3,29$, split. Next, it performs the actual Chebotarev computation: let $L$ be the Galois closure of $f_2$ ($\mathrm{Gal}(L/\mathbb Q)=S_3$, resolvent $F_0=\mathbb Q(\sqrt{-174})$), and $K=\mathbb Q(\zeta_{24},\sqrt{29})$. Since $\sqrt{-174}=\sqrt{-6}\sqrt{29}$ and $\mathbb Q(\sqrt{-6})\subset\mathbb Q(\zeta_{24})$, it can be proven that $L\cap K=F_0$, hence $[LK:\mathbb Q]=48$; taking a 3-cycle element of $S_3$ (trivial on $F_0$, which is a valid element of the fiber-product Galois group), its conjugacy class size is $2$, yielding an exact density of $\frac2{48}=\frac1{24}$. The document then proves a very neat corollary—"Automatic ordinary": $q$ being inert in the cubic field is equivalent to $\mathrm{Frob}_q$ being an order-3 element of $S_3\simeq GL_2(\mathbb F_2)$, whose characteristic polynomial $X^2+X+1$ gives trace $\equiv1\pmod2$, meaning $a_q$ is odd; if $q\ge5$ and supersingular, then $q\mid a_q$ combined with the Hasse bound would force $a_q=0$, a contradiction—therefore $q\in\mathcal P\Rightarrow q$ is good ordinary for $E$. Finally, the document provides the first concretely verified example: $q=241$ ($241\equiv1\pmod{24}$, $241\bmod29=9$ is a quadratic residue, $f_2\bmod241$ has no roots and is thus irreducible), direct point counting yields $a_{241}(E)=-7$, so the first explicit twist parameter is $d=241$.</p>
+    <div class="claim-box">
+      Exact Chebotarev density 1/24; q∈P ⟹ q is automatically good ordinary for E; first concretely verified twist parameter d=241, a_241(E)=-7.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../15-696e1-base-certificate/">15 · 696.e1 Base Certificate</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../17-696e1-all-prime-router/">17 · 696.e1 All-Prime Router</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>16 / 40</div>
+    </div>
+    <blockquote class="cite">"q∈P ⟹ q is good ordinary for E." — Excerpt from Section "Automatic ordinary" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/16_696e1_Chebotarev_Support.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/16_696e1_Chebotarev_Support.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

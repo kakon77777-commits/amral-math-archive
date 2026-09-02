@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derived Supersingular FW Bridge · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The milestone high point of v0.2, marked as "a derived proposition stitched together from existing external theorems, not a named theorem from the original paper". Combining the results of documents 09 and 10: for a good supersingular prime p, if a suitable witness ℓ exists (non-split multiplicative reduction, p∤v_ℓ(Δ_min)), then FW-H1, FW-H2, and FW-H3 all hold automatically. If furthermore g_-(E)=2^a, then all odd good supersingular primes can be closed at once by a single finite base certificate—this is the first time in this series that ∀p>2 is truly closed over an entire reduction-type branch. Honestly marks the remaining gaps: period normalization/Manin constant needs separate handling, and the first version of the candidate theorem suggests directly requiring c_E=1 to avoid the ambiguity of stitching modular periods and Néron periods.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/11_Derived_Supersingular_FW_Bridge.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/11-derived-supersingular-fw-bridge/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/11-derived-supersingular-fw-bridge/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/11-derived-supersingular-fw-bridge/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/11-derived-supersingular-fw-bridge/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>11 · Derived Supersingular FW Bridge</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 11</span>
+      <span class="tag">v0.2 · 11</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Today's first round final document · ∀p&gt;2 closed over an entire branch for the first time</span>
+    </div>
+    <h1>Derived Supersingular FW Bridge</h1>
+    <p class="h1-sub">The document begins by positioning itself: "a derived proposition spliced together from existing external theorems; not a named theorem from an original paper"—this honest attribution marking runs throughout the entire BSD research line. The content combines the results of documents 09 and 10: for $E/\mathbf Q$ and a good supersingular prime $p>2$, if there exists $\ell\parallel N_E$ such that $E$ is nonsplit multiplicative at $\ell$ and $p\nmid v_\ell(\Delta_{\min})$, then the local irreducibility of good supersingular gives FW-H1, the same irreducibility excludes the FW-H2 forbidden types, and nonsplit Steinberg plus residual ramification gives FW-H3—all three hypotheses hold at once, and $E[p]$ satisfies the Fouquet–Wan residual hypotheses. If additionally $L(E,1)\ne0$, one can apply its rank-zero $p$-part BSD corollary, though the period normalization/Manin constant needs to be closed separately. The document then gives a Uniform form, directly echoing the discovery in document 09: if $g_-(E)=2^a$, then **all** odd good supersingular primes can be closed at once by a finite base certificate—this is the first time in the entire series that $\forall p>2$ is truly and completely closed over an entire reduction-type branch (good supersingular), no longer just a possibility of a "finite exceptional set," but concretely achieved. Finally, the document provides a pragmatic Safe period condition: the first version of the candidate theorem directly requires $c_E=1$, completely avoiding the ambiguity of splicing the modular period and the Néron period, temporarily bypassing Gap B highlighted in document 05 in the simplest way.</p>
+    <div class="claim-box">
+      Good supersingular branch: g_-(E)=2^a ⟹ all odd primes are closed at once by a single finite certificate—∀p&gt;2 is truly closed over an entire branch for the first time; remaining gaps (period/Manin constant) are bypassed in the first version by directly requiring c_E=1.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../10-fw-h2-and-ordinary-obstruction/">10 · FW-H2 Compiler and Ordinary Obstruction</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../12-hybrid-odd-prime-router/">12 · Hybrid Odd-Prime Router</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>11 / 40 (Last piece of today's first round)</div>
+    </div>
+    <blockquote class="cite">"Status: a derived proposition spliced together from existing external theorems; not a named theorem from the original paper." — Excerpt from the beginning of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/11_Derived_Supersingular_FW_Bridge.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/11_Derived_Supersingular_FW_Bridge.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

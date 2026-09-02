@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anomalous Prime Norm Localization · BSD P5 · AMRAL</title>
+<meta name="description" content="Discovered that for 389.a1, 397 and 991 (the two auxiliary primes used to construct the Kurihara witness) happen to also be anomalous primes where 11|#E(F_ℓ), meaning classical non-anomalous Mazur-Tate height theory cannot be directly applied. Switched to using the norm quotient theorem for degree-11 tamely totally ramified local extensions, precisely calculating the localization matrix M_loc and determinant 2∈F₁₁×, proving that the two rank-1 norm obstruction planes are transverse, rigorously establishing the isomorphism between E(Q)/11E(Q) and the local norm quotient, while simultaneously calculating the exact index [E(Q):E^S(Q)]=390830.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_P5_Anomalous_Norm_Localization_389a1_p11_v1.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/07-anomalous-norm-localization/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/07-anomalous-norm-localization/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/07-anomalous-norm-localization/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/07-anomalous-norm-localization/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>07 · Anomalous Prime Norm Localization</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 07</span>
+      <span class="tag">v1.1</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">exact theorem/certificate</span>
+    </div>
+    <h1>Anomalous Norm Localization for $389.a1$ at $p=11$</h1>
+    <p class="h1-sub">The research route pivots here: instead of attacking the complex-to-p-adic comparison head-on, it turns back to examine the arithmetic properties of the two auxiliary primes 397 and 991 used to construct the Kurihara witness. Exact point counting gives #E(F₃₉₇)=374=34·11 and #E(F₉₉₁)=1045=95·11—this is no coincidence; the Kurihara/Kolyvagin condition a_ℓ-ℓ-1≡0 (mod 11) is equivalent to 11|#E(F_ℓ), so primes that can provide a discrete derivative certificate are automatically anomalous primes in the classical non-anomalous Mazur-Tate height theory. The document explicitly marks a NO_GO: the Burns-Kurihara-Sano non-anomalous pairing formula requires that the chosen primes do not divide the relevant reduction orders, which both primes here violate, and the Bley-Macias Castillo computational framework is restricted to p=3 and cannot be directly applied. The document instead uses a new lemma (Proposition 4.1)—under a tamely totally ramified degree-p extension, the norm quotient of a good reduction curve is isomorphic to the mod-p quotient group of the reduced curve—to precisely calculate two one-dimensional localized quotients, forming the localization matrix M_loc=[[1,2],[1,4]], with determinant 2∈F₁₁× being nonzero. This proves that the two rank-1 norm obstruction planes intersect transversally ((Q-2P)∧(Q-4P)=2(P∧Q)), strictly establishing the isomorphism E(ℚ)/11E(ℚ)≅⊕E(ℚ_ℓ)/NE(L_ℓ) (Theorem 6.1), independent of any complex leading term comparison. The document additionally calculates the exact index [E(ℚ):E^S(ℚ)]=390830 and proves simultaneous reduction surjectivity (J_S=1). The document explicitly separates the left-hand side (modular form initial term coefficient 6) and the right-hand side (localization determinant 2), only stating that their quotient is 3∈F₁₁×, without claiming that this 3 is the Mazur-Tate comparison constant—the formal gap left is P5-ANOM-BocCOMP₁₁⁽²⁾ (anomalous Bockstein comparison), which is the starting point of document 08.</p>
+    <div class="claim-box">
+      det M_loc = 2 ≠ 0 (rank-2 local norm localization theorem, independent of any complex leading term comparison).
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-local-unit-cancellation/">06 · Explicit Local Unit Cancellation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-norm-selmer-core-vertex/">08 · Norm-Selmer Core Vertex</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>8 / 10</div>
+    </div>
+    <blockquote class="cite">"The project has therefore isolated a very specific phenomenon: double Kolyvagin anomaly + nondegenerate rank-2 norm localization + nonzero mixed Mazur-Tate derivative." — Excerpt from the end of "10. Gate state after v1.1" in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_P5_Anomalous_Norm_Localization_389a1_p11_v1.1.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_P5_Anomalous_Norm_Localization_389a1_p11_v1.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

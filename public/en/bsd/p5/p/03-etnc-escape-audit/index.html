@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETNC Escape Audit · BSD P5 · AMRAL</title>
+<meta name="description" content="Tests whether Fouquet's Equivariant Tamagawa Number Conjecture (ETNC) framework can be used to place B_∞(E) into a rational lattice without assuming the classical rank-2 BSD leading term formula. Ruling: NO_DIRECT_ETNC_ESCAPE—the ETNC machinery is very strong for non-derived critical values, but for 389.a1 the central value vanishes to order two at the trivial character, making it a derived specialization. Existing ETNC theorems cannot directly deduce rationality in the absence of an additional derived archimedean comparison theorem. Refines P5-RAT into the more explicit P5-DERPER gate.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/P5_E1_ETNC_ESCAPE_AUDIT.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/03-etnc-escape-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/03-etnc-escape-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/03-etnc-escape-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/03-etnc-escape-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>03 · ETNC Escape Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 03 · P5-E1</span>
+      <span class="tag">v0.4</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">NO_DIRECT_ETNC_ESCAPE</span>
+    </div>
+    <h1>P5-E1 — ETNC / Determinant-Line Representation Escape Audit</h1>
+    <p class="h1-sub">After Document 02 converged P5 into the rationality problem of B_∞(E), this piece tests the first possible shortcut: can the proven Equivariant Tamagawa Number Conjecture (ETNC) machinery directly place this scalar into the rational lattice without presupposing the classical rank-2 BSD leading coefficient formula? Audit results: Fouquet's ETNC framework for modular motives has strong theorem support on fundamental line existence, integral zeta element lattices, Hecke family specialization, and ordinary critical value period comparisons—but these are all for "non-derived" ordinary critical fibers. For 389.a1, the central value vanishes to order two at the trivial character; P5's goal is a derived specialization, shaped as ∂⁽¹⁾z_E ↔ L''(E,1)/2!, and it must simultaneously identify the derived determinant/Bockstein object with Ω_E·Reg^NT(E)—this is exactly the extra data that Generalized Perrin-Riou type formulas aim to handle. The document cites Burns-Kurihara-Sano's own records: for general positive rank, the cyclotomic Generalized Perrin-Riou conjecture, up to a ℤ_p× factor, is deduced from the relevant BSD proposition itself plus the generalized Iwasawa Main Conjecture—so "ETNC/Iwasawa Main Conjecture ⟹ B_∞(E)∈ℚ×" currently does not hold for the rank-2 trivial character leading coefficient, unless there is another derived archimedean comparison theorem. The gap is not that the fundamental line does not exist, but the lack of a proven comparison between the "derived p-adic/determinant specialization" and the "archimedean Néron-Tate leading coefficient normalization". The document therefore refines P5-RAT into the more explicit P5-DERPER gate, pointing out that the next literature search should precisely target one of four candidates, rather than broadly searching for "ETNC for elliptic curves".</p>
+    <div class="claim-box">
+      NO_DIRECT_ETNC_ESCAPE_FROM_DERIVED_ARCHIMEDEAN_GATE;P5-RAT → P5-DERPER
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-rank2-scalar-collapse/">02 · Rank-2 Scalar Collapse</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-imc-closure-gpr-bridge/">04 · IMC Closure and GPR Bridge</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>4 / 10</div>
+    </div>
+    <blockquote class="cite">"The obstruction is not the absence of a fundamental line. It is the absence of a proved comparison between the derived p-adic/determinantal specialization and the archimedean Néron-Tate leading-term normalization." — Excerpt from Section "4. Circularity Audit" of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/P5_E1_ETNC_ESCAPE_AUDIT.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/P5_E1_ETNC_ESCAPE_AUDIT.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

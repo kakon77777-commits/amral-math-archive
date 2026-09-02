@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCD Witness Lemmas · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="A streamlined working draft version of Section 2 from document 31, compressing the algebraic core of the gcd witness into three quick-reference lemmas: generic witness (if an odd prime p does not divide the gcd of the multiplicative witness set, a valid witness exists), fixed multiplicative prime (when p itself is multiplicative, the witness must be a distinct prime, which is a finite leave-one-out check), and nonsplit FW witness (the same gcd lemma holds when restricted to nonsplit multiplicative primes). A single concluding sentence points out the algebraic essence of the entire mechanism: this is exactly the precise algebraic reason why the all-prime witness problem becomes finite.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/00_GCD_Witness_Lemmas.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/32-gcd-witness-lemmas/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/32-gcd-witness-lemmas/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/32-gcd-witness-lemmas/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/32-gcd-witness-lemmas/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>32 · GCD Witness Lemmas</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 32</span>
+      <span class="tag">Side Branch · Witness-Network · 00</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Streamlined Quick-Reference Version of Section 2 from Document 31</span>
+    </div>
+    <h1>GCD Witness Lemmas</h1>
+    <p class="h1-sub">A streamlined working draft version of the full proof in Section 2 of Document 31, compressing the algebraic core of the gcd witness into three quick-reference lemmas. Generic witness: for an odd prime $p$ not in the multiplicative witness set, there exists a valid witness $\ell$ such that $p\nmid n_\ell$ if and only if $p$ does not divide the $\gcd_\ell n_\ell$ of the entire set—therefore, the only possible failures are the finite odd prime factors of this gcd. Fixed multiplicative prime: if $p$ itself is a multiplicative prime, the witness must be a distinct $\ell\ne p$; this is a finite leave-one-out check. Nonsplit FW witness: the same gcd lemma holds when restricted to the subset of nonsplit multiplicative primes, and its odd gcd factors are exactly the only primes that could cause the standard FW-H3 witness to fail. The document concludes the algebraic essence of the entire mechanism in one sentence: this is the exact algebraic reason why the all-prime witness problem can be finite-ized.</p>
+    <div class="claim-box">
+      Three quick-reference lemmas: generic witness, fixed multiplicative leave-one-out, and nonsplit FW witness, all reducing to the same gcd lemma—this is the exact algebraic reason why the all-prime witness problem can be finite-ized.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../31-witness-network-criterion/">31 · A Finite-Exception Witness-Network Criterion</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../33-odd-additive-period-barrier/">33 · Odd Additive Period Barrier</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>32 / 40</div>
+    </div>
+    <blockquote class="cite">"This is the exact algebraic reason the all-prime witness problem is finite." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/00_GCD_Witness_Lemmas.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/00_GCD_Witness_Lemmas.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 · 389.a1 at p=11 · BSD Conjecture · AMRAL</title>
+<meta name="description" content="BSD P5: Study of the strong BSD leading term formula for the rank-2 curve 389.a1 at the single prime p=11. Starting from the architectural definition of the Rank-Uniform Zeta-Primitivity Bridge, through precise finite field computations to close Sha[11^∞]=0, it progressively compresses the problem down to the two bits uGPR11 = P5-INT11 ∧ P5-PRIM11, and then approaches from the angle of anomalous prime localization. Current progress has reached the determinant Kurihara semi-local closure—the core complex leading term/regulator comparison (P5-CPLX-GPR) remains OPEN. Does not claim to prove BSD.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../">BSD Conjecture</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../bsd/p5/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← BSD Conjecture</a> · P5</p>
+    <h1>P5: 389.a1 at $p=11$</h1>
+    <p class="subtitle">Single-prime strong BSD leading term formula · 2026-08-14 · Progress reached determinantal Kurihara semilocal closure, core comparison remains OPEN.</p>
+    <p class="lede">
+      A study of the strong BSD leading term formula for the rank-2 curve 389.a1 at the single prime p=11. It does not claim to prove BSD, nor does it treat numerical matching as proof.
+      This sub-thread starts from the architectural definition of the <a href="./p/00-rank-uniform-bridge/">Rank-Uniform Zeta-Primitivity Bridge</a>,
+      closes Sha(E/ℚ)[11^∞]=0 via exact finite field computations (Manin symbols, Hecke eigenspaces, Kurihara witness),
+      and gradually compresses "proving strong BSD" into "proving the two bits uGPR11 = P5-INT11 ∧ P5-PRIM11".
+      It then approaches from the localization perspective of the two anomalous primes 397 and 991, with current progress reaching the determinantal Kurihara semilocal closure —
+      the core complex leading term/regulator comparison (P5-CANON-BocID, P5-CPLX-GPR) remains OPEN.
+    </p>
+    <p class="notice">
+      Read the ten documents in sequence — each is a prerequisite for the next, and it is recommended to read them in order. The numbering follows the version number jumps within the documents (v0.6 is directly followed by v0.8, because the package itself did not independently package v0.7; the original citation can be found in the main text of document 06).
+    </p>
+  </header>
+
+  <section id="docs">
+    <h2 class="doc-h2">Ten Documents</h2>
+    <nav class="case-grid" aria-label="P5 文件">
+      <a class="case-card" href="./p/00-rank-uniform-bridge/">
+        <span class="k">00</span>
+        <h3>Rank-Uniform Zeta-Primitivity Bridge</h3>
+        <p>Three-layer proposition split, two no-go lemmas, certificate ladder C0-C10, RUGZPB conditional theorem.</p>
+      </a>
+      <a class="case-card" href="./p/01-sha-closure-p4/">
+        <span class="k">01</span>
+        <h3>P4 Single-Prime Sha Finiteness Closure</h3>
+        <p>Precise finite field computation, Sha(E/ℚ)[11^∞]=0, non-circular argument.</p>
+      </a>
+      <a class="case-card" href="./p/02-rank2-scalar-collapse/">
+        <span class="k">02</span>
+        <h3>Rank-2 Scalar Collapse</h3>
+        <p>Compressed into a single real quantity B_∞(E), split into P5-RAT + P5-VAL11.</p>
+      </a>
+      <a class="case-card" href="./p/03-etnc-escape-audit/">
+        <span class="k">03</span>
+        <h3>ETNC Escape Audit</h3>
+        <p>NO_DIRECT_ETNC_ESCAPE. P5-RAT refined into P5-DERPER.</p>
+      </a>
+      <a class="case-card" href="./p/04-imc-closure-gpr-bridge/">
+        <span class="k">04</span>
+        <h3>IMC Closure and GPR Bridging</h3>
+        <p>Full cyclotomic Iwasawa Main Conjecture closure, P5-GPR11 is the main obstacle.</p>
+      </a>
+      <a class="case-card" href="./p/05-ugpr-minimal-gate/">
+        <span class="k">05</span>
+        <h3>uGPR Minimal Gate</h3>
+        <p>P5-LAT11 ⟺ Integrality + a mod-11 non-zero bit.</p>
+      </a>
+      <a class="case-card" href="./p/06-local-unit-cancellation/">
+        <span class="k">06</span>
+        <h3>Explicit Local Unit Cancellation</h3>
+        <p>No hidden 11-local denominator; u_loc is exactly an 11-adic unit.</p>
+      </a>
+      <a class="case-card" href="./p/07-anomalous-norm-localization/">
+        <span class="k">07</span>
+        <h3>Anomalous Prime Norm Localization</h3>
+        <p>397 and 991 are simultaneously Kurihara witnesses and anomalous primes; localization matrix determinant 2≠0.</p>
+      </a>
+      <a class="case-card" href="./p/08-norm-selmer-core-vertex/">
+        <span class="k">08</span>
+        <h3>Norm-Selmer Core Vertex</h3>
+        <p>Sel₁₁(E/ℚ) is isomorphic to the direct sum of two local quotients (Theorem 4.1).</p>
+      </a>
+      <a class="case-card" href="./p/09-determinantal-kurihara-semilocal/">
+        <span class="k">09</span>
+        <h3>Determinantal Kurihara Semilocal Closure</h3>
+        <p>Current latest progress. Three finite rank-2 facts closed, core comparison remains OPEN.</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← BSD Conjecture</a>
+    <span>SHA-256 Document-by-Document Verification · Raw bytes, no repackaging</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 · Banwait–Huang Reproduction · BSD Conjecture · AMRAL</title>
+<meta name="description" content="BSD Phase 1: Reproducing Banwait-Huang 2026 (arXiv:2601.16044) algorithmised rank-0 twist-family census. 25/25 COMPLETE. Ruling PASS (route is engineerable); the first batch of small-scale reproduction perfectly matches the official fixture; v0.3 uses a precise one-commit diff to complete the first-failure closure of 13 removed curves; v0.4 amplifies the effect to a 500K full-scale measurement (4062/40749 curves removed); v0.5 exact census global accounting identity exact PASS; v0.6 uses exact replay to correct an earlier guess—Algorithm 2's expand mechanism was never triggered in the real data domain, and the stable domain is a pure monotonic reduction—formally capping off, declaring Banwait–Huang Reproduction = COMPLETE, and proposing three concrete routes for Phase 2. Does not claim to prove BSD.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../">BSD Conjecture</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../bsd/phase1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← BSD Conjecture</a> · Phase 1</p>
+    <h1>Phase 1: Banwait–Huang Reproduction</h1>
+    <p class="subtitle">Strong-BSD Twist-Family Reproduction · <strong>25 / 25 COMPLETE</strong></p>
+    <p class="lede">
+      Reproduces the work of Banwait–Huang 2026 (arXiv:2601.16044) compiling strong-BSD twist criteria into explicit algorithms and performing systematic identification on LMFDB elliptic curves with conductor&lt;500,000. Does not claim to prove BSD—every document only answers "which curves and twists satisfy the verifiable conditions of known theorems", not "BSD holds for these curves".
+    </p>
+    <p class="notice">
+      v0.1 (7 pieces) + v0.2 (7 pieces) + v0.3 (4 pieces) + v0.4 (4 pieces) + v0.5 (1 exact census report piece, located in <code>results/</code> instead of
+      <code>docs/</code>, not in the original 24-piece estimate, supplemented after discovery) + v0.6 (2 pieces) are all online, 25/25. The final piece of v0.6 formally declares
+      <strong>Banwait–Huang Reproduction = COMPLETE</strong>, and proposes three concrete routes for Phase 2.
+    </p>
+  </header>
+
+  <section id="docs">
+    <h2 class="doc-h2">Online Documents</h2>
+    <nav class="case-grid" aria-label="Phase 1 文件">
+      <a class="case-card" href="./p/00-consensus/">
+        <span class="k">00</span>
+        <h3>Phase 1 Consensus Verdict</h3>
+        <p>PASS, route is engineerable. CLZ20/Zha16 branches small-scale reproduction perfectly matches the official fixture.</p>
+      </a>
+      <a class="case-card" href="./p/01-condition-map/">
+        <span class="k">01</span>
+        <h3>Theorem 2.18 Condition Map</h3>
+        <p>Base curve seven conditions, two 2-torsion branches, twist conditions. admissible ⟹ BSD, one-way.</p>
+      </a>
+      <a class="case-card" href="./p/02-paper-vs-code-audit/">
+        <span class="k">02</span>
+        <h3>Paper and Official Code Audit</h3>
+        <p>The official program has an additional gate compared to the paper to prevent overclaiming: distinguishing Sha[2] dimension from ord_2(Sha).</p>
+      </a>
+      <a class="case-card" href="./p/03-algorithm2-reproduction/">
+        <span class="k">03</span>
+        <h3>Algorithm 2 Independent Reproduction</h3>
+        <p>Pure Python standard library mirror, exact list match for the two branches 46a1/106d1.</p>
+      </a>
+      <a class="case-card" href="./p/04-environment-and-gaps/">
+        <span class="k">04</span>
+        <h3>Algorithm 1 Execution Environment and Missing Items</h3>
+        <p>Honestly lists six things not done in this round, providing a small-sample-first v0.2 plan.</p>
+      </a>
+      <a class="case-card" href="./p/05-enclosure-and-stop-rules/">
+        <span class="k">05</span>
+        <h3>Global Enclosure and Stopping Rules</h3>
+        <p>The route ceiling is a uniform infinite-family theorem, not ∀E/ℚ. Defines stopping rules.</p>
+      </a>
+      <a class="case-card" href="./p/06-local-agent-handoff/">
+        <span class="k">06</span>
+        <h3>Local Agent Handoff</h3>
+        <p>Six-role handoff, bridging the actual execution of the stopping rules.</p>
+      </a>
+      <a class="case-card" href="./p/07-v02-consensus/">
+        <span class="k">07</span>
+        <h3>Phase 1 v0.2 Consensus Verdict</h3>
+        <p>Upgraded from result reproduction to versioned certificate regression. Discovered official fixture went from 25 curves → 12 curves.</p>
+      </a>
+      <a class="case-card" href="./p/08-fixture-regression/">
+        <span class="k">08</span>
+        <h3>Small-Sample Version Regression: 25 → 12</h3>
+        <p>The labels of the 13 removed curves are listed one by one, reason = OPEN, no guessing of reasons.</p>
+      </a>
+      <a class="case-card" href="./p/09-discrepancy-corpus/">
+        <span class="k">09</span>
+        <h3>Official Discrepancy Corpus</h3>
+        <p>62a1/66b1/105a1/141c1 exactly rejected by predicate. Unexpected pass ⟹ label REGRESSION? first, not BREAKTHROUGH.</p>
+      </a>
+      <a class="case-card" href="./p/10-soundness-gates/">
+        <span class="k">10</span>
+        <h3>Algorithm 1 Soundness Gates</h3>
+        <p>S1-S6 six gates: analytic≠actual Sha, timeout=UNKNOWN, deterministic gate, complete provenance.</p>
+      </a>
+      <a class="case-card" href="./p/11-500k-preflight/">
+        <span class="k">11</span>
+        <h3>500K Preflight</h3>
+        <p>Five-step checklist before scaling up to conductor&lt;500000. Success = four items holding simultaneously, not just numbers being close.</p>
+      </a>
+      <a class="case-card" href="./p/12-agent-regression-protocol/">
+        <span class="k">12</span>
+        <h3>Agent Regression Protocol</h3>
+        <p>Three layers of regression tests + four cognitive firewalls. Pure engineering changes are marked ENGINEERING ONLY and do not count as mathematical progress.</p>
+      </a>
+      <a class="case-card" href="./p/13-semantic-version-changelog/">
+        <span class="k">13</span>
+        <h3>Semantic Version Changelog</h3>
+        <p>Core principle: code version ≠ theorem semantics version. Eight semantic drift monitoring items.</p>
+      </a>
+      <a class="case-card" href="./p/14-one-commit-autopsy/">
+        <span class="k">14</span>
+        <h3>One-Commit Semantic Autopsy</h3>
+        <p>A difference of exactly one commit. Algorithm 1 is substantively tightened, and Algorithm 2 simultaneously shrinks and expands.</p>
+      </a>
+      <a class="case-card" href="./p/15-removed-13-closure/">
+        <span class="k">15</span>
+        <h3>Removed 13 First-Failure Closure</h3>
+        <p>All 13 removed curves are fully explained by the new Algorithm 1 criteria, no longer a black-box version drift.</p>
+      </a>
+      <a class="case-card" href="./p/16-algorithm2-twist-diff/">
+        <span class="k">16</span>
+        <h3>Algorithm 2 Twist Semantic Diff</h3>
+        <p>Adds 2 synthetic cases to directly distinguish old and new semantic branches, predicate-level only, does not claim to correspond to actual twists.</p>
+      </a>
+      <a class="case-card" href="./p/17-phase1-gate-v03/">
+        <span class="k">17</span>
+        <h3>Phase 1 Gate v0.3</h3>
+        <p>A+B+C+D all four layers pass → REPRODUCTION-QUALIFIED; otherwise at most OUTPUT-MATCHED. v0.3 completed.</p>
+      </a>
+      <a class="case-card" href="./p/18-500k-one-commit-impact/">
+        <span class="k">18</span>
+        <h3>500K One-Commit Global Impact</h3>
+        <p>The same commit removed 4062/40749 curves at the full 500K scale. Semantic versioning is part of mathematical soundness.</p>
+      </a>
+      <a class="case-card" href="./p/19-delta-only-verifier/">
+        <span class="k">19</span>
+        <h3>Delta-Only Algorithm1 Verifier</h3>
+        <p>Incremental proof replay, no need to rerun unchanged filters. If it does not match the official output, it should stop and not proceed directly to full replay.</p>
+      </a>
+      <a class="case-card" href="./p/20-500k-twist-nonmonotonicity/">
+        <span class="k">20</span>
+        <h3>500K Twist Output Non-Monotonicity</h3>
+        <p>+1899/-53404 lines prove that Algorithm 2 semantic changes were indeed triggered in the large-scale data domain, but line count ≠ proven twist count.</p>
+      </a>
+      <a class="case-card" href="./p/21-phase1-next-low-cost-gate/">
+        <span class="k">21</span>
+        <h3>Phase 1 Next Lowest-Cost Gate</h3>
+        <p>Gate A→B→C three-stage strategy. What is truly expensive is the rework caused by semantic errors, not the runtime. v0.4 Complete.</p>
+      </a>
+      <a class="case-card" href="./p/22-exact-census-report/">
+        <span class="k">22</span>
+        <h3>v0.5 Exact Census Report</h3>
+        <p>Gate A+B exact execution results. Global twist accounting identity 46091=46091 exact PASS, 26/26 completion checks.</p>
+      </a>
+      <a class="case-card" href="./p/23-fresh-algorithm2-semantic-replay/">
+        <span class="k">23</span>
+        <h3>Fresh Algorithm2 Semantic Replay</h3>
+        <p>Key correction: exact replay proves the expand mechanism was never triggered in the real data domain; the stable domain is a pure monotonic reduction.</p>
+      </a>
+      <a class="case-card" href="./p/24-phase1-closure-phase2-interface/">
+        <span class="k">24</span>
+        <h3>Phase 1 Closure and Phase 2 Interface</h3>
+        <p>Banwait–Huang Reproduction = COMPLETE. Phase 2 three routes: high-rank wall atlas, strong-BSD coverage expansion, 2-primary frontier.</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← BSD Conjecture</a>
+    <span>SHA-256 Document-by-Document Verification · Raw bytes, no repackaging</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P4 Single-Prime Sha Finiteness Closure · BSD P5 · AMRAL</title>
+<meta name="description" content="Exact finite-field computations for 389.a1 at p=11: Manin-symbol module dimension verification, isolating a one-dimensional plus eigenvector in the Hecke eigenspace, finding the Kurihara witness n=397·991 and showing it is non-zero, and deducing Sha(E/Q)[11^∞]=0 from the Chan-Ho Kim theorem chain. Simultaneously completes the P2 audit (RUGZPB cannot be simply equated to ETNC) and partial P1 audit.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/BSD_RUGZPB_P2_P4_389a1_p11_v0.2.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/p5/p/01-sha-closure-p4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/p5/p/01-sha-closure-p4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/p5/p/01-sha-closure-p4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/p5/p/01-sha-closure-p4/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P5</a>
+    <span>/</span>
+    <span>01 · P4 Single-Prime Sha Finiteness Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">P5 · 01</span>
+      <span class="tag">v0.2</span>
+      <span class="tag">2026-08-14</span>
+      <span class="tag">RUGZPB P2/P4</span>
+    </div>
+    <h1>BSD RUGZPB P2/P4 Update: Precise 11-primary Sha closure for 389.a1</h1>
+    <p class="h1-sub">Following up on the P1-P7 obligations from document 00, this document tackles P4 (single-prime rank-2 closure) and P2 (whether RUGZPB is just ETNC with a change of sign). The core of P4 is a computation done entirely with integer and finite field arithmetic, containing no floating-point numbers: first, exact row operations are performed over F_11 on the Manin-symbol module of level 389, verifying that the dimension 390-325=65 is exactly equal to 2g(X_0(389))+1; after imposing the Hecke conditions (T_q-a_q)λ=0 for q=2,3,5, the plus involution compresses the target space to exactly one dimension; after fixing λ, it is independently verified that it gives the correct Hecke eigenvalues for all q=2,3,5,7,13,17,19. Next, using ℓ₁=397 and ℓ₂=991 (both satisfying the mod-11 Kolyvagin prime conditions), the Kurihara witness δ₃₉₃₄₂₇⁽λ⁾=6∈F₁₁ is precisely calculated, which is nonzero, and this nonzeroness is invariant under normalization choices. Using Chan-Ho Kim's Theorem 1.8 (an external theorem input, containing no BSD hypotheses) combined with the Mordell-Weil lower bound of rank=2, it deduces ord(δ̃)=2 and Selmer corank=2, and then uses the standard Selmer exact sequence (the rank=corank argument for divisible groups) to strictly prove Sha(E/ℚ)[11^∞]=0—the document specifically performed a "circularity audit" to confirm that the entire reasoning does not presuppose the very finiteness of Sha it aims to prove. The P2 audit concludes that RUGZPB ≠ ETNC (it cannot simply be renamed), but the determinant core genuinely overlaps with the p-TNC/zeta-isomorphism structure; the P1 partial audit finds that local R5 (finiteness of Sha at a fixed prime) can actually be deduced from a strong Selmer structure + exact MW rank, but global R5 remains an independent obligation.</p>
+    <div class="claim-box">
+      Sha(E/ℚ)[11^∞] = 0 (exact finite field computation + Kim theorem chain, non-circular argument)
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../00-rank-uniform-bridge/">00 · Rank-Uniform Zeta-Primitivity Bridge</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../02-rank2-scalar-collapse/">02 · Rank-2 Scalar Collapse</a></div>
+      <div class="conn-card"><span class="k">P5 Progress</span>2 / 10</div>
+    </div>
+    <blockquote class="cite">"P4 Sha-control closed at p=11 ⇏ strong BSD for 389.a1." — An important boundary declaration excerpted from the beginning of the "9. New irreducible frontier" paragraph in this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P5</a>
+    <a href="../../files/BSD_RUGZPB_P2_P4_389a1_p11_v0.2.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/BSD_RUGZPB_P2_P4_389a1_p11_v0.2.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

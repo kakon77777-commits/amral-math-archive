@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hybrid Odd-Prime Router · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The integration document for v0.2: a complete strong-BSD family does not require a single theorem to cover all p. It splits the odd primes into six routing categories from P0 (p=2, Theorem 2.14) to P5 (good supersingular, derived FW bridge), assigning the most suitable existing tool to each—P2 good ordinary explicitly does not use FW, while P4 fixed additive and P5 good supersingular do use FW. Result: ∀p>2 is broken down into four pieces: finite bad-prime table + support-prime restrictions + ordinary theorem + supersingular uniform certificate. The document calls this the only viable global quantifier compression.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/12_Hybrid_Odd_Prime_Router.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/12-hybrid-odd-prime-router/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/12-hybrid-odd-prime-router/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/12-hybrid-odd-prime-router/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/12-hybrid-odd-prime-router/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>12 · Hybrid Odd-Prime Router</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 12</span>
+      <span class="tag">v0.2 · 12</span>
+      <span class="tag">2026-08-13</span>
+      <span class="tag">Integration Document</span>
+    </div>
+    <h1>Hybrid Odd-Prime Router</h1>
+    <p class="h1-sub">The opening sentence sets the tone for the whole document: a complete strong-BSD family does not require a single theorem to cover all $p$. The document formally consolidates all the tools accumulated in documents 00-11 into a six-class routing table: P0 ($p=2$, directly using Banwait–Huang Theorem 2.14), P1 (support primes where $p\mid d$, requiring $p\ge5$, good ordinary, residual irreducibility, and having a multiplicative residual-ramification witness, using existing additive-twist ordinary theorems), P2 (good ordinary and $p\nmid d$, branching by residual reducible/irreducible to use reducible/Eisenstein ordinary theorems or ordinary Iwasawa theorem/BCS, **explicitly not using FW**), P3 (fixed multiplicative $p\mid N$, finite set checked prime by prime), P4 (fixed additive $p\mid N$, finite set, this is where FW's H1/H2/H3 plus Manin compatibility are truly used), P5 (good supersingular, applying the derived FW bridge from document 11, H1/H2 automatic, H3 given uniformly by $g_-(E)$). The document concludes the effect of the entire routing strategy in one sentence: the original $\forall p>2$ is split into four blocks—a finite bad-prime table, support-prime restrictions, ordinary theorems, and a supersingular uniform certificate—the document explicitly points out that this is the viable global quantifier compression, rather than forcing a single framework to handle all cases.</p>
+    <div class="claim-box">
+      P0-P5 six-class routing table, assigning the most appropriate existing tools to each class; splitting ∀p&gt;2 into four blocks of finite/existing theory combinations is the viable quantifier compression.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../11-derived-supersingular-fw-bridge/">11 · Derived Supersingular FW Bridge</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../13-candidate-nonsemistable-strong-bsd-family/">13 · Candidate Non-Semistable Strong-BSD Family Schema</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>12 / 40</div>
+    </div>
+    <blockquote class="cite">"This is the only feasible global quantifier compression." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/12_Hybrid_Odd_Prime_Router.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/12_Hybrid_Odd_Prime_Router.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

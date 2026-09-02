@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadratic-Twist Invariance Bridge · BSD Phase 2 · AMRAL</title>
+<meta name="description" content="The Fouquet-Wan theorem speaks to a single (E_d,p), while Banwait-Huang requires "one base E ⟹ infinitely many d," so the FW hypotheses must be brought down from the twist level back to the base level. Three candidate lemmas: Lemma A (absolute irreducibility is invariant under twist, tensor by 1-dim character is a category auto-equivalence), Lemma B (local semisimplification degeneracy types are preserved under twist, requiring verification version by version of the theorem), Lemma C (if the conductor prime splits in K_d, the local representation is completely unchanged after twisting, and the FW-H3 witness can be preserved along the entire admissible twist family). If A/B/C are all formalized, then FW(E,p) ⟹ FW(E_d,p), eliminating the need to rerun computations for infinitely many d. However, the document explicitly notes: this only solves the ∀d part, and does not solve ∀p>2.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_Quadratic_Twist_Invariance_Bridge.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/bsd/phase2/p/03-quadratic-twist-invariance-bridge/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/bsd/phase2/p/03-quadratic-twist-invariance-bridge/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/bsd/phase2/p/03-quadratic-twist-invariance-bridge/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About</a>
+  <a class="link" href="../../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../../validation/">Validation</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link active" href="../../../">BSD Conjecture</a>
+  <a class="link" href="../../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../bsd/phase2/p/03-quadratic-twist-invariance-bridge/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Phase 2</a>
+    <span>/</span>
+    <span>03 · Quadratic-Twist Invariance Bridge</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Phase 2 · 03</span>
+      <span class="tag">v0.1 · 03</span>
+      <span class="tag">2026-08-12</span>
+    </div>
+    <h1>Quadratic-Twist Invariance Bridge</h1>
+    <p class="h1-sub">The Fouquet–Wan theorem speaks to a single $(E_d,p)$, but what Banwait–Huang needs is "one base $E$ ⟹ infinitely many $d$," so the FW hypotheses must be brought down from the twist level back to the base level—this is exactly half of the Level 2 "quantifier compression" goal from Document 02. Starting from $\bar\rho_{E_d,p}\cong\bar\rho_{E,p}\otimes\chi_d$, the document proposes three candidate lemmas: Lemma A proves that absolute irreducibility is completely invariant under twist (tensor by 1-dimensional character is a category auto-equivalence, this item can be completely base-curve-ified); Lemma B handles how the local semisimplification degeneracy type is preserved under twist, and the document honestly marks its status as "standard representation theory derivation candidate, formal documents need to check against theorem versions one by one"; Lemma C proves that if the conductor prime $\ell\mid N$ splits in $K_d=\mathbb Q(\sqrt d)$, the local representation after twist remains completely unchanged over $G_{\mathbb Q_\ell}$, thus any FW-H3 local certificate using that $\ell$ as a witness can be preserved along the entire admissible twist family. If A/B/C are all formalized, then for a fixed $p$, $\mathrm{FW}(E,p)\Rightarrow\mathrm{FW}(E_d,p)$ holds for all admissible twists satisfying the splitting conditions—this is highly significant: there is no need to rerun the residual representation theorem for infinitely many $d$; one only needs to establish the FW certificate once for the base curve. However, the document explicitly draws a boundary at the end: this bridge only solves the $\forall d$ half; $\forall p>2$ is completely untouched.</p>
+    <div class="claim-box">
+      If Lemmas A/B/C hold: FW(E,p) ⟹ FW(E_d,p), no need to rerun computations for infinitely many d; but this only solves ∀d, ∀p&gt;2 is untouched.
+      <span class="note">— The phased status self-reported by the documents in the package, reproduced as is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship with other documents, try to use the words from its own document, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-fouquet-wan-hypothesis-compiler/">02 · Fouquet–Wan Hypothesis Compiler</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-finite-exceptional-prime-problem/">04 · Finite Exceptional Prime Problem</a></div>
+      <div class="conn-card"><span class="k">Phase 2 Progress</span>03 / 40 (First document of today's second round)</div>
+    </div>
+    <blockquote class="cite">"Even if the d quantifier is compressed, there is still ∀p&gt;2. So this bridge only solves a part of ∀d, and does not solve the entire prime quantifier." — Excerpt from the end of this document.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading...</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Phase 2</a>
+    <a href="../../files/03_Quadratic_Twist_Invariance_Bridge.md" download>Download raw .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_Quadratic_Twist_Invariance_Bridge.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Load failed:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
