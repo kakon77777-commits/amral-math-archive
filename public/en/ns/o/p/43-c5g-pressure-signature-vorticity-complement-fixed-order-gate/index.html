@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>43 / C5-G: Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-F compressed the residual network into four items: pressure-signature defects, vorticity-constraint-complement defects, fixed-order derivative-gate defects, and asymptotic-critical-order escape. C5-G prioritizes killing the fixed-order direct gate first, making a cleaner move: <strong>instead of routing through strain/shell transforms, it puts a global volume upper bound directly on the super-level sets of all components/signs of the raw $D^ku$</strong>. **C5-G.1 Direct Component-Volume Bound** (Chebyshev) proves $|V_{\lambda,k}^{\zeta,i,\pm}|\le\lambda^{-2}L_k^2/A_k^2$ holds uniformly for <strong>all</strong> component/sign combinations, with no strain/rotation decomposition, no shell-to-full-field conversion, and no need to guess which component first. Combined with C3-W's volume-to-line geometry lemma, this yields a theorem-ready 1D sparseness scale $r_{vol,k}\sim L_k^{2/3}A_k^{-2/3}$, which is compared directly against the true direct scale $r_{GX,k}$ of the published Grujić–Xu (2024, J. Math. Fluid Mech.) Theorem 3.5, defining the ratio $\mathfrak G_k^{dir}=r_{vol,k}/r_{GX,k}$. **The round's headline result, C5-G.3 Fixed-Order Direct Gate Closure Theorem**: if $\mathfrak G_k^{dir}(s)\le1$ at the theorem's admissible later time $s(t)$, then Theorem 3.5's spatial hypothesis genuinely holds, and $T_\ast$ is not a blow-up time — <strong>this is not a pre-gate; it is the first genuinely theorem-ready closure interface in the entire NS series</strong>. The old COMPSIGN (component/sign guessing) and SHELLFULL (shell-to-full-field) defect labels are thus formally bypassed along this direct-volume route, leaving only two items in the fixed-order residual: <strong>effective-volume (multiplicity) diffuseness</strong> and <strong>later-time misalignment</strong>. The exact $k=1$ form gives a gate between strain enstrophy and the raw gradient peak, $\|S\|_2^2\le C\|Du\|_\infty^{1/5}$, but the exponent $1/15$ is small, showing that although $k=1$ is already theorem-ready, genuinely closing it still needs very strong peak concentration; the general fixed-$k$ amplitude exponent $(4k-3)/(3(2k+3))$ approaches $2/3$ as $k$ grows, showing that higher derivative orders carry stronger leverage, but $L_k$ may grow in step as well, so this is not an automatic order-escalation closure. On the pressure-signature side: **C5-G.4/5** prove that if the joint far-field pressure-matrix signature (one-negative/two-negative) keeps switching while strong heredity holds (the relative change between adjacent matrices tends to zero), it must force the zero-determinant boundary $d_{\rm sig}\to0$ — giving a clean pressure-signature trichotomy (signature fixed ∨ signature-boundary defect ∨ pressure flip/source splitting). On the vorticity-dominant-leakage side: using the exact pressure-Poisson identity $\Delta p=-|S|^2+\tfrac12|\omega|^2$, **C5-G.6** proves that on the vorticity-dominant leakage set, pointwise $\Delta p>0$ — a genuine "pressure-Poisson return certificate," but it explicitly warns this is not yet $L^{3/2}$ pressure concentration (which needs additional control of the negative-value region, oscillation scale, and sign-consistent cutoff geometry). Separately, the exact constraint-complement pressure ledger $\nabla^2p=-(C_A+C_S+C_\omega)$ gives **C5-G.7 Vorticity-Complement Re-entry Trichotomy**: a large vorticity constraint complement must force one of a genuine pressure Hessian, an advection complement, or a strain-squared complement — the vorticity-constraint-complement defect cannot exist in isolation. **The most important honest boundary (NG-G7)**: repeated fixed-order direct-defect failure does <strong>not by itself imply</strong> that escape to $k\to\infty$ is necessary, unless every fixed-order recurrent defect has otherwise been excluded. The round closes by stating the hardest new question with full clarity: <strong>can a hypothetical singular survivor keep the $L^2$ mass of $D^ku$ sufficiently diffuse relative to its peak, at every fixed derivative order and at every theorem-admissible later time, so that $\mathfrak G_k^{dir}>1$?</strong> Formally hands off to <strong>C5-H — All-Order Effective-Volume Defects, Derivative Concentration Ladders, and Asymptotic-Critical Compatibility</strong>, with 8 targets left to prove.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>43 / C5-G: Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 43 / C5-G</span>
+      <span class="tag">C5-G · The Series' First Theorem-Ready Interface</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>43 / C5-G: Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure</h1>
+    <p class="h1-sub">C5-F compressed the residual network into four items: pressure-signature defects, vorticity-constraint-complement defects, fixed-order derivative-gate defects, and asymptotic-critical-order escape. C5-G prioritizes killing the fixed-order direct gate first, making a cleaner move: <strong>instead of routing through strain/shell transforms, it puts a global volume upper bound directly on the super-level sets of all components/signs of the raw $D^ku$</strong>. **C5-G.1 Direct Component-Volume Bound** (Chebyshev) proves $|V_{\lambda,k}^{\zeta,i,\pm}|\le\lambda^{-2}L_k^2/A_k^2$ holds uniformly for <strong>all</strong> component/sign combinations, with no strain/rotation decomposition, no shell-to-full-field conversion, and no need to guess which component first. Combined with C3-W's volume-to-line geometry lemma, this yields a theorem-ready 1D sparseness scale $r_{vol,k}\sim L_k^{2/3}A_k^{-2/3}$, which is compared directly against the true direct scale $r_{GX,k}$ of the published Grujić–Xu (2024, J. Math. Fluid Mech.) Theorem 3.5, defining the ratio $\mathfrak G_k^{dir}=r_{vol,k}/r_{GX,k}$. **The round's headline result, C5-G.3 Fixed-Order Direct Gate Closure Theorem**: if $\mathfrak G_k^{dir}(s)\le1$ at the theorem's admissible later time $s(t)$, then Theorem 3.5's spatial hypothesis genuinely holds, and $T_\ast$ is not a blow-up time — <strong>this is not a pre-gate; it is the first genuinely theorem-ready closure interface in the entire NS series</strong>. The old COMPSIGN (component/sign guessing) and SHELLFULL (shell-to-full-field) defect labels are thus formally bypassed along this direct-volume route, leaving only two items in the fixed-order residual: <strong>effective-volume (multiplicity) diffuseness</strong> and <strong>later-time misalignment</strong>. The exact $k=1$ form gives a gate between strain enstrophy and the raw gradient peak, $\|S\|_2^2\le C\|Du\|_\infty^{1/5}$, but the exponent $1/15$ is small, showing that although $k=1$ is already theorem-ready, genuinely closing it still needs very strong peak concentration; the general fixed-$k$ amplitude exponent $(4k-3)/(3(2k+3))$ approaches $2/3$ as $k$ grows, showing that higher derivative orders carry stronger leverage, but $L_k$ may grow in step as well, so this is not an automatic order-escalation closure. On the pressure-signature side: **C5-G.4/5** prove that if the joint far-field pressure-matrix signature (one-negative/two-negative) keeps switching while strong heredity holds (the relative change between adjacent matrices tends to zero), it must force the zero-determinant boundary $d_{\rm sig}\to0$ — giving a clean pressure-signature trichotomy (signature fixed ∨ signature-boundary defect ∨ pressure flip/source splitting). On the vorticity-dominant-leakage side: using the exact pressure-Poisson identity $\Delta p=-|S|^2+\tfrac12|\omega|^2$, **C5-G.6** proves that on the vorticity-dominant leakage set, pointwise $\Delta p>0$ — a genuine "pressure-Poisson return certificate," but it explicitly warns this is not yet $L^{3/2}$ pressure concentration (which needs additional control of the negative-value region, oscillation scale, and sign-consistent cutoff geometry). Separately, the exact constraint-complement pressure ledger $\nabla^2p=-(C_A+C_S+C_\omega)$ gives **C5-G.7 Vorticity-Complement Re-entry Trichotomy**: a large vorticity constraint complement must force one of a genuine pressure Hessian, an advection complement, or a strain-squared complement — the vorticity-constraint-complement defect cannot exist in isolation. **The most important honest boundary (NG-G7)**: repeated fixed-order direct-defect failure does <strong>not by itself imply</strong> that escape to $k\to\infty$ is necessary, unless every fixed-order recurrent defect has otherwise been excluded. The round closes by stating the hardest new question with full clarity: <strong>can a hypothetical singular survivor keep the $L^2$ mass of $D^ku$ sufficiently diffuse relative to its peak, at every fixed derivative order and at every theorem-admissible later time, so that $\mathfrak G_k^{dir}>1$?</strong> Formally hands off to <strong>C5-H — All-Order Effective-Volume Defects, Derivative Concentration Ladders, and Asymptotic-Critical Compatibility</strong>, with 8 targets left to prove.</p>
+    <div class="claim-box">
+      Without routing through transforms, puts a global volume upper bound directly on the super-level sets of all components/signs of the raw derivative, and combined with the volume-to-line lemma and a scale comparison against the published theorem, obtains the series' first genuinely theorem-ready closure interface — once the ratio is at most one, the theorem's spatial hypothesis genuinely holds. The COMPSIGN and SHELLFULL defects are bypassed, leaving only effective-volume diffuseness and later-time misalignment at fixed order. Repeated switching of the pressure signature combined with strong heredity forces the zero-determinant boundary. Vorticity-dominant leakage, via the exact Poisson identity, forces genuinely positive pressure curvature, and the constraint complement cannot exist in isolation. Honest boundary: repeated fixed-order failure does not imply escape to infinite order is required.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../42-c5f-axis-pressure-signature-derivative-gate-escalation/">42 / C5-F · Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../44-c5h-all-order-effective-volume-asymptotic-criticality/">44 / C5-H · All-Order Effective-Volume Defects, Spectral–Multiplicity Ladders, and Asymptotic-Critical Compatibility</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>44 / 67</div>
+    </div>
+    <blockquote class="cite">'C5-G has a genuine theorem-ready fixed-order closure interface — if 𝔊_k^dir(s) ≤ 1 at an admissible later time, Theorem 3.5's spatial hypothesis genuinely holds, and T* is not a blow-up time.' — excerpted from Section 52 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5G_PressureSignature_VorticityComplement_FixedOrderGate_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

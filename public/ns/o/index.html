@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navier–Stokes 存在性與正則性 · AMRAL</title>
-<meta name="description" content="AMRAL 案例:三維不可壓縮 Navier–Stokes 方程的全域正則性問題,Clay Millennium Prize 七大問題之一。文件開頭即明確聲明不主張已證明 global regularity、不主張已構造 finite-time blow-up。核心工具是把問題壓縮成兩條可證偽命題:C1(Chain Necessity,blow-up 必須生成一條來源可追蹤、逐尺度合法的 X-legal UV chain)與 C2(Finite Obstruction,任何這樣的鏈都必在有限尺度被真正 N–S 結構阻斷)——若兩者皆證明,則 ¬Blowup。目前:C1a/C1b(UV 逃逸必要性、非線性補給的因果來源)CLOSED;C2 證明純量可加預算不足以排除 blow-up(抽象 cascade ledger 反例);前沿是 C3 跨尺度耦合剛性,25 輪独立子調查。建置中,逐篇上線。">
+<meta name="description" content="AMRAL 案例:三維不可壓縮 Navier–Stokes 方程的全域正則性問題,Clay Millennium Prize 七大問題之一。文件開頭即明確聲明不主張已證明 global regularity、不主張已構造 finite-time blow-up。核心工具是把問題壓縮成兩條可證偽命題:C1(Chain Necessity,blow-up 必須生成一條來源可追蹤、逐尺度合法的 X-legal UV chain)與 C2(Finite Obstruction,任何這樣的鏈都必在有限尺度被真正 N–S 結構阻斷)——若兩者皆證明,則 ¬Blowup。目前:C1a/C1b(UV 逃逸必要性、非線性補給的因果來源)CLOSED;C2 證明純量可加預算不足以排除 blow-up(抽象 cascade ledger 反例);C3 到 C6(框架 1+C1 1+C2 1+C3 25+C4 9+C5 13+C6 17=67 篇)已全數建置上線。全域正則性依然完全 OPEN。">
 <meta name="robots" content="index, follow">
 <meta name="ai-content-policy" content="indexable, citable, training-allowed">
 <link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/">
 </head>
 <body>
 <nav class="sitenav"><div class="inner">
@@ -27,12 +30,13 @@
   <a class="link" href="../../cpl/">臨界線比例梯</a>
   <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
   <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+  <a class="lang-switch" href="../../en/ns/o/" hreflang="en">EN</a>
 </div></nav>
 <div class="wrap">
   <header class="page">
     <p class="eyebrow"><a href="../">← NS 特區</a> · PROGRAM-NS</p>
     <h1>Navier–Stokes 存在性與正則性</h1>
-    <p class="subtitle">3D Incompressible Navier–Stokes Global Regularity · Clay Millennium Prize 問題之一 · 建置中</p>
+    <p class="subtitle">3D Incompressible Navier–Stokes Global Regularity · Clay Millennium Prize 問題之一 · 67/67 已建置 · 全域正則性 OPEN</p>
     <p class="lede">
       文件開頭即明確列出<strong>八項不主張</strong>:不主張已證明 global regularity、不主張已構造 finite-time
       blow-up、不主張 True ETN(無限維張力場)或 X 積分本身能推出 PDE 正則性、不主張任意數值格點平滑可直接推出

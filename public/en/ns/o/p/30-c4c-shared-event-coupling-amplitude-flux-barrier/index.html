@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 / C4-C: Carrier Relay, Shared-Event Coupling, and the Amplitude-to-Flux Barrier · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4-B proved that generic turnover cost is not enough to force synchronization. This round's strategy formally pivots to Shared-Event Synchronization: rather than asking whether A and B can recur separately, it asks whether there exists some genuine N–S event whose single source, single balance, single triad algebra already forces A and B to be paid simultaneously. The core tool is helical-triad algebra (§4-9): for a single Fourier triad $k\le p\le q$, combining energy conservation with helicity conservation directly locks the derivative vector into a fixed form, splitting into four helical classes (I same-handed, II-IV opposite-handed). C4-C.2 proves that for every opposite-handed class, whenever the highest mode's energy gain $\dot e_q>0$, there is positive critical pair production $\mathcal R_\tau>0$ — Class IV is even an exact perfect coupling, $\mathcal R_{IV}=G_{IV}^q$. The coupling constants for Classes II/III degenerate to zero as the radial gap $q-p\to0$, but within the robust regime of locally comparable triads plus a non-degenerate radial gap, a genuine positive lower-bound coupling constant can be obtained (Theorem 12.1). This yields the High-Mode Energy Gain branching edge: high-mode energy gain forces same-handed carriers, or radial-gap degeneration, or net positive helicity production, or helical cancellation — the first genuine N–S helical shared-event branching edge in C4. But the round's most important guard is in §19: the C1/C3-G UV anchor is an amplitude/norm event, not an energy-gain/flux event, and the two cannot simply be equated. The Phase-Rearrangement Norm–Flux No-Go (Theorem 20.1) confirms by explicit construction that this distinction is real: fixing every mode's amplitude $|a_m|$ and changing only the phases leaves $\|u_\theta\|_2$ unchanged by Parseval's theorem, but $\|u_\theta\|_\infty$ can swing dramatically as phases align or cancel — there exists a smooth phase path along which the $L^2$-norm derivative is zero while the $L^\infty$-norm keeps increasing, proving that amplitude information alone cannot algebraically determine the sign of shell energy flux; this is the Amplitude-to-Flux Barrier. The positive, compensating result is that although UV amplitude cannot control flux, it can, via the Bernstein inequality, precisely control the critical stock at that same instant — UV Amplitude to Critical Helical Stock (Theorem 23.1) and to Strain/Vorticity Stock (Theorem 24.1) — C4's first genuinely non-asynchronous shared edge, though it is stock synchronization, not production synchronization. On the strain side, the Local Strain-Growth trichotomy edge (Theorem 28.1, a pigeonhole argument over an exact three-term sum) proves that a local strain-growth event forces pressure, or Betchov boundary flux, or positive vorticity stretching; chaining this to C3-N's exact local Betchov identity and the pointwise vorticity-stretching geometric decomposition expands it into a four-way exact edge (pressure, or Betchov, or middle-strain-weighted vorticity, or principal-stretching-aligned weighted vorticity) — currently C4's cleanest multi-step exact local edge. On the operator side, the Miller Operator-Source trichotomy edge (Theorem 37.1, a triangle inequality) proves that operator escape forces the advection term, or strain-squared, or the vorticity quadratic term to bear it simultaneously — it cannot be swapped via carrier relay for no source at all; but it also flags the Operator Cancellation Debt (§39): when the vorticity-quadratic source is large but the full Miller operator is small, the shortfall must be absorbed as cancellation by the remaining two terms. The document assembles C4's first-version shared-event closure graph (§41) and four genuinely minimal synchronization subsets (§48), and honestly lists five explicit no-gos (amplitude does not imply energy gain; energy gain does not imply net helicity production; critical stock does not imply critical production; strain growth does not imply Miller escape; a large local vorticity-quadratic source does not imply a large full operator). The next round formally locks onto the two most critical remaining gaps: the Amplitude-to-Flux Bridge and Helical-Cancellation Rigidity.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/30-c4c-shared-event-coupling-amplitude-flux-barrier/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/30-c4c-shared-event-coupling-amplitude-flux-barrier/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/30-c4c-shared-event-coupling-amplitude-flux-barrier/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/30-c4c-shared-event-coupling-amplitude-flux-barrier/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>30 / C4-C: Carrier Relay, Shared-Event Coupling, and the Amplitude-to-Flux Barrier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 30 / C4-C</span>
+      <span class="tag">C4-C · First True Shared Edges</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>30 / C4-C: Carrier Relay, Shared-Event Coupling, and the Amplitude-to-Flux Barrier</h1>
+    <p class="h1-sub">C4-B proved that generic turnover cost is not enough to force synchronization. This round's strategy formally pivots to Shared-Event Synchronization: rather than asking whether A and B can recur separately, it asks whether there exists some genuine N–S event whose single source, single balance, single triad algebra already forces A and B to be paid simultaneously. The core tool is helical-triad algebra (§4-9): for a single Fourier triad $k\le p\le q$, combining energy conservation with helicity conservation directly locks the derivative vector into a fixed form, splitting into four helical classes (I same-handed, II-IV opposite-handed). C4-C.2 proves that for every opposite-handed class, whenever the highest mode's energy gain $\dot e_q>0$, there is positive critical pair production $\mathcal R_\tau>0$ — Class IV is even an exact perfect coupling, $\mathcal R_{IV}=G_{IV}^q$. The coupling constants for Classes II/III degenerate to zero as the radial gap $q-p\to0$, but within the robust regime of locally comparable triads plus a non-degenerate radial gap, a genuine positive lower-bound coupling constant can be obtained (Theorem 12.1). This yields the High-Mode Energy Gain branching edge: high-mode energy gain forces same-handed carriers, or radial-gap degeneration, or net positive helicity production, or helical cancellation — the first genuine N–S helical shared-event branching edge in C4. But the round's most important guard is in §19: the C1/C3-G UV anchor is an amplitude/norm event, not an energy-gain/flux event, and the two cannot simply be equated. The Phase-Rearrangement Norm–Flux No-Go (Theorem 20.1) confirms by explicit construction that this distinction is real: fixing every mode's amplitude $|a_m|$ and changing only the phases leaves $\|u_\theta\|_2$ unchanged by Parseval's theorem, but $\|u_\theta\|_\infty$ can swing dramatically as phases align or cancel — there exists a smooth phase path along which the $L^2$-norm derivative is zero while the $L^\infty$-norm keeps increasing, proving that amplitude information alone cannot algebraically determine the sign of shell energy flux; this is the Amplitude-to-Flux Barrier. The positive, compensating result is that although UV amplitude cannot control flux, it can, via the Bernstein inequality, precisely control the critical stock at that same instant — UV Amplitude to Critical Helical Stock (Theorem 23.1) and to Strain/Vorticity Stock (Theorem 24.1) — C4's first genuinely non-asynchronous shared edge, though it is stock synchronization, not production synchronization. On the strain side, the Local Strain-Growth trichotomy edge (Theorem 28.1, a pigeonhole argument over an exact three-term sum) proves that a local strain-growth event forces pressure, or Betchov boundary flux, or positive vorticity stretching; chaining this to C3-N's exact local Betchov identity and the pointwise vorticity-stretching geometric decomposition expands it into a four-way exact edge (pressure, or Betchov, or middle-strain-weighted vorticity, or principal-stretching-aligned weighted vorticity) — currently C4's cleanest multi-step exact local edge. On the operator side, the Miller Operator-Source trichotomy edge (Theorem 37.1, a triangle inequality) proves that operator escape forces the advection term, or strain-squared, or the vorticity quadratic term to bear it simultaneously — it cannot be swapped via carrier relay for no source at all; but it also flags the Operator Cancellation Debt (§39): when the vorticity-quadratic source is large but the full Miller operator is small, the shortfall must be absorbed as cancellation by the remaining two terms. The document assembles C4's first-version shared-event closure graph (§41) and four genuinely minimal synchronization subsets (§48), and honestly lists five explicit no-gos (amplitude does not imply energy gain; energy gain does not imply net helicity production; critical stock does not imply critical production; strain growth does not imply Miller escape; a large local vorticity-quadratic source does not imply a large full operator). The next round formally locks onto the two most critical remaining gaps: the Amplitude-to-Flux Bridge and Helical-Cancellation Rigidity.</p>
+    <div class="claim-box">
+      Strategic pivot: look for genuine N-S shared events, not generic switching costs. Single-triad algebra proves that opposite-handed high-mode energy gain implies positive pair production (Class IV is an exact perfect coupling). Core guard: an amplitude event is not an energy-gain/flux event — an explicit phase-rearrangement construction proves amplitude information cannot algebraically determine the sign of flux (the Amplitude-to-Flux Barrier). Positive result: UV amplitude can synchronize critical stock (stock is not production). Strain growth and operator escape each yield exact multi-way branching edges, assembled into C4's first-version shared-event closure graph.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../29-c4b-temporal-synchronization-carrier-relay-nogo/">29 / C4-B · Temporal Synchronization, Pulse-Capacity, and Carrier-Relay No-Go</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../31-c4d-amplitude-work-helical-cancellation-rigidity/">31 / C4-D · Amplitude-to-Flux Branching Bridge, Local Work Cancellation, and Helical-Cancellation Rigidity</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>31 / 67</div>
+    </div>
+    <blockquote class="cite">"Amplitude information alone cannot algebraically determine the sign of shell energy flux." — excerpted from §20 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4C_SharedEventCoupling_AmplitudeFluxBarrier_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

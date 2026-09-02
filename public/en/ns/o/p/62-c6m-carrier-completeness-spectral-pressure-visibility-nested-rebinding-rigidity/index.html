@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>62 / C6-M: Carrier Completeness, Spectral/Pressure Visibility, and Nested-Rebinding Rigidity · NS_O · NS · AMRAL</title>
+<meta name="description" content="The question C6-L handed off was: is low carrier visibility only because the current three labels ($TS$, $GP$, $HF$) are not enough, rather than the singular mass genuinely being uncapturable? C6-M is the first round to prove that $L^3$ is not the only carrier channel. Using a Littlewood–Paley decomposition, it builds the critical spectral phase-space probability measure $d\Sigma_n(q,x)=2^q|\Delta_qU_n|^2/\sum_j2^j\|\Delta_jU_n\|_2^2\,dx$, whose spatial marginal $\sigma_n$ is the $\dot H^{1/2}$ analogue of C6-L's mass measure $\mu_n$, and defines the spectral visibility $\Omega_{DH,n}=1-d_{TV}(\sigma_n,\eta_n)$. The Spectral Singular-Carrier Extraction Theorem (C6-M.1) proves that when $\Omega_{DH,n}\ge\omega_H>0$, one can extract a carrier that simultaneously carries a defect label and a fixed fraction of the diverging $\dot H^{1/2}$ critical energy, so an $L^3$-spectator profile can still be a $\dot H^{1/2}$-visible carrier — the Labeled Spectral-Carrier Trichotomy (C6-M.2) splits each label into four classes: V33 (visible in both channels), V3 ($L^3$ only), VH (spectral only), and V0 (Strong Spectator). It then also promotes pressure to a formal carrier channel: using the Calderón–Zygmund pressure kernel it builds a directional far-field source functional, defines the pressure capacity $C_P=\int|a_P|$ and coherence $\Gamma_P=R_P/C_P$, the Pressure Alignment Identity (C6-M.3) and the aligned-source probability $\pi_P^+$, and then, taking the overlap $\Omega_{3P}^+$ with $\mu_3$, the Pressure-Coherent Singular-Carrier Theorem (C6-M.4) is the series' first pressure-channel singular-carrier extraction theorem. But the pressure side is not unlimited: the Separated Far-Pressure Capacity Bound (C6-M.5) proves $C_P^{far}\lesssim d^{-5}\|v\|_2^2$, giving quantitative pressure decoupling for a profile that is sufficiently far away (distance $d$) and $L^2$-bounded — narrowing the spectator loophole down to profiles that are near the core, insufficiently separated, or carry high-weight pressure capacity. The other half of the round attacks the sub-scale-rebinding problem left by C6-L: it proves the exact retention identity $\beta_m=\beta_0\prod_{j<m}a_j$; the Finite Loss-Count Theorem (C6-M.6) proves that the number of levels with a fixed loss rate $a_j\le1-\varepsilon$ must be finite, $N_\varepsilon\le\log(1/\beta_\ast)/(-\log(1-\varepsilon))$, and therefore, by the Asymptotically Lossless Nesting Principle (C6-M.7): an infinitely deep carrier-complete nested rebinding must be asymptotically lossless — explicitly warning that "local rebinding success ≠ global carrier completeness," since a uniform level-by-level lower bound cannot prevent an infinite product from tending to zero. The Dual-Carrier Nested Rigidity (C6-M.8) applies this same rigidity simultaneously to the retention ratios of both singular mass and defect mass, while the Nested Horizon Growth Theorem (C6-M.9) proves that under nesting the inner horizon grows exponentially. Citing Albritton–Barker's ancient Liouville theorem, it proposes a Conditional Ancient-Profile Kill Gate (C6-M.10), but honestly states that the full critical fiber is currently still unbounded, so this step cannot yet be used. C6-M.11 Current Carrier-Completeness Reduction gathers everything into a three-way split: a Multi-Channel Visible Labeled Carrier, an Asymptotically Lossless Nested Labeled Carrier, or a Carrier-Incomplete Strong Spectator — the third branch is explicitly flagged as a matter of the current state space being incomplete, not a new Navier–Stokes mechanism theorem. Formally hands off to C6-N — Near-Lossless Carrier Concentration, Ancient-Profile Extraction, and Defect-Complete Rigidity, with ten constituent obligations directly attacking: whether a genuinely compact inner profile can be extracted under near-lossless nesting, the Type-I/Type-II bifurcation, and the possibility of ancient/eternal solutions.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6M_CarrierCompleteness_SpectralPressure_NestedRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>62 / C6-M: Carrier Completeness, Spectral/Pressure Visibility, and Nested-Rebinding Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 62 / C6-M</span>
+      <span class="tag">C6-M · Spectral/Pressure Visibility and Nested Rigidity 13/17</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>62 / C6-M: Carrier Completeness, Spectral/Pressure Visibility, and Nested-Rebinding Rigidity</h1>
+    <p class="h1-sub">The question C6-L handed off was: is low carrier visibility only because the current three labels ($TS$, $GP$, $HF$) are not enough, rather than the singular mass genuinely being uncapturable? C6-M is the first round to prove that $L^3$ is not the only carrier channel. Using a Littlewood–Paley decomposition, it builds the critical spectral phase-space probability measure $d\Sigma_n(q,x)=2^q|\Delta_qU_n|^2/\sum_j2^j\|\Delta_jU_n\|_2^2\,dx$, whose spatial marginal $\sigma_n$ is the $\dot H^{1/2}$ analogue of C6-L's mass measure $\mu_n$, and defines the spectral visibility $\Omega_{DH,n}=1-d_{TV}(\sigma_n,\eta_n)$. The Spectral Singular-Carrier Extraction Theorem (C6-M.1) proves that when $\Omega_{DH,n}\ge\omega_H>0$, one can extract a carrier that simultaneously carries a defect label and a fixed fraction of the diverging $\dot H^{1/2}$ critical energy, so an $L^3$-spectator profile can still be a $\dot H^{1/2}$-visible carrier — the Labeled Spectral-Carrier Trichotomy (C6-M.2) splits each label into four classes: V33 (visible in both channels), V3 ($L^3$ only), VH (spectral only), and V0 (Strong Spectator). It then also promotes pressure to a formal carrier channel: using the Calderón–Zygmund pressure kernel it builds a directional far-field source functional, defines the pressure capacity $C_P=\int|a_P|$ and coherence $\Gamma_P=R_P/C_P$, the Pressure Alignment Identity (C6-M.3) and the aligned-source probability $\pi_P^+$, and then, taking the overlap $\Omega_{3P}^+$ with $\mu_3$, the Pressure-Coherent Singular-Carrier Theorem (C6-M.4) is the series' first pressure-channel singular-carrier extraction theorem. But the pressure side is not unlimited: the Separated Far-Pressure Capacity Bound (C6-M.5) proves $C_P^{far}\lesssim d^{-5}\|v\|_2^2$, giving quantitative pressure decoupling for a profile that is sufficiently far away (distance $d$) and $L^2$-bounded — narrowing the spectator loophole down to profiles that are near the core, insufficiently separated, or carry high-weight pressure capacity. The other half of the round attacks the sub-scale-rebinding problem left by C6-L: it proves the exact retention identity $\beta_m=\beta_0\prod_{j<m}a_j$; the Finite Loss-Count Theorem (C6-M.6) proves that the number of levels with a fixed loss rate $a_j\le1-\varepsilon$ must be finite, $N_\varepsilon\le\log(1/\beta_\ast)/(-\log(1-\varepsilon))$, and therefore, by the Asymptotically Lossless Nesting Principle (C6-M.7): an infinitely deep carrier-complete nested rebinding must be asymptotically lossless — explicitly warning that "local rebinding success ≠ global carrier completeness," since a uniform level-by-level lower bound cannot prevent an infinite product from tending to zero. The Dual-Carrier Nested Rigidity (C6-M.8) applies this same rigidity simultaneously to the retention ratios of both singular mass and defect mass, while the Nested Horizon Growth Theorem (C6-M.9) proves that under nesting the inner horizon grows exponentially. Citing Albritton–Barker's ancient Liouville theorem, it proposes a Conditional Ancient-Profile Kill Gate (C6-M.10), but honestly states that the full critical fiber is currently still unbounded, so this step cannot yet be used. C6-M.11 Current Carrier-Completeness Reduction gathers everything into a three-way split: a Multi-Channel Visible Labeled Carrier, an Asymptotically Lossless Nested Labeled Carrier, or a Carrier-Incomplete Strong Spectator — the third branch is explicitly flagged as a matter of the current state space being incomplete, not a new Navier–Stokes mechanism theorem. Formally hands off to C6-N — Near-Lossless Carrier Concentration, Ancient-Profile Extraction, and Defect-Complete Rigidity, with ten constituent obligations directly attacking: whether a genuinely compact inner profile can be extracted under near-lossless nesting, the Type-I/Type-II bifurcation, and the possibility of ancient/eternal solutions.</p>
+    <div class="claim-box">
+      For the first time proves that $L^3$ is not the only singular-carrier channel — establishes two additional visibility channels, spectral (Littlewood–Paley $\dot H^{1/2}$) and pressure (far-field Calderón–Zygmund), each with its own carrier-extraction theorem, with the pressure side further proving a quantitative decoupling bound once separation is sufficient. Nested rebinding obeys an exact multiplicative retention law: an infinitely deep carrier-complete nesting must be asymptotically lossless, and local level-by-level success does not imply global carrier completeness. Three-way reduction: multi-channel visible, asymptotically lossless nested, or strong spectator — the third branch reflects an incomplete state space, not a new mechanism. Hands off to C6-N, which attacks near-lossless concentration and ancient-profile extraction.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../61-c6l-singular-carrier-profiles-spectator-decoupling-secondary-scale-defect-rebinding/">61 / C6-L · Singular Carrier Profiles, Spectator Decoupling, and Secondary-Scale Defect Rebinding</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../63-c6n-near-lossless-carrier-concentration-ancient-profile-extraction-defect-complete-rigidity/">63 / C6-N · Near-Lossless Carrier Concentration, Ancient-Profile Extraction, and Defect-Complete Rigidity</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>63 / 67</div>
+    </div>
+    <blockquote class="cite">“No automatic transfer between visibility channels is allowed.” — quoted from the paper's Section 76.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C6M_CarrierCompleteness_SpectralPressure_NestedRigidity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6M_CarrierCompleteness_SpectralPressure_NestedRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

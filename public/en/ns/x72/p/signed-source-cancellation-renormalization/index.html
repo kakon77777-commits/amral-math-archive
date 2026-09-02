@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-33: Signed-Source Cancellation Renormalization · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="Picks up STOP-C36 from Round 32 — the positive parts of determinant, Q-growth, and pair-kernel sources cannot be controlled by the Fisher mechanism — and, instead of forcing sources to be positive, builds a lossless accounting system for signed sources via a Jordan decomposition (M_W, V_W, cancellation coefficient c_W). Proves that positive sources admit a Jordan reconstruction, that determinant interfaces can be renormalized by a Kato-type method, and that even Calderón–Zygmund pair kernels can be renormalized by second-order differencing and are locally finite under this regularity — but the original positive-part pair source is itself not lossless. This motivates the Cancellation-First Principle; STOP-C37 (Signed-Variation/Cancellation-Renormalization Budget Gap) hands the study of cancellation-budget dynamics to the next round.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round33_PureContinuous_SignedSource_CancellationRenormalization_v0.1_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/x72/p/signed-source-cancellation-renormalization/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/x72/p/signed-source-cancellation-renormalization/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/x72/p/signed-source-cancellation-renormalization/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/x72/p/signed-source-cancellation-renormalization/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-33 · Signed-Source Cancellation Renormalization</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · X72-33</span>
+      <span class="tag">Pivot</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-33: Signed-Source Cancellation Renormalization</h1>
+    <p class="h1-sub">Picks up STOP-C36 from Round 32 — the positive parts of determinant, Q-growth, and pair-kernel sources cannot be controlled by the Fisher mechanism — and, instead of forcing sources to be positive, builds a lossless accounting system for signed sources via a Jordan decomposition (M_W, V_W, cancellation coefficient c_W). Proves that positive sources admit a Jordan reconstruction, that determinant interfaces can be renormalized by a Kato-type method, and that even Calderón–Zygmund pair kernels can be renormalized by second-order differencing and are locally finite under this regularity — but the original positive-part pair source is itself not lossless. This motivates the Cancellation-First Principle; STOP-C37 (Signed-Variation/Cancellation-Renormalization Budget Gap) hands the study of cancellation-budget dynamics to the next round.</p>
+    <div class="claim-box">
+      This round's status: Pivot
+      <span class="note">— Taken from the file's own objective/executive-result section, meaning preserved, not a full verbatim translation.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../source-participation-renormalization/">X72-32 · Source-Participation Dynamics Renormalization</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../cancellation-budget-dynamics/">X72-34 · Cancellation-Budget Dynamics</a></div>
+      
+      <div class="conn-card"><span class="k">NS-X72 progress</span>33 / 71</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round33_PureContinuous_SignedSource_CancellationRenormalization_v0.1_2026-08-17.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round33_PureContinuous_SignedSource_CancellationRenormalization_v0.1_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

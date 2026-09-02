@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50 / C6-A: Certified Defect Graph, Typed Cycle Composition, and Minimal Survivor Candidates · NS_O · NS · AMRAL</title>
+<meta name="description" content="C6 formally launches, with its task shifting from C5's state construction + compactification + debt routing to cycle extraction + cycle compatibility + cycle elimination. This round's first goal looks simple — performing SCC extraction on C5-M's finite defect graph — but an important correction surfaces immediately: <strong>an ordinary label-level SCC does not by itself prove a PDE recurrent cycle</strong>, because a coarse edge may hold only for a subtype, an edge may carry extra metadata, two individually valid edges need not actually connect end to end, a "not ruled out" self-loop is not a transition theorem, an external regularity gate is a sink rather than an ordinary transition, and many of C5's routings are disjunctive hyperedges in essence. This round therefore first establishes a <strong>Certified Typed Defect Transition System</strong>: four edge semantics — $I$ (implication, an already-proved theorem), $C$ (conditional implication, requiring an extra gate), $N$ (non-exclusion, representing only "not currently ruled out," not a transition theorem), and $E$ (external kill edge, a published-theorem closure pointing to REG) — and defines a full metadata space $\mathcal K_T,\mathcal K_G,\mathcal K_P,\mathcal K_H,\mathcal K_F$ for each residual class, writing every edge as a typed relation $R_e\subset\mathcal K_X\times\mathcal K_Y$ rather than a bare labeled arrow, and formally encoding C5's common disjunctive routing ($X\Rightarrow Y_1\vee Y_2\vee Y_3$) as a hyperedge rather than three parallel forced edges. Projecting all of C5-M's candidate/conditional/not-yet-excluded arrows into an ordinary digraph on $V_6=\{T,G,P,H,F\}$ (excluding $A$, since it may represent only a proof-entry legality defect rather than a physical singular mechanism) gives a may-graph whose SCC decomposition is $\{T\}$ and $\{G,P,H,F\}$ — but <strong>C6-A.1 Projected-SCC No-Go</strong> proves that $X\leftrightarrow Y$ holding in the projected graph does not imply the existence of a genuinely end-to-end-matching pair $(\theta_X,\theta_Y)$: the target metadata produced by the first edge need not fall inside the source antecedent of the second. A cycle compatibility fiber product is therefore defined, $\mathfrak C(e_1,\ldots,e_m)=R_{e_1}\times_{\mathcal K_{X_2}}\cdots\times_{\mathcal K_{X_1}}R_{e_m}$, and <strong>C6-A.2 Composable Cycle Criterion</strong> requires that every edge be in state I/C, the conditions be compatible, the fiber product be nonempty, no external REG gate be automatically triggered, and legality/scale/time metadata be preserved through recurrent iteration — further distinguishing three strictly increasing levels: projected cycle, composable cycle, and recurrent cycle, with composable not equal to recurrent. The three candidates are then audited one by one: <strong>candidate $T$</strong> is only $T\overset{N}{\looparrowright}T$ (C5-C's scalar-time no-go never constructed a genuine recurrent orbit; it is a candidate trap, not a certified self-cycle); <strong>candidate $G\leftrightarrow P$</strong> (<strong>C6-A.3</strong>) has a forward direction relying on strong middle-coherence geometry forcing pressure return and a reverse direction relying on pressure axis-locking, but C5 never proved that the $P$-state produced by the forward direction automatically satisfies the antecedent of the reverse — none of the four composition obligations GP-1 through GP-4 (source continuity, signature compatibility, axis compatibility, recurrence) holds automatically; <strong>candidate $H\leftrightarrow F$</strong> (<strong>C6-A.4</strong>) already has a rigorous subtype routing for $H\to F$ from C5-J/L ($\text{TURNOVER}\Rightarrow\text{VISC}\vee\text{PROJECTED-NL}$), but the reverse $F\to H$ — whether high-order forcing congestion genuinely regenerates a theorem-legal next-generation persistent bad window — is currently only a structural conjecture, and none of the five composition obligations HF-1 through HF-5 (forcing to amplitude, amplitude to theorem entry, theorem entry to window failure, evasion of the external gate, recurrent rescaling) holds automatically either. <strong>C6-A.5 Finite-Budget Cycle Exclusion Lemma</strong> proves: if a recurrent cycle's total per-generation debt is finite and each generation's debt has a positive lower bound, only finitely many generations can occur — but the debts of all three candidate cycles ($T$'s scalar time cost, $G/P$'s critical pressure mass, $H/F$'s all-order viscous/nonlinear reversal cost) may all tend to zero as spatial scale, derivative order, or window length shrink, and there is currently no known uniformly positive global toll excluding any of them; critical saturation ($b_n\downarrow0$) is an escape mode not yet excluded. <strong>Core conclusion (C6-A.6)</strong>: no nontrivial recurrent PDE defect cycle has genuinely been certified so far, but neither has any candidate been proved impossible — an ordinary SCC is only an over-approximation of the survivor kernel (<strong>C6-A.7</strong>), necessary but not sufficient. The three candidates are ranked by priority: <strong>Priority 1 — $H/F$</strong> (the most mature theoretical interface, the clearest debt variables, missing only one sharply formulated reverse edge); Priority 2 — $G/P$ (the finite-dimensional matrix obstruction is already in place, with pressure-source compatibility the main uncertainty); Priority 3 — $T$ (a strong scalar no-go, but a generic temporal–spatial PDE coupling theorem is still missing). Formally hands off to the next round, <strong>C6-B — High-Order Forcing Re-entry, Bad-Window Regeneration, and the $H/F$ Cycle Test</strong>, with eight composition obligations (B1 forcing-event normalization through B8 cycle confirmation/refutation), whose goal is to determine "whether high-order viscous/projected-nonlinear forcing can genuinely regenerate a theorem-legal next-generation defect that is sign-thick across the entire admissible window" — whichever the answer, it is a high-value result.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>50 / C6-A: Certified Defect Graph, Typed Cycle Composition, and Minimal Survivor Candidates</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 50 / C6-A</span>
+      <span class="tag">C6-A · The C6 Series Opens, 1/17</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>50 / C6-A: Certified Defect Graph, Typed Cycle Composition, and Minimal Survivor Candidates</h1>
+    <p class="h1-sub">C6 formally launches, with its task shifting from C5's state construction + compactification + debt routing to cycle extraction + cycle compatibility + cycle elimination. This round's first goal looks simple — performing SCC extraction on C5-M's finite defect graph — but an important correction surfaces immediately: <strong>an ordinary label-level SCC does not by itself prove a PDE recurrent cycle</strong>, because a coarse edge may hold only for a subtype, an edge may carry extra metadata, two individually valid edges need not actually connect end to end, a "not ruled out" self-loop is not a transition theorem, an external regularity gate is a sink rather than an ordinary transition, and many of C5's routings are disjunctive hyperedges in essence. This round therefore first establishes a <strong>Certified Typed Defect Transition System</strong>: four edge semantics — $I$ (implication, an already-proved theorem), $C$ (conditional implication, requiring an extra gate), $N$ (non-exclusion, representing only "not currently ruled out," not a transition theorem), and $E$ (external kill edge, a published-theorem closure pointing to REG) — and defines a full metadata space $\mathcal K_T,\mathcal K_G,\mathcal K_P,\mathcal K_H,\mathcal K_F$ for each residual class, writing every edge as a typed relation $R_e\subset\mathcal K_X\times\mathcal K_Y$ rather than a bare labeled arrow, and formally encoding C5's common disjunctive routing ($X\Rightarrow Y_1\vee Y_2\vee Y_3$) as a hyperedge rather than three parallel forced edges. Projecting all of C5-M's candidate/conditional/not-yet-excluded arrows into an ordinary digraph on $V_6=\{T,G,P,H,F\}$ (excluding $A$, since it may represent only a proof-entry legality defect rather than a physical singular mechanism) gives a may-graph whose SCC decomposition is $\{T\}$ and $\{G,P,H,F\}$ — but <strong>C6-A.1 Projected-SCC No-Go</strong> proves that $X\leftrightarrow Y$ holding in the projected graph does not imply the existence of a genuinely end-to-end-matching pair $(\theta_X,\theta_Y)$: the target metadata produced by the first edge need not fall inside the source antecedent of the second. A cycle compatibility fiber product is therefore defined, $\mathfrak C(e_1,\ldots,e_m)=R_{e_1}\times_{\mathcal K_{X_2}}\cdots\times_{\mathcal K_{X_1}}R_{e_m}$, and <strong>C6-A.2 Composable Cycle Criterion</strong> requires that every edge be in state I/C, the conditions be compatible, the fiber product be nonempty, no external REG gate be automatically triggered, and legality/scale/time metadata be preserved through recurrent iteration — further distinguishing three strictly increasing levels: projected cycle, composable cycle, and recurrent cycle, with composable not equal to recurrent. The three candidates are then audited one by one: <strong>candidate $T$</strong> is only $T\overset{N}{\looparrowright}T$ (C5-C's scalar-time no-go never constructed a genuine recurrent orbit; it is a candidate trap, not a certified self-cycle); <strong>candidate $G\leftrightarrow P$</strong> (<strong>C6-A.3</strong>) has a forward direction relying on strong middle-coherence geometry forcing pressure return and a reverse direction relying on pressure axis-locking, but C5 never proved that the $P$-state produced by the forward direction automatically satisfies the antecedent of the reverse — none of the four composition obligations GP-1 through GP-4 (source continuity, signature compatibility, axis compatibility, recurrence) holds automatically; <strong>candidate $H\leftrightarrow F$</strong> (<strong>C6-A.4</strong>) already has a rigorous subtype routing for $H\to F$ from C5-J/L ($\text{TURNOVER}\Rightarrow\text{VISC}\vee\text{PROJECTED-NL}$), but the reverse $F\to H$ — whether high-order forcing congestion genuinely regenerates a theorem-legal next-generation persistent bad window — is currently only a structural conjecture, and none of the five composition obligations HF-1 through HF-5 (forcing to amplitude, amplitude to theorem entry, theorem entry to window failure, evasion of the external gate, recurrent rescaling) holds automatically either. <strong>C6-A.5 Finite-Budget Cycle Exclusion Lemma</strong> proves: if a recurrent cycle's total per-generation debt is finite and each generation's debt has a positive lower bound, only finitely many generations can occur — but the debts of all three candidate cycles ($T$'s scalar time cost, $G/P$'s critical pressure mass, $H/F$'s all-order viscous/nonlinear reversal cost) may all tend to zero as spatial scale, derivative order, or window length shrink, and there is currently no known uniformly positive global toll excluding any of them; critical saturation ($b_n\downarrow0$) is an escape mode not yet excluded. <strong>Core conclusion (C6-A.6)</strong>: no nontrivial recurrent PDE defect cycle has genuinely been certified so far, but neither has any candidate been proved impossible — an ordinary SCC is only an over-approximation of the survivor kernel (<strong>C6-A.7</strong>), necessary but not sufficient. The three candidates are ranked by priority: <strong>Priority 1 — $H/F$</strong> (the most mature theoretical interface, the clearest debt variables, missing only one sharply formulated reverse edge); Priority 2 — $G/P$ (the finite-dimensional matrix obstruction is already in place, with pressure-source compatibility the main uncertainty); Priority 3 — $T$ (a strong scalar no-go, but a generic temporal–spatial PDE coupling theorem is still missing). Formally hands off to the next round, <strong>C6-B — High-Order Forcing Re-entry, Bad-Window Regeneration, and the $H/F$ Cycle Test</strong>, with eight composition obligations (B1 forcing-event normalization through B8 cycle confirmation/refutation), whose goal is to determine "whether high-order viscous/projected-nonlinear forcing can genuinely regenerate a theorem-legal next-generation defect that is sign-thick across the entire admissible window" — whichever the answer, it is a high-value result.</p>
+    <div class="claim-box">
+      Performs SCC extraction on C5-M's finite defect graph, but proves that an ordinary label-level SCC is not sufficient to establish a PDE recurrent cycle. Builds four typed edge semantics (I/C/N/E) and a typed transition relation, replacing bare labeled arrows with typed relations, and formally encodes disjunctive routing as a hyperedge. Audits three candidate recurrent cycles — temporal $T$, geometry–pressure $G\leftrightarrow P$, high-order forcing $H\leftrightarrow F$ — all of which are only candidates: none is certified, and none is excluded. The Finite-Budget Cycle Exclusion Lemma proves that if the debt has a uniformly positive lower bound, a cycle can run for only finitely many generations, but no candidate is currently proved to satisfy this bound. The most mature candidate is $H\leftrightarrow F$, and the round formally hands off to C6-B to attack its missing reverse edge.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../49-c5m-unified-defect-graph-c5-phase-closure/">49 / C5-M · Unified Defect-State Closure, Compatibility Graph Audit, and C5 Phase Boundary</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">51 / C6-B · High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>51 / 67</div>
+    </div>
+    <blockquote class="cite">'it means cycle existence itself has become a proof obligation.' — excerpted from Section 22 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6A_CertifiedDefectGraph_TypedCycles_MinimalSurvivors_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

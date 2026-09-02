@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navier–Stokes Existence and Regularity · AMRAL</title>
+<meta name="description" content="An AMRAL case: the global-regularity problem for the 3D incompressible Navier–Stokes equations, one of the Clay Millennium Prize's seven problems. The document opens by explicitly stating that it does not claim to have proven global regularity, and does not claim to have constructed a finite-time blow-up. Its core tool compresses the problem into two falsifiable claims: C1 (Chain Necessity — a blow-up must generate a source-traceable, scale-by-scale-legal X-legal UV chain) and C2 (Finite Obstruction — any such chain must be genuinely blocked by N–S structure at a finite scale) — if both are proved, then ¬Blowup. Currently: C1a/C1b (UV-escape necessity; causal provenance of the nonlinear replenishment) are CLOSED; C2 proves that scalar additive budgets are not sufficient to exclude blow-up (an abstract cascade-ledger counterexample); C3 through C6 (framework + C1/C2 + 25 + 9 + 13 + 17 = 67 rounds) are all now built and live. Global regularity remains fully OPEN throughout.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About (中文)</a>
+  <a class="link" href="../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../ns/o/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS Zone</a> · PROGRAM-NS</p>
+    <h1>Navier–Stokes Existence and Regularity</h1>
+    <p class="subtitle">3D Incompressible Navier–Stokes Global Regularity · one of the Clay Millennium Prize problems · 67/67 built · global regularity OPEN</p>
+    <p class="lede">
+      The document opens by explicitly listing <strong>eight non-claims</strong>: it does not claim to have proven
+      global regularity, does not claim to have constructed a finite-time blow-up, does not claim that True ETN
+      (the infinite-dimensional tension field) or the X-integral can, by itself, derive PDE regularity, and does
+      not claim that smoothness on an arbitrary numerical lattice directly implies continuum smoothness. Its core
+      tool is a two-layer language stack: <strong>True ETN</strong> reads N–S's Fourier/Littlewood–Paley multiscale
+      evolution as an infinite-dimensional tension field; <strong>the X-integral</strong> is a typed,
+      source-traceable, scale-by-scale-guarded calculus of formation legality, used to determine whether a given
+      set of local nonlinear interactions is entitled to be promoted to a cross-scale concentration or
+      singularity-formation mechanism — formation happens only once it passes the guard, and a conclusion that
+      fails to pass does not mean "the quantity is zero," but "this higher-level claim is not currently entitled to
+      form."
+    </p>
+    <p class="lede">
+      The whole proof architecture compresses into two complementary claims: <strong>C1 (Chain Necessity)</strong>
+      — a blow-up must generate an X-legal ultraviolet concentration chain; <strong>C2 (Finite
+      Obstruction)</strong> — any such chain must be genuinely blocked by N–S structure (incompressibility, triad
+      geometry, viscous scale tax) at a finite scale. If both are proved: blow-up ⟹ chain exists, but ¬(chain
+      exists), hence ¬blow-up — that is, global regularity. <strong>Neither claim has yet been fully
+      proved.</strong>
+    </p>
+    <p class="notice">
+      Honest state of play: C1a (UV-escape necessity) and C1b (causal provenance of the nonlinear replenishment —
+      the nonlinear Duhamel term must make up for the high-frequency tail lost to dissipation) are
+      <strong>CLOSED</strong>; C1c (persistent triadic genealogy — whether a single traceable causal branch exists)
+      remains <strong>OPEN</strong>. This round's genuine contribution to C2 is a <strong>NO-GO</strong>: using an
+      abstract geometric cascade ledger, it explicitly constructs a scalar model that simultaneously satisfies
+      "finite time + finite energy dissipation + Λ∈L¹ + Λ∉L^(5/2) + a nonzero critical toll at every scale,"
+      proving that every presently natural scalar/additive budget argument is insufficient to rule out a
+      blow-up-shaped ledger. The frontier therefore formally shifts to <strong>C3, Cross-Scale Coupling
+      Rigidity</strong> (25 independent sub-investigations), followed by C4 (9 rounds), C5 (13 rounds), and C6 (17
+      rounds).
+    </p>
+  </header>
+
+  <section id="foundational">
+    <h2 class="doc-h2">Framework and Round One</h2>
+    <p class="section-note">Read these three papers first, before any of the C3-C6 rounds below — ETN and the X-integral are a research language, not proven theorems; the genuine theorems are only the parts each document itself marks CLOSED.</p>
+    <nav class="case-grid" aria-label="NS_O Framework and Round One">
+      <a class="case-card" href="./p/00-etn-x-integration/">
+        <span class="k">00</span>
+        <h3>ETN–X Integration Refactor</h3>
+        <p>The framework-founding document for the entire series: Section 0 opens with a "research status and non-claims statement," listing eight explicit non-claims — it does not claim to have proven global regularity, does not claim to have constructed finite-time blow-up, does not claim that True ETN itself implies PDE regularity, does not claim that the X-Integration itself excludes singularity, does not claim that smoothness on an arbitrary numerical lattice directly implies continuum smoothness, does not claim that energy conservation or helicity alone suffices to control three-dimensional N–S, does not claim that the X-legal chain is fully equivalent to existing cascade/frequency-envelope/concentration-compactness notions, and does not claim that this paper's new terminology already carries external mathematical priority.</p>
+      </a>
+      <a class="case-card" href="./p/01-c1-uv-replenishment-chain/">
+        <span class="k">01</span>
+        <h3>C1: High-Frequency Escape and the Nonlinear UV Replenishment Chain</h3>
+        <p>Splits the previous integration framework's proposition $\mathrm{Blowup}(T_\ast)\Rightarrow\mathrm{XLegalUVChain}$ into three layers: C1a (high-frequency tail escape), C1b (nonlinear UV replenishment chain), C1c (persistent triadic genealogy).</p>
+      </a>
+      <a class="case-card" href="./p/02-c2-critical-toll-spike-packing/">
+        <span class="k">02</span>
+        <h3>C2: Critical Toll, Dissipation-Wavenumber Spike-Packing, and the Scale-Blind Budget No-Go</h3>
+        <p>Tests the Route B intuition raised at the end of the previous round: "must every UV replenishment pay a positive cost, with a finite total budget, producing a contradiction?" This round's conclusion is a clear No-Go: there is a critical per-scale toll, but the most natural additive energy budget is not enough to close it off.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c3">
+    <h2 class="doc-h2">C3 · Cross-Scale Coupling Rigidity (25 rounds)</h2>
+    <p class="section-note">25/25 COMPLETE. Runs from the first necessary condition for cross-scale coupling all the way through operator escape, multi-core geometry, pressure concentration, and an algebraic bridge to the Grujić–Xu derivative-chain framework — genuine exclusion of blow-up remains OPEN, and the frontier hands off to C4.</p>
+    <nav class="case-grid" aria-label="NS_O C3 · Cross-Scale Coupling Rigidity (25 rounds)">
+      <a class="case-card" href="./p/03-c3a-conservation-criticality-trilemma/">
+        <span class="k">03 / C3-A</span>
+        <h3>The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production</h3>
+        <p>Having shown in C2 that a scalar, additive energy budget alone cannot rule out a critical geometric cascade, this round formally brings in finer structure from the true N–S nonlinearity.</p>
+      </a>
+      <a class="case-card" href="./p/04-c3b-bihelical-equalization/">
+        <span class="k">04 / C3-B</span>
+        <h3>Bihelical Critical-Energy Equalization, Heterochiral Triad Decomposition, and Unique-Sign UV Escape</h3>
+        <p>Opens with an epistemic correction: for the $\mathcal E_+-\mathcal E_-=c_0$-type identity obtained in the previous round, C3-A, a literature check found that Lei–Lin–Zhou had already established the equivalent critical-helicity energy identity — it is not a new theorem of this paper.</p>
+      </a>
+      <a class="case-card" href="./p/05-c3c-classii-nonlocality-tax/">
+        <span class="k">05 / C3-C</span>
+        <h3>The Class-II Nonlocality Quadratic Tax, Radial-Drift Congestion, and the Class III/IV Forward-Surviving Family</h3>
+        <p>C3-B compressed the hypothetical singular production core down to the High–High Heterochiral UV Pair-Production Chain.</p>
+      </a>
+      <a class="case-card" href="./p/06-c3d-cutoff-flux-signature/">
+        <span class="k">06 / C3-D</span>
+        <h3>The Cutoff-Flux Sign Theorem, the Helical-Kernel Nonlocality Exponent, and the Class-II Logarithmic Reversal</h3>
+        <p>C3-C compressed nonlocal Class II down to "costly, but not ruled out." This round asks: what do these large, nearly cancelling high–high exchanges leave behind in the energy flux that genuinely crosses some fixed spectral cutoff $K$? Theorem 4.1 computes the Class II triad cutoff flux $\Phi_{\rm II}(K)$ piece by piece: it is negative (reverse) on $k<K<p$, and positive (forward) only in the narrow window $p<K<q$, while the triangle inequality $q-p\le k$ bounds the relative width of this forward window by $(q-p)/p\le\chi=k/p$ — under strong nonlocality, the forward window can only fall inside a boundary layer of width $O(k)$ near the cutoff (pure Fourier geometry, no turbulence-scaling assumption).</p>
+      </a>
+      <a class="case-card" href="./p/07-c3e-viscous-window-renewal/">
+        <span class="k">07 / C3-E</span>
+        <h3>Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier</h3>
+        <p>C3-D compressed the surviving core toward the local/moderately local heterochiral forward frontier (unless the nonlocal route pays an amplitude compensation or the scaling assumption breaks down).</p>
+      </a>
+      <a class="case-card" href="./p/08-c3f-phase-space-ancestry-cone/">
+        <span class="k">08 / C3-F</span>
+        <h3>Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal</h3>
+        <p>C3-E compressed the local heterochiral survivor down to three simultaneously necessary conditions: rapid viscous renewal, phase/amplitude efficiency, and a provenance-preserving genealogy.</p>
+      </a>
+      <a class="case-card" href="./p/09-c3g-first-crossing-causal-ancestry/">
+        <span class="k">09 / C3-G</span>
+        <h3>The First-Crossing Causal Frontier, Critical Shell Ancestry, and the Monotone Depletion No-Go</h3>
+        <p>The largest gap left by C3-F is that an instantaneous interaction is not the same as a strictly earlier causal parent.</p>
+      </a>
+      <a class="case-card" href="./p/10-c3h-ancestry-renormalization/">
+        <span class="k">10 / C3-H</span>
+        <h3>Ancestry Renormalization, the Unit-Shell Anchor, and the Critical Compactness Barrier</h3>
+        <p>C3-G established a conditional causal genealogy under explicit assumptions.</p>
+      </a>
+      <a class="case-card" href="./p/11-c3i-frontier-uv-cap-defect-trichotomy/">
+        <span class="k">11 / C3-I</span>
+        <h3>The Frontier UV Cap, the Critical-Defect Trichotomy, and One-Step Ancestry Decoupling</h3>
+        <p>C3-H arrived at the obstruction that "the packet anchor is compact, but the full critical field is not." This round switches to a more structured zoom: the first frontier crossing $T_Q=\inf\{t:\exists q\ge Q,\sigma,\ a_q^\sigma(t)\ge\beta_\ast\}$ — at this moment, every shell above the frontier has not yet exceeded the threshold.</p>
+      </a>
+      <a class="case-card" href="./p/12-c3j-gauge-corrected-reentry/">
+        <span class="k">12 / C3-J</span>
+        <h3>The Moving-Gauge Re-entry Audit, Absolute-Shell Hysteresis, and the Flux-Variation No-Go</h3>
+        <p>The question left by C3-I is: if a distant defect re-enters the moving genealogical core later on, must it pay a cost? This round first corrects the very notion of "re-entry" itself, making it the sharpest methodological correction in the series so far.</p>
+      </a>
+      <a class="case-card" href="./p/13-c3k-absolute-occupancy-moment-gap/">
+        <span class="k">13 / C3-K</span>
+        <h3>The Absolute Occupancy Worldvolume, Subthreshold Flux Variation, and the One-Moment Critical Gap</h3>
+        <p>C3-J proved that counting re-entries is gauge-dependent.</p>
+      </a>
+      <a class="case-card" href="./p/14-c3l-critical-moment-escape/">
+        <span class="k">14 / C3-L</span>
+        <h3>Critical Vorticity-Moment Escape, the Active-Occupancy Dichotomy, and the Strain-Geometry Debt</h3>
+        <p>C3-K compressed the gap down to the One-Frequency-Moment Gap;</p>
+      </a>
+      <a class="case-card" href="./p/15-c3m-vorticity-strain-betchov/">
+        <span class="k">15 / C3-M</span>
+        <h3>Vorticity–Strain Coupling, Betchov Global Collapse, and the Directional-Geometry Debt</h3>
+        <p>C3-L left two parallel channels that must diverge: spectral-moment escape and middle-strain escape.</p>
+      </a>
+      <a class="case-card" href="./p/16-c3n-localized-betchov-boundary/">
+        <span class="k">16 / C3-N</span>
+        <h3>Localized Betchov Boundary Current and the Local Balance of Strain Self-Amplification</h3>
+        <p>C3-M established only that the local Betchov surplus must be compensated outside the core.</p>
+      </a>
+      <a class="case-card" href="./p/17-c3o-adjoint-core-balance/">
+        <span class="k">17 / C3-O</span>
+        <h3>Adjoint Core Balance, the Cancellation Corridor, and Balance–Dynamics Separation</h3>
+        <p>C3-N left open whether the gauge/advection/diffusion terms generated by the cutoff function itself can be stripped away entirely.</p>
+      </a>
+      <a class="case-card" href="./p/18-c3p-operator-escape-far-pressure/">
+        <span class="k">18 / C3-P</span>
+        <h3>Operator Escape, the Far-Pressure Harmonic Matrix, and the Finite-Dimensionalization No-Go</h3>
+        <p>C3-O already proved that an energy balance which looks like the simplified model does not mean the dynamics are actually close to that model. This round formally escalates to the operator level.</p>
+      </a>
+      <a class="case-card" href="./p/19-c3q-pressure-projection-orthogonality/">
+        <span class="k">19 / C3-Q</span>
+        <h3>Pressure–Projection Orthogonality, Operator-Escape Localization, and the Harmonic-Matrix Compensation Debt</h3>
+        <p>C3-P produced two independent channels: operator escape and far-field pressure.</p>
+      </a>
+      <a class="case-card" href="./p/20-c3r-multi-core-pressure-horizon/">
+        <span class="k">20 / C3-R</span>
+        <h3>Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt</h3>
+        <p>C3-Q compressed the survivor into three mutually non-interchangeable interfaces — operator escape, ancestry-core geometry, and the far-field pressure matrix — and proved that operator escape and far-field pressure have no simple contradiction.</p>
+      </a>
+      <a class="case-card" href="./p/21-c3s-strain-cone-margin/">
+        <span class="k">21 / C3-S</span>
+        <h3>Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity</h3>
+        <p>C3-R answered only a binary question: whether a common far-field matrix exists at all. This round upgrades it to a quantitative one.</p>
+      </a>
+      <a class="case-card" href="./p/22-c3t-pressure-diversification-cone-eigenvalue/">
+        <span class="k">22 / C3-T</span>
+        <h3>Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap</h3>
+        <p>C3-S drove margin uniformity all the way to cross-scale rigidity. This round turns back to examine two inferences that look natural but do not hold, honestly flagging the type-level gaps.</p>
+      </a>
+      <a class="case-card" href="./p/23-c3u-pressure-heredity-mean-pointwise-rigidity/">
+        <span class="k">23 / C3-U</span>
+        <h3>Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity</h3>
+        <p>C3-T left two transport gaps: the uniform-cone branch has $K_\ast:v_{n,i}\ge\gamma_0>0$, but the mean-strain cone does not imply pointwise $\lambda_2^+$ geometry;</p>
+      </a>
+      <a class="case-card" href="./p/24-c3v-turnover-packing-strain-fluctuation-escape/">
+        <span class="k">24 / C3-V</span>
+        <h3>Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape</h3>
+        <p>C3-U split pressure-poor heredity into three terms — spatial displacement, reclassification, and time handover — and gave an exact adjoint transport identity for the local mean strain.</p>
+      </a>
+      <a class="case-card" href="./p/25-c3w-pressure-rotation-strain-sparseness/">
+        <span class="k">25 / C3-W</span>
+        <h3>Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier</h3>
+        <p>C3-V compressed the hypothetical singular survivor into two concentration channels: pressure rotation and strain fluctuation. This round advances both by one step.</p>
+      </a>
+      <a class="case-card" href="./p/26-c3x-joint-pressure-strain-analyticity-gap/">
+        <span class="k">26 / C3-X</span>
+        <h3>Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape</h3>
+        <p>C3-W already compressed the hypothetical singular survivor into two channels: pressure concentration and strain intermittency.</p>
+      </a>
+      <a class="case-card" href="./p/27-c3y-derivative-chain-intermittency-tradeoff/">
+        <span class="k">27 / C3-Y</span>
+        <h3>Derivative-Chain / Intermittency Tradeoff, Direct-vs-Chain Gap Closure, and Joint-Concentration Routing</h3>
+        <p>The final round of the C3 series opens with a Source Audit Correction (§0): re-anchoring the external theorem to its formal journal version — Grujić & Xu, Asymptotic Criticality of the Navier–Stokes Regularity Problem, Journal of Mathematical Fluid Mechanics 26, Article 53 (2024-07-27) — explicitly listing the theorem numbers cited (3.5 the direct criterion, 3.7 the energy a priori, 3.8/3.9 the ascending/descending chain, 3.14 chain-assisted).</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c4">
+    <h2 class="doc-h2">C4 · Unified Survivor State (9 rounds; original numbering skips C4-H)</h2>
+    <p class="section-note">9/9 COMPLETE. C3 split the survivor into independent necessary channels; C4 instead asks whether these channels can legally coexist within a single genuine state-transition chain — ultimately routing every recurrent UV singular event either to a synchronized structure or to one of six finite compensation motifs. C4 closes structurally as a research phase, not as a regularity theorem, and hands off to C5.</p>
+    <nav class="case-grid" aria-label="NS_O C4 · Unified Survivor State (9 rounds; original numbering skips C4-H)">
+      <a class="case-card" href="./p/28-c4a-unified-survivor-state-synchronization-closure/">
+        <span class="k">28 / C4-A</span>
+        <h3>Unified Survivor State, Synchronization Debt, and Transition Closure</h3>
+        <p>The round opens by formally closing C3 (§0): the main task of C3-A through C3-Y was not to prove global regularity, but to compress the enormous space of possibilities for a hypothetical blow-up down to a small number of survivor channels that can no longer be excluded by any single scalar budget (UV escape, helical pair production, first-crossing causal ancestry, gauge-invariant occupancy, strain self-amplification geometry, Betchov localization, operator escape, near/far-field pressure compression, multi-core stacking, pressure heredity, strain intermittency, critical pressure concentration, derivative-chain tradeoffs).</p>
+      </a>
+      <a class="case-card" href="./p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+        <span class="k">29 / C4-B</span>
+        <h3>Temporal Synchronization, Pulse-Capacity, and Carrier-Relay No-Go</h3>
+        <p>C4-A already proved that if a necessary channel remains persistently active within the same viscous window (the sum of inactive fractions less than 1), it is forced to synchronize;</p>
+      </a>
+      <a class="case-card" href="./p/30-c4c-shared-event-coupling-amplitude-flux-barrier/">
+        <span class="k">30 / C4-C</span>
+        <h3>Carrier Relay, Shared-Event Coupling, and the Amplitude-to-Flux Barrier</h3>
+        <p>C4-B proved that generic turnover cost is not enough to force synchronization.</p>
+      </a>
+      <a class="case-card" href="./p/31-c4d-amplitude-work-helical-cancellation-rigidity/">
+        <span class="k">31 / C4-D</span>
+        <h3>Amplitude-to-Flux Branching Bridge, Local Work Cancellation, and Helical-Cancellation Rigidity</h3>
+        <p>C4-C leaves the Amplitude-to-Flux Barrier: amplitude information alone cannot determine the sign of flux. This round no longer pursues the false direct implication, and instead proves a branching bridge on the genuine N–S shell evolution.</p>
+      </a>
+      <a class="case-card" href="./p/32-c4e-recurrent-escape-branch-uv-motif-compression/">
+        <span class="k">32 / C4-E</span>
+        <h3>Recurrent Escape-Branch Rigidity, Transport-Free Source Routing, and UV Motif Compression</h3>
+        <p>C4-D compressed critical-shell crossings into eight branches. This round's task is not to add yet more branches, but to compress the mutually-reducible branches into a finite number of recurrent structural motifs.</p>
+      </a>
+      <a class="case-card" href="./p/33-c4f-relay-work-spectral-congestion-trilemma/">
+        <span class="k">33 / C4-F</span>
+        <h3>Higher-Frequency Relay, Work-Variation Operator Bridge, and the Spectral-Congestion Trilemma</h3>
+        <p>C4-E left three genuinely un-synchronized escape motifs: $M_4$ higher-frequency relay, $M_5$ critical work variation, $M_6$ spectral-geometry degeneration. This round asks whether these three can still achieve free escape with no additional structure.</p>
+      </a>
+      <a class="case-card" href="./p/34-c4g-cross-congestion-operator-funnel-uv-closure/">
+        <span class="k">34 / C4-G</span>
+        <h3>Cross-Congestion Synchronization, Operator Funnel, and UV Phase-Space Closure</h3>
+        <p>C4-F left three forms of congestion: $C_{TP}$ tail/wrap, $C_{DO}$ deformation/operator, $C_{RI}$ radial-interaction. This round asks whether these three forms of congestion can be fully independent of one another.</p>
+      </a>
+      <a class="case-card" href="./p/35-c4i-middle-operator-overlap-pressure-reentry/">
+        <span class="k">35 / C4-I</span>
+        <h3>Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry</h3>
+        <p>This paper opens by picking up from C4-H, which already synchronized UV, middle strain, and the growth-aligned operator onto the same sequence of contracting record windows $J_j=(\tau_j,\tau_{j+1})$, each window carrying a middle-load integral lower bound $A_j$ and an operator-load integral lower bound $B_j$ — but had not yet proved same-instant overlap.</p>
+      </a>
+      <a class="case-card" href="./p/36-c4j-compensation-rigidity-final-synchronization-audit/">
+        <span class="k">36 / C4-J</span>
+        <h3>Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure</h3>
+        <p>C4-I left two compensation mechanisms: temporal pulse separation, and pressure evasion via mean rotation/quadratic cancellation.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c5">
+    <h2 class="doc-h2">C5 · Recurrent Motif Limits, Defect Measures, and Compensation Compactness (13 rounds)</h2>
+    <p class="section-note">13/13 COMPLETE. C4 routed UV singular events to the six-member family of finite compensation motifs; C5 compactifies these motifs round by round, routing pseudo-defects into a finite residual alphabet $\{A,T,G,P,H,F\}$. C5-M formally declares that C5 closes structurally as a research phase — a finite defect graph does not imply global regularity — and hands off to C6 to extract the genuine recurrent sink cycles.</p>
+    <nav class="case-grid" aria-label="NS_O C5 · Recurrent Motif Limits, Defect Measures, and Compensation Compactness (13 rounds)">
+      <a class="case-card" href="./p/37-c5a-record-window-compensation-motif-compactness/">
+        <span class="k">37 / C5-A</span>
+        <h3>Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness</h3>
+        <p>C4 has already compressed blow-up's asynchronous survival space into the six-element finite compensation-motif family $\mathcal C=\{T,O,M,Q,P,D\}$ (temporal pulse, operator angle, mean variation, seven-point quadratic cancellation, pressure concentration, derivative-gate defect).</p>
+      </a>
+      <a class="case-card" href="./p/38-c5b-temporal-young-pulse-phase-compatibility/">
+        <span class="k">38 / C5-B</span>
+        <h3>Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy</h3>
+        <p>C5-A caught a hard no-go: separately compactifying the middle-load measure $\mu_j^{mid}$ and the operator-growth measure $\mu_j^{op,+}$, even when the two are disjoint at every finite scale, can still let the weak limits homogenize into full overlap.</p>
+      </a>
+      <a class="case-card" href="./p/39-c5c-temporal-correlation-cross-curvature-ordering/">
+        <span class="k">39 / C5-C</span>
+        <h3>Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering</h3>
+        <p>C5-B left a clear gap: the Young measure knows phase proportions but not their order — $M,+,M,+,\ldots$ and $M,M,+,+,\ldots$ can share the same local Young distribution.</p>
+      </a>
+      <a class="case-card" href="./p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/">
+        <span class="k">40 / C5-D</span>
+        <h3>Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions</h3>
+        <p>C5-C proved that the scalar $E_0/E_1$ identities alone are not enough to exclude temporal compensation cycles.</p>
+      </a>
+      <a class="case-card" href="./p/41-c5e-strain-direction-middle-gap-derivative-intermittency/">
+        <span class="k">41 / C5-E</span>
+        <h3>Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure</h3>
+        <p>C5-D compressed seven-point cancellation into two escape routes: middle-gap degeneration, or strain-direction dispersion. C5-E is not content to leave these as mere names, and instead asks what measurable derivative/intermittency debt each actually corresponds to.</p>
+      </a>
+      <a class="case-card" href="./p/42-c5f-axis-pressure-signature-derivative-gate-escalation/">
+        <span class="k">42 / C5-F</span>
+        <h3>Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation</h3>
+        <p>C5-E has already translated seven-point cancellation entirely into three PDE field-defect routes.</p>
+      </a>
+      <a class="case-card" href="./p/43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">
+        <span class="k">43 / C5-G</span>
+        <h3>Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure</h3>
+        <p>C5-F compressed the residual network into four items: pressure-signature defects, vorticity-constraint-complement defects, fixed-order derivative-gate defects, and asymptotic-critical-order escape.</p>
+      </a>
+      <a class="case-card" href="./p/44-c5h-all-order-effective-volume-asymptotic-criticality/">
+        <span class="k">44 / C5-H</span>
+        <h3>All-Order Effective-Volume Defects, Spectral–Multiplicity Ladders, and Asymptotic-Critical Compatibility</h3>
+        <p>C5-G obtained the first theorem-ready fixed-order direct gate.</p>
+      </a>
+      <a class="case-card" href="./p/45-c5i-sign-geometry-chain-harmonic-compatibility/">
+        <span class="k">45 / C5-I</span>
+        <h3>Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility</h3>
+        <p>C5-H formally declared the static all-order effective-volume closure scheme dead; C5-I is the first round to treat <strong>component/sign one-dimensional micro-geometry</strong> as the primary object, rather than an appendage of volume geometry.</p>
+      </a>
+      <a class="case-card" href="./p/46-c5j-line-section-order-sandwich-harmonic-saturation/">
+        <span class="k">46 / C5-J</span>
+        <h3>Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation</h3>
+        <p>C5-I preserved only the chord occupancy rate $b_k([\nu])$, without knowing whether the sign-thick set is actually one long interval, a few islands, or heavily fragmented.</p>
+      </a>
+      <a class="case-card" href="./p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">
+        <span class="k">47 / C5-K</span>
+        <h3>Chain-Time Stitching, Window-Persistent Sign Defects, and Dynamic-Interpolation Closure Audit</h3>
+        <p>C5-I/J left one hard rule: different derivative orders use different admissible later times in the theorem, and same-time inequalities cannot be multiplied across orders unconditionally.</p>
+      </a>
+      <a class="case-card" href="./p/48-c5l-persistent-bad-window-clock-defect-root-turnover-compression/">
+        <span class="k">48 / C5-L</span>
+        <h3>Persistent Bad-Window Rigidity, Chain-Clock Defect Measures, and Root-Turnover Compression</h3>
+        <p>C5-K compressed the genuine high-order spatial survivors into four categories: window-persistent sign defects, chain-clock separation, in-window root reversal, and theorem-setup defects.</p>
+      </a>
+      <a class="case-card" href="./p/49-c5m-unified-defect-graph-c5-phase-closure/">
+        <span class="k">49 / C5-M</span>
+        <h3>Unified Defect-State Closure, Compatibility Graph Audit, and C5 Phase Boundary</h3>
+        <p>C5's task was never to find yet another magic inequality, but to turn C4's recurrent compensation motifs into compact recurrent states, and then route the apparently different escapes into debts.</p>
+      </a>
+    </nav>
+  </section>
+
+  <section id="c6">
+    <h2 class="doc-h2">C6 · Minimal Recurrent Defect Cycles, Sink-SCC Extraction, and Cross-Domain Closure (17 rounds)</h2>
+    <p class="section-note">17/17 fully live, and PROGRAM-NS's full series is now complete at 67/67 papers (framework 1 + C1 1 + C2 1 + C3 25 + C4 9 + C5 13 + C6 17). C5 compressed every recurrent survivor state into the six-letter residual alphabet $\{A,T,G,P,H,F\}$ and one certified compatibility graph, flagging three candidate recurrent cycles; C6-A through C6-Q — seventeen rounds — progressively extract sink strongly-connected components, correct the semantics of visibility, and open up multiple carrier channels: spectral, pressure, peak, satellite, eternal, and others. C6-Q proves that TS's nonlocal tail can be localized, that spatial escape can be re-bound by translation, and that recurrent defects can even be extended into an eternal solution — the document's own proposed next round, C6-R, has not yet been written, and whether the series will be extended remains undecided. A finite defect graph does not imply global regularity; global regularity remains fully open.</p>
+    <nav class="case-grid" aria-label="NS_O C6 · Minimal Recurrent Defect Cycles, Sink-SCC Extraction, and Cross-Domain Closure (17 rounds)">
+      <a class="case-card" href="./p/50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">
+        <span class="k">50 / C6-A</span>
+        <h3>Certified Defect Graph, Typed Cycle Composition, and Minimal Survivor Candidates</h3>
+        <p>C6 formally launches, with its task shifting from C5's state construction + compactification + debt routing to cycle extraction + cycle compatibility + cycle elimination.</p>
+      </a>
+      <a class="case-card" href="./p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">
+        <span class="k">51 / C6-B</span>
+        <h3>High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test</h3>
+        <p>C6-A's conclusion was that a projected SCC does not imply a composable PDE recurrent cycle; for the $H\leftrightarrow F$ that appears to exist on C5-M's coarse may-graph, C6-B formally tests the reverse edge $F\overset{?}{\Rightarrow}H$.</p>
+      </a>
+      <a class="case-card" href="./p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">
+        <span class="k">52 / C6-C</span>
+        <h3>Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</h3>
+        <p>C6-B cut the coarse $H\leftrightarrow F$ down to $H_{\rm force}\to F_{\rm NL}^{+}\overset{\text{coherence+sign+setup+persistence}}{\dashrightarrow}H_{\rm force}$;</p>
+      </a>
+      <a class="case-card" href="./p/53-c6d-geometry-pressure-cycle-composition-provenance-compatibility-signature-return-tests/">
+        <span class="k">53 / C6-D</span>
+        <h3>Geometry–Pressure Cycle Composition, Provenance Compatibility, and Signature-Return Tests</h3>
+        <p>C6-A's second-ranked candidate $G\leftrightarrow P$ now undergoes the same cycle-composition audit, and it immediately turns out to need even more semantic correction than $H/F$: many arrows written in C5-D/F as $G\to P$ or $P\to G$ in fact all occur at the same moment, the same spatial core, the same compression axis, and the same local/far pressure decomposition — they are not sequential edges $G_n\to P_n\to G_{n+1}$, but a same-event compatibility relation $(G,P)_n\in\mathcal C_{GP}$.</p>
+      </a>
+      <a class="case-card" href="./p/54-c6e-temporal-spatial-shared-source-coupling-fate-of-t-trap/">
+        <span class="k">54 / C6-E</span>
+        <h3>Temporal-to-Spatial Shared-Source Coupling, Isolation No-Go Tests, and the Fate of the T Trap</h3>
+        <p>Of C6-A's three candidates, $H\leftrightarrow F$ has already been cut down by C6-B/C to $H_{\rm force}\to F_{\rm NL}^{+}\dashrightarrow H_{\rm force}$, and $G\leftrightarrow P$ has already been rewritten by C6-D into the hereditary joint state $(G,P)_{\rm joint}\dashrightarrow(G,P)_{\rm joint}$;</p>
+      </a>
+      <a class="case-card" href="./p/55-c6f-shared-source-core-extraction-spatiotemporal-heredity-cross-domain-routing/">
+        <span class="k">55 / C6-F</span>
+        <h3>Shared-Source Core Extraction, Spatiotemporal Heredity, and Cross-Domain Routing to GP/HF</h3>
+        <p>C6-B–E have refined C6-A's three candidates into $HF_{\rm coherent}$, $GP_{\rm hereditary}$, $TS_{\rm hereditary}$;</p>
+      </a>
+      <a class="case-card" href="./p/56-c6g-typed-cross-domain-graph-rebuild-joint-node-scc-audit-boundary-survivors/">
+        <span class="k">56 / C6-G</span>
+        <h3>Typed Cross-Domain Graph Rebuild, Joint-Node SCC Audit, and Minimal Boundary-Saturated Survivor Cycles</h3>
+        <p>Once C5-M's coarse residual graph $\{A,T,G,P,H,F\}$ is projected into an ordinary directed graph, one can easily read off an apparently large $\{G,P,H,F\}$ SCC — but this is only the first layer of compression;</p>
+      </a>
+      <a class="case-card" href="./p/57-c6h-critical-boundary-face-transition-graph-debt-coercivity-boundary-cycle-elimination/">
+        <span class="k">57 / C6-H</span>
+        <h3>Critical Boundary-Face Transition Graph, Debt-Coercivity Audit, and Boundary-Cycle Elimination</h3>
+        <p>C6-G compressed C6's interior graph to $\{TS,GP,HF\}$ and proved there is no certified interior SCC at all;</p>
+      </a>
+      <a class="case-card" href="./p/58-c6i-scale-normalized-critical-debt-capacity-at-infinity-barrier-accumulation/">
+        <span class="k">58 / C6-I</span>
+        <h3>Scale-Normalized Critical Debt, Capacity-at-Infinity Compactification, and Barrier-Accumulation Cycles</h3>
+        <p>C6-H left behind two negative results — not every reserve going to zero qualifies as a physical node, and a finite kinetic-energy budget is structurally unable to supply a consistent cost for a scale-invariant boundary event — and proposed switching to a "critical-barrier debt" instead.</p>
+      </a>
+      <a class="case-card" href="./p/59-c6j-log-scale-renormalized-defect-flow-telescoping-potentials-critical-fiber-escape/">
+        <span class="k">59 / C6-J</span>
+        <h3>Log-Scale Renormalized Defect Flow, Telescoping Potentials, and Critical-Cycle Closure Tests</h3>
+        <p>C6-I proved that a fixed critical cost cannot by itself force a finite-time contradiction — it only corrected the scaling type, without providing any cross-scale directionality.</p>
+      </a>
+      <a class="case-card" href="./p/60-c6k-critical-fiber-escape-defect-fiber-compactness-profile-splitting-closure/">
+        <span class="k">60 / C6-K</span>
+        <h3>Critical Fiber Escape, Defect-Fiber Compactness, and Profile-Splitting Closure</h3>
+        <p>The Critical Fiber Escape that C6-J left behind is only a general condition — that any compact defect set visited infinitely often by a hypothetical blow-up must have an infinite critical fiber.</p>
+      </a>
+      <a class="case-card" href="./p/61-c6l-singular-carrier-profiles-spectator-decoupling-secondary-scale-defect-rebinding/">
+        <span class="k">61 / C6-L</span>
+        <h3>Singular Carrier Profiles, Spectator Decoupling, and Secondary-Scale Defect Rebinding</h3>
+        <p>The hardest gap C6-K left behind is: are the recurrence cores tracked by $TS$, $GP$, and $HF$ actually genuine carriers of the singular critical mass? C6-L is the first round to put singular critical mass and defect labels into the same measure-theoretic object.</p>
+      </a>
+      <a class="case-card" href="./p/62-c6m-carrier-completeness-spectral-pressure-visibility-nested-rebinding-rigidity/">
+        <span class="k">62 / C6-M</span>
+        <h3>Carrier Completeness, Spectral/Pressure Visibility, and Nested-Rebinding Rigidity</h3>
+        <p>The question C6-L handed off was: is low carrier visibility only because the current three labels ($TS$, $GP$, $HF$) are not enough, rather than the singular mass genuinely being uncapturable? C6-M is the first round to prove that $L^3$ is not the only carrier channel.</p>
+      </a>
+      <a class="case-card" href="./p/63-c6n-near-lossless-carrier-concentration-ancient-profile-extraction-defect-complete-rigidity/">
+        <span class="k">63 / C6-N</span>
+        <h3>Near-Lossless Carrier Concentration, Ancient-Profile Extraction, and Defect-Complete Rigidity</h3>
+        <p>C6-M left "near-lossless carrier retention + scale→0 + horizon→∞" for C6-N to pursue: can such a nested structure be fed directly into an ancient/eternal profile and then connected to Liouville rigidity? C6-N gives an answer more refined than expected, and makes a permanent correction to the visibility semantics of C6-L/M.</p>
+      </a>
+      <a class="case-card" href="./p/64-c6o-peak-scale-defect-inheritance-type-ii-ancient-carriers-mass-peak-two-scale-closure/">
+        <span class="k">64 / C6-O</span>
+        <h3>Peak-Scale Defect Inheritance, Type-II Ancient Carriers, and Mass–Peak Two-Scale Closure</h3>
+        <p>C6-N proved that a relative-dominant Type-II carrier must split into two layers, with the mass scale $\ell_n$ far larger than the peak-amplitude scale $a_n$.</p>
+      </a>
+      <a class="case-card" href="./p/65-c6p-ancient-defect-state-classification-record-peak-derivative-rigidity-peak-local-pressure-closure/">
+        <span class="k">65 / C6-P</span>
+        <h3>Ancient Defect-State Classification, Record-Peak Derivative Rigidity, and Peak-Local Pressure Closure</h3>
+        <p>C6-O left behind a three-scale picture: mass scale $\gg$ peak scale $\gg$ derivative scale, with a Derivative-Tower Restart triggered whenever some derivative order's amplitude diverges under peak normalization.</p>
+      </a>
+      <a class="case-card" href="./p/66-c6q-ancient-defect-rigidity-local-growth-lift-strain-projection-tail-reduction-spatial-carrier-rebinding/">
+        <span class="k">66 / C6-Q</span>
+        <h3>Ancient Defect Rigidity, Local Growth Lift, Strain-Projection Tail Reduction, and Spatial Carrier Rebinding</h3>
+        <p>The final difficulty C6-P left behind seemed to be the nonlocal tail of TS's operator channel $P_{st}$. C6-Q discovers a major correction: for the temporal $H^1$ strain-growth ledger that TS actually uses, $P_{st}$ is simply not an intrinsic spatial-carrier object at all.</p>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS Zone</a>
+    <span>SHA-256-verified per round · original bytes, not repackaged</span>
+  </footer>
+</div>
+</body>
+</html>

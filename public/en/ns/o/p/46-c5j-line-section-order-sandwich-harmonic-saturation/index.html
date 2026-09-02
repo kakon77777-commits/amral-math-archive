@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>46 / C5-J: Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-I preserved only the chord occupancy rate $b_k([\nu])$, without knowing whether the sign-thick set is actually one long interval, a few islands, or heavily fragmented. C5-J's question: <strong>can fragmentation itself create a new harmonic escape?</strong> The answer is no. **C5-J.1 Fragmentation-Neutral Harmonic Lower Bound** proves that Solynin's extremal theorem needs only the <strong>total measure</strong> of the chord complement — whether the active set is one interval, finitely many pieces, or a highly fragmented measurable set, as long as the complement measure stays $\ge2(1-\beta)$, the harmonic-measure lower bound $h(\beta)$ holds — fragmentation cannot make the harmonic-measure lower bound any worse than the pure-occupancy bound. **C5-J.2** likewise proves that C5-I's descent estimate depends only on the <strong>total length</strong> of the same-sign high-value set, so fragmentation position does not affect the descent cost. But fragmentation is not free: it forces repeated threshold crossings along the chord, and such crossings are exactly the variation of the <strong>next-order derivative</strong>. Using dual-threshold hysteresis counting ($\lambda_0<\lambda_1$, to avoid threshold-noise artifacts) to define a robust high-value island count $N_k$, each interior gap costs at least a fixed total variation $2(\lambda_1-\lambda_0)A_k$, and since total variation is bounded above by $|f_k'|\le C_DA_{k+1}$, **C5-J.3** forces $A_{k+1}\ge\frac{(\lambda_1-\lambda_0)(N_k-1)}{C_Dr_k}A_k$ — fragmentation genuinely pays upward to the next order. <strong>The round's most elegant result is multiplying this upper-order cost by C5-I's lower-order cost $A_{k-1}\ge\kappa_{\lambda,\delta}r_kA_k$</strong>: the chain-scale radius $r_k$ cancels exactly, giving a dimensionless <strong>three-order derivative sandwich inequality</strong> $A_{k-1}A_{k+1}/A_k^2\ge c_{\lambda_0,\lambda_1,\delta}(N_k-1)$ (**C5-J.4**), which converts into Grujić–Xu's own normalized chain-root notation (the normalization constants likewise cancel exactly, **C5-J.5**). Defining the log chain curvature $Y_k=(k+1)\log\mathcal R_k$, **C5-J.6** proves that if the fragmentation count $N_k\to\infty$, the discrete second difference $\Delta^2Y_k\to+\infty$ — unbounded fragmentation cannot coexist with a locally flat/affine chain-root log profile, and must force a sharp order-space convexity event. Separately, defining the dimensionless line roughness $\mathfrak U_k=r_kA_{k+1}/A_k$, it is shown that the fragmentation count is bounded by the roughness bound: **C5-J.7**, if $\sup_k\mathfrak U_k<\infty$, the normalized line profile $\psi_k$ is equi-Lipschitz, and Arzelà–Ascoli gives a genuinely continuous limiting profile, generalized to the full angular chord process $\Psi_k(\nu,s)$ compactifying likewise on $S^2\times[-1,1]$ (**C5-J.9**). <strong>C5-J.10 Bad-Core Line-Process Dichotomy</strong> closes the round: every recurrent chain-scale sign-thick bad core, after passing to a subsequence, can only be one of a <strong>compact hysteretic sign core</strong> (bounded roughness) or <strong>upper-order-derivative roughness</strong> ($\mathfrak U_k\to\infty$) — <strong>fragmentation is thus completely absorbed into the derivative-chain metadata, and is formally removed from C5's survivor list; it is no longer an independent category</strong>. Line micro-geometry ultimately compresses to just four states: harmonic passage, compact critical core, upper-order roughness, and strong sign-thickness. <strong>The most important honest boundary (§49–55) continues and sharpens C5-I's rule</strong>: all the new inequalities (descent, fragmentation's upper-order cost, the three-order sandwich) are <strong>same-time</strong>, but the published theorem uses different admissible later times at different derivative orders, so same-time sandwiches cannot be directly stitched across orders — explicitly defining a "root-transfer factor" $\mathfrak T_{k\to k+1}$ measuring the cross-time chain-root ratio; if this factor diverges, it constitutes by itself a newly named <strong>derivative-root time-reversal defect</strong>, belonging to the Type-A/B dynamic-interpolation layer, which this round does not resolve. Formally hands off to <strong>C5-K — Chain-Time Stitching, Type-Switch Defects, and Dynamic-Interpolation Closure Audit</strong>, with 8 targets left to prove.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/46-c5j-line-section-order-sandwich-harmonic-saturation/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/46-c5j-line-section-order-sandwich-harmonic-saturation/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/46-c5j-line-section-order-sandwich-harmonic-saturation/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/46-c5j-line-section-order-sandwich-harmonic-saturation/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>46 / C5-J: Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 46 / C5-J</span>
+      <span class="tag">C5-J · Fragmentation Absorbed into the Derivative Chain</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>46 / C5-J: Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation</h1>
+    <p class="h1-sub">C5-I preserved only the chord occupancy rate $b_k([\nu])$, without knowing whether the sign-thick set is actually one long interval, a few islands, or heavily fragmented. C5-J's question: <strong>can fragmentation itself create a new harmonic escape?</strong> The answer is no. **C5-J.1 Fragmentation-Neutral Harmonic Lower Bound** proves that Solynin's extremal theorem needs only the <strong>total measure</strong> of the chord complement — whether the active set is one interval, finitely many pieces, or a highly fragmented measurable set, as long as the complement measure stays $\ge2(1-\beta)$, the harmonic-measure lower bound $h(\beta)$ holds — fragmentation cannot make the harmonic-measure lower bound any worse than the pure-occupancy bound. **C5-J.2** likewise proves that C5-I's descent estimate depends only on the <strong>total length</strong> of the same-sign high-value set, so fragmentation position does not affect the descent cost. But fragmentation is not free: it forces repeated threshold crossings along the chord, and such crossings are exactly the variation of the <strong>next-order derivative</strong>. Using dual-threshold hysteresis counting ($\lambda_0<\lambda_1$, to avoid threshold-noise artifacts) to define a robust high-value island count $N_k$, each interior gap costs at least a fixed total variation $2(\lambda_1-\lambda_0)A_k$, and since total variation is bounded above by $|f_k'|\le C_DA_{k+1}$, **C5-J.3** forces $A_{k+1}\ge\frac{(\lambda_1-\lambda_0)(N_k-1)}{C_Dr_k}A_k$ — fragmentation genuinely pays upward to the next order. <strong>The round's most elegant result is multiplying this upper-order cost by C5-I's lower-order cost $A_{k-1}\ge\kappa_{\lambda,\delta}r_kA_k$</strong>: the chain-scale radius $r_k$ cancels exactly, giving a dimensionless <strong>three-order derivative sandwich inequality</strong> $A_{k-1}A_{k+1}/A_k^2\ge c_{\lambda_0,\lambda_1,\delta}(N_k-1)$ (**C5-J.4**), which converts into Grujić–Xu's own normalized chain-root notation (the normalization constants likewise cancel exactly, **C5-J.5**). Defining the log chain curvature $Y_k=(k+1)\log\mathcal R_k$, **C5-J.6** proves that if the fragmentation count $N_k\to\infty$, the discrete second difference $\Delta^2Y_k\to+\infty$ — unbounded fragmentation cannot coexist with a locally flat/affine chain-root log profile, and must force a sharp order-space convexity event. Separately, defining the dimensionless line roughness $\mathfrak U_k=r_kA_{k+1}/A_k$, it is shown that the fragmentation count is bounded by the roughness bound: **C5-J.7**, if $\sup_k\mathfrak U_k<\infty$, the normalized line profile $\psi_k$ is equi-Lipschitz, and Arzelà–Ascoli gives a genuinely continuous limiting profile, generalized to the full angular chord process $\Psi_k(\nu,s)$ compactifying likewise on $S^2\times[-1,1]$ (**C5-J.9**). <strong>C5-J.10 Bad-Core Line-Process Dichotomy</strong> closes the round: every recurrent chain-scale sign-thick bad core, after passing to a subsequence, can only be one of a <strong>compact hysteretic sign core</strong> (bounded roughness) or <strong>upper-order-derivative roughness</strong> ($\mathfrak U_k\to\infty$) — <strong>fragmentation is thus completely absorbed into the derivative-chain metadata, and is formally removed from C5's survivor list; it is no longer an independent category</strong>. Line micro-geometry ultimately compresses to just four states: harmonic passage, compact critical core, upper-order roughness, and strong sign-thickness. <strong>The most important honest boundary (§49–55) continues and sharpens C5-I's rule</strong>: all the new inequalities (descent, fragmentation's upper-order cost, the three-order sandwich) are <strong>same-time</strong>, but the published theorem uses different admissible later times at different derivative orders, so same-time sandwiches cannot be directly stitched across orders — explicitly defining a "root-transfer factor" $\mathfrak T_{k\to k+1}$ measuring the cross-time chain-root ratio; if this factor diverges, it constitutes by itself a newly named <strong>derivative-root time-reversal defect</strong>, belonging to the Type-A/B dynamic-interpolation layer, which this round does not resolve. Formally hands off to <strong>C5-K — Chain-Time Stitching, Type-Switch Defects, and Dynamic-Interpolation Closure Audit</strong>, with 8 targets left to prove.</p>
+    <div class="claim-box">
+      Proves that fragmentation cannot make either the harmonic-measure lower bound or the descent cost any worse — both depend only on total measure/total length. But fragmentation forces variation in the next-order derivative; dual-threshold hysteresis counting forces a genuine upper-order cost, and multiplying it by C5-I's lower-order cost makes the chain-scale radius cancel exactly, yielding a dimensionless three-order derivative sandwich inequality — heavy fragmentation directly forces positive order-space curvature. If roughness is bounded, the angular chord process is equi-Lipschitz and compactifies — fragmentation is thus fully absorbed into the derivative chain and is no longer an independent survivor category. Honest boundary: all the new inequalities are same-time; different orders use different admissible times, so stitching across orders needs the root-transfer factor to stay controlled, otherwise it constitutes a new defect by itself.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../45-c5i-sign-geometry-chain-harmonic-compatibility/">45 / C5-I · Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">47 / C5-K · Chain-Time Stitching, Window-Persistent Sign Defects, and Dynamic-Interpolation Closure Audit</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>47 / 67</div>
+    </div>
+    <blockquote class="cite">'LINE-FRAGMENTATION is removed as an independent survivor category — fragmentation ⟹ upper derivative toll ⟹ order curvature, and the unresolved frontier is now overwhelmingly temporal: chain-time stitching.' — excerpted from Sections 46 and 56 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5J_LineSection_OrderSandwich_HarmonicSaturation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

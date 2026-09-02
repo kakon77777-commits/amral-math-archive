@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>09 / C3-G: The First-Crossing Causal Frontier, Critical Shell Ancestry, and the Monotone Depletion No-Go · NS_O · NS · AMRAL</title>
+<meta name="description" content="The largest gap left by C3-F is that an instantaneous interaction is not the same as a strictly earlier causal parent. This round instead uses the dimensionless critical shell amplitude $a_q^\sigma=\|u_q^\sigma\|_\infty/(\nu\lambda_q)$ (scale-invariant, and directly connected to the dissipation-wavenumber framework), defining the first crossing time $\tau_{q,\sigma}$ for each shell-sign node. The core result is the Critical First-Crossing Parent Lemma (Theorem 9.1): under an "eventual local-source dominance" assumption (earlier rounds established suppression of strongly nonlocal production, but this assumption has not yet been proved unconditionally for every possible blow-up, so this round's result is explicitly flagged as conditional), there is a fixed small threshold $\beta_\ast$ such that when a child first crosses the threshold, some local parent must already have crossed the same threshold earlier — a proof by contradiction using only the normalized Duhamel formula and the finiteness of the parent-type count. This gives the strict time ordering $\tau_p<\tau_c$, and the resulting Critical Activation DAG cannot contain cycles, filling the gap left by C3-F. It further proves the First Frontier Crossing Lemma (Theorem 15.1): high-frequency activity cannot "teleport" to an arbitrarily high frontier; it must first pass through a shell boundary of bounded width — combining this with the unboundedness of the dissipation wavenumber (from $\Lambda\notin L^{5/2}$ under blow-up), a Kőnig-type argument extracts a Conditional Ancestry Ray (Theorem 18.1): a causal path exists that is arbitrarily long, strictly time-ordered, and unbounded in frequency. But this round also tests another intuition — that "once a parent has passed energy to a child, it should permanently lose the corresponding resource" — and proves this cannot be derived from the conservation laws: energy and helicity conservation only constrain the transfer vector to a fixed one-dimensional signed direction $\dot{\mathbf e}=\Theta_\tau(t)\mathbf v_\tau$, with no constraint whatsoever on the sign of $\Theta_\tau(t)$. Proposition 26.1 gives an explicit counterexample: taking $\Theta(t)=\sin t$, this abstract transfer ledger satisfies triadwise energy and helicity conservation exactly at every instant, yet the energy repeatedly swaps back and forth — the conservation algebra alone is not enough to prove monotone depletion. Only viscosity provides a genuinely irrecoverable loss, but C2 already showed its cost shrinks to $O(\lambda^{-1})$, which remains summable along a geometric scale sequence. The research frontier shifts to C3-H: applying a critical rescaling to the causal genealogy already obtained, to see whether it forces out a renormalized limit object that collides head-on with existing backward-uniqueness/rigidity theorems.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/09-c3g-first-crossing-causal-ancestry/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/09-c3g-first-crossing-causal-ancestry/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/09-c3g-first-crossing-causal-ancestry/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/09-c3g-first-crossing-causal-ancestry/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>09 / C3-G: The First-Crossing Causal Frontier, Critical Shell Ancestry, and the Monotone Depletion No-Go</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 09 / C3-G</span>
+      <span class="tag">C3-G · Causal DAG, but Depletion NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>09 / C3-G: The First-Crossing Causal Frontier, Critical Shell Ancestry, and the Monotone Depletion No-Go</h1>
+    <p class="h1-sub">The largest gap left by C3-F is that an instantaneous interaction is not the same as a strictly earlier causal parent. This round instead uses the dimensionless critical shell amplitude $a_q^\sigma=\|u_q^\sigma\|_\infty/(\nu\lambda_q)$ (scale-invariant, and directly connected to the dissipation-wavenumber framework), defining the first crossing time $\tau_{q,\sigma}$ for each shell-sign node. The core result is the Critical First-Crossing Parent Lemma (Theorem 9.1): under an "eventual local-source dominance" assumption (earlier rounds established suppression of strongly nonlocal production, but this assumption has not yet been proved unconditionally for every possible blow-up, so this round's result is explicitly flagged as conditional), there is a fixed small threshold $\beta_\ast$ such that when a child first crosses the threshold, some local parent must already have crossed the same threshold earlier — a proof by contradiction using only the normalized Duhamel formula and the finiteness of the parent-type count. This gives the strict time ordering $\tau_p<\tau_c$, and the resulting Critical Activation DAG cannot contain cycles, filling the gap left by C3-F. It further proves the First Frontier Crossing Lemma (Theorem 15.1): high-frequency activity cannot "teleport" to an arbitrarily high frontier; it must first pass through a shell boundary of bounded width — combining this with the unboundedness of the dissipation wavenumber (from $\Lambda\notin L^{5/2}$ under blow-up), a Kőnig-type argument extracts a Conditional Ancestry Ray (Theorem 18.1): a causal path exists that is arbitrarily long, strictly time-ordered, and unbounded in frequency. But this round also tests another intuition — that "once a parent has passed energy to a child, it should permanently lose the corresponding resource" — and proves this cannot be derived from the conservation laws: energy and helicity conservation only constrain the transfer vector to a fixed one-dimensional signed direction $\dot{\mathbf e}=\Theta_\tau(t)\mathbf v_\tau$, with no constraint whatsoever on the sign of $\Theta_\tau(t)$. Proposition 26.1 gives an explicit counterexample: taking $\Theta(t)=\sin t$, this abstract transfer ledger satisfies triadwise energy and helicity conservation exactly at every instant, yet the energy repeatedly swaps back and forth — the conservation algebra alone is not enough to prove monotone depletion. Only viscosity provides a genuinely irrecoverable loss, but C2 already showed its cost shrinks to $O(\lambda^{-1})$, which remains summable along a geometric scale sequence. The research frontier shifts to C3-H: applying a critical rescaling to the causal genealogy already obtained, to see whether it forces out a renormalized limit object that collides head-on with existing backward-uniqueness/rigidity theorems.</p>
+    <div class="claim-box">
+      Proves the Critical First-Crossing Parent Lemma (conditional) — a child's first crossing of the threshold must be preceded by a local parent's earlier crossing, establishing a cycle-free causal DAG; combined with the unboundedness of the dissipation wavenumber, this yields a conditional infinite causal ray. But it also proves the Monotone Depletion NO-GO: the conservation laws only constrain the transfer to a one-dimensional signed direction without fixing its sign, so a parent's resource can be reused repeatedly and cannot be closed off by simple counting.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../08-c3f-phase-space-ancestry-cone/">08 / C3-F · Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../10-c3h-ancestry-renormalization/">10 / C3-H · Ancestry Renormalization, the Unit-Shell Anchor, and the Critical Compactness Barrier</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>10 / 67</div>
+    </div>
+    <blockquote class="cite">“causality ≠ monotone depletion.” — quoted from the paper's Section 32.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3G_FirstCrossing_CausalAncestry_DepletionNoGo_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

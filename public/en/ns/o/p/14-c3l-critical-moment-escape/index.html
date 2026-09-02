@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 / C3-L: Critical Vorticity-Moment Escape, the Active-Occupancy Dichotomy, and the Strain-Geometry Debt · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-K compressed the gap down to the One-Frequency-Moment Gap; this round's original question is: does hypothetical blow-up really have to push the next frequency moment to infinity? The answer is unambiguously YES — proved directly via the contrapositive of Cheskidov–Dai's frequency-localized regularity criterion (Critical Vorticity-Moment Divergence, Theorem 4.1): $\nu\int\sum_{q\le Q(t)}\lambda_q^2a_q\,dt=\infty$, which can be read as the divergence of the integral of the shells' absolute vorticity — not a conjecture but the direct consequence of an already-proved theorem. Splitting this condition by threshold $\beta$ into a subthreshold part and an active part, with the subthreshold part controlled by the dissipation wavenumber ($\Lambda\in L^2$), it obtains the Critical-Moment Carrier Dichotomy (Theorem 9.1): either $\Lambda\notin L^2$ (Branch A, borne directly by frontier spikes), or $\Lambda\in L^2$ but the active moment $M_{5/2}(\beta)$ must diverge for every fixed threshold (Branch B) — combined with C3-K's already-proved $M_1(\beta)<\infty$, this yields a very clear signal: a finite first-order occupancy moment together with a divergent order-5/2 moment. The most natural candidate for raising the moment is enstrophy, whose exact identity follows directly from the vorticity equation, but integrating it immediately shows that vortex stretching $\int\omega\cdot S\omega$ must also be controlled — the Moment-Raising Geometry Debt No-Go (Proposition 20.1): raising one differential/frequency moment creates a vortex-stretching geometry debt, which is a direct logical consequence of the exact identity, not a heuristic; a scaling audit confirms the enstrophy identity itself carries no hidden scaling advantage. It then brings in the external middle-strain-eigenvalue regularity criterion (Evan Miller's theorem, together with the 2025 Guo–O endpoint Besov result): hypothetical blow-up must force $\lambda_2^+\notin L_t^2L_x^3$, and even more strongly $\lambda_2^+\notin L_t^2\dot B^{-1}_{\infty,\infty}$ — a parallel pair of necessary conditions (Spectral–Geometric Double Escape, Theorem 26.1). The document explicitly states that it has not yet been proved that spectral-moment escape implies strain-geometry escape, or the reverse implication, and this must not be smuggled in as a causal equivalence. The research frontier shifts to C3-M: can these two channels, both known to have to diverge simultaneously, be forced by genuine N–S geometry into a jointly impossible state?">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/14-c3l-critical-moment-escape/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/14-c3l-critical-moment-escape/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/14-c3l-critical-moment-escape/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/14-c3l-critical-moment-escape/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>14 / C3-L: Critical Vorticity-Moment Escape, the Active-Occupancy Dichotomy, and the Strain-Geometry Debt</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 14 / C3-L</span>
+      <span class="tag">C3-L · The Moment Really Must Escape</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>14 / C3-L: Critical Vorticity-Moment Escape, the Active-Occupancy Dichotomy, and the Strain-Geometry Debt</h1>
+    <p class="h1-sub">C3-K compressed the gap down to the One-Frequency-Moment Gap; this round's original question is: does hypothetical blow-up really have to push the next frequency moment to infinity? The answer is unambiguously YES — proved directly via the contrapositive of Cheskidov–Dai's frequency-localized regularity criterion (Critical Vorticity-Moment Divergence, Theorem 4.1): $\nu\int\sum_{q\le Q(t)}\lambda_q^2a_q\,dt=\infty$, which can be read as the divergence of the integral of the shells' absolute vorticity — not a conjecture but the direct consequence of an already-proved theorem. Splitting this condition by threshold $\beta$ into a subthreshold part and an active part, with the subthreshold part controlled by the dissipation wavenumber ($\Lambda\in L^2$), it obtains the Critical-Moment Carrier Dichotomy (Theorem 9.1): either $\Lambda\notin L^2$ (Branch A, borne directly by frontier spikes), or $\Lambda\in L^2$ but the active moment $M_{5/2}(\beta)$ must diverge for every fixed threshold (Branch B) — combined with C3-K's already-proved $M_1(\beta)<\infty$, this yields a very clear signal: a finite first-order occupancy moment together with a divergent order-5/2 moment. The most natural candidate for raising the moment is enstrophy, whose exact identity follows directly from the vorticity equation, but integrating it immediately shows that vortex stretching $\int\omega\cdot S\omega$ must also be controlled — the Moment-Raising Geometry Debt No-Go (Proposition 20.1): raising one differential/frequency moment creates a vortex-stretching geometry debt, which is a direct logical consequence of the exact identity, not a heuristic; a scaling audit confirms the enstrophy identity itself carries no hidden scaling advantage. It then brings in the external middle-strain-eigenvalue regularity criterion (Evan Miller's theorem, together with the 2025 Guo–O endpoint Besov result): hypothetical blow-up must force $\lambda_2^+\notin L_t^2L_x^3$, and even more strongly $\lambda_2^+\notin L_t^2\dot B^{-1}_{\infty,\infty}$ — a parallel pair of necessary conditions (Spectral–Geometric Double Escape, Theorem 26.1). The document explicitly states that it has not yet been proved that spectral-moment escape implies strain-geometry escape, or the reverse implication, and this must not be smuggled in as a causal equivalence. The research frontier shifts to C3-M: can these two channels, both known to have to diverge simultaneously, be forced by genuine N–S geometry into a jointly impossible state?</p>
+    <div class="claim-box">
+      Confirms via the contrapositive of an external theorem — not a guess — that the next frequency moment must escape. Proves that raising one moment necessarily creates a vortex-stretching geometry debt (an exact consequence, not a heuristic). Connects to an external middle-strain regularity criterion to obtain two parallel necessary conditions (spectral-moment escape and strain-geometry escape), which have not yet been shown to imply one another.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../13-c3k-absolute-occupancy-moment-gap/">13 / C3-K · The Absolute Occupancy Worldvolume, Subthreshold Flux Variation, and the One-Moment Critical Gap</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../15-c3m-vorticity-strain-betchov/">15 / C3-M · Vorticity–Strain Coupling, Betchov Global Collapse, and the Directional-Geometry Debt</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>15 / 67</div>
+    </div>
+    <blockquote class="cite">“raising one differential/frequency moment creates a vortex-stretching geometry debt.” — quoted from the paper's Section 20.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3L_CriticalMomentEscape_StrainGeometryDebt_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

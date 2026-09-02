@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>40 / C5-D: Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-C proved that the scalar $E_0/E_1$ identities alone are not enough to exclude temporal compensation cycles. C5-D formally leaves the purely temporal, purely scalar route, and places the positive middle-strain direction, the local quadratic tensor $Q=S^2+\tfrac14\omega\otimes\omega-\tfrac14|\omega|^2I$, C4-J's seven-point cancellation witnesses, the local adjoint-core pressure mean, the shared far-field harmonic pressure matrix, and C3-S's convex-hull pressure geometry, all into the same finite-dimensional spatial-matrix problem. For a normalized (trace-free, Frobenius norm 1) strain direction $K$ with middle eigenvalue $k_2>0$, it defines the strong-middle shape parameter $\theta_K=k_2k_3=k_1^2-\tfrac12>0$, and the compressive-axis test tensor $H_K=e_1\otimes e_1-\tfrac{1+\theta_K}2I$ ($e_1$ being the eigenvector of the most negative eigenvalue $k_1$). The core result is C5-D.1, the Positive-Middle Cone to Quadratic Half-Space Theorem (Theorem 10.1): if the pointwise normalized strain direction lies within a strong-middle pointwise strain cone $\mathcal C_K$ of radius set by $\theta_K$ around $K$, then for any vorticity $\omega$ whatsoever (no vorticity-alignment assumption, no vorticity upper bound, no helicity-sign assumption needed), $H_K:Q\ge\tfrac{\theta_K}4(|S|^2+|\omega|^2)$ holds — so all normalized quadratic directions $Q/|Q|$ fall entirely into the same strict matrix half-space, with margin $\gamma_K=\theta_K/(4|H_K|)>0$. The round's most important result is C5-D.3, Seven-Point Zero-Barycenter Incompatibility: if the seven witness directions $U_i^\ast$ all lie simultaneously within this half-space, their convex combination cannot possibly equal zero — a direct contradiction. So a strong-middle pointwise cone and seven-point zero-barycenter cancellation cannot coexist within the same recurrent limit; the document explicitly stresses that this is the C5 series' first genuine finite-dimensional algebraic incompatibility: not a divergent norm, not an integral budget, not a temporal arrangement, but a purely finite-dimensional convex-geometric obstruction. A quantitative version (C5-D.4) further proves that even allowing some strain directions to leak outside the cone, as long as the leaking mass is not too large, the coefficient $\kappa_\chi^Q$ still has a positive lower bound; conversely, if the cancellation coefficient stays small, the leaking mass must have a positive lower bound — so for quadratic cancellation to survive, either the middle gap $\theta_K\to0$ must degenerate, or the strain direction must keep leaking out of the strong-middle cone. The document carefully distinguishes C3-S's average strain cone from the pointwise normalized strain cone used here — they are not the same object — and a bridge between them requires the relative perturbation $\eta_R^S$ to stay below a critical threshold (C5-D.5: average coherence plus small perturbation implies that seven-point cancellation is impossible on that core); if the perturbation is too large, combined with a Morrey-type estimate, cancellation instead forces a genuine higher-derivative strain-perturbation debt, connecting directly back to the derivative geometry of C3-V/W/X/Y. On pressure: once a strong-middle core holds, it excludes the cancellation branch, and C4-I's original trichotomy of cancellation, mean rotation, or pressure collapses here to just mean rotation or pressure concentration (C5-D.6/7, Oriented Pressure Re-entry). If multiple cores share the same harmonic far-field pressure matrix $F_\ast$, the test direction simplifies to the compressive-axis projection $G(e)=e\otimes e-\tfrac13I$, and C5-D.8, the Compressive-Axis Convex-Hull Pressure Obstruction (Theorem 40.1, an exact Carathéodory argument), proves that if zero lies within the convex hull of $\{G(e_i)\}$, then no single common $F_\ast$ can compensate all the cores simultaneously — because $\dim\operatorname{Sym}_0(3)=5$, at most six cores are needed to witness this; more simply, three mutually orthogonal compressive axes already directly give a zero barycenter (the Orthogonal-Triplet Pressure Obstruction, C5-D.9). The round concludes with a bidirectional cycle: a strong-middle cone implies a quadratic half-space, which excludes seven-point cancellation, which forces mean rotation or pressure re-entry, which, if a far-field pressure is shared, brings in compressive-axis convex-hull constraints; conversely, quadratic cancellation implies either middle-gap degeneration or directional dispersion. It formally hands off to C5-E, Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure, with 8 proof targets focused on the exact compactification of the strain-direction measure, middle-gap mass, directional-dispersion defect, and the interface with the derivative gate.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5D_SpatialMatrix_StrongMiddleQuadraticPressureObstruction_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/40-c5d-spatial-matrix-quadratic-pressure-obstruction/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>40 / C5-D: Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 40 / C5-D</span>
+      <span class="tag">C5-D · First Finite-Dimensional Incompatibility</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>40 / C5-D: Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions</h1>
+    <p class="h1-sub">C5-C proved that the scalar $E_0/E_1$ identities alone are not enough to exclude temporal compensation cycles. C5-D formally leaves the purely temporal, purely scalar route, and places the positive middle-strain direction, the local quadratic tensor $Q=S^2+\tfrac14\omega\otimes\omega-\tfrac14|\omega|^2I$, C4-J's seven-point cancellation witnesses, the local adjoint-core pressure mean, the shared far-field harmonic pressure matrix, and C3-S's convex-hull pressure geometry, all into the same finite-dimensional spatial-matrix problem. For a normalized (trace-free, Frobenius norm 1) strain direction $K$ with middle eigenvalue $k_2>0$, it defines the strong-middle shape parameter $\theta_K=k_2k_3=k_1^2-\tfrac12>0$, and the compressive-axis test tensor $H_K=e_1\otimes e_1-\tfrac{1+\theta_K}2I$ ($e_1$ being the eigenvector of the most negative eigenvalue $k_1$). The core result is C5-D.1, the Positive-Middle Cone to Quadratic Half-Space Theorem (Theorem 10.1): if the pointwise normalized strain direction lies within a strong-middle pointwise strain cone $\mathcal C_K$ of radius set by $\theta_K$ around $K$, then for any vorticity $\omega$ whatsoever (no vorticity-alignment assumption, no vorticity upper bound, no helicity-sign assumption needed), $H_K:Q\ge\tfrac{\theta_K}4(|S|^2+|\omega|^2)$ holds — so all normalized quadratic directions $Q/|Q|$ fall entirely into the same strict matrix half-space, with margin $\gamma_K=\theta_K/(4|H_K|)>0$. The round's most important result is C5-D.3, Seven-Point Zero-Barycenter Incompatibility: if the seven witness directions $U_i^\ast$ all lie simultaneously within this half-space, their convex combination cannot possibly equal zero — a direct contradiction. So a strong-middle pointwise cone and seven-point zero-barycenter cancellation cannot coexist within the same recurrent limit; the document explicitly stresses that this is the C5 series' first genuine finite-dimensional algebraic incompatibility: not a divergent norm, not an integral budget, not a temporal arrangement, but a purely finite-dimensional convex-geometric obstruction. A quantitative version (C5-D.4) further proves that even allowing some strain directions to leak outside the cone, as long as the leaking mass is not too large, the coefficient $\kappa_\chi^Q$ still has a positive lower bound; conversely, if the cancellation coefficient stays small, the leaking mass must have a positive lower bound — so for quadratic cancellation to survive, either the middle gap $\theta_K\to0$ must degenerate, or the strain direction must keep leaking out of the strong-middle cone. The document carefully distinguishes C3-S's average strain cone from the pointwise normalized strain cone used here — they are not the same object — and a bridge between them requires the relative perturbation $\eta_R^S$ to stay below a critical threshold (C5-D.5: average coherence plus small perturbation implies that seven-point cancellation is impossible on that core); if the perturbation is too large, combined with a Morrey-type estimate, cancellation instead forces a genuine higher-derivative strain-perturbation debt, connecting directly back to the derivative geometry of C3-V/W/X/Y. On pressure: once a strong-middle core holds, it excludes the cancellation branch, and C4-I's original trichotomy of cancellation, mean rotation, or pressure collapses here to just mean rotation or pressure concentration (C5-D.6/7, Oriented Pressure Re-entry). If multiple cores share the same harmonic far-field pressure matrix $F_\ast$, the test direction simplifies to the compressive-axis projection $G(e)=e\otimes e-\tfrac13I$, and C5-D.8, the Compressive-Axis Convex-Hull Pressure Obstruction (Theorem 40.1, an exact Carathéodory argument), proves that if zero lies within the convex hull of $\{G(e_i)\}$, then no single common $F_\ast$ can compensate all the cores simultaneously — because $\dim\operatorname{Sym}_0(3)=5$, at most six cores are needed to witness this; more simply, three mutually orthogonal compressive axes already directly give a zero barycenter (the Orthogonal-Triplet Pressure Obstruction, C5-D.9). The round concludes with a bidirectional cycle: a strong-middle cone implies a quadratic half-space, which excludes seven-point cancellation, which forces mean rotation or pressure re-entry, which, if a far-field pressure is shared, brings in compressive-axis convex-hull constraints; conversely, quadratic cancellation implies either middle-gap degeneration or directional dispersion. It formally hands off to C5-E, Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure, with 8 proof targets focused on the exact compactification of the strain-direction measure, middle-gap mass, directional-dispersion defect, and the interface with the derivative gate.</p>
+    <div class="claim-box">
+      Core theorem: if the pointwise strain direction lies within a strong-middle cone, then for any vorticity (no alignment assumption needed) all local quadratic-tensor directions fall into the same strict matrix half-space. Hence seven-point zero-barycenter cancellation and a strong-middle pointwise cone cannot coexist — C5's first genuine finite-dimensional algebraic incompatibility, a purely convex-geometric obstruction. Conversely: quadratic cancellation forces either middle-gap degeneration or directional leakage out of the cone, and leakage in turn forces a derivative-perturbation debt. On pressure: a strong-middle core forces mean rotation or pressure re-entry; multiple cores sharing a far-field pressure further collide with a compressive-axis convex-hull obstruction — three orthogonal compressive axes alone already constitute an obstruction.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../39-c5c-temporal-correlation-cross-curvature-ordering/">39 / C5-C · Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../41-c5e-strain-direction-middle-gap-derivative-intermittency/">41 / C5-E · Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>41 / 67</div>
+    </div>
+    <blockquote class="cite">"Strong-Middle Pointwise Cone and Seven-Point Zero-Barycenter Cancellation cannot coexist in the same recurrent limit — this is C5's first genuine finite-dimensional recurrent-limit incompatibility." — excerpted from §16 and §59 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5D_SpatialMatrix_StrongMiddleQuadraticPressureObstruction_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5D_SpatialMatrix_StrongMiddleQuadraticPressureObstruction_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

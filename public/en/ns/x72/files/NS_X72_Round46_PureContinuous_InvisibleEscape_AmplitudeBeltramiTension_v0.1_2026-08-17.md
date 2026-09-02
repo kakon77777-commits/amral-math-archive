@@ -1,0 +1,2450 @@
+# NS × X Integral × 24/72 Paradigm In Practice
+## Round 46 — Pure Continuous Invisible-Escape Scalarization / Amplitude–Beltrami-Tension Cancellation Route
+
+- Date: 2026-08-17
+- Version: v0.1
+- Status: Proof-Route Experiment / Continuous-Only Invisible-Boundary Scalarization Branch
+- canonical source: UTF-8 Markdown
+- canonical math delimiters: inline `$...$`; display `$$...$$`
+- Previous round: `NS_X72_Round45_PureContinuous_VisibilityReplicator_QuarticAlignmentDynamics_v0.1_2026-08-17.md`
+- Objective of this round: Round 45 has compressed the bounded-Piola-defect quartic escape to
+  $$
+  \eta_\omega\to0,
+  $$
+  and written the pure-invisible boundary injection as the projected tensor source
+  $$
+  F_L
+  =
+  \mathbb P_L
+  (
+  B_\omega^0-2\nu G_\omega^0
+  )
+  +
+  [D_u,\mathbb P_L]W_T.
+  $$
+  This round further utilizes
+  $$
+  \nabla\cdot\omega=0
+  $$
+  to scalarize the entire visible stress: precisely writing the visibility as the sum of local vorticity-amplitude modulation and nonlocal vorticity-Beltrami tension potential, and obtaining the scalar second-order law of the pure-boundary injection.
+- Non-claims: This document does not prove that asymptotic invisibility is impossible. What this document proves is: invisible escape is equivalent to a scale-critical $L^2$ cancellation condition; if it is close to Beltrami geometry, then invisible escape additionally requires the vorticity amplitude to be nearly spatially uniform. If the amplitude remains highly intermittent, an equal, anti-phase, and persistent cancellation must be provided by the non-Beltrami tension.
+
+---
+
+# 0. Round 45 handoff
+
+trace-free vorticity stress:
+
+$$
+\boxed{
+W
+=
+\omega\otimes\omega
+-
+\frac13|\omega|^2I.
+}
+\tag{0.1}
+$$
+
+Riesz visible/invisible split:
+
+$$
+\boxed{
+W=W_L+W_T.
+}
+\tag{0.2}
+$$
+
+visibility ratio:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac{
+\|W_L\|_2^2
+}{
+\|W\|_2^2
+}
+=
+\frac{
+36
+\|\mathfrak V_\omega\|_2^2
+}{
+\|\omega\|_4^4
+}.
+}
+\tag{0.3}
+$$
+
+Round 45 exact boundary injection:
+
+if:
+
+$$
+\eta_\omega(t_0)=0,
+$$
+
+then:
+
+$$
+\boxed{
+\eta_\omega'(t_0)=0,
+}
+\tag{0.4}
+$$
+
+and:
+
+$$
+\boxed{
+\eta_\omega''(t_0)
+=
+\frac{
+2\|F_L(t_0)\|_2^2
+}{
+\|W(t_0)\|_2^2
+}.
+}
+\tag{0.5}
+$$
+
+Round 45 STOP:
+
+$$
+\boxed{
+\text{STOP-C49}
+=
+\text{Visibility Replicator / Boundary-Injection Compatibility Gap}.
+}
+$$
+
+---
+
+# 1. Mean-zero vorticity-amplitude carrier
+
+In the following, we first work in the periodic:
+
+$$
+\mathbb T^3
+$$
+
+branch,
+
+taking the zero Fourier mode of the homogeneous inverse Laplacian to be zero.
+
+Definition:
+
+$$
+\boxed{
+\langle f\rangle
+=
+\frac1{
+|\mathbb T^3|
+}
+\int_{\mathbb T^3}
+f\,dx.
+}
+\tag{1.1}
+$$
+
+vorticity-amplitude modulation:
+
+$$
+\boxed{
+A_\omega
+=
+|\omega|^2
+-
+\langle|\omega|^2\rangle.
+}
+\tag{1.2}
+$$
+
+Therefore:
+
+$$
+\boxed{
+\langle A_\omega\rangle=0.
+}
+\tag{1.3}
+$$
+
+---
+
+# 2. Vorticity Beltrami-tension potential
+
+Since:
+
+$$
+\nabla\cdot\omega=0,
+$$
+
+vector identity:
+
+$$
+\boxed{
+(\omega\cdot\nabla)\omega
+=
+\frac12
+\nabla|\omega|^2
+-
+\omega\times
+\operatorname{curl}\omega.
+}
+\tag{2.1}
+$$
+
+Define the vorticity Beltrami tension:
+
+$$
+\boxed{
+\tau_\omega
+=
+\omega\times
+\operatorname{curl}\omega.
+}
+\tag{2.2}
+$$
+
+If:
+
+$$
+\operatorname{curl}\omega
+=
+\kappa\omega,
+$$
+
+then:
+
+$$
+\boxed{
+\tau_\omega=0.
+}
+\tag{2.3}
+$$
+
+Define the order-minus-one tension potential:
+
+$$
+\boxed{
+\mathscr B_\omega
+=
+(-\Delta)^{-1}
+\operatorname{div}
+\tau_\omega.
+}
+\tag{2.4}
+$$
+
+Its mean is zero.
+
+---
+
+# 3. Exact double-divergence identity for vorticity stress
+
+From:
+
+$$
+W
+=
+\omega\otimes\omega
+-
+\frac13|\omega|^2I,
+$$
+
+we have:
+
+$$
+\begin{aligned}
+\operatorname{div}\operatorname{div}
+(
+\omega\otimes\omega
+)
+&=
+\operatorname{div}
+[
+(\omega\cdot\nabla)\omega
+]
+\\
+&=
+\frac12
+\Delta|\omega|^2
+-
+\operatorname{div}\tau_\omega.
+\end{aligned}
+$$
+
+Therefore:
+
+$$
+\boxed{
+\operatorname{div}\operatorname{div}W
+=
+\frac16
+\Delta|\omega|^2
+-
+\operatorname{div}\tau_\omega.
+}
+\tag{3.1}
+$$
+
+This is the first core exact identity of this round.
+
+---
+
+# 4. Scalarization of the Riesz-visible stress
+
+Round 42 trace-free scalar projection:
+
+$$
+\boxed{
+\mathcal T_0^\ast W
+=
+\partial_i\partial_j
+(-\Delta)^{-1}
+W_{ij}.
+}
+\tag{4.1}
+$$
+
+apply:
+
+$$
+(-\Delta)^{-1}
+$$
+
+to (3.1).
+
+Since the homogeneous inverse Laplacian removes the mean:
+
+$$
+(-\Delta)^{-1}
+\Delta|\omega|^2
+=
+-
+A_\omega.
+$$
+
+Thus:
+
+$$
+\boxed{
+\mathcal T_0^\ast W
+=
+-\frac16
+A_\omega
+-
+\mathscr B_\omega.
+}
+\tag{4.2}
+$$
+
+Define:
+
+$$
+\boxed{
+\Theta_\omega
+=
+A_\omega
++
+6
+\mathscr B_\omega.
+}
+\tag{4.3}
+$$
+
+then:
+
+$$
+\boxed{
+\mathcal T_0^\ast W
+=
+-\frac16
+\Theta_\omega.
+}
+\tag{4.4}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{Vorticity Amplitude–Beltrami Visibility Identity}.
+}
+$$
+
+---
+
+# 5. Visible stress is generated by one scalar carrier
+
+Round 42 longitudinal projection:
+
+$$
+\boxed{
+\mathbb P_L
+=
+\frac32
+\mathcal T_0
+\mathcal T_0^\ast.
+}
+\tag{5.1}
+$$
+
+Therefore:
+
+$$
+\boxed{
+W_L
+=
+-\frac14
+\mathcal T_0
+\Theta_\omega.
+}
+\tag{5.2}
+$$
+
+And:
+
+$$
+\boxed{
+\mathcal T_0^\ast
+\mathcal T_0
+=
+\frac23I.
+}
+\tag{5.3}
+$$
+
+Thus:
+
+$$
+\boxed{
+\|W_L\|_2^2
+=
+\frac1{24}
+\|\Theta_\omega\|_2^2.
+}
+\tag{5.4}
+$$
+
+Therefore, a five-component trace-free visible tensor energy
+
+is precisely scalarized into:
+
+$$
+\boxed{
+\Theta_\omega.
+}
+$$
+
+---
+
+# 6. Exact scalar visibility formula
+
+Round 42:
+
+$$
+\boxed{
+\|W\|_2^2
+=
+\frac23
+\|\omega\|_4^4.
+}
+\tag{6.1}
+$$
+
+Thus:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac1{16}
+\frac{
+\|\Theta_\omega\|_2^2
+}{
+\|\omega\|_4^4
+}.
+}
+\tag{6.2}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{Scalar Visibility Formula}.
+}
+$$
+
+We immediately obtain:
+
+$$
+\boxed{
+\eta_\omega=0
+\iff
+\Theta_\omega=0.
+}
+\tag{6.3}
+$$
+
+That is, pure invisibility is precisely equivalent to:
+
+$$
+\boxed{
+A_\omega
+=
+-6
+\mathscr B_\omega.
+}
+\tag{6.4}
+$$
+
+---
+
+# 7. Invisibility is an amplitude–tension cancellation manifold
+
+Define:
+
+$$
+\boxed{
+T_\omega
+=
+6
+\mathscr B_\omega.
+}
+\tag{7.1}
+$$
+
+Therefore:
+
+$$
+\Theta_\omega
+=
+A_\omega+T_\omega.
+$$
+
+Let:
+
+$$
+\boxed{
+a_\omega
+=
+\|A_\omega\|_2,
+}
+\tag{7.2}
+$$
+
+$$
+\boxed{
+b_\omega
+=
+\|T_\omega\|_2.
+}
+\tag{7.3}
+$$
+
+If:
+
+$$
+a_\omega b_\omega>0,
+$$
+
+Define the amplitude–tension anti-coherence:
+
+$$
+\boxed{
+\rho_{BT}
+=
+-
+\frac{
+\langle
+A_\omega,
+T_\omega
+\rangle
+}{
+a_\omega b_\omega
+}
+\in[-1,1].
+}
+\tag{7.4}
+$$
+
+then:
+
+$$
+\boxed{
+\|\Theta_\omega\|_2^2
+=
+(
+a_\omega-b_\omega
+)^2
++
+2
+a_\omega b_\omega
+(
+1-\rho_{BT}
+).
+}
+\tag{7.5}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{Visibility Cancellation Defect Identity}.
+}
+$$
+
+---
+
+# 8. Exact visibility coherence formula
+
+combine (6.2) and (7.5):
+
+$$
+\boxed{
+16\eta_\omega
+=
+\frac{
+(
+a_\omega-b_\omega
+)^2
+}{
+\|\omega\|_4^4
+}
++
+\frac{
+2a_\omega b_\omega
+(
+1-\rho_{BT}
+)
+}{
+\|\omega\|_4^4
+}.
+}
+\tag{8.1}
+$$
+
+Therefore:
+
+$$
+\boxed{
+\eta_\omega\to0
+}
+$$
+
+requires:
+
+$$
+\boxed{
+\frac{
+|a_\omega-b_\omega|
+}{
+\|\omega\|_4^2
+}
+\to0,
+}
+\tag{8.2}
+$$
+
+and:
+
+$$
+\boxed{
+\frac{
+a_\omega b_\omega
+(
+1-\rho_{BT}
+)
+}{
+\|\omega\|_4^4
+}
+\to0.
+}
+\tag{8.3}
+$$
+
+If:
+
+$$
+a_\omega b_\omega
+$$
+
+itself is not lower-order,
+
+then necessarily:
+
+$$
+\boxed{
+\rho_{BT}\to1.
+}
+\tag{8.4}
+$$
+
+Therefore, asymptotic invisibility requires:
+
+$$
+\boxed{
+\text{amplitude matching}
++
+\text{anti-phase coherence},
+}
+$$
+
+unless both carriers themselves are small.
+
+---
+
+# 9. Beltrami defect of vorticity
+
+For any constant:
+
+$$
+\kappa\in\mathbb R,
+$$
+
+Define:
+
+$$
+\boxed{
+b_{\omega,\kappa}
+=
+\operatorname{curl}\omega
+-
+\kappa\omega.
+}
+\tag{9.1}
+$$
+
+Since:
+
+$$
+\omega\times
+(\kappa\omega)
+=
+0,
+$$
+
+we have the exact:
+
+$$
+\boxed{
+\tau_\omega
+=
+\omega\times
+b_{\omega,\kappa}
+}
+\tag{9.2}
+$$
+
+for every:
+
+$$
+\kappa.
+$$
+
+Therefore, the nonlocal tension only depends on the deviation from a curl-eigenfield direction.
+
+---
+
+# 10. Optimal global Beltrami defect
+
+If:
+
+$$
+\omega\ne0
+$$
+
+in:
+
+$$
+L^2,
+$$
+
+Define:
+
+$$
+\boxed{
+\beta_\omega
+=
+\inf_{\kappa\in\mathbb R}
+\|
+\operatorname{curl}\omega-\kappa\omega
+\|_2.
+}
+\tag{10.1}
+$$
+
+minimizer:
+
+$$
+\boxed{
+\kappa_\ast
+=
+\frac{
+\langle
+\omega,
+\operatorname{curl}\omega
+\rangle
+}{
+\|\omega\|_2^2
+}.
+}
+\tag{10.2}
+$$
+
+and:
+
+$$
+\boxed{
+\beta_\omega^2
+=
+\|
+\operatorname{curl}\omega
+\|_2^2
+-
+\frac{
+\langle
+\omega,
+\operatorname{curl}\omega
+\rangle^2
+}{
+\|\omega\|_2^2
+}.
+}
+\tag{10.3}
+$$
+
+Therefore,
+
+$$
+\beta_\omega
+$$
+
+is the global $L^2$ distance from the vorticity curl-eigenstate manifold.
+
+---
+
+# 11. Tension potential bound
+
+The operator:
+
+$$
+(-\Delta)^{-1}
+\operatorname{div}
+$$
+
+is of order:
+
+$$
+-1.
+$$
+
+3D Sobolev/HLS gives:
+
+$$
+\boxed{
+\|
+\mathscr B_\omega
+\|_2
+\lesssim
+\|
+\tau_\omega
+\|_{6/5}.
+}
+\tag{11.1}
+$$
+
+Using:
+
+$$
+\tau_\omega
+=
+\omega\times
+b_{\omega,\kappa},
+$$
+
+and Hölder:
+
+$$
+\boxed{
+\|
+\mathscr B_\omega
+\|_2
+\lesssim
+\|\omega\|_3
+\|
+b_{\omega,\kappa}
+\|_2.
+}
+\tag{11.2}
+$$
+
+optimize:
+
+$$
+\boxed{
+b_\omega
+=
+6
+\|\mathscr B_\omega\|_2
+\lesssim
+\|\omega\|_3
+\beta_\omega.
+}
+\tag{11.3}
+$$
+
+constant absorbed.
+
+Therefore, near-Beltrami vorticity suppresses the tension carrier.
+
+---
+
+# 12. Near-Beltrami visibility lower envelope
+
+triangle inequality:
+
+$$
+\boxed{
+\|\Theta_\omega\|_2
+\ge
+a_\omega-b_\omega.
+}
+\tag{12.1}
+$$
+
+Thus:
+
+$$
+\boxed{
+4
+\sqrt{\eta_\omega}
+\ge
+\frac{
+a_\omega
+-
+C
+\|\omega\|_3
+\beta_\omega
+}{
+\|\omega\|_4^2
+}
+}
+\tag{12.2}
+$$
+
+whenever the numerator is positive.
+
+Therefore, if:
+
+$$
+\boxed{
+\frac{
+\|\omega\|_3
+\beta_\omega
+}{
+\|\omega\|_4^2
+}
+\to0
+}
+\tag{12.3}
+$$
+
+and:
+
+$$
+\eta_\omega\to0,
+$$
+
+then necessarily:
+
+$$
+\boxed{
+\frac{
+\|A_\omega\|_2
+}{
+\|\omega\|_4^2
+}
+\to0.
+}
+\tag{12.4}
+$$
+
+That is:
+
+$$
+\boxed{
+\textbf{
+an asymptotically Beltrami invisible escape must also become
+asymptotically uniform in vorticity amplitude.
+}
+}
+\tag{12.5}
+$$
+
+---
+
+# 13. Exact Beltrami Visibility Theorem
+
+Assume:
+
+$$
+\boxed{
+\operatorname{curl}\omega
+=
+\kappa\omega.
+}
+\tag{13.1}
+$$
+
+then:
+
+$$
+\tau_\omega=0,
+$$
+
+$$
+T_\omega=0,
+$$
+
+Therefore:
+
+$$
+\boxed{
+\Theta_\omega
+=
+A_\omega.
+}
+\tag{13.2}
+$$
+
+Hence:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac1{16}
+\frac{
+\|
+|\omega|^2
+-
+\langle|\omega|^2\rangle
+\|_2^2
+}{
+\|\omega\|_4^4
+}.
+}
+\tag{13.3}
+$$
+
+Thus:
+
+$$
+\boxed{
+0
+\le
+\eta_\omega
+\le
+\frac1{16}.
+}
+\tag{13.4}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{Beltrami Visibility Cap Theorem}.
+}
+$$
+
+---
+
+# 14. Beltrami visibility equals amplitude intermittency
+
+Define the finite-volume quartic intermittency:
+
+$$
+\boxed{
+\mathfrak J_{\omega,4}
+=
+\frac{
+|\mathbb T^3|
+\|\omega\|_4^4
+}{
+\|\omega\|_2^4
+}
+\ge1.
+}
+\tag{14.1}
+$$
+
+Since:
+
+$$
+\boxed{
+\|A_\omega\|_2^2
+=
+\|\omega\|_4^4
+-
+\frac{
+\|\omega\|_2^4
+}{
+|\mathbb T^3|
+},
+}
+\tag{14.2}
+$$
+
+On the exact Beltrami branch:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac1{16}
+\left(
+1
+-
+\frac1{
+\mathfrak J_{\omega,4}
+}
+\right).
+}
+\tag{14.3}
+$$
+
+Therefore:
+
+- constant vorticity magnitude:
+  $$
+  \mathfrak J_{\omega,4}=1
+  \Rightarrow
+  \eta_\omega=0;
+  $$
+- strong amplitude intermittency:
+  $$
+  \mathfrak J_{\omega,4}\gg1
+  \Rightarrow
+  \eta_\omega\approx\frac1{16}.
+  $$
+
+Thus:
+
+$$
+\boxed{
+\textbf{
+Beltrami alignment alone does not imply pure invisibility;
+pure invisibility additionally requires amplitude uniformity.
+}
+}
+\tag{14.4}
+$$
+
+---
+
+# 15. Exact velocity-Beltrami NS branch
+
+If the initial periodic velocity satisfies:
+
+$$
+\boxed{
+\operatorname{curl}u_0
+=
+\kappa u_0,
+}
+\tag{15.1}
+$$
+
+with:
+
+$$
+\nabla\cdot u_0=0,
+$$
+
+then:
+
+$$
+\boxed{
+-\Delta u_0
+=
+\kappa^2u_0.
+}
+\tag{15.2}
+$$
+
+and:
+
+$$
+u_0\times\omega_0=0.
+$$
+
+Thus the nonlinear term is a gradient:
+
+$$
+\boxed{
+(u_0\cdot\nabla)u_0
+=
+\nabla
+\frac{
+|u_0|^2
+}{2}.
+}
+\tag{15.3}
+$$
+
+Therefore, the exact NS solution is:
+
+$$
+\boxed{
+u(t)
+=
+e^{-\nu\kappa^2t}
+u_0,
+}
+\tag{15.4}
+$$
+
+with the corresponding pressure absorbing the gradient nonlinearity.
+
+Thus:
+
+$$
+\boxed{
+\eta_\omega(t)
+=
+\eta_\omega(0).
+}
+\tag{15.5}
+$$
+
+all along the exact Beltrami branch.
+
+---
+
+# 16. Constant-amplitude Beltrami is pure invisible
+
+If additionally:
+
+$$
+\boxed{
+|u_0(x)|
+=
+\text{constant},
+}
+\tag{16.1}
+$$
+
+then:
+
+$$
+|\omega_0|
+=
+|\kappa|
+|u_0|
+$$
+
+is constant,
+
+so:
+
+$$
+A_\omega=0,
+$$
+
+and:
+
+$$
+\boxed{
+\eta_\omega(t)\equiv0.
+}
+\tag{16.2}
+$$
+
+The Round 45 circular wave:
+
+$$
+u
+=
+Ae^{-\nu t}
+(
+\cos x_3,
+-\sin x_3,0
+)
+$$
+
+is the simplest explicit member.
+
+---
+
+# 17. Beltrami defect invariance mechanism
+
+Define the velocity Beltrami defect:
+
+$$
+\boxed{
+b_{u,\kappa}
+=
+\omega
+-
+\kappa u.
+}
+\tag{17.1}
+$$
+
+Leray form of NS:
+
+$$
+\boxed{
+(\partial_t-\nu\Delta)u
+=
+\mathbb P
+(
+u\times\omega
+).
+}
+\tag{17.2}
+$$
+
+But:
+
+$$
+u\times\omega
+=
+u\times b_{u,\kappa}.
+$$
+
+apply:
+
+$$
+\operatorname{curl}-\kappa
+$$
+
+to (17.2):
+
+$$
+\boxed{
+(\partial_t-\nu\Delta)
+b_{u,\kappa}
+=
+(
+\operatorname{curl}-\kappa
+)
+\mathbb P
+(
+u\times b_{u,\kappa}
+).
+}
+\tag{17.3}
+$$
+
+Therefore:
+
+$$
+\boxed{
+b_{u,\kappa}=0
+}
+$$
+
+is an exact invariant manifold.
+
+This gives the dynamic reason Beltrami branches can suppress nonlinear interaction.
+
+---
+
+# 18. Pure-invisible boundary scalarization
+
+From (5.2):
+
+$$
+\boxed{
+W_L
+=
+-\frac14
+\mathcal T_0
+\Theta_\omega
+}
+$$
+
+for all times.
+
+Suppose:
+
+$$
+\eta_\omega(t_0)=0.
+$$
+
+Then:
+
+$$
+\boxed{
+\Theta_\omega(t_0)=0.
+}
+\tag{18.1}
+$$
+
+At that instant:
+
+$$
+W_L(t_0)\equiv0
+$$
+
+as a spatial field,
+
+so the Round 45 projected PDE gives:
+
+$$
+\boxed{
+F_L(t_0)
+=
+\partial_tW_L(t_0).
+}
+\tag{18.2}
+$$
+
+Differentiate (5.2):
+
+$$
+\boxed{
+F_L(t_0)
+=
+-\frac14
+\mathcal T_0
+\partial_t
+\Theta_\omega(t_0).
+}
+\tag{18.3}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{Scalar Boundary-Injection Identity}.
+}
+$$
+
+---
+
+# 19. Exact boundary-injection norm
+
+Using:
+
+$$
+\mathcal T_0^\ast
+\mathcal T_0
+=
+\frac23I,
+$$
+
+from (18.3):
+
+$$
+\boxed{
+\|F_L(t_0)\|_2^2
+=
+\frac1{24}
+\|
+\partial_t
+\Theta_\omega(t_0)
+\|_2^2.
+}
+\tag{19.1}
+$$
+
+Round 45:
+
+$$
+\eta_\omega''(t_0)
+=
+\frac{
+2\|F_L(t_0)\|_2^2
+}{
+\|W(t_0)\|_2^2
+}.
+$$
+
+with:
+
+$$
+\|W\|_2^2
+=
+\frac23
+\|\omega\|_4^4.
+$$
+
+Therefore:
+
+$$
+\boxed{
+\eta_\omega''(t_0)
+=
+\frac18
+\frac{
+\|
+\partial_t
+\Theta_\omega(t_0)
+\|_2^2
+}{
+\|\omega(t_0)\|_4^4
+}.
+}
+\tag{19.2}
+$$
+
+This is the strongest boundary law of Round 46.
+
+---
+
+# 20. Quadratic escape from the invisible boundary
+
+If:
+
+$$
+\Theta_\omega(t_0)=0
+$$
+
+but:
+
+$$
+\partial_t\Theta_\omega(t_0)\ne0,
+$$
+
+then:
+
+$$
+\boxed{
+\eta_\omega(t_0+h)
+=
+\frac1{16}
+\frac{
+\|
+\partial_t
+\Theta_\omega(t_0)
+\|_2^2
+}{
+\|\omega(t_0)\|_4^4
+}
+h^2
++
+o(h^2).
+}
+\tag{20.1}
+$$
+
+Therefore, exact invisibility is generally ejected by:
+
+$$
+\boxed{
+\text{time failure of amplitude–tension cancellation}
+}
+$$
+
+at second order back into the visible interior.
+
+---
+
+# 21. Pure-invisible invariance criterion in scalar form
+
+An interval:
+
+$$
+I
+$$
+
+is exactly pure-invisible iff:
+
+$$
+\boxed{
+\Theta_\omega(t)
+=
+0
+\qquad
+\forall t\in I.
+}
+\tag{21.1}
+$$
+
+equivalently:
+
+$$
+\boxed{
+A_\omega(t)
+=
+-
+6
+\mathscr B_\omega(t)
+\qquad
+\forall t\in I.
+}
+\tag{21.2}
+$$
+
+Thus the Round 45 tensor compatibility:
+
+$$
+F_L=0
+$$
+
+is equivalent to the persistence of a scalar local/nonlocal cancellation manifold.
+
+Constant-amplitude Beltrami achieves the strongest branch:
+
+$$
+\boxed{
+A_\omega=0,
+\qquad
+\mathscr B_\omega=0.
+}
+\tag{21.3}
+$$
+
+But pure invisibility in general may also use a nontrivial:
+
+$$
+A_\omega
+=
+-6\mathscr B_\omega.
+$$
+
+---
+
+# 22. Scalar visibility replicator
+
+Let:
+
+$$
+\boxed{
+D_\Theta
+=
+\|\Theta_\omega\|_2^2,
+}
+\tag{22.1}
+$$
+
+$$
+\boxed{
+Z_4
+=
+\|\omega\|_4^4.
+}
+\tag{22.2}
+$$
+
+Then:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac{
+D_\Theta
+}{
+16Z_4
+}.
+}
+\tag{22.3}
+$$
+
+For:
+
+$$
+D_\Theta>0,
+$$
+
+$$
+\boxed{
+\eta_\omega'
+=
+\frac{
+\langle
+\Theta_\omega,
+\partial_t\Theta_\omega
+\rangle
+}{
+8Z_4
+}
+-
+\eta_\omega
+\frac{
+Z_4'
+}{
+Z_4
+}.
+}
+\tag{22.4}
+$$
+
+This is exactly equivalent to the Round 45 tensor replicator,
+
+but now visibility selection is expressed through one scalar cancellation defect.
+
+---
+
+# 23. Exact asymptotically invisible escape condition
+
+From (6.2):
+
+$$
+\boxed{
+\eta_\omega(t)\to0
+}
+$$
+
+iff:
+
+$$
+\boxed{
+\frac{
+\|\Theta_\omega(t)\|_2
+}{
+\|\omega(t)\|_4^2
+}
+\to0.
+}
+\tag{23.1}
+$$
+
+So the Round 45 bounded-Piola-defect quartic escape:
+
+$$
+\|\omega\|_4^4\to\infty,
+\qquad
+\eta_\omega\to0
+$$
+
+becomes:
+
+$$
+\boxed{
+\|
+A_\omega
++
+6\mathscr B_\omega
+\|_2
+=
+o(
+\|\omega\|_4^2
+).
+}
+\tag{23.2}
+$$
+
+This is the exact invisible-escape fine-tuning law.
+
+---
+
+# 24. Invisible-Escape Cancellation Dichotomy
+
+Normalize:
+
+$$
+\boxed{
+\alpha_\omega
+=
+\frac{
+a_\omega
+}{
+\|\omega\|_4^2
+},
+}
+\tag{24.1}
+$$
+
+$$
+\boxed{
+\beta_{T}
+=
+\frac{
+b_\omega
+}{
+\|\omega\|_4^2
+}.
+}
+\tag{24.2}
+$$
+
+Then:
+
+$$
+\boxed{
+16\eta_\omega
+=
+(
+\alpha_\omega-\beta_T
+)^2
++
+2
+\alpha_\omega\beta_T
+(
+1-\rho_{BT}
+).
+}
+\tag{24.3}
+$$
+
+Therefore:
+
+$$
+\eta_\omega\to0
+$$
+
+forces either:
+
+## IE-A — weak-carrier branch
+
+$$
+\boxed{
+\alpha_\omega+\beta_T\to0,
+}
+\tag{24.4}
+$$
+
+or more generally both normalized carriers vanish.
+
+## IE-B — coherent cancellation branch
+
+If carriers remain non-negligible:
+
+$$
+\boxed{
+\alpha_\omega-\beta_T\to0,
+}
+\tag{24.5}
+$$
+
+and:
+
+$$
+\boxed{
+\rho_{BT}\to1.
+}
+\tag{24.6}
+$$
+
+Thus a dangerous invisible escape must either suppress both carriers,
+
+or phase-lock the local amplitude modulation against the nonlocal Beltrami tension.
+
+---
+
+# 25. Near-Beltrami invisible escape forces amplitude uniformization
+
+Assume:
+
+$$
+\boxed{
+\frac{
+\|\omega\|_3
+\beta_\omega
+}{
+\|\omega\|_4^2
+}
+\to0.
+}
+\tag{25.1}
+$$
+
+Then by (11.3):
+
+$$
+\beta_T\to0.
+$$
+
+If simultaneously:
+
+$$
+\eta_\omega\to0,
+$$
+
+then (24.3) forces:
+
+$$
+\boxed{
+\alpha_\omega\to0.
+}
+\tag{25.2}
+$$
+
+On the torus this is:
+
+$$
+\boxed{
+\mathfrak J_{\omega,4}\to1.
+}
+\tag{25.3}
+$$
+
+So:
+
+$$
+\boxed{
+\textbf{
+an asymptotically Beltrami invisible escape cannot remain strongly amplitude-intermittent.
+}
+}
+\tag{25.4}
+$$
+
+If it remains intermittent,
+
+the non-Beltrami tension carrier must stay comparable and anti-phase locked.
+
+---
+
+# 26. Strongly intermittent exact Beltrami cannot be asymptotically pure invisible
+
+Exact Beltrami:
+
+$$
+\beta_\omega=0
+$$
+
+and:
+
+$$
+\eta_\omega
+=
+\frac1{16}
+\left(
+1-\frac1{\mathfrak J_{\omega,4}}
+\right).
+$$
+
+Thus if along a family:
+
+$$
+\mathfrak J_{\omega,4}\to\infty,
+$$
+
+then:
+
+$$
+\boxed{
+\eta_\omega\to\frac1{16},
+}
+\tag{26.1}
+$$
+
+not:
+
+$$
+0.
+$$
+
+Therefore:
+
+$$
+\boxed{
+\textbf{
+strong Beltrami alignment plus strong amplitude intermittency
+does not realize the asymptotically invisible escape branch.
+}
+}
+\tag{26.2}
+$$
+
+This is a useful exclusion inside the Beltrami subroute.
+
+---
+
+# 27. What Round 46 changes about the escape route
+
+Round 45:
+
+$$
+\boxed{
+\eta_\omega\to0
+}
+$$
+
+looked like a Riesz projection statement.
+
+Round 46 turns it into:
+
+$$
+\boxed{
+\text{local amplitude modulation}
++
+\text{nonlocal Beltrami tension potential}
+\to
+\text{critical cancellation}.
+}
+$$
+
+So the remaining invisible branch has two physically different mechanisms:
+
+1. **Beltrami-uniformization**
+   $$
+   \tau_\omega\approx0,
+   \quad
+   A_\omega\approx0;
+   $$
+
+2. **amplitude–tension cancellation**
+   $$
+   A_\omega
+   \approx
+   -6\mathscr B_\omega
+   $$
+   with persistent coherence.
+
+The first is close to known smooth Beltrami geometry.
+
+The second is the genuinely dangerous unresolved branch.
+
+---
+
+# 28. STOP-C50 — Amplitude–Beltrami-Tension Cancellation / Injection-Persistence Gap
+
+$$
+\boxed{
+\begin{aligned}
+\text{layer}
+&=
+\mathrm{invisible\text{-}escape\ boundary\ injection},
+\\
+A_\omega
+&=
+|\omega|^2-\langle|\omega|^2\rangle,
+\\
+\mathscr B_\omega
+&=
+(-\Delta)^{-1}
+\operatorname{div}
+(
+\omega\times\operatorname{curl}\omega
+),
+\\
+\Theta_\omega
+&=
+A_\omega+6\mathscr B_\omega,
+\\
+W_L
+&=
+-\frac14\mathcal T_0\Theta_\omega,
+\\
+\eta_\omega
+&=
+\frac1{16}
+\|\Theta_\omega\|_2^2
+/
+\|\omega\|_4^4,
+\\
+\text{pure invisibility}
+&\iff
+\Theta_\omega=0,
+\\
+\text{boundary injection}
+&=
+-\frac14
+\mathcal T_0
+\partial_t\Theta_\omega,
+\\
+\eta_\omega''|_{\eta=0}
+&=
+\frac18
+\|\partial_t\Theta_\omega\|_2^2
+/
+\|\omega\|_4^4,
+\\
+\text{exact Beltrami visibility}
+&=
+\frac1{16}
+(
+1-\mathfrak J_{\omega,4}^{-1}
+),
+\\
+\text{near-Beltrami invisible escape}
+&\Rightarrow
+\text{amplitude uniformization},
+\\
+\text{generic invisible escape}
+&=
+\text{weak carriers}
+\vee
+\text{amplitude–tension phase lock},
+\\
+\text{missing}
+&=
+\mathrm{dynamic\ control\ of\ }
+A_\omega
++
+6\mathscr B_\omega
+\mathrm{\ cancellation
+and\ its\ time\ persistence},
+\\
+T_{\mathsf C\to\mathsf D}
+&=
+\mathrm{NOT\ REACHED}.
+\end{aligned}
+}
+$$
+
+Naming:
+
+$$
+\boxed{
+\textbf{STOP-C50:
+Amplitude–Beltrami-Tension Cancellation / Injection-Persistence Gap}.
+}
+$$
+
+---
+
+# 29. 24/72 Ledger — Round 46
+
+| Step | object | $B$ | $U$ | $O$ | $L$ | status |
+|---|---|---|---|---|---|---|
+| C718 | vorticity amplitude carrier $A_\omega$ | $\mathsf C$ | scalar field | scalar | $\mathsf F$ | FORM |
+| C719 | Beltrami tension $\tau_\omega$ | $\mathsf C$ | vorticity geometry | relational | $\mathsf F$ | EXACT |
+| C720 | tension potential $\mathscr B_\omega$ | $\mathsf C$ | inverse Laplacian | scalar | $\mathsf F$ | FORM |
+| C721 | divdiv vorticity-stress identity | $\mathsf C$ | differential algebra | relational | $\mathsf F$ | EXACT |
+| C722 | amplitude–Beltrami visibility identity | $\mathsf C$ | Riesz projection | scalar | $\mathsf F$ | EXACT |
+| C723 | scalar visible-stress representation | $\mathsf C$ | operator projection | targeted | $\mathsf F$ | EXACT |
+| C724 | scalar visibility formula | $\mathsf C$ | Hilbert norm | scalar | $\mathsf F$ | EXACT |
+| C725 | visibility cancellation defect identity | $\mathsf C$ | Hilbert geometry | targeted | $\mathsf F$ | EXACT |
+| C726 | asymptotic coherence conditions | $\mathsf C$ | normalized cancellation | targeted | $\mathsf F$ | PROVED |
+| C727 | vorticity Beltrami defect | $\mathsf C$ | curl geometry | scalar | $\mathsf F$ | FORM |
+| C728 | optimal Beltrami defect | $\mathsf C$ | least squares | scalar | $\mathsf F$ | EXACT |
+| C729 | tension-potential HLS bound | $\mathsf C$ | order-minus-one estimate | targeted | $\mathsf F$ | PROVED |
+| C730 | near-Beltrami visibility envelope | $\mathsf C$ | cancellation bound | targeted | $\mathsf F$ | PROVED |
+| C731 | Beltrami visibility cap | $\mathsf C$ | exact curl eigenfield | scalar | $\mathsf F$ | PROVED |
+| C732 | Beltrami intermittency identity | $\mathsf C$ | amplitude statistics | scalar | $\mathsf F$ | EXACT |
+| C733 | exact velocity-Beltrami NS branch | $\mathsf C$ | helical PDE | targeted | $\mathsf F$ | EXACT |
+| C734 | velocity Beltrami defect PDE | $\mathsf C$ | Leray/curl | relational | $\mathsf F$ | EXACT |
+| C735 | scalar boundary-injection identity | $\mathsf C$ | projected dynamics | targeted | $\mathsf F$ | EXACT |
+| C736 | scalar second-order injection law | $\mathsf C$ | boundary dynamics | scalar | $\mathsf F$ | EXACT |
+| C737 | invisible-escape cancellation dichotomy | $\mathsf C$ | normalized geometry | targeted | $\mathsf F$ | PROVED |
+| C738 | near-Beltrami amplitude uniformization | $\mathsf C$ | conditional route | targeted | $\mathsf F$ | CONDITIONAL |
+| C739 | unconditional cancellation-persistence closure | $\mathsf C$ | coupled NS | targeted | $\mathsf F$ | OPEN / STOP-C50 |
+
+---
+
+# 30. Continuous-versus-discrete status
+
+All core objects in this round:
+
+- continuous vorticity field;
+- continuous amplitude modulation;
+- continuous curl-eigenfield defect;
+- continuous inverse-Laplacian tension potential;
+- continuous $L^2$ coherence;
+- continuous visibility ratio.
+
+Beltrami parameter:
+
+$$
+\kappa\in\mathbb R
+$$
+
+is also a continuous optimization variable.
+
+There is no:
+
+- helical mode enumeration as a proof necessity;
+- dyadic shell;
+- discrete visibility states;
+- graph tension network.
+
+The periodic Beltrami wave only serves as an exact smooth witness.
+
+Therefore:
+
+$$
+\boxed{
+T_{\mathsf C\to\mathsf D}
+=
+\text{NOT YET REACHED}.
+}
+$$
+
+---
+
+# 31. Strongest results of Round 46
+
+## R46-A — exact scalarization
+
+$$
+\boxed{
+\Theta_\omega
+=
+|\omega|^2
+-
+\langle|\omega|^2\rangle
++
+6
+(-\Delta)^{-1}
+\operatorname{div}
+(
+\omega\times\operatorname{curl}\omega
+).
+}
+$$
+
+and:
+
+$$
+\boxed{
+W_L
+=
+-\frac14
+\mathcal T_0
+\Theta_\omega.
+}
+$$
+
+## R46-B — exact visibility formula
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac1{16}
+\frac{
+\|\Theta_\omega\|_2^2
+}{
+\|\omega\|_4^4
+}.
+}
+$$
+
+## R46-C — exact pure-boundary injection
+
+If:
+
+$$
+\eta_\omega(t_0)=0,
+$$
+
+then:
+
+$$
+\boxed{
+F_L(t_0)
+=
+-\frac14
+\mathcal T_0
+\partial_t\Theta_\omega(t_0),
+}
+$$
+
+and:
+
+$$
+\boxed{
+\eta_\omega''(t_0)
+=
+\frac18
+\frac{
+\|\partial_t\Theta_\omega(t_0)\|_2^2
+}{
+\|\omega(t_0)\|_4^4
+}.
+}
+$$
+
+## R46-D — exact Beltrami visibility cap
+
+If:
+
+$$
+\operatorname{curl}\omega=\kappa\omega,
+$$
+
+then:
+
+$$
+\boxed{
+\eta_\omega
+=
+\frac1{16}
+\left(
+1-\frac1{\mathfrak J_{\omega,4}}
+\right)
+\le
+\frac1{16}.
+}
+$$
+
+## R46-E — near-Beltrami invisible escape requires amplitude uniformity
+
+If the normalized Beltrami defect tends to zero and:
+
+$$
+\eta_\omega\to0,
+$$
+
+then:
+
+$$
+\boxed{
+\frac{
+\||
+\omega|^2
+-
+\langle|\omega|^2\rangle
+\|_2
+}{
+\|\omega\|_4^2
+}
+\to0.
+}
+$$
+
+## R46-F — generic invisible escape is a cancellation-lock problem
+
+$$
+\boxed{
+\eta_\omega\to0
+}
+$$
+
+forces the normalized amplitude and tension carriers to match and become anti-coherent unless both vanish.
+
+---
+
+# 32. Next round — Beltrami-Tension Cancellation Dynamics
+
+Round 46 has reduced the entire invisible escape to one scalar:
+
+$$
+\boxed{
+\Theta_\omega
+=
+A_\omega
++
+6\mathscr B_\omega.
+}
+$$
+
+The next round will directly investigate:
+
+1. exact:
+   $$
+   (\partial_t+u\cdot\nabla-\nu\Delta)
+   A_\omega;
+   $$
+
+2. exact:
+   $$
+   (\partial_t-\nu\Delta)
+   \tau_\omega
+   $$
+   for:
+   $$
+   \tau_\omega
+   =
+   \omega\times\operatorname{curl}\omega;
+   $$
+
+3. transport–inverse-Laplacian commutator in:
+   $$
+   D_t\mathscr B_\omega;
+   $$
+
+4. cancellation coherence:
+   $$
+   \rho_{BT}(t);
+   $$
+
+5. whether stretching drives:
+   $$
+   A_\omega
+   $$
+   and:
+   $$
+   \mathscr B_\omega
+   $$
+   in the same or opposite phase;
+
+6. whether diffusion destroys amplitude–tension cancellation;
+
+7. if persistent cancellation requires another critical commutator / phase-lock budget;
+
+8. maintain continuous scalar/Riesz representation.
+
+---
+
+# 33. External primary-source anchors
+
+1. Jian-Zhou Zhu, *On the exact solutions of (magneto)hydrodynamic systems and the superposition principles of nonlinear helical waves*, arXiv:1407.8404.
+   - mono-wavelength homochiral Beltrami modes and circularly polarized helical waves as exact nonlinear-depletion structures.
+
+2. Gennaro Ciampa, Renato Lucà, *Localization of Beltrami fields: global smooth solutions and vortex reconnection for the Navier-Stokes equations*, arXiv:2311.01369.
+   - localized Beltrami initial data can produce unique global smooth 3D Navier–Stokes solutions even while being large in critical spaces, using nonlinear smallness.
+
+3. Evan Miller, *On the interaction of strain and vorticity for solutions of the Navier--Stokes equation*, arXiv:2407.02691.
+   - exact strain–vorticity interaction/depletion identities relevant to the remaining tension dynamics.
+
+4. Zoran Grujic, *Logarithmic Depletion of Vortex Stretching and Singularity Evasion in the 3D Navier-Stokes Equations*, arXiv:2607.08866.
+   - recent geometric depletion result showing logarithmic vorticity-direction regularity can suppress stretching in a critical concentration regime; used as current context for the next phase-lock / direction-regularity route, not as a source of the Round 46 identities.
+
+The Scalar Visibility Formula, Visibility Cancellation Defect Identity, Beltrami Visibility Cap, Scalar Boundary-Injection Identity and near-Beltrami amplitude-uniformization criterion are direct derivations of this round.
+
+---
+
+# 34. Commit state
+
+$$
+\boxed{
+\begin{aligned}
+\text{Route}
+&=
+\mathrm{Pure\ Continuous\ Invisible\text{-}Escape\ Scalarization},
+\\
+\text{Essential }\mathsf C\to\mathsf D
+&=
+\mathrm{Not\ reached},
+\\
+\text{Visible stress}
+&=
+\mathrm{one\ scalar\ carrier},
+\\
+\text{Scalar carrier}
+&=
+\mathrm{amplitude}
++
+\mathrm{Beltrami\ tension},
+\\
+\text{Pure invisibility}
+&=
+\Theta_\omega=0,
+\\
+\text{Boundary injection}
+&=
+\partial_t\Theta_\omega,
+\\
+\text{Exact Beltrami}
+&=
+\mathrm{visibility}\le1/16,
+\\
+\text{Constant-amplitude Beltrami}
+&=
+\mathrm{pure\ invisible},
+\\
+\text{Near-Beltrami invisible escape}
+&=
+\mathrm{requires\ amplitude\ uniformization},
+\\
+\text{Generic invisible escape}
+&=
+\mathrm{weak\ carriers}
+\vee
+\mathrm{amplitude\text{-}tension\ phase\ lock},
+\\
+\text{STOP-C50}
+&=
+\mathrm{Amplitude\text{-}Beltrami\text{-}Tension\ Cancellation/Injection\text{-}Persistence\ Gap},
+\\
+\text{Next}
+&=
+\mathrm{Beltrami\text{-}Tension\ Cancellation\ Dynamics}.
+\end{aligned}
+}
+$$

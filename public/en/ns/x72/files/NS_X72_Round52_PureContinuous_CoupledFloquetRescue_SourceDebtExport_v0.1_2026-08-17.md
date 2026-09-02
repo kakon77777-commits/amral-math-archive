@@ -1,0 +1,2095 @@
+# NS × X Integration × 24/72 Paradigm Practice
+## Round 52 — Pure Continuous Coupled-Floquet Rescue / Hidden-Kernel Source-Debt Export
+
+- Date: 2026-08-17
+- Version: v0.1
+- Status: Proof-Route Experiment / Continuous-Only Hidden-Kernel Range Branch
+- canonical source: UTF-8 Markdown
+- canonical math delimiters: inline `$...$`; display `$$...$$`
+- Previous round: `NS_X72_Round51_PureContinuous_SecondOrderInvisibleManifold_ViscousCurvature_v0.1_2026-08-17.md`
+- Objective of this round: Round 51 obtained a correction-independent central viscous source in the minimal two-sideband state-curvature class
+  $$
+  F_{\Theta,\mathrm{curv}}^{(2)}(2q)\neq0.
+  $$
+  The coupled-Floquet homogeneous rescue of
+  $$
+  \chi_h\in\ker\mathscr N
+  $$
+  has not yet been ruled out. This round directly solves the range problem:
+  $$
+  -F_{\Theta,\mathrm{curv}}^{(2)}
+  \stackrel{?}{\in}
+  \mathscr S(\ker\mathscr N).
+  $$
+- Main results: **The central obstruction is indeed within the hidden-kernel source range.** A compact hidden Floquet block occupying only vertical levels $2,4$ possesses a nonzero central source projection, and thus can exactly cancel the Round 51 central viscous curvature.
+- However, the rescue is not a closure: the same hidden block inevitably exports the source debt to higher vertical sidebands. Therefore, the "central obstruction" of Round 51 is reclassified as a "source-debt cascade".
+- Non-claims: This document does not prove the existence of a complete $H^s$ / analytic Floquet tail that can simultaneously eliminate all exported source sidebands. This document only proves:
+  1. the central range obstruction fails;
+  2. a minimal compact rescue block exists;
+  3. the minimal rescue necessarily exports higher-sideband sources;
+  4. the next proof obligation is tail convergence / recursive debt transport.
+
+---
+
+# 0. Round 51 handoff
+
+Round 50 source-hidden radii:
+
+$$
+\boxed{
+r_\pm
+=
+\frac{
+\sqrt{17}\pm3
+}{
+2
+}.
+}
+\tag{0.1}
+$$
+
+horizontal quasi-frequency:
+
+$$
+\boxed{
+q=(r,0,0).
+}
+\tag{0.2}
+$$
+
+Round 51 constructed:
+
+$$
+\boxed{
+\omega_\varepsilon
+=
+\bar\omega
++
+\varepsilon\zeta_r
++
+\varepsilon^2\chi_{\rm p}
++
+O(\varepsilon^3),
+}
+\tag{0.3}
+$$
+
+with:
+
+$$
+\boxed{
+\mathscr N\chi_{\rm p}
+=
+-\Theta[\zeta_r].
+}
+\tag{0.4}
+$$
+
+Within the complete minimal state-active sideband class:
+
+$$
+2q\pm e_3,
+$$
+
+Round 51 found the central second-order source:
+
+$$
+\boxed{
+\widehat{
+F_{\Theta,\mathrm{curv}}^{(2)}
+}
+(2q)
+=
+\mathcal V_{\rm curv}(r),
+}
+\tag{0.5}
+$$
+
+where:
+
+$$
+\boxed{
+\mathcal V_{\rm curv}(r)
+=
+\frac{
+4\nu
+(
+r^2+1
+)
+}{
+9
+}
+(
+r^4-7r^2+1
+).
+}
+\tag{0.6}
+$$
+
+Since:
+
+$$
+r^4-13r^2+4=0
+$$
+
+and:
+
+$$
+r^4-7r^2+1\ne0,
+$$
+
+$$
+\boxed{
+\mathcal V_{\rm curv}(r_\pm)\ne0
+}
+\tag{0.7}
+$$
+
+for:
+
+$$
+\nu>0.
+$$
+
+Round 51 STOP:
+
+$$
+\boxed{
+\text{STOP-C55}
+=
+\text{Viscous Curvature / Coupled-Floquet Rescue Gap}.
+}
+$$
+
+---
+
+# 1. Fixed horizontal Floquet fibre
+
+Set:
+
+$$
+\boxed{
+K=2r.
+}
+\tag{1.1}
+$$
+
+The second-order correction problem lives in the Floquet fibre with horizontal quasi-frequency:
+
+$$
+\boxed{
+(K,0).
+}
+$$
+
+Vertical sidebands are:
+
+$$
+\boxed{
+k_n
+=
+(K,0,n),
+\qquad
+n\in\mathbb Z.
+}
+\tag{1.2}
+$$
+
+The circular background has vertical frequencies:
+
+$$
+\pm1.
+$$
+
+Therefore:
+
+- the state normal operator:
+  $$
+  \mathscr N
+  $$
+  shifts:
+  $$
+  n\mapsto n\pm1;
+  $$
+- the source filter:
+  $$
+  \mathscr S
+  $$
+  contains net shifts:
+  $$
+  n\mapsto n,n\pm2
+  $$
+  from Euler interaction;
+- and:
+  $$
+  n\mapsto n\pm1
+  $$
+  from viscous spectral mismatch inside a coupled hidden state.
+
+This is a periodic-coefficient continuous Floquet fibre, represented computationally by a vertical sideband ladder.
+
+---
+
+# 2. Why coupled hidden states differ from isolated hidden modes
+
+For an isolated Fourier mode:
+
+$$
+\chi_n
+=
+B_ne^{ik_n\cdot x},
+$$
+
+if:
+
+$$
+\mathscr N\chi_n=0,
+$$
+
+then:
+
+$$
+\Delta\chi_n
+=
+-|k_n|^2
+\chi_n,
+$$
+
+hence:
+
+$$
+\boxed{
+\mathscr N\Delta\chi_n
+=
+-|k_n|^2
+\mathscr N\chi_n
+=
+0.
+}
+\tag{2.1}
+$$
+
+This was the reason viscosity was tangent in the first source filter of Round 50.
+
+But for a coupled hidden state:
+
+$$
+\boxed{
+\chi_h
+=
+\sum_n
+B_n
+e^{ik_n\cdot x},
+}
+\tag{2.2}
+$$
+
+the condition:
+
+$$
+\mathscr N\chi_h=0
+$$
+
+is obtained by cancellation between different:
+
+$$
+n.
+$$
+
+Since:
+
+$$
+|k_n|^2
+=
+K^2+n^2
+$$
+
+depends on:
+
+$$
+n,
+$$
+
+generically:
+
+$$
+\boxed{
+\mathscr N\chi_h=0
+\quad
+\not\Rightarrow
+\quad
+\mathscr N\Delta\chi_h=0.
+}
+\tag{2.3}
+$$
+
+Thus coupled hidden states open a genuine spectral-dispersion rescue channel.
+
+---
+
+# 3. Source linearization on the hidden kernel
+
+Let:
+
+$$
+\mathcal L_E
+$$
+
+denote the Euler/nonlinear linearization around the circular Beltrami reference.
+
+On:
+
+$$
+\chi_h\in\ker\mathscr N,
+$$
+
+the first source linearization reduces to:
+
+$$
+\boxed{
+\mathscr S\chi_h
+=
+\mathscr N
+\left(
+\mathcal L_E\chi_h
++
+\nu\Delta\chi_h
+\right).
+}
+\tag{3.1}
+$$
+
+The term:
+
+$$
+D^2\Theta[
+\chi_h,
+-\nu\bar\omega
+]
+$$
+
+is proportional to:
+
+$$
+\mathscr N\chi_h
+$$
+
+and vanishes.
+
+Therefore the hidden-kernel source range is generated by:
+
+$$
+\boxed{
+\text{Euler sideband mixing}
++
+\text{hidden spectral dispersion}.
+}
+$$
+
+---
+
+# 4. Minimal compact one-sided rescue block
+
+We search for a compact state-hidden block using only:
+
+$$
+\boxed{
+n=2,
+\qquad
+n=4.
+}
+\tag{4.1}
+$$
+
+Define:
+
+$$
+\boxed{
+k_2
+=
+(K,0,2),
+\qquad
+k_4
+=
+(K,0,4).
+}
+\tag{4.2}
+$$
+
+Introduce:
+
+$$
+\boxed{
+Q_K
+=
+K^4+4K^2+9,
+}
+\tag{4.3}
+$$
+
+and:
+
+$$
+\boxed{
+D_K
+=
+K^4+28K^2+225.
+}
+\tag{4.4}
+$$
+
+Set:
+
+$$
+\boxed{
+B_2
+=
+\begin{pmatrix}
+2
+\\[1mm]
+i\dfrac{K^2-2}{K^2+1}
+\\[2mm]
+-K
+\end{pmatrix}.
+}
+\tag{4.5}
+$$
+
+Then:
+
+$$
+k_2\cdot B_2=0.
+$$
+
+Define:
+
+$$
+\boxed{
+x_4
+=
+-
+\frac{
+(K^2+25)Q_K
+}{
+2
+(K^2+1)
+D_K
+}.
+}
+\tag{4.6}
+$$
+
+and:
+
+$$
+\boxed{
+B_4
+=
+\begin{pmatrix}
+4x_4
+\\[1mm]
+i x_4
+\dfrac{
+7K^2+100
+}{
+K^2+25
+}
+\\[2mm]
+-Kx_4
+\end{pmatrix}.
+}
+\tag{4.7}
+$$
+
+Again:
+
+$$
+k_4\cdot B_4=0.
+$$
+
+Define the compact Floquet block:
+
+$$
+\boxed{
+H_K
+=
+B_2
+e^{i(Kx_1+2x_3)}
++
+B_4
+e^{i(Kx_1+4x_3)}.
+}
+\tag{4.8}
+$$
+
+---
+
+# 5. Exact hidden-block cancellation
+
+Let:
+
+$$
+N_s(k,B)
+$$
+
+denote the scalar sideband coefficient of:
+
+$$
+\mathscr N
+$$
+
+from input:
+
+$$
+(k,B)
+$$
+
+to output:
+
+$$
+k+se_3,
+\qquad
+s=\pm1.
+$$
+
+For:
+
+$$
+H_K,
+$$
+
+direct algebra gives:
+
+$$
+\boxed{
+N_-(k_2,B_2)=0,
+}
+\tag{5.1}
+$$
+
+$$
+\boxed{
+N_+(k_4,B_4)=0,
+}
+\tag{5.2}
+$$
+
+and:
+
+$$
+\boxed{
+N_+(k_2,B_2)
++
+N_-(k_4,B_4)
+=
+0.
+}
+\tag{5.3}
+$$
+
+These are exactly the three output levels:
+
+$$
+n=1,
+\qquad
+n=3,
+\qquad
+n=5.
+$$
+
+Therefore:
+
+$$
+\boxed{
+\mathscr N H_K=0.
+}
+\tag{5.4}
+$$
+
+Designation:
+
+$$
+\boxed{
+\textbf{Compact Hidden Floquet Block}.
+}
+$$
+
+---
+
+# 6. Why two vertical levels are minimal in this one-sided class
+
+A block supported only at:
+
+$$
+n=2
+$$
+
+would have to satisfy both:
+
+$$
+N_-(k_2,B)=0,
+$$
+
+and:
+
+$$
+N_+(k_2,B)=0.
+$$
+
+But the Round 48 single-mode characteristic condition at:
+
+$$
+(K,0,2)
+$$
+
+would require:
+
+$$
+\boxed{
+(
+K^2+2
+)^2+5=0,
+}
+\tag{6.1}
+$$
+
+which has no real:
+
+$$
+K.
+$$
+
+Therefore no nonzero isolated:
+
+$$
+n=2
+$$
+
+hidden mode exists.
+
+The pair:
+
+$$
+n=2,4
+$$
+
+is the minimal one-sided compact mechanism that can hide through inter-sideband cancellation.
+
+---
+
+# 7. Central hidden-kernel source coefficient
+
+Apply:
+
+$$
+\mathscr S
+$$
+
+to:
+
+$$
+H_K.
+$$
+
+The central output:
+
+$$
+n=0
+$$
+
+comes entirely from the Euler double-downshift of the:
+
+$$
+n=2
+$$
+
+component.
+
+The exact coefficient is:
+
+$$
+\boxed{
+J_0(K)
+=
+-iK
+\frac{
+K^4+7K^2+18
+}{
+(K^2+1)(K^2+4)
+}.
+}
+\tag{7.1}
+$$
+
+For every:
+
+$$
+K>0,
+$$
+
+$$
+\boxed{
+J_0(K)\ne0.
+}
+\tag{7.2}
+$$
+
+Thus the central scalar projection of the hidden-kernel source range is surjective:
+
+$$
+\boxed{
+\Pi_0
+\mathscr S
+(
+\ker\mathscr N
+)
+=
+\mathbb C.
+}
+\tag{7.3}
+$$
+
+at least through the complex Fourier coefficient representation; real fields are obtained by adding the conjugate block.
+
+Designation:
+
+$$
+\boxed{
+\textbf{Central Hidden-Kernel Range Theorem}.
+}
+$$
+
+---
+
+# 8. Round 51 central obstruction is rescuable
+
+Recall:
+
+$$
+K=2r.
+$$
+
+Then:
+
+$$
+\boxed{
+J_0(2r)
+=
+-i
+\frac{
+r
+(
+8r^4+14r^2+9
+)
+}{
+(r^2+1)(4r^2+1)
+}.
+}
+\tag{8.1}
+$$
+
+Round 51 curvature:
+
+$$
+\boxed{
+\mathcal V_{\rm curv}(r)
+=
+\frac{
+4\nu(r^2+1)
+}{
+9
+}
+(
+r^4-7r^2+1
+).
+}
+\tag{8.2}
+$$
+
+Choose rescue amplitude:
+
+$$
+\boxed{
+c_{\rm res}(r)
+=
+-
+\frac{
+\mathcal V_{\rm curv}(r)
+}{
+J_0(2r)
+}.
+}
+\tag{8.3}
+$$
+
+Explicitly:
+
+$$
+\boxed{
+c_{\rm res}(r)
+=
+-
+\frac{
+4i\nu
+(r^2+1)^2
+(4r^2+1)
+(
+r^4-7r^2+1
+)
+}{
+9r
+(
+8r^4+14r^2+9
+)
+}.
+}
+\tag{8.4}
+$$
+
+Then:
+
+$$
+\boxed{
+\mathcal V_{\rm curv}(r)
++
+c_{\rm res}(r)
+J_0(2r)
+=
+0.
+}
+\tag{8.5}
+$$
+
+Therefore:
+
+$$
+\boxed{
+-\,
+F_{\Theta,\rm curv}^{(2)}(2q)
+\in
+\Pi_0
+\mathscr S
+(
+\ker\mathscr N
+).
+}
+\tag{8.6}
+$$
+
+This directly answers the Round 51 central range test:
+
+$$
+\boxed{
+\textbf{YES}.
+}
+$$
+
+---
+
+# 9. The rescue is nonlinear, not a viscous self-cancellation
+
+The coefficient:
+
+$$
+J_0(K)
+$$
+
+contains no:
+
+$$
+\nu.
+$$
+
+Therefore central rescue is generated by the Euler/nonlinear part of:
+
+$$
+\mathscr S H_K.
+$$
+
+Since:
+
+$$
+\mathcal V_{\rm curv}=O(\nu),
+$$
+
+the required hidden-block amplitude is:
+
+$$
+\boxed{
+c_{\rm res}=O(\nu).
+}
+\tag{9.1}
+$$
+
+Thus:
+
+$$
+\boxed{
+\textbf{
+an }O(\nu)\textbf{ hidden nonlinear sideband block can cancel an }O(\nu)
+\textbf{ viscous curvature source}.
+}
+\tag{9.2}
+$$
+
+The mechanism is cross-channel cancellation, not viscosity undoing itself.
+
+---
+
+# 10. Full source output of the compact hidden block
+
+The source:
+
+$$
+\mathscr S H_K
+$$
+
+is not supported only at:
+
+$$
+n=0.
+$$
+
+Its nonzero output coefficients are:
+
+$$
+\boxed{
+J_0,
+\quad
+J_2,
+\quad
+J_3,
+\quad
+J_4,
+\quad
+J_6.
+}
+\tag{10.1}
+$$
+
+while:
+
+$$
+\boxed{
+J_1=J_5=0.
+}
+\tag{10.2}
+$$
+
+The exact coefficients follow.
+
+---
+
+# 11. Even nonlinear source debts
+
+Define:
+
+$$
+\boxed{
+P_2(K)
+=
+K^8
++
+95K^6
++
+1549K^4
++
+4947K^2
++
+5400.
+}
+\tag{11.1}
+$$
+
+Then:
+
+$$
+\boxed{
+J_2(K)
+=
+iK
+\frac{
+P_2(K)
+}{
+2
+(K^2+1)
+(K^2+4)
+D_K
+}.
+}
+\tag{11.2}
+$$
+
+Since every coefficient of:
+
+$$
+P_2
+$$
+
+is positive:
+
+$$
+\boxed{
+J_2(K)\ne0
+\qquad
+(K>0).
+}
+\tag{11.3}
+$$
+
+Define:
+
+$$
+\boxed{
+\begin{aligned}
+P_4(K)
+={}&
+K^{10}
++
+27K^8
++
+495K^6
++
+5719K^4
+\\
+&+
+24906K^2
++
+43200.
+\end{aligned}
+}
+\tag{11.4}
+$$
+
+Then:
+
+$$
+\boxed{
+J_4(K)
+=
+iK
+\frac{
+P_4(K)
+}{
+(K^2+1)
+(K^2+4)
+(K^2+16)
+D_K
+}.
+}
+\tag{11.5}
+$$
+
+Finally:
+
+$$
+\boxed{
+J_6(K)
+=
+-
+iK^3
+\frac{
+(
+K^4-5K^2-360
+)
+Q_K
+}{
+2
+(K^2+1)
+(K^2+16)
+(K^2+36)
+D_K
+}.
+}
+\tag{11.6}
+$$
+
+These are nonlinear/Eulerian source exports.
+
+---
+
+# 12. Intermediate viscous debt
+
+The only nonzero odd output of this minimal block is:
+
+$$
+\boxed{
+J_3(K)
+=
+-96\nu
+\frac{
+Q_K
+}{
+(K^2+1)(K^2+9)
+}.
+}
+\tag{12.1}
+$$
+
+Thus:
+
+$$
+\boxed{
+J_3=O(\nu).
+}
+$$
+
+After multiplying the block by:
+
+$$
+c_{\rm res}=O(\nu),
+$$
+
+the exported:
+
+$$
+n=3
+$$
+
+source debt is:
+
+$$
+\boxed{
+O(\nu^2).
+}
+\tag{12.2}
+$$
+
+The even exported debts:
+
+$$
+n=2,4,6
+$$
+
+are:
+
+$$
+\boxed{
+O(\nu).
+}
+\tag{12.3}
+$$
+
+---
+
+# 13. Rescue-Export Theorem
+
+Because:
+
+$$
+J_0(K)\ne0,
+$$
+
+the central obstruction can be cancelled.
+
+But:
+
+$$
+J_2(K)\ne0
+$$
+
+for every:
+
+$$
+K>0.
+$$
+
+Therefore the same minimal compact hidden block necessarily creates a nonzero higher-sideband source.
+
+Designation:
+
+$$
+\boxed{
+\textbf{Rescue-Export Theorem}.
+}
+$$
+
+In particular:
+
+$$
+\boxed{
+\text{central rescue}
+\quad
+\Longrightarrow
+\quad
+\text{higher-sideband source debt}
+}
+\tag{13.1}
+$$
+
+inside this minimal compact mechanism.
+
+So the source obstruction is not destroyed; it is transported in Floquet sideband space.
+
+---
+
+# 14. Round 51 full no-go cannot be upgraded from the central channel
+
+Round 51 left open whether:
+
+$$
+-\mathcal V_{\rm curv}
+$$
+
+lies in:
+
+$$
+\mathscr S(\ker\mathscr N).
+$$
+
+Round 52 proves:
+
+$$
+\boxed{
+\text{the central coefficient does lie in the range}.
+}
+$$
+
+Therefore no proof of full second-order source-lock impossibility can be based solely on the central:
+
+$$
+2q
+$$
+
+curvature coefficient.
+
+This formally refutes the strongest possible upgrade of Round 51:
+
+$$
+\boxed{
+\text{central viscous curvature}
+\not\Rightarrow
+\text{full second-order no-go}.
+}
+\tag{14.1}
+$$
+
+---
+
+# 15. But rescue creates a source-debt cascade problem
+
+The particular correction:
+
+$$
+\chi_{\rm p}
+$$
+
+already has a finite second-order source profile.
+
+Adding:
+
+$$
+c_{\rm res}H_K
+$$
+
+removes the central component but generates new source at higher vertical levels.
+
+To restore full source lock, one must add further:
+
+$$
+\chi_h^{(2)},
+\chi_h^{(3)},
+\ldots
+$$
+
+in:
+
+$$
+\ker\mathscr N
+$$
+
+such that:
+
+$$
+\boxed{
+\mathscr S
+\left(
+\chi_h^{(2)}
++
+\chi_h^{(3)}
++\cdots
+\right)
+}
+$$
+
+cancels the exported debt without reintroducing lower-frequency state error.
+
+Thus the problem changes from a finite-dimensional curvature obstruction to:
+
+$$
+\boxed{
+\textbf{an infinite-dimensional source-debt transport problem}.
+}
+$$
+
+---
+
+# 16. One-sided upward blocks suggest a recursive mechanism
+
+For a general even vertical level:
+
+$$
+n\ge2,
+$$
+
+one can search for a compact hidden pair:
+
+$$
+\boxed{
+H_{K,n}
+}
+$$
+
+supported at:
+
+$$
+n,
+\qquad
+n+2.
+$$
+
+The state-hidden conditions have the same triangular form:
+
+$$
+\boxed{
+N_-(k_n,B_n)=0,
+}
+\tag{16.1}
+$$
+
+$$
+\boxed{
+N_+(k_{n+2},B_{n+2})=0,
+}
+\tag{16.2}
+$$
+
+$$
+\boxed{
+N_+(k_n,B_n)
++
+N_-(k_{n+2},B_{n+2})
+=
+0.
+}
+\tag{16.3}
+$$
+
+Such a block can affect source levels beginning at:
+
+$$
+n-2
+$$
+
+and export to higher levels.
+
+This suggests a triangular upward rescue strategy:
+
+$$
+\boxed{
+0
+\to
+2
+\to
+4
+\to
+6
+\to\cdots
+}
+\tag{16.4}
+$$
+
+for the even nonlinear debt.
+
+The odd viscous debts form an interlaced chain.
+
+This is only a route map at this round; tail convergence has not yet been proved.
+
+---
+
+# 17. Why the remaining question is regularity, not algebraic solvability alone
+
+At each rescue step, the new hidden block may require larger vertical frequency:
+
+$$
+|n|\to\infty.
+$$
+
+Even if every finite debt coefficient can be algebraically cancelled, the resulting tail:
+
+$$
+\boxed{
+\chi_h
+=
+\sum_n
+B_n
+e^{i(Kx_1+n x_3)}
+}
+$$
+
+must still belong to an acceptable function space:
+
+$$
+L^2,
+\qquad
+H^s,
+\qquad
+\text{or a critical analytic/Gevrey carrier}.
+$$
+
+Therefore the decisive quantity becomes the asymptotic amplitude recurrence:
+
+$$
+\boxed{
+B_{n+2}
+=
+\mathcal R_n
+B_n
++
+\text{source-correction terms}.
+}
+\tag{17.1}
+$$
+
+If:
+
+$$
+|\mathcal R_n|<1
+$$
+
+sufficiently fast, a convergent hidden rescue tail may exist.
+
+If:
+
+$$
+|\mathcal R_n|\ge1
+$$
+
+or grows, the rescue may be algebraically legal but analytically inadmissible.
+
+---
+
+# 18. Hidden state versus hidden source debt
+
+Round 48–51 followed:
+
+$$
+\boxed{
+\text{state hidden}
+\to
+\text{source hidden}
+\to
+\text{state curvature}
+\to
+\text{source curvature}.
+}
+$$
+
+Round 52 adds:
+
+$$
+\boxed{
+\text{source curvature}
+\to
+\text{hidden-kernel rescue}
+\to
+\text{exported source debt}.
+}
+$$
+
+Thus the hierarchy is no longer a simple sequence of local filters.
+
+It has become a transport problem in representation space:
+
+$$
+\boxed{
+\textbf{cancel locally}
+\quad\text{by moving the mismatch nonlocally in Floquet depth}.
+}
+$$
+
+This mirrors earlier physical-space cancellation logic: cancellation can hide a dangerous net quantity only by storing compensating structure elsewhere.
+
+---
+
+# 19. A source-debt norm
+
+Let:
+
+$$
+\Pi_n
+$$
+
+denote the scalar source projection to vertical sideband:
+
+$$
+n
+$$
+
+within the fixed horizontal fibre.
+
+For a hidden correction:
+
+$$
+\chi_h,
+$$
+
+define the source-debt profile:
+
+$$
+\boxed{
+d_n
+=
+\Pi_n
+\mathscr S\chi_h.
+}
+\tag{19.1}
+$$
+
+A natural weighted debt norm is:
+
+$$
+\boxed{
+\mathfrak D_s
+=
+\sum_n
+(1+n^2)^s
+|d_n|^2.
+}
+\tag{19.2}
+$$
+
+This is computational notation for the continuous periodic Sobolev norm of the source field.
+
+Full source lock requires:
+
+$$
+\boxed{
+d_n
+=
+-
+d_n^{\rm target}
+\qquad
+\forall n.
+}
+\tag{19.3}
+$$
+
+The next question is whether this system has a hidden-state solution with finite:
+
+$$
+\mathfrak D_s
+$$
+
+and finite correction norm.
+
+---
+
+# 20. Real-field completion
+
+The compact block:
+
+$$
+H_K
+$$
+
+is written in complex Fourier notation.
+
+A real smooth correction is obtained by adjoining the conjugate mode block:
+
+$$
+\boxed{
+H_K^{\rm real}
+=
+H_K
++
+\overline{H_K}.
+}
+\tag{20.1}
+$$
+
+The state-hidden identity and source-range relation are preserved componentwise.
+
+Therefore the rescue is not an artifact of complex-valued physical fields.
+
+---
+
+# 21. Scale interpretation
+
+In the normalized circular Beltrami background:
+
+$$
+\kappa=1.
+$$
+
+The source-hidden radii:
+
+$$
+r_\pm
+$$
+
+and:
+
+$$
+K=2r
+$$
+
+are dimensionless relative frequencies.
+
+Under a global NS scaling:
+
+$$
+\kappa
+\mapsto
+\Lambda\kappa,
+$$
+
+all participating frequencies scale continuously with:
+
+$$
+\Lambda.
+$$
+
+The hidden-block rescue therefore represents a relative sideband geometry, not a special integer-lattice phenomenon.
+
+---
+
+# 22. Bloch/Floquet interpretation
+
+A periodic-coefficient pseudodifferential operator can be decomposed into Floquet fibres, each of which may be represented either as a toroidal operator or as an infinite matrix acting on Fourier sidebands.
+
+Round 52 uses the infinite sideband representation only as a computational realization of the same continuous periodic operator.
+
+The actual proof objects remain:
+
+$$
+\boxed{
+\mathscr N,
+\qquad
+\mathscr S,
+\qquad
+\ker\mathscr N,
+}
+$$
+
+as continuous operators on a fixed Floquet fibre.
+
+---
+
+# 23. STOP-C56 — Source-Debt Cascade / Floquet-Tail Convergence Gap
+
+$$
+\boxed{
+\begin{aligned}
+\text{layer}
+&=
+\mathrm{coupled\text{-}Floquet\ hidden\text{-}kernel\ rescue},
+\\
+\text{Round 51 central obstruction}
+&=
+\mathcal V_{\rm curv}(r),
+\\
+\text{hidden rescue block}
+&=
+H_K
+\text{ on vertical levels }2,4,
+\\
+\mathscr N H_K
+&=
+0,
+\\
+\text{central source}
+&=
+J_0(K)\ne0,
+\\
+\text{central range test}
+&=
+\mathrm{YES},
+\\
+\text{required rescue amplitude}
+&=
+O(\nu),
+\\
+\text{central mechanism}
+&=
+\mathrm{nonlinear/Eulerian},
+\\
+\text{exported even debt}
+&=
+O(\nu),
+\\
+\text{exported odd viscous debt}
+&=
+O(\nu^2),
+\\
+\text{minimal rescue purity}
+&=
+\mathrm{false},
+\\
+\text{new obstruction}
+&=
+\mathrm{higher\text{-}sideband\ source\ export},
+\\
+\text{missing}
+&=
+\mathrm{construction\ or\ exclusion\ of\ a\ convergent\ hidden\ Floquet\ tail}
+\\
+&\quad
+\mathrm{solving\ the\ full\ source\ range\ equation},
+\\
+T_{\mathsf C\to\mathsf D}
+&=
+\mathrm{NOT\ REACHED}.
+\end{aligned}
+}
+$$
+
+Designation:
+
+$$
+\boxed{
+\textbf{STOP-C56:
+Source-Debt Cascade / Floquet-Tail Convergence Gap}.
+}
+$$
+
+---
+
+# 24. 24/72 Ledger — Round 52
+
+| Step | object | $B$ | $U$ | $O$ | $L$ | status |
+|---|---|---|---|---|---|---|
+| C835 | fixed horizontal Floquet fibre | $\mathsf C$ | periodic operator | profile | $\mathsf F$ | FORM |
+| C836 | coupled hidden spectral dispersion | $\mathsf C$ | Laplacian/Floquet | relational | $\mathsf F$ | IDENTIFIED |
+| C837 | hidden-kernel source identity | $\mathsf C$ | linearized NS | targeted | $\mathsf F$ | EXACT |
+| C838 | minimal compact $2/4$ block | $\mathsf C$ | Floquet sidebands | relational | $\mathsf F$ | CONSTRUCTED |
+| C839 | block divergence-free constraints | $\mathsf C$ | Fourier geometry | targeted | $\mathsf F$ | EXACT |
+| C840 | compact hidden-block theorem | $\mathsf C$ | state normal | targeted | $\mathsf F$ | PROVED |
+| C841 | central source coefficient $J_0$ | $\mathsf C$ | source filter | scalar | $\mathsf F$ | EXACT |
+| C842 | central hidden-kernel range | $\mathsf C$ | operator range | targeted | $\mathsf F$ | SURJECTIVE scalar projection |
+| C843 | Round 51 rescue amplitude | $\mathsf C$ | source cancellation | scalar | $\mathsf F$ | EXACT |
+| C844 | nonlinear origin of rescue | $\mathsf C$ | Euler sideband mixing | targeted | $\mathsf F$ | PROVED |
+| C845 | higher even source exports | $\mathsf C$ | sideband source | profile | $\mathsf F$ | EXACT |
+| C846 | intermediate viscous debt | $\mathsf C$ | spectral mismatch | scalar | $\mathsf F$ | EXACT |
+| C847 | Rescue-Export Theorem | $\mathsf C$ | source transport | targeted | $\mathsf F$ | PROVED |
+| C848 | central full-no-go upgrade | $\mathsf C$ | range obstruction | targeted | $\mathsf F$ | REFUTED |
+| C849 | recursive upward block route | $\mathsf C$ | hidden tail | relational | $\mathsf F$ | IDENTIFIED |
+| C850 | source-debt Sobolev profile | $\mathsf C$ | weighted continuous norm | scalar | $\mathsf F$ | FORM |
+| C851 | full hidden-tail convergence | $\mathsf C$ | Floquet operator range | targeted | $\mathsf F$ | OPEN / STOP-C56 |
+
+---
+
+# 25. Continuous-versus-discrete status
+
+This round uses the vertical sideband label:
+
+$$
+n\in\mathbb Z
+$$
+
+as a Fourier representation of a smooth periodic-coefficient operator.
+
+The methodological question is whether this constitutes an essential:
+
+$$
+\mathsf C\to\mathsf D
+$$
+
+transition.
+
+The answer remains:
+
+$$
+\boxed{
+\text{NO}.
+}
+$$
+
+Reason:
+
+1. the underlying field is continuous in:
+   $$
+   x_3;
+   $$
+2. the Floquet fibre is a continuous periodic-function Hilbert space;
+3. the sideband matrix is unitarily equivalent to the continuous toroidal pseudodifferential operator;
+4. the same block can be represented by smooth trigonometric functions without discrete computational dynamics;
+5. no proof step depends on finite counting, combinatorial induction, or lattice arithmetic.
+
+So the Fourier sideband index is representational notation, not an essential discrete substrate witness.
+
+Therefore:
+
+$$
+\boxed{
+T_{\mathsf C\to\mathsf D}
+=
+\text{NOT YET REACHED}.
+}
+$$
+
+---
+
+# 26. Strongest results of Round 52
+
+## R52-A — compact hidden Floquet block
+
+$$
+\boxed{
+H_K
+=
+B_2e^{i(Kx_1+2x_3)}
++
+B_4e^{i(Kx_1+4x_3)}
+}
+$$
+
+with explicit:
+
+$$
+B_2,
+\qquad
+B_4
+$$
+
+satisfies:
+
+$$
+\boxed{
+\mathscr N H_K=0.
+}
+$$
+
+## R52-B — central source range is nonzero
+
+$$
+\boxed{
+\Pi_0
+\mathscr S H_K
+=
+-iK
+\frac{
+K^4+7K^2+18
+}{
+(K^2+1)(K^2+4)
+}.
+}
+$$
+
+Hence:
+
+$$
+\boxed{
+\Pi_0\mathscr S(\ker\mathscr N)=\mathbb C.
+}
+$$
+
+## R52-C — Round 51 central viscous curvature can be cancelled
+
+with:
+
+$$
+K=2r,
+$$
+
+choose:
+
+$$
+\boxed{
+c_{\rm res}
+=
+-\mathcal V_{\rm curv}/J_0.
+}
+$$
+
+Then central second-order source vanishes exactly.
+
+## R52-D — rescue necessarily exports debt in the minimal block
+
+$$
+\boxed{
+J_2(K)\ne0
+\qquad
+(K>0).
+}
+$$
+
+So central rescue is not a pure source correction.
+
+## R52-E — source-debt orders
+
+after multiplying by:
+
+$$
+c_{\rm res}=O(\nu),
+$$
+
+$$
+\boxed{
+d_{2,4,6}=O(\nu),
+}
+$$
+
+while:
+
+$$
+\boxed{
+d_3=O(\nu^2).
+}
+$$
+
+## R52-F — the obstruction has moved
+
+Round 51:
+
+$$
+\boxed{
+\text{central viscous curvature}
+}
+$$
+
+is not a terminal obstruction.
+
+Round 52 replaces it by:
+
+$$
+\boxed{
+\textbf{convergence / regularity of an infinite hidden rescue cascade}.
+}
+$$
+
+---
+
+# 27. Next round — Floquet Rescue Cascade / Tail Asymptotics
+
+The next round should no longer ask whether the first rescue exists.
+
+It does.
+
+The real question is whether the rescue process closes analytically.
+
+Concrete targets:
+
+1. construct general one-sided hidden pair:
+   $$
+   H_{K,n}
+   $$
+   on:
+   $$
+   n,n+2;
+   $$
+
+2. derive exact large-$n$ asymptotics of the hidden recurrence;
+
+3. compute the source-transfer matrix from a block at level:
+   $$
+   n
+   $$
+   to debts at:
+   $$
+   n-2,n,\ldots,n+4;
+   $$
+
+4. formulate the full rescue as a triangular / banded operator equation;
+
+5. determine whether the necessary hidden amplitudes:
+   $$
+   c_n
+   $$
+   decay, remain flat, or grow;
+
+6. test:
+   $$
+   \sum
+   (1+n^2)^s
+   |c_nB_n|^2
+   <\infty;
+   $$
+
+7. if the tail diverges in every critical admissible space, upgrade to a genuine no-go;
+
+8. if the tail converges, construct the full source-locked second-order invisible curve and continue to the next source jet.
+
+This becomes:
+
+$$
+\boxed{
+\textbf{Floquet Rescue Cascade / Tail Asymptotics}.
+}
+$$
+
+---
+
+# 28. External primary-source anchors
+
+1. Horia D. Cornean, Bernard Helffer, Radu Purice, *The fibre operators in the Bloch-Floquet decomposition of periodic magnetic pseudo-differential operators*, arXiv:2512.22547.
+   - provides a current primary-source example in which periodic pseudodifferential fibre operators are represented both as toroidal operators and as infinite matrices on Fourier sidebands;
+   - used only to anchor the representational equivalence behind the Floquet bookkeeping, not as a source for the Round 52 formulas.
+
+2. Artur Prugger, Jens D. M. Rademacher, *Explicit superposed and forced plane wave generalized Beltrami flows*, arXiv:2003.07824.
+   - explicit plane-wave solution spaces under nonlinear interaction constraints;
+   - relevant external context for why adding sideband components can repair one compatibility relation while generating new nonlinear interaction channels.
+
+3. Ganapati Sahoo, Luca Biferale, *Disentangling the triadic interactions in Navier-Stokes equations*, arXiv:1510.09006.
+   - helical triadic interaction classes redistribute energy differently;
+   - used as broad context for the sideband-transfer interpretation, not as a source for the hidden-block calculations.
+
+All compact hidden-block formulas, central range theorem, rescue amplitude and source-export coefficients in this round are direct symbolic derivations and are independently checked by the included verification script.
+
+---
+
+# 29. Commit state
+
+$$
+\boxed{
+\begin{aligned}
+\text{Route}
+&=
+\mathrm{Pure\ Continuous\ Coupled\text{-}Floquet\ Hidden\text{-}Kernel\ Rescue},
+\\
+\text{Essential }\mathsf C\to\mathsf D
+&=
+\mathrm{Not\ reached},
+\\
+\text{Round 51 central range obstruction}
+&=
+\mathrm{false},
+\\
+\text{Compact hidden rescue}
+&=
+\mathrm{exists},
+\\
+\text{Central curvature}
+&=
+\mathrm{exactly\ cancellable},
+\\
+\text{Rescue amplitude}
+&=
+O(\nu),
+\\
+\text{Rescue mechanism}
+&=
+\mathrm{nonlinear\ sideband\ mixing},
+\\
+\text{Source debt}
+&=
+\mathrm{exported\ to\ higher\ Floquet\ levels},
+\\
+\text{Minimal rescue purity}
+&=
+\mathrm{false},
+\\
+\text{Remaining obstruction}
+&=
+\mathrm{tail\ convergence/regularity},
+\\
+\text{STOP-C56}
+&=
+\mathrm{Source\text{-}Debt\ Cascade/Floquet\text{-}Tail\ Convergence\ Gap},
+\\
+\text{Next}
+&=
+\mathrm{Floquet\ Rescue\ Cascade/Tail\ Asymptotics}.
+\end{aligned}
+}
+$$

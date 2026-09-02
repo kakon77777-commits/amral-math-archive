@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24 / C3-V: Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-U split pressure-poor heredity into three terms — spatial displacement, reclassification, and time handover — and gave an exact adjoint transport identity for the local mean strain. This round asks the real question: can these turnover/fluctuation debts stay large across infinitely many viscous ancestry generations? The core is the Endpoint Pressure-Turnover Bound (Theorem 3.1): the time-source handover in fact admits an endpoint enstrophy bound that does not require $\partial_tf$ to be integrable, which yields the Bounded-Enstrophy Far-Pressure Direction Stability (Theorem 10.1) — as long as the parent/child rescaled enstrophy is bounded and the far-field matrix is nondegenerate, the far-field pressure direction itself can be transported stably for a sufficiently large $\kappa$, no longer a vague OPEN question. So if pressure-poor heredity genuinely fails on this branch, the blame must shift to the rotation of the local mean-strain direction (Theorem 14.1: Pressure-Efficiency Recovery Requires Mean-Rotation Toll). Mean rotation further splits into two carriers — quadratic strain/vorticity-term rotation and local pressure-Hessian rotation (the dichotomy of Theorem 16). The quadratic-term rotation obeys Weighted Quadratic-Turnover Packing (Theorem 18.1): $\sum_nR_n\mathfrak R_n^Q\le C\|u_0\|_2^2/\nu^2$ — but this is $R$-weighted, not unweighted-finite; under geometric-series scaling $R_n=2^{-n}R_0$ one has $\sum R_n<\infty$, so every generation can still spend an $O(1)$ normalized rotation without violating the kinetic-energy dissipation budget at all. This gives this round's most important result, the Turnover Zeno No-Go (§20): finite kinetic-energy dissipation does not imply finite total mean-direction variation — energy alone cannot force directional convergence, and energy-only Pressure-Poor Heredity is formally ruled a NO-GO (§43). On the other side, mean-to-pointwise failure is compressed, via the Fluctuation–Intermittency Identity (Theorem 31.1), into a single exact algebraic equality, yielding the Strain-Fluctuation Escape Dichotomy (Theorem 32.1): a large Morrey obstruction must be carried by either a higher-derivative stock $\mathfrak H_R$ or a shrinking, intermittent active volume $\phi_{p,R}\to0$ — not by unstructured "large fluctuation." The only branch in this round to genuinely exhibit a rate obstruction is the Persistent Cone-Degeneration Packing Theorem (Theorem 24.1): if common far-field pressure support must persist over a fixed fraction of the viscous window, then $\sum_nR_n\kappa_n^2\gamma_n^{-2/3}<\infty$ — the first result on the turnover route to connect a geometric decay rate directly to the global energy budget, requiring the cone-margin decay exponent $\alpha<3/2$.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3V_TurnoverPacking_StrainFluctuationEscape_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/24-c3v-turnover-packing-strain-fluctuation-escape/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/24-c3v-turnover-packing-strain-fluctuation-escape/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/24-c3v-turnover-packing-strain-fluctuation-escape/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/24-c3v-turnover-packing-strain-fluctuation-escape/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>24 / C3-V: Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 24 / C3-V</span>
+      <span class="tag">C3-V · Energy-Only Heredity Is a NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>24 / C3-V: Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape</h1>
+    <p class="h1-sub">C3-U split pressure-poor heredity into three terms — spatial displacement, reclassification, and time handover — and gave an exact adjoint transport identity for the local mean strain. This round asks the real question: can these turnover/fluctuation debts stay large across infinitely many viscous ancestry generations? The core is the Endpoint Pressure-Turnover Bound (Theorem 3.1): the time-source handover in fact admits an endpoint enstrophy bound that does not require $\partial_tf$ to be integrable, which yields the Bounded-Enstrophy Far-Pressure Direction Stability (Theorem 10.1) — as long as the parent/child rescaled enstrophy is bounded and the far-field matrix is nondegenerate, the far-field pressure direction itself can be transported stably for a sufficiently large $\kappa$, no longer a vague OPEN question. So if pressure-poor heredity genuinely fails on this branch, the blame must shift to the rotation of the local mean-strain direction (Theorem 14.1: Pressure-Efficiency Recovery Requires Mean-Rotation Toll). Mean rotation further splits into two carriers — quadratic strain/vorticity-term rotation and local pressure-Hessian rotation (the dichotomy of Theorem 16). The quadratic-term rotation obeys Weighted Quadratic-Turnover Packing (Theorem 18.1): $\sum_nR_n\mathfrak R_n^Q\le C\|u_0\|_2^2/\nu^2$ — but this is $R$-weighted, not unweighted-finite; under geometric-series scaling $R_n=2^{-n}R_0$ one has $\sum R_n<\infty$, so every generation can still spend an $O(1)$ normalized rotation without violating the kinetic-energy dissipation budget at all. This gives this round's most important result, the Turnover Zeno No-Go (§20): finite kinetic-energy dissipation does not imply finite total mean-direction variation — energy alone cannot force directional convergence, and energy-only Pressure-Poor Heredity is formally ruled a NO-GO (§43). On the other side, mean-to-pointwise failure is compressed, via the Fluctuation–Intermittency Identity (Theorem 31.1), into a single exact algebraic equality, yielding the Strain-Fluctuation Escape Dichotomy (Theorem 32.1): a large Morrey obstruction must be carried by either a higher-derivative stock $\mathfrak H_R$ or a shrinking, intermittent active volume $\phi_{p,R}\to0$ — not by unstructured "large fluctuation." The only branch in this round to genuinely exhibit a rate obstruction is the Persistent Cone-Degeneration Packing Theorem (Theorem 24.1): if common far-field pressure support must persist over a fixed fraction of the viscous window, then $\sum_nR_n\kappa_n^2\gamma_n^{-2/3}<\infty$ — the first result on the turnover route to connect a geometric decay rate directly to the global energy budget, requiring the cone-margin decay exponent $\alpha<3/2$.</p>
+    <div class="claim-box">
+      Proves that bounded rescaled enstrophy plus a nondegenerate far-field matrix implies the far-field pressure direction itself transports stably, shifting the blame for heredity failure onto rotation of the mean-strain direction. Proves the quadratic-term rotation is only $R$-weighted finite, so each generation can still spend $O(1)$ rotation under geometric scaling — formally ruling energy-only heredity a NO-GO. Mean-to-pointwise failure is shown exactly equal to a choice between a higher-derivative stock or a shrinking intermittent volume. Persistent cone degeneration is the only branch to exhibit a genuine rate obstruction.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../23-c3u-pressure-heredity-mean-pointwise-rigidity/">23 / C3-U · Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../25-c3w-pressure-rotation-strain-sparseness/">25 / C3-W · Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>25 / 67</div>
+    </div>
+    <blockquote class="cite">“finite kinetic-energy dissipation ⇏ finite total mean-direction variation.” — quoted from the paper's own Section 20.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3V_TurnoverPacking_StrainFluctuationEscape_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3V_TurnoverPacking_StrainFluctuationEscape_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

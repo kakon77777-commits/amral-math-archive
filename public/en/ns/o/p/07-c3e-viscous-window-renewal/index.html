@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 / C3-E: Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-D compressed the surviving core toward the local/moderately local heterochiral forward frontier (unless the nonlocal route pays an amplitude compensation or the scaling assumption breaks down). This round asks: once $k\sim p\sim q\sim\lambda$ and the nonlocal suppression vanishes, can these local triads keep sustaining consistent amplitude, phase, time window, and genealogy at ever-higher frequencies? It first establishes heat-semigroup spectral-gap decay for the high-frequency tail, then combines this with the Duhamel formula to prove the Viscous-Window Renewal Theorem (Theorem 4.1): if the high-frequency tail rises from $\varepsilon$ to $A$ over $M$ viscous windows, then at least one window's nonlinear source must itself reach the same order of magnitude — stronger than C1b's statement that "the nonlinear source must be large over some large time interval," since it pins this down precisely to a short window of order $O((\nu\lambda_J^2)^{-1})$. Combined with C1's sequence, this gives the Viscous-window UV renewal chain (Corollary 6.1). It then defines the phase efficiency $\eta_\lambda=\mathcal P_\lambda/\mathcal M_\lambda\in[0,1]$ (actual positive production over maximal amplitude capacity — a purely exact normalized diagnostic, not a turbulence closure model) and the critical local amplitude $A_q^{\rm crit}=\lambda_q^{1/2}U_q$, and uses Bernstein and Hölder to establish an upper bound on local critical production, yielding the Coherence–Amplitude Tradeoff (Theorem 13.1): $\eta_qA_q^{\rm crit}\gtrsim\nu$ — low phase efficiency must be compensated by a large critical amplitude, and vice versa. The document explicitly notes this is not a contradiction: because when $A_q^{\rm crit}\sim A$, the $L^2$ energy cost is only $\lambda_q^{-1}$, which remains summable along an exponentially growing scale sequence. The paper's most important result is a no-go (Theorem 19.1 + §20): even after proving that every generation must renew within a shrinking viscous window ($\tau_n\sim\lambda_n^{-2}$, $\lambda_n=\lambda_0r^n$), $\sum_n\tau_n<\infty$ still holds — parabolic times are geometrically summable to begin with, so "residual time compression" is not enough to rule out an infinite cascade within finite time; it only proves that if such a genealogy exists, it must exhibit Zeno-like accelerating renewal. Residence-time compression ≠ regularity proof, and this must be explicitly preserved. The document therefore points out that the genuine remaining core obstruction must incorporate the sustained legal connection of a five-dimensional space–frequency–phase–helicity–time provenance structure, formally opening the next round, C3-F: Joint Phase-Space Ancestry Obstruction, which formally folds physical-space wave-packet provenance into the ETN/X-Integration proof route.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3E_ViscousWindow_PhaseEfficiency_Zeno_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/07-c3e-viscous-window-renewal/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/07-c3e-viscous-window-renewal/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/07-c3e-viscous-window-renewal/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/07-c3e-viscous-window-renewal/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>07 / C3-E: Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 07 / C3-E</span>
+      <span class="tag">C3-E · Key NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>07 / C3-E: Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier</h1>
+    <p class="h1-sub">C3-D compressed the surviving core toward the local/moderately local heterochiral forward frontier (unless the nonlocal route pays an amplitude compensation or the scaling assumption breaks down). This round asks: once $k\sim p\sim q\sim\lambda$ and the nonlocal suppression vanishes, can these local triads keep sustaining consistent amplitude, phase, time window, and genealogy at ever-higher frequencies? It first establishes heat-semigroup spectral-gap decay for the high-frequency tail, then combines this with the Duhamel formula to prove the Viscous-Window Renewal Theorem (Theorem 4.1): if the high-frequency tail rises from $\varepsilon$ to $A$ over $M$ viscous windows, then at least one window's nonlinear source must itself reach the same order of magnitude — stronger than C1b's statement that "the nonlinear source must be large over some large time interval," since it pins this down precisely to a short window of order $O((\nu\lambda_J^2)^{-1})$. Combined with C1's sequence, this gives the Viscous-window UV renewal chain (Corollary 6.1). It then defines the phase efficiency $\eta_\lambda=\mathcal P_\lambda/\mathcal M_\lambda\in[0,1]$ (actual positive production over maximal amplitude capacity — a purely exact normalized diagnostic, not a turbulence closure model) and the critical local amplitude $A_q^{\rm crit}=\lambda_q^{1/2}U_q$, and uses Bernstein and Hölder to establish an upper bound on local critical production, yielding the Coherence–Amplitude Tradeoff (Theorem 13.1): $\eta_qA_q^{\rm crit}\gtrsim\nu$ — low phase efficiency must be compensated by a large critical amplitude, and vice versa. The document explicitly notes this is not a contradiction: because when $A_q^{\rm crit}\sim A$, the $L^2$ energy cost is only $\lambda_q^{-1}$, which remains summable along an exponentially growing scale sequence. The paper's most important result is a no-go (Theorem 19.1 + §20): even after proving that every generation must renew within a shrinking viscous window ($\tau_n\sim\lambda_n^{-2}$, $\lambda_n=\lambda_0r^n$), $\sum_n\tau_n<\infty$ still holds — parabolic times are geometrically summable to begin with, so "residual time compression" is not enough to rule out an infinite cascade within finite time; it only proves that if such a genealogy exists, it must exhibit Zeno-like accelerating renewal. Residence-time compression ≠ regularity proof, and this must be explicitly preserved. The document therefore points out that the genuine remaining core obstruction must incorporate the sustained legal connection of a five-dimensional space–frequency–phase–helicity–time provenance structure, formally opening the next round, C3-F: Joint Phase-Space Ancestry Obstruction, which formally folds physical-space wave-packet provenance into the ETN/X-Integration proof route.</p>
+    <div class="claim-box">
+      Proves the Viscous-Window Renewal Theorem (the high-frequency tail cannot coast across viscous time by linear inheritance alone; it must repeatedly renew) and the Coherence–Amplitude Tradeoff. Key NO-GO: even shrinking parabolic time windows remain geometrically summable, so residence-time compression by itself does not rule out a Zeno cascade within finite time — time compression ≠ a regularity proof. The genuine obstruction shifts to five-dimensional space–frequency–phase–helicity–time genealogical consistency.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../06-c3d-cutoff-flux-signature/">06 / C3-D · The Cutoff-Flux Sign Theorem, the Helical-Kernel Nonlocality Exponent, and the Class-II Logarithmic Reversal</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../08-c3f-phase-space-ancestry-cone/">08 / C3-F · Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>8 / 67</div>
+    </div>
+    <blockquote class="cite">“residence-time compression ≠ regularity proof. It only proves that a singular genealogy, if it exists, must exhibit Zeno-like accelerated renewal.” — quoted from the paper's Section 20.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3E_ViscousWindow_PhaseEfficiency_Zeno_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3E_ViscousWindow_PhaseEfficiency_Zeno_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

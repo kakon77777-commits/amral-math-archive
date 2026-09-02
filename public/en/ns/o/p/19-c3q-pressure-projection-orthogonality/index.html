@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>19 / C3-Q: Pressure–Projection Orthogonality, Operator-Escape Localization, and the Harmonic-Matrix Compensation Debt · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-P produced two independent channels: operator escape and far-field pressure. This round asks: can the two channels be forced into mutual rigidity? The core is the Pressure–Projection Complement Theorem (Theorem 3.1): the orthogonal projection $P_{st}$ onto the strain-constraint subspace $L^2_{st}$ splits the full nonlinear term exactly into two complementary channels, the "projected operator" and the "pressure Hessian," via $\nabla^2p=-(I-P_{st})\mathcal N_{\rm raw}$. This directly yields the Pressure–Projection Pythagoras identity (Theorem 4.1): $\|\mathcal N_{\rm raw}\|_2^2=\|\mathcal N_{\rm proj}\|_2^2+\|\nabla^2p\|_2^2$ — pressure and the projected full strain nonlinearity are orthogonal over all of space, not two terms that can cancel against each other. The Pressure–Operator Cancellation No-Go (Theorem/Proposition 9) therefore formally forbids illegitimate arguments of the form "pressure is large $\Rightarrow$ the projected operator is small" (or the reverse inference) — the two can be simultaneously large, and any genuine coupling between them can only arise through mechanisms such as time evolution, localization, or eigen-geometry. The document also carefully notes that Miller's $\mathcal Q_{SV}$ is not one of the terms in this Pythagorean decomposition, so the theorem must not be misapplied to it. It localizes operator escape via a core/exterior cutoff (the Operator-Escape Localization Dichotomy, Theorem 13.1). The core new result on the pressure side is No Uniform Harmonic-Pressure Depletion (Theorem 17.1): a nonzero far-field harmonic pressure matrix, being traceless, must necessarily amplify in some direction and suppress in another, and so can never be a positive-definite damping operator — far-field pressure is an anisotropic redistribution, not a positive-definite dissipation. Finally, it derives the quantitative Far-Pressure Compensation Bound and Far-Pressure Enstrophy Debt (Theorems 24.1, 25.1): a far-field pressure compensation of fixed size forces the rescaled enstrophy to grow by at least $\kappa^2$ — compensation from farther away costs more, it is not free. This round's most important structural no-go appears in §40: the hope had been that operator escape and the far-field pressure matrix would be mutually incompatible, but exact analysis shows they are orthogonal in the full-space projection, with no simple norm contradiction — any genuine rigidity can only come from the two required geometries, within the same ancestry core, failing to synchronize across scales, and this remains OPEN.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/19-c3q-pressure-projection-orthogonality/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/19-c3q-pressure-projection-orthogonality/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/19-c3q-pressure-projection-orthogonality/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/19-c3q-pressure-projection-orthogonality/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>19 / C3-Q: Pressure–Projection Orthogonality, Operator-Escape Localization, and the Harmonic-Matrix Compensation Debt</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 19 / C3-Q</span>
+      <span class="tag">C3-Q · Pressure and the Operator Are Orthogonal</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>19 / C3-Q: Pressure–Projection Orthogonality, Operator-Escape Localization, and the Harmonic-Matrix Compensation Debt</h1>
+    <p class="h1-sub">C3-P produced two independent channels: operator escape and far-field pressure. This round asks: can the two channels be forced into mutual rigidity? The core is the Pressure–Projection Complement Theorem (Theorem 3.1): the orthogonal projection $P_{st}$ onto the strain-constraint subspace $L^2_{st}$ splits the full nonlinear term exactly into two complementary channels, the "projected operator" and the "pressure Hessian," via $\nabla^2p=-(I-P_{st})\mathcal N_{\rm raw}$. This directly yields the Pressure–Projection Pythagoras identity (Theorem 4.1): $\|\mathcal N_{\rm raw}\|_2^2=\|\mathcal N_{\rm proj}\|_2^2+\|\nabla^2p\|_2^2$ — pressure and the projected full strain nonlinearity are orthogonal over all of space, not two terms that can cancel against each other. The Pressure–Operator Cancellation No-Go (Theorem/Proposition 9) therefore formally forbids illegitimate arguments of the form "pressure is large $\Rightarrow$ the projected operator is small" (or the reverse inference) — the two can be simultaneously large, and any genuine coupling between them can only arise through mechanisms such as time evolution, localization, or eigen-geometry. The document also carefully notes that Miller's $\mathcal Q_{SV}$ is not one of the terms in this Pythagorean decomposition, so the theorem must not be misapplied to it. It localizes operator escape via a core/exterior cutoff (the Operator-Escape Localization Dichotomy, Theorem 13.1). The core new result on the pressure side is No Uniform Harmonic-Pressure Depletion (Theorem 17.1): a nonzero far-field harmonic pressure matrix, being traceless, must necessarily amplify in some direction and suppress in another, and so can never be a positive-definite damping operator — far-field pressure is an anisotropic redistribution, not a positive-definite dissipation. Finally, it derives the quantitative Far-Pressure Compensation Bound and Far-Pressure Enstrophy Debt (Theorems 24.1, 25.1): a far-field pressure compensation of fixed size forces the rescaled enstrophy to grow by at least $\kappa^2$ — compensation from farther away costs more, it is not free. This round's most important structural no-go appears in §40: the hope had been that operator escape and the far-field pressure matrix would be mutually incompatible, but exact analysis shows they are orthogonal in the full-space projection, with no simple norm contradiction — any genuine rigidity can only come from the two required geometries, within the same ancestry core, failing to synchronize across scales, and this remains OPEN.</p>
+    <div class="claim-box">
+      Proves that the pressure Hessian and the projected operator are orthogonal channels (an exact Pythagorean theorem), forbidding norm-cancellation arguments that infer one's size from the other's. Proves the far-field harmonic pressure matrix is always an anisotropic redistribution, never a positive-definite damping. Derives a quantitative far-field pressure enstrophy debt. Operator escape and far-field pressure currently show no algebraic contradiction — the two are orthogonal, but may still couple dynamically.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../18-c3p-operator-escape-far-pressure/">18 / C3-P · Operator Escape, the Far-Pressure Harmonic Matrix, and the Finite-Dimensionalization No-Go</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../20-c3r-multi-core-pressure-horizon/">20 / C3-R · Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>20 / 67</div>
+    </div>
+    <blockquote class="cite">“far pressure is anisotropic redistribution, not a positive-definite dissipation operator.” — quoted from the paper's own Section 17.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3Q_PressureProjection_OperatorLocalization_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

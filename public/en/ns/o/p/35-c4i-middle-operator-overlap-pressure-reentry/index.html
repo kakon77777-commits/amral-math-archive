@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>35 / C4-I: Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry · NS_O · NS · AMRAL</title>
+<meta name="description" content="This paper opens by picking up from C4-H, which already synchronized UV, middle strain, and the growth-aligned operator onto the same sequence of contracting record windows $J_j=(\tau_j,\tau_{j+1})$, each window carrying a middle-load integral lower bound $A_j$ and an operator-load integral lower bound $B_j$ — but had not yet proved same-instant overlap. C4-I attacks only two questions: what exactly is missing from genuine middle/operator same-window overlap, and when must pressure re-enter within the local adjoint core. The core is the Middle–Operator Capacity-to-Overlap Theorem (Theorem 5.1, pure measure inclusion–exclusion, $|E\cap F|\ge|E|+|F|-|J|$): it converts two independent integral lower bounds into a genuine overlap lower bound, provided the peak capacity (essential suprema $M$, $O$) is controlled. The document explicitly points out (§9, §11) that what is truly missing is not another marginally-divergent condition, but rather control of peak capacity and persistence — without an independent upper bound on the peak-to-average capacity ratio, integral information alone cannot force same-instant overlap; this is the Middle–Operator Peak-Capacity Desynchronization Debt. On the operator-angle side, defining $g=\zeta r_\nu$ as the operator's growth-aligned component, the Large-Ratio Non-Growth Routing theorem (Theorem C4-I.3) proves that a large Miller ratio without genuine growth ($g\le1$) must be either strongly anti-aligned ($g<-1$) or must carry a large orthogonal operator component $\|Q_\perp\|\ge\sqrt{R^2-1}$ — a far finer angular-dissipation classification than the plain difference $1-\zeta$. Citing Miller's own exact orthogonality result from 2026, $\langle P_{st}(\omega\otimes\omega),-\Delta S\rangle=0$, the document proves that the vorticity-quadratic term falls exactly within the growth-orthogonal subspace, so orthogonal congestion can only be borne by the vorticity-quadratic term or by orthogonal advection/strain-squared components (Theorem 18.1); while positive $\dot H^1$ growth itself can only be driven by advection alignment or strain-squared alignment (Theorem C4-I.4) — because of Miller orthogonality, the vorticity-quadratic term can never directly drive growth. The document also supplies a pure matrix-algebra counterexample (§22): taking the diagonal matrix $S=\operatorname{diag}(-2,-1,3)$, even though $\lambda_2=-1<0$, the local integrand can still be positive, proving that strain-squared-aligned $\dot H^1$ growth does not imply a pointwise positive middle eigenvalue $\lambda_2^+>0$. On pressure: exact whole-space orthogonality ($\langle\nabla^2p,-\Delta S\rangle=0$) means a growth-aligned operator cannot directly lower-bound pressure; but within the local adjoint core, C3-U's exact identity $M_\chi'=-B_\chi-P_\chi$ yields the Adjoint Mean-Rotation / Pressure Dichotomy (Theorem C4-I.5, a simple triangle inequality): a non-degenerate local quadratic mean driving force must be borne by either mean rotation or pressure; chaining this to C3-X's Hessian-sensitive pressure-oscillation bound gives Mean-Stability Forces Pressure Re-entry (Theorem C4-I.6). The round's core result is the Quadratic Forcing Three-Way Re-entry Theorem (Theorem C4-I.7): a large-magnitude local quadratic intensity must lead to one of matrix/spatial cancellation, mean rotation, or pressure concentration — pressure is not a universal consequence of the operator; pressure must re-enter only when the local quadratic driving force is coherent enough (not cancelled) and mean rotation has been sufficiently depleted. The document honestly lists a complete no-go catalogue (NG-I1 through NG-I5), confirming that C4's remaining genuine asynchronous degrees of freedom are no longer new physical channels, but two compensation mechanisms: temporal pulse separation, and pressure evasion via mean rotation or quadratic cancellation.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4I_MiddleOperatorOverlap_PressureReentry_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/35-c4i-middle-operator-overlap-pressure-reentry/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/35-c4i-middle-operator-overlap-pressure-reentry/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/35-c4i-middle-operator-overlap-pressure-reentry/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/35-c4i-middle-operator-overlap-pressure-reentry/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>35 / C4-I: Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 35 / C4-I</span>
+      <span class="tag">C4-I · Peak Capacity and Pressure Return</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>35 / C4-I: Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry</h1>
+    <p class="h1-sub">This paper opens by picking up from C4-H, which already synchronized UV, middle strain, and the growth-aligned operator onto the same sequence of contracting record windows $J_j=(\tau_j,\tau_{j+1})$, each window carrying a middle-load integral lower bound $A_j$ and an operator-load integral lower bound $B_j$ — but had not yet proved same-instant overlap. C4-I attacks only two questions: what exactly is missing from genuine middle/operator same-window overlap, and when must pressure re-enter within the local adjoint core. The core is the Middle–Operator Capacity-to-Overlap Theorem (Theorem 5.1, pure measure inclusion–exclusion, $|E\cap F|\ge|E|+|F|-|J|$): it converts two independent integral lower bounds into a genuine overlap lower bound, provided the peak capacity (essential suprema $M$, $O$) is controlled. The document explicitly points out (§9, §11) that what is truly missing is not another marginally-divergent condition, but rather control of peak capacity and persistence — without an independent upper bound on the peak-to-average capacity ratio, integral information alone cannot force same-instant overlap; this is the Middle–Operator Peak-Capacity Desynchronization Debt. On the operator-angle side, defining $g=\zeta r_\nu$ as the operator's growth-aligned component, the Large-Ratio Non-Growth Routing theorem (Theorem C4-I.3) proves that a large Miller ratio without genuine growth ($g\le1$) must be either strongly anti-aligned ($g<-1$) or must carry a large orthogonal operator component $\|Q_\perp\|\ge\sqrt{R^2-1}$ — a far finer angular-dissipation classification than the plain difference $1-\zeta$. Citing Miller's own exact orthogonality result from 2026, $\langle P_{st}(\omega\otimes\omega),-\Delta S\rangle=0$, the document proves that the vorticity-quadratic term falls exactly within the growth-orthogonal subspace, so orthogonal congestion can only be borne by the vorticity-quadratic term or by orthogonal advection/strain-squared components (Theorem 18.1); while positive $\dot H^1$ growth itself can only be driven by advection alignment or strain-squared alignment (Theorem C4-I.4) — because of Miller orthogonality, the vorticity-quadratic term can never directly drive growth. The document also supplies a pure matrix-algebra counterexample (§22): taking the diagonal matrix $S=\operatorname{diag}(-2,-1,3)$, even though $\lambda_2=-1<0$, the local integrand can still be positive, proving that strain-squared-aligned $\dot H^1$ growth does not imply a pointwise positive middle eigenvalue $\lambda_2^+>0$. On pressure: exact whole-space orthogonality ($\langle\nabla^2p,-\Delta S\rangle=0$) means a growth-aligned operator cannot directly lower-bound pressure; but within the local adjoint core, C3-U's exact identity $M_\chi'=-B_\chi-P_\chi$ yields the Adjoint Mean-Rotation / Pressure Dichotomy (Theorem C4-I.5, a simple triangle inequality): a non-degenerate local quadratic mean driving force must be borne by either mean rotation or pressure; chaining this to C3-X's Hessian-sensitive pressure-oscillation bound gives Mean-Stability Forces Pressure Re-entry (Theorem C4-I.6). The round's core result is the Quadratic Forcing Three-Way Re-entry Theorem (Theorem C4-I.7): a large-magnitude local quadratic intensity must lead to one of matrix/spatial cancellation, mean rotation, or pressure concentration — pressure is not a universal consequence of the operator; pressure must re-enter only when the local quadratic driving force is coherent enough (not cancelled) and mean rotation has been sufficiently depleted. The document honestly lists a complete no-go catalogue (NG-I1 through NG-I5), confirming that C4's remaining genuine asynchronous degrees of freedom are no longer new physical channels, but two compensation mechanisms: temporal pulse separation, and pressure evasion via mean rotation or quadratic cancellation.</p>
+    <div class="claim-box">
+      Proves that same-window middle/operator integrals alone are not enough to force same-instant overlap — what is truly missing is control of peak capacity/persistence. Proves that a large Miller ratio without growth must be either strongly anti-aligned or carry a large orthogonal operator component; the vorticity-quadratic term is exactly orthogonal to growth and can never directly drive it. A matrix counterexample proves that strain-squared-aligned growth does not imply a pointwise positive middle eigenvalue. An exact identity for the local adjoint core proves that non-degenerate local quadratic driving must be borne by either mean rotation or pressure — pressure is not a universal consequence of the operator.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../34-c4g-cross-congestion-operator-funnel-uv-closure/">34 / C4-G · Cross-Congestion Synchronization, Operator Funnel, and UV Phase-Space Closure</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../36-c4j-compensation-rigidity-final-synchronization-audit/">36 / C4-J · Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>36 / 67</div>
+    </div>
+    <blockquote class="cite">"pressure is NOT a universal operator consequent; it is: when local quadratic forcing is coherent and mean rotation is depleted, pressure must re-enter." — excerpted from §14 and §36 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4I_MiddleOperatorOverlap_PressureReentry_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4I_MiddleOperatorOverlap_PressureReentry_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

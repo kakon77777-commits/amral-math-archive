@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>38 / C5-B: Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-A caught a hard no-go: separately compactifying the middle-load measure $\mu_j^{mid}$ and the operator-growth measure $\mu_j^{op,+}$, even when the two are disjoint at every finite scale, can still let the weak limits homogenize into full overlap. C5-B's fix is to stop compactifying separately, and instead use a jointly colored temporal micro-state. Defining normalized load densities $f_j^M,f_j^+,f_j^-$ (each integrating to 1), it first lays down the most basic exact constraint: pointwise $[h_j]_+[-h_j]_+=0$ gives $f_j^+f_j^-=0$ almost everywhere — operator positive and negative growth are exactly mutually exclusive. Fixing a rational threshold $\vartheta=(a,b,c)$, the three loads are thresholded into a binary phase vector $X_j^\vartheta=(\chi_M,\chi_+,\chi_-)$; because positive and negative growth are mutually exclusive, the phase can only fall into a six-state alphabet $\mathcal A=\{000,100,010,001,110,101\}$, forbidding $011,111$. Pushing $(s,X_j^\vartheta(s))$ forward together gives a colored temporal Young measure $Y_j^\vartheta\in\mathcal P([0,1]\times\mathcal A)$, and proves Colored Temporal Young Compactness (Theorem 10.1): a subsequence converges weakly to $Y_\ast^\vartheta$, and because the rational thresholds are countable, a diagonal argument extracts a Temporal Phase Spectrum that holds simultaneously for all thresholds. Because $\mathcal A$ is finite and discrete, forbidden combinations (such as operator positive and negative both active, $F_{+-}$) are preserved exactly as measure zero in the weak limit — this is C5-B.2, Operator Sign-Exclusion Preservation. The round's key repair is C5-B.3 (Theorem 15.1): if the limiting co-active phase mass $C_{\ast,M+}^\vartheta>0$, then for sufficiently large $j$ this coefficient genuinely converges to a positive value — co-activation in the Young limit is not a weak-homogenization illusion; it corresponds to genuine finite-scale simultaneous overlap. Conversely (§16), if finite-scale separation is exact, then for every rational threshold the co-active mass is exactly zero, correctly repairing C5-A's alternating-lattice example: it correctly converges to a 50/50 mixture $\tfrac12\delta_{100}+\tfrac12\delta_{010}$, rather than the spurious $\delta_{110}$. But the Young measure is still not enough: if the load becomes ever more concentrated on measure-vanishing spikes (duty cycle tending to zero, while the total load integral remains 1), a Lebesgue-time Young state only sees the process as almost everywhere inactive. Borrowing, by structural analogy, DiPerna–Majda's oscillation-plus-concentration framework for weak limits of incompressible flow (explicitly stating that this is not building a DiPerna–Majda measure-valued solution for the velocity field $u$ itself, only borrowing the idea at the level of the record-window normalized time-compensation variable), the document defines the load-concentration modulus $\mathfrak c_f^\infty=\lim_{K\to\infty}\limsup_j\int_{\{f_j>K\}}f_j\in[0,1]$, and proves that uniform integrability gives a positive duty-cycle lower bound (Theorem 28.1, a clean three-step estimate), as well as Vanishing Duty Forces Full Concentration (Theorem 30.1: if the duty cycle tends to zero for every positive threshold, the concentration mass must be exactly, not merely approximately, equal to 1). The round's core result is the Temporal Coactivation–Oscillation–Concentration Trichotomy (Theorem 33.1): the normalized middle/operator load sequence must fall into at least one of three classes — B-COACT (genuine co-activation, finite-scale overlap genuinely present), B-OSC (both loads have zero concentration mass and positive duty cycle, yet microscopic separation is sustained by a nontrivial mixture of Young phases), or B-CONC (at least one load has positive mass entering a vanishing-duty-cycle high-amplitude spike). If co-activation is excluded, C4's temporal pulse separation is formally compressed into just two classical weak-limit defects: Oscillation or Concentration. The document also constructs a tagged Young measure binding the phase color to C5-A's operator-angle compact coordinate, proving the Phase–Angle Compatibility Theorem (the closed support of the positive-growth phase must satisfy $\gamma\ge1/2$; the reversed phase must satisfy $\gamma\le1/2$) — color and angle cannot be arbitrarily reassigned in the limit. Finally, the document honestly draws this stage's boundary (§40-41): the Young measure preserves only local phase proportions, not the order of the pulses — the sequences $M,+,M,+,\ldots$ and $M,M,+,+,M,M,+,+,\ldots$ are completely different microscopic arrangements, yet can converge to exactly the same Young measure as the microscale tends to zero; a fixed-lag correlation spectrum is introduced as a first attempt, but the document explicitly acknowledges that it still cannot capture a lag of the same order as the microscale itself. It formally hands off to C5-C, Temporal Correlation Defects, Transition Measures, and Causal Pulse Ordering, listing 8 specific proof targets (transition-pair measures, intrinsic microscale, two-scale Young states, operator compensation period, middle/operator causal order, concentration-state transition, pressure phase, and limit-cycle compatibility).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/38-c5b-temporal-young-pulse-phase-compatibility/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/38-c5b-temporal-young-pulse-phase-compatibility/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/38-c5b-temporal-young-pulse-phase-compatibility/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/38-c5b-temporal-young-pulse-phase-compatibility/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>38 / C5-B: Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 38 / C5-B</span>
+      <span class="tag">C5-B · Repairing Microscopic Pulse Separation</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>38 / C5-B: Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy</h1>
+    <p class="h1-sub">C5-A caught a hard no-go: separately compactifying the middle-load measure $\mu_j^{mid}$ and the operator-growth measure $\mu_j^{op,+}$, even when the two are disjoint at every finite scale, can still let the weak limits homogenize into full overlap. C5-B's fix is to stop compactifying separately, and instead use a jointly colored temporal micro-state. Defining normalized load densities $f_j^M,f_j^+,f_j^-$ (each integrating to 1), it first lays down the most basic exact constraint: pointwise $[h_j]_+[-h_j]_+=0$ gives $f_j^+f_j^-=0$ almost everywhere — operator positive and negative growth are exactly mutually exclusive. Fixing a rational threshold $\vartheta=(a,b,c)$, the three loads are thresholded into a binary phase vector $X_j^\vartheta=(\chi_M,\chi_+,\chi_-)$; because positive and negative growth are mutually exclusive, the phase can only fall into a six-state alphabet $\mathcal A=\{000,100,010,001,110,101\}$, forbidding $011,111$. Pushing $(s,X_j^\vartheta(s))$ forward together gives a colored temporal Young measure $Y_j^\vartheta\in\mathcal P([0,1]\times\mathcal A)$, and proves Colored Temporal Young Compactness (Theorem 10.1): a subsequence converges weakly to $Y_\ast^\vartheta$, and because the rational thresholds are countable, a diagonal argument extracts a Temporal Phase Spectrum that holds simultaneously for all thresholds. Because $\mathcal A$ is finite and discrete, forbidden combinations (such as operator positive and negative both active, $F_{+-}$) are preserved exactly as measure zero in the weak limit — this is C5-B.2, Operator Sign-Exclusion Preservation. The round's key repair is C5-B.3 (Theorem 15.1): if the limiting co-active phase mass $C_{\ast,M+}^\vartheta>0$, then for sufficiently large $j$ this coefficient genuinely converges to a positive value — co-activation in the Young limit is not a weak-homogenization illusion; it corresponds to genuine finite-scale simultaneous overlap. Conversely (§16), if finite-scale separation is exact, then for every rational threshold the co-active mass is exactly zero, correctly repairing C5-A's alternating-lattice example: it correctly converges to a 50/50 mixture $\tfrac12\delta_{100}+\tfrac12\delta_{010}$, rather than the spurious $\delta_{110}$. But the Young measure is still not enough: if the load becomes ever more concentrated on measure-vanishing spikes (duty cycle tending to zero, while the total load integral remains 1), a Lebesgue-time Young state only sees the process as almost everywhere inactive. Borrowing, by structural analogy, DiPerna–Majda's oscillation-plus-concentration framework for weak limits of incompressible flow (explicitly stating that this is not building a DiPerna–Majda measure-valued solution for the velocity field $u$ itself, only borrowing the idea at the level of the record-window normalized time-compensation variable), the document defines the load-concentration modulus $\mathfrak c_f^\infty=\lim_{K\to\infty}\limsup_j\int_{\{f_j>K\}}f_j\in[0,1]$, and proves that uniform integrability gives a positive duty-cycle lower bound (Theorem 28.1, a clean three-step estimate), as well as Vanishing Duty Forces Full Concentration (Theorem 30.1: if the duty cycle tends to zero for every positive threshold, the concentration mass must be exactly, not merely approximately, equal to 1). The round's core result is the Temporal Coactivation–Oscillation–Concentration Trichotomy (Theorem 33.1): the normalized middle/operator load sequence must fall into at least one of three classes — B-COACT (genuine co-activation, finite-scale overlap genuinely present), B-OSC (both loads have zero concentration mass and positive duty cycle, yet microscopic separation is sustained by a nontrivial mixture of Young phases), or B-CONC (at least one load has positive mass entering a vanishing-duty-cycle high-amplitude spike). If co-activation is excluded, C4's temporal pulse separation is formally compressed into just two classical weak-limit defects: Oscillation or Concentration. The document also constructs a tagged Young measure binding the phase color to C5-A's operator-angle compact coordinate, proving the Phase–Angle Compatibility Theorem (the closed support of the positive-growth phase must satisfy $\gamma\ge1/2$; the reversed phase must satisfy $\gamma\le1/2$) — color and angle cannot be arbitrarily reassigned in the limit. Finally, the document honestly draws this stage's boundary (§40-41): the Young measure preserves only local phase proportions, not the order of the pulses — the sequences $M,+,M,+,\ldots$ and $M,M,+,+,M,M,+,+,\ldots$ are completely different microscopic arrangements, yet can converge to exactly the same Young measure as the microscale tends to zero; a fixed-lag correlation spectrum is introduced as a first attempt, but the document explicitly acknowledges that it still cannot capture a lag of the same order as the microscale itself. It formally hands off to C5-C, Temporal Correlation Defects, Transition Measures, and Causal Pulse Ordering, listing 8 specific proof targets (transition-pair measures, intrinsic microscale, two-scale Young states, operator compensation period, middle/operator causal order, concentration-state transition, pressure phase, and limit-cycle compatibility).</p>
+    <div class="claim-box">
+      Fix: stop compactifying the middle/operator measures separately and instead use a jointly colored Young measure, proving its compactness and that it exactly preserves forbidden phase combinations. Key repair: positive co-active mass genuinely forces finite-scale overlap (not an illusion), and exact separation is likewise genuinely preserved as zero co-activation (the alternating example is repaired into a correct 50/50 mixture). But the Young measure cannot see concentrated spikes with vanishing duty cycle; borrowing the DiPerna-Majda oscillation-plus-concentration framework adds a load-concentration modulus, proving uniform integrability gives a positive duty cycle, and duty cycle vanishing everywhere forces concentration mass exactly 1. Core trichotomy: co-activation, body-phase-separated oscillation, or load concentration. Honestly acknowledges the Young measure does not preserve pulse ordering, handing off to C5-C.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../37-c5a-record-window-compensation-motif-compactness/">37 / C5-A · Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../39-c5c-temporal-correlation-cross-curvature-ordering/">39 / C5-C · Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>39 / 67</div>
+    </div>
+    <blockquote class="cite">"ordinary Young measure captures local phase fractions, not temporal ordering." — excerpted from §40 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5B_TemporalYoung_PulsePhaseCompatibility_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

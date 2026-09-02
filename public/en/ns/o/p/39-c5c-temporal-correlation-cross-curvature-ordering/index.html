@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>39 / C5-C: Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-B left a clear gap: the Young measure knows phase proportions but not their order — $M,+,M,+,\ldots$ and $M,M,+,+,\ldots$ can share the same local Young distribution. C5-C no longer works with fixed-lag statistics alone, and returns directly to the genuine strain energies $E_0=\tfrac12\|S\|_2^2$, $E_1=\tfrac12\|S\|_{\dot H^1}^2$. The strain identity $E_0'+2\nu E_1=a(t)$ ($a=-2\int\det S\,dx$), combined with C4-H's pointwise matrix inequality $a\le m$ (the middle-strain load), defines the middle slack $q=m-a\ge0$, giving the exact identity $m=E_0'+2\nu E_1+q$. Along record-window normalized time, four cumulative paths are defined — supply $C_j(s)$, strain-dissipation demand $D_j(s)$, middle slack $Q_j(s)$, and $E_0$-record displacement $R_j(s)$ — and the document proves the exact middle cumulative ledger (Theorem 7.1): $C_j=R_j+D_j+Q_j$ holds for all $s$, all four paths are monotone and bounded, and Helly selection gives compactness. C5-C.2, the Middle Supply-Deficit Budget (Theorem 13.1), proves that the portion by which demand exceeds supply has a hard budget upper bound, $\int[d_j-c_j]_+ds\le1-\alpha_j^{mid}$ — demand cannot stay ahead of supply for long without paying for it via a negative change in $E_0$; the total deficit budget is exactly the share of the middle load that failed to become recorded $E_0$ growth. On the operator positive/negative growth side, an exact BV record path $G_j(s)=C_j^+(s)-C_j^-(s)$ is built, proving Operator BV Compactness (Theorem 22.1) and defining the Operator Variation-Cancellation Defect, which quantifies the microscopic variation that cancels itself out within the BV limit. The round's core result is the Cross-Curvature Variation Identity (Theorem 27.1): differentiating the demand rate $d_j(s)$ gives exactly $Dd_j=\kappa_j^{MO}(\mu_j^{op,+}-\mu_j^{op,-})$, and remarkably $\kappa_j^{MO}=\operatorname{Var}_{[0,1]}d_j$ holds exactly — the operator's positive/negative growth phase is not an arbitrary temporal label; it is exactly the source of convexity/concavity of the normalized strain-dissipation demand rate: $O^+$ is exactly the source of $d_j$'s convexity, $O^-$ exactly the source of its concavity. Taking a subsequence of the cross-curvature number $\kappa_j^{MO}$ can only land in one of three states: C-K0 (vanishing, the demand rate weakens to a constant), C-KF (finite and nonzero, giving a bounded-variation transition closure, though it may still leave a positive curvature-variation defect, meaning finite-scale rapid switching that cancels itself out in the limiting rate), or C-K∞ (curvature congestion, variation diverging — precisely the normalized curvature profile of C5-B's operator-phase measure under this state). Fixing an upper bound on the number of amplitude crossings $N_j^{a\uparrow b}\le\kappa_j^{MO}/(b-a)$ further quantifies the number of transitions under bounded curvature. Combining the supply/demand/operator-sign tri-tagged measure, the document proves Anti-Phase Growth Causes Negative Enstrophy Drift (Theorem 40.1): if positive operator growth occurs while the middle supply is clearly below the dissipation demand, this forces $E_0'<0$ exactly. But the round's most important honest conclusion is a no-go (§45-48, the Scalar Temporal Ordering No-Go): the document explicitly constructs an abstract scalar ledger (a piecewise-linear demand rate $d(s)$, with supply $c(s)$ completely separated into the first and second halves) that simultaneously satisfies a positive final $E_0$ record drift, positive operator-demand acceleration, exact middle/operator temporal separation, and the exact cumulative ledger — proving that relying solely on the scalar $E_0$/$E_1$ identities still fully permits a separated compensation cycle $O^+\to M$, or in reverse $M\to O^+$; it explicitly states that this does not prove N-S genuinely realizes such a pattern, only that the scalar temporal identities by themselves are not enough to exclude it. The document therefore formally declares that the returns on the purely temporal, purely scalar level have been exhausted, and hands off to C5-D, Spatial–Matrix Motif Compatibility: Strain Cones, Quadratic Barycenters, and Pressure Defects, whose task is to place the strain cone, the quadratic-tensor barycenter, the pressure-matrix direction, the seven-point witnesses, and the temporal phase all into the same recurrent limit.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/39-c5c-temporal-correlation-cross-curvature-ordering/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/39-c5c-temporal-correlation-cross-curvature-ordering/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/39-c5c-temporal-correlation-cross-curvature-ordering/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/39-c5c-temporal-correlation-cross-curvature-ordering/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>39 / C5-C: Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 39 / C5-C</span>
+      <span class="tag">C5-C · Operator Phase Reconnected to PDE Curvature</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>39 / C5-C: Temporal Correlation Defects, Cross-Curvature Transition Measures, and Causal Pulse Ordering</h1>
+    <p class="h1-sub">C5-B left a clear gap: the Young measure knows phase proportions but not their order — $M,+,M,+,\ldots$ and $M,M,+,+,\ldots$ can share the same local Young distribution. C5-C no longer works with fixed-lag statistics alone, and returns directly to the genuine strain energies $E_0=\tfrac12\|S\|_2^2$, $E_1=\tfrac12\|S\|_{\dot H^1}^2$. The strain identity $E_0'+2\nu E_1=a(t)$ ($a=-2\int\det S\,dx$), combined with C4-H's pointwise matrix inequality $a\le m$ (the middle-strain load), defines the middle slack $q=m-a\ge0$, giving the exact identity $m=E_0'+2\nu E_1+q$. Along record-window normalized time, four cumulative paths are defined — supply $C_j(s)$, strain-dissipation demand $D_j(s)$, middle slack $Q_j(s)$, and $E_0$-record displacement $R_j(s)$ — and the document proves the exact middle cumulative ledger (Theorem 7.1): $C_j=R_j+D_j+Q_j$ holds for all $s$, all four paths are monotone and bounded, and Helly selection gives compactness. C5-C.2, the Middle Supply-Deficit Budget (Theorem 13.1), proves that the portion by which demand exceeds supply has a hard budget upper bound, $\int[d_j-c_j]_+ds\le1-\alpha_j^{mid}$ — demand cannot stay ahead of supply for long without paying for it via a negative change in $E_0$; the total deficit budget is exactly the share of the middle load that failed to become recorded $E_0$ growth. On the operator positive/negative growth side, an exact BV record path $G_j(s)=C_j^+(s)-C_j^-(s)$ is built, proving Operator BV Compactness (Theorem 22.1) and defining the Operator Variation-Cancellation Defect, which quantifies the microscopic variation that cancels itself out within the BV limit. The round's core result is the Cross-Curvature Variation Identity (Theorem 27.1): differentiating the demand rate $d_j(s)$ gives exactly $Dd_j=\kappa_j^{MO}(\mu_j^{op,+}-\mu_j^{op,-})$, and remarkably $\kappa_j^{MO}=\operatorname{Var}_{[0,1]}d_j$ holds exactly — the operator's positive/negative growth phase is not an arbitrary temporal label; it is exactly the source of convexity/concavity of the normalized strain-dissipation demand rate: $O^+$ is exactly the source of $d_j$'s convexity, $O^-$ exactly the source of its concavity. Taking a subsequence of the cross-curvature number $\kappa_j^{MO}$ can only land in one of three states: C-K0 (vanishing, the demand rate weakens to a constant), C-KF (finite and nonzero, giving a bounded-variation transition closure, though it may still leave a positive curvature-variation defect, meaning finite-scale rapid switching that cancels itself out in the limiting rate), or C-K∞ (curvature congestion, variation diverging — precisely the normalized curvature profile of C5-B's operator-phase measure under this state). Fixing an upper bound on the number of amplitude crossings $N_j^{a\uparrow b}\le\kappa_j^{MO}/(b-a)$ further quantifies the number of transitions under bounded curvature. Combining the supply/demand/operator-sign tri-tagged measure, the document proves Anti-Phase Growth Causes Negative Enstrophy Drift (Theorem 40.1): if positive operator growth occurs while the middle supply is clearly below the dissipation demand, this forces $E_0'<0$ exactly. But the round's most important honest conclusion is a no-go (§45-48, the Scalar Temporal Ordering No-Go): the document explicitly constructs an abstract scalar ledger (a piecewise-linear demand rate $d(s)$, with supply $c(s)$ completely separated into the first and second halves) that simultaneously satisfies a positive final $E_0$ record drift, positive operator-demand acceleration, exact middle/operator temporal separation, and the exact cumulative ledger — proving that relying solely on the scalar $E_0$/$E_1$ identities still fully permits a separated compensation cycle $O^+\to M$, or in reverse $M\to O^+$; it explicitly states that this does not prove N-S genuinely realizes such a pattern, only that the scalar temporal identities by themselves are not enough to exclude it. The document therefore formally declares that the returns on the purely temporal, purely scalar level have been exhausted, and hands off to C5-D, Spatial–Matrix Motif Compatibility: Strain Cones, Quadratic Barycenters, and Pressure Defects, whose task is to place the strain cone, the quadratic-tensor barycenter, the pressure-matrix direction, the seven-point witnesses, and the temporal phase all into the same recurrent limit.</p>
+    <div class="claim-box">
+      Returns to the genuine strain-energy identity, proving the exact middle cumulative ledger C=R+D+Q and its compactness, and that the supply deficit has a hard budget upper bound. Core new result: the cross-curvature identity proves that the operator's positive/negative growth phase is exactly the convexity/concavity source of the normalized strain-dissipation demand rate, with curvature variation exactly equal to total operator variation — three curvature states (vanishing/finite/congested) classify the transitions. But an explicit abstract scalar-ledger counterexample proves that the scalar energy identities alone still fully permit a separated O+→M compensation cycle — the scalar level alone cannot exclude it. Returns on the purely temporal scalar level are exhausted; hands off to C5-D, moving to the spatial-matrix level.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../38-c5b-temporal-young-pulse-phase-compatibility/">38 / C5-B · Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../40-c5d-spatial-matrix-quadratic-pressure-obstruction/">40 / C5-D · Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>40 / 67</div>
+    </div>
+    <blockquote class="cite">"operator positive/negative growth phase is exactly equal to the convexity/concavity source of the normalized strain-dissipation demand rate — but scalar temporal identities alone still allow a fully separated compensation cycle." — excerpted from §27 and §48 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5C_TemporalCorrelation_CrossCurvatureOrdering_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

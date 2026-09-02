@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>00: ETN–X Integration Refactor · NS_O · NS · AMRAL</title>
+<meta name="description" content="The framework-founding document for the entire series: Section 0 opens with a "research status and non-claims statement," listing eight explicit non-claims — it does not claim to have proven global regularity, does not claim to have constructed finite-time blow-up, does not claim that True ETN itself implies PDE regularity, does not claim that the X-Integration itself excludes singularity, does not claim that smoothness on an arbitrary numerical lattice directly implies continuum smoothness, does not claim that energy conservation or helicity alone suffices to control three-dimensional N–S, does not claim that the X-legal chain is fully equivalent to existing cascade/frequency-envelope/concentration-compactness notions, and does not claim that this paper's new terminology already carries external mathematical priority. Core construction: writes incompressible N–S as a Duhamel fixed-point problem $u=\Phi[u]$ under the Leray projector; uses a Littlewood–Paley decomposition to define the True ETN state $\Theta_{\rm NS}(t)=\{X_j(t)\}$, with each scale recording amplitude, vorticity, energy, nonlinear transfer, dissipation, provenance, and parent interaction; builds an N–S-specific X-Guard family (ten guards: type, divergence-free, frequency-support, triad, provenance, boundary, conservation, scale, regularity, persistence), with the core rule that "a single legal transfer does not imply an infinite cascade is legal"; cites Tao's counterexample for averaged N–S (the energy identity can be preserved while blow-up is still constructible) to establish the externally known obstruction that "the energy identity alone is not sufficient"; cites Biferale–Titi showing that helicity sign structure genuinely provides additional coercive control, but positions it as one chart of ETN, not the sole mechanism. The document's hardest result is Proposition 8.1: if $T_\ast$ is a genuine blow-up time, then for every fixed dyadic cutoff $J$, the high-frequency tail $\|P_{>J}u(t)\|_{L^3}$ must diverge as $t\uparrow T_\ast$ — proved using only the known critical $L^3$ blow-up criterion plus the Bernstein inequality. On this basis it defines the X-legal ultraviolet concentration chain (requiring a complete certificate of provenance, scale, triad, boundary, regularity, transfer, and guard status at every step, and disallowing artificial high-frequency nodes whose "provenance vanishes"), and poses the series' real core architecture: C1 (Chain Necessity) — blow-up must generate an X-legal UV chain; C2 (Finite Obstruction) — any such chain must be blocked by genuine N–S structure at some finite scale. If both are proved, then blow-up ⟹ a chain exists, but ¬(a chain exists), hence ¬blow-up. The document appends a five-stage roadmap (N0 compiler → N1 exact UV necessity → N2 Chain Necessity → N3 guard census → N4 finite-obstruction theorem → N5 formal-proof audit, requiring the removal of all dependence on ETN/X terminology to ensure the conclusion is not smuggled in).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/00-etn-x-integration/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/00-etn-x-integration/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/00-etn-x-integration/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/00-etn-x-integration/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>00: ETN–X Integration Refactor</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 00</span>
+      <span class="tag">v0.1 · Framework Foundation</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>00: ETN–X Integration Refactor</h1>
+    <p class="h1-sub">The framework-founding document for the entire series: Section 0 opens with a "research status and non-claims statement," listing eight explicit non-claims — it does not claim to have proven global regularity, does not claim to have constructed finite-time blow-up, does not claim that True ETN itself implies PDE regularity, does not claim that the X-Integration itself excludes singularity, does not claim that smoothness on an arbitrary numerical lattice directly implies continuum smoothness, does not claim that energy conservation or helicity alone suffices to control three-dimensional N–S, does not claim that the X-legal chain is fully equivalent to existing cascade/frequency-envelope/concentration-compactness notions, and does not claim that this paper's new terminology already carries external mathematical priority. Core construction: writes incompressible N–S as a Duhamel fixed-point problem $u=\Phi[u]$ under the Leray projector; uses a Littlewood–Paley decomposition to define the True ETN state $\Theta_{\rm NS}(t)=\{X_j(t)\}$, with each scale recording amplitude, vorticity, energy, nonlinear transfer, dissipation, provenance, and parent interaction; builds an N–S-specific X-Guard family (ten guards: type, divergence-free, frequency-support, triad, provenance, boundary, conservation, scale, regularity, persistence), with the core rule that "a single legal transfer does not imply an infinite cascade is legal"; cites Tao's counterexample for averaged N–S (the energy identity can be preserved while blow-up is still constructible) to establish the externally known obstruction that "the energy identity alone is not sufficient"; cites Biferale–Titi showing that helicity sign structure genuinely provides additional coercive control, but positions it as one chart of ETN, not the sole mechanism. The document's hardest result is Proposition 8.1: if $T_\ast$ is a genuine blow-up time, then for every fixed dyadic cutoff $J$, the high-frequency tail $\|P_{>J}u(t)\|_{L^3}$ must diverge as $t\uparrow T_\ast$ — proved using only the known critical $L^3$ blow-up criterion plus the Bernstein inequality. On this basis it defines the X-legal ultraviolet concentration chain (requiring a complete certificate of provenance, scale, triad, boundary, regularity, transfer, and guard status at every step, and disallowing artificial high-frequency nodes whose "provenance vanishes"), and poses the series' real core architecture: C1 (Chain Necessity) — blow-up must generate an X-legal UV chain; C2 (Finite Obstruction) — any such chain must be blocked by genuine N–S structure at some finite scale. If both are proved, then blow-up ⟹ a chain exists, but ¬(a chain exists), hence ¬blow-up. The document appends a five-stage roadmap (N0 compiler → N1 exact UV necessity → N2 Chain Necessity → N3 guard census → N4 finite-obstruction theorem → N5 formal-proof audit, requiring the removal of all dependence on ETN/X terminology to ensure the conclusion is not smuggled in).</p>
+    <div class="claim-box">
+      Establishes the ETN/X-Integration layered language for N–S; proves Proposition 8.1 (blow-up ⟹ the high-frequency tail beyond any fixed cutoff diverges); defines the X-legal UV chain; poses the core architecture C1 (Chain Necessity) + C2 (Finite Obstruction) ⟹ ¬Blowup. Both core propositions remain unproven. Does not claim to have solved the Clay Millennium Prize Problem.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next</span><a href="../01-c1-uv-replenishment-chain/">01 · C1: High-Frequency Escape and the Nonlinear UV Replenishment Chain</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>1 / 67</div>
+    </div>
+    <blockquote class="cite">“This paper's main contribution is not to claim a solution to Navier–Stokes, but to recompress the question of whether a singularity forms into a falsifiable, stratifiable, certifiable multiscale legality problem.” — quoted from the paper's own abstract.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

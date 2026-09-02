@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>29 / C4-B: Temporal Synchronization, Pulse-Capacity, and Carrier-Relay No-Go · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4-A already proved that if a necessary channel remains persistently active within the same viscous window (the sum of inactive fractions less than 1), it is forced to synchronize; conversely, a permanently asynchronous path must force the sum of inactive fractions to satisfy $\ge1$, and the finite channel family guarantees the existence of at least one recurrent desynchronizer. C4-B originally set out to attack the question: can this recurrent desynchronizer shut down and restart infinitely many times within the transition-cost budget already proved in C3, without ever going over budget? This round's answer is no — generic turnover rigidity is not enough to force synchronization — and the reasons split precisely into four kinds. The Pulse-to-Persistence Lemma (Theorem 3.1) proves that a lower bound on duty cycle requires the total integral together with an upper bound on peak amplitude to hold simultaneously — divergence of the integral alone is not enough: if the peak $M_n\to\infty$ faster than the average load, the duty cycle can still tend to zero. This is Pulse-Capacity Escape, and it also happens to explain the mechanism behind C4-A's own construction of two separately-divergent channels with zero overlap. The Finite-Variation Switching Lemma (Theorem 9.1) looks as if it could defeat the recurrent desynchronizer — completing one full $\alpha\to\beta$ hysteresis cycle on a fixed scalar carrier requires at least a fixed variation, and finite total variation permits only finitely many complete switches — but the Carrier-Relay Construction (§12) supplies a decisive counterexample: the same channel type need not keep reusing the same absolute carrier (shell, location, packet) — each generation can instead activate a brand-new carrier, pulse once, and never use it again, so that a finite-variation-per-carrier bound never touches it at all. The document checks this directly against C3-K's own weighted hysteresis count $\sum w_qN_q^{up}<\infty$ and confirms that infinitely many geometric shells each crossing upward exactly once ($N_q^{up}=1$) is fully compatible with that budget. Stronger still is the Generation Desynchronization No-Go (§15-16): two channels each recurring infinitely often in no way implies the existence of infinitely many shared generations (an explicit odd/even generation-separation counterexample) — what is needed is block-density persistence, not mere infinite recurrence. The round's central verdict is the Summable-Weight No-Go (Theorem 20.1) together with a geometric-ancestry-scale audit (§21-22): for every $\alpha>0$, $\sum R_n^\alpha<\infty$ — meaning that every summable transition-cost budget C3 has so far proved (quadratic strain rotation, average pressure rotation, fixed-shell hysteresis, sustained-cone-degeneration pressure debt) is synchronization-subcritical: not one of them can by itself forbid one $O(1)$ switching/rotation/activation event per generation — while the genuinely critical costs that must diverge (middle strain, critical helicity) are themselves exactly the divergence that blow-up requires, and so likewise cannot serve as a finite synchronization budget. The document adds four hard guards (G-RELAY, G-PULSE, G-GEN, G-WEIGHT) to block lazy versions of these arguments, and makes a key strategic pivot (§34-39): C4 should no longer rely on generic arguments of the form that switching every generation contradicts total variation, but should instead go looking for a genuinely N–S-specific event — some nonlinear event that itself simultaneously produces two or more necessary loads, so that they simply cannot freely stagger in time, change generation, or change carrier. The document already lists candidate pairings (UV replenishment paired with helical pair production, strain self-amplification paired with Miller operator escape, pressure rotation paired with strain growth — currently the most synchronized pairing, though pressure can support or oppose it and need not be positive, strain intermittency paired with the derivative-geometry gate), and the next round formally attacks Shared-Event Coupling.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4B_TemporalSynchronization_CarrierRelayNoGo_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/29-c4b-temporal-synchronization-carrier-relay-nogo/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/29-c4b-temporal-synchronization-carrier-relay-nogo/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>29 / C4-B: Temporal Synchronization, Pulse-Capacity, and Carrier-Relay No-Go</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 29 / C4-B</span>
+      <span class="tag">C4-B · Generic Transition-Cost NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>29 / C4-B: Temporal Synchronization, Pulse-Capacity, and Carrier-Relay No-Go</h1>
+    <p class="h1-sub">C4-A already proved that if a necessary channel remains persistently active within the same viscous window (the sum of inactive fractions less than 1), it is forced to synchronize; conversely, a permanently asynchronous path must force the sum of inactive fractions to satisfy $\ge1$, and the finite channel family guarantees the existence of at least one recurrent desynchronizer. C4-B originally set out to attack the question: can this recurrent desynchronizer shut down and restart infinitely many times within the transition-cost budget already proved in C3, without ever going over budget? This round's answer is no — generic turnover rigidity is not enough to force synchronization — and the reasons split precisely into four kinds. The Pulse-to-Persistence Lemma (Theorem 3.1) proves that a lower bound on duty cycle requires the total integral together with an upper bound on peak amplitude to hold simultaneously — divergence of the integral alone is not enough: if the peak $M_n\to\infty$ faster than the average load, the duty cycle can still tend to zero. This is Pulse-Capacity Escape, and it also happens to explain the mechanism behind C4-A's own construction of two separately-divergent channels with zero overlap. The Finite-Variation Switching Lemma (Theorem 9.1) looks as if it could defeat the recurrent desynchronizer — completing one full $\alpha\to\beta$ hysteresis cycle on a fixed scalar carrier requires at least a fixed variation, and finite total variation permits only finitely many complete switches — but the Carrier-Relay Construction (§12) supplies a decisive counterexample: the same channel type need not keep reusing the same absolute carrier (shell, location, packet) — each generation can instead activate a brand-new carrier, pulse once, and never use it again, so that a finite-variation-per-carrier bound never touches it at all. The document checks this directly against C3-K's own weighted hysteresis count $\sum w_qN_q^{up}<\infty$ and confirms that infinitely many geometric shells each crossing upward exactly once ($N_q^{up}=1$) is fully compatible with that budget. Stronger still is the Generation Desynchronization No-Go (§15-16): two channels each recurring infinitely often in no way implies the existence of infinitely many shared generations (an explicit odd/even generation-separation counterexample) — what is needed is block-density persistence, not mere infinite recurrence. The round's central verdict is the Summable-Weight No-Go (Theorem 20.1) together with a geometric-ancestry-scale audit (§21-22): for every $\alpha>0$, $\sum R_n^\alpha<\infty$ — meaning that every summable transition-cost budget C3 has so far proved (quadratic strain rotation, average pressure rotation, fixed-shell hysteresis, sustained-cone-degeneration pressure debt) is synchronization-subcritical: not one of them can by itself forbid one $O(1)$ switching/rotation/activation event per generation — while the genuinely critical costs that must diverge (middle strain, critical helicity) are themselves exactly the divergence that blow-up requires, and so likewise cannot serve as a finite synchronization budget. The document adds four hard guards (G-RELAY, G-PULSE, G-GEN, G-WEIGHT) to block lazy versions of these arguments, and makes a key strategic pivot (§34-39): C4 should no longer rely on generic arguments of the form that switching every generation contradicts total variation, but should instead go looking for a genuinely N–S-specific event — some nonlinear event that itself simultaneously produces two or more necessary loads, so that they simply cannot freely stagger in time, change generation, or change carrier. The document already lists candidate pairings (UV replenishment paired with helical pair production, strain self-amplification paired with Miller operator escape, pressure rotation paired with strain growth — currently the most synchronized pairing, though pressure can support or oppose it and need not be positive, strain intermittency paired with the derivative-geometry gate), and the next round formally attacks Shared-Event Coupling.</p>
+    <div class="claim-box">
+      Proves that generic transition cost cannot force synchronization, via four structural escape routes: peak-pulse escape (a divergent integral can be paid off with narrow, tall pulses), carrier relay (each generation switches to a new carrier, so the old budget never touches it), cross-generation routing (each channel recurring infinitely often does not imply a shared generation), and the summable-weight barrier (any power is summable at the geometric ancestry scale, so it cannot forbid an O(1) event per generation). All of C3's transition budgets are formally ruled "synchronization-subcritical." Strategic pivot: abandon generic switching-cost arguments and instead look for genuine N-S shared-event coupling.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../28-c4a-unified-survivor-state-synchronization-closure/">28 / C4-A · Unified Survivor State, Synchronization Debt, and Transition Closure</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../30-c4c-shared-event-coupling-amplitude-flux-barrier/">30 / C4-C · Carrier Relay, Shared-Event Coupling, and the Amplitude-to-Flux Barrier</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>30 / 67</div>
+    </div>
+    <blockquote class="cite">"Don't chase generic synchronization; find true N–S shared-event coupling." — excerpted from §39 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4B_TemporalSynchronization_CarrierRelayNoGo_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4B_TemporalSynchronization_CarrierRelayNoGo_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45 / C5-I: Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-H formally declared the static all-order effective-volume closure scheme dead; C5-I is the first round to treat <strong>component/sign one-dimensional micro-geometry</strong> as the primary object, rather than an appendage of volume geometry. It faithfully encodes the exponentially separated derivative sections of Grujić–Xu's Definition 3.15, the section maxima $m_i$, and Type-$\mathcal A$/Type-$\mathcal B$ strings. It defines the exact 1D chord occupancy rate $b_E(x_0,r,[\nu])$ and the best directional occupancy $\beta_E=\inf_{[\nu]}b_E$ — Theorem 3.14's spatial passage condition is precisely "every dangerous base point has a direction/scale with occupancy $\le\delta$." If the spatial condition genuinely fails, it produces an <strong>everywhere sign-thick bad core</strong>: at the maximal chain-scale radius, the occupancy in <strong>every</strong> projection direction is $>\delta$. **C5-I.1 Angular Sign-Core Compactness** proves that the recurrent bad core's angular profile $b_n$ weak-* compactifies in $L^\infty(\mathbb{RP}^2)$, with the limit $\ge\delta$ almost everywhere — a genuine mathematical object, not just a label; two limiting types result: strictly thick ($\beta_\ast>\delta$) or a <strong>harmonic critical saturation defect</strong> ($\beta_\ast=\delta$, a finite-order failure approaching the theorem threshold rather than violating it). A bad core is not a free escape: first, Solynin's harmonic-measure lower bound (§12) confirms that the external contraction mechanism falls within the published theorem's scope; then the contrapositive of "3D $\delta^3$ sparseness ⟹ 1D $\delta$ sparseness" (**C5-I.2**) forces a genuine local $L^2$ derivative concentration, which links directly to C5-H's spectral-cell multiplicity (the bad-core fraction $\Phi_k^{bad}\gtrsim(r_k\Lambda_k)^3/\mathfrak N_k$); the number of disjoint bad cores is likewise controlled by this same multiplicity. <strong>The round's central new bridge is C5-I.3 Sign-Thick Chord Descent Lemma</strong>: integrating a chosen derivative component along a coordinate line through the bad core, combined with the everywhere lower bound $\ge-A_k$, forces exactly a <strong>lower bound on the one-order-lower amplitude</strong>, $A_{k-1}\ge\kappa_{\lambda,\delta}r_kA_k$ (with $\kappa_{\lambda,\delta}=(1+\lambda)\delta-1>0$, coming directly from the theorem's own tuning-constant constraint), holding for both signs, which converts into Grujić–Xu's own normalized chain-root notation $\mathcal R(k-1,c,s)\ge d_k(c)\mathcal R(k,c,s)$. <strong>The headline result, C5-I.4 Harmonic-or-Descent Dichotomy</strong>: at every order, it is either <strong>harmonic passage</strong> or <strong>a descent-order cost</strong>. Conversely (§28, C5-I.5), if the adjacent root ascends steeply enough ($\mathcal R(k)>d_k^{-1}\mathcal R(k-1)$), descent is impossible, directly forcing spatial-geometry passage — <strong>the first time C5 forces sign geometry directly from amplitude-chain shape</strong> — generalized to a same-time-interval Type-A Puncture Criterion: a sufficiently strong same-time ascent gain implies the entire interval cannot be sign-thick throughout — at least one order genuinely passes. It also explicitly clarifies Type-B compatibility: descent cost is geometrically compatible with Type-B (descending) behavior, but the published Theorem 3.9/Corollary 3.12 are specifically designed for stable descending chains, so <strong>Type-B is not a free hypothetical singular survivor</strong>. <strong>The most important honest hard rule (§45)</strong>: different derivative orders are evaluated in the theorem at <strong>different</strong> admissible later times, and a same-time descent inequality <strong>cannot be multiplied across orders unconditionally</strong> to form an all-order contradiction — this is exactly where the published paper's dynamic-interpolation mechanism (Lemma 3.16/3.17 tracking Type-A↔B switching) is genuinely needed, and C5-I explicitly does not claim to have solved this timing-stitching problem. The round also precisely clarifies that the sign-geometry defect is not an independent Boolean failure — it is simultaneously coupled to descent-order cost and local $L^2$ concentration, splitting into three distinct recurrent motifs: single/few cores, multi-core multiplicity, and small-core fraction. Formally hands off to <strong>C5-J — Line-Section Sign Processes, Order-to-Order Descent Coupling, and Harmonic Critical Saturation</strong>, with 8 targets left to prove.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5I_SignGeometry_Chain_HarmonicCompatibility_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/45-c5i-sign-geometry-chain-harmonic-compatibility/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/45-c5i-sign-geometry-chain-harmonic-compatibility/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/45-c5i-sign-geometry-chain-harmonic-compatibility/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/45-c5i-sign-geometry-chain-harmonic-compatibility/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>45 / C5-I: Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 45 / C5-I</span>
+      <span class="tag">C5-I · Sign Geometry Reconnected to the Amplitude Chain</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>45 / C5-I: Derivative Sign-Geometry Defects, Chain Sections, and Harmonic-Measure Compatibility</h1>
+    <p class="h1-sub">C5-H formally declared the static all-order effective-volume closure scheme dead; C5-I is the first round to treat <strong>component/sign one-dimensional micro-geometry</strong> as the primary object, rather than an appendage of volume geometry. It faithfully encodes the exponentially separated derivative sections of Grujić–Xu's Definition 3.15, the section maxima $m_i$, and Type-$\mathcal A$/Type-$\mathcal B$ strings. It defines the exact 1D chord occupancy rate $b_E(x_0,r,[\nu])$ and the best directional occupancy $\beta_E=\inf_{[\nu]}b_E$ — Theorem 3.14's spatial passage condition is precisely "every dangerous base point has a direction/scale with occupancy $\le\delta$." If the spatial condition genuinely fails, it produces an <strong>everywhere sign-thick bad core</strong>: at the maximal chain-scale radius, the occupancy in <strong>every</strong> projection direction is $>\delta$. **C5-I.1 Angular Sign-Core Compactness** proves that the recurrent bad core's angular profile $b_n$ weak-* compactifies in $L^\infty(\mathbb{RP}^2)$, with the limit $\ge\delta$ almost everywhere — a genuine mathematical object, not just a label; two limiting types result: strictly thick ($\beta_\ast>\delta$) or a <strong>harmonic critical saturation defect</strong> ($\beta_\ast=\delta$, a finite-order failure approaching the theorem threshold rather than violating it). A bad core is not a free escape: first, Solynin's harmonic-measure lower bound (§12) confirms that the external contraction mechanism falls within the published theorem's scope; then the contrapositive of "3D $\delta^3$ sparseness ⟹ 1D $\delta$ sparseness" (**C5-I.2**) forces a genuine local $L^2$ derivative concentration, which links directly to C5-H's spectral-cell multiplicity (the bad-core fraction $\Phi_k^{bad}\gtrsim(r_k\Lambda_k)^3/\mathfrak N_k$); the number of disjoint bad cores is likewise controlled by this same multiplicity. <strong>The round's central new bridge is C5-I.3 Sign-Thick Chord Descent Lemma</strong>: integrating a chosen derivative component along a coordinate line through the bad core, combined with the everywhere lower bound $\ge-A_k$, forces exactly a <strong>lower bound on the one-order-lower amplitude</strong>, $A_{k-1}\ge\kappa_{\lambda,\delta}r_kA_k$ (with $\kappa_{\lambda,\delta}=(1+\lambda)\delta-1>0$, coming directly from the theorem's own tuning-constant constraint), holding for both signs, which converts into Grujić–Xu's own normalized chain-root notation $\mathcal R(k-1,c,s)\ge d_k(c)\mathcal R(k,c,s)$. <strong>The headline result, C5-I.4 Harmonic-or-Descent Dichotomy</strong>: at every order, it is either <strong>harmonic passage</strong> or <strong>a descent-order cost</strong>. Conversely (§28, C5-I.5), if the adjacent root ascends steeply enough ($\mathcal R(k)>d_k^{-1}\mathcal R(k-1)$), descent is impossible, directly forcing spatial-geometry passage — <strong>the first time C5 forces sign geometry directly from amplitude-chain shape</strong> — generalized to a same-time-interval Type-A Puncture Criterion: a sufficiently strong same-time ascent gain implies the entire interval cannot be sign-thick throughout — at least one order genuinely passes. It also explicitly clarifies Type-B compatibility: descent cost is geometrically compatible with Type-B (descending) behavior, but the published Theorem 3.9/Corollary 3.12 are specifically designed for stable descending chains, so <strong>Type-B is not a free hypothetical singular survivor</strong>. <strong>The most important honest hard rule (§45)</strong>: different derivative orders are evaluated in the theorem at <strong>different</strong> admissible later times, and a same-time descent inequality <strong>cannot be multiplied across orders unconditionally</strong> to form an all-order contradiction — this is exactly where the published paper's dynamic-interpolation mechanism (Lemma 3.16/3.17 tracking Type-A↔B switching) is genuinely needed, and C5-I explicitly does not claim to have solved this timing-stitching problem. The round also precisely clarifies that the sign-geometry defect is not an independent Boolean failure — it is simultaneously coupled to descent-order cost and local $L^2$ concentration, splitting into three distinct recurrent motifs: single/few cores, multi-core multiplicity, and small-core fraction. Formally hands off to <strong>C5-J — Line-Section Sign Processes, Order-to-Order Descent Coupling, and Harmonic Critical Saturation</strong>, with 8 targets left to prove.</p>
+    <div class="claim-box">
+      Faithfully encodes the published theorem's sectional structure, proving that when the spatial-geometry condition fails, it produces an everywhere sign-thick bad core that weak-* compactifies. The bad core forces genuine local derivative concentration, which by integrating along coordinate lines forces a lower bound on the one-order-lower amplitude, converting into a chain-root descent inequality. Central theorem: at every order it is either harmonic passage or a descent cost; conversely a sufficiently steep adjacent ascent directly forces spatial passage — the first time sign geometry is forced from amplitude-chain shape alone. Honest boundary: different orders use different admissible times, so a same-time inequality cannot be multiplied across orders unconditionally — the dynamic-interpolation mechanism remains necessary.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../44-c5h-all-order-effective-volume-asymptotic-criticality/">44 / C5-H · All-Order Effective-Volume Defects, Spectral–Multiplicity Ladders, and Asymptotic-Critical Compatibility</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../46-c5j-line-section-order-sandwich-harmonic-saturation/">46 / C5-J · Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>46 / 67</div>
+    </div>
+    <blockquote class="cite">'a sufficiently steep derivative-root ascent forces chain-scale sign sparseness — this is the first time C5 derives sign geometry directly from amplitude-chain shape.' — excerpted from Section 28 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5I_SignGeometry_Chain_HarmonicCompatibility_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5I_SignGeometry_Chain_HarmonicCompatibility_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

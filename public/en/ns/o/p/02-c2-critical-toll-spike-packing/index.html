@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02: C2: Critical Toll, Dissipation-Wavenumber Spike-Packing, and the Scale-Blind Budget No-Go · NS_O · NS · AMRAL</title>
+<meta name="description" content="Tests the Route B intuition raised at the end of the previous round: "must every UV replenishment pay a positive cost, with a finite total budget, producing a contradiction?" This round's conclusion is a clear No-Go: there is a critical per-scale toll, but the most natural additive energy budget is not enough to close it off. The argument chain: C2a uses Cheskidov–Shvydkoy's dissipation wavenumber $\Lambda(t)$ together with its two external theorems (Leray–Hopf solutions satisfy $\Lambda\in L^1$; if $\Lambda\in L^{5/2}$ the solution is regular) to prove that genuine blow-up forces $\Lambda\in L^1(0,T_\ast)\setminus L^{5/2}(0,T_\ast)$ — CLOSED/EXTERNAL. C2b converts this condition into a dyadic-occupancy spike-packing law $(m_q)\in\ell^1(2^q)\setminus\ell^1(2^{5q/2})$, and notes that the natural parabolic window $\alpha=2$ falls squarely inside the admissible range $1<\alpha\le5/2$ — CLOSED/DERIVED. C2c uses the contrapositive of Cheskidov–Dai's high-shell critical-toll theorem to prove that along infinitely many high-frequency shells, $K_q\gtrsim1$ cannot vanish in a dimensionless sense — CLOSED/EXTERNAL CONTRAPOSITIVE — but the document explicitly notes that this toll "existing" does not mean it has "a summable global ledger," because the time supports of different $q$ overlap heavily and are mutually nested, and no energy inequality guarantees $\sum_qK_q<\infty$. The real turning point is C2d: using N–S scaling ($u_\lambda(x,t)=\lambda u(\lambda x,\lambda^2t)$) to analyze the scaling behavior of the quadratic Sobolev cost $\mathcal D_s$, it proves that for $s<3/2$ no scale-independent positive lower bound exists; standard energy dissipation corresponds to $s=1$, which under this scaling instead tends to zero as $\lambda\to\infty$ — formally eliminating the "fixed positive energy-dissipation cost" strategy, echoing Tao's counterexample for averaged N–S (the energy identity alone is not sufficient). The genuinely scale-independent threshold is $s=3/2$, but the standard energy inequality does not control this critical exponent at all — the document calls this the "criticality wall." C2e is the paper's most concrete contribution: it constructs a scalar abstract geometric cascade ledger (§14 explicitly warns that "this model is not an N–S solution"), taking $\lambda_n=2^n$, $\tau_n=\lambda_n^{-2}$, $U_n\sim\lambda_n$, and checks one by one that five ledger conditions hold simultaneously: finite total time, $\Lambda\in L^1$, $\Lambda\notin L^{5/2}$, per-scale critical toll $K_n\asymp1$, and energy dissipation $\sum_nD_n<\infty$ — this explicit counterexample demonstrates that "these scalar inequalities alone cannot produce a formal contradiction." The document closes by formally upgrading the research frontier from "scalar bookkeeping" to "cross-scale structural rigidity," defining C3 (Cross-Scale Coupling Rigidity) and listing five candidate sub-directions: Parent Depletion (does generating a high-frequency child inflict non-reusable depletion on the parent), Branching Congestion (does the number of parents create genealogical congestion), Triad Geometry Rigidity (does incompressibility forbid the kind of perfect cascade wiring seen in averaged models), Spatial–Frequency Coherence (does high-frequency generation require sustained alignment in physical space), and Vorticity Direction/Stretching Constraint (does vortex stretching require increasing directional coherence that is obstructed by viscosity/Biot–Savart geometry).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C2_Critical_Toll_Spike_Packing_v0.3.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/02-c2-critical-toll-spike-packing/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/02-c2-critical-toll-spike-packing/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/02-c2-critical-toll-spike-packing/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/02-c2-critical-toll-spike-packing/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>02: C2: Critical Toll, Dissipation-Wavenumber Spike-Packing, and the Scale-Blind Budget No-Go</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 02</span>
+      <span class="tag">v0.3 · Scalar-Budget NO-GO</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>02: C2: Critical Toll, Dissipation-Wavenumber Spike-Packing, and the Scale-Blind Budget No-Go</h1>
+    <p class="h1-sub">Tests the Route B intuition raised at the end of the previous round: "must every UV replenishment pay a positive cost, with a finite total budget, producing a contradiction?" This round's conclusion is a clear No-Go: there is a critical per-scale toll, but the most natural additive energy budget is not enough to close it off. The argument chain: C2a uses Cheskidov–Shvydkoy's dissipation wavenumber $\Lambda(t)$ together with its two external theorems (Leray–Hopf solutions satisfy $\Lambda\in L^1$; if $\Lambda\in L^{5/2}$ the solution is regular) to prove that genuine blow-up forces $\Lambda\in L^1(0,T_\ast)\setminus L^{5/2}(0,T_\ast)$ — CLOSED/EXTERNAL. C2b converts this condition into a dyadic-occupancy spike-packing law $(m_q)\in\ell^1(2^q)\setminus\ell^1(2^{5q/2})$, and notes that the natural parabolic window $\alpha=2$ falls squarely inside the admissible range $1<\alpha\le5/2$ — CLOSED/DERIVED. C2c uses the contrapositive of Cheskidov–Dai's high-shell critical-toll theorem to prove that along infinitely many high-frequency shells, $K_q\gtrsim1$ cannot vanish in a dimensionless sense — CLOSED/EXTERNAL CONTRAPOSITIVE — but the document explicitly notes that this toll "existing" does not mean it has "a summable global ledger," because the time supports of different $q$ overlap heavily and are mutually nested, and no energy inequality guarantees $\sum_qK_q<\infty$. The real turning point is C2d: using N–S scaling ($u_\lambda(x,t)=\lambda u(\lambda x,\lambda^2t)$) to analyze the scaling behavior of the quadratic Sobolev cost $\mathcal D_s$, it proves that for $s<3/2$ no scale-independent positive lower bound exists; standard energy dissipation corresponds to $s=1$, which under this scaling instead tends to zero as $\lambda\to\infty$ — formally eliminating the "fixed positive energy-dissipation cost" strategy, echoing Tao's counterexample for averaged N–S (the energy identity alone is not sufficient). The genuinely scale-independent threshold is $s=3/2$, but the standard energy inequality does not control this critical exponent at all — the document calls this the "criticality wall." C2e is the paper's most concrete contribution: it constructs a scalar abstract geometric cascade ledger (§14 explicitly warns that "this model is not an N–S solution"), taking $\lambda_n=2^n$, $\tau_n=\lambda_n^{-2}$, $U_n\sim\lambda_n$, and checks one by one that five ledger conditions hold simultaneously: finite total time, $\Lambda\in L^1$, $\Lambda\notin L^{5/2}$, per-scale critical toll $K_n\asymp1$, and energy dissipation $\sum_nD_n<\infty$ — this explicit counterexample demonstrates that "these scalar inequalities alone cannot produce a formal contradiction." The document closes by formally upgrading the research frontier from "scalar bookkeeping" to "cross-scale structural rigidity," defining C3 (Cross-Scale Coupling Rigidity) and listing five candidate sub-directions: Parent Depletion (does generating a high-frequency child inflict non-reusable depletion on the parent), Branching Congestion (does the number of parents create genealogical congestion), Triad Geometry Rigidity (does incompressibility forbid the kind of perfect cascade wiring seen in averaged models), Spatial–Frequency Coherence (does high-frequency generation require sustained alignment in physical space), and Vorticity Direction/Stretching Constraint (does vortex stretching require increasing directional coherence that is obstructed by viscosity/Biot–Savart geometry).</p>
+    <div class="claim-box">
+      C2a/b/c (dissipation-wavenumber squeeze, spike-packing law, high-shell critical toll) CLOSED; C2d/e are the paper's core: they prove a NO-GO for scalar/additive energy-budget arguments, using a concrete counterexample (the cascade ledger) to show the existing scalar constraints are mutually consistent and do not force a contradiction. Formally shifts the frontier to C3, cross-scale coupling rigidity.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../01-c1-uv-replenishment-chain/">01 · C1: High-Frequency Escape and the Nonlinear UV Replenishment Chain</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../03-c3a-conservation-criticality-trilemma/">03 / C3-A · The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>3 / 67</div>
+    </div>
+    <blockquote class="cite">“This is not a blow-up construction. It only proves that these scalar inequalities are, by themselves, not enough to rule out blow-up-shaped bookkeeping.” — quoted from the emphasis passage following the paper's Proposition 20.1.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C2_Critical_Toll_Spike_Packing_v0.3.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C2_Critical_Toll_Spike_Packing_v0.3.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

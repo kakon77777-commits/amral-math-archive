@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>36 / C4-J: Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4-I left two compensation mechanisms: temporal pulse separation, and pressure evasion via mean rotation/quadratic cancellation. C4-J's task is to determine whether these two can be directly excluded by the existing budget, and if not, whether they can be compressed into a finite number of recurrent motifs; it also performs a final synchronization audit across all six major channels — UV, helicity, strain, operator, pressure, derivative geometry — to judge whether C4 should be closed. The Bounded-Peakiness Pulse-Separation No-Go (Theorem 5.1) gives a genuine no-go by explicit construction: cut the record window into two halves, pack all the middle-strain load into the left half and all the operator load into the right half, so the product is zero everywhere, while still letting the peak-to-average ratio $K_m=K_o=2$ hold for every window — proving that the contracting window itself, even paired with a uniformly bounded peak-to-average ratio, still cannot force same-instant middle/operator overlap: C4-I's sufficient condition $1/K_m+1/K_o>1$ is exactly tight at the symmetric point $K_m=K_o=2$ — a genuine no-go at the level of pure measure theory, not merely a result not yet proved. But an anti-aligned pulse is not free: the Exact Positive/Negative Growth Compensation Identity (Theorem 8.1) is an exact identity, not an inequality, $P_j-N_j=\Delta E_{1,j}$ — any episode of anti-aligned operator pulsing, or of excess viscous dissipation, precisely increases the positive growth-aligned operator variation that must subsequently be paid — it cannot be depleted for free. On pressure evasion, the Integrated Mean-Variation / Pressure Compensation Theorem (Theorem 15.1) proves that if pressure is suppressed, a consistent local quadratic mean driving force must be paid for by a fixed total variation of normalized mean strain; but the scale-weighted packaging already known from C3-V still permits this to survive repeatedly, Zeno-style, along a geometric-ancestry sequence. The round's most elegant new result is the Seven-Point Quadratic Cancellation Witness (Theorem 20.1): it re-understands quadratic-term cancellation, not as an unstructured scalar loss, but as a collapse of the directional barycenter within the six-dimensional space of symmetric traceless matrices ($\operatorname{Sym}(3)\simeq\mathbb R^6$) — by Carathéodory's theorem, any given cancellation ratio $\kappa$ can be witnessed by at most seven local normalized quadratic-tensor directions. As $\kappa_n\to0$, a genuine metadata limit $\sum_{i=1}^7\alpha_i^\ast U_i^\ast=0$ can be extracted within a compact metric space (the unit sphere times a seven-point simplex) — the document explicitly stresses that this is only metadata compactness, not compactness of the full field, and does not violate C3-H's hard no-go that the norm of a rescaled critical field may diverge. The document completes a final six-channel audit table (§37: UV as a conditional causal-ancestry backbone, strain as record-window synchronization, the middle eigenvalue as record-window synchronization, the operator as record-window growth-aligned synchronization, helicity as conditional stock-synchronized production, pressure as conditional local re-entry, derivative geometry as a conditional stock-synchronized gate), reaching the round's core result, the C4 Phase Closure Theorem (Theorem 40.1): every recurring UV singular event can now be routed either to already-synchronized structure, or to one of the six-element finite compensation-motif family $\mathcal C=\{T,O,M,Q,P,D\}$ (temporal pulse, operator angle, mean variation, quadratic cancellation, pressure concentration, derivative-gate defect) — C4's branching/synchronization phase is now formally, structurally closed, though the document repeatedly stresses that this is research-program phase closure, not a regularity theorem: global regularity for Navier–Stokes remains OPEN. The document also explicitly warns what C5 must not do (§41, invoking C3-H's own hard no-go: the norm of a rescaled critical field may diverge, so standard critical-element compactness may not be assumed), and lays out the four levels C5 should prioritize compactifying (finite-dimensional metadata, then probability/defect measures, then packet/core local trajectories, then the full PDE field, with the last level attempted only after an additional uniform critical bound is proved) — handing off to C5, Recurrent Motif Limits, Defect Measures, and Compensation Compactness, opening with C5-A.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/36-c4j-compensation-rigidity-final-synchronization-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/36-c4j-compensation-rigidity-final-synchronization-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/36-c4j-compensation-rigidity-final-synchronization-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/36-c4j-compensation-rigidity-final-synchronization-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>36 / C4-J: Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 36 / C4-J</span>
+      <span class="tag">C4-J · C4 Series Finale 9/9</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>36 / C4-J: Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure</h1>
+    <p class="h1-sub">C4-I left two compensation mechanisms: temporal pulse separation, and pressure evasion via mean rotation/quadratic cancellation. C4-J's task is to determine whether these two can be directly excluded by the existing budget, and if not, whether they can be compressed into a finite number of recurrent motifs; it also performs a final synchronization audit across all six major channels — UV, helicity, strain, operator, pressure, derivative geometry — to judge whether C4 should be closed. The Bounded-Peakiness Pulse-Separation No-Go (Theorem 5.1) gives a genuine no-go by explicit construction: cut the record window into two halves, pack all the middle-strain load into the left half and all the operator load into the right half, so the product is zero everywhere, while still letting the peak-to-average ratio $K_m=K_o=2$ hold for every window — proving that the contracting window itself, even paired with a uniformly bounded peak-to-average ratio, still cannot force same-instant middle/operator overlap: C4-I's sufficient condition $1/K_m+1/K_o>1$ is exactly tight at the symmetric point $K_m=K_o=2$ — a genuine no-go at the level of pure measure theory, not merely a result not yet proved. But an anti-aligned pulse is not free: the Exact Positive/Negative Growth Compensation Identity (Theorem 8.1) is an exact identity, not an inequality, $P_j-N_j=\Delta E_{1,j}$ — any episode of anti-aligned operator pulsing, or of excess viscous dissipation, precisely increases the positive growth-aligned operator variation that must subsequently be paid — it cannot be depleted for free. On pressure evasion, the Integrated Mean-Variation / Pressure Compensation Theorem (Theorem 15.1) proves that if pressure is suppressed, a consistent local quadratic mean driving force must be paid for by a fixed total variation of normalized mean strain; but the scale-weighted packaging already known from C3-V still permits this to survive repeatedly, Zeno-style, along a geometric-ancestry sequence. The round's most elegant new result is the Seven-Point Quadratic Cancellation Witness (Theorem 20.1): it re-understands quadratic-term cancellation, not as an unstructured scalar loss, but as a collapse of the directional barycenter within the six-dimensional space of symmetric traceless matrices ($\operatorname{Sym}(3)\simeq\mathbb R^6$) — by Carathéodory's theorem, any given cancellation ratio $\kappa$ can be witnessed by at most seven local normalized quadratic-tensor directions. As $\kappa_n\to0$, a genuine metadata limit $\sum_{i=1}^7\alpha_i^\ast U_i^\ast=0$ can be extracted within a compact metric space (the unit sphere times a seven-point simplex) — the document explicitly stresses that this is only metadata compactness, not compactness of the full field, and does not violate C3-H's hard no-go that the norm of a rescaled critical field may diverge. The document completes a final six-channel audit table (§37: UV as a conditional causal-ancestry backbone, strain as record-window synchronization, the middle eigenvalue as record-window synchronization, the operator as record-window growth-aligned synchronization, helicity as conditional stock-synchronized production, pressure as conditional local re-entry, derivative geometry as a conditional stock-synchronized gate), reaching the round's core result, the C4 Phase Closure Theorem (Theorem 40.1): every recurring UV singular event can now be routed either to already-synchronized structure, or to one of the six-element finite compensation-motif family $\mathcal C=\{T,O,M,Q,P,D\}$ (temporal pulse, operator angle, mean variation, quadratic cancellation, pressure concentration, derivative-gate defect) — C4's branching/synchronization phase is now formally, structurally closed, though the document repeatedly stresses that this is research-program phase closure, not a regularity theorem: global regularity for Navier–Stokes remains OPEN. The document also explicitly warns what C5 must not do (§41, invoking C3-H's own hard no-go: the norm of a rescaled critical field may diverge, so standard critical-element compactness may not be assumed), and lays out the four levels C5 should prioritize compactifying (finite-dimensional metadata, then probability/defect measures, then packet/core local trajectories, then the full PDE field, with the last level attempted only after an additional uniform critical bound is proved) — handing off to C5, Recurrent Motif Limits, Defect Measures, and Compensation Compactness, opening with C5-A.</p>
+    <div class="claim-box">
+      An explicit construction proves that the contracting record window plus a bounded peak-to-average ratio still cannot force same-instant overlap — C4-I's sufficient condition is exactly tight at the symmetric point. An anti-aligned pulse has an exact energy identity behind it and cannot be depleted for free. Core new result: quadratic cancellation is re-understood as a collapse of the directional barycenter in a six-dimensional matrix space; Carathéodory's theorem gives at most seven witness points, from which a compact metadata limit can be extracted (not field compactness). Completes a final six-channel audit and formally declares C4 structurally closed as a research-program phase, handing off to C5 — global regularity for Navier-Stokes remains OPEN.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../35-c4i-middle-operator-overlap-pressure-reentry/">35 / C4-I · Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../37-c5a-record-window-compensation-motif-compactness/">37 / C5-A · Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>37 / 67</div>
+    </div>
+    <blockquote class="cite">"C4 branch/synchronization phase is structurally closed — this is research-program phase closure, not a Navier–Stokes regularity theorem." — excerpted from §40 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4J_CompensationRigidity_FinalSynchronizationAudit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

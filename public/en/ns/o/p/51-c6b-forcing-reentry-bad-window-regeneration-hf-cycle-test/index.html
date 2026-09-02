@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51 / C6-B: High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test · NS_O · NS · AMRAL</title>
+<meta name="description" content="C6-A's conclusion was that a projected SCC does not imply a composable PDE recurrent cycle; for the $H\leftrightarrow F$ that appears to exist on C5-M's coarse may-graph, C6-B formally tests the reverse edge $F\overset{?}{\Rightarrow}H$. The first step splits C5's forcing class into $F_{\rm visc}^{\downarrow}$ (viscous/decay-side reversal) and $F_{\rm NL}^{\pm}$ (projected nonlinear forcing that may either stabilize or amplify a chosen peak) — <strong>C6-B.1</strong> (applying the maximum principle $\Delta f(x_\ast,t)\le0$ at the signed spatial maximum) proves $D^+A_k\le\mathcal N_k^{proj}$, so <strong>viscosity by itself cannot be the engine of forward derivative-peak regeneration</strong>, and <strong>C6-B.2 Viscous Half-Cycle Elimination</strong> therefore removes $F_{\rm visc}^{\downarrow}$ from the list of forward $H$ re-entry engines, leaving only $F_{\rm NL}^{+}$ as a possibility. But even if the Duhamel capacity $\mathfrak C_\ell^{Duh}$ of the projected nonlinear forcing is large, <strong>C6-B.3 Duhamel-Capacity No-Go</strong> (via a construction using a compactly supported abstract test field vanishing at both endpoints) proves that capacity alone cannot logically lower-bound the genuine response — an explicit Duhamel coherence coefficient $\Gamma_\ell^{Duh}=\|Z_\ell\|_\infty/\mathfrak C_\ell^{Duh}\in[0,1]$ must be kept, and it can equal $0$ even while capacity is $>0$. Even if the response peak genuinely is large, <strong>C6-B.4 Amplitude-to-Sign-Thickness No-Go</strong> (using a fixed bump function rescaled as $\phi_N(x)=\phi(Nx)$ as a witness) proves that peak amplitude alone does not determine the component/sign chain-scale thickness geometry — the same sup norm can carry arbitrarily different sparse/thick geometries. The coarse edge $F_{\rm NL}\to H$ must therefore be refined into a six-link chain: $F_{\rm NL}\to R_{\rm amp}\to R_{\rm select}\to R_{\rm sign}\to R_{\rm setup}\to R_{\rm persist}\to H$. The positive half: <strong>C6-B.5 One-Time Sign-Reentry Lemma</strong> proves that if the response itself genuinely is sign-thick on some set, the inherited heat part $\|Y_\ell\|_\infty\le\epsilon A_Z$ is small enough, and the threshold margin is strict ($\lambda_Z-\epsilon>\lambda(1+\epsilon)$), then the genuine derivative field really does inherit the same thick set at that instant; <strong>C6-B.6 Sign-Thickness Persistence Lemma</strong> proves that as long as the temporal perturbation $\Theta_\ell(s,t_\ast)$ is small enough relative to the margin $m$ ($(1+\lambda)\Theta_\ell<m$), this thick set survives into nearby moments; combined with component-selection coherence ($m_{\rm sel}>0$, ensuring the theorem still selects the same component), theorem-setup legality, and persistence over the whole admissible window, <strong>C6-B.7 Conditional Nonlinear Re-entry Theorem</strong> proves that the genuinely valid edge is $F_{\rm NL}^{coh}\overset{C}{\to}H$, a conditional implication with six premises, not a coarse $F\to H$ — no current C5/C6 result can automatically supply these six premises from scalar forcing metadata alone. <strong>Net result</strong>: the coarse generic $H\leftrightarrow F$ cycle flagged by C6-A is formally <strong>ruled dead</strong> (not merely "still open," but genuinely REJECTED — this round's five no-gos, B-NG1 through B-NG5, break every link of the coarse implication one by one), and even the reverse $H\Rightarrow F$ is not an unconditional class-level edge either (C5-L's own trichotomy $H\Rightarrow H_{\rm compact}\vee F_{\rm visc}\vee F_{\rm NL}$ means the candidate cycle lives only inside the subtype $H_{\rm force}$). What genuinely survives is compressed into the much narrower <strong>C6-B.9 Typed H/F Cycle Reduction</strong>: $H_{\rm force}\to F_{\rm NL}^{+}\overset{\Gamma^{re}\text{ gates}}{\dashrightarrow}H_{\rm force}$, whose recurrence still needs five things proved (recurrent forward nonlinear source, $\Gamma^{re}$ staying non-degenerate, the target $H$ again being forcing-generated, time still being before $T^\ast$, and every generation evading the external Grujić–Xu gate) — none currently proved. The round's most important shift: the genuine global question is no longer "will the forcing get large," but whether $\Gamma^{Duh},\eta^{grow},m_{\rm sel},\beta_Z-\delta,\Pi_{\rm time}$ — Duhamel non-cancellation, peak-regeneration efficiency, component-selection margin, spatial sign-thickness margin, persistence reserve — <strong>can stay simultaneously non-degenerate over infinitely many re-entry generations</strong>, a genuine cycle-composition problem that is much narrower and more geometric than "can the nonlinearity stay large." Formally hands off to <strong>C6-C — Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</strong>, with eight composition obligations (C1 Duhamel coherence dynamics through C8 H/F subcycle verdict).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>51 / C6-B: High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 51 / C6-B</span>
+      <span class="tag">C6-B · The H/F Cycle Is Formally Ruled Dead, 2/17</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>51 / C6-B: High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test</h1>
+    <p class="h1-sub">C6-A's conclusion was that a projected SCC does not imply a composable PDE recurrent cycle; for the $H\leftrightarrow F$ that appears to exist on C5-M's coarse may-graph, C6-B formally tests the reverse edge $F\overset{?}{\Rightarrow}H$. The first step splits C5's forcing class into $F_{\rm visc}^{\downarrow}$ (viscous/decay-side reversal) and $F_{\rm NL}^{\pm}$ (projected nonlinear forcing that may either stabilize or amplify a chosen peak) — <strong>C6-B.1</strong> (applying the maximum principle $\Delta f(x_\ast,t)\le0$ at the signed spatial maximum) proves $D^+A_k\le\mathcal N_k^{proj}$, so <strong>viscosity by itself cannot be the engine of forward derivative-peak regeneration</strong>, and <strong>C6-B.2 Viscous Half-Cycle Elimination</strong> therefore removes $F_{\rm visc}^{\downarrow}$ from the list of forward $H$ re-entry engines, leaving only $F_{\rm NL}^{+}$ as a possibility. But even if the Duhamel capacity $\mathfrak C_\ell^{Duh}$ of the projected nonlinear forcing is large, <strong>C6-B.3 Duhamel-Capacity No-Go</strong> (via a construction using a compactly supported abstract test field vanishing at both endpoints) proves that capacity alone cannot logically lower-bound the genuine response — an explicit Duhamel coherence coefficient $\Gamma_\ell^{Duh}=\|Z_\ell\|_\infty/\mathfrak C_\ell^{Duh}\in[0,1]$ must be kept, and it can equal $0$ even while capacity is $>0$. Even if the response peak genuinely is large, <strong>C6-B.4 Amplitude-to-Sign-Thickness No-Go</strong> (using a fixed bump function rescaled as $\phi_N(x)=\phi(Nx)$ as a witness) proves that peak amplitude alone does not determine the component/sign chain-scale thickness geometry — the same sup norm can carry arbitrarily different sparse/thick geometries. The coarse edge $F_{\rm NL}\to H$ must therefore be refined into a six-link chain: $F_{\rm NL}\to R_{\rm amp}\to R_{\rm select}\to R_{\rm sign}\to R_{\rm setup}\to R_{\rm persist}\to H$. The positive half: <strong>C6-B.5 One-Time Sign-Reentry Lemma</strong> proves that if the response itself genuinely is sign-thick on some set, the inherited heat part $\|Y_\ell\|_\infty\le\epsilon A_Z$ is small enough, and the threshold margin is strict ($\lambda_Z-\epsilon>\lambda(1+\epsilon)$), then the genuine derivative field really does inherit the same thick set at that instant; <strong>C6-B.6 Sign-Thickness Persistence Lemma</strong> proves that as long as the temporal perturbation $\Theta_\ell(s,t_\ast)$ is small enough relative to the margin $m$ ($(1+\lambda)\Theta_\ell<m$), this thick set survives into nearby moments; combined with component-selection coherence ($m_{\rm sel}>0$, ensuring the theorem still selects the same component), theorem-setup legality, and persistence over the whole admissible window, <strong>C6-B.7 Conditional Nonlinear Re-entry Theorem</strong> proves that the genuinely valid edge is $F_{\rm NL}^{coh}\overset{C}{\to}H$, a conditional implication with six premises, not a coarse $F\to H$ — no current C5/C6 result can automatically supply these six premises from scalar forcing metadata alone. <strong>Net result</strong>: the coarse generic $H\leftrightarrow F$ cycle flagged by C6-A is formally <strong>ruled dead</strong> (not merely "still open," but genuinely REJECTED — this round's five no-gos, B-NG1 through B-NG5, break every link of the coarse implication one by one), and even the reverse $H\Rightarrow F$ is not an unconditional class-level edge either (C5-L's own trichotomy $H\Rightarrow H_{\rm compact}\vee F_{\rm visc}\vee F_{\rm NL}$ means the candidate cycle lives only inside the subtype $H_{\rm force}$). What genuinely survives is compressed into the much narrower <strong>C6-B.9 Typed H/F Cycle Reduction</strong>: $H_{\rm force}\to F_{\rm NL}^{+}\overset{\Gamma^{re}\text{ gates}}{\dashrightarrow}H_{\rm force}$, whose recurrence still needs five things proved (recurrent forward nonlinear source, $\Gamma^{re}$ staying non-degenerate, the target $H$ again being forcing-generated, time still being before $T^\ast$, and every generation evading the external Grujić–Xu gate) — none currently proved. The round's most important shift: the genuine global question is no longer "will the forcing get large," but whether $\Gamma^{Duh},\eta^{grow},m_{\rm sel},\beta_Z-\delta,\Pi_{\rm time}$ — Duhamel non-cancellation, peak-regeneration efficiency, component-selection margin, spatial sign-thickness margin, persistence reserve — <strong>can stay simultaneously non-degenerate over infinitely many re-entry generations</strong>, a genuine cycle-composition problem that is much narrower and more geometric than "can the nonlinearity stay large." Formally hands off to <strong>C6-C — Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</strong>, with eight composition obligations (C1 Duhamel coherence dynamics through C8 H/F subcycle verdict).</p>
+    <div class="claim-box">
+      Viscosity, at the signed derivative maximum, satisfies the maximum principle $\Delta f\le0$, proving that viscosity cannot be the engine of forward $H$ re-entry, leaving only projected nonlinear forcing as a possibility. But Duhamel capacity gives only an upper bound, never a lower bound (proved via an abstract test-field construction), and even when the response is large, peak amplitude alone does not determine sign-thick geometry (witnessed by a rescaled bump function). A genuinely valid edge needs six premises simultaneously: Duhamel coherence, a small enough inherited heat part, component-selection margin, spatial thickness, theorem setup, and persistence across the whole window. The coarse generic $H\leftrightarrow F$ cycle flagged by C6-A is formally ruled dead, leaving only the much narrower surviving subcycle $H_{\rm force}\to F_{\rm NL}^{+}\dashrightarrow H_{\rm force}$, whose recurrence remains OPEN. The genuine global question shifts to whether five coherence coordinates can stay simultaneously non-degenerate over infinitely many generations.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../50-c6a-certified-defect-graph-typed-cycles-minimal-survivors/">50 / C6-A · Certified Defect Graph, Typed Cycle Composition, and Minimal Survivor Candidates</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">52 / C6-C · Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>52 / 67</div>
+    </div>
+    <blockquote class="cite">'Can a recurrent N–S nonlinear source keep Duhamel coherence, component-selection coherence, spatial sign-thickness, and theorem-window persistence uniformly nondegenerate over infinitely many generations? This is narrower and more geometric than: can the nonlinearity stay large?' — excerpted from Section 39 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6B_ForcingReentry_HF_CycleTest_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>26 / C3-X: Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-W already compressed the hypothetical singular survivor into two channels: pressure concentration and strain intermittency. This round asks the real question: can both escape without limit at the same time? The core is the Critical Pressure-Mass Certificate (Theorem 4.1): replacing C3-W's constant subtraction with an affine-function subtraction in the oscillation bound, the $b$-pressure-active core is thereby shown to carry a scale-independent critical pressure mass containing no $R$ at all, $\int_{B_{2R}}|p|^{3/2}\ge cb^{3/2}\nu^3$. Multi-core shrinkage (Theorem 6.1: the Small-Volume Pressure Concentration Certificate) directly yields a certificate of non-vanishing pressure mass on a small-volume set, connecting to Constantin's uniform-integrability pressure-regularity criterion — but it is explicitly flagged as merely a sufficient mechanism, not a contradiction. This round's most important no-go is in §13-32: pressure concentration does not imply pointwise overlap with strain-gradient concentration — because pressure is a nonlocal quadratic transform, a far-field source can generate local pressure in a region of low $D^2u$; the co-located case ($\Theta_{P/S}\ge\theta_0$) and the segregated case ($\Theta_{P/S}\to0$) must be tracked separately and must not be automatically merged. This round's strongest new structure is the Finite-$k$ Volume Gap-Closure Lemma (Theorem 17.1): it bridges the algebraic gap, within the Grujić–Xu higher-derivative hierarchy, between the "energy-a-priori sparseness scale" $\ell_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$ and the "regularity sparseness scale" $\ell_{\rm reg}^{(k)}\sim A_k^{-1/(k+1)}$, via an explicit active-volume exponent: $\phi_k\lesssim A_k^{-\vartheta_k}$, where $\vartheta_k=3/[2(k+1)(k+3/2)]$ — in particular, at $k=2$ this gives exactly $\vartheta_2=1/7$ (Corollary 18.1), and $\vartheta_k\to0$ echoes Grujić–Xu's own direction that "the gap vanishes as $k\to\infty$." But the document repeatedly and explicitly flags: this is not an independent $k=2$ regularity theorem, only an algebraic scale bridge (§23) — genuinely applying the external theorem still requires the component/sign/threshold/analyticity conditions to all align. Even more counterintuitively, §36 shows that intermittency cannot be unboundedly strong: if $\phi_2\ll A_2^{-1/7}$, the volume collapse is in fact stronger than what is needed to close the scale gap, pushing the sparseness scale toward the regularity side — so sufficiently strong intermittency actually has a self-regularizing aspect. The genuinely surviving intersection is pressure concentration $\cap$ failure of analytic/geometric sparseness closure.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/26-c3x-joint-pressure-strain-analyticity-gap/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/26-c3x-joint-pressure-strain-analyticity-gap/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/26-c3x-joint-pressure-strain-analyticity-gap/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/26-c3x-joint-pressure-strain-analyticity-gap/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>26 / C3-X: Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 26 / C3-X</span>
+      <span class="tag">C3-X · An Algebraic Bridge via θ_k</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>26 / C3-X: Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape</h1>
+    <p class="h1-sub">C3-W already compressed the hypothetical singular survivor into two channels: pressure concentration and strain intermittency. This round asks the real question: can both escape without limit at the same time? The core is the Critical Pressure-Mass Certificate (Theorem 4.1): replacing C3-W's constant subtraction with an affine-function subtraction in the oscillation bound, the $b$-pressure-active core is thereby shown to carry a scale-independent critical pressure mass containing no $R$ at all, $\int_{B_{2R}}|p|^{3/2}\ge cb^{3/2}\nu^3$. Multi-core shrinkage (Theorem 6.1: the Small-Volume Pressure Concentration Certificate) directly yields a certificate of non-vanishing pressure mass on a small-volume set, connecting to Constantin's uniform-integrability pressure-regularity criterion — but it is explicitly flagged as merely a sufficient mechanism, not a contradiction. This round's most important no-go is in §13-32: pressure concentration does not imply pointwise overlap with strain-gradient concentration — because pressure is a nonlocal quadratic transform, a far-field source can generate local pressure in a region of low $D^2u$; the co-located case ($\Theta_{P/S}\ge\theta_0$) and the segregated case ($\Theta_{P/S}\to0$) must be tracked separately and must not be automatically merged. This round's strongest new structure is the Finite-$k$ Volume Gap-Closure Lemma (Theorem 17.1): it bridges the algebraic gap, within the Grujić–Xu higher-derivative hierarchy, between the "energy-a-priori sparseness scale" $\ell_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$ and the "regularity sparseness scale" $\ell_{\rm reg}^{(k)}\sim A_k^{-1/(k+1)}$, via an explicit active-volume exponent: $\phi_k\lesssim A_k^{-\vartheta_k}$, where $\vartheta_k=3/[2(k+1)(k+3/2)]$ — in particular, at $k=2$ this gives exactly $\vartheta_2=1/7$ (Corollary 18.1), and $\vartheta_k\to0$ echoes Grujić–Xu's own direction that "the gap vanishes as $k\to\infty$." But the document repeatedly and explicitly flags: this is not an independent $k=2$ regularity theorem, only an algebraic scale bridge (§23) — genuinely applying the external theorem still requires the component/sign/threshold/analyticity conditions to all align. Even more counterintuitively, §36 shows that intermittency cannot be unboundedly strong: if $\phi_2\ll A_2^{-1/7}$, the volume collapse is in fact stronger than what is needed to close the scale gap, pushing the sparseness scale toward the regularity side — so sufficiently strong intermittency actually has a self-regularizing aspect. The genuinely surviving intersection is pressure concentration $\cap$ failure of analytic/geometric sparseness closure.</p>
+    <div class="claim-box">
+      Proves pressure-active cores carry a scale-independent critical pressure-mass certificate, and that multi-core shrinkage gives a mechanism for failure of uniform integrability. Explicit no-go: pressure concentration does not imply pointwise overlap with strain-gradient concentration, since pressure is nonlocal. Core new structure: bridges the algebraic gap between the Grujić–Xu energy-a-priori scale and the regularity scale with the explicit exponent $\theta_k=3/[2(k+1)(k+3/2)]$, giving $\theta_2=1/7$ at $k=2$ — but explicitly flagged as only a scale bridge, not a theorem, and intermittency that is too strong is in fact self-regularizing.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../25-c3w-pressure-rotation-strain-sparseness/">25 / C3-W · Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../27-c3y-derivative-chain-intermittency-tradeoff/">27 / C3-Y · Derivative-Chain / Intermittency Tradeoff, Direct-vs-Chain Gap Closure, and Joint-Concentration Routing</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>27 / 67</div>
+    </div>
+    <blockquote class="cite">“pressure concentration ⇏ pointwise overlap with D²u concentration.” — quoted from the paper's own Section 13.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3X_JointPressureStrain_AnalyticityGap_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

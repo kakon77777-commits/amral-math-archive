@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>06 / C3-D: The Cutoff-Flux Sign Theorem, the Helical-Kernel Nonlocality Exponent, and the Class-II Logarithmic Reversal · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-C compressed nonlocal Class II down to "costly, but not ruled out." This round asks: what do these large, nearly cancelling high–high exchanges leave behind in the energy flux that genuinely crosses some fixed spectral cutoff $K$? Theorem 4.1 computes the Class II triad cutoff flux $\Phi_{\rm II}(K)$ piece by piece: it is negative (reverse) on $k<K<p$, and positive (forward) only in the narrow window $p<K<q$, while the triangle inequality $q-p\le k$ bounds the relative width of this forward window by $(q-p)/p\le\chi=k/p$ — under strong nonlocality, the forward window can only fall inside a boundary layer of width $O(k)$ near the cutoff (pure Fourier geometry, no turbulence-scaling assumption). By contrast, Theorem 8.1 proves that Class III and IV are uniformly forward across every intermediate cutoff $K\in(k,q)$. This round's sharpest result is Theorem 12.1: defining the logarithmic-scale integrated flux $\mathfrak F_\tau=\int_0^\infty\Phi_\tau(K)\,dK/K$, it proves there is a unique positive root $\chi_\ast=W(e^{-1})\approx0.278465$ (solved via the Lambert $W$ function from $\log(1/\chi_\ast)=1+\chi_\ast$), such that whenever the Class II nonlocality ratio satisfies $k/p<\chi_\ast$, its logarithmic-scale integrated flux must be negative — that is, even with a large local $p\to q$ forward transfer, once all intermediate cutoffs are tallied together on a logarithmic scale, the reverse contribution actually dominates, echoing Waleffe's analysis of the nonlocal R-class, where "large local exchanges nearly cancel and the net effect has a reverse character." The document further uses the standard Waleffe helical coupling-coefficient formula to show that geometrically $g_{\rm II}=O(1)$ (does not vanish under nonlocality), while $g_{\rm III},g_{\rm IV}=O(\chi)$ (carry a linear suppression) — this is precisely why individual nonlocal R/Class-II triads can have a large raw high-frequency exchange, while the forward Class III/IV inherently carry a nonlocal suppression. The document explicitly warns that Aluie–Eyink's scale-locality theorem cannot be borrowed to directly rule out nonlocal routes (that theorem depends on a turbulence-scaling assumption, not an unconditional property of arbitrary N–S solutions), yielding only a research dichotomy: a nonlocal singular route must either pay an Amplitude Compensation Debt, or be accompanied by a breakdown of the scale-locality assumption. The surviving core is formally compressed toward the local/moderately local heterochiral forward frontier.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3D_CutoffFlux_HelicalKernel_Nonlocality_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/06-c3d-cutoff-flux-signature/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/06-c3d-cutoff-flux-signature/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/06-c3d-cutoff-flux-signature/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/06-c3d-cutoff-flux-signature/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>06 / C3-D: The Cutoff-Flux Sign Theorem, the Helical-Kernel Nonlocality Exponent, and the Class-II Logarithmic Reversal</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 06 / C3-D</span>
+      <span class="tag">C3-D · Lambert W Critical Value</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>06 / C3-D: The Cutoff-Flux Sign Theorem, the Helical-Kernel Nonlocality Exponent, and the Class-II Logarithmic Reversal</h1>
+    <p class="h1-sub">C3-C compressed nonlocal Class II down to "costly, but not ruled out." This round asks: what do these large, nearly cancelling high–high exchanges leave behind in the energy flux that genuinely crosses some fixed spectral cutoff $K$? Theorem 4.1 computes the Class II triad cutoff flux $\Phi_{\rm II}(K)$ piece by piece: it is negative (reverse) on $k<K<p$, and positive (forward) only in the narrow window $p<K<q$, while the triangle inequality $q-p\le k$ bounds the relative width of this forward window by $(q-p)/p\le\chi=k/p$ — under strong nonlocality, the forward window can only fall inside a boundary layer of width $O(k)$ near the cutoff (pure Fourier geometry, no turbulence-scaling assumption). By contrast, Theorem 8.1 proves that Class III and IV are uniformly forward across every intermediate cutoff $K\in(k,q)$. This round's sharpest result is Theorem 12.1: defining the logarithmic-scale integrated flux $\mathfrak F_\tau=\int_0^\infty\Phi_\tau(K)\,dK/K$, it proves there is a unique positive root $\chi_\ast=W(e^{-1})\approx0.278465$ (solved via the Lambert $W$ function from $\log(1/\chi_\ast)=1+\chi_\ast$), such that whenever the Class II nonlocality ratio satisfies $k/p<\chi_\ast$, its logarithmic-scale integrated flux must be negative — that is, even with a large local $p\to q$ forward transfer, once all intermediate cutoffs are tallied together on a logarithmic scale, the reverse contribution actually dominates, echoing Waleffe's analysis of the nonlocal R-class, where "large local exchanges nearly cancel and the net effect has a reverse character." The document further uses the standard Waleffe helical coupling-coefficient formula to show that geometrically $g_{\rm II}=O(1)$ (does not vanish under nonlocality), while $g_{\rm III},g_{\rm IV}=O(\chi)$ (carry a linear suppression) — this is precisely why individual nonlocal R/Class-II triads can have a large raw high-frequency exchange, while the forward Class III/IV inherently carry a nonlocal suppression. The document explicitly warns that Aluie–Eyink's scale-locality theorem cannot be borrowed to directly rule out nonlocal routes (that theorem depends on a turbulence-scaling assumption, not an unconditional property of arbitrary N–S solutions), yielding only a research dichotomy: a nonlocal singular route must either pay an Amplitude Compensation Debt, or be accompanied by a breakdown of the scale-locality assumption. The surviving core is formally compressed toward the local/moderately local heterochiral forward frontier.</p>
+    <div class="claim-box">
+      Outside the narrow window, the Class II flux is reverse everywhere; there is a Lambert-W critical value χ* ≈ 0.27846 below which the logarithmic-scale integrated flux must be negative under strong nonlocality. Class III/IV are uniformly forward across all intermediate cutoffs, but inherently carry O(χ) geometric suppression. An external scale-locality theorem cannot be borrowed to rule out nonlocal routes — only a research dichotomy is obtained (amplitude compensation vs. breakdown of the scaling assumption).
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-c3c-classii-nonlocality-tax/">05 / C3-C · The Class-II Nonlocality Quadratic Tax, Radial-Drift Congestion, and the Class III/IV Forward-Surviving Family</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../07-c3e-viscous-window-renewal/">07 / C3-E · Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>7 / 67</div>
+    </div>
+    <blockquote class="cite">“nonlocal singular route ⟹ either amplitude compensation or scaling-law breakdown. This is a research dichotomy, not a regularity theorem.” — quoted from the paper's Section 23.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3D_CutoffFlux_HelicalKernel_Nonlocality_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3D_CutoffFlux_HelicalKernel_Nonlocality_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

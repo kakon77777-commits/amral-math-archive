@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 / C3-R: Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-Q compressed the survivor into three mutually non-interchangeable interfaces — operator escape, ancestry-core geometry, and the far-field pressure matrix — and proved that operator escape and far-field pressure have no simple contradiction. This round instead asks: if the singular debt is not concentrated in a single core but spread across multiple same-scale spatial cores, how do finite energy, rescaled enstrophy, and the pressure horizon jointly constrain the multi-core geometry? The core is the Frontier Multi-Core Energy Packing Theorem (Theorem 6.1): using pointwise amplitude persistence (an annular Bernstein argument), it proves every near-saturated core carries at least $O(R)$ energy; summing over disjoint ball packings then yields the core-count bound $m_R\lesssim R^{-1}$ — a counterintuitive inverse-scaling packing law: not $O(R^{-3})$, because each critical high-frequency packet needs only $O(R)$ of ordinary kinetic energy, so critical objects can proliferate much faster than energy-density intuition suggests. Multi-Core Enstrophy Amplification (Theorem 9.1): the number of cores directly forces the rescaled enstrophy $\mathfrak E_R\gtrsim m_R\beta_\ast^2$. The document introduces the notion of a Certified Pressure Horizon (§13), explicitly distinguishing "certificate" from "actual physical coupling" — this is merely the decoupling radius guaranteed by a worst-case, generic estimate, not a true pressure-correlation length; densely packed core clusters must first be merged into a single pressure-source audit and cannot each independently claim decoupling (CERTIFICATE CONGESTION, not a PHYSICAL COUPLING THEOREM). This round's strongest new geometric result is the Common-Matrix Pressure Support Criterion (Theorem 28.1): a common far-field harmonic matrix supporting all cores positively exists if and only if the convex hull of the local mean-strain values does not contain the origin — since $\dim\operatorname{Sym}_0(3)=5$, Carathéodory's theorem directly yields the Six-Core Pressure Obstruction (Theorem/Corollary 30.1): as few as six cores already suffice to witness that "no single common far-field matrix can positively support all of them." But the document explicitly flags NG-R1: a 5-dimensional space does not mean at most five pressure sources — arbitrarily many far-field regions can still contribute matrices summing to the same $H_\ast$; finite dimension only constrains the composite geometry, linear dependence, and the common supporting half-space, not the number of sources. It also explicitly rules out directly applying Type-I terminal-singularity count bounds to this round's transient frontier cores (a type mismatch).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3R_MultiCore_PressureHorizon_StrainConvexity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/20-c3r-multi-core-pressure-horizon/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/20-c3r-multi-core-pressure-horizon/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/20-c3r-multi-core-pressure-horizon/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/20-c3r-multi-core-pressure-horizon/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>20 / C3-R: Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 20 / C3-R</span>
+      <span class="tag">C3-R · The Six-Core Obstruction</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>20 / C3-R: Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt</h1>
+    <p class="h1-sub">C3-Q compressed the survivor into three mutually non-interchangeable interfaces — operator escape, ancestry-core geometry, and the far-field pressure matrix — and proved that operator escape and far-field pressure have no simple contradiction. This round instead asks: if the singular debt is not concentrated in a single core but spread across multiple same-scale spatial cores, how do finite energy, rescaled enstrophy, and the pressure horizon jointly constrain the multi-core geometry? The core is the Frontier Multi-Core Energy Packing Theorem (Theorem 6.1): using pointwise amplitude persistence (an annular Bernstein argument), it proves every near-saturated core carries at least $O(R)$ energy; summing over disjoint ball packings then yields the core-count bound $m_R\lesssim R^{-1}$ — a counterintuitive inverse-scaling packing law: not $O(R^{-3})$, because each critical high-frequency packet needs only $O(R)$ of ordinary kinetic energy, so critical objects can proliferate much faster than energy-density intuition suggests. Multi-Core Enstrophy Amplification (Theorem 9.1): the number of cores directly forces the rescaled enstrophy $\mathfrak E_R\gtrsim m_R\beta_\ast^2$. The document introduces the notion of a Certified Pressure Horizon (§13), explicitly distinguishing "certificate" from "actual physical coupling" — this is merely the decoupling radius guaranteed by a worst-case, generic estimate, not a true pressure-correlation length; densely packed core clusters must first be merged into a single pressure-source audit and cannot each independently claim decoupling (CERTIFICATE CONGESTION, not a PHYSICAL COUPLING THEOREM). This round's strongest new geometric result is the Common-Matrix Pressure Support Criterion (Theorem 28.1): a common far-field harmonic matrix supporting all cores positively exists if and only if the convex hull of the local mean-strain values does not contain the origin — since $\dim\operatorname{Sym}_0(3)=5$, Carathéodory's theorem directly yields the Six-Core Pressure Obstruction (Theorem/Corollary 30.1): as few as six cores already suffice to witness that "no single common far-field matrix can positively support all of them." But the document explicitly flags NG-R1: a 5-dimensional space does not mean at most five pressure sources — arbitrarily many far-field regions can still contribute matrices summing to the same $H_\ast$; finite dimension only constrains the composite geometry, linear dependence, and the common supporting half-space, not the number of sources. It also explicitly rules out directly applying Type-I terminal-singularity count bounds to this round's transient frontier cores (a type mismatch).</p>
+    <div class="claim-box">
+      Proves a counterintuitive inverse-scaling energy-packing law (core-count bound $O(R^{-1})$, not $O(R^{-3})$); a larger core count forces rescaled enstrophy growth. Distinguishes a "certificate horizon" from "actual physical coupling." Core new geometry: a common far-field matrix positively supports all cores if and only if their convex hull excludes the origin, and Carathéodory's theorem gives an obstruction witnessed by as few as six cores — but 5 dimensions does not mean at most five sources.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../19-c3q-pressure-projection-orthogonality/">19 / C3-Q · Pressure–Projection Orthogonality, Operator-Escape Localization, and the Harmonic-Matrix Compensation Debt</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../21-c3s-strain-cone-margin/">21 / C3-S · Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>21 / 67</div>
+    </div>
+    <blockquote class="cite">“critical object can proliferate much faster than energy density intuition suggests.” — quoted from the paper's own Section 7.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3R_MultiCore_PressureHorizon_StrainConvexity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3R_MultiCore_PressureHorizon_StrainConvexity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

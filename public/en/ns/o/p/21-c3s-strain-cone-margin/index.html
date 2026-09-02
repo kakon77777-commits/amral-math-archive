@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>21 / C3-S: Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-R answered only a binary question: whether a common far-field matrix exists at all. This round upgrades it to a quantitative one. The core definition is the margin $\gamma(V):=\operatorname{dist}(0,\operatorname{conv}V)$ — the distance from the origin to the convex hull of the local mean-strain set $V$; $\gamma(V)>0$ is exactly equivalent to C3-R's positive-support criterion holding, but now how far it holds by is also quantified. The core is the Uniform Margin Compactness Theorem (Theorem 6.1): if the margin has a uniform lower bound $\gamma(V_R)\ge\gamma_0>0$ across all scales, then, by compactness of the unit sphere in $\operatorname{Sym}_0(3)$, there exists a single fixed cross-scale separating matrix $K^\ast$ that simultaneously witnesses positive support for the core set at every scale — there is no need to hunt for a new separating matrix scale by scale; a uniform margin directly yields one universal witness. Merger Inheritance (Theorem 14.1) then proves: when two core clusters merge, as long as each retains its own lower bound $\gamma_0$, the margin of the merged set does not collapse arbitrarily — it shrinks only within an explicit factor controlled by the angular geometry — merging does not destroy uniformity, though it does exact a computable cost. The degenerate branch treats the case $\gamma\to0$: the document proves this corresponds exactly to C3-R's Carathéodory obstruction becoming tight — the Six-Core Near-Balance Witness (Proposition 21.1) shows that as the margin tends to zero, six-core configurations approach a critical arrangement in which the origin lands exactly on the boundary of the convex hull — precisely the configuration at which Carathéodory's bound saturates, no more and no less. This round's strongest quantitative result is a refined far-field pressure enstrophy debt (Theorem 27.1): $\mathfrak E_R\gtrsim\kappa^2\gamma^{-2/3}$ — the smaller the margin, the higher the rescaled-enstrophy cost required to sustain decoupling, further refining C3-P/C3-Q's $\kappa^2$ debt by the margin. The document explicitly flags NG-S1: this bound does not exclude $\gamma\to0$; it merely attaches a diverging price tag to it — if the rescaled enstrophy really can grow without bound, a vanishing margin remains algebraically permissible on its own, and a genuine obstruction must come from an independent upper bound on $\mathfrak E_R$ found elsewhere, which remains OPEN.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/21-c3s-strain-cone-margin/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/21-c3s-strain-cone-margin/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/21-c3s-strain-cone-margin/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/21-c3s-strain-cone-margin/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>21 / C3-S: Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 21 / C3-S</span>
+      <span class="tag">C3-S · Margin Rigidity</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>21 / C3-S: Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity</h1>
+    <p class="h1-sub">C3-R answered only a binary question: whether a common far-field matrix exists at all. This round upgrades it to a quantitative one. The core definition is the margin $\gamma(V):=\operatorname{dist}(0,\operatorname{conv}V)$ — the distance from the origin to the convex hull of the local mean-strain set $V$; $\gamma(V)>0$ is exactly equivalent to C3-R's positive-support criterion holding, but now how far it holds by is also quantified. The core is the Uniform Margin Compactness Theorem (Theorem 6.1): if the margin has a uniform lower bound $\gamma(V_R)\ge\gamma_0>0$ across all scales, then, by compactness of the unit sphere in $\operatorname{Sym}_0(3)$, there exists a single fixed cross-scale separating matrix $K^\ast$ that simultaneously witnesses positive support for the core set at every scale — there is no need to hunt for a new separating matrix scale by scale; a uniform margin directly yields one universal witness. Merger Inheritance (Theorem 14.1) then proves: when two core clusters merge, as long as each retains its own lower bound $\gamma_0$, the margin of the merged set does not collapse arbitrarily — it shrinks only within an explicit factor controlled by the angular geometry — merging does not destroy uniformity, though it does exact a computable cost. The degenerate branch treats the case $\gamma\to0$: the document proves this corresponds exactly to C3-R's Carathéodory obstruction becoming tight — the Six-Core Near-Balance Witness (Proposition 21.1) shows that as the margin tends to zero, six-core configurations approach a critical arrangement in which the origin lands exactly on the boundary of the convex hull — precisely the configuration at which Carathéodory's bound saturates, no more and no less. This round's strongest quantitative result is a refined far-field pressure enstrophy debt (Theorem 27.1): $\mathfrak E_R\gtrsim\kappa^2\gamma^{-2/3}$ — the smaller the margin, the higher the rescaled-enstrophy cost required to sustain decoupling, further refining C3-P/C3-Q's $\kappa^2$ debt by the margin. The document explicitly flags NG-S1: this bound does not exclude $\gamma\to0$; it merely attaches a diverging price tag to it — if the rescaled enstrophy really can grow without bound, a vanishing margin remains algebraically permissible on its own, and a genuine obstruction must come from an independent upper bound on $\mathfrak E_R$ found elsewhere, which remains OPEN.</p>
+    <div class="claim-box">
+      Upgrades C3-R's binary criterion to a quantitative margin $\gamma(V)$. Proves a uniform margin implies a fixed cross-scale separating matrix (via compactness). Proves core mergers do not destroy uniformity, shrinking the margin only by an explicit factor. The degenerate branch $\gamma\to0$ corresponds to the six-core Carathéodory obstruction becoming tight. Refines the far-field pressure enstrophy debt to $\mathfrak E_R\gtrsim\kappa^2\gamma^{-2/3}$ — but this does not exclude a vanishing margin, it only prices it.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../20-c3r-multi-core-pressure-horizon/">20 / C3-R · Multi-Core Packing, Pressure-Horizon Congestion, and the Five-Dimensional Strain-Convexity Debt</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../22-c3t-pressure-diversification-cone-eigenvalue/">22 / C3-T · Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>22 / 67</div>
+    </div>
+    <blockquote class="cite">“a vanishing margin is not excluded — it is priced.” — quoted from the paper's own Section 34.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3S_StrainConeMargin_MergerRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

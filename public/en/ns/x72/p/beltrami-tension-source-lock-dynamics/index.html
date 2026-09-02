@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-47: Beltrami Tension-Cancellation Dynamics and Source-Lock · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="Building on Round 46's scalarization of visibility into a single scalar carrier, this round derives the carrier's complete dynamics: writing the exact equations for the amplitude source, the tension source, and the total visibility gap (built from three channels — vorticity stretching, gradient stress, and the transport commutator), distinguishing a 'state-level cancellation' from the stronger 'source-level cancellation,' and, near a constant-amplitude Beltrami background, obtaining the linearized visibility normal operator, proving that its tangential kernel corresponds exactly to the symmetric tangent directions. Proves that the Beltrami-invariant branch satisfies cancellation at every level simultaneously, but in general only source-level cancellation determines the true contact order of visibility. Route halts at STOP-C51 (state–source cancellation / Beltrami-normal-coercivity gap): the coercivity of this normal operator on the quotient space is not yet proved, nor has an unconditional source-cancellation mechanism been found, left to the next round to examine the operator's kernel.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round47_PureContinuous_BeltramiTension_SourceLockDynamics_v0.1_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/x72/p/beltrami-tension-source-lock-dynamics/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/x72/p/beltrami-tension-source-lock-dynamics/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/x72/p/beltrami-tension-source-lock-dynamics/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/x72/p/beltrami-tension-source-lock-dynamics/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-47 · Beltrami Tension-Cancellation Dynamics and Source-Lock</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · X72-47</span>
+      <span class="tag">Source-Lock Dynamics</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-47: Beltrami Tension-Cancellation Dynamics and Source-Lock</h1>
+    <p class="h1-sub">Building on Round 46's scalarization of visibility into a single scalar carrier, this round derives the carrier's complete dynamics: writing the exact equations for the amplitude source, the tension source, and the total visibility gap (built from three channels — vorticity stretching, gradient stress, and the transport commutator), distinguishing a 'state-level cancellation' from the stronger 'source-level cancellation,' and, near a constant-amplitude Beltrami background, obtaining the linearized visibility normal operator, proving that its tangential kernel corresponds exactly to the symmetric tangent directions. Proves that the Beltrami-invariant branch satisfies cancellation at every level simultaneously, but in general only source-level cancellation determines the true contact order of visibility. Route halts at STOP-C51 (state–source cancellation / Beltrami-normal-coercivity gap): the coercivity of this normal operator on the quotient space is not yet proved, nor has an unconditional source-cancellation mechanism been found, left to the next round to examine the operator's kernel.</p>
+    <div class="claim-box">
+      This round's status: Source-Lock Dynamics
+      <span class="note">— Taken from the file's own objective/executive-result section, meaning preserved, not a full verbatim translation.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../invisible-escape-amplitude-beltrami-tension/">X72-46 · Invisible-Escape Scalarization and Beltrami Tension Cancellation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../beltrami-normal-hidden-invisible-directions/">X72-48 · Beltrami-Normal Non-Coercivity and Hidden Directions</a></div>
+      
+      <div class="conn-card"><span class="k">NS-X72 progress</span>47 / 71</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round47_PureContinuous_BeltramiTension_SourceLockDynamics_v0.1_2026-08-17.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round47_PureContinuous_BeltramiTension_SourceLockDynamics_v0.1_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

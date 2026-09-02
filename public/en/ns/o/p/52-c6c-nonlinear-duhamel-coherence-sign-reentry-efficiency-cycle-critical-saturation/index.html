@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>52 / C6-C: Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation · NS_O · NS · AMRAL</title>
+<meta name="description" content="C6-B cut the coarse $H\leftrightarrow F$ down to $H_{\rm force}\to F_{\rm NL}^{+}\overset{\text{coherence+sign+setup+persistence}}{\dashrightarrow}H_{\rm force}$; C6-C formally opens up that middle dashed edge, asking whether these re-entry coherence gates can stay non-degenerate simultaneously over infinitely many generations. The first exact result (<strong>C6-C.1</strong>) exactly factors the Duhamel coherence: $\Gamma_\ell^{Duh}=\chi_\ast^{target}\gamma_\ast^{time}$ — future-target concentration (how much of the forcing capacity genuinely targets the same future component/location) times temporal sign coherence (whether it keeps the same sign along that target's history). A large capacity can fail along either path: missing the same future target, or reaching it with alternating signs. Pushing the response peak forward as a probability measure $\nu_\ell^{coh}\in\mathcal P([-1,1])$, <strong>C6-C.2 High-Coherence Concentration Lemma</strong> proves that high-coherence forcing aligns most of its normalized forcing capacity with a single future direction. <strong>C6-C.3 Growth Efficiency Is Bounded by Duhamel Coherence</strong> proves $\eta_\ell^{grow}\le\Gamma_\ell^{Duh}$ — genuine forward peak regeneration automatically requires non-degenerate Duhamel coherence, and arbitrarily small coherence cannot produce genuine growth. Further, if the response is required to be generated across the entire chain-scale sign-thick set $E$ (rather than cheating at a single point), <strong>C6-C.4 Thick-Target Source Coherence Theorem</strong> proves $\chi_E\gamma_E\ge\lambda_Z\Gamma^{Duh}$, hence $\chi_E,\gamma_E\ge\lambda_Z\Gamma^{Duh}$ individually — sign-thick re-entry must therefore be supported by an entire "spatiotemporally coherent nonlinear source slab," and cannot simply focus forcing at a single point and smuggle it across the whole thick set. <strong>C6-C.5 Coherence–Capacity Tradeoff</strong> proves that if $\Gamma^{Duh}\to0$ while the genuine response still needs to stay of comparable magnitude, then $\mathfrak C_\ell/\|Z_\ell\|_\infty=1/\Gamma^{Duh}\to\infty$ — coherence collapse is not free, but is precisely equivalent to "Forcing-Capacity Inflation," still falling under class $\mathsf F$, not a new residual class. Compressing the whole set of reserves needed for re-entry (Duhamel coherence, inherited-field dominance, component selection, harmonic sign margin, temporal persistence, theorem setup) into a seven-dimensional (plus one Boolean) reserve vector $\mathbf R^{re}$ with minimum $b^{re}$, <strong>C6-C.6 Finite Re-entry Bottleneck Theorem</strong> proves that any infinite candidate re-entry sequence, after passing to a subsequence, must belong to exactly one of two types: either <strong>uniformly coherent</strong> ($b_n^{re}\ge b_0>0$ for every generation), or <strong>approaching one of a finite named boundary alphabet</strong> (target diffusion, temporal cancellation, capacity inflation, inherited-field takeover, selection degeneration, harmonic sign saturation — which does not erase C5-L's downstream descent debt — persistence collapse — not pure geometric noise, but looping back to viscous/nonlinear temporal forcing — and setup exit — looping back to the legality class $\mathsf A$). <strong>C6-C.7 Coherent H/F Cycle Reduction</strong> compresses the entire infinite candidate set into Type U (uniformly coherent) or Type S (approaching some fixed boundary). <strong>But C6-C does not rule the uniformly coherent branch dead</strong>: although it is shown to carry a fixed normalized source-slab toll, there is currently no known global finite budget controlling the sum of this toll over all generations, so the uniformly coherent branch is "strictly constrained, but not excluded by any budget." What this round genuinely eliminates are four previously casually accepted coarse explanations: "the forcing is large," "the Duhamel capacity is large," "one response peak is large," and "a bad moment exists" — none of these remains valid evidence for $F_{\rm NL}\to H$. From here on, the H/F question is no longer "will the forcing get large," but "can there exist an infinite, recurrent, spatiotemporally coherent nonlinear source slab that passes all five gates — dominance, selection, sign, persistence, setup — in every single generation" — this uniformly coherent branch is currently neither confirmed nor excluded. Since the H/F line has now been narrowed enough, this round does not dig further into it, and turns instead to the only one of C6-A's original three candidates not yet individually treated: $G\leftrightarrow P$. Formally hands off to <strong>C6-D — Geometry–Pressure Cycle Composition, Provenance Compatibility, and Signature-Return Tests</strong>, with eight composition obligations (D1 typed target of G→P through D8 recurrent provenance).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/52-c6c-nonlinear-duhamel-coherence-sign-reentry-efficiency-cycle-critical-saturation/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>52 / C6-C: Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 52 / C6-C</span>
+      <span class="tag">C6-C · H/F Narrowed Down, Turning to G/P, 3/17</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>52 / C6-C: Nonlinear Duhamel Coherence, Sign-Reentry Efficiency, and Cycle-Critical Saturation</h1>
+    <p class="h1-sub">C6-B cut the coarse $H\leftrightarrow F$ down to $H_{\rm force}\to F_{\rm NL}^{+}\overset{\text{coherence+sign+setup+persistence}}{\dashrightarrow}H_{\rm force}$; C6-C formally opens up that middle dashed edge, asking whether these re-entry coherence gates can stay non-degenerate simultaneously over infinitely many generations. The first exact result (<strong>C6-C.1</strong>) exactly factors the Duhamel coherence: $\Gamma_\ell^{Duh}=\chi_\ast^{target}\gamma_\ast^{time}$ — future-target concentration (how much of the forcing capacity genuinely targets the same future component/location) times temporal sign coherence (whether it keeps the same sign along that target's history). A large capacity can fail along either path: missing the same future target, or reaching it with alternating signs. Pushing the response peak forward as a probability measure $\nu_\ell^{coh}\in\mathcal P([-1,1])$, <strong>C6-C.2 High-Coherence Concentration Lemma</strong> proves that high-coherence forcing aligns most of its normalized forcing capacity with a single future direction. <strong>C6-C.3 Growth Efficiency Is Bounded by Duhamel Coherence</strong> proves $\eta_\ell^{grow}\le\Gamma_\ell^{Duh}$ — genuine forward peak regeneration automatically requires non-degenerate Duhamel coherence, and arbitrarily small coherence cannot produce genuine growth. Further, if the response is required to be generated across the entire chain-scale sign-thick set $E$ (rather than cheating at a single point), <strong>C6-C.4 Thick-Target Source Coherence Theorem</strong> proves $\chi_E\gamma_E\ge\lambda_Z\Gamma^{Duh}$, hence $\chi_E,\gamma_E\ge\lambda_Z\Gamma^{Duh}$ individually — sign-thick re-entry must therefore be supported by an entire "spatiotemporally coherent nonlinear source slab," and cannot simply focus forcing at a single point and smuggle it across the whole thick set. <strong>C6-C.5 Coherence–Capacity Tradeoff</strong> proves that if $\Gamma^{Duh}\to0$ while the genuine response still needs to stay of comparable magnitude, then $\mathfrak C_\ell/\|Z_\ell\|_\infty=1/\Gamma^{Duh}\to\infty$ — coherence collapse is not free, but is precisely equivalent to "Forcing-Capacity Inflation," still falling under class $\mathsf F$, not a new residual class. Compressing the whole set of reserves needed for re-entry (Duhamel coherence, inherited-field dominance, component selection, harmonic sign margin, temporal persistence, theorem setup) into a seven-dimensional (plus one Boolean) reserve vector $\mathbf R^{re}$ with minimum $b^{re}$, <strong>C6-C.6 Finite Re-entry Bottleneck Theorem</strong> proves that any infinite candidate re-entry sequence, after passing to a subsequence, must belong to exactly one of two types: either <strong>uniformly coherent</strong> ($b_n^{re}\ge b_0>0$ for every generation), or <strong>approaching one of a finite named boundary alphabet</strong> (target diffusion, temporal cancellation, capacity inflation, inherited-field takeover, selection degeneration, harmonic sign saturation — which does not erase C5-L's downstream descent debt — persistence collapse — not pure geometric noise, but looping back to viscous/nonlinear temporal forcing — and setup exit — looping back to the legality class $\mathsf A$). <strong>C6-C.7 Coherent H/F Cycle Reduction</strong> compresses the entire infinite candidate set into Type U (uniformly coherent) or Type S (approaching some fixed boundary). <strong>But C6-C does not rule the uniformly coherent branch dead</strong>: although it is shown to carry a fixed normalized source-slab toll, there is currently no known global finite budget controlling the sum of this toll over all generations, so the uniformly coherent branch is "strictly constrained, but not excluded by any budget." What this round genuinely eliminates are four previously casually accepted coarse explanations: "the forcing is large," "the Duhamel capacity is large," "one response peak is large," and "a bad moment exists" — none of these remains valid evidence for $F_{\rm NL}\to H$. From here on, the H/F question is no longer "will the forcing get large," but "can there exist an infinite, recurrent, spatiotemporally coherent nonlinear source slab that passes all five gates — dominance, selection, sign, persistence, setup — in every single generation" — this uniformly coherent branch is currently neither confirmed nor excluded. Since the H/F line has now been narrowed enough, this round does not dig further into it, and turns instead to the only one of C6-A's original three candidates not yet individually treated: $G\leftrightarrow P$. Formally hands off to <strong>C6-D — Geometry–Pressure Cycle Composition, Provenance Compatibility, and Signature-Return Tests</strong>, with eight composition obligations (D1 typed target of G→P through D8 recurrent provenance).</p>
+    <div class="claim-box">
+      Exactly factors the Duhamel coherence into future-target concentration times temporal sign coherence, proving that both genuine peak regeneration ($\eta^{grow}\le\Gamma^{Duh}$) and generation across an entire sign-thick set ($\chi_E,\gamma_E\ge\lambda_Z\Gamma^{Duh}$) automatically require non-degenerate coherence, ruling out cheating at a single point or bluffing with sheer capacity. Coherence collapse is not free, and is exactly equivalent to forcing-capacity inflation. The Finite Re-entry Bottleneck Theorem proves that any infinite candidate re-entry sequence must be either uniformly coherent or approaching some finite boundary alphabet, but the uniformly coherent branch is currently neither confirmed nor excluded — there is no known global finite budget controlling the sum of the source-slab toll across all generations. With the H/F line now narrowed enough, the round turns to $G\leftrightarrow P$, the one of C6-A's three original candidates not yet individually treated, and hands off to C6-D.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../51-c6b-forcing-reentry-bad-window-regeneration-hf-cycle-test/">51 / C6-B · High-Order Forcing Re-entry, Bad-Window Regeneration, and the H/F Cycle Test</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../53-c6d-geometry-pressure-cycle-composition-provenance-compatibility-signature-return-tests/">53 / C6-D · Geometry–Pressure Cycle Composition, Provenance Compatibility, and Signature-Return Tests</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>53 / 67</div>
+    </div>
+    <blockquote class="cite">'The following are no longer acceptable explanations of F_NL→H: forcing norm is large; Duhamel capacity is large; one response peak is large; one bad time exists. A valid re-entry requires explicit coherence/persistence reserves.' — excerpted from Section 55 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C6C_DuhamelCoherence_ReentryCriticalSaturation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

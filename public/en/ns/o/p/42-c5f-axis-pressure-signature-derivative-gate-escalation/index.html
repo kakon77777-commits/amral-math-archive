@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>42 / C5-F: Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-E has already translated seven-point cancellation entirely into three PDE field-defect routes. C5-F asks a more refined question: does middle-gap degeneration also wipe out C5-D's compressive-axis pressure geometry along with it? Does the direction dispersion that cancellation genuinely requires only need the other two eigenvectors to rotate, leaving the most-compressive axis fixed? And can a shared far-field pressure instead lock the compressive axis in place, forming a second finite-dimensional incompatibility with cancellation? C5-F.1, Uniform Compressive Spectral Gap, first proves that the normalized strain in the entire positive-middle sector (including the gap boundary) has a uniform spectral gap $k_2-k_1\ge1/\sqrt2$ — the most-compressive eigenvalue is everywhere simple, so a standard finite-dimensional spectral-perturbation estimate then gives C5-F.2, the Middle-Gap Limit Preserves the Compressive Axis: gap degeneration only pushes the strain shape toward the degenerate boundary $(-1/\sqrt2,0,1/\sqrt2)$, and does not erase the compressive-axis projection $G(e_1)$ — the middle-gap route therefore remains coupled to the pressure-axis geometry. It then proves the quadratic half-space theorem in both a fixed-axis version (C5-F.3) and an axis-cap version (C5-F.4): as long as the gap is non-degenerate and the compressive axis lies within a projection cap of radius set by the gap, even allowing the other two eigenvectors to rotate arbitrarily, all quadratic directions still fall into the same strict half-space. C5-F.5, Nondegenerate Q Cancellation Forces Axis Anti-Concentration, is therefore stronger than C5-E's result: what seven-point cancellation genuinely requires is dispersion of the compressive axis itself, not merely dispersion of the full strain direction — letting only the other two eigenvectors rotate freely while holding the most-compressive axis fixed can never produce a zero barycenter. On pressure: a harmonic far-field pressure matrix admits only two non-degenerate inertia types — a single negative eigenvalue $(-,+,+)$ or a double negative eigenvalue $(-,-,+)$. The round's headline result, C5-F.6: if the shared far-field pressure signature is $(-,+,+)$ and the negative-direction compensation margin is strong enough, it locks the compressive axis into a projection cap; if this cap is narrower than the scale of dispersion that cancellation requires, the two cannot coexist within the same recurrent limit — this is the C5 series' second finite-dimensional algebraic incompatibility, finer than C5-D's original result, because it does not need to lock the full strain direction, only the compressive axis itself, and it supplies an explicit marginal criterion threshold. Conversely, the double-negative signature $(-,-,+)$ does not force a single axis-cap lock (the negative eigenspace is two-dimensional, so the axis can still disperse significantly within it) — so a pressure survivor that is to coexist with non-degenerate-gap cancellation must escape toward a weak margin, a double-negative signature, a degenerate signature boundary, a split pressure source, or mean rotation. On vorticity-dominant leakage, a Hölder argument forces a genuine $\omega\otimes\omega$ $L^2$-congestion lower bound, which an orthogonal projection then splits into either Miller-operator orthogonal congestion (connecting back to the growth-direction orthogonality) or constrained-complement congestion (explicitly stated to not be the true pressure Hessian, only a provisional placeholder that will need to be jointly analyzed in future work alongside strain-squared, advection, and the genuine pressure). Strain-derivative leakage gives a genuine critical pointwise second-derivative-amplitude lower bound, $R^3\|D^2u\|_\infty/\nu\gtrsim1$, but amplitude is not the same as sparseness of component/sign superlevel sets — this hard rule is retained. The document compares the spatial sparseness exponent of middle-gap cubic intermittency ($2/3$) against Grujić–Xu's fixed-$k=1$ direct regularity scaling exponent ($3/5$); since $2/3>3/5$, this is formally favorable — but it immediately warns that $\nabla u$ contains vorticity, so the raw high-derivative-value set must be covered by the union of the high-strain-value set and a vorticity high-value defect set (C5-F.9, the Field-Conversion Dichotomy), so this is only a scale-favorable conditional interface, not a theorem application. C5-F.10, Fixed-Order Recurrence or Derivative-Order Escape (a pure natural-number-subsequence dichotomy), explicitly states that repeated failure at a fixed order does not by itself imply that the derivative order must escape to infinity — only once every fixed-order recurrent defect has been separately excluded is the research line entitled to formally advance to the asymptotic critical boundary $k\to\infty$, and even that boundary is itself not a contradiction — every generation may still fail on component/sign conversion, late-time analyticity, the derivative chain, or a spatial-support mismatch. It formally hands off to C5-G, Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure, with 8 proof targets.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/42-c5f-axis-pressure-signature-derivative-gate-escalation/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/42-c5f-axis-pressure-signature-derivative-gate-escalation/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/42-c5f-axis-pressure-signature-derivative-gate-escalation/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/42-c5f-axis-pressure-signature-derivative-gate-escalation/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>42 / C5-F: Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 42 / C5-F</span>
+      <span class="tag">C5-F · Second Finite-Dimensional Incompatibility</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>42 / C5-F: Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation</h1>
+    <p class="h1-sub">C5-E has already translated seven-point cancellation entirely into three PDE field-defect routes. C5-F asks a more refined question: does middle-gap degeneration also wipe out C5-D's compressive-axis pressure geometry along with it? Does the direction dispersion that cancellation genuinely requires only need the other two eigenvectors to rotate, leaving the most-compressive axis fixed? And can a shared far-field pressure instead lock the compressive axis in place, forming a second finite-dimensional incompatibility with cancellation? C5-F.1, Uniform Compressive Spectral Gap, first proves that the normalized strain in the entire positive-middle sector (including the gap boundary) has a uniform spectral gap $k_2-k_1\ge1/\sqrt2$ — the most-compressive eigenvalue is everywhere simple, so a standard finite-dimensional spectral-perturbation estimate then gives C5-F.2, the Middle-Gap Limit Preserves the Compressive Axis: gap degeneration only pushes the strain shape toward the degenerate boundary $(-1/\sqrt2,0,1/\sqrt2)$, and does not erase the compressive-axis projection $G(e_1)$ — the middle-gap route therefore remains coupled to the pressure-axis geometry. It then proves the quadratic half-space theorem in both a fixed-axis version (C5-F.3) and an axis-cap version (C5-F.4): as long as the gap is non-degenerate and the compressive axis lies within a projection cap of radius set by the gap, even allowing the other two eigenvectors to rotate arbitrarily, all quadratic directions still fall into the same strict half-space. C5-F.5, Nondegenerate Q Cancellation Forces Axis Anti-Concentration, is therefore stronger than C5-E's result: what seven-point cancellation genuinely requires is dispersion of the compressive axis itself, not merely dispersion of the full strain direction — letting only the other two eigenvectors rotate freely while holding the most-compressive axis fixed can never produce a zero barycenter. On pressure: a harmonic far-field pressure matrix admits only two non-degenerate inertia types — a single negative eigenvalue $(-,+,+)$ or a double negative eigenvalue $(-,-,+)$. The round's headline result, C5-F.6: if the shared far-field pressure signature is $(-,+,+)$ and the negative-direction compensation margin is strong enough, it locks the compressive axis into a projection cap; if this cap is narrower than the scale of dispersion that cancellation requires, the two cannot coexist within the same recurrent limit — this is the C5 series' second finite-dimensional algebraic incompatibility, finer than C5-D's original result, because it does not need to lock the full strain direction, only the compressive axis itself, and it supplies an explicit marginal criterion threshold. Conversely, the double-negative signature $(-,-,+)$ does not force a single axis-cap lock (the negative eigenspace is two-dimensional, so the axis can still disperse significantly within it) — so a pressure survivor that is to coexist with non-degenerate-gap cancellation must escape toward a weak margin, a double-negative signature, a degenerate signature boundary, a split pressure source, or mean rotation. On vorticity-dominant leakage, a Hölder argument forces a genuine $\omega\otimes\omega$ $L^2$-congestion lower bound, which an orthogonal projection then splits into either Miller-operator orthogonal congestion (connecting back to the growth-direction orthogonality) or constrained-complement congestion (explicitly stated to not be the true pressure Hessian, only a provisional placeholder that will need to be jointly analyzed in future work alongside strain-squared, advection, and the genuine pressure). Strain-derivative leakage gives a genuine critical pointwise second-derivative-amplitude lower bound, $R^3\|D^2u\|_\infty/\nu\gtrsim1$, but amplitude is not the same as sparseness of component/sign superlevel sets — this hard rule is retained. The document compares the spatial sparseness exponent of middle-gap cubic intermittency ($2/3$) against Grujić–Xu's fixed-$k=1$ direct regularity scaling exponent ($3/5$); since $2/3>3/5$, this is formally favorable — but it immediately warns that $\nabla u$ contains vorticity, so the raw high-derivative-value set must be covered by the union of the high-strain-value set and a vorticity high-value defect set (C5-F.9, the Field-Conversion Dichotomy), so this is only a scale-favorable conditional interface, not a theorem application. C5-F.10, Fixed-Order Recurrence or Derivative-Order Escape (a pure natural-number-subsequence dichotomy), explicitly states that repeated failure at a fixed order does not by itself imply that the derivative order must escape to infinity — only once every fixed-order recurrent defect has been separately excluded is the research line entitled to formally advance to the asymptotic critical boundary $k\to\infty$, and even that boundary is itself not a contradiction — every generation may still fail on component/sign conversion, late-time analyticity, the derivative chain, or a spatial-support mismatch. It formally hands off to C5-G, Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure, with 8 proof targets.</p>
+    <div class="claim-box">
+      Proves that the positive-middle sector has a uniform spectral gap, so the compressive axis remains stable and is not erased even as the gap degenerates to its boundary. Proves that rotating only the other two eigenvectors while holding the compressive axis fixed cannot produce a seven-point zero barycenter — cancellation genuinely requires dispersion of the compressive axis itself, a stronger result than before. Core new result: if the shared far-field pressure has a single-negative signature with a strong enough margin, it locks the compressive axis into a narrow cap, incompatible with cancellation under a non-degenerate gap — C5's second finite-dimensional incompatibility, with an explicit marginal threshold. Vorticity leakage is routed back into the Miller-operator framework. Derivative-order escape is not automatic; the asymptotic critical boundary itself is not a contradiction.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../41-c5e-strain-direction-middle-gap-derivative-intermittency/">41 / C5-E · Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../43-c5g-pressure-signature-vorticity-complement-fixed-order-gate/">43 / C5-G · Pressure-Signature Defects, Vorticity Constraint Complements, and Fixed-Order Derivative-Gate Closure</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>43 / 67</div>
+    </div>
+    <blockquote class="cite">"Q-cancellation + nondegenerate gap ⟹ compressive-axis dispersion; strong one-negative far pressure can force the opposite — Strong One-Negative Pressure Axis Lock + Nondegenerate Gap + Q Zero Barycenter = ∅." — excerpted from §18 and §50 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5F_AxisPressureSignature_DerivativeGateEscalation_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

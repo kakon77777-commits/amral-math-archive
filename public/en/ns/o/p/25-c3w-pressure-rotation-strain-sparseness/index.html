@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 / C3-W: Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-V compressed the hypothetical singular survivor into two concentration channels: pressure rotation and strain fluctuation. This round advances both by one step. On the pressure side, the core is the Critical Pressure Mean-Forcing Bound (Theorem 4.1): the pressure forcing of the mean strain, $P_{\chi,R}=\int\chi_R\nabla^2p$, is a signed tensor, so there is no need to control $\int\chi|\nabla^2p|$; two integrations by parts (subtracting an arbitrary constant $c$) reduce it exactly to the scale-critical $L^{3/2}$ pressure oscillation $\Pi_R$. From the global bound $\int\|p\|_{3/2}^2dt\le C\|u_0\|_2^4/\nu$ (Theorem 7.1, a standard Riesz-plus-interpolation estimate), one obtains $R^2$-Weighted Pressure-Rotation Packing (Theorem 8.1) — but this is still only weighted-finite; under geometric-series scaling every generation can still have $\mathfrak R_n^P\sim1$, so the Zeno escape of pressure rotation still survives (§9). There is also Pressure-Active Core Packing (Theorems 11.1, 12.1): both the number of $b$-pressure-active cores and their time-$L_t^{4/3}$ multiplier admit a scale-independent global budget, connecting directly to Constantin's pressure-regularity theorem — a hypothetical blow-up must escape the uniform integrability of $|p|^{3/2}$ over a shrinking set; pressure-rotation escape is, in essence, a critical pressure-concentration branch. The genuinely new geometry is on the strain side: the Volume-to-One-Dimensional-Sparseness Lemma (Theorem 20.1, a purely geometric lemma) proves that a volume smaller than $\delta^3|B_r|$ already guarantees a direction along which the set is one-dimensionally $\delta$-sparse at that scale, from which follows the Strain-Intermittency-to-Sparseness Theorem (Theorem 22.1): once the effective active volume $\phi_{p,R}$ is small enough, the high-gradient region is automatically one-dimensionally, linearly sparse at scale $r_{\rm sp}\sim\phi_{p,R}^{1/3}R$ — and it is proved that $|\nabla S|\asymp|D^2u|$ pointwise (§23), which places this route on the same derivative order as the Grujić–Xu higher-derivative sparseness-regularity framework. So extreme intermittency is not a free escape: if the sparseness scale does not exceed the relevant analytic radius $\rho_{\rm an}$, a known geometric regularity mechanism may be triggered; to keep functioning as a singular survivor, the analytic scale must shrink faster than $\phi^{1/3}R$ (the Analyticity-Scale Escape Debt), or the component/sign/time interfaces must fail to match.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/25-c3w-pressure-rotation-strain-sparseness/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/25-c3w-pressure-rotation-strain-sparseness/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/25-c3w-pressure-rotation-strain-sparseness/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/25-c3w-pressure-rotation-strain-sparseness/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>25 / C3-W: Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 25 / C3-W</span>
+      <span class="tag">C3-W · Volume Turns into One-Dimensional Sparseness</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>25 / C3-W: Critical Pressure Rotation, Strain Active-Volume Sparseness, and the Analyticity-Scale Barrier</h1>
+    <p class="h1-sub">C3-V compressed the hypothetical singular survivor into two concentration channels: pressure rotation and strain fluctuation. This round advances both by one step. On the pressure side, the core is the Critical Pressure Mean-Forcing Bound (Theorem 4.1): the pressure forcing of the mean strain, $P_{\chi,R}=\int\chi_R\nabla^2p$, is a signed tensor, so there is no need to control $\int\chi|\nabla^2p|$; two integrations by parts (subtracting an arbitrary constant $c$) reduce it exactly to the scale-critical $L^{3/2}$ pressure oscillation $\Pi_R$. From the global bound $\int\|p\|_{3/2}^2dt\le C\|u_0\|_2^4/\nu$ (Theorem 7.1, a standard Riesz-plus-interpolation estimate), one obtains $R^2$-Weighted Pressure-Rotation Packing (Theorem 8.1) — but this is still only weighted-finite; under geometric-series scaling every generation can still have $\mathfrak R_n^P\sim1$, so the Zeno escape of pressure rotation still survives (§9). There is also Pressure-Active Core Packing (Theorems 11.1, 12.1): both the number of $b$-pressure-active cores and their time-$L_t^{4/3}$ multiplier admit a scale-independent global budget, connecting directly to Constantin's pressure-regularity theorem — a hypothetical blow-up must escape the uniform integrability of $|p|^{3/2}$ over a shrinking set; pressure-rotation escape is, in essence, a critical pressure-concentration branch. The genuinely new geometry is on the strain side: the Volume-to-One-Dimensional-Sparseness Lemma (Theorem 20.1, a purely geometric lemma) proves that a volume smaller than $\delta^3|B_r|$ already guarantees a direction along which the set is one-dimensionally $\delta$-sparse at that scale, from which follows the Strain-Intermittency-to-Sparseness Theorem (Theorem 22.1): once the effective active volume $\phi_{p,R}$ is small enough, the high-gradient region is automatically one-dimensionally, linearly sparse at scale $r_{\rm sp}\sim\phi_{p,R}^{1/3}R$ — and it is proved that $|\nabla S|\asymp|D^2u|$ pointwise (§23), which places this route on the same derivative order as the Grujić–Xu higher-derivative sparseness-regularity framework. So extreme intermittency is not a free escape: if the sparseness scale does not exceed the relevant analytic radius $\rho_{\rm an}$, a known geometric regularity mechanism may be triggered; to keep functioning as a singular survivor, the analytic scale must shrink faster than $\phi^{1/3}R$ (the Analyticity-Scale Escape Debt), or the component/sign/time interfaces must fail to match.</p>
+    <div class="claim-box">
+      Proves the mean-strain pressure forcing needs only a signed integral, reducing exactly to the critical $L^{3/2}$ pressure oscillation, but this is still only $R^2$-weighted packing, so the Zeno escape survives. Pressure-active cores have a scale-independent time budget, connecting directly to Constantin's regularity theorem. New geometric result: collapse of the strain active volume automatically produces one-dimensional linear sparseness ($r\sim\phi^{1/3}R$), matching the Grujić–Xu higher-derivative framework in order — extreme intermittency begins to approach a known regularity mechanism, unless the analytic scale shrinks even faster.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../24-c3v-turnover-packing-strain-fluctuation-escape/">24 / C3-V · Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../26-c3x-joint-pressure-strain-analyticity-gap/">26 / C3-X · Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>26 / 67</div>
+    </div>
+    <blockquote class="cite">“small volume is in fact enough to guarantee weak 1D sparseness in some direction.” — quoted from the paper's own Section 28.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3W_PressureRotation_StrainSparseness_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

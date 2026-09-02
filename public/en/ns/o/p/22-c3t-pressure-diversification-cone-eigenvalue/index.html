@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22 / C3-T: Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-S drove margin uniformity all the way to cross-scale rigidity. This round turns back to examine two inferences that look natural but do not hold, honestly flagging the type-level gaps. The first is Half-Space Signature Non-Rigidity (Proposition 5.1): a fixed 5-dimensional mean-strain half-space (C3-P's $H_0$, or the common support matrix of C3-R/S) cannot pin down the sign of the middle eigenvalue $\lambda_2$ — the document gives an explicit two-matrix counterexample in which both matrices lie in the same half-space yet have opposite $\lambda_2$ signs. Only when the half-space narrows to a cone carrying an eigenvalue gap can Weyl's inequality (Theorem 8.1) lock down the sign. But even once the sign is locked, the Mean-to-Pointwise Middle-Eigenvalue No-Go (Proposition 11.1) proves that "$\lambda_2>0$ after averaging in time or space" does not imply "$\lambda_2>0$ pointwise" — yet another explicit counterexample (a construction that oscillates pointwise but averages positive). This is a direct reminder that the middle-eigenvalue criteria built up across C3-K/C3-L hold only at the pointwise level; averaged-level evidence cannot simply be substituted in. The second, more fundamental gap is the Hereditary Pressure-Poor Ancestry Gap (§18): C3-R/S proved only that "a pressure-poor witness core exists at every scale," but this does not imply "there exists a single causal ancestry ray that is pressure-poor at every generation, across all scales" — the document illustrates this with an explicit infinitely branching tree counterexample: every level has a witness node, but no single path hits a witness node at every level. The document explicitly names this gap the still-unproven Hereditary Pressure-Poor Ancestry Lemma and flags it as the genuine next open target for this line of research. The final result is an information-theoretic Mean-Motif/Operator-Fluctuation Separation No-Go (Theorem 24.1): a fixed mean-strain motif has only 5 scalar degrees of freedom, while the Miller operator-escape ratio is a functional on an infinite-dimensional kernel — 5 scalars cannot, information-theoretically, determine the behavior of an infinite-dimensional kernel. Finite mean geometry is inherently incapable of controlling infinite-dimensional operator escape — this is not a matter of computational difficulty, but a dimensional mismatch.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/22-c3t-pressure-diversification-cone-eigenvalue/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/22-c3t-pressure-diversification-cone-eigenvalue/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/22-c3t-pressure-diversification-cone-eigenvalue/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/22-c3t-pressure-diversification-cone-eigenvalue/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>22 / C3-T: Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 22 / C3-T</span>
+      <span class="tag">C3-T · Two Type-Level Gaps</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>22 / C3-T: Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap</h1>
+    <p class="h1-sub">C3-S drove margin uniformity all the way to cross-scale rigidity. This round turns back to examine two inferences that look natural but do not hold, honestly flagging the type-level gaps. The first is Half-Space Signature Non-Rigidity (Proposition 5.1): a fixed 5-dimensional mean-strain half-space (C3-P's $H_0$, or the common support matrix of C3-R/S) cannot pin down the sign of the middle eigenvalue $\lambda_2$ — the document gives an explicit two-matrix counterexample in which both matrices lie in the same half-space yet have opposite $\lambda_2$ signs. Only when the half-space narrows to a cone carrying an eigenvalue gap can Weyl's inequality (Theorem 8.1) lock down the sign. But even once the sign is locked, the Mean-to-Pointwise Middle-Eigenvalue No-Go (Proposition 11.1) proves that "$\lambda_2>0$ after averaging in time or space" does not imply "$\lambda_2>0$ pointwise" — yet another explicit counterexample (a construction that oscillates pointwise but averages positive). This is a direct reminder that the middle-eigenvalue criteria built up across C3-K/C3-L hold only at the pointwise level; averaged-level evidence cannot simply be substituted in. The second, more fundamental gap is the Hereditary Pressure-Poor Ancestry Gap (§18): C3-R/S proved only that "a pressure-poor witness core exists at every scale," but this does not imply "there exists a single causal ancestry ray that is pressure-poor at every generation, across all scales" — the document illustrates this with an explicit infinitely branching tree counterexample: every level has a witness node, but no single path hits a witness node at every level. The document explicitly names this gap the still-unproven Hereditary Pressure-Poor Ancestry Lemma and flags it as the genuine next open target for this line of research. The final result is an information-theoretic Mean-Motif/Operator-Fluctuation Separation No-Go (Theorem 24.1): a fixed mean-strain motif has only 5 scalar degrees of freedom, while the Miller operator-escape ratio is a functional on an infinite-dimensional kernel — 5 scalars cannot, information-theoretically, determine the behavior of an infinite-dimensional kernel. Finite mean geometry is inherently incapable of controlling infinite-dimensional operator escape — this is not a matter of computational difficulty, but a dimensional mismatch.</p>
+    <div class="claim-box">
+      Proves a fixed 5-dimensional half-space cannot lock the sign of the middle eigenvalue (an explicit counterexample) — only a narrow cone with an eigenvalue gap can — and that positivity on average does not imply pointwise positivity (another counterexample). Proves that "a witness core at every scale" does not imply "a cross-scale ancestry ray" (an infinite-tree counterexample), explicitly naming the missing Hereditary Pressure-Poor Ancestry Lemma as the next open target. Proves that a 5-scalar mean motif cannot, information-theoretically, control infinite-dimensional operator escape.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../21-c3s-strain-cone-margin/">21 / C3-S · Strain-Cone Margin, Cross-Scale Separator Compactness, and Merger Rigidity</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../23-c3u-pressure-heredity-mean-pointwise-rigidity/">23 / C3-U · Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>23 / 67</div>
+    </div>
+    <blockquote class="cite">“a witness at every level does not make a witness along any one path.” — quoted from the paper's own Section 18.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3T_PressureDiversification_ConeEigenvalue_HeredityGap_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

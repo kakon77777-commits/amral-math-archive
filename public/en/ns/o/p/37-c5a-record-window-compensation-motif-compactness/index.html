@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>37 / C5-A: Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4 has already compressed blow-up's asynchronous survival space into the six-element finite compensation-motif family $\mathcal C=\{T,O,M,Q,P,D\}$ (temporal pulse, operator angle, mean variation, seven-point quadratic cancellation, pressure concentration, derivative-gate defect). C5 no longer asks which branch can still be split off, but instead asks whether these motifs, after record-window renormalization, can admit a compatible recurrent limit. The document first lays down a hard rule: Seregin's necessary condition proves that under a hypothetical blow-up, $\|u(t)\|_{L^3}\to\infty$ and $\|u(t)\|_{\dot H^{1/2}}\to\infty$, so within the singular-lineage rescaling, no uniform upper bound currently exists to which the standard Gallagher–Koch–Planchon critical-element compactness machinery could be applied — C5 explicitly forbids assuming compactness of the full critical field directly, and instead adopts metadata/probability-measure/defect-measure compactification. The record window is first given a unit-time renormalization ($s=(t-\tau_j)/L_j\in(0,1)$), but its relative viscous scale $\Theta_j^{time}=\nu\lambda_{q_j}^2L_j$ must additionally be retained — unit-time normalization is not the same as parabolic-time normalization. The six motifs are then each converted into genuinely compact objects: the middle-strain load becomes a probability measure on $\mathcal P([0,1])$; operator positive/negative growth becomes sub-probability measures, with a compensation offset $\beta_j^{op}=(P_j-N_j)/(P_j+N_j)\in(0,1]$ attached (guaranteed by C4-J's exact identity $P_j-N_j=\Delta E_{1,j}$); operator angle uses a bounded coordinate change so that even a ratio $r_\nu\to\infty$ still lands in a compact space; mean variation becomes a vector measure of bounded total variation; C4-J's seven-point Carathéodory witnesses become the compact space $\Delta_7\times(S^5)^7$; pressure concentration becomes a probability measure on the sphere; and the derivative defect uses a one-point compactification $\mathbb N_\infty=\mathbb N\cup\{\infty\}$, allowing the derivative order itself to diverge as a legitimate boundary value. The round's core result is the Compensation-Motif Sequential Compactness Theorem (Theorem 14.1, relying on finite-dimensional compact factors, weak compactness of probability measures on a compact metric space, weak-star compactness of bounded vector measures, and stitching together the finite discrete motif states one by one): every infinite C4-J record sequence has a subsequence along which every component converges, in its own topology, to a unified state $\Theta_\ast^{C5}$. The document immediately draws a sharp line around what this does not prove (§15): it does not prove that the rescaled field itself converges in $L^3$, $\dot H^{1/2}$, or any full critical topology, nor does it prove that this limiting state is actually produced by some genuine N-S limit field — it is only a necessary motif-compatibility limit state. C5-A.2 is the round's most important new no-go: an explicit construction proves that weak limits can erase microscopic pulse separation — cutting $[0,1]$ into rapidly alternating equal-length cells, with $m_j$ taking its value on even cells and $o_j$ on odd cells, so that $m_j(s)o_j(s)=0$ holds everywhere for every $j$ (completely disjoint at every finite scale), yet the weak limits of both converge to the very same Lebesgue measure — proving that weak-limit overlap is not the same as microscopic same-instant synchronization, which forces the next step to introduce temporal Young / two-scale defects. The document also provides a scale-dependent overlap spectrum $\mathfrak O_{j,n}$ (using a triangular kernel $K_n$) as a partial remedy, capable of preserving overlap information at each fixed scale $n$ without misreading it as genuine synchronization. The round closes with five explicit no-gos (§27): motif compactness does not imply field compactness; pairwise disjointness at every $j$ does not imply disjointness of the limit; equal limiting measures do not imply finite-scale simultaneous overlap; a seven-point cancellation coefficient tending to zero does not imply that seven spatial points are genuinely cancelling exactly; and a pressure limiting measure being an atomic measure does not imply that a genuine N-S singularity actually occurs. It formally hands off to C5-B, Temporal Young Defects and Pulse-Phase Compatibility, whose task is to recover, via a colored temporal Young measure, the microscopic phase information deliberately discarded here.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5A_RecordWindow_MotifCompactness_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/37-c5a-record-window-compensation-motif-compactness/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/37-c5a-record-window-compensation-motif-compactness/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/37-c5a-record-window-compensation-motif-compactness/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/37-c5a-record-window-compensation-motif-compactness/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>37 / C5-A: Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 37 / C5-A</span>
+      <span class="tag">C5-A · C5 Series Opens</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>37 / C5-A: Record-Window Renormalization, Compensation-Motif State Space, and Metadata Compactness</h1>
+    <p class="h1-sub">C4 has already compressed blow-up's asynchronous survival space into the six-element finite compensation-motif family $\mathcal C=\{T,O,M,Q,P,D\}$ (temporal pulse, operator angle, mean variation, seven-point quadratic cancellation, pressure concentration, derivative-gate defect). C5 no longer asks which branch can still be split off, but instead asks whether these motifs, after record-window renormalization, can admit a compatible recurrent limit. The document first lays down a hard rule: Seregin's necessary condition proves that under a hypothetical blow-up, $\|u(t)\|_{L^3}\to\infty$ and $\|u(t)\|_{\dot H^{1/2}}\to\infty$, so within the singular-lineage rescaling, no uniform upper bound currently exists to which the standard Gallagher–Koch–Planchon critical-element compactness machinery could be applied — C5 explicitly forbids assuming compactness of the full critical field directly, and instead adopts metadata/probability-measure/defect-measure compactification. The record window is first given a unit-time renormalization ($s=(t-\tau_j)/L_j\in(0,1)$), but its relative viscous scale $\Theta_j^{time}=\nu\lambda_{q_j}^2L_j$ must additionally be retained — unit-time normalization is not the same as parabolic-time normalization. The six motifs are then each converted into genuinely compact objects: the middle-strain load becomes a probability measure on $\mathcal P([0,1])$; operator positive/negative growth becomes sub-probability measures, with a compensation offset $\beta_j^{op}=(P_j-N_j)/(P_j+N_j)\in(0,1]$ attached (guaranteed by C4-J's exact identity $P_j-N_j=\Delta E_{1,j}$); operator angle uses a bounded coordinate change so that even a ratio $r_\nu\to\infty$ still lands in a compact space; mean variation becomes a vector measure of bounded total variation; C4-J's seven-point Carathéodory witnesses become the compact space $\Delta_7\times(S^5)^7$; pressure concentration becomes a probability measure on the sphere; and the derivative defect uses a one-point compactification $\mathbb N_\infty=\mathbb N\cup\{\infty\}$, allowing the derivative order itself to diverge as a legitimate boundary value. The round's core result is the Compensation-Motif Sequential Compactness Theorem (Theorem 14.1, relying on finite-dimensional compact factors, weak compactness of probability measures on a compact metric space, weak-star compactness of bounded vector measures, and stitching together the finite discrete motif states one by one): every infinite C4-J record sequence has a subsequence along which every component converges, in its own topology, to a unified state $\Theta_\ast^{C5}$. The document immediately draws a sharp line around what this does not prove (§15): it does not prove that the rescaled field itself converges in $L^3$, $\dot H^{1/2}$, or any full critical topology, nor does it prove that this limiting state is actually produced by some genuine N-S limit field — it is only a necessary motif-compatibility limit state. C5-A.2 is the round's most important new no-go: an explicit construction proves that weak limits can erase microscopic pulse separation — cutting $[0,1]$ into rapidly alternating equal-length cells, with $m_j$ taking its value on even cells and $o_j$ on odd cells, so that $m_j(s)o_j(s)=0$ holds everywhere for every $j$ (completely disjoint at every finite scale), yet the weak limits of both converge to the very same Lebesgue measure — proving that weak-limit overlap is not the same as microscopic same-instant synchronization, which forces the next step to introduce temporal Young / two-scale defects. The document also provides a scale-dependent overlap spectrum $\mathfrak O_{j,n}$ (using a triangular kernel $K_n$) as a partial remedy, capable of preserving overlap information at each fixed scale $n$ without misreading it as genuine synchronization. The round closes with five explicit no-gos (§27): motif compactness does not imply field compactness; pairwise disjointness at every $j$ does not imply disjointness of the limit; equal limiting measures do not imply finite-scale simultaneous overlap; a seven-point cancellation coefficient tending to zero does not imply that seven spatial points are genuinely cancelling exactly; and a pressure limiting measure being an atomic measure does not imply that a genuine N-S singularity actually occurs. It formally hands off to C5-B, Temporal Young Defects and Pulse-Phase Compatibility, whose task is to recover, via a colored temporal Young measure, the microscopic phase information deliberately discarded here.</p>
+    <div class="claim-box">
+      Hard rule: Seregin's necessary condition forbids C5 from directly assuming compactness of the full critical field, so it adopts metadata/measure compactification instead. Converts C4-J's six-element compensation-motif family one by one into probability measures, sub-probability measures, bounded vector measures, compact coordinate spaces, and a one-point compactification, and proves the Compensation-Motif Sequential Compactness Theorem: every infinite record sequence has a subsequence converging at the metadata level. Explicitly does not prove field convergence, nor that the limit comes from a genuine N-S field. Core no-go: an explicit construction proves that everywhere-disjoint density sequences can still weakly converge to a fully overlapping limit — weak-limit overlap is not microscopic synchronization.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../36-c4j-compensation-rigidity-final-synchronization-audit/">36 / C4-J · Compensation Rigidity, Final Synchronization Audit, and C4 Phase Closure</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../38-c5b-temporal-young-pulse-phase-compatibility/">38 / C5-B · Temporal Young Defects, Pulse-Phase Compatibility, and the Concentration/Oscillation Trichotomy</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>38 / 67</div>
+    </div>
+    <blockquote class="cite">"recurrent compensation metadata always has a convergent subsequence — but weak limits can erase microscopic pulse separation, so limit overlap ≠ finite-scale synchronization." — excerpted from §14 and §17 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5A_RecordWindow_MotifCompactness_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5A_RecordWindow_MotifCompactness_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

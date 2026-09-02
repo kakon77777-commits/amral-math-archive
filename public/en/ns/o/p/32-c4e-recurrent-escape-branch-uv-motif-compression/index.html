@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>32 / C4-E: Recurrent Escape-Branch Rigidity, Transport-Free Source Routing, and UV Motif Compression · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4-D compressed critical-shell crossings into eight branches. This round's task is not to add yet more branches, but to compress the mutually-reducible branches into a finite number of recurrent structural motifs. The core tool is transport-free source routing: define $R_q^\sigma=N_q^\sigma-v_q\cdot\nabla f$ (subtracting off the low-mode pure-transport velocity field $v_q$), and prove two exact identities — Pure Transport Does Not Drive the Sup-Norm Maximum (Theorem C4-E.1: at the amplitude maximum, $\nabla|f|=0$, so the transport term vanishes exactly) and Pure Transport Does Not Drive Global Shell Energy Work (Theorem C4-E.2: because $v_q$ is divergence-free, $\int f\cdot(v_q\cdot\nabla f)=0$ holds exactly) — so amplitude sources and shell energy work are in fact both driven by the same transport-free deformation/cross-scale remainder, sharper than C4-D's direct use of the full $N_q^\sigma$. A Bony/commutator decomposition (Theorem 9.1) splits $\|R_q^\sigma\|_\infty$ into a low-mode deformation load times a comparable shell envelope, plus a high-high frequency congestion term. In the regime combining front-side safety, a fixed hysteresis ratio, and a sufficiently small threshold, the Source-Overcapacity Routing Theorem (Theorem 13.1) proves that source overcapacity must route to either the low-mode shear branch (E-SHEAR, a genuine $O(1)$ critical vorticity event at the same derivative level as BKM/Cheskidov–Dai) or the high-high-frequency branch (E-HH). The Small-Threshold Far-Relay Theorem (Theorem 17.1) further proves that under a small threshold, the nearby high-high-frequency capacity is only $O(\beta_1^2)$, not enough to pay for an $O(\beta_1)$ crossing impulse, so high-high-frequency congestion must draw on a strictly higher frequency $p\ge q+L$ — this unifies C4-D's rank deficiency with this round's source overcapacity into a single structural motif: Higher-Frequency Relay (§20), the round's first genuine motif merger. On same-handed triads, exact algebra proves $-\dot e_p=\dot e_k+\dot e_q$ (§22-23): same-handed high-mode gain is not a one-way UV transfer — the smallest mode $k$ gains simultaneously within the same event. The Homochiral Gap-or-Reverse-Co-Gain Lemma (Theorem 24.1) proves that local same-handed gain must lead either to radial-gap degeneration or to comparable-magnitude low-mode co-gain (a Bidirectional Critical Work Split) — same-handedness is therefore absorbed into spectral-geometry degeneration or critical work variation, and is no longer an independent branch. The document unifies Class II nonlocal gap collapse, Class III near-equilateral radial concentration, and same-handed gap collapse into the Spectral-Geometry Degeneration Motif (§29); and unifies spatial work cancellation, the robust helical cancellation already proved in C4-D (which forces negative high-mode work), and same-handed bidirectional splitting into the Critical Work-Variation Motif (§31) — again noting that this matches the same honesty limitation seen repeatedly across C3/C4: an ordinary energy balance controls only the net value $W^+-W^-$, not the total $W^++W^-$, and there is currently no finite unweighted budget for it. The round's core result is the UV Recurrent Motif Compression Theorem (Theorem 37.1, under explicitly flagged front-side hypotheses): every critical UV shell crossing must fall into one of six motifs — three closure-friendly motifs (persistence, UV–low-strain synchronization, UV–helicity-production synchronization, all three already synchronization successes rather than escapes) and three genuinely unresolved escape motifs (Higher-Frequency Relay, Critical Work Variation, Spectral-Geometry Degeneration). The next round formally attacks the trilemma formed by these three.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4E_RecurrentEscapeBranch_UVMotifCompression_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/32-c4e-recurrent-escape-branch-uv-motif-compression/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/32-c4e-recurrent-escape-branch-uv-motif-compression/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/32-c4e-recurrent-escape-branch-uv-motif-compression/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/32-c4e-recurrent-escape-branch-uv-motif-compression/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>32 / C4-E: Recurrent Escape-Branch Rigidity, Transport-Free Source Routing, and UV Motif Compression</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 32 / C4-E</span>
+      <span class="tag">C4-E · Eight Branches Compressed to Six Motifs</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>32 / C4-E: Recurrent Escape-Branch Rigidity, Transport-Free Source Routing, and UV Motif Compression</h1>
+    <p class="h1-sub">C4-D compressed critical-shell crossings into eight branches. This round's task is not to add yet more branches, but to compress the mutually-reducible branches into a finite number of recurrent structural motifs. The core tool is transport-free source routing: define $R_q^\sigma=N_q^\sigma-v_q\cdot\nabla f$ (subtracting off the low-mode pure-transport velocity field $v_q$), and prove two exact identities — Pure Transport Does Not Drive the Sup-Norm Maximum (Theorem C4-E.1: at the amplitude maximum, $\nabla|f|=0$, so the transport term vanishes exactly) and Pure Transport Does Not Drive Global Shell Energy Work (Theorem C4-E.2: because $v_q$ is divergence-free, $\int f\cdot(v_q\cdot\nabla f)=0$ holds exactly) — so amplitude sources and shell energy work are in fact both driven by the same transport-free deformation/cross-scale remainder, sharper than C4-D's direct use of the full $N_q^\sigma$. A Bony/commutator decomposition (Theorem 9.1) splits $\|R_q^\sigma\|_\infty$ into a low-mode deformation load times a comparable shell envelope, plus a high-high frequency congestion term. In the regime combining front-side safety, a fixed hysteresis ratio, and a sufficiently small threshold, the Source-Overcapacity Routing Theorem (Theorem 13.1) proves that source overcapacity must route to either the low-mode shear branch (E-SHEAR, a genuine $O(1)$ critical vorticity event at the same derivative level as BKM/Cheskidov–Dai) or the high-high-frequency branch (E-HH). The Small-Threshold Far-Relay Theorem (Theorem 17.1) further proves that under a small threshold, the nearby high-high-frequency capacity is only $O(\beta_1^2)$, not enough to pay for an $O(\beta_1)$ crossing impulse, so high-high-frequency congestion must draw on a strictly higher frequency $p\ge q+L$ — this unifies C4-D's rank deficiency with this round's source overcapacity into a single structural motif: Higher-Frequency Relay (§20), the round's first genuine motif merger. On same-handed triads, exact algebra proves $-\dot e_p=\dot e_k+\dot e_q$ (§22-23): same-handed high-mode gain is not a one-way UV transfer — the smallest mode $k$ gains simultaneously within the same event. The Homochiral Gap-or-Reverse-Co-Gain Lemma (Theorem 24.1) proves that local same-handed gain must lead either to radial-gap degeneration or to comparable-magnitude low-mode co-gain (a Bidirectional Critical Work Split) — same-handedness is therefore absorbed into spectral-geometry degeneration or critical work variation, and is no longer an independent branch. The document unifies Class II nonlocal gap collapse, Class III near-equilateral radial concentration, and same-handed gap collapse into the Spectral-Geometry Degeneration Motif (§29); and unifies spatial work cancellation, the robust helical cancellation already proved in C4-D (which forces negative high-mode work), and same-handed bidirectional splitting into the Critical Work-Variation Motif (§31) — again noting that this matches the same honesty limitation seen repeatedly across C3/C4: an ordinary energy balance controls only the net value $W^+-W^-$, not the total $W^++W^-$, and there is currently no finite unweighted budget for it. The round's core result is the UV Recurrent Motif Compression Theorem (Theorem 37.1, under explicitly flagged front-side hypotheses): every critical UV shell crossing must fall into one of six motifs — three closure-friendly motifs (persistence, UV–low-strain synchronization, UV–helicity-production synchronization, all three already synchronization successes rather than escapes) and three genuinely unresolved escape motifs (Higher-Frequency Relay, Critical Work Variation, Spectral-Geometry Degeneration). The next round formally attacks the trilemma formed by these three.</p>
+    <div class="claim-box">
+      Proves that pure low-mode transport vanishes exactly both at the amplitude maximum and in global shell energy work — the genuine driver is a transport-free remainder. Under a small-threshold, front-safe regime, source overcapacity must route to either low-mode shear or a strictly higher-frequency relay — the first merger of rank deficiency and source overcapacity into one motif. Proves that same-handed gain is exactly bidirectional, not one-way transfer, and is absorbed into spectral-geometry degeneration or critical work variation. The eight branches are formally compressed into six motifs, leaving only three genuinely unresolved: higher-frequency relay, critical work variation, and spectral-geometry degeneration.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../31-c4d-amplitude-work-helical-cancellation-rigidity/">31 / C4-D · Amplitude-to-Flux Branching Bridge, Local Work Cancellation, and Helical-Cancellation Rigidity</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../33-c4f-relay-work-spectral-congestion-trilemma/">33 / C4-F · Higher-Frequency Relay, Work-Variation Operator Bridge, and the Spectral-Congestion Trilemma</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>33 / 67</div>
+    </div>
+    <blockquote class="cite">"helicity-silent ≠ dynamically silent." — excerpted from §45 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4E_RecurrentEscapeBranch_UVMotifCompression_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4E_RecurrentEscapeBranch_UVMotifCompression_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

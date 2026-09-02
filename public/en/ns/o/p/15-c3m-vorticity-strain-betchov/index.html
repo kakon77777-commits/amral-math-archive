@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 / C3-M: Vorticity–Strain Coupling, Betchov Global Collapse, and the Directional-Geometry Debt · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-L left two parallel channels that must diverge: spectral-moment escape and middle-strain escape. This round asks: can the two be forced to couple through genuine vortex-stretching geometry? The answer is not the simple claim that "vorticity must align with some strain eigenvector." The core is the Exact Stretching-Orientation Identity (Theorem 4.1): the instantaneous stretching rate along the vorticity direction $\alpha=\lambda_2+(\lambda_3-\lambda_2)c_3-(\lambda_2-\lambda_1)c_1$ — split exactly into three typed components: a middle-eigenvalue baseline, a principal-stretching-direction surplus, and a compressive-direction depletion. From this comes the Excess-Stretching Alignment Debt (Theorem 7.1): if the middle strain value alone cannot account for the stretching, vorticity must pay a debt in alignment with the most-stretching eigenvector, giving the Middle-Strain / Principal-Alignment Carrier Dichotomy (Theorem 10.1) — but the document explicitly warns that this is not the same as "blow-up forces vorticity to align with the most-stretching direction," since the first branch (borne by the middle strain) is already sufficient on its own. The paper's sharpest correction sits in §12-14: invoking the Betchov identity $\int\omega\cdot S\omega=-4\int\det S$, it proves that the global integral erases all directional information (Global Orientation Collapse) — local orientation collapses, through $\int dx$, into the global strain determinant, retaining no trace of $\xi$ whatsoever. Consequently "large global enstrophy growth $\Rightarrow$ vorticity aligns with the most-stretching eigenvector" is an illegitimate inference, formally refuting an intuition common in the numerical literature (NG-M1). The true global carrier is instead shown to be two-positive-eigenvalue strain geometry ($\lambda_2>0$, theorems/propositions §15-17). The document also carefully distinguishes "local eigenframe alignment" from "spatial coherence of the vorticity direction" as two different geometries — only the latter is the actual target of Constantin–Fefferman-type geometric-depletion theorems — and cites the latest 2026 Grujić log-BMO directional-control result as a conditional interface. Finally, it invokes Miller's 2024/2026 inverse-coupling orthogonality $\langle-\Delta S,\omega\otimes\omega\rangle=0$, proving that "vorticity acting on strain" by itself is not sufficient to account for blow-up. The research frontier formally turns to localized Betchov compensation, rather than searching for yet another global scalar identity.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/15-c3m-vorticity-strain-betchov/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/15-c3m-vorticity-strain-betchov/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/15-c3m-vorticity-strain-betchov/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/15-c3m-vorticity-strain-betchov/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>15 / C3-M: Vorticity–Strain Coupling, Betchov Global Collapse, and the Directional-Geometry Debt</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 15 / C3-M</span>
+      <span class="tag">C3-M · Refuting the Alignment Folklore</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>15 / C3-M: Vorticity–Strain Coupling, Betchov Global Collapse, and the Directional-Geometry Debt</h1>
+    <p class="h1-sub">C3-L left two parallel channels that must diverge: spectral-moment escape and middle-strain escape. This round asks: can the two be forced to couple through genuine vortex-stretching geometry? The answer is not the simple claim that "vorticity must align with some strain eigenvector." The core is the Exact Stretching-Orientation Identity (Theorem 4.1): the instantaneous stretching rate along the vorticity direction $\alpha=\lambda_2+(\lambda_3-\lambda_2)c_3-(\lambda_2-\lambda_1)c_1$ — split exactly into three typed components: a middle-eigenvalue baseline, a principal-stretching-direction surplus, and a compressive-direction depletion. From this comes the Excess-Stretching Alignment Debt (Theorem 7.1): if the middle strain value alone cannot account for the stretching, vorticity must pay a debt in alignment with the most-stretching eigenvector, giving the Middle-Strain / Principal-Alignment Carrier Dichotomy (Theorem 10.1) — but the document explicitly warns that this is not the same as "blow-up forces vorticity to align with the most-stretching direction," since the first branch (borne by the middle strain) is already sufficient on its own. The paper's sharpest correction sits in §12-14: invoking the Betchov identity $\int\omega\cdot S\omega=-4\int\det S$, it proves that the global integral erases all directional information (Global Orientation Collapse) — local orientation collapses, through $\int dx$, into the global strain determinant, retaining no trace of $\xi$ whatsoever. Consequently "large global enstrophy growth $\Rightarrow$ vorticity aligns with the most-stretching eigenvector" is an illegitimate inference, formally refuting an intuition common in the numerical literature (NG-M1). The true global carrier is instead shown to be two-positive-eigenvalue strain geometry ($\lambda_2>0$, theorems/propositions §15-17). The document also carefully distinguishes "local eigenframe alignment" from "spatial coherence of the vorticity direction" as two different geometries — only the latter is the actual target of Constantin–Fefferman-type geometric-depletion theorems — and cites the latest 2026 Grujić log-BMO directional-control result as a conditional interface. Finally, it invokes Miller's 2024/2026 inverse-coupling orthogonality $\langle-\Delta S,\omega\otimes\omega\rangle=0$, proving that "vorticity acting on strain" by itself is not sufficient to account for blow-up. The research frontier formally turns to localized Betchov compensation, rather than searching for yet another global scalar identity.</p>
+    <div class="claim-box">
+      Decomposes the stretching rate exactly into three typed components and establishes an alignment-debt dichotomy. Core correction: the Betchov identity proves the global integral completely collapses directional information, formally refuting the common intuition that "enstrophy growth implies vorticity alignment." The true global carrier is two-positive-eigenvalue strain geometry. Citing the latest 2026 inverse-coupling orthogonality, vorticity acting on strain is by itself not a sufficient driving force.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../14-c3l-critical-moment-escape/">14 / C3-L · Critical Vorticity-Moment Escape, the Active-Occupancy Dichotomy, and the Strain-Geometry Debt</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../16-c3n-localized-betchov-boundary/">16 / C3-N · Localized Betchov Boundary Current and the Local Balance of Strain Self-Amplification</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>16 / 67</div>
+    </div>
+    <blockquote class="cite">“Local orientation collapses, through ∫dx, into the global strain determinant — this is a genuine information collapse.” — quoted from the paper's own Section 13.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3M_VorticityStrain_Betchov_GeometryDebt_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

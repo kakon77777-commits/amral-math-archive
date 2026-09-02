@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X72-40: Hardy-BMO Dual Commutator · NS-X72 · NS · AMRAL</title>
+<meta name="description" content="Picks up Round 39's proof that incompressibility gives a Hardy compensation but no automatic Dini gain (STOP-C43), and switches to a dual route, requiring q∈ℋ^1 with dual commutator [u·∇,𝒯_0*]E_p∈BMO. Using Round 38's Pressure Self-Commutator Null Identity, it reduces the dual target to [D_u,𝒯_0*]C, involving only the local trace-free cofactor C_S^0, and proves that the Hardy side can be paid directly from the incompressible enstrophy — but the standard Coifman–Rochberg–Weiss L^p commutator estimate does not by itself deliver the required BMO target: the criticality of a full derivative still sits on the BMO side, with threshold s_u+s_C=1. STOP-C44 (Hardy-BMO Transfer/Two-Increment BMO Endpoint Gap) hands the problem to the next round, to look for extra cancellation from the cofactor's special algebraic structure.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_X72_Round40_PureContinuous_HardyBMO_DualCommutator_v0.1_2026-08-17.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/x72/p/hardy-bmo-dual-commutator/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/x72/p/hardy-bmo-dual-commutator/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/x72/p/hardy-bmo-dual-commutator/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/x72/p/hardy-bmo-dual-commutator/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-X72</a>
+    <span>/</span>
+    <span>X72-40 · Hardy-BMO Dual Commutator</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-X72 · X72-40</span>
+      <span class="tag">Correction</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>X72-40: Hardy-BMO Dual Commutator</h1>
+    <p class="h1-sub">Picks up Round 39's proof that incompressibility gives a Hardy compensation but no automatic Dini gain (STOP-C43), and switches to a dual route, requiring q∈ℋ^1 with dual commutator [u·∇,𝒯_0*]E_p∈BMO. Using Round 38's Pressure Self-Commutator Null Identity, it reduces the dual target to [D_u,𝒯_0*]C, involving only the local trace-free cofactor C_S^0, and proves that the Hardy side can be paid directly from the incompressible enstrophy — but the standard Coifman–Rochberg–Weiss L^p commutator estimate does not by itself deliver the required BMO target: the criticality of a full derivative still sits on the BMO side, with threshold s_u+s_C=1. STOP-C44 (Hardy-BMO Transfer/Two-Increment BMO Endpoint Gap) hands the problem to the next round, to look for extra cancellation from the cofactor's special algebraic structure.</p>
+    <div class="claim-box">
+      This round's status: Correction
+      <span class="note">— Taken from the file's own objective/executive-result section, meaning preserved, not a full verbatim translation.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../critical-endpoint-dini-hardy-compensation/">X72-39 · Critical-Endpoint Dini Compensation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../special-cofactor-affine-jet-piola-vorticity/">X72-41 · Special Cofactor and Piola Vorticity</a></div>
+      
+      <div class="conn-card"><span class="k">NS-X72 progress</span>40 / 71</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-X72</a>
+    <a href="../../files/NS_X72_Round40_PureContinuous_HardyBMO_DualCommutator_v0.1_2026-08-17.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_X72_Round40_PureContinuous_HardyBMO_DualCommutator_v0.1_2026-08-17.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

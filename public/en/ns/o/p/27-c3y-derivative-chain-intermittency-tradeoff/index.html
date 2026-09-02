@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>27 / C3-Y: Derivative-Chain / Intermittency Tradeoff, Direct-vs-Chain Gap Closure, and Joint-Concentration Routing · NS_O · NS · AMRAL</title>
+<meta name="description" content="The final round of the C3 series opens with a Source Audit Correction (§0): re-anchoring the external theorem to its formal journal version — Grujić & Xu, Asymptotic Criticality of the Navier–Stokes Regularity Problem, Journal of Mathematical Fluid Mechanics 26, Article 53 (2024-07-27) — explicitly listing the theorem numbers cited (3.5 the direct criterion, 3.7 the energy a priori, 3.8/3.9 the ascending/descending chain, 3.14 chain-assisted). It re-derives three scales: the energy-a-priori scale $R_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$, the direct finite-$k$ regularity scale $R_{\rm dir}^{(k)}\sim A_k^{-3/2/(k+3/2)}$, and the chain-assisted scale $R_{\rm chain}^{(k)}\sim A_k^{-1/(k+1)}$, with $R_{\rm dir}<R_{\rm chain}<R_{\rm apr}$. The core is the Derivative-Chain / Intermittency Tradeoff Identity (Theorem 12.1): the ratio between the active-volume exponent required by the direct route, $\theta_k^{\rm dir}=3/[2(k+3/2)]$, and that required by the chain-assisted route, $\theta_k^{\rm chain}=3/[2(k+1)(k+3/2)]$, is exactly $k+1$ — the derivative-chain dynamics reduce the power-law burden of the required spatial intermittency by precisely a factor of $k+1$. This round's most important honest moment comes in §15-18 and §35: at $k=2$, the theorem-ready direct exponent is $\theta_2^{\rm dir}=3/7$, not the $1/7$ flagged in the previous round, C3-X — $1/7$ is now formally repositioned as merely the weaker, chain-assisted formal exponent, one that requires an additional chain-ascension gate condition and cannot stand alone as a $k=2$ regularity bridge; this is the paper's own direct correction of the status label it attached to its previous round's result. Another key distinction is No-Go 19.1: a small local effective volume at a single ancestry core, $\phi_{p,R}(x_{\rm ancestry})\ll1$, does not imply that the uniform-local active-volume factor $\Phi_{k,c}$ genuinely required by the external theorem is small at every spatial point — this is an essential separation between an "ancestry-local quantity" and the "quantity a global criterion actually requires," and none of the three possible globalization routes (a single dominant cluster, multi-core covering, or a localized geometric theorem) is complete yet. §23-24 adds a further time-gate no-go: even if the sparseness is small enough at the escape time, that does not mean the subsequent time slices specified by the theorem remain small enough — closing the spatial gap and closing the time gate are two independent proof obligations. Finally, the Joint-Concentration Routing Principle (Theorem 32.1) tightens the survivor down to: if the pressure-concentration branch holds, then at every derivative level $k$ admitted by the theorem, at least one of five conditions must hold — insufficient intermittency, globalization failure, time-gate failure, chain-gate failure, or interface mismatch.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/27-c3y-derivative-chain-intermittency-tradeoff/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/27-c3y-derivative-chain-intermittency-tradeoff/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/27-c3y-derivative-chain-intermittency-tradeoff/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/27-c3y-derivative-chain-intermittency-tradeoff/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>27 / C3-Y: Derivative-Chain / Intermittency Tradeoff, Direct-vs-Chain Gap Closure, and Joint-Concentration Routing</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 27 / C3-Y</span>
+      <span class="tag">C3-Y · The C3 Series Closes Out, 25/25</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>27 / C3-Y: Derivative-Chain / Intermittency Tradeoff, Direct-vs-Chain Gap Closure, and Joint-Concentration Routing</h1>
+    <p class="h1-sub">The final round of the C3 series opens with a Source Audit Correction (§0): re-anchoring the external theorem to its formal journal version — Grujić & Xu, Asymptotic Criticality of the Navier–Stokes Regularity Problem, Journal of Mathematical Fluid Mechanics 26, Article 53 (2024-07-27) — explicitly listing the theorem numbers cited (3.5 the direct criterion, 3.7 the energy a priori, 3.8/3.9 the ascending/descending chain, 3.14 chain-assisted). It re-derives three scales: the energy-a-priori scale $R_{\rm apr}^{(k)}\sim A_k^{-1/(k+3/2)}$, the direct finite-$k$ regularity scale $R_{\rm dir}^{(k)}\sim A_k^{-3/2/(k+3/2)}$, and the chain-assisted scale $R_{\rm chain}^{(k)}\sim A_k^{-1/(k+1)}$, with $R_{\rm dir}<R_{\rm chain}<R_{\rm apr}$. The core is the Derivative-Chain / Intermittency Tradeoff Identity (Theorem 12.1): the ratio between the active-volume exponent required by the direct route, $\theta_k^{\rm dir}=3/[2(k+3/2)]$, and that required by the chain-assisted route, $\theta_k^{\rm chain}=3/[2(k+1)(k+3/2)]$, is exactly $k+1$ — the derivative-chain dynamics reduce the power-law burden of the required spatial intermittency by precisely a factor of $k+1$. This round's most important honest moment comes in §15-18 and §35: at $k=2$, the theorem-ready direct exponent is $\theta_2^{\rm dir}=3/7$, not the $1/7$ flagged in the previous round, C3-X — $1/7$ is now formally repositioned as merely the weaker, chain-assisted formal exponent, one that requires an additional chain-ascension gate condition and cannot stand alone as a $k=2$ regularity bridge; this is the paper's own direct correction of the status label it attached to its previous round's result. Another key distinction is No-Go 19.1: a small local effective volume at a single ancestry core, $\phi_{p,R}(x_{\rm ancestry})\ll1$, does not imply that the uniform-local active-volume factor $\Phi_{k,c}$ genuinely required by the external theorem is small at every spatial point — this is an essential separation between an "ancestry-local quantity" and the "quantity a global criterion actually requires," and none of the three possible globalization routes (a single dominant cluster, multi-core covering, or a localized geometric theorem) is complete yet. §23-24 adds a further time-gate no-go: even if the sparseness is small enough at the escape time, that does not mean the subsequent time slices specified by the theorem remain small enough — closing the spatial gap and closing the time gate are two independent proof obligations. Finally, the Joint-Concentration Routing Principle (Theorem 32.1) tightens the survivor down to: if the pressure-concentration branch holds, then at every derivative level $k$ admitted by the theorem, at least one of five conditions must hold — insufficient intermittency, globalization failure, time-gate failure, chain-gate failure, or interface mismatch.</p>
+    <div class="claim-box">
+      Re-anchors the external theorem to its formal 2024 journal version. Obtains a core identity: the ratio of the active-volume exponents required by the direct route and the chain-assisted route is exactly $k+1$. Honestly corrects the previous round's (C3-X) $1/7$ label — the theorem-ready direct exponent at $k=2$ is $3/7$, and $1/7$ is only the weaker formal exponent requiring an additional chain-ascension condition. Proves that ancestry-local intermittency is not the same as globally uniform-local intermittency (No-Go 19.1); the gap shifts from "is it intermittent enough" to "can it be globalized, and can it recur across the specified time window." The C3 series closes out at 25/25, handing off to C4.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../26-c3x-joint-pressure-strain-analyticity-gap/">26 / C3-X · Joint Pressure–Strain Concentration, Finite-$k$ Gap Closure, and Analyticity-Scale Escape</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../28-c4a-unified-survivor-state-synchronization-closure/">28 / C4-A · Unified Survivor State, Synchronization Debt, and Transition Closure</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>28 / 67</div>
+    </div>
+    <blockquote class="cite">“ancestry-local φ ⇏ uniform-local Φ — the missing link is globalization and time-gate recurrence, not just 'is it intermittent enough'.” — quoted from the paper's own Sections 19 and 47.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3Y_DerivativeChain_IntermittencyTradeoff_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

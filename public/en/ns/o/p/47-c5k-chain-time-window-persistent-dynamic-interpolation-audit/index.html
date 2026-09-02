@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>47 / C5-K: Chain-Time Stitching, Window-Persistent Sign Defects, and Dynamic-Interpolation Closure Audit · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-I/J left one hard rule: different derivative orders use different admissible later times in the theorem, and same-time inequalities cannot be multiplied across orders unconditionally. C5-K re-audits Grujić–Xu's Theorem 3.14 and Lemma 3.16/3.17 faithfully, and arrives at the round's most important self-correction: <strong>"different orders using different times" is not itself a loophole in the published theorem at all</strong>. Because Theorem 3.14 allows order-dependent times $s=s(t)\in I_k(t)$ from the outset, and the published paper's own Lemma 3.16 (controlling Type-$\mathcal A$ strings until a switch, with root growth stably bounded above) and Lemma 3.17 (controlling Type-$\mathcal B$ strings until a switch, stable descending behavior), together with the theorem's proof repeatedly alternating between these two lemmas while tracking switch times, have already completed the entire dynamic-stitching mechanism externally; if a compressed derivative-root maximum tries to grow again, it must still pay a genuinely positive span of time (§6, not a free Zeno mechanism). Hence **C5-K.1 Type-Switch Defect Removal**: under the premise that the full theorem setup and spatial condition hold for every required $(k,t)$, the Type-A/B switch has already been absorbed by the external dynamic-interpolation mechanism, and <strong>a generic "TYPE-SWITCH" can no longer be retained as an independent hypothetical survivor category for C5</strong> — explicitly stating this is a closure endorsed by the external theorem, not a re-proof of Theorem 3.14. So a genuine spatial survivor must be stronger: there must exist some theorem-admissible pair $(k,t)$ such that <strong>the entire</strong> admissible time window $I_k(t)$ contains not a single passing moment — not merely "a good moment at one order differs from the good moment at an adjacent order," but that nowhere in the whole window is there a good moment. This is named a <strong>window-persistent sign defect</strong>. Defining the exact chain clock $\tau_k(t)=[\widetilde{\mathcal C}_kA_k(t)^{2/(k+1)}]^{-1}$ and admissible window $I_k(t)=[t+\tau_k/4,t+\tau_k]$, **C5-K.2 Window-Persistent Descent Strip** proves that if the spatial condition fails throughout the entire window, C5-I's descent bound holds at <strong>every</strong> moment inside the window, upgrading a single-point witness into an entire time strip. **C5-K.3 Adjacent Chain-Window Overlap Lemma** gives clean interval algebra: two adjacent-order windows (sharing a start time) overlap if and only if the clock-frequency ratio $1/4\le\tau_{k+1}/\tau_k\le4$; generalized to an entire block (**C5-K.4 Chain-Window Helly Lemma**, a one-dimensional Helly property): the whole block shares a common moment if and only if the clock spread $\max\tau_k/\min\tau_k\le4$. Once a block's clocks are synchronized, **C5-K.5** proves that C5-I/J's same-time inequalities can legitimately be stitched across the whole block; **C5-K.6** further proves that clock synchronization plus a sufficiently steep block-wide ascent directly forces at least one order to pass through harmonic geometry. What if the clocks are not synchronized? **C5-K.7 Clock Separation = Root-Clock Jump** proves this is <strong>not free temporal noise</strong> but is exactly equivalent to a genuine adjacent derivative-root amplitude jump (an explicit two-way inequality) — clock separation by itself is derivative-order amplitude geometry, not a timing defect out of nowhere. <strong>This round also makes an honest methodological correction to C5-J's own root-transfer factor</strong> (§44): it remains useful diagnostic metadata, but the published theorem <strong>does not require</strong> it to be uniformly bounded — the published Type-A/B argument provides a separate, sufficient dynamic-stitching mechanism, and the transfer factor is only C5's own supplementary observation, not an external theorem hypothesis. The round closes by compressing what genuinely remains of the timing classification into five items: window-persistent sign failure, harmonic–temporal critical saturation, in-window root reversal, chain-clock separation, and theorem-setup failure — explicitly keeping "theorem-setup conditions" separate from "spatial defects," rather than pretending the setup hypotheses hold automatically. Formally hands off to <strong>C5-L — Persistent Bad-Window Rigidity, Chain-Clock Defect Measures, and Root-Turnover Compression</strong>, with 8 targets left to prove — the second-to-last round of the C5 series.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5K_ChainTime_WindowPersistent_DynamicInterpolationAudit_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/47-c5k-chain-time-window-persistent-dynamic-interpolation-audit/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>47 / C5-K: Chain-Time Stitching, Window-Persistent Sign Defects, and Dynamic-Interpolation Closure Audit</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 47 / C5-K</span>
+      <span class="tag">C5-K · A Self-Correcting Audit</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>47 / C5-K: Chain-Time Stitching, Window-Persistent Sign Defects, and Dynamic-Interpolation Closure Audit</h1>
+    <p class="h1-sub">C5-I/J left one hard rule: different derivative orders use different admissible later times in the theorem, and same-time inequalities cannot be multiplied across orders unconditionally. C5-K re-audits Grujić–Xu's Theorem 3.14 and Lemma 3.16/3.17 faithfully, and arrives at the round's most important self-correction: <strong>"different orders using different times" is not itself a loophole in the published theorem at all</strong>. Because Theorem 3.14 allows order-dependent times $s=s(t)\in I_k(t)$ from the outset, and the published paper's own Lemma 3.16 (controlling Type-$\mathcal A$ strings until a switch, with root growth stably bounded above) and Lemma 3.17 (controlling Type-$\mathcal B$ strings until a switch, stable descending behavior), together with the theorem's proof repeatedly alternating between these two lemmas while tracking switch times, have already completed the entire dynamic-stitching mechanism externally; if a compressed derivative-root maximum tries to grow again, it must still pay a genuinely positive span of time (§6, not a free Zeno mechanism). Hence **C5-K.1 Type-Switch Defect Removal**: under the premise that the full theorem setup and spatial condition hold for every required $(k,t)$, the Type-A/B switch has already been absorbed by the external dynamic-interpolation mechanism, and <strong>a generic "TYPE-SWITCH" can no longer be retained as an independent hypothetical survivor category for C5</strong> — explicitly stating this is a closure endorsed by the external theorem, not a re-proof of Theorem 3.14. So a genuine spatial survivor must be stronger: there must exist some theorem-admissible pair $(k,t)$ such that <strong>the entire</strong> admissible time window $I_k(t)$ contains not a single passing moment — not merely "a good moment at one order differs from the good moment at an adjacent order," but that nowhere in the whole window is there a good moment. This is named a <strong>window-persistent sign defect</strong>. Defining the exact chain clock $\tau_k(t)=[\widetilde{\mathcal C}_kA_k(t)^{2/(k+1)}]^{-1}$ and admissible window $I_k(t)=[t+\tau_k/4,t+\tau_k]$, **C5-K.2 Window-Persistent Descent Strip** proves that if the spatial condition fails throughout the entire window, C5-I's descent bound holds at <strong>every</strong> moment inside the window, upgrading a single-point witness into an entire time strip. **C5-K.3 Adjacent Chain-Window Overlap Lemma** gives clean interval algebra: two adjacent-order windows (sharing a start time) overlap if and only if the clock-frequency ratio $1/4\le\tau_{k+1}/\tau_k\le4$; generalized to an entire block (**C5-K.4 Chain-Window Helly Lemma**, a one-dimensional Helly property): the whole block shares a common moment if and only if the clock spread $\max\tau_k/\min\tau_k\le4$. Once a block's clocks are synchronized, **C5-K.5** proves that C5-I/J's same-time inequalities can legitimately be stitched across the whole block; **C5-K.6** further proves that clock synchronization plus a sufficiently steep block-wide ascent directly forces at least one order to pass through harmonic geometry. What if the clocks are not synchronized? **C5-K.7 Clock Separation = Root-Clock Jump** proves this is <strong>not free temporal noise</strong> but is exactly equivalent to a genuine adjacent derivative-root amplitude jump (an explicit two-way inequality) — clock separation by itself is derivative-order amplitude geometry, not a timing defect out of nowhere. <strong>This round also makes an honest methodological correction to C5-J's own root-transfer factor</strong> (§44): it remains useful diagnostic metadata, but the published theorem <strong>does not require</strong> it to be uniformly bounded — the published Type-A/B argument provides a separate, sufficient dynamic-stitching mechanism, and the transfer factor is only C5's own supplementary observation, not an external theorem hypothesis. The round closes by compressing what genuinely remains of the timing classification into five items: window-persistent sign failure, harmonic–temporal critical saturation, in-window root reversal, chain-clock separation, and theorem-setup failure — explicitly keeping "theorem-setup conditions" separate from "spatial defects," rather than pretending the setup hypotheses hold automatically. Formally hands off to <strong>C5-L — Persistent Bad-Window Rigidity, Chain-Clock Defect Measures, and Root-Turnover Compression</strong>, with 8 targets left to prove — the second-to-last round of the C5 series.</p>
+    <div class="claim-box">
+      After re-auditing the published theorem, a self-correction: different orders using different admissible times is not itself a loophole — the published theorem's own Type-A/B dynamic-interpolation mechanism has already handled this externally. A genuine survivor must be stronger: an entire admissible time window with not a single passing moment anywhere inside it. Defines an exact chain clock, and proves that adjacent windows overlap if and only if the clock-frequency ratio lies between one-quarter and four, and an entire block is synchronized if and only if the clock spread is at most four — when synchronized, same-time inequalities can legitimately be stitched across orders; when not, this is exactly equivalent to a genuine derivative-root jump. Makes an honest correction to C5-J's root-transfer factor: useful, but not required by the theorem.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../46-c5j-line-section-order-sandwich-harmonic-saturation/">46 / C5-J · Line-Section Sign Processes, Order-Sandwich Coupling, and Harmonic Critical Saturation</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../48-c5l-persistent-bad-window-clock-defect-root-turnover-compression/">48 / C5-L · Persistent Bad-Window Rigidity, Chain-Clock Defect Measures, and Root-Turnover Compression</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>48 / 67</div>
+    </div>
+    <blockquote class="cite">'different derivative orders using different theorem times is not itself a loophole — generic TYPE-SWITCH cannot be retained as an independent hypothetical singular survivor once the theorem spatial hypothesis holds.' — excerpted from Sections 7 and 49 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5K_ChainTime_WindowPersistent_DynamicInterpolationAudit_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5K_ChainTime_WindowPersistent_DynamicInterpolationAudit_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

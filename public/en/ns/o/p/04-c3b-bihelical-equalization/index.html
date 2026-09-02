@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>04 / C3-B: Bihelical Critical-Energy Equalization, Heterochiral Triad Decomposition, and Unique-Sign UV Escape · NS_O · NS · AMRAL</title>
+<meta name="description" content="Opens with an epistemic correction: for the $\mathcal E_+-\mathcal E_-=c_0$-type identity obtained in the previous round, C3-A, a literature check found that Lei–Lin–Zhou had already established the equivalent critical-helicity energy identity — it is not a new theorem of this paper. What this paper adds is connecting it to blow-up escape, Waleffe helical-triad algebra, the unique-chirality sign mode as the true source, and the multiscale legality chain of the X-Integration. Core result: from that external identity together with divergence of the critical size under blow-up, it derives that the two chirality sectors' accumulated critical energies $\mathcal E_\pm(t_n)$ must simultaneously tend to infinity along some sequence (Theorem 5.1), with ratio $\mathcal E_+/\mathcal E_-\to1$ (Corollary 6.1) — no matter how large the initial helicity bias $c_0$ is, as long as the critical energy genuinely escapes to infinity, the fixed initial difference eventually becomes negligible. Using Waleffe helical-triad algebra, it formally splits the heterochiral triads into Class II $(+--)$, III $(+-+)$, and IV $(++-)$, and proves that homochiral triads (Class I) make exactly zero contribution to positive critical absolute helicity (homochiral triads do not produce positive critical absolute helicity). Every heterochiral triad has a unique chirality-sign mode, and pair production can be rewritten entirely as "the wavenumber-weighted energy transfer of that unique sign mode," $\mathcal R_\tau=r_\tau\dot e_{\rm uniq}$. Theorem 21.1 (one of the paper's hardest estimates): using the Bernstein inequality together with the Leray energy inequality, it proves that the contribution of the unique sign mode below a fixed cutoff $K$ has finite time integral — so a fixed low-frequency opposite-chirality catalyst cannot repeatedly drive unbounded critical production. Combined with the known divergence of the overall production rate, this yields the Unique-Sign UV Escape Theorem (Theorem 23.1): the unique sign mode genuinely responsible for pair production must itself escape every fixed frequency — finer than C1a's statement that "the velocity field's high-frequency tail must escape," since it pins down the specific mode causing the production. The triangle inequality further proves (Corollary 25.1) that a unique sign mode escaping to high frequency requires at least one comparable-wavenumber high-frequency partner to exist simultaneously (High–High necessity), ruling out a "high frequency ← low + low frequency" generation pattern. The document also formally downgrades the candidate minority-$\dot H^{1/2}$ estimate proposed in C3-A to OPEN (an exact triad audit shows that each monomial containing a minority sign is not enough to place a global minority factor in $\dot H^{1/2}$), replacing it with a weaker but usable minority-dissipation-factor estimate, which is itself still not enough to close off global regularity.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3B_BiHelical_Equalization_UniqueSign_UV_Escape_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/04-c3b-bihelical-equalization/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/04-c3b-bihelical-equalization/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/04-c3b-bihelical-equalization/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/04-c3b-bihelical-equalization/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>04 / C3-B: Bihelical Critical-Energy Equalization, Heterochiral Triad Decomposition, and Unique-Sign UV Escape</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 04 / C3-B</span>
+      <span class="tag">C3-B · Unique-Sign UV Escape</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>04 / C3-B: Bihelical Critical-Energy Equalization, Heterochiral Triad Decomposition, and Unique-Sign UV Escape</h1>
+    <p class="h1-sub">Opens with an epistemic correction: for the $\mathcal E_+-\mathcal E_-=c_0$-type identity obtained in the previous round, C3-A, a literature check found that Lei–Lin–Zhou had already established the equivalent critical-helicity energy identity — it is not a new theorem of this paper. What this paper adds is connecting it to blow-up escape, Waleffe helical-triad algebra, the unique-chirality sign mode as the true source, and the multiscale legality chain of the X-Integration. Core result: from that external identity together with divergence of the critical size under blow-up, it derives that the two chirality sectors' accumulated critical energies $\mathcal E_\pm(t_n)$ must simultaneously tend to infinity along some sequence (Theorem 5.1), with ratio $\mathcal E_+/\mathcal E_-\to1$ (Corollary 6.1) — no matter how large the initial helicity bias $c_0$ is, as long as the critical energy genuinely escapes to infinity, the fixed initial difference eventually becomes negligible. Using Waleffe helical-triad algebra, it formally splits the heterochiral triads into Class II $(+--)$, III $(+-+)$, and IV $(++-)$, and proves that homochiral triads (Class I) make exactly zero contribution to positive critical absolute helicity (homochiral triads do not produce positive critical absolute helicity). Every heterochiral triad has a unique chirality-sign mode, and pair production can be rewritten entirely as "the wavenumber-weighted energy transfer of that unique sign mode," $\mathcal R_\tau=r_\tau\dot e_{\rm uniq}$. Theorem 21.1 (one of the paper's hardest estimates): using the Bernstein inequality together with the Leray energy inequality, it proves that the contribution of the unique sign mode below a fixed cutoff $K$ has finite time integral — so a fixed low-frequency opposite-chirality catalyst cannot repeatedly drive unbounded critical production. Combined with the known divergence of the overall production rate, this yields the Unique-Sign UV Escape Theorem (Theorem 23.1): the unique sign mode genuinely responsible for pair production must itself escape every fixed frequency — finer than C1a's statement that "the velocity field's high-frequency tail must escape," since it pins down the specific mode causing the production. The triangle inequality further proves (Corollary 25.1) that a unique sign mode escaping to high frequency requires at least one comparable-wavenumber high-frequency partner to exist simultaneously (High–High necessity), ruling out a "high frequency ← low + low frequency" generation pattern. The document also formally downgrades the candidate minority-$\dot H^{1/2}$ estimate proposed in C3-A to OPEN (an exact triad audit shows that each monomial containing a minority sign is not enough to place a global minority factor in $\dot H^{1/2}$), replacing it with a weaker but usable minority-dissipation-factor estimate, which is itself still not enough to close off global regularity.</p>
+    <div class="claim-box">
+      Citing the Lei–Lin–Zhou external identity, derives that the two chirality sectors' critical energies diverge simultaneously and equalize asymptotically; homochiral-triad production is exactly zero; the fixed low-frequency unique sign mode's contribution is integrable, yielding the Unique-Sign UV Escape Theorem (finer than C1a); High–High necessity (at least one comparable high-frequency partner must be present). The minority-Ḣ^(1/2) estimate is formally downgraded to OPEN.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../03-c3a-conservation-criticality-trilemma/">03 / C3-A · The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../05-c3c-classii-nonlocality-tax/">05 / C3-C · The Class-II Nonlocality Quadratic Tax, Radial-Drift Congestion, and the Class III/IV Forward-Surviving Family</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>5 / 67</div>
+    </div>
+    <blockquote class="cite">“This is finer than C1's UV escape: the unique-helicity source responsible for critical pair production must also escape every fixed frequency.” — quoted from the paper's Section 24.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3B_BiHelical_Equalization_UniqueSign_UV_Escape_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3B_BiHelical_Equalization_UniqueSign_UV_Escape_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

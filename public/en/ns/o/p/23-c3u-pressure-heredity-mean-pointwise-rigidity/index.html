@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>23 / C3-U: Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-T left two transport gaps: the uniform-cone branch has $K_\ast:v_{n,i}\ge\gamma_0>0$, but the mean-strain cone does not imply pointwise $\lambda_2^+$ geometry; the cone-degeneration branch has a pressure-poor six-core witness at every scale, but a scale-by-scale witness does not imply a pressure-poor causal ray. This round converts both gaps into computable PDE conditions. The core is the Exact Pressure-Heredity Decomposition (Theorem 4.1): the parent-to-child change in the far-field pressure matrix splits exactly into three terms — spatial center displacement $\Delta H_{\rm space}$, near/far reclassification $\Delta H_{\rm recl}$, and time-source handover $\Delta H_{\rm time}$ — the spatial displacement costs only $O(\kappa^{-4}\mathfrak E_p)$ and can be driven small by a large $\kappa$; the genuine difficulty lies in reclassification ($\kappa^{-3}\mathfrak E_{pc}^{ann}$) and the time-source handover ($\kappa^{-3}\mathfrak T_{pc}^{far}$), and it is explicitly proved that the energy inequality itself does not control $\|\nabla\partial_tu\|_2$, so the time handover is not budgeted at the energy level. Using the adjoint cutoff ($\partial_t\chi+u\cdot\nabla\chi+\nu\Delta\chi=0$), it obtains the Exact Adjoint Mean-Strain Transport Identity for the local mean strain (Theorem 14.1), writing the directional rotation exactly as a strain/vorticity quadratic term plus an integral debt from the pressure Hessian. Combining these gives the Conditional Pressure-Poor Heredity Theorem (Theorem 18.1): as long as the turnover of both the far-field matrix direction and the mean-strain direction is small enough, the pressure-poor property transfers from parent to child — heredity is no longer a vague OPEN question but a conditional theorem with explicit sufficient conditions. On the mean-to-pointwise side, the Mean-to-Pointwise Middle-Eigenvalue Theorem (Theorem 24.1) uses Morrey–Poincaré to lift the averaged eigenvalue sign to the pointwise level when $p>3$, but $p=3$ is exactly the genuine endpoint obstruction where $W^{1,3}$ fails to embed into $L^\infty$ (NG-U5); an alternate route via a band-limited shell eigenvalue gap plus remainder smallness is also given (Theorem 30.1). This round's most important honest conclusion comes in §34-36: even if the pointwise middle-strain event is fully closed off, a coherent positive-sign event of amplitude $R^{-2}$, volume $R^3$, and duration $R^2$ pays only an $O(1)$ critical $L_t^2L_x^3$ cost — the sum over infinitely many such parabolic Zeno events diverges, which is exactly the scenario a hypothetical blow-up would allow. So pointwise middle-strain rigidity does not amount to a proof of regularity; a genuinely finite budget, or an incompatible geometry, is still needed elsewhere.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3U_PressureHeredity_MeanPointwiseRigidity_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/23-c3u-pressure-heredity-mean-pointwise-rigidity/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/23-c3u-pressure-heredity-mean-pointwise-rigidity/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/23-c3u-pressure-heredity-mean-pointwise-rigidity/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/23-c3u-pressure-heredity-mean-pointwise-rigidity/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>23 / C3-U: Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 23 / C3-U</span>
+      <span class="tag">C3-U · A Conditional Heredity Theorem</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>23 / C3-U: Pressure-Poor Heredity Decomposition, Adjoint Mean-Strain Transport, and Mean-to-Pointwise Rigidity</h1>
+    <p class="h1-sub">C3-T left two transport gaps: the uniform-cone branch has $K_\ast:v_{n,i}\ge\gamma_0>0$, but the mean-strain cone does not imply pointwise $\lambda_2^+$ geometry; the cone-degeneration branch has a pressure-poor six-core witness at every scale, but a scale-by-scale witness does not imply a pressure-poor causal ray. This round converts both gaps into computable PDE conditions. The core is the Exact Pressure-Heredity Decomposition (Theorem 4.1): the parent-to-child change in the far-field pressure matrix splits exactly into three terms — spatial center displacement $\Delta H_{\rm space}$, near/far reclassification $\Delta H_{\rm recl}$, and time-source handover $\Delta H_{\rm time}$ — the spatial displacement costs only $O(\kappa^{-4}\mathfrak E_p)$ and can be driven small by a large $\kappa$; the genuine difficulty lies in reclassification ($\kappa^{-3}\mathfrak E_{pc}^{ann}$) and the time-source handover ($\kappa^{-3}\mathfrak T_{pc}^{far}$), and it is explicitly proved that the energy inequality itself does not control $\|\nabla\partial_tu\|_2$, so the time handover is not budgeted at the energy level. Using the adjoint cutoff ($\partial_t\chi+u\cdot\nabla\chi+\nu\Delta\chi=0$), it obtains the Exact Adjoint Mean-Strain Transport Identity for the local mean strain (Theorem 14.1), writing the directional rotation exactly as a strain/vorticity quadratic term plus an integral debt from the pressure Hessian. Combining these gives the Conditional Pressure-Poor Heredity Theorem (Theorem 18.1): as long as the turnover of both the far-field matrix direction and the mean-strain direction is small enough, the pressure-poor property transfers from parent to child — heredity is no longer a vague OPEN question but a conditional theorem with explicit sufficient conditions. On the mean-to-pointwise side, the Mean-to-Pointwise Middle-Eigenvalue Theorem (Theorem 24.1) uses Morrey–Poincaré to lift the averaged eigenvalue sign to the pointwise level when $p>3$, but $p=3$ is exactly the genuine endpoint obstruction where $W^{1,3}$ fails to embed into $L^\infty$ (NG-U5); an alternate route via a band-limited shell eigenvalue gap plus remainder smallness is also given (Theorem 30.1). This round's most important honest conclusion comes in §34-36: even if the pointwise middle-strain event is fully closed off, a coherent positive-sign event of amplitude $R^{-2}$, volume $R^3$, and duration $R^2$ pays only an $O(1)$ critical $L_t^2L_x^3$ cost — the sum over infinitely many such parabolic Zeno events diverges, which is exactly the scenario a hypothetical blow-up would allow. So pointwise middle-strain rigidity does not amount to a proof of regularity; a genuinely finite budget, or an incompatible geometry, is still needed elsewhere.</p>
+    <div class="claim-box">
+      Exactly decomposes the parent-to-child change in the far-field pressure matrix into three terms, proving the spatial displacement is controllable while reclassification and the time handover are the genuine gaps and are not bounded at the energy level. Obtains an exact transport identity for the local mean strain and a conditional Pressure-Poor Heredity theorem. Mean-to-pointwise has two sufficient routes, but $p=3$ is a genuine endpoint obstruction. Honest no-go: even fully closed pointwise rigidity remains compatible with blow-up (infinitely many Zeno-type parabolic events).
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../22-c3t-pressure-diversification-cone-eigenvalue/">22 / C3-T · Pressure Diversification, Cone-Eigenvalue Non-Rigidity, and the Heredity Gap</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../24-c3v-turnover-packing-strain-fluctuation-escape/">24 / C3-V · Turnover Packing, the Pressure-Heredity Failure Trichotomy, and Strain-Fluctuation Escape</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>24 / 67</div>
+    </div>
+    <blockquote class="cite">“pointwise middle-strain rigidity ≠ regularity proof.” — quoted from the paper's own Section 36.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3U_PressureHeredity_MeanPointwiseRigidity_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3U_PressureHeredity_MeanPointwiseRigidity_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

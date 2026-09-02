@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>08 / C3-F: Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal · NS_O · NS · AMRAL</title>
+<meta name="description" content="C3-E compressed the local heterochiral survivor down to three simultaneously necessary conditions: rapid viscous renewal, phase/amplitude efficiency, and a provenance-preserving genealogy. This round, for the first time, brings physical space directly into the proof route. The core is the Off-Diagonal Critical Interaction Lemma (Theorem 3.1): the kernel of the annular Leray nonlinearity, at frequency scale $\lambda_q$, has Schwartz-class off-diagonal decay $(1+\lambda_qd)^{-N}$ — the farther apart the parents' spatial supports, the faster the direct interaction contribution decays; no turbulence-scaling assumption is used, this is pure Fourier geometry. Cutting space into admissible dyadic packets of side length $O(\lambda_q^{-1})$, it proves each output packet has only finitely many core parent tuples (Proposition 7.1), with the tail contribution controlled by Theorem 8.1's packet tail bound. Locality–Coherence Tradeoff (Theorem 10.1): if the phase efficiency $\eta_q$ is not too small, one can fix a radius $R_\ast$ independent of $q$ such that at least half of the actual positive production is attributable to the spatial parent core within this radius; as $\eta_q\to0$ the required radius grows, but as long as it does not collapse at superpolynomial speed, the radius remains far smaller than the macroscopic scale. Combining this with the viscous-window renewal from C3-E, it proves Ancestry Center Convergence and the Parabolic Ancestry Cone Theorem (Theorem 19.1): the coherent genealogy's spatial center converges to a single point $x_\ast$ and its time converges to $T_\ast$, with errors compressed to $O(\lambda_n^{-1})$ and $O((\nu\lambda_n^2)^{-1})$ respectively — geometrically compatible with Barker–Prange's Type-I concentration result, though the document explicitly states the two are independent theorems and must not be substituted for one another. The paper's most important course correction is in §22: the intuition that "each parent has only finitely many children" sounds like it should rule out an infinite cascade, but this is wrong — by Kőnig's infinity lemma, a rooted tree with a finite root set, finitely many children per node, and arbitrarily large depth must contain an infinite ray. So finite branching does not annihilate infinite paths; it instead compresses a vague, aggregate cascade into a concrete, extractable genealogy. The document splits C1c into three sub-problems: C1c-a (static packet source selection, for which this round gives a finite-core selection lemma), C1c-b (infinite-path extraction, a purely combinatorial theorem), and C1c-c (causal direction, still missing) — the genuine remaining gap is that an instantaneous interaction graph at a single time can contain cycles (A→B and B→A simultaneously), which is not the same as strictly earlier causal parenthood; genuine causality can only be established using Duhamel time ordering.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/08-c3f-phase-space-ancestry-cone/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/08-c3f-phase-space-ancestry-cone/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/08-c3f-phase-space-ancestry-cone/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/08-c3f-phase-space-ancestry-cone/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>08 / C3-F: Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 08 / C3-F</span>
+      <span class="tag">C3-F · Finite-Branching Reversal</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>08 / C3-F: Phase-Space Quasi-Locality, the Ancestry Cone, and the Finite-Branching Reversal</h1>
+    <p class="h1-sub">C3-E compressed the local heterochiral survivor down to three simultaneously necessary conditions: rapid viscous renewal, phase/amplitude efficiency, and a provenance-preserving genealogy. This round, for the first time, brings physical space directly into the proof route. The core is the Off-Diagonal Critical Interaction Lemma (Theorem 3.1): the kernel of the annular Leray nonlinearity, at frequency scale $\lambda_q$, has Schwartz-class off-diagonal decay $(1+\lambda_qd)^{-N}$ — the farther apart the parents' spatial supports, the faster the direct interaction contribution decays; no turbulence-scaling assumption is used, this is pure Fourier geometry. Cutting space into admissible dyadic packets of side length $O(\lambda_q^{-1})$, it proves each output packet has only finitely many core parent tuples (Proposition 7.1), with the tail contribution controlled by Theorem 8.1's packet tail bound. Locality–Coherence Tradeoff (Theorem 10.1): if the phase efficiency $\eta_q$ is not too small, one can fix a radius $R_\ast$ independent of $q$ such that at least half of the actual positive production is attributable to the spatial parent core within this radius; as $\eta_q\to0$ the required radius grows, but as long as it does not collapse at superpolynomial speed, the radius remains far smaller than the macroscopic scale. Combining this with the viscous-window renewal from C3-E, it proves Ancestry Center Convergence and the Parabolic Ancestry Cone Theorem (Theorem 19.1): the coherent genealogy's spatial center converges to a single point $x_\ast$ and its time converges to $T_\ast$, with errors compressed to $O(\lambda_n^{-1})$ and $O((\nu\lambda_n^2)^{-1})$ respectively — geometrically compatible with Barker–Prange's Type-I concentration result, though the document explicitly states the two are independent theorems and must not be substituted for one another. The paper's most important course correction is in §22: the intuition that "each parent has only finitely many children" sounds like it should rule out an infinite cascade, but this is wrong — by Kőnig's infinity lemma, a rooted tree with a finite root set, finitely many children per node, and arbitrarily large depth must contain an infinite ray. So finite branching does not annihilate infinite paths; it instead compresses a vague, aggregate cascade into a concrete, extractable genealogy. The document splits C1c into three sub-problems: C1c-a (static packet source selection, for which this round gives a finite-core selection lemma), C1c-b (infinite-path extraction, a purely combinatorial theorem), and C1c-c (causal direction, still missing) — the genuine remaining gap is that an instantaneous interaction graph at a single time can contain cycles (A→B and B→A simultaneously), which is not the same as strictly earlier causal parenthood; genuine causality can only be established using Duhamel time ordering.</p>
+    <div class="claim-box">
+      Proves that the off-diagonal critical interaction has Schwartz-class decay; the Locality–Coherence Tradeoff; and that the coherent genealogy is forced to converge into a parabolic phase-space cone. Key course correction: finite branching is not an obstruction — under Kőnig's lemma it in fact guarantees an infinite ray exists. The genuine gap: an instantaneous interaction is not the same as a strictly earlier causal parent.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../07-c3e-viscous-window-renewal/">07 / C3-E · Viscous-Window Renewal, Phase Efficiency, and Zeno Compatibility for the Local Heterochiral Frontier</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../09-c3g-first-crossing-causal-ancestry/">09 / C3-G · The First-Crossing Causal Frontier, Critical Shell Ancestry, and the Monotone Depletion No-Go</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>9 / 67</div>
+    </div>
+    <blockquote class="cite">“finite branching ⟹̸ finite genealogy.” — quoted from the paper's Section 22.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3F_PhaseSpace_Ancestry_Cone_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

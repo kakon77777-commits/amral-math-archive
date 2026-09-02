@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>34 / C4-G: Cross-Congestion Synchronization, Operator Funnel, and UV Phase-Space Closure · NS_O · NS · AMRAL</title>
+<meta name="description" content="C4-F left three forms of congestion: $C_{TP}$ tail/wrap, $C_{DO}$ deformation/operator, $C_{RI}$ radial-interaction. This round asks whether these three forms of congestion can be fully independent of one another. The answer is no. The document first traces each motif's origin: higher-frequency relay ($M_4$) has two sources — Relay-S (from source overcapacity) and Relay-W (from rank-deficient positive work). The Source-Impulse to Growing Deformation-Impulse Theorem (Theorem 7.1, via an annular Bernstein lower bound combined with a symmetric-gradient Korn-type lower bound) proves that source overcapacity must co-occur with a genuine $L^1_tL^2_x$ deformation-driving impulse whose lower bound grows like $\lambda_q^{1/2}$ — strong evidence of congestion, though Leray energy theory currently supplies no corresponding finite global budget for it. This gives that both Relay-S and Relay-W automatically imply deformation/operator congestion (Theorems C4-G.2, C4-G.3), while spectral-geometry degeneration ($M_6$) was, from the outset, itself a sub-case of the positive-work branch, and so likewise automatically implies it (Theorem C4-G.4). Combining the three yields the round's core result, the Cross-Congestion Funnel (§15): $M_4\subset C_{TP}\cap C_{DO}$, $M_5\subset C_{DO}$, $M_6\subset C_{RI}\cap C_{DO}$, so $M_4\vee M_5\vee M_6\Rightarrow C_{DO}$ — $C_{DO}$ is the universal forcing funnel; $C_{TP}$ and $C_{RI}$ are no longer independent exits running parallel to it, but merely phase-space coordinates attached to the same deformation/operator event. The document additionally proves that far-field relay carries an exact near-anti-parallel Fourier geometry (Theorem 18.1, via the reverse triangle inequality plus the law of cosines): the far-field parents' kinetic-energy magnitudes must be comparable and their directions must be close to anti-parallel, with the angular aperture shrinking as $O(2^{-L})$ as the relay gap $L$ grows — relay is itself a form of angular/radial interaction concentration. The round's most important achievement is the Universal Deformation-Funnel Theorem (Theorem C4-G.6): every critical UV crossing must fall into one of four synchronization channels — persistence, low strain/vorticity, positive helicity production, or deformation/operator driving — compressing the entire UV side further, from eight branches to six motifs to three congestions, down to four synchronization channels. The document then uses C3-P/Q's exact operator identities to split the fourth channel further: G-O1 Miller-operator impulse, G-O2 vorticity-quadratic impulse, G-O3 advection/sweep-deformation impulse. G-O1 in turn yields the Operator-Ratio or Higher-Derivative Impulse dichotomy (Theorem C4-G.7): either the genuine Miller-escape ratio stays elevated for a comparable proportion of time (a genuine necessary condition approaching Miller-style blow-up), or the impulse must instead be paid by $\int\|\Delta S\|_2dt$, feeding directly into the higher-derivative/derivative-chain geometry of C3-W/X/Y. The document also honestly retains the sweep warning of §35: a purely spatial-translation-style sweep can make the advection operator large without directly producing local strain growth, so C3-O's guard that an equilibrium fixed point is not the same as a dynamical fixed point must be kept, and must never be silently treated as positive strain-energy production. The UV side finally reaches a clean phase closure (§39): UV crossing no longer has a genuinely isolated recurrent escape; the frontier formally shifts from splitting UV branches to Operator-to-Gate Closure — whether this forced deformation/operator event can genuinely approach some regularity gate.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/34-c4g-cross-congestion-operator-funnel-uv-closure/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/34-c4g-cross-congestion-operator-funnel-uv-closure/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/34-c4g-cross-congestion-operator-funnel-uv-closure/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/34-c4g-cross-congestion-operator-funnel-uv-closure/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>34 / C4-G: Cross-Congestion Synchronization, Operator Funnel, and UV Phase-Space Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 34 / C4-G</span>
+      <span class="tag">C4-G · UV Phase Formally Closed</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>34 / C4-G: Cross-Congestion Synchronization, Operator Funnel, and UV Phase-Space Closure</h1>
+    <p class="h1-sub">C4-F left three forms of congestion: $C_{TP}$ tail/wrap, $C_{DO}$ deformation/operator, $C_{RI}$ radial-interaction. This round asks whether these three forms of congestion can be fully independent of one another. The answer is no. The document first traces each motif's origin: higher-frequency relay ($M_4$) has two sources — Relay-S (from source overcapacity) and Relay-W (from rank-deficient positive work). The Source-Impulse to Growing Deformation-Impulse Theorem (Theorem 7.1, via an annular Bernstein lower bound combined with a symmetric-gradient Korn-type lower bound) proves that source overcapacity must co-occur with a genuine $L^1_tL^2_x$ deformation-driving impulse whose lower bound grows like $\lambda_q^{1/2}$ — strong evidence of congestion, though Leray energy theory currently supplies no corresponding finite global budget for it. This gives that both Relay-S and Relay-W automatically imply deformation/operator congestion (Theorems C4-G.2, C4-G.3), while spectral-geometry degeneration ($M_6$) was, from the outset, itself a sub-case of the positive-work branch, and so likewise automatically implies it (Theorem C4-G.4). Combining the three yields the round's core result, the Cross-Congestion Funnel (§15): $M_4\subset C_{TP}\cap C_{DO}$, $M_5\subset C_{DO}$, $M_6\subset C_{RI}\cap C_{DO}$, so $M_4\vee M_5\vee M_6\Rightarrow C_{DO}$ — $C_{DO}$ is the universal forcing funnel; $C_{TP}$ and $C_{RI}$ are no longer independent exits running parallel to it, but merely phase-space coordinates attached to the same deformation/operator event. The document additionally proves that far-field relay carries an exact near-anti-parallel Fourier geometry (Theorem 18.1, via the reverse triangle inequality plus the law of cosines): the far-field parents' kinetic-energy magnitudes must be comparable and their directions must be close to anti-parallel, with the angular aperture shrinking as $O(2^{-L})$ as the relay gap $L$ grows — relay is itself a form of angular/radial interaction concentration. The round's most important achievement is the Universal Deformation-Funnel Theorem (Theorem C4-G.6): every critical UV crossing must fall into one of four synchronization channels — persistence, low strain/vorticity, positive helicity production, or deformation/operator driving — compressing the entire UV side further, from eight branches to six motifs to three congestions, down to four synchronization channels. The document then uses C3-P/Q's exact operator identities to split the fourth channel further: G-O1 Miller-operator impulse, G-O2 vorticity-quadratic impulse, G-O3 advection/sweep-deformation impulse. G-O1 in turn yields the Operator-Ratio or Higher-Derivative Impulse dichotomy (Theorem C4-G.7): either the genuine Miller-escape ratio stays elevated for a comparable proportion of time (a genuine necessary condition approaching Miller-style blow-up), or the impulse must instead be paid by $\int\|\Delta S\|_2dt$, feeding directly into the higher-derivative/derivative-chain geometry of C3-W/X/Y. The document also honestly retains the sweep warning of §35: a purely spatial-translation-style sweep can make the advection operator large without directly producing local strain growth, so C3-O's guard that an equilibrium fixed point is not the same as a dynamical fixed point must be kept, and must never be silently treated as positive strain-energy production. The UV side finally reaches a clean phase closure (§39): UV crossing no longer has a genuinely isolated recurrent escape; the frontier formally shifts from splitting UV branches to Operator-to-Gate Closure — whether this forced deformation/operator event can genuinely approach some regularity gate.</p>
+    <div class="claim-box">
+      Proves that the three forms of congestion are not independent: higher-frequency relay (whether from source overcapacity or rank deficiency) and spectral-geometry degeneration both automatically imply deformation/operator congestion — the latter is a universal funnel, and the other two are merely attached coordinates. Proves that far-field relay carries an exact near-anti-parallel Fourier geometry. Core theorem: UV crossing is formally compressed into four synchronization channels (persistence, low strain, helicity production, deformation/operator driving); the fourth splits further into three carriers — the Miller operator, vorticity-quadratic, and advection deformation. The UV side reaches phase closure; the frontier shifts to whether the operator can approach a regularity gate.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../33-c4f-relay-work-spectral-congestion-trilemma/">33 / C4-F · Higher-Frequency Relay, Work-Variation Operator Bridge, and the Spectral-Congestion Trilemma</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../35-c4i-middle-operator-overlap-pressure-reentry/">35 / C4-I · Middle–Operator Gate Overlap, Angle Depletion, and Local Pressure Re-entry</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>35 / 67</div>
+    </div>
+    <blockquote class="cite">"UV side no longer has a genuinely isolated escape motif." — excerpted from §39 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C4G_CrossCongestion_OperatorFunnel_UVClosure_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

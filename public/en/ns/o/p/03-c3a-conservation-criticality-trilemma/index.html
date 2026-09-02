@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 / C3-A: The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production · NS_O · NS · AMRAL</title>
+<meta name="description" content="Having shown in C2 that a scalar, additive energy budget alone cannot rule out a critical geometric cascade, this round formally brings in finer structure from the true N–S nonlinearity. Starting from three natural quadratic quantities — kinetic energy $\|u\|_2^2$ (positive, subcritical, nonlinearly conserved), helicity $H$ (scale-critical, nonlinearly conserved, but of indefinite sign), and the critical quantity $\|u\|_{\dot H^{1/2}}^2$ (positive, scale-critical, but with no exact nonlinear conservation law) — it tabulates these and finds that the three properties (positive / critical / nonlinearly conserved) cannot all be obtained simultaneously from any one of these three most natural quantities, constituting the Conservation–Criticality–Positivity Trilemma. Using the helical projection $u=u^++u^-$, it defines the critical size of each sign sector $H_\pm=\|D^{1/2}u^\pm\|_2^2$, and derives from nonlinear helicity conservation that the two sectors' production rates must be equal, $\mathcal R_+=\mathcal R_-$; the common value $\mathcal R$ is called the critical helical pair-production rate. Main theorem (12.1): if $T_\ast$ is a finite blow-up time, then $\int_0^{T_\ast}[\mathcal R]_+\,dt=\infty$ — the proof needs only $\dot H^{1/2}\hookrightarrow L^3$ to convert C1's $L^3$ escape into divergence of a critical quadratic quantity, then uses the pair-production identity to rule out a finite budget. The document stresses that this is the first genuinely unavoidable condition to use the full structure of $B(u,u)$ rather than the energy identity alone — finer than C2's critical toll, since $\mathcal R$ is not an energy flux but a specific projection in helical coordinates. It cites Biferale–Titi's global-regularity result for sign-definite, helically decimated N–S as an external point of comparison: once the opposite-chirality degrees of freedom are removed, helicity becomes sign-definite and equal to the critical size, the trilemma is genuinely lifted, and global regularity can be proved — showing that the mixed-helicity degrees of freedom are not a decoration that can be dropped at will, but the genuine source of the difficulty. The document also proposes a candidate minority-factor estimate (bounding $\mathcal R$ by the smaller of the two sectors), but explicitly flags it as a CANDIDATE LEMMA, not to be used as a theorem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/03-c3a-conservation-criticality-trilemma/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/03-c3a-conservation-criticality-trilemma/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/03-c3a-conservation-criticality-trilemma/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/03-c3a-conservation-criticality-trilemma/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>03 / C3-A: The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 03 / C3-A</span>
+      <span class="tag">C3-A · Opening Round of the Trilemma</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>03 / C3-A: The Conservation–Criticality–Positivity Trilemma and Divergence of Bihelical Pair Production</h1>
+    <p class="h1-sub">Having shown in C2 that a scalar, additive energy budget alone cannot rule out a critical geometric cascade, this round formally brings in finer structure from the true N–S nonlinearity. Starting from three natural quadratic quantities — kinetic energy $\|u\|_2^2$ (positive, subcritical, nonlinearly conserved), helicity $H$ (scale-critical, nonlinearly conserved, but of indefinite sign), and the critical quantity $\|u\|_{\dot H^{1/2}}^2$ (positive, scale-critical, but with no exact nonlinear conservation law) — it tabulates these and finds that the three properties (positive / critical / nonlinearly conserved) cannot all be obtained simultaneously from any one of these three most natural quantities, constituting the Conservation–Criticality–Positivity Trilemma. Using the helical projection $u=u^++u^-$, it defines the critical size of each sign sector $H_\pm=\|D^{1/2}u^\pm\|_2^2$, and derives from nonlinear helicity conservation that the two sectors' production rates must be equal, $\mathcal R_+=\mathcal R_-$; the common value $\mathcal R$ is called the critical helical pair-production rate. Main theorem (12.1): if $T_\ast$ is a finite blow-up time, then $\int_0^{T_\ast}[\mathcal R]_+\,dt=\infty$ — the proof needs only $\dot H^{1/2}\hookrightarrow L^3$ to convert C1's $L^3$ escape into divergence of a critical quadratic quantity, then uses the pair-production identity to rule out a finite budget. The document stresses that this is the first genuinely unavoidable condition to use the full structure of $B(u,u)$ rather than the energy identity alone — finer than C2's critical toll, since $\mathcal R$ is not an energy flux but a specific projection in helical coordinates. It cites Biferale–Titi's global-regularity result for sign-definite, helically decimated N–S as an external point of comparison: once the opposite-chirality degrees of freedom are removed, helicity becomes sign-definite and equal to the critical size, the trilemma is genuinely lifted, and global regularity can be proved — showing that the mixed-helicity degrees of freedom are not a decoration that can be dropped at will, but the genuine source of the difficulty. The document also proposes a candidate minority-factor estimate (bounding $\mathcal R$ by the smaller of the two sectors), but explicitly flags it as a CANDIDATE LEMMA, not to be used as a theorem.</p>
+    <div class="claim-box">
+      Proves the Conservation–Criticality–Positivity Trilemma (no single quadratic quantity can carry all three natural properties at once); proves the two chirality sectors' production rates are equal, R₊ = R₋; main theorem: blow-up ⟹ the time integral of the positive part of the critical pair-production rate diverges — the first genuinely unavoidable condition to use the full N–S structure rather than the energy identity alone. The minority-factor estimate and the persistent-triadic obstruction remain OPEN.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../02-c2-critical-toll-spike-packing/">02 · C2: Critical Toll, Dissipation-Wavenumber Spike-Packing, and the Scale-Blind Budget No-Go</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../04-c3b-bihelical-equalization/">04 / C3-B · Bihelical Critical-Energy Equalization, Heterochiral Triad Decomposition, and Unique-Sign UV Escape</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>4 / 67</div>
+    </div>
+    <blockquote class="cite">“This does not amount to a proof that ‘helicity is the only problem.’ It only shows that, whenever the positive critical Ḣ^(1/2) size and the exact nonlinear helicity structure are both retained, any blow-up must pass through this pair-production channel.” — quoted from the paper's own conclusion.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C3A_Conservation_Criticality_Helical_Pair_Production_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

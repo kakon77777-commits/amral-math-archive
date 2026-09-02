@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>41 / C5-E: Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure · NS_O · NS · AMRAL</title>
+<meta name="description" content="C5-D compressed seven-point cancellation into two escape routes: middle-gap degeneration, or strain-direction dispersion. C5-E is not content to leave these as mere names, and instead asks what measurable derivative/intermittency debt each actually corresponds to. C5-E.1, Middle-Gap Equivalence, first proves that the normalized gap variable $\vartheta(S)=\lambda_2^+\lambda_3/|S|^2$ and the normalized middle eigenvalue $\xi_2=\lambda_2^+/|S|$ are quantitatively equivalent ($\sqrt2\,\vartheta\le\xi_2\le\sqrt6\,\vartheta$) — middle-gap degeneration is genuine degeneration of the middle eigenvalue, not an arbitrary statistic. C5-E.2 proves that if $\vartheta(S)\ge\delta$, then pointwise $|Q|\gtrsim_\delta|S|^2+|\omega|^2$ — a Q-weighted gap concentration is a genuinely physical concentration of quadratic activity, not an artifact of matrix normalization. Building a compactification of the joint strain-direction/gap state, C5-E.3 proves that if the seven-point barycenter tends to zero, the limit cannot be a point mass concentrated on a single non-degenerate strong-middle direction (a direct contradiction from C5-D's cone theorem). C5-E.4, Quantitative Direction Anti-Concentration, gives a further quantitative statement: if the middle-gap mass is small, cancellation forces the strain-direction probability to be unable to concentrate within any single strong-middle cone, giving a genuine lower bound on directional variance. To convert direction leakage into a physical stock, C5-E splits the leaking region exactly into a strain-borne branch and a vorticity-dominant branch (according to the relative size of $|S|^2$ versus $\eta|Q|$); C5-E.5, the Leakage to Derivative or Vorticity Dichotomy, proves that the strain-borne branch, via a weighted Poincaré inequality, forces a genuine strain-derivative $L^2$ stock $\mathfrak H_R\gtrsim a_R^Q$, while the vorticity-dominant branch forces a genuine critical vorticity stock $\mathfrak W_R\gtrsim a_R^Q$ — C5-E.6, the Q-Cancellation Spatial Debt Trichotomy: under non-degenerate local quadratic intensity, sustained small-barycenter cancellation must take at least one of middle-gap defect, strain-derivative fluctuation, or vorticity-dominant leakage. The middle-gap route is likewise not free: C5-E.7, Middle-Gap Load Forces Cubic Strain, proves that if the gap set bears a non-degenerate middle load $M_\delta$, then $\int|S|^3\gtrsim M_\delta/\delta$ — as $\delta\downarrow0$, the cubic strain norm must diverge. Combined with the interpolation inequality $\|S\|_3\le C\|S\|_2^{1/2}\|\nabla S\|_2^{1/2}$, this yields a genuine derivative lower bound. C5-E.8, the Effective Active-Set Lemma (a Chebyshev argument), defines an effective cubic amplitude and effective volume, proving that a large $\|S\|_3^3/\|S\|_2^2$ guarantees the existence of a small-volume set carrying at least a $1-c$ fraction of the cubic strain activity — this is exactly strain-amplitude intermittency; C5-E.9 further proves that if the middle gap continues to bear a non-degenerate load while the strain $L^2$ stock stays bounded, the effective volume fraction must collapse to zero, connecting back to C3-W's volume-to-line geometric lemma and pushing the active set toward finer sparse scales. The round's single most important honest boundary is C5-E.10, the Derivative-Intermittency Pre-Gate: the document explicitly points out that the published Grujić–Xu theorem (2024, J. Math. Fluid Mech.) requires sparseness of the component/sign superlevel sets of the raw derivatives $D^ku$ or $D^k\omega$, whereas what C5-E currently produces is intermittency of strain amplitude/derivatives — a genuine field-conversion interface gap still separates the two (§37 explicitly warns that a sparse set of high strain values does not automatically imply sparseness of every related raw derivative component/sign high-value set; vorticity is the antisymmetric part of $\nabla u$ and must be handled separately). Five outstanding interface items (field conversion, threshold alignment, global/local set scope, temporal gating, derivative-chain hypotheses) are listed as an open interface, not as a closed regularity gap. The round closes by noting that C4-J's originally free seven-point cancellation motif, after C5-D and C5-E, has now been fully converted into a genuine PDE field defect — Q implies middle-gap/cubic-intermittency, strain-derivative fluctuation, or vorticity leakage, no longer a free compensation motif. It formally hands off to C5-F, Strain/Vorticity Defect Coupling, Axis Locking, and Derivative-Gate Escalation, with 8 proof targets addressing the coupling of gap degeneration with compressive-axis locking, the interface between vorticity leakage and Miller orthogonality, and whether the derivative order is forced to escalate.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/o/p/41-c5e-strain-direction-middle-gap-derivative-intermittency/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/o/p/41-c5e-strain-direction-middle-gap-derivative-intermittency/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/o/p/41-c5e-strain-direction-middle-gap-derivative-intermittency/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../../">AMRAL</a>
+  <a class="link" href="../../../../../about/">About (中文)</a>
+  <a class="link" href="../../../../../methodology/">Methodology (中文)</a>
+  <a class="link" href="../../../../../protocols/">Protocols (中文)</a>
+  <a class="link" href="../../../../../validation/">Validation (中文)</a>
+  <a class="link" href="../../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link active" href="../../../../../en/ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../../ns/o/p/41-c5e-strain-direction-middle-gap-derivative-intermittency/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS_O</a>
+    <span>/</span>
+    <span>41 / C5-E: Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS · 41 / C5-E</span>
+      <span class="tag">C5-E · Q Motif Fully Converted to Field Defects</span>
+      <span class="tag">2026-08</span>
+    </div>
+    <h1>41 / C5-E: Strain-Direction Defect Measures, Middle-Gap Degeneration, and Derivative-Intermittency Closure</h1>
+    <p class="h1-sub">C5-D compressed seven-point cancellation into two escape routes: middle-gap degeneration, or strain-direction dispersion. C5-E is not content to leave these as mere names, and instead asks what measurable derivative/intermittency debt each actually corresponds to. C5-E.1, Middle-Gap Equivalence, first proves that the normalized gap variable $\vartheta(S)=\lambda_2^+\lambda_3/|S|^2$ and the normalized middle eigenvalue $\xi_2=\lambda_2^+/|S|$ are quantitatively equivalent ($\sqrt2\,\vartheta\le\xi_2\le\sqrt6\,\vartheta$) — middle-gap degeneration is genuine degeneration of the middle eigenvalue, not an arbitrary statistic. C5-E.2 proves that if $\vartheta(S)\ge\delta$, then pointwise $|Q|\gtrsim_\delta|S|^2+|\omega|^2$ — a Q-weighted gap concentration is a genuinely physical concentration of quadratic activity, not an artifact of matrix normalization. Building a compactification of the joint strain-direction/gap state, C5-E.3 proves that if the seven-point barycenter tends to zero, the limit cannot be a point mass concentrated on a single non-degenerate strong-middle direction (a direct contradiction from C5-D's cone theorem). C5-E.4, Quantitative Direction Anti-Concentration, gives a further quantitative statement: if the middle-gap mass is small, cancellation forces the strain-direction probability to be unable to concentrate within any single strong-middle cone, giving a genuine lower bound on directional variance. To convert direction leakage into a physical stock, C5-E splits the leaking region exactly into a strain-borne branch and a vorticity-dominant branch (according to the relative size of $|S|^2$ versus $\eta|Q|$); C5-E.5, the Leakage to Derivative or Vorticity Dichotomy, proves that the strain-borne branch, via a weighted Poincaré inequality, forces a genuine strain-derivative $L^2$ stock $\mathfrak H_R\gtrsim a_R^Q$, while the vorticity-dominant branch forces a genuine critical vorticity stock $\mathfrak W_R\gtrsim a_R^Q$ — C5-E.6, the Q-Cancellation Spatial Debt Trichotomy: under non-degenerate local quadratic intensity, sustained small-barycenter cancellation must take at least one of middle-gap defect, strain-derivative fluctuation, or vorticity-dominant leakage. The middle-gap route is likewise not free: C5-E.7, Middle-Gap Load Forces Cubic Strain, proves that if the gap set bears a non-degenerate middle load $M_\delta$, then $\int|S|^3\gtrsim M_\delta/\delta$ — as $\delta\downarrow0$, the cubic strain norm must diverge. Combined with the interpolation inequality $\|S\|_3\le C\|S\|_2^{1/2}\|\nabla S\|_2^{1/2}$, this yields a genuine derivative lower bound. C5-E.8, the Effective Active-Set Lemma (a Chebyshev argument), defines an effective cubic amplitude and effective volume, proving that a large $\|S\|_3^3/\|S\|_2^2$ guarantees the existence of a small-volume set carrying at least a $1-c$ fraction of the cubic strain activity — this is exactly strain-amplitude intermittency; C5-E.9 further proves that if the middle gap continues to bear a non-degenerate load while the strain $L^2$ stock stays bounded, the effective volume fraction must collapse to zero, connecting back to C3-W's volume-to-line geometric lemma and pushing the active set toward finer sparse scales. The round's single most important honest boundary is C5-E.10, the Derivative-Intermittency Pre-Gate: the document explicitly points out that the published Grujić–Xu theorem (2024, J. Math. Fluid Mech.) requires sparseness of the component/sign superlevel sets of the raw derivatives $D^ku$ or $D^k\omega$, whereas what C5-E currently produces is intermittency of strain amplitude/derivatives — a genuine field-conversion interface gap still separates the two (§37 explicitly warns that a sparse set of high strain values does not automatically imply sparseness of every related raw derivative component/sign high-value set; vorticity is the antisymmetric part of $\nabla u$ and must be handled separately). Five outstanding interface items (field conversion, threshold alignment, global/local set scope, temporal gating, derivative-chain hypotheses) are listed as an open interface, not as a closed regularity gap. The round closes by noting that C4-J's originally free seven-point cancellation motif, after C5-D and C5-E, has now been fully converted into a genuine PDE field defect — Q implies middle-gap/cubic-intermittency, strain-derivative fluctuation, or vorticity leakage, no longer a free compensation motif. It formally hands off to C5-F, Strain/Vorticity Defect Coupling, Axis Locking, and Derivative-Gate Escalation, with 8 proof targets addressing the coupling of gap degeneration with compressive-axis locking, the interface between vorticity leakage and Miller orthogonality, and whether the derivative order is forced to escalate.</p>
+    <div class="claim-box">
+      Proves that the middle-gap variable and the normalized middle eigenvalue are quantitatively equivalent, and that when the gap is non-degenerate the quadratic tensor is genuinely of the same order as strain/vorticity squared — a genuinely physical concentration. Direction leakage splits exactly into strain-borne and vorticity-dominant branches, each forcing a genuine strain-derivative stock or vorticity stock respectively. The gap route is likewise not free: a fixed middle load forces the cubic strain norm to diverge, and an effective-volume lemma forces genuine strain-amplitude intermittency. But an honest boundary: the published theorem needs sparseness of raw derivative component/sign sets, and strain-amplitude intermittency cannot yet be silently substituted for it — C5-E stops at a derivative-intermittency pre-gate. The seven-point cancellation motif is now fully converted into field defects, no longer free.
+      <span class="note">— the bundle's own self-declared stage status, given as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../40-c5d-spatial-matrix-quadratic-pressure-obstruction/">40 / C5-D · Spatial–Matrix Motif Compatibility, Strong-Middle Cones, and Quadratic/Pressure Convex-Hull Obstructions</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../42-c5f-axis-pressure-signature-derivative-gate-escalation/">42 / C5-F · Compressive-Axis Robustness, Pressure-Signature Locking, and Derivative-Gate Escalation</a></div>
+      
+      <div class="conn-card"><span class="k">NS progress</span>42 / 67</div>
+    </div>
+    <blockquote class="cite">"C5-E reaches a Derivative-Intermittency Pre-Gate, not a regularity proof — the published Grujić–Xu theorem tracks D^k u or D^k ω component/sign superlevel-set sparseness, and strain-amplitude geometry cannot yet be silently substituted for it." — excerpted from §34 and §36 of this paper.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS_O</a>
+    <a href="../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_C5E_StrainDirection_MiddleGap_DerivativeIntermittency_v0.1.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
