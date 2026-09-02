@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computational Composite Methodology · CCM · AMRAL</title>
+<meta name="description" content="CCM's complete foundational paper, 38 sections. Its core claim is methodological, not ontological: the mathematical research process can be represented as an evolving state, in which multiple representations, search operators, certificate languages, obstructions, and cost models interact. Formally separates truth, method coverage, search success, and verification. Core structural results: certificate-library coverage monotonicity, unresolved-region anti-monotonicity, coverage failure does not entail falsity (witnessed concretely by the Motzkin nonnegative-non-SOS polynomial), the three-state distinction NOT_FOUND≠METHOD_BLOCKED≠DISPROVED, and the verification firewall theorem for certificate-gated routing. The document explicitly lists nine 'claims supported by theory and benchmarks' and ten 'claims not yet established,' with nine genuine literature citations (Cook–Reckhow, CEGAR, SATzilla, Parrilo SOS, and others).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CCM_Foundational_Theory_v1.0.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ccm/p/00-foundational-theory/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ccm/p/00-foundational-theory/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ccm/p/00-foundational-theory/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../">CCM</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../ccm/p/00-foundational-theory/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CCM</a>
+    <span>/</span>
+    <span>00 · Computational Composite Methodology</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CCM · 00</span>
+      <span class="tag">v1.0 · Foundational paper</span>
+      <span class="tag">Status: Foundational theory draft</span>
+      <span class="tag">38 sections</span>
+    </div>
+    <h1>Computational Composite Methodology</h1>
+    <p class="h1-sub">CCM's complete foundational paper, whose abstract opens by stating plainly: ‘its core claim is methodological rather than ontological — the mathematical research process can be represented as an evolving state, in which multiple representations, search operators, certificate languages, obstructions, cost models, and path histories all interact.’ Sections 3-10 build the formal skeleton: a target $P\in\mathcal P$ has an external truth semantics $\tau(P)\in\{0,1\}$, but CCM does not assume direct access to $\tau$; the certificate-language sextuple $\mathcal C_i=(D_i,\Gamma_i,A_i,V_i,\sigma_i,K_i)$ explicitly separates search (which may be heuristic and incomplete) from verification (the semantic gatekeeper); Definition 5.3 defines a ‘method-obstruction certificate,’ whose meta-semantics is ‘path blocked ⇏ target is false’; Section 6 proves coverage monotonicity (Theorem 6.3: $\mathfrak C_1\subseteq\mathfrak C_2\Rightarrow\operatorname{Cov}(\mathfrak C_1)\subseteq\operatorname{Cov}(\mathfrak C_2)$) and unresolved-region anti-monotonicity (Corollary 6.5); Section 7's Proposition 7.1 proves ‘coverage failure does not entail falsity,’ pointing to the Motzkin polynomial (nonnegative but not SOS) as a concrete witness to this logic; Section 10's Theorem 10.1 is the whole paper's core firewall — as long as the final verifier is sound and every representation transformation preserves certificate semantics, the routing process remains rigorous in its final verdict no matter how heuristic or AI-generated it is. Section 33 explicitly positions the 13 benchmarks as ‘empirical witnesses to the theory, not the theory itself’; Section 34 distills ten core principles; Sections 35-36 are the paper's most important honesty boundary — explicitly listing nine ‘claims supported by theory and existing benchmarks’ and ten ‘claims CCM v1.0 does not yet establish’ (including not claiming CCM is universally superior to expert single-track mathematics, not claiming every mathematical target has a finite certificate, and not claiming AI can autonomously discover every relevant representation). The paper closes with nine genuine literature citations, including the classic Cook–Reckhow 1979 paper on proof-system efficiency, Clarke et al.'s CEGAR, SATzilla, and Parrilo's foundational work on SOS semidefinite programming.</p>
+    <div class="claim-box">
+      Core firewall theorem: certificate-gated routing remains sound in its final verdict no matter how unrigorous the heuristic search is. Truth ≠ coverage ≠ search success ≠ verification ≠ cost. Nine claims hold; ten are explicitly not yet established.
+      <span class="note">— the package's own stated status, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next</span><a href="../01-formal-core/">01 · CCM Formal Core</a></div>
+      <div class="conn-card"><span class="k">CCM progress</span>00 / ? (first foundational-theory paper)</div>
+    </div>
+    <blockquote class="cite">「CCM v1.0 should therefore be read as a general mathematical methodology and research-control theory, not as a solver for one conjecture and not as a claim of universal automation.」 — from this paper's Section 38 conclusion.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CCM</a>
+    <a href="../../files/CCM_Foundational_Theory_v1.0.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CCM_Foundational_Theory_v1.0.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
