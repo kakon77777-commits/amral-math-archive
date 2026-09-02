@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 19 · Block/Delayed Diagonalization and Stage-Control Dependence · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 19 of the P/NP Dual-Hypothesis Rehearsal. Tests replacing single-point diagonalization with length blocks, stages, and delay. Proves that the exponential asymmetry at a given input size doesn't go away just by waiting (Same-Input Exponent Invariance, SIEI), and that blowing up a single diagonal bit to fill an entire block doesn't make it any cheaper (Amplification Knowledge Debt, AKD). The real Ladner-style delayed-diagonalization trick isn't to simulate further and further out — it's a stage controller that only advances once it has actually found finite counterexample evidence. But if the controller gets stuck forever, that may be exactly the signal that some candidate algorithm has succeeded (the Freeze-or-Separate Principle) — so the progress guarantee behind delayed diagonalization already presupposes P≠NP. Provisional score 18:18.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/19_第十九輪_Block延遲對角化與階段控制依賴.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-19/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-19/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-19/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-19/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-19">Research Rounds</a>
+    <span>/</span>
+    <span>Round 19</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 19</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Block/Delayed Diagonalization: Density Escape, Stage Control, and Conditional Progress</h1>
+    <p class="h1-sub">Since single-point diagonalization falls into the sparsity upward-separation trap, try switching to length blocks, stages, and delay instead. But it's immediately provable that the exponential asymmetry at a given input scale doesn't disappear just by “waiting a bit longer” (Same-Input Exponent Invariance) — a mathematical fact so obvious it sounds trivial, yet it precisely rules out the route of “deferring the simulation to a larger input of the same length.” Blowing up a single diagonal bit to fill an entire block doesn't make it any cheaper either — it just moves the cost from “per input” to “the block controller” (Amplification Knowledge Debt). The real Ladner-style delayed-diagonalization trick isn't brute-force simulating further into the future — it's a stage controller that advances one step only once it has actually found finite counterexample evidence. But this is where this round's most important double-edged sword shows up: if the controller gets permanently stuck on some candidate machine, unable to find a counterexample, that may be exactly because that machine really does equal SAT — the Freeze-or-Separate Principle. So the Ladner-theorem-style guarantee that “the controller always keeps advancing” already presupposes P≠NP, and can't be turned around into an unconditional proof of P≠NP.</p>
+    <div class="claim-box">
+      Round 19 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-18/">Round 18 · Diagonal-Slice Compression and the Sparsity-Lifting Trap</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-20/">Round 20 · Stage-Controlled Complexity and the Limit Monitor</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>20 / 25</div>
+    </div>
+  <blockquote class="cite">“Your controller isn't moving, maybe it's not that the construction is broken; maybe it's that I won. (Smirk)” — the Equality Team's slogan, from Section 14 of the document. “Block/delay can rearrange when to pay the bill, but it cannot make the bill itself disappear. The core resource behind Ladner delay is not the block size, but the stage-controller progress.” — from the “Verdict of This Round.” Provisional score P=NP: 18, P≠NP: 18 (“This is no longer score control; this is like a Hamiltonian. (Smirk)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/19_第十九輪_Block延遲對角化與階段控制依賴.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/19_第十九輪_Block延遲對角化與階段控制依賴.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

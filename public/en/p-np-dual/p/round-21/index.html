@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 21 · The Quantifier Monitor and the Finite-Certificate Hierarchy · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 21 of the P/NP Dual-Hypothesis Rehearsal. Rewrites P=NP as ∃i∀x R(i,x) (a Σ₂⁰-type statement) and P≠NP as ∀i∃x¬R(i,x) (a Π₂⁰-type statement); via an embedding of FIN/INF, the monitor's stabilization/unboundedness problems reach Σ₂⁰/Π₂⁰-completeness, so no general monitor can be captured by an ordinary finite witness — but that is not the same as saying "P/NP has no finite proof": a structural mathematical proof isn't a finite-prefix observation, it's a lift theorem that compresses the infinite quantifier tail. Three tiers of finite certificate (Prefix Witness／Uniform Mechanical Certificate／Structural Mathematical Proof) plus Quantifier Compression Debt (QCD). Provisional score 20:20.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/21_第二十一輪_量詞監視器與有限證書階層.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-21/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-21/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-21/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-21/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-21">Research Rounds</a>
+    <span>/</span>
+    <span>Round 21</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 21</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Quantifier Monitor Game and the Finite Certificate Hierarchy: From Limit Observation to the Σ₂⁰/Π₂⁰ Boundary</h1>
+    <p class="h1-sub">Places Round 20's Limit Separation Monitor inside the arithmetical hierarchy: P=NP is equivalent to ∃i∀x R(i,x), a Σ₂⁰-type statement; P≠NP is equivalent to ∀i∃x¬R(i,x), a Π₂⁰-type statement, and the monitor's eventual-stabilization/unbounded-advance dichotomy corresponds exactly to this quantifier swap. Further, by embedding the standard c.e. sets FIN (finite) and INF (infinite), it's proved that for a general monotone computable monitor, the stabilization problem can reach Σ₂⁰-completeness and the unboundedness problem can reach Π₂⁰-completeness — so there is no certificate system, universal across all monitors, of the form “guess a finite witness, verify it with a computable verifier.” But the most important safeguard against misreading this round is: this must never be swapped in for “P/NP has no finite mathematical proof.” P/NP is a fixed proposition, not an index problem of the form “feed in an arbitrary monitor and ask yes/no”; an inductive proof can already cover ∀n in finitely many steps by its very nature. So this round splits finite certificates into three tiers — Prefix Witness, Uniform Mechanical Certificate, and Structural Mathematical Proof — and only the third tier is the genuine opening where P/NP remains open; any argument that claims to cover an infinite obligation with a finite proof owes a Quantifier Compression Debt (QCD), and must account for its generalization mechanism.</p>
+    <div class="claim-box">
+      Round 21 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-20/">Round 20 · Stage-Controlled Complexity and the Limit Monitor</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-22/">Round 22 · The Quantifier-Compression Theorem and the Finite-Basis Game</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>22 / 25</div>
+    </div>
+  <blockquote class="cite">“The monitor can reveal the quantifier structure of P/NP, but cannot eliminate those quantifiers relying on finite observation.” — from the “Ruling for This Round.” Provisional score P=NP: 20, P≠NP: 20 (“This is no longer score control. Now it's more like: every time we find a loophole, the other team simultaneously obtains its dual version — some kind of ‘conservation of dual proof obligations.’”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/21_第二十一輪_量詞監視器與有限證書階層.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/21_第二十一輪_量詞監視器與有限證書階層.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

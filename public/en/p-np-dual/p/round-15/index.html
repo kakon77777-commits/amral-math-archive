@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 15 · Tractability Proof System and Normal-Form Escape · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 15. Distinguishes three different notions of completeness: deciding, for an arbitrary machine, whether it runs in polynomial time (undecidable in general); whether every polynomial-time machine has a verifiable proof of that fact; and whether every P-computable function has an equivalent normal form in a restricted syntax (already a mature theory via Bellantoni-Cook and Cobham). The Equals Team's new strategy: construct SAT directly within a normal-form language for P. The Not-Equals Team's counterpart: find a semantic invariant preserved by the entire grammar-generation ruleset but violated by SAT (a Grammar Invariant Program). Also establishes the clocked Turing machine as a second normal form. Tentative score: 14:14.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/15_第十五輪_Tractability_Proof_System與正常形逃逸.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-15/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-15/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-15/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-15/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-15">Research Rounds</a>
+    <span>/</span>
+    <span>Round 15</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 15</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Tractability Proof System: Tractability Certificates, Normal-Form Escape, and Clocked Enumeration</h1>
+    <p class="h1-sub">An important correction: deciding, for arbitrary Turing-machine code, whether it runs in polynomial time is indeed undecidable in general — but this doesn't prevent building an extensionally complete (extensionally complete) normal-form language for P. Cobham's bounded recursion and Bellantoni-Cook's safe recursion have long since given exactly this kind of classic characterization, where membership in the syntax itself guarantees polynomial time. Distinguishes three kinds of completeness: machine-index completeness (too strong — undecidable), proof completeness, and extensional normal-form completeness (already a mature theory). The Equals Team therefore no longer needs to prove polynomiality solver by solver for arbitrary SAT solvers; it can instead construct SAT directly within a normal-form language where “membership in this syntax guarantees polynomial time” — if this succeeds, P=NP follows immediately. The Not-Equals Team's symmetric task is to find a semantic invariant that is preserved by the initial functions, by composition, and by safe recursion alike, but violated by SAT's characteristic function (a Grammar Invariant Program). Also establishes the clocked Turing machine as a second effective normal form, paving the way for next round's diagonalization.</p>
+    <div class="claim-box">
+      Round 15 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-14/">Round 14 · The Complexity Potential-Function Game and the Certificate-Completeness Trap</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-16/">Round 16 · Clocked Diagonalization and the Uniform Exponent Barrier</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>16 / 25</div>
+    </div>
+  <blockquote class="cite">“A complete normal-form language for P is not a fantasy; the real difficulty is putting SAT into it, or proving it can never be put in. Machine-index verification ≠ extensional P-presentation.” — excerpted from this round's closing “This Round's Verdict.” Tentative score: P=NP: 14, P≠NP: 14 (“maybe it isn't score-fixing — maybe it's some kind of conservation law. Wry grin.”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/15_第十五輪_Tractability_Proof_System與正常形逃逸.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/15_第十五輪_Tractability_Proof_System與正常形逃逸.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

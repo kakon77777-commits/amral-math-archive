@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 3 · Algorithmic-Trajectory Cuts and the Causal Bottleneck · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="Round 3 of the P/NP Dual-Hypothesis Rehearsal. Drops the externally imposed cut and instead studies the algorithm's own computational history. Team Equal breaks the simple information-bottleneck argument — a general Turing machine can re-read its input, identical configurations don't imply identical futures, and the input carries only O(n) bits of information; PARITY again demonstrates that the number of candidates need not equal the amount of information that must be transmitted. Team Not-Equal responds by upgrading its object of study from “distinguishable information” to causal reconstruction complexity (CRC), but is immediately warned that defining CRC directly as the minimum solving time would be circular. Score currently tied 2:2.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/03_第三輪_演算法軌跡切割與因果瓶頸.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-03/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-03/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-03/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-03/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-03">Research Rounds</a>
+    <span>/</span>
+    <span>Round 3</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 3</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Algorithmic-Trajectory Cuts and the Causal Bottleneck: Must Every Exact Solver Expose a Distinguishable Bottleneck?</h1>
+    <p class="h1-sub">Round 2's residual distinguishability holds only in a “read-once, never look back” model. This round hands the power to choose the cut back to the algorithm itself, observing its actual run trajectory C₀→C₁→⋯→C_T directly. Team Equal immediately counterpunches: a general Turing machine can re-read its input, so even if two inputs reach the same configuration at some moment, their futures can still diverge because the read-only input differs; moreover, the input has only n bits and the decision output only 1 bit, so there is no simple information-conservation law of the form “exponentially many candidates → exponentially many bits must be transmitted.” This is the round's most important reversal: the real difficulty is not “how much information is needed,” but “what structural transformation this information must undergo to yield the correct answer.” Team Not-Equal therefore proposes causal reconstruction complexity (CRC) as a new object of study, while explicitly conceding: defining CRC directly as the minimum solving time would circle straight back to the original problem itself.</p>
+    <div class="claim-box">
+      Round 3 dual-hypothesis rehearsal
+      <span class="note">— The package's self-described stage status, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Round</span><a href="../round-02/">Round 2 · The Battle for a Cross-Representation Invariant</a></div>
+      <div class="conn-card"><span class="k">Next Round</span><a href="../round-04/">Round 4 · The Local–Global Barrier and Representation Escape</a></div>
+      <div class="conn-card"><span class="k">Research Round Progress</span>4 / 25</div>
+    </div>
+  <blockquote class="cite">“We originally set out to prove that ‘the information can't get through’; it turns out the information can simply be re-read. What actually needs proving may be this: even when the information is there all along, reassembling it into an exact global answer still demands some incompressible structural cost.” — from the “Round 3 in one sentence” note at the end of this paper. Score currently P=NP: 2, P≠NP: 2.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/03_第三輪_演算法軌跡切割與因果瓶頸.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/03_第三輪_演算法軌跡切割與因果瓶頸.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

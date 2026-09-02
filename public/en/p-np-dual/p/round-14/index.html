@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 14 · The Complexity Potential-Function Game and the Certificate-Completeness Trap · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 14. Formally imports the potential-function method from standard amortized analysis: a telescoping sum proves that as long as the initial potential, the per-step amortized cost, and the number of steps are all polynomially bounded, the cost of the entire trajectory is polynomial. But it uncovers a key asymmetry: the P=NP side only needs one algorithm-specific potential function to exist, while the P≠NP side, if it wants to argue a lower bound from “no potential function can be found,” must first prove that the certificate system is complete for all P algorithms — too weak, and it misses genuine algorithms; too strong, and it smuggles the original problem into the potential function itself. Tentative score: 13:13.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/14_第十四輪_複雜度勢能遊戲與證書完備性陷阱.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-14/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-14/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-14/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-14/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-14">Research Rounds</a>
+    <span>/</span>
+    <span>Round 14</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 14</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>The Complexity Potential-Function Game: Amortized Tractability Certificates, Potential-Function Escape, and the Certificate-Completeness Trap</h1>
+    <p class="h1-sub">Formally imports the telescoping sum from standard amortized analysis: with amortized cost ĉ_t=c_t+Φ_(t+1)-Φ_t, as long as the initial potential, the per-step amortized cost, and the number of steps are all polynomially bounded in the input, the total actual computational cost is polynomial — this is a rigorous proof, not a metaphor. But this round catches a previously overlooked asymmetry: the P=NP side only needs a single SAT algorithm to exist, together with its own algorithm-specific potential function — it need not be solver-independent. The P≠NP side, if it wants to argue a lower bound from “no potential function of a given kind can be found,” must first prove that the certificate system is complete for all P algorithms; otherwise, a missing certificate only shows that the certificate system is too weak, not that no such algorithm exists — this is the “Potential-Function Certificate-Completeness Trap.” Upgrades ATC into a two-layer certificate (a Progress/Ranking layer governing termination, and an Amortized Potential layer governing total resource use), and distinguishes three layers of cost — object-level running time, certificate complexity, and discovery complexity — making clear that object-level running time is what the traditional P/NP classification actually targets.</p>
+    <div class="claim-box">
+      Round 14 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-13/">Round 13 · Tractable Closure Stability and Polynomial Chain Blowup</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-15/">Round 15 · Tractability Proof System and Normal-Form Escape</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>15 / 25</div>
+    </div>
+  <blockquote class="cite">“A potential function is a powerful weapon for upper bounds, but not a natural weapon for lower bounds. ∃A+∃ATC_A can serve as a constructive certificate along the P=NP route; but ¬∃ATC can only support P≠NP once the ATC certificate language has been proven complete for all P algorithms.” — excerpted from this round's closing “This Round's Verdict.” Tentative score: P=NP: 13, P≠NP: 13 (“at this point, the ‘tie’ looks less like a score and more like a universal constant. Wry grin.”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/14_第十四輪_複雜度勢能遊戲與證書完備性陷阱.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/14_第十四輪_複雜度勢能遊戲與證書完備性陷阱.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

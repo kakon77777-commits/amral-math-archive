@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dual-Hypothesis Rehearsal for P vs. NP · AMRAL</title>
+<meta name="description" content="AMRAL case: P/NP Dual-Proof Rehearsal Research Zone. A dual-hypothesis rehearsal method — building both P=NP and P≠NP to their strongest versions simultaneously, attacking each other round by round under a shared model and shared resource ledger. 24 rounds advance in sequence, each fixing in place both sides' strongest current claims, thought experiments, a review against known barriers, and the wrong paths that were ruled out — not rushing to declare a proof complete.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link active" href="./">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../skew-field/">Skew Field</a>
+  <a class="link" href="../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../p-np-dual/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-P-VS-NP</p>
+    <h1>P/NP Dual-Proof Rehearsal Research Zone</h1>
+    <p class="subtitle">Dual-Hypothesis Rehearsal for P vs. NP · Led by Neo.K, collaboratively organized with Aletheia</p>
+    <p class="lede">
+      Rather than picking a side up front, this line builds both hypotheses — <code>H<sub>=</sub>: P=NP</code> and
+      <code>H<sub>≠</sub>: P≠NP</code> — to their own strongest respective versions, and has them attack each
+      other round by round under one shared computational model, one shared resource ledger, and one shared
+      correctness standard. The research process is in no hurry to declare a proof complete; it advances round by
+      round through thought experiments, rehearsal proofs, counterexample generation, a review against known
+      barriers, and an accumulating history — 24 rounds cover almost the entire mainstream complexity-theory
+      toolchain, from existential-quantifier compression, cross-representation invariants, and algebra–algorithm
+      bridges, through quotient debt, dynamic algebraic switching, quantifier exchange, and computability
+      hierarchies, to clocked diagonalization, the sparsity-lifting trap, WQO, and cracks in semantic monotonicity.
+      After Round 24, the researcher independently proposed a "Dynamic Four-Layer Closure Framework (GLC)" as the
+      next reformulation — see the separate <a href="../glc-framework/">GLC Closure Framework</a>
+      case.
+    </p>
+    <div class="stats" id="stats" aria-label="Research-zone statistics"></div>
+    <p class="notice">
+      Every round's document explicitly labels its own "tentative result for this round" and "wrong paths ruled
+      out" — this is rehearsal proof and thought experiment, not a completed proof of P/NP. The original documents
+      are unmodified, with a full round-by-round trail, including SHA-256 verification.
+    </p>
+  </header>
+
+  <div id="content">
+    <p class="loading">Loading manifest…</p>
+  </div>
+
+  <footer class="sitefoot">
+    <span>SHA-256 verified per document · original bytes, not repackaged</span>
+    <span id="generated-note"></span>
+  </footer>
+</div>
+
+<script>
+const fmtSize = (b) => {
+  if (b < 1024) return b + " B";
+  if (b < 1024 * 1024) return (b / 1024).toFixed(1) + " KB";
+  return (b / (1024 * 1024)).toFixed(2) + " MB";
+};
+
+function cardHTML(pkg) {
+  const href = "./files/" + encodeURIComponent(pkg.filename);
+  const shortHash = pkg.sha256.slice(0, 16) + "…";
+  const label = pkg.version === "00" ? "Intermediate layer" : `Round ${parseInt(pkg.version, 10)}`;
+  const titleInner = pkg.has_detail_page
+    ? `<a class="title-link" href="./p/${pkg.id}/">${pkg.title} <span class="detail-hint">→ details</span></a>`
+    : pkg.title;
+  return `
+    <article class="card" id="${pkg.id}">
+      <div class="card-top">
+        <span class="tag">${label}</span>
+      </div>
+      <div class="title">${titleInner}</div>
+      <div class="meta">
+        <span>${fmtSize(pkg.size)}</span>
+      </div>
+      <button class="hash" type="button" data-hash="${pkg.sha256}" title="Click to copy full SHA-256: ${pkg.sha256}">
+        sha256 ${shortHash}
+      </button>
+      <a class="dl" href="${href}" download>Download original .md</a>
+    </article>`;
+}
+
+let manifest = null;
+
+function render() {
+  const content = document.getElementById("content");
+  const rounds = manifest.rounds;
+  content.innerHTML = `
+    <section class="series" id="rounds">
+      <div class="series-head">
+        <h2>Research Rounds · Rounds</h2>
+        <span class="count">${rounds.length} documents</span>
+      </div>
+      <p class="series-note">00 is the intermediate-layer lead-in draft; 01-24 are ordered by round. Each is an independent markdown document, original bytes not repackaged.</p>
+      <div class="grid">${rounds.map(cardHTML).join("")}</div>
+    </section>`;
+}
+
+async function boot() {
+  const content = document.getElementById("content");
+  try {
+    const res = await fetch("./manifest.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    manifest = await res.json();
+  } catch (e) {
+    content.innerHTML = `<p class="error">Manifest failed to load: ${e.message}</p>`;
+    return;
+  }
+
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><span class="n">${manifest.counts.total}</span><span class="l">Documents</span></div>
+    <div class="stat"><span class="n">${(manifest.total_size / 1024).toFixed(0)} KB</span><span class="l">Total size</span></div>
+  `;
+  document.getElementById("generated-note").textContent = "2026-08-01 → 2026-08-02";
+
+  render();
+
+  if (location.hash.length > 1) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ block: "center" });
+  }
+
+  content.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".hash");
+    if (!btn) return;
+    navigator.clipboard?.writeText(btn.dataset.hash).then(() => {
+      btn.classList.add("copied");
+      const original = btn.textContent;
+      btn.textContent = "Full hash copied ✓";
+      setTimeout(() => { btn.classList.remove("copied"); btn.textContent = original; }, 1400);
+    });
+  });
+}
+
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 9 · Hunting for SAT's Blossom and Quotient Debt · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 9. Works directly on the Equals Team's behalf, taking six real-world SAT-quotienting techniques (variable elimination, OBDD/DNNF, XOR/affine extraction, symmetry quotients, backdoor condensation, and CDCL learned-clause compression) and checking each one in turn for whether it is SAT's blossom. The key counterexample: certain output-bit functions of integer division require exponential-size OBDDs under every variable ordering, yet the function itself is clearly computable in polynomial time — showing that representation blowup doesn't imply computational blowup, and can't even establish that a function is outside P. Proposes a Quotient Debt resource ledger. Tentative score: 8:8.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/09_第九輪_尋找SAT的Blossom與商化債務.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-09/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-09/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-09/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-09/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-09">Research Rounds</a>
+    <span>/</span>
+    <span>Round 9</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 9</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Hunting for SAT's Blossom: Exact-Quotienting Candidates, Representational Counterkills, and Quotient Debt</h1>
+    <p class="h1-sub">This round first lets the Equals Team seriously build its weapons, then lets the Not-Equals Team dismantle them one by one. It examines, in turn, six real-world SAT-quotienting routes — variable elimination (limited by elimination width), OBDD/DNNF knowledge compilation, XOR/affine extraction, symmetry quotients, backdoor condensation, and CDCL learned-clause compression — each of which can drastically compress the search on specific structures, and each of which has an identifiable blowup parameter. This round's most important counterexample comes from OBDDs: certain output-bit functions of integer division require exponential-size OBDDs under any variable ordering — yet integer division itself is clearly computable in polynomial time. This proves that “a given exact-quotient representation is necessarily forced to blow up” cannot even establish that “the function is not in P” — there is no direct correspondence between representation size and algorithmic running time. Proposes a Quotient Debt resource ledger that puts the cost transfers of different SAT-compression methods on one common footing for comparison, while explicitly stating that it is not a proven conservation law.</p>
+    <div class="claim-box">
+      Round 9 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-08/">Round 8 · Algorithm–Algebra Bridge Stress Test and Exact Quotient Structure</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-10/">Round 10 · Multi-Anti-Structure Cores and Heterogeneous Gluing Debt</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>10 / 25</div>
+    </div>
+  <blockquote class="cite">“We've found plenty of SAT's ‘local blossoms,’ but not SAT's blossom. The real point of contention is no longer whether compression is possible, but whether the correct exact quotient can be found, for every instance, at a uniform polynomial cost.” — excerpted from this round's closing “Round 9's One-Line Conclusion.” Tentative score: P=NP: 8, P≠NP: 8.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/09_第九輪_尋找SAT的Blossom與商化債務.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/09_第九輪_尋找SAT的Blossom與商化債務.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

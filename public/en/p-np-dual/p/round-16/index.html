@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 16 · Clocked Diagonalization and the Uniform Exponent Barrier · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 16. Since P can be effectively enumerated as clocked machines C₁, C₂, ..., the intuitive next move is to diagonalize and construct L_D∉P that still stays in NP. The real breaking point: ∀k∃L_k(P\DTIME(n^k) is nonempty) cannot have its quantifiers swapped into ∃L∀k — the Polynomial Union Quantifier Trap (PUQT). The exponent k_i a naive diagonalizer needs grows unboundedly with the enumeration, yet an NP witness requires a single fixed constant K, producing the Uniform Exponent Barrier (UEB); trying the full computation trace as the witness instead runs into Certificate Exponent Explosion (CEE); and padding just converts the time cost into the Length Inflation Dilemma (LID). Closes with a Baker-Gill-Solovay relativization stress test. Tentative score: 15:15.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/16_第十六輪_Clocked對角化與統一指數障礙.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-16/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-16/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-16/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-16/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-16">Research Rounds</a>
+    <span>/</span>
+    <span>Round 16</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 16</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Clocked Diagonalization and the Uniform Exponent Barrier: Once P Is Enumerated, Can You Diagonalize Directly?</h1>
+    <p class="h1-sub">Round 15 listed P as clocked machines C₁, C₂, C₃, ...; the most intuitive next step is to let a diagonal language flip C_i's answer on the i-th input. At the level of set theory, this diagonalization is completely unproblematic; the real breaking point is that the quantifiers cannot simply be swapped: the time hierarchy theorem only gives “for every fixed k, there exists a language that lies outside DTIME(n^k) yet is still in P” (∀k∃L_k), whereas P≠NP needs “there exists a single NP language that lies outside DTIME(n^k) for every k” (∃L∀k) — this is the Polynomial Union Quantifier Trap (PUQT). If the time-bound exponent k_i of the i-th machine is unbounded as the enumeration proceeds, the diagonal machine must pay an exponent with no fixed upper bound in order to flip precisely, whereas an NP witness requires a single fixed constant K to exist — this is the Uniform Exponent Barrier (UEB). Trying the full computation trace as the witness instead doesn't help: the trace length itself is about n^(k_i), so the exponent debt is simply shifted onto the witness length instead (Certificate Exponent Explosion, CEE). Writing the step count into the input with a unary clock, in turn, converts the time cost into input-length inflation (the Length Inflation Dilemma, LID). Finally, a Baker-Gill-Solovay relativization stress test serves as a reminder: purely relativizing diagonalization techniques are not, by themselves, enough to resolve P versus NP.</p>
+    <div class="claim-box">
+      Round 16 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-15/">Round 15 · Tractability Proof System and Normal-Form Escape</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-17/">Round 17 · Unified Computational Certificate Compression and the Generalization Leap</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>17 / 25</div>
+    </div>
+  <blockquote class="cite">“Round 16 didn't make diagonalization succeed; instead, it finally pinned down, precisely, where its resource costs break down over the union that is ‘all of P.’” — excerpted from this round's closing “Final Line.” Tentative score: P=NP: 15, P≠NP: 15 (“at this point there's genuinely a whiff of score-fixing. (Wry grin.)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/16_第十六輪_Clocked對角化與統一指數障礙.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/16_第十六輪_Clocked對角化與統一指數障礙.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

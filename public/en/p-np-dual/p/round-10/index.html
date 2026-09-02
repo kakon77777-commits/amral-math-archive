@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 10 · Multi-Anti-Structure Cores and Heterogeneous Gluing Debt · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 10. Originally sets out to find a “multi-anti-structure core” that simultaneously defeats all six known quotienting techniques, but immediately self-corrects: even if one is found, it would only prove hardness against the currently listed arsenal, not general intractability. The round's real payoff runs the other way: each local constraint is easy on its own (all-positive 3-clauses are satisfied by setting everything to 1, all-negative 3-clauses by setting everything to 0), yet Monotone 3-SAT, which mixes the two, is NP-complete — local tractability is not closed under simple addition. Proposes Heterogeneous Gluing Debt (HGD) and a Polymorphism Intersection Spectrum (PIS); the Equals Team counters with Dynamic Algebra Switching. Tentative score: 9:9.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/10_第十輪_多重反結構核心與異質黏合債務.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-10/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-10/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-10/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-10/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-10">Research Rounds</a>
+    <span>/</span>
+    <span>Round 10</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 10</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Multi-Anti-Structure Cores and Heterogeneous Gluing Debt: Once All the Known Escape Hatches Are Sealed, Where Does the Difficulty Actually Lie?</h1>
+    <p class="h1-sub">The original plan was to find a “multi-anti-structure core” (MASC) that resists all six known quotienting techniques at once, but this is immediately self-corrected: even a genuine find would only prove hardness “against the currently listed arsenal,” not “not in P” — Round 9's OBDD counterexample already demonstrated this trap. This round's real payoff comes from a thought experiment running the other way: let R₊=x∨y∨z and R₋=¬x∨¬y∨¬z; either one alone is trivial (satisfiable by setting everything to 1 or everything to 0), but Monotone 3-SAT, which mixes both, is already known to be NP-complete — local tractability is not closed under simple addition. Schaefer's dichotomy theorem formally confirms this: tractability depends on whether the entire constraint language shares a sufficient polymorphism closure, not on whether each individual constraint is easy on its own. Proposes Heterogeneous Gluing Debt (HGD), which measures local-quotienting cost and global-gluing cost separately, along with a Polymorphism Intersection Spectrum (PIS). The Equals Team counters with Dynamic Algebra Switching — which doesn't require a single algebra to be shared globally, and instead lets the algorithm switch between different solvers according to local structure.</p>
+    <div class="claim-box">
+      Round 10 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-09/">Round 9 · Hunting for SAT's Blossom and Quotient Debt</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-11/">Round 11 · Collapse of the Shared Preservation Structure and Dynamic Bridging</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>11 / 25</div>
+    </div>
+  <blockquote class="cite">“The ‘anti-structure’ really worth chasing may not be the absence of good structure, but the inability to glue multiple good structures into one global structure at low cost. The next battleground is no longer whether SAT has a blossom, but whether many local blossoms can be glued polynomially into one larger flower.” — excerpted from this round's closing “Round 10's One-Line Conclusion.” Tentative score: P=NP: 9, P≠NP: 9.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/10_第十輪_多重反結構核心與異質黏合債務.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/10_第十輪_多重反結構核心與異質黏合債務.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

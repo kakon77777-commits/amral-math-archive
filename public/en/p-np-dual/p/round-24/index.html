@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 24 · Semantic-Monotonicity Engineering and the Abstraction-Precision Trilemma · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 24 of the P/NP Dual-Hypothesis Rehearsal (the concluding round of this series, the last of its 25 documents). Engineers a semantic abstraction directly using Abstract Interpretation (Cousot–Cousot) and CEGAR — and immediately undercuts itself: the two-point perfect abstraction, the GOOD/BAD domain, is small, is a WQO, and preserves correctness perfectly, but computing it is itself already a universal-correctness decision — the Abstraction Oracle Trap (AOT). What's actually needed is closing the Precision–Effectivity–Order Trilemma (PEO) all at once. CEGAR runs into the Counterexample Existential Asymmetry (CEA): a wrong answer has a finite counterexample to refine against, but a correct one never has any counterexample to work with. Provisional score 23:23; the series closes at this round, with the line of work then carried forward into Neo's own GLC dynamic four-layer closure framework.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/24_第二十四輪_語義單調性工程與抽象精度三難.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-24/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-24/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-24/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-24/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-24">Research Rounds</a>
+    <span>/</span>
+    <span>Round 24</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 24</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+      <span class="tag">Final Round of the Series</span>
+    </div>
+    <h1>Semantic Monotonicity Engineering: Abstract Interpretation, CEGAR, and the Precision–Effectivity–Order Trilemma</h1>
+    <p class="h1-sub">Round 23 confirmed that algorithm space isn't short on WQOs — what it lacks is an order that's semantically aligned. This round sets out to directly engineer a semantic abstraction α:𝒜→𝒟#, borrowing the concrete/abstract semantics and Galois-connection framework of Abstract Interpretation (Cousot–Cousot), together with a dynamic version of CEGAR's “start with a coarse abstraction, refine when a counterexample shows up.” The first thought experiment is also the most important act of self-sabotage: define a perfect abstract domain with just two points, {GOOD,BAD} — it's finite, of course; a WQO, of course; and it preserves correctness perfectly. But the price is that computing α*(A) is itself already equivalent to deciding “does A always solve SAT correctly” — it just renames the answer. This is named the Abstraction Oracle Trap (AOT). Switching to an error-set inclusion order recovers genuine semantic monotonicity, but immediately grows an antichain over infinitely many singleton error sets, losing the WQO property again. This round therefore upgrades the previous round's trilemma into the Precision–Effectivity–Order Trilemma (PEO): precision (fine enough to distinguish SAT correctness from error), effectivity/non-circularity (the abstraction must be effectively produced from independent structure, not have the answer solved first and then renamed), and finite-basis structure (a WQO or some other property that yields a finite basis) — all three corners of this triangle must close at once, and a natural candidate usually gets only two of them. CEGAR supplies another asymmetric observation: if a candidate solver really is wrong, a single formula exists as a finite counterexample; but if it really is correct everywhere, no counterexample ever appears to drive refinement — the Counterexample Existential Asymmetry (CEA). Termination can only be secured through an inductive invariant, a complete abstraction, or some other quantifier-compression mechanism — never through “no counterexample has shown up in a while.” The Myhill–Nerode finite-index theorem serves here only as a methodological analogy (an exact semantic quotient is itself a very strong structural condition), and is not directly extrapolated into a SAT lower bound. The Equality Team walks away with Property-Directed Adaptive Abstraction (PDAA) — refinement can converge dynamically without having to guess the complete invariant up front; the Inequality Team still lacks a genuine Infinite Distinguishability Theorem to hold up a lower bound. This is the final round of the series' 25 documents (the preliminary intermediate layer plus 24 rounds of dual-hypothesis rehearsal); the score closes here at 23:23, and Neo.K subsequently carries the whole line of work into his own GLC Dynamic Four-Layer Closure Framework, as an independent extension following this dual-hypothesis rehearsal.</p>
+    <div class="claim-box">
+      Round 24 Dual-Hypothesis Rehearsal · Final Round of This Series (00 + Rounds 1–24)
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-23/">Round 23 · Algorithmic WQO and Cracks in Semantic Monotonicity</a></div>
+      <div class="conn-card"><span class="k">After the series</span><a href="../../../glc-framework/p/main-paper/">P/NP Dynamic Four-Layer Closure Framework · Main Paper</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>25 / 25 (final round of this series)</div>
+    </div>
+  <blockquote class="cite">“A perfect two-point abstraction always exists, but that just hides the answer inside α; a coarse abstraction can be effectively constructed, but it will generate spurious behaviors; CEGAR can incrementally supplement precision, but that shifts the hard problem to ‘whether it finitely converges.’” — from the “Final Ruling” at the end of the document. Provisional score P=NP: 23, P≠NP: 23 (“We didn't even successfully abstract away ‘score conservation.’ Maybe it's a complete invariant. (wry smile)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/24_第二十四輪_語義單調性工程與抽象精度三難.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/24_第二十四輪_語義單調性工程與抽象精度三難.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

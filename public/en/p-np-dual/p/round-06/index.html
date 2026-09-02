@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 6 · The Polynomial Representation-Transformation Closure and the Closure Paradox · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="Round 6 of the P/NP Dual-Hypothesis Rehearsal. Attempts to formalize “representation revolution” as a polynomial representation-transformation closure, but instead proves the Tractable-Reachability Equivalence lemma: whether SAT can reach a tractable normal form within the full polynomial closure is exactly equivalent to P=NP — too wide a closure collapses into a tautology, too narrow a closure yields only restricted-model lower bounds. This is the “representation-closure paradox.” The research focus shifts from representation size to “which algebraic structure is preserved under the transformation,” with Schaefer's dichotomy theorem and CSP polymorphism offered as success stories. Score currently tied 5:5.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/06_第六輪_多項式表示變換閉包與閉包悖論.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-06/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-06/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-06/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-06/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-06">Research Rounds</a>
+    <span>/</span>
+    <span>Round 6</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 6</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>The Polynomial Representation-Transformation Closure and the Closure Paradox: Can the Escape Hatch Be Formalized?</h1>
+    <p class="h1-sub">If, every time Team Not-Equal points out that some representation is large, Team Equal can simply reply “there's still some other, unknown representation,” then can every low-cost representation revolution be gathered together into one analyzable closure? This round builds a representation-transformation graph, only to immediately prove the Tractable-Reachability Equivalence lemma: L∈P if and only if there exists a uniform polynomial-time map sending L to a fixed tractable target — for SAT specifically, whether SAT can reach a tractable normal form is exactly synonymous with P=NP. This produces the round's central result, the “representation-closure paradox”: too wide a closure is merely a tautological restatement of the original problem, while too narrow a closure yields only restricted-model lower bounds. The research focus therefore shifts from “representation size” to “what is preserved under the transformation,” with Schaefer's dichotomy theorem and CSP polymorphism theory offered as success stories for the next step.</p>
+    <div class="claim-box">
+      Round 6 dual-hypothesis rehearsal
+      <span class="note">— The package's self-described stage status, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Round</span><a href="../round-05/">Round 5 · The Representation-Escape Tournament and the Hardness Matrix</a></div>
+      <div class="conn-card"><span class="k">Next Round</span><a href="../round-07/">Round 7 · The Battle for an Algebraic Invariant and the Algorithm–Algebra Bridge</a></div>
+      <div class="conn-card"><span class="k">Research Round Progress</span>7 / 25</div>
+    </div>
+  <blockquote class="cite">“Too wide a closure ⇒ tautologically restates P/NP; too narrow a closure ⇒ yields only restricted-model lower bounds.” — from the “Closure Paradox” section of this paper. “‘Representation revolution’ cannot be sealed off once and for all by enumerating representations; but for the first time we can see clearly that a genuine candidate invariant should study ‘what the transformation preserves,’ not ‘what the representation looks like.’” — from the “Round Verdict” at the end of this paper. Score currently P=NP: 5, P≠NP: 5.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/06_第六輪_多項式表示變換閉包與閉包悖論.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/06_第六輪_多項式表示變換閉包與閉包悖論.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

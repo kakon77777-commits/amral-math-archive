@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 20 · Stage-Controlled Complexity and the Limit Monitor · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 20 of the P/NP Dual-Hypothesis Rehearsal. Corrects the previous round: the controller's local computation cost can actually be compressed into polynomial time (checking only micro-instances within a logarithmic horizon, paired with exponential throttling that delays full verification of a given machine until the outer scale is large enough) — what genuinely can't be had for free is the global progress guarantee. Builds a Limit Separation Monitor (LSM): a computable stage function s(N) such that in a P≠NP world s(N)→∞, while in a P=NP world s(N) eventually stops at the first correct SAT machine — rewriting P/NP precisely as whether one trajectory “eventually stabilizes” or “advances without bound.” But this is still an asymptotic observation problem: no finite prefix can decide it. Provisional score 19:19.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/20_第二十輪_階段控制複雜度與極限監視器.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-20/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-20/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-20/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-20/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-20">Research Rounds</a>
+    <span>/</span>
+    <span>Round 20</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 20</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Stage Controller Complexity: Logarithmic Horizons, Exponent Throttling, and Limit Monitors</h1>
+    <p class="h1-sub">Re-examining Ladner-style delayed diagonalization turns up an important correction: the controller's local computation cost can in fact be squeezed strictly into polynomial time; what genuinely can't be gotten for free is the global progress guarantee. The trick is to check only micro-inputs of length h(N)=O(log N) (both the number of candidates and brute-force SAT-solving cost only N^O(1)), paired with exponential throttling — delaying the full check on the i-th machine until the outer scale is large enough that h(N)^k_i≤N^c, since for any fixed k_i this condition will eventually hold. If candidate machine C_i really does equal SAT, then no counterexample ever exists, and the controller freezes there permanently — not a bug, but exactly the signal for P=NP. This gives rise to the Limit Separation Monitor (LSM): a computable stage function s(N) is constructed so that in a P≠NP world s(N)→∞, while in a P=NP world s(N) eventually stops at the first correct SAT machine. This rewrites the classical P/NP question precisely as the asymptotic observation problem of whether one fully computable trajectory “eventually stabilizes” or “advances without bound” — but no observation over any finite amount of time can decide limiting behavior; the monitor itself is not a decision procedure.</p>
+    <div class="claim-box">
+      Round 20 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-19/">Round 19 · Block/Delayed Diagonalization and Stage-Control Dependence</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-21/">Round 21 · The Quantifier Monitor and the Finite-Certificate Hierarchy</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>21 / 25</div>
+    </div>
+  <blockquote class="cite">“Finite witness search can be made very cheap through scale separation; but ‘a witness will never appear again’ or ‘a witness will eventually appear at every stage’ are limit semantics.” — from the “Verdict for This Round.” Provisional score P=NP: 19, P≠NP: 19 (“This score is probably also an eventual fixed point. (wry smile)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/20_第二十輪_階段控制複雜度與極限監視器.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/20_第二十輪_階段控制複雜度與極限監視器.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

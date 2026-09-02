@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 8 · Algorithm–Algebra Bridge Stress Test and Exact Quotient Structure · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 8. Deliberately stress-tests the algorithm–algebra bridge with problems that have no obvious classical solution closure yet are genuinely in P: general-graph maximum matching (Edmonds blossom contraction), maximum flow (residual networks), determinants (Gaussian elimination), shortest paths (semiring aggregation), and treewidth dynamic programming (boundary summaries). The pattern that keeps recurring is exact quotienting: collapsing a huge set of candidates equivalent with respect to the future answer into a polynomial-size summary. Proposes PEQS, but the Equals Team immediately points out that allowing any solver's internal state to serve as the summary would make PEQS degenerate into a tautology for “L∈P.” Tentative score: 7:7.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/08_第八輪_演算法代數橋壓力測試與精確商結構.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-08/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-08/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-08/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-08/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-08">Research Rounds</a>
+    <span>/</span>
+    <span>Round 8</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 8</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Algorithm–Algebra Bridge Stress Test: From Matching, Flow, and Determinant to Exact Quotient Structure</h1>
+    <p class="h1-sub">Deliberately picks problems whose usual narrative isn't built around a classical solution closure, yet which are genuinely in P, to stress-test Round 7's bridge: general-graph maximum matching's Edmonds blossom contraction (which preserves the existence of augmenting paths, plus the Tutte matrix's algebraic escape route linking the existence of a matching to whether a determinant is the zero polynomial), maximum flow's residual network (which preserves information about future improvability, paired with a min-cut duality certificate), the determinant's Gaussian elimination (compressing n! permutation terms into polynomially many steps), shortest path's semiring aggregation (where exponentially many paths need only keep the optimal value), and treewidth dynamic programming's boundary summaries. These algorithms share no single polymorphism, yet a more general pattern of exact quotienting keeps recurring across them. Proposes the Polynomial Exact Quotient Scheme (PEQS), but the Equals Team immediately proves that if any solver's machine state is allowed to serve as the quotient state, PEQS degenerates into a tautology for “L∈P” — so six non-circular admissibility conditions must be added (solver-independence, composability, answer-blindness, exact semantic preservation, a verifiable conservation law, and resource completeness).</p>
+    <div class="claim-box">
+      Round 8 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-07/">Round 7 · Battle for Algebraic Invariants and the Algorithm–Algebra Bridge</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-09/">Round 9 · Hunting for SAT's Blossom and Quotient Debt</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>9 / 25</div>
+    </div>
+  <blockquote class="cite">“P problems don't necessarily share one kind of closure, but they often have some mathematical way of ‘exactly quotienting away future-equivalent states.’ The real game now is: does SAT simply lack this kind of quotient, or have we just not found it yet?” — excerpted from the closing “This Round's One-Liner” of this round's document. Tentative score: P=NP: 7, P≠NP: 7.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/08_第八輪_演算法代數橋壓力測試與精確商結構.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/08_第八輪_演算法代數橋壓力測試與精確商結構.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

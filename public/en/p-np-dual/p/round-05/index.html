@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 5 · The Representation-Escape Tournament and the Hardness Matrix · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="Round 5 of the P/NP Dual-Hypothesis Rehearsal. Rather than guessing at an ultimate invariant, this round runs a representation-escape tournament: Tseitin/XOR, Pigeonhole, Clique, general SAT, and the TSP/CUT/Stable-Set polytopes are each pitted against six weapons — resolution, algebrization, monotone circuits, treewidth decomposition, knowledge compilation, and LP extended formulations — recording “escape” or “lower bound” cell by cell. The matrix shows that no row forms a general lower bound across every column, and no single weapon escapes universally. Proposes the representation-escape profile (REP). Score currently tied 4:4.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/05_第五輪_表示逃逸錦標賽與困難矩陣.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-05/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-05/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-05/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-05/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-05">Research Rounds</a>
+    <span>/</span>
+    <span>Round 5</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 5</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>The Representation-Escape Tournament: Which Hardness Falls to Which Mathematical Weapon?</h1>
+    <p class="h1-sub">Rather than first guessing at an ultimate invariant, this round pits five classic hardness families (Tseitin/XOR, Pigeonhole, Clique, general SAT, and the TSP/CUT/Stable-Set polytopes) one by one against six representation weapons (resolution, algebrization, monotone circuits, treewidth decomposition, knowledge compilation, and LP extended formulations), assigning each cell one of three verdicts: “escape,” “lower bound,” or “unknown.” The matrix immediately shows that no row forms a general lower bound across every column, and no single weapon escapes universally — Clique's strong lower bound against monotone circuits cannot be extrapolated to general circuits (the missing key primitive is exactly the forbidden negation), and the LP extended-complexity lower bound for the TSP/CUT polytopes constrains only linear representations. Proposes the representation-escape profile (REP), recasting the object of study from “hardness” into the binary relation “hardness relative to which representation.”</p>
+    <div class="claim-box">
+      Round 5 dual-hypothesis rehearsal
+      <span class="note">— The package's self-described stage status, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Round</span><a href="../round-04/">Round 4 · The Local–Global Barrier and Representation Escape</a></div>
+      <div class="conn-card"><span class="k">Next Round</span><a href="../round-06/">Round 6 · The Polynomial Representation-Transformation Closure and the Closure Paradox</a></div>
+      <div class="conn-card"><span class="k">Research Round Progress</span>6 / 25</div>
+    </div>
+  <blockquote class="cite">“Round 5 did not find a cross-representation invariant, but for the first time it drew a map of ‘where the hardness is, and where it escapes to.’ The next step is no longer to chase every representation individually, but to study ‘polynomial representation transformation’ itself.” — from the “Round Verdict” at the end of this paper. Score currently P=NP: 4, P≠NP: 4.</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/05_第五輪_表示逃逸錦標賽與困難矩陣.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/05_第五輪_表示逃逸錦標賽與困難矩陣.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

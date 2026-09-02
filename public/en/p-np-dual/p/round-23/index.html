@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 23 · Algorithmic WQO and Cracks in Semantic Monotonicity · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 23 of the P/NP Dual-Hypothesis Rehearsal. Tests carrying the Graph-Minor-style finite forbidden-set over into algorithm space, and gets a correction: a WQO itself isn't hard to obtain — Higman lemma gives a subsequence WQO on program text, Kruskal tree theorem gives a homeomorphic-embedding WQO on syntax trees, and supercompilation has long used it as a termination tool. What actually fails is semantic monotonicity: a natural syntactic order almost never makes SAT correctness/failure monotone. The WQO--Semantic Alignment Barrier (WSAB), plus the Order Alignment Trilemma. Positive result: the derivation trees of Bellantoni–Cook's complete P grammar can directly carry a Kruskal-style WQO. Provisional score 22:22.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/23_第二十三輪_演算法WQO與語義單調性裂縫.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-23/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-23/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-23/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-23/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-23">Research Rounds</a>
+    <span>/</span>
+    <span>Round 23</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 23</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Algorithmic WQO and the Semantic-Monotonicity Gap: Why Graph-Minor-Style Finite Obstructions Do Not Transfer Directly to P vs NP</h1>
+    <p class="h1-sub">Round 22 left behind a Graph-Minor-style dream: find a well-quasi-order for P-normal-form algorithms that makes SAT correctness/failure monotone, and the finite forbidden-set theorem could be replicated. This round tests six candidate orders and lands a key correction — a WQO itself is actually cheap to obtain: for program text over a finite alphabet, Higman lemma directly gives a subsequence WQO; for program syntax trees, Kruskal tree theorem gives a homeomorphic-embedding WQO, and this isn't a paper hypothesis either — program-transformation techniques like supercompilation and partial evaluation have long used it as a termination whistle. What actually gets stuck is the second condition: a natural syntactic WQO almost never gives SAT correctness the monotonicity that's needed — just insert one line, if trigger(x): return 1, into the program, and it's still a subsequence syntactically, yet the semantics may flip entirely; conversely, swapping the order for semantic equivalence or language containment immediately grows an infinite antichain on singleton languages or on distinct Boolean functions, losing the WQO property. This round formally distills this tension into the WQO--Semantic Alignment Barrier (WSAB) and the more operational Order Alignment Trilemma: structural WQO, semantic monotonicity, and non-circular resource-relevance form three corners, and a natural candidate usually gets only two of the three at once. The most important positive result is formally separating Termination WQO (which controls the unfolding trajectory) from Hardness WQO (which gives the correctness set a finite basis) — supercompilation uses the former, and it can't automatically be used as the latter; while the derivation trees of a complete P grammar in the Bellantoni–Cook/Cobham style can indeed carry a Kruskal-style WQO, so the point of failure has now narrowed precisely from “no order exists” to “lacking an order that lets the semantic property close.”</p>
+    <div class="claim-box">
+      Round 23 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-22/">Round 22 · The Quantifier-Compression Theorem and the Finite-Basis Game</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-24/">Round 24 · Semantic-Monotonicity Engineering and the Abstraction-Precision Trilemma</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>24 / 25</div>
+    </div>
+  <blockquote class="cite">“WQOs are abundant, and are even already used in practical program-transformation technologies. What the Graph-Minor route truly needs is not a beautiful order, but a beautiful order plus a non-circular semantic lift theorem.” — from the “Final Verdict” at the end of the document. Provisional score P=NP: 22, P≠NP: 22 (“We might have truly proven a new informal law: whenever the Inequality Team obtains a finitization tool, the Equality Team obtains a representation escape; whenever the Equality Team obtains a new representation, the other team demands a lift theorem. The score is merely responsible for illustrating this fact. (wry smile)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/23_第二十三輪_演算法WQO與語義單調性裂縫.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/23_第二十三輪_演算法WQO與語義單調性裂縫.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

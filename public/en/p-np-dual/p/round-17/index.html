@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 17 · Uniform Computational-Certificate Compression and the Generalization Jump · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 17 of the P/NP Dual-Hypothesis Rehearsal. Confirms that a long computation doesn't imply a long proof — PCP, IP, and succinct arguments all show verification cost can be compressed dramatically. But once UCPE is defined (a universal bounded-halting problem that folds machine, input, and clock exponent all into one unified input), a striking reversal appears: every fixed slice lies in P, yet UCPE as a whole is EXPTIME-complete; assuming further that UCPE∈NP would directly force EXPTIME⊆NP, and combined with P⊊EXPTIME that gives P≠NP — pushing unified compression too hard instead hands the point straight to the Inequality Team. What's actually worth pursuing is certificate compression restricted to just the diagonal, self-referential slice. Provisional score: 16:16.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/17_第十七輪_統一計算證書壓縮與普遍化跳躍.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-17/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-17/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-17/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-17/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-17">Research Rounds</a>
+    <span>/</span>
+    <span>Round 17</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 17</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Uniform Computation Certificate Compression and Universalization Jump: From Trace Compression to EXPTIME-Completeness Reversal</h1>
+    <p class="h1-sub">First confirm that a long computation doesn't necessarily mean a long proof — PCP, interactive proofs, and succinct arguments all show that changing the proof representation or the verifier model can compress verification cost dramatically. But once UCPE is defined (a universal bounded-halting evaluation that unifies machine M, input x, and clock exponent 1^k into a single shared input domain), this round's most important reversal appears: every fixed (M,k) slice lies in P, yet once k is also allowed to vary as part of the input, the whole of UCPE becomes EXPTIME-complete (because k can grow with the instance, so (|x|+2)^k=2^Θ(k log|x|)). This immediately produces a striking result in reverse: assuming a unified, fixed-degree NP certificate exists that puts UCPE∈NP, combined with EXPTIME-completeness this directly gives EXPTIME⊆NP; then NP⊆EXPTIME gives NP=EXPTIME, and since P⊊EXPTIME, it follows that P≠NP. Demanding unification that strong doesn't rescue the Equality Team — it hands the point straight to the Inequality Team. So the narrow path actually worth pursuing is a short rejection certificate confined to just the diagonal, self-referential slice (C_i,x_i).</p>
+    <div class="claim-box">
+      Round 17 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-16/">Round 16 · Clocked Diagonalization and the Uniform-Exponent Barrier</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-18/">Round 18 · Diagonal-Slice Compression and the Sparsity-Lifting Trap</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>18 / 25</div>
+    </div>
+  <blockquote class="cite">“Long computations can have short proofs; but a ‘uniform short proof for all polynomial exponents’ is itself a higher-level universal problem. If certificate compression is universalized too thoroughly, it will jump directly from the P/NP game to EXPTIME.” — from “Ruling of This Round” at the end of the document. Provisional score P=NP: 16, P≠NP: 16 (“Okay, this time I admit it really does look like the referee is controlling the score. (wry smile)”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/17_第十七輪_統一計算證書壓縮與普遍化跳躍.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/17_第十七輪_統一計算證書壓縮與普遍化跳躍.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

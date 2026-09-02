@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 18 · Diagonal-Slice Compression and the Sparsity-Lifting Trap · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 18 of the P/NP Dual-Hypothesis Rehearsal. Narrows the diagonal construction down to just the special self-referential slice (C_i,x_i), only to find that if each machine is assigned a single diagonal point, the language becomes sparse by nature — and the Hartmanis-Immerman-Sewelson theorem says the existence of a sparse NP-P language is equivalent to a higher-order single-exponential deterministic/nondeterministic time separation. Sparsifying doesn't lower the proof threshold, it raises it (the Sparsity Upward-Separation Trap, SUST). Going dense instead runs straight back into the uniform-exponent barrier. Self-reference can supply the ability to point at yourself, not a free compression of the proof of yourself (the Self-Reference Compression Fallacy, SRCF). Provisional score 17:17.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/18_第十八輪_對角切片壓縮與稀疏性上推陷阱.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-18/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-18/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-18/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-18/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-18">Research Rounds</a>
+    <span>/</span>
+    <span>Round 18</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 18</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Diagonal-Slice Compression and Sparsity Upward Separation Trap: Self-Reference Does Not Compress Proofs for Free</h1>
+    <p class="h1-sub">Follow the narrow path left by Round 17 all the way through: search for a fixed-degree short rejection certificate (UDRC) that works only for the i-th clocked machine and its designated diagonal input x_i. Actually pushing this path through reveals a new inverse-hardening phenomenon — if each machine is assigned only a small number of designed inputs, the diagonal language D becomes sparse by nature, and Hartmanis-Immerman-Sewelson proves that the existence of a sparse NP-P language is equivalent to a higher-order single-exponential deterministic/nondeterministic time separation. In other words, making the diagonal construction too thin doesn't lower the proof threshold — it may simultaneously upgrade it into a requirement to prove an even stronger separation. The other side of sparsification is Mahaney's theorem: the existence of a sparse NP-complete set would force P=NP, so a sparse diagonal set can't casually be allowed to double as NP-complete either. Switching to a dense route to dodge sparsity just turns the machine index and the clock exponent back into part of a unified input, reverting to the uniform-exponent barrier. Kleene-recursion-theorem-style self-reference can supply the addressing power to “point at yourself” — it doesn't automatically supply the compression power to “prove yourself” (the Self-Reference Compression Fallacy).</p>
+    <div class="claim-box">
+      Round 18 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-17/">Round 17 · Uniform Computational-Certificate Compression and the Generalization Jump</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-19/">Round 19 · Block/Delayed Diagonalization and Stage-Control Dependence</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>19 / 25</div>
+    </div>
+  <blockquote class="cite">“Making the diagonal slice too thin does not lower the proof threshold; it may raise it.” — from Section 5, “Sparsity Upward-Separation Trap.” “Self-reference can help us ‘point to ourselves,’ but cannot help us ‘prove ourselves’ for free.” — from the “Round Verdict” at the end of the document. Provisional score P=NP: 17, P≠NP: 17 (“It is now very hard to explain this as a ‘coincidence.’”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/18_第十八輪_對角切片壓縮與稀疏性上推陷阱.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/18_第十八輪_對角切片壓縮與稀疏性上推陷阱.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

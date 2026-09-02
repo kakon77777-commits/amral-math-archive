@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 22 · The Quantifier-Compression Theorem and the Finite-Basis Game · P/NP Dual Rehearsal · AMRAL</title>
+<meta name="description" content="Round 22 of the P/NP Dual-Hypothesis Rehearsal. Surveys five mathematical templates that genuinely compress an infinite quantifier obligation into a finite structure: finite basis (Graph Minor), inductive closure (Bellantoni-Cook safe recursion), dual certificates (Farkas, max-flow/min-cut), algebraization (arithmetization, sum-check, IP=PSPACE), and algorithm-to-lower-bound transfer (Williams's ACC lower bound). Formalizes the Quantifier Compression Mechanism (QCM) and a six-part eligibility test; Cook-Reckhow and Natural Proofs are reminders that a universal short certificate isn't a free resource. Provisional score 21:21.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/22_第二十二輪_量詞壓縮定理與有限基底遊戲.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-22/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-22/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-22/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-22/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-22">Research Rounds</a>
+    <span>/</span>
+    <span>Round 22</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 22</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Quantifier Compression Theorem and Finite Basis Game: Five Mathematical Templates for Compressing an Infinite Obligation into a Finite Structure</h1>
+    <p class="h1-sub">Round 21 established that a monitor can't exhaust the quantifier tail through observation alone; this round asks the reverse question: in the history of mathematics, what mechanisms actually can cover an infinite obligation with a finite structure? Five classes are compiled — Finite-Basis Compression (the Robertson–Seymour graph minor theorem is the cleanest template: every minor-closed graph class has a finite forbidden-minor set); Inductive-Closure Compression (Bellantoni–Cook fully characterizes FP with finitely generated rules, handling an entire infinite syntactic domain with a single structural induction); Dual-Certificate Compression (max-flow/min-cut, the Farkas lemma: a single finite dual witness compresses away all competing solutions); Algebraic Compression (arithmetization, sum-check, IP=PSPACE: exponentially many Boolean assignments are traded for a low-degree polynomial identity); and Algorithm-to-Lower-Bound Transference (Williams: a faster SAT algorithm for a given circuit class, run through a hierarchy argument, turns back into a lower bound for that same class). It formally defines the Quantifier Compression Mechanism (QCM) = (Π,Check,Lift,𝒟), and proposes a six-part eligibility test — coverage, sound lift, non-circularity, semantic relevance, resource honesty, and barrier awareness. Three cautions are also listed: Cook–Reckhow shows that if every tautology had a polynomial-size proof then NP=coNP, so a universal short dual proof isn't a free resource; IP=PSPACE is a successful compression, but it doesn't mean P=PSPACE — the verifier model itself has changed; and the Natural Proofs barrier warns that an invariant that's too strong or too constructive can hit a wall. The first formal minor theorem: the WQO Quantifier Compression Lemma — if (X,⪯) is a WQO and U is upward-closed, then U has a finite minimal basis; but no one has yet proved that such a non-circular WQO exists over polynomial algorithms, so the lemma itself can't be taken as a separation.</p>
+    <div class="claim-box">
+      Round 22 Dual-Hypothesis Rehearsal
+      <span class="note">— The package document's own self-reported status at this stage, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-21/">Round 21 · The Quantifier Monitor and the Finite-Certificate Hierarchy</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-23/">Round 23 · Algorithmic WQO and Cracks in Semantic Monotonicity</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>23 / 25</div>
+    </div>
+  <blockquote class="cite">“It does not rely on ‘looking through’ the infinite tail; rather, it relies on a lift theorem to rewrite the obligation.” — from the “Round Ruling” at the end of the document. Provisional score P=NP: 21, P≠NP: 21 (“This time it really wasn't on purpose. The Equality Team obtained ‘quantifier compression indeed has a large number of successful mathematical templates’; the Inequality Team obtained the formal lower-bound architecture that ‘finite-basis/inductive-closure can truly cover an infinite domain.’ The Duality Conservation of Proof Obligations remains valid. Wry smile.”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/22_第二十二輪_量詞壓縮定理與有限基底遊戲.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/22_第二十二輪_量詞壓縮定理與有限基底遊戲.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

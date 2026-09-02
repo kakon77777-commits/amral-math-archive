@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 2 · The Battle for a Cross-Representation Invariant · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="Round 2 of the P/NP Dual-Hypothesis Rehearsal. Proposes the residual distinguishable load H_res as the first local invariant, forming a genuine semantic lower bound within the fixed-cut state-machine model — but Team Equal escapes along five routes: variable reordering, re-reading the input, global summarization, dimension expansion, and switching representations. Establishes a six-part qualification test for candidate invariants (semantic-ness, cross-representation robustness, non-circularity, and others), and the parity function PARITY breaks the intuition that “large candidate count = need for exponential state.” Score currently tied 1:1.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/02_第二輪_跨表示不變量爭奪戰.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-02/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-02/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-02/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-02/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-02">Research Rounds</a>
+    <span>/</span>
+    <span>Round 2</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 2</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>The Battle for a Cross-Representation Invariant: After the Existential Quantifier Collapses, What Must Still Remain?</h1>
+    <p class="h1-sub">Team Not-Equal proposes its first candidate — the residual distinguishable load H_res: classify the residual functions of a SAT formula after a partial variable assignment by semantic equivalence; if some cut has many pairwise-distinguishable residual functions, then any system that summarizes what it has read using only finite state must have enough states — |Q_S|≥N_res(φ,S) is a genuine semantic lower bound. But Team Equal immediately points out that this holds only under a fixed variable order and a fixed-cut model — a general algorithm can reorder variables, revisit the input, use global algebraic summaries, or introduce auxiliary variables to escape. Establishes a six-part qualification test for candidate invariants, and uses the parity function PARITY (2^n candidates, yet only 1 bit of state is needed) to break the intuition that “a large candidate space requires exponential state.”</p>
+    <div class="claim-box">
+      Round 2 dual-hypothesis rehearsal
+      <span class="note">— The package's self-described stage status, reproduced as-is. The original text's title uses “P/NP Debate Game Research Area,” which differs slightly from the “Dual-Proof Rehearsal Research Area” used in the other rounds; reproduced as-is without harmonizing.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Round</span><a href="../round-01/">Round 1 · Existential-Quantifier State Collapse</a></div>
+      <div class="conn-card"><span class="k">Next Round</span><a href="../round-03/">Round 3 · Algorithmic-Trajectory Cuts and the Causal Bottleneck</a></div>
+      <div class="conn-card"><span class="k">Research Round Progress</span>3 / 25</div>
+    </div>
+  <blockquote class="cite">“Team Not-Equal has won a local weapon, but not yet a cross-representation super-weapon. Team Equal has escaped successfully, but has not yet exhibited an actual polynomial existential-quantifier compressor.” — from the “Round Verdict” at the end of this paper. Score currently P=NP: 1, P≠NP: 1 (“the score is just a game interface, not mathematical evidence”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/02_第二輪_跨表示不變量爭奪戰.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/02_第二輪_跨表示不變量爭奪戰.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

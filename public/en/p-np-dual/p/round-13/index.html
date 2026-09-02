@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 13 · Tractable Closure Stability and Polynomial Chain Blowup · P/NP Dual-Hypothesis Rehearsal · AMRAL</title>
+<meta name="description" content="P/NP Dual-Hypothesis Rehearsal, Round 13. Proves a simple but crucial combinatorial fact: each step being a polynomial transformation relative to the current representation size does not mean the whole trajectory is polynomial in the original input — if s_(t+1)=s_t^2, then s_m=n^(2^m), and as soon as the number of steps grows with the input, this quickly exceeds any fixed polynomial bound. Formally distinguishes Stepwise Polynomiality from Pathwise Polynomiality, and proposes Tractable Closure Stability (TCS), which requires the peak size, cumulative cost, and bridging depth over the entire run to all stay within a uniform polynomial bound relative to the original input. Tentative score: 12:12.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/13_第十三輪_可解閉包穩定性與多項式鏈爆炸.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/p-np-dual/p/round-13/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/p-np-dual/p/round-13/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/p-np-dual/p/round-13/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../p-np-dual/p/round-13/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <span>/</span>
+    <a href="../../#round-13">Research Rounds</a>
+    <span>/</span>
+    <span>Round 13</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 13</span>
+      <span class="tag">v1.0</span>
+      <span class="tag">2026-08-01</span>
+    </div>
+    <h1>Tractable Closure Stability and Polynomial Chain Blowup: If Every Step Is Easy, Is the Whole Path Necessarily Easy?</h1>
+    <p class="h1-sub">The previous twelve rounds kept asking, “is this step tractable?” — this round proves that question alone isn't enough. If the representation size satisfies s_(t+1)=s_t^d(d≥2), every step is a polynomial transformation relative to the current representation size, yet starting from s_0=n, after m steps s_m=n^(d^m) — as soon as the step count m grows with the input, the whole thing quickly exceeds any fixed polynomial bound, with no need to involve SAT at all; it's purely a combinatorial trap in algorithm design. Formally distinguishes Stepwise Polynomiality (local polynomiality relative to the current representation) from Pathwise Polynomiality (polynomiality over the entire run relative to the original input), and proposes Tractable Closure Stability (TCS), which requires the step count, peak representation size, cumulative cost, and answer-recovery cost to all be uniformly polynomially bounded in the original input. The Equals Team is forced to upgrade to an Amortized Tractability Certificate (ATC), while the Not-Equals Team proposes the Path-Chain Instability Conjecture (PCIC).</p>
+    <div class="claim-box">
+      Round 13 Dual-Hypothesis Rehearsal
+      <span class="note">— the self-reported status stated in the source document, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other documents, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-12/">Round 12 · The Interface Language Lattice, the Schaefer Threshold, and Recursive SAT</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-14/">Round 14 · The Complexity Potential-Function Game and the Certificate-Completeness Trap</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>14 / 25</div>
+    </div>
+  <blockquote class="cite">“‘Every step is easy’ is only a local claim; genuine P demands that ‘the entire history is cheap.’ For dynamic switching to become a viable route to P=NP, it must hand over a full amortized-polynomial bill for the entire run.” — excerpted from this round's closing “This Round's One-Line Version.” Tentative score: P=NP: 12, P≠NP: 12 (“this round, both teams appear to have turned the ‘tie’ itself into a stable fixed point”).</blockquote>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← P/NP Dual Rehearsal</a>
+    <a href="../../files/13_第十三輪_可解閉包穩定性與多項式鏈爆炸.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/13_第十三輪_可解閉包穩定性與多項式鏈爆炸.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
