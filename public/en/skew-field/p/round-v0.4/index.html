@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 4 · Fourier Curvature Space and Non-Convex Container Reduction · Skew Field · AMRAL</title>
+<meta name="description" content="Center-Generated Bridge Experiment, Round 4: raising the dimension of the curvature function (Fourier 6/8/10 modes) still increases convex support tension, but at the same time we find that the cost of convexification accounts for 37.31% of the current finite-family container's area — a non-convex simply-connected container needs only 0.191, far below the convex container's 0.305. Convex support redundancy is not the same as non-convex container redundancy.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/skew-field/p/round-v0.4/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/skew-field/p/round-v0.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/skew-field/p/round-v0.4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Skew Field</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../moser/">Moser's Worm (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../skew-field/p/round-v0.4/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Skew Field</a>
+    <span>/</span>
+    <a href="../../#round-v0.4">Experiment Rounds</a>
+    <span>/</span>
+    <span>Round 4</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 4</span>
+      <span class="tag">v0.4</span>
+      <span class="tag">2026-07-27</span>
+    </div>
+    <h1>Fourier Curvature Function Spaces, Adjoint Sensitivity, and Non-Convex Container Reduction</h1>
+    <p class="h1-sub">Generalizing the curvature function from a fixed formula to a Fourier series (6/8/10 modes), support tension still rises with dimension; but at the same time, taking the direct non-convex union of the tubular neighborhoods of the seven test families (without forcing convexification), a simply-connected container needs only 0.191 — far below the 0.305 of the same families' convex container. The cost of convexification accounts for 37.31% of the current container's area.</p>
+    <div class="claim-box">
+      Finite-dimensional function-space candidate + semi-verified curvature bounding box + finite-family non-convex container candidate
+      <span class="note">— the package's own stated status, reproduced as-is. “Convex support redundancy ≠ non-convex container redundancy.”</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation. This case's theoretical foundation is in <a href="../../papers/kakeya-moser-bridge/">From the Original Kakeya Needle to Moser's Worm</a>.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous Round</span><a href="../round-v0.3/">Round 3 · Normal Injectivity Theorem and Dual-Frequency Log-Curvature</a></div>
+      <div class="conn-card"><span class="k">Next Round</span><a href="../round-v0.5/">Round 5 · The First Non-Convex Alternating Adversarial Cycle</a></div>
+      <div class="conn-card"><span class="k">Round Progress</span>4 / 11</div>
+    </div>
+  <blockquote class="cite">“The support function records only the convex hull; a non-convex container must also record: concavities, narrow channels, local gaps, and the complementary interlocking between tubular boundaries. Hence: convex support redundancy is not the same as non-convex container redundancy. Round 1's finite-width family is already redundant in the convex problem, but still makes a nonzero contribution in the non-convex container's leave-one-out analysis.” — from Section 9, “Structural Assessment,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 4 Core Content</h2>
+    <p class="doc-meta">The definition of the Fourier curvature function space, dimension progression (6→8→10 modes), the curvature box and chirality audit for the Fourier-10 candidate, spectrum and sensitivity (amplitude does not imply tension sensitivity), derivation of the adjoint gradient, the convex finite-family container, the non-convex finite-family container (a 37.31% reduction), structural assessment, honest bounds, and the next milestone (the alternating adversarial system).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-method">
+    <h2 class="doc-h2">Method · Method</h2>
+    <p class="doc-meta">Parametrization of the curvature function space, the three-tier search layering, convex/non-convex container formulas, and the list of verification layers.</p>
+    <div class="doc" id="doc-method-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-sensitivity">
+    <h2 class="doc-h2">Curvature Function—Support Function Adjoint Sensitivity</h2>
+    <p class="doc-meta">The complete derivation of the adjoint gradient (curvature normalization, centerline variation, support function variation), and numerical cross-checking (finite differences vs. the adjoint gradient).</p>
+    <div class="doc" id="doc-sensitivity-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-pruning">
+    <h2 class="doc-h2">Non-Convex Container Reduction</h2>
+    <p class="doc-meta">The non-convex union area of the seven test families, hole-filling, the 37.31% reduction relative to the convex container, and a family-by-family leave-one-out analysis.</p>
+    <div class="doc" id="doc-pruning-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../skew-field/packages/CenterGenerated_Bridge_Experiment_v0.4.zip" download>Download full package (2862.4 KB)</a>
+    <p class="zip-note">sha256 ac08e76579ac23f7946c36292c687c1a24659f3eb620e068152a63754fd932fb</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Skew Field</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    // Only reports/*.md were translated into this EN mirror; every other file (data, figures,
+    // code, and loose files like README.md/MANIFEST.json) still lives only at the Chinese path.
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../skew-field/p/round-v0.4/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_04_REPORT.md");
+loadDoc("doc-method-body", "reports/ROUND_04_METHOD.md");
+loadDoc("doc-sensitivity-body", "reports/ROUND_04_ADJOINT_SENSITIVITY.md");
+loadDoc("doc-pruning-body", "reports/ROUND_04_NONCONVEX_PRUNING.md");
+loadFiles();
+</script>
+</body>
+</html>
