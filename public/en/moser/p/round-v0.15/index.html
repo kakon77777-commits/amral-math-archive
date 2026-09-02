@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 15 · Curvature Mode Spectrum and Hidden-Branch Opening (Series Finale) · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 15, round 15/15, concludes the series. It builds an eight-member orthogonal curvature-mode basis; the pressure-projected Hessian has 7 negative eigenvalues plus 1 small positive eigenvalue (1.33e-6) — so Round 13's candidate is not a strict local maximum in this space. Ascending along the Newton direction, a new ninth local minimum begins to appear at m≈2.2 and takes over by about m≈3.228. Taking the in-window candidate gives s=0.998914480716946, an improvement of about 1.37e-7, but the global minimum is nearly exactly tied between the 120° and 270° neighborhoods (a gap of only 2.8e-15).">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.15/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.15/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.15/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.15/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.15">Rounds</a>
+    <span>/</span>
+    <span>Round 15</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 15</span>
+      <span class="tag">v0.15</span>
+      <span class="tag">2026-07-26</span>
+      <span class="tag">Round 15/15 · Complete</span>
+    </div>
+    <h1>Curvature-Function Mode Spectrum, Hidden-Branch Opening, and a New Finite-Mode Candidate</h1>
+    <p class="h1-sub">Round 14's two-peak and chirality scans covered only a handful of directions. This round instead uses eight orthogonal Legendre modes over cumulative-density coordinates to build a complete perturbation basis for the curvature function, and computes the pressure-projected Hessian along the four-branch equal-height manifold: the result is 7 negative eigenvalues plus 1 small positive eigenvalue (1.33×10⁻⁶) — so Round 13's single-peak candidate is not a strict local maximum within this eight-mode space. Ascending along the corresponding Newton direction, the original four controlling branches keep rising, but after about m≈2.2 a ninth local minimum appears, and by about m≈3.228 this new branch begins to take over the global objective — the ascent cannot be extended indefinitely; it is confined to a narrow window bounded by a “branch opening.” Taking the candidate at m=3.2275 gives s₁₅=0.998914480716946, an improvement of about 1.37×10⁻⁷ over Round 13, confirmed as stable across 5 resolutions (6001 to 96001 points). A full-phase audit (96001×262144) finds the number of local minima has grown to 9, and the global minimum is controlled by an almost exact tie between the 120° branch and the p3|p3|p1 branch (in the former 270° neighborhood), with a gap of only 2.78×10⁻¹⁵. The series concludes here, ending on the honest, unfinished state of “a narrow ascent window just before the fifth branch takes over,” handing off to the five-branch event system of the next round.</p>
+    <div class="claim-box">
+      Eight-mode function-space exploration; full-phase numerical audit; not an interval certificate
+      <span class="note">— A stage-status self-declaration from the package's own documents, reproduced as-is. Continues Moser Skew Lab v0.14.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.14/">Round 14 · Local Stability Under Two-Peak Splitting and Chirality Breaking</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>15 / 15 · Series Complete</div>
+    </div>
+  <blockquote class="cite">“Curvature-function optimization is governed by branch generation, not only by the negative-definiteness of the Hessian.” — from Section 9.2, “The Branch-Opening Obstruction,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 15 Core Content</h2>
+    <p class="doc-meta">Curvature-function coordinates (Legendre modes over cumulative-density coordinates), first-order equal-height compensation, the pressure-projected Hessian (7 negative, 1 positive), the excluded four-branch candidate (the hidden-branch trap), the effective Newton direction and the branch-opening window, the final finite-mode candidate, multi-resolution cross-check, full-phase results (9 local minima), this round's structural results, limitations, direction for Round 16, conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 15 Candidate and Branch-Opening Audit</h2>
+    <p class="doc-meta">The final candidate's complete parameters and mode coefficients, the five-resolution cross-check ledger, the full-phase list of nine local minima, the excluded four-branch candidate's values, and a summary of the key verdicts.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-handoff">
+    <h2 class="doc-h2">Round 16 Handoff: The Five-Branch Event System</h2>
+    <p class="doc-meta">The location of the new intermediate low-phase branch, the direction for building a five-branch equal-height system, and the required task list (extending the Jacobian, arbitrary-precision difference envelope, retaining the nine-minimum ledger). This is the last round packaged so far; Round 16 has not yet been packaged.</p>
+    <div class="doc" id="doc-handoff-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.15.zip" download>Download full package (3943.7 KB)</a>
+    <p class="zip-note">sha256 21f48cf6db6301e0538d5010168358f064e07612891c088cff1f59ee3d8eb443</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.15/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_15_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_15_BRANCH_OPENING_AUDIT.md");
+loadDoc("doc-handoff-body", "reports/ROUND_16_FIVE_BRANCH_HANDOFF.md");
+loadFiles();
+</script>
+</body>
+</html>

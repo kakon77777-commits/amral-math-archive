@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 14 · Local Stability Under Two-Peak Splitting and Chirality Breaking · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 14: tests whether Round 13's single-peak candidate is merely a spurious isolated point produced by a restricted parametrization. The best solution from a two-peak search collapses back to near-single-peak (peak separation about 3.3e-6); in an 80-point two-dimensional survey of center and width chirality offsets, the best nonzero point is always worse than zero offset. The single-peak mirror-symmetric candidate is locally stable in every direction tested. The round also records and excludes a spurious improvement caused by a coordinate error in one version (the right-wing center mistakenly set to c instead of 1-c), which was not carried into the conclusions.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.14/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.14/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.14/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.14/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.14">Rounds</a>
+    <span>/</span>
+    <span>Round 14</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 14</span>
+      <span class="tag">v0.14</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Two-Peak Curvature Splitting, Chirality Breaking, and Single-Peak Local Stability</h1>
+    <p class="h1-sub">Round 13 allowed only a single tanh curvature peak. This round adds two new degrees of freedom: splitting the same wing into two peaks, and an antisymmetric (chirality) offset of the left/right wing centers or widths — testing whether the single-peak mirror-symmetric candidate is merely a spurious isolated point produced by a restricted parametrization. Result: the best solution from an eight-parameter two-peak search collapses back to near-single-peak (peak separation only about 3.3×10⁻⁶), and under the same evaluator the two-peak version actually scores slightly worse; one-dimensional scans of both center chirality and width chirality attain their maximum at zero offset, with negative second-order coefficients in both cases; in an 80-point two-dimensional chirality survey, the best nonzero candidate is still worse than zero offset by about 2.8×10⁻⁵. Conclusion: within the directions tested, the single-peak mirror-symmetric candidate is locally stable, with no identifiable ascent direction. The round also honestly records a coordinate error in an early version (the right-wing local center was mistakenly set to c instead of the correct 1-c, which had produced a spurious improvement on a coarse grid); this has been completely excluded and was not carried into the conclusions.</p>
+    <div class="claim-box">
+      Curvature-distribution exploration; a finite search; not a proof over the full function space
+      <span class="note">— A stage-status self-declaration from the package's own documents, reproduced as-is. Continues Moser Skew Lab v0.13.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.13/">Round 13 · Five-Parameter Event–KKT Isolation and Peak Correction</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.15/">Round 15 · Curvature-Function Mode Spectrum (Series Finale)</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>14 / 15</div>
+    </div>
+  <blockquote class="cite">“The first version mistakenly set the right-wing local center equal to c again, instead of 1-c. This does not generate a mirror-symmetric baseline, and produced a spurious coarse-grid improvement, a narrow weak-phase branch, and a contradiction between coarse and fine resolution. This batch of values has been completely excluded and did not enter this round's conclusions.” — from Section 9, “Coordinate-Error Audit,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 14 Core Content</h2>
+    <p class="doc-meta">Research question, the two-peak curvature-density model, two-peak search results (collapsing back to single-peak), scan along the peak-separation direction, the correct chirality coordinates, center-offset scan, width-offset scan, two-dimensional chirality survey (80 points), coordinate-error audit, full-phase audit, research verdict, what cannot be inferred, direction for Round 15, conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 14 Search and Coordinate Audit</h2>
+    <p class="doc-meta">A machine-readable numerical ledger for the two-peak and chirality scans, with an account of the excluded coordinate error.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-handoff">
+    <h2 class="doc-h2">Round 15 Handoff: Curvature-Function Mode Spectrum</h2>
+    <p class="doc-meta">Baseline scale, the decision to stop adding peaks arbitrarily, the formula for the normalized curvature-mode basis, a priority list of modes, and the direction for constructing the constrained Hessian.</p>
+    <div class="doc" id="doc-handoff-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.14.zip" download>Download full package (1409.4 KB)</a>
+    <p class="zip-note">sha256 8f39ba0d03645d0a02b2631d12b09242d3d2327d46b155b9725d65b76bfcfe27</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.14/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_14_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_14_SEARCH_AUDIT.md");
+loadDoc("doc-handoff-body", "reports/ROUND_15_CURVATURE_MODE_HANDOFF.md");
+loadFiles();
+</script>
+</body>
+</html>

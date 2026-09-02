@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="AMRAL case: Moser's Worm Problem. Linear programming over support functions to find the critical container scaling factor, benchmarked against literature-certified results (the disk, the 30° sector, the Wetzel triangle), with round-by-round adversarial curve search strengthening the representational power of the candidate curve family. The original engineering packages are unmodified, with a full round-by-round trail.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">About</a>
+  <a class="link" href="../methodology/">Methodology</a>
+  <a class="link" href="../protocols/">Protocols</a>
+  <a class="link" href="../validation/">Validation</a>
+  <a class="link active" href="./">Moser's Worm Problem</a>
+  <a class="link" href="../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../skew-field/">Skew Field</a>
+  <a class="link" href="../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../moser/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-UNIVERSAL-COVERING</p>
+    <h1>Moser's Worm Problem</h1>
+    <p class="subtitle">Moser's Worm Problem · Semi-autonomous research (led by Neo)</p>
+    <p class="lede">
+      Find the minimum-area planar convex region that can contain, via translation and rotation, any unit-length
+      curve. This track directly attacks the problem itself — using linear programming over support functions to
+      find the critical container scaling factor under a fixed rotation, benchmarked against literature-certified
+      results (the disk, the 30° sector, the Wetzel triangle), strengthening the adversarial curve search and
+      expanding the candidate curve family's representational power round by round. See the
+      <a href="../methodology/">methodology page</a> for the methodology. See the separate
+      <a href="../skew-field/">Skew Field</a> case for the theoretical generalization.
+    </p>
+    <div class="stats" id="stats" aria-label="Archive statistics"></div>
+    <p class="notice">
+      Every round's README states on its own that it "does not constitute a new upper or lower bound for the
+      Moser problem" — this is exploratory numerical research, not a formal proof. The original packages are
+      unmodified, with a full round-by-round trail, including verification and hashes.
+    </p>
+  </header>
+
+  <div id="content">
+    <p class="loading">Loading manifest…</p>
+  </div>
+
+  <footer class="sitefoot">
+    <span>SHA-256 verified round by round · original bytes, not repackaged</span>
+    <span id="generated-note"></span>
+  </footer>
+</div>
+
+<script>
+const fmtSize = (b) => {
+  if (b < 1024) return b + " B";
+  if (b < 1024 * 1024) return (b / 1024).toFixed(1) + " KB";
+  return (b / (1024 * 1024)).toFixed(2) + " MB";
+};
+const fmtDate = (iso) => {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleString("en-US", {
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).replace(/\//g, "-");
+};
+
+function cardHTML(pkg) {
+  const href = "./packages/" + encodeURIComponent(pkg.filename);
+  const shortHash = pkg.sha256.slice(0, 16) + "…";
+  const titleInner = pkg.has_detail_page
+    ? `<a class="title-link" href="./p/${pkg.id}/">${pkg.title} <span class="detail-hint">→ details</span></a>`
+    : pkg.title;
+  return `
+    <article class="card" id="${pkg.id}">
+      <div class="card-top">
+        <span class="tag">Round ${pkg.version}</span>
+      </div>
+      <div class="title">${titleInner}</div>
+      <div class="meta">
+        <span>${fmtDate(pkg.generated_at)} UTC</span>
+        <span>${fmtSize(pkg.size)} · ${pkg.file_count} files</span>
+      </div>
+      <button class="hash" type="button" data-hash="${pkg.sha256}" title="Click to copy full SHA-256: ${pkg.sha256}">
+        sha256 ${shortHash}
+      </button>
+      <a class="dl" href="${href}" download="${pkg.filename}">Download ${fmtSize(pkg.size)}</a>
+    </article>`;
+}
+
+const PAGE_SIZE = 20;
+let manifest = null;
+let page = 0;
+
+function pagerHTML(totalPages) {
+  if (totalPages <= 1) return "";
+  let nums = "";
+  for (let i = 0; i < totalPages; i++) {
+    nums += `<button class="page-btn ${i === page ? "active" : ""}" data-page="${i}">${i + 1}</button>`;
+  }
+  return `<div class="pager">
+    <button class="page-btn" data-page="${page - 1}" ${page === 0 ? "disabled" : ""}>‹ Previous</button>
+    ${nums}
+    <button class="page-btn" data-page="${page + 1}" ${page === totalPages - 1 ? "disabled" : ""}>Next ›</button>
+  </div>`;
+}
+
+function render() {
+  const content = document.getElementById("content");
+  const rounds = manifest.rounds;
+  const totalPages = Math.ceil(rounds.length / PAGE_SIZE);
+  const shown = rounds.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  content.innerHTML = `
+    <section class="series" id="rounds">
+      <div class="series-head">
+        <h2>Rounds · Rounds</h2>
+        <span class="count">${rounds.length} packages${totalPages > 1 ? ` · page ${page + 1}/${totalPages}` : ""}</span>
+      </div>
+      <p class="series-note">Ordered by version, each round archived as an independent zip, original bytes not repackaged.</p>
+      <div class="grid">${shown.map(cardHTML).join("")}</div>
+      ${pagerHTML(totalPages)}
+    </section>`;
+}
+
+async function boot() {
+  const content = document.getElementById("content");
+  try {
+    const res = await fetch("./manifest.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    manifest = await res.json();
+  } catch (e) {
+    content.innerHTML = `<p class="error">Manifest failed to load: ${e.message}</p>`;
+    return;
+  }
+
+  const dates = manifest.rounds.map((p) => p.generated_at).filter(Boolean).sort();
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><span class="n">${manifest.counts.total}</span><span class="l">Packages</span></div>
+    <div class="stat"><span class="n">${(manifest.total_size / (1024 * 1024)).toFixed(1)} MB</span><span class="l">Total size</span></div>
+  `;
+  document.getElementById("generated-note").textContent =
+    dates.length ? `${fmtDate(dates[0])} → ${fmtDate(dates[dates.length - 1])} UTC` : "";
+
+  if (location.hash.length > 1) {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const idx = manifest.rounds.findIndex((p) => p.id === id);
+    if (idx !== -1) page = Math.floor(idx / PAGE_SIZE);
+  }
+
+  render();
+
+  if (location.hash.length > 1) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ block: "center" });
+  }
+
+  content.addEventListener("click", (ev) => {
+    const pageBtn = ev.target.closest(".page-btn");
+    if (pageBtn) {
+      if (pageBtn.disabled) return;
+      page = Number(pageBtn.dataset.page);
+      render();
+      document.getElementById("rounds")?.scrollIntoView({ block: "start" });
+      return;
+    }
+    const btn = ev.target.closest(".hash");
+    if (!btn) return;
+    navigator.clipboard?.writeText(btn.dataset.hash).then(() => {
+      btn.classList.add("copied");
+      const original = btn.textContent;
+      btn.textContent = "Full hash copied ✓";
+      setTimeout(() => { btn.classList.remove("copied"); btn.textContent = original; }, 1400);
+    });
+  });
+}
+
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 2 · Phase Jumps and Chirality Correction · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 2: dual contact-pressure ledger, full phase sweep, and topology-guided three-link search. A three-link candidate is found approaching the certified Wetzel scale, but exact re-verification exposes a false alarm — an orientation-preserving scale exceeding 1 does not refute the Wetzel covering result, since the paper permits reflection; chirality correction is completed.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.2.2/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.2.2/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.2.2/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.2.2/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.2.2">Rounds</a>
+    <span>/</span>
+    <span>Round 2</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 2</span>
+      <span class="tag">v0.2.2</span>
+      <span class="tag">2026-07-26</span>
+      <span class="tag">CHIRALITY_CORRECTED</span>
+    </div>
+    <h1>Phase Jumps, the Dual Contact-Pressure Ledger, and Topology-Guided Curve Search</h1>
+    <p class="h1-sub">256 support directions, with 360 full rotation phases per curve. A topology-guided three-link search finds a candidate that appears to approach the certified Wetzel scale of 1 — but exact three-normal re-verification reveals this is a false alarm in the orientation-preserving version, since the paper permits reflection; a re-search under the corrected congruence difficulty yields a more robust result.</p>
+    <div class="claim-box">
+      Exploratory computation; not a formal proof; not a universal covering certificate
+      <span class="note">— Stage status as self-declared by the in-package documents, reproduced verbatim. This round additionally performed one round of self-correction: first finding a candidate that appeared to break the record, then proving it does not hold.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.1/">Round 1 · Support-Skew Linear Programming</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.3/">Round 3 · Contact-Ledger Reverse Generation</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>2 / 15</div>
+    </div>
+  <blockquote class="cite">“Because the curve is covered up to congruence as long as either chirality fits… s₊&gt;1 therefore does not refute the Wetzel covering result; the mirror branch can still fit.” — excerpted from this package's chirality-correction report, explaining why an apparently record-breaking candidate is not actually a counterexample.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Core Content of Round 2</h2>
+    <p class="doc-meta">The dual contact-pressure ledger, the full phase-sweep table, structural analysis of the phase jumps, the topology-guided three-link search, the contact-pressure ledger of the best candidate, this round's assessment, and the design of the next round's contact-ledger reverse generator.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-correction">
+    <h2 class="doc-h2">Chirality Correction</h2>
+    <p class="doc-meta">Finds that the original three-link search considered only the orientation-preserving version, missing the convention in the Wetzel paper that permits reflection; defines the congruence difficulty s_cong = min(s₊,s₋) and the chirality skew χ, re-searches to obtain a more robust candidate, and establishes the rule that “the two theoretical branches must remain permanently separated.”</p>
+    <div class="doc" id="doc-correction-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-addendum">
+    <h2 class="doc-h2">Exact Three-Normal Re-Verification Appendix</h2>
+    <p class="doc-meta">The Wetzel triangle is the intersection of three half-planes, so the exact minimal scale can be computed via a closed-form vertex formula, without angular discretization approximation. Re-verification finds that the grid approximation did indeed underestimate the scale; an exact re-search yields a three-segment polyline approaching the certified scale of 1.</p>
+    <div class="doc" id="doc-addendum-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.2.2.zip" download>Download full package (975.1 KB)</a>
+    <p class="zip-note">sha256 4375eba4e285a87c400383914dadf8fe3a5ef8327583674f1434e409b1a2fd40</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.2.2/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_02_REPORT.md");
+loadDoc("doc-correction-body", "reports/ROUND_02_CHIRALITY_CORRECTION.md");
+loadDoc("doc-addendum-body", "reports/ROUND_02_EXACT_ADDENDUM.md");
+loadFiles();
+</script>
+</body>
+</html>

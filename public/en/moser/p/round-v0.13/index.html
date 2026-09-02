@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 13 · Five-Parameter Event–KKT Isolation and Peak Correction · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 13: upgrades Round 8's smooth candidate into a formal 12-unknown five-parameter event–KKT system (four-branch equal height + dual stationarity + branch-pressure balance), obtaining a minute correction s=0.998914343297485 (only about 4.2e-9 higher than Round 8). The 12x12 Jacobian is full rank but has a condition number of about 3.77e7, highly ill-conditioned — supporting numerical isolation but not robust interval invertibility. All 20/20 random-perturbation basin tests converge back to the same root.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.13/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.13/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.13/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.13/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.13">Rounds</a>
+    <span>/</span>
+    <span>Round 13</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 13</span>
+      <span class="tag">v0.13</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>The Smooth Five-Parameter Event–KKT System, Isolation, and Peak Correction</h1>
+    <p class="h1-sub">The five parameters p=(w,β,δ,c,ε) handed off from Round 12 are formally written as a 12-unknown event–KKT system: equal height across the four controlling branches (two low-phase stationary points, 120°, 270°), dual stationarity conditions, branch-pressure-weighted gradient balance, and multipliers summing to one. Solving it gives s₁₃=0.998914343297485, only about 4.2×10⁻⁹ higher than Round 8 — a fine correction to the peak's location, not a new geometric-scale breakthrough. The full 12×12 Jacobian is numerically full rank, but its condition number is as high as about 3.77×10⁷, highly ill-conditioned: this supports numerical isolation but not a robust conclusion of interval invertibility. The 120° branch carries about 73.6% of the branch pressure, the 270° branch about 20.7%. All 20 random perturbations converge back to the same scale basin.</p>
+    <div class="claim-box">
+      Numerical event–KKT reconstruction; not an interval KKT certificate; not a formal proof
+      <span class="note">— A stage-status self-declaration from the package's own documents, reproduced as-is. Continues Moser Skew Lab v0.12.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.12/">Round 12 · Independent mpmath.iv Replay</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.14/">Round 14 · Two-Peak Curvature Splitting and Chirality Breaking</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>13 / 15</div>
+    </div>
+  <blockquote class="cite">“The most accurate description at present is: a finite-width tanh curvature layer forms a numerically isolated, but highly ill-conditioned, minimax candidate within the five-parameter family.” — from Section 15, “Conclusion,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 13 Core Content</h2>
+    <p class="doc-meta">Definition of the twelve-variable system, the five-parameter candidate, four-branch equal height, the parameter correction, branch-pressure distribution, the five-parameter gradient, the mechanism by which four branches control five parameters, Jacobian isolation (full rank but ill-conditioned), local basin (20/20), curvature ledger, full-phase audit, verdict, limitations, direction for Round 14, conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 13 KKT Audit</h2>
+    <p class="doc-meta">A machine-readable ledger of the candidate's full parameters and branch values, pressures, stationarity residuals, the Jacobian's rank and list of singular values, and the local-basin test results.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-handoff">
+    <h2 class="doc-h2">Round 14 Handoff: Beyond the Curvature Distribution</h2>
+    <p class="doc-meta">Baseline scale, five test directions for the next round (two-peak, asymmetric, biarc, dual chirality, new branch), and the criteria any new candidate must pass.</p>
+    <div class="doc" id="doc-handoff-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.13.zip" download>Download full package (258.8 KB)</a>
+    <p class="zip-note">sha256 35ea4218bb7396137f226d4b3b8d9ae34b6581306b2df84f28f7defea2f880e4</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.13/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_13_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_13_KKT_AUDIT.md");
+loadDoc("doc-handoff-body", "reports/ROUND_14_CURVATURE_DISTRIBUTION_HANDOFF.md");
+loadFiles();
+</script>
+</body>
+</html>

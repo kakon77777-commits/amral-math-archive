@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 5 · Contact-Event Equations and the Isolated Candidate · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 5: writes the four cusp contact events as exact analytic phase formulas, adds branch-pressure stationarity conditions, and assembles a combined event-KKT system of 9 equations in 9 unknowns, numerically solving for the isolated candidate s=0.998903757132509. The 9x9 Jacobian is full rank, and all 40 randomly perturbed initial values converge back to the same root.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.5/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.5/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.5/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.5/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.5">Rounds</a>
+    <span>/</span>
+    <span>Round 5</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 5</span>
+      <span class="tag">v0.5</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Contact-Event Equations, a Non-Smooth KKT System, and an Isolated Five-Link Candidate</h1>
+    <p class="h1-sub">Shifts from black-box branch tracking to explicit contact events: exact analytic phase formulas for the four cusps, plus branch-pressure stationarity conditions, assembled into a combined event–KKT system of 9 equations in 9 unknowns. The numerical solution s=0.998903757132509, together with a full-rank 9×9 Jacobian and the convergence of all 40 randomly perturbed initial values back to the same root, strongly supports this being a numerically isolated stationary point.</p>
+    <div class="claim-box">
+      Numerical structural reconstruction; not a formal proof; not an interval certificate
+      <span class="note">— Stage status as self-declared by the in-package documents, reproduced verbatim. “The real achievement is not the improvement beyond the decimal point, but writing out in full the reason the candidate was generated.”</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.4.1/">Round 4 · Phase-Branch Ledger and Four-Branch Equalization</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.6.1/">Round 6 · Chirality Boundary-Crossing and Local Stability</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>5 / 15</div>
+    </div>
+  <blockquote class="cite">“This improvement is only about 10⁻⁹; its significance lies not in substantively raising the Moser lower bound, but in projecting Round 4's black-box equalization point onto a stationary solution of the exact event equations… four cusp contact events in equalization + four-branch pressure stationarity = a numerically isolated five-link candidate.” — excerpted from Section 5 and the Conclusion of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Core Content of Round 5</h2>
+    <p class="doc-meta">Analytic phase formulas for the four exact contact events, the event scale function, the nine-equation event–KKT system, the solution of the event system, the branch-pressure ledger, the non-smooth local-minimum check, isolation diagnostics (Jacobian rank, perturb-and-return-to-root testing), a full phase audit, and Round 6's two paths (topology boundary-crossing search vs. a local topological-limit certificate).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.5.zip" download>Download full package (417.9 KB)</a>
+    <p class="zip-note">sha256 2a86975f16ef806febc8ba73f0264552840877266c0dd5f349b721d872379bb8</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.5/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_05_REPORT.md");
+loadFiles();
+</script>
+</body>
+</html>

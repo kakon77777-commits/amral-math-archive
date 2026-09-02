@@ -1,0 +1,176 @@
+{
+  "generated_by": "amral/build_manifest_covering.py",
+  "case": "moser",
+  "counts": {
+    "total": 15
+  },
+  "total_size": 12039698,
+  "rounds": [
+    {
+      "id": "round-v0.1",
+      "version": "0.1",
+      "title": "Semi-Autonomous Research, Round 1 Package",
+      "filename": "Moser_Skew_Lab_v0.1.zip",
+      "size": 330977,
+      "file_count": 13,
+      "sha256": "d7a832b43af9e2537335a1c9be767b39069f914e53e20b42edf5864997f736da",
+      "generated_at": "2026-07-26T13:10:28Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.2.2",
+      "version": "0.2.2",
+      "title": "Semi-Autonomous Research, Round 2",
+      "filename": "Moser_Skew_Lab_v0.2.2.zip",
+      "size": 998480,
+      "file_count": 29,
+      "sha256": "4375eba4e285a87c400383914dadf8fe3a5ef8327583674f1434e409b1a2fd40",
+      "generated_at": "2026-07-26T13:31:42Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.3",
+      "version": "0.3",
+      "title": "Semi-Autonomous Research, Round 3: First Version of the Reverse-Generated Contact Ledger",
+      "filename": "Moser_Skew_Lab_v0.3.zip",
+      "size": 392633,
+      "file_count": 13,
+      "sha256": "9f4a3644d3e6bd8c089599a96067fe09d08fa5af2f1beb399e97a76df40ca3bc",
+      "generated_at": "2026-07-26T13:47:32Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.4.1",
+      "version": "0.4.1",
+      "title": "Semi-Autonomous Research, Round 4: Phase-Branch Ledger and Four-Branch Equalization",
+      "filename": "Moser_Skew_Lab_v0.4.1.zip",
+      "size": 498465,
+      "file_count": 16,
+      "sha256": "acc4235cb12e35ef597e353cbfd35c5f054502c463c113ab1d455760bf3b1485",
+      "generated_at": "2026-07-26T14:09:42Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.5",
+      "version": "0.5",
+      "title": "Semi-Autonomous Research, Round 5: Contact-Event Equations and the Non-Smooth KKT System",
+      "filename": "Moser_Skew_Lab_v0.5.zip",
+      "size": 427879,
+      "file_count": 17,
+      "sha256": "2a86975f16ef806febc8ba73f0264552840877266c0dd5f349b721d872379bb8",
+      "generated_at": "2026-07-26T14:18:10Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.6.1",
+      "version": "0.6.1",
+      "title": "Semi-Autonomous Research, Round 6: Chirality Crossing, Eight-Dimensional Topological Search, and a Local-Stability Draft",
+      "filename": "Moser_Skew_Lab_v0.6.1.zip",
+      "size": 779949,
+      "file_count": 18,
+      "sha256": "6fddf5567de9272064a30869a4c358d274346e69b70a7c5bcc993b115a19bfa1",
+      "generated_at": "2026-07-26T14:31:16Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.7",
+      "version": "0.7",
+      "title": "Semi-Autonomous Research, Round 7: Polyline–Curvature-Arc Hybrid Family",
+      "filename": "Moser_Skew_Lab_v0.7.zip",
+      "size": 359988,
+      "file_count": 21,
+      "sha256": "61b02f8d8864a5b8cfb183e1c14203e57e360816d602cfb3b3ebbaba321f41ec",
+      "generated_at": "2026-07-26T14:53:14Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.8.3",
+      "version": "0.8.3",
+      "title": "Semi-Autonomous Research, Round 8: A Finite-Width Smooth Curvature-Stratum Candidate Breakthrough",
+      "filename": "Moser_Skew_Lab_v0.8.3.zip",
+      "size": 1613363,
+      "file_count": 30,
+      "sha256": "26ea8d85f9f4678c181c7e07dcf6f504603cbfd1be5fb907e0760d6bfca86f12",
+      "generated_at": "2026-07-26T15:12:14Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.9",
+      "version": "0.9",
+      "title": "Semi-Autonomous Research, Round 9: Arbitrary-Precision Reconstruction and the Monotone Darboux Cusp Envelope",
+      "filename": "Moser_Skew_Lab_v0.9.zip",
+      "size": 203678,
+      "file_count": 16,
+      "sha256": "2cc4d8b3c09a0c7af2437b892d008b9bbfadd0782350f1ef1a47451197302fa5",
+      "generated_at": "2026-07-26T15:34:52Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.10",
+      "version": "0.10",
+      "title": "Semi-Autonomous Research, Round 10: The Complete Phase-Contact Interval Map and Global Numerical Exclusion",
+      "filename": "Moser_Skew_Lab_v0.10.zip",
+      "size": 401392,
+      "file_count": 14,
+      "sha256": "f269d6424bc9027bdfb3d56fb4d317c0f447e7e3d550410b04cf3313dbfbd990",
+      "generated_at": "2026-07-26T15:44:30Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.11",
+      "version": "0.11",
+      "title": "Semi-Autonomous Research, Round 11: Exact Contact Boundaries and Semi-Verified Interval Boxes",
+      "filename": "Moser_Skew_Lab_v0.11.zip",
+      "size": 180933,
+      "file_count": 19,
+      "sha256": "82f6ea0be019ae7b4bb5aeacb78940c7aeb635459eddb26a24d714b9ddf30bf2",
+      "generated_at": "2026-07-26T16:13:20Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.12",
+      "version": "0.12",
+      "title": "A Partially Independent `mpmath.iv` Replay",
+      "filename": "Moser_Skew_Lab_v0.12.zip",
+      "size": 106356,
+      "file_count": 15,
+      "sha256": "08b394e1ed9165d0e97973717a8cb4b81500478c28a7b589c6473075f6ae961a",
+      "generated_at": "2026-07-26T16:56:36Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.13",
+      "version": "0.13",
+      "title": "Semi-Autonomous Research, Round 13: The Smooth Five-Parameter Event–KKT System",
+      "filename": "Moser_Skew_Lab_v0.13.zip",
+      "size": 265050,
+      "file_count": 18,
+      "sha256": "35ea4218bb7396137f226d4b3b8d9ae34b6581306b2df84f28f7defea2f880e4",
+      "generated_at": "2026-07-27T02:49:14Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.14",
+      "version": "0.14",
+      "title": "Round 14: Bimodal Curvature and Chirality Breaking",
+      "filename": "Moser_Skew_Lab_v0.14.zip",
+      "size": 1443174,
+      "file_count": 21,
+      "sha256": "8f39ba0d03645d0a02b2631d12b09242d3d2327d46b155b9725d65b76bfcfe27",
+      "generated_at": "2026-07-27T03:12:46Z",
+      "has_detail_page": true
+    },
+    {
+      "id": "round-v0.15",
+      "version": "0.15",
+      "title": "Round 15: The Curvature Function's Modal Spectrum and Branch Opening",
+      "filename": "Moser_Skew_Lab_v0.15.zip",
+      "size": 4037381,
+      "file_count": 22,
+      "sha256": "21f48cf6db6301e0538d5010168358f064e07612891c088cff1f59ee3d8eb443",
+      "generated_at": "2026-07-27T03:39:34Z",
+      "has_detail_page": true
+    }
+  ],
+  "other": []
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 12 · Independent mpmath.iv Replay and the Arb-Absent Boundary · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 12: with no python-flint/Arb/Sage available in the environment, directed-interval arithmetic via mpmath.iv is used as an independent fallback verification. The two most critical differences (120°-270°, smooth candidate minus event control) both replay successfully and independently, strictly positive; 19/19 closed-form boundaries and 12/12 stationary-point root boxes pass. But only 5/17 boundaries can be directly signed (the rest suffer dependency inflation), and the 579 leaf boxes could not be fully replayed — honestly recorded as “not completed” rather than written up as “passed.”">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.12/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.12/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.12/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.12/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.12">Rounds</a>
+    <span>/</span>
+    <span>Round 12</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 12</span>
+      <span class="tag">v0.12</span>
+      <span class="tag">2026-07-27</span>
+    </div>
+    <h1>Independent mpmath.iv Replay, Interval Newton, and the Arb-Absent Boundary</h1>
+    <p class="h1-sub">Round 11's handoff called for recomputing all interval boxes using Arb/python-flint ball arithmetic, but this round's environment has no python-flint, Arb, or Sage, and no installable version was available from the package repositories. So directed-interval arithmetic via mpmath.iv is used as an independent fallback verification instead, without claiming to have completed an Arb replay. Both of the most critical differences replay successfully and independently, and are strictly positive: s₁₂₀-s₂₇₀∈[1.585e-9,1.692e-9], smooth candidate minus event control ∈[on the order of 1.058e-5]. All 19 closed-form boundaries are confirmed (19/19), and all 12 stationary-point root boxes pass interval Newton (12/12). But of the 18 internal boundaries, only 5 can be directly signed by mpmath.iv; for the rest, natural interval expansion near atanh(±1) (dependency inflation) is too wide to independently reproduce Round 11's narrow boxes — this is not a counterexample, Round 11's closed-form error bounds still stand, they simply were not independently replayed by this round's fallback library. The 579 derivative leaf boxes originally planned for one-by-one replay also could not be completed due to runtime limits. This round explicitly records “not completed” rather than writing it up as “passed.”</p>
+    <div class="claim-box">
+      Partial independent interval replay; not an Arb certificate; not a formal proof
+      <span class="note">— A stage-status self-declaration from the package's own documents, reproduced as-is.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.11/">Round 11 · Derivative Interval Boxes and a Dedicated 120°/270° Certificate</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.13/">Round 13 · Five-Parameter Event–KKT Isolation and Peak Correction</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>12 / 15</div>
+    </div>
+  <blockquote class="cite">“This round did not write ‘not completed’ up as ‘passed.’” — from Section 6, “What Remains Incomplete,” of this package's main document, an honest record of the failure to independently replay the 579 derivative leaf boxes one by one.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 12 Core Content</h2>
+    <p class="doc-meta">Environment findings (no python-flint/Arb/Sage), mpmath.iv recomputation of the special competing branches, closed-form contact boundaries (19/19), the twelve stationary-point root boxes, boundary-box replay (5/17 directly signed, the rest dependency inflation), what remains incomplete, research verdict, direction for Round 13.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 12 IV Replay Audit</h2>
+    <p class="doc-meta">Item-by-item pass/incomplete checklist for the special differences, smooth–event difference, closed-form boundaries, interval Newton, direct boundary signing, the 579 leaf boxes, and Arb availability.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-handoff">
+    <h2 class="doc-h2">Round 13 Smooth Event–KKT Handoff</h2>
+    <p class="doc-meta">Handoff of the five-parameter stationarity system in the unknowns p=(w,β,δ,c,ε): four-branch equal-height condition, branch pressure and five-parameter stationarity, Jacobian rank, and checklist items for perturbation-return-to-root and the curvature ledger.</p>
+    <div class="doc" id="doc-handoff-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.12.zip" download>Download full package (103.9 KB)</a>
+    <p class="zip-note">sha256 08b394e1ed9165d0e97973717a8cb4b81500478c28a7b589c6473075f6ae961a</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.12/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_12_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_12_IV_REPLAY_AUDIT.md");
+loadDoc("doc-handoff-body", "reports/ROUND_13_SMOOTH_KKT_HANDOFF.md");
+loadFiles();
+</script>
+</body>
+</html>

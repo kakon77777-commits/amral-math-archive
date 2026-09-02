@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 1 · Support-Skew Linear Programming · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 1: support-skew linear programming, finite-curve pressure, and the first adversarial search. Uses linear programming at fixed rotation to solve for the optimal translation or the minimal container scale, benchmarked against a disk, a 30° sector, and the Wetzel triangle; tests 35 candidate curves and completes 5 generations of adversarial curve search. Does not constitute a new upper or lower bound for the Moser problem.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.1">Rounds</a>
+    <span>/</span>
+    <span>Round 1</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 1</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Support-Skew Linear Programming, Finite-Curve Pressure, and the First Adversarial Search</h1>
+    <p class="h1-sub">Implements the curve-to-convex-container containment problem as two linear programs: fixed rotation solving for the minimal container scale, and fixed scale solving for the minimal positive skew. Tests 35 candidate curves using 192 support directions and 60–120 initial rotation phases, completing 5 generations of lightweight adversarial curve search.</p>
+    <div class="claim-box">
+      Exploratory computation; not a formal proof; not a universal covering certificate
+      <span class="note">— Stage status as self-declared by the in-package documents, reproduced verbatim. Program scale: 192 support directions, 60–120 initial rotation phases, and linear programming at fixed phase to solve for the optimal translation or minimal scale.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.2.2/">Round 2 · Phase Jumps and Topology-Guided Search</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>1 / 15</div>
+    </div>
+  <blockquote class="cite">“At fixed phase, the translation term occupies only the Fourier expansion's first-order sine and cosine modes… what actually stresses the container is the higher-order peaks that persist after translation — corresponding to the corners and long edges of the curve's convex hull and its asymmetric structure, mismatches between the container's normal sectors and the curve's normal sectors, and jumps in the optimal contact set. This carries more research information than simply recording whether the curve ‘fits.’” — excerpted from Section 4, “Preliminary Structural Findings,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Core Content of Round 1</h2>
+    <p class="doc-meta">Full formulation of both linear programs; three benchmark containers (a disk, a 30° sector, and the certified Wetzel triangle); critical-scale ranking of the 35 candidate curves; results from 5 generations of adversarial search; preliminary structural findings; and 5 candidate directions for the next round.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.1.zip" download>Download full package (323.2 KB)</a>
+    <p class="zip-note">sha256 d7a832b43af9e2537335a1c9be767b39069f914e53e20b42edf5864997f736da</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows the existing template from the Riemann Hypothesis case. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.1/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_01_REPORT.md");
+loadFiles();
+</script>
+</body>
+</html>

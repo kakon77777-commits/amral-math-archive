@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 10 · The Complete Phase Contact-Interval Map · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 10: splits the entire phase circle into 18 intervals of active support identity, computes derivatives via the envelope theorem (without explicitly differentiating the support-point location), and enumerates all 12 smooth stationary points and 17 contact switches, building a per-interval minimum “global exclusion ledger.” Four phase resolutions (32768 to 262144) all consistently confirm that 270° remains the global minimum, with the closest competitor at 120°, a gap of about 1.64e-9.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.10/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.10/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.10/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.10/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.10">Rounds</a>
+    <span>/</span>
+    <span>Round 10</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 10</span>
+      <span class="tag">v0.10</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>The Complete Phase Contact-Interval Map, Envelope Derivatives, and a Global Numerical Exclusion Ledger</h1>
+    <p class="h1-sub">Round 9 verified only the 270° cusp itself; this round splits the entire [0,2π) phase circle into 18 intervals of active support identity — within each interval, the support point is already an extremum of the normal functional, so the envelope theorem lets us compute s'(φ) directly without explicitly differentiating the support-point location. We fully enumerate 12 smooth stationary points and 17 contact switches (4 of which are local minima at cusps), building a minimum-value ledger for each interval. Four phase-sampling densities (32768 to 262144 points) and three derivative-sampling densities (257/1025/4097) all agree, with no new hidden intervals or stationary points emerging as resolution increases. The complete numerical ranking confirms that 270° remains the global minimum, with the closest competitor at 120°, a gap of about 1.6383×10⁻⁹ — leaving this as the only pair that genuinely requires rigorous interval treatment.</p>
+    <div class="claim-box">
+      Complete phase-wise numerical decomposition; not a rigorous interval certificate; not a formal proof
+      <span class="note">— Stage status as stated by the package's own documents, reproduced verbatim. Continues Moser Skew Lab v0.9.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../round-v0.9/">Round 9 · Arbitrary-Precision Reconstruction and the Darboux Cusp Envelope</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../round-v0.11/">Round 11 · Exact Contact Boundaries and Derivative Interval Boxes</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>10 / 15</div>
+    </div>
+  <blockquote class="cite">“The Round 8 smooth surpassing result now rests on three layers of support: the arbitrary-precision cusp value; the monotone Darboux positive lower bound; and the complete phase-wise contact-interval numerical exclusion. The key work remaining is turning the third layer from a ‘complete numerical ledger’ into a ‘rigorous per-interval envelope.’” — from Section 14, “Conclusion,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 10 Core Content</h2>
+    <p class="doc-meta">The definition of active support identity, the envelope-derivative formula, the phase-circle decomposition (a complete table of 18 intervals), multi-resolution stability, the enumeration of smooth stationary points (12), the contact-switch boundaries (17), the complete ranking of local minima, the closest competing branch (120° versus 270°), what the global numerical exclusion achieves, the certificate status table, the relation to the event control, the direction for Round 11, limitations, and the conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-certificate">
+    <h2 class="doc-h2">Round 10 Global Phase-Certificate Interface</h2>
+    <p class="doc-meta">A list of the machine-readable ledgers already generated, the object structure contained in each interval, the five steps for the next layer of rigor, and a formal statement of the final goal.</p>
+    <div class="doc" id="doc-certificate-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.10.zip" download>Download full package (392.0 KB)</a>
+    <p class="zip-note">sha256 f269d6424bc9027bdfb3d56fb4d317c0f447e7e3d550410b04cf3313dbfbd990</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.10/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_10_REPORT.md");
+loadDoc("doc-certificate-body", "reports/ROUND_10_GLOBAL_CERTIFICATE_INTERFACE.md");
+loadFiles();
+</script>
+</body>
+</html>

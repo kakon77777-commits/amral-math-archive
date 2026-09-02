@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 4 · Phase-Branch Ledger and Four-Branch Equalization · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 4: the phase-branch ledger, the sensitivity matrix, and four-branch equalization. Directly solves the max-min equalization problem for the four lowest phase branches, raising the five-link critical scale from 0.998754371668 to 0.998903750476. The four branches use distinct contact topologies, and the sensitivity matrix shows that no single direction can raise all four branches simultaneously.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.4.1/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.4.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.4.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.4.1/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.4.1">Rounds</a>
+    <span>/</span>
+    <span>Round 4</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 4</span>
+      <span class="tag">v0.4.1</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Phase-Branch Ledger, Sensitivity Matrix, and Four-Branch Equalization</h1>
+    <p class="h1-sub">Directly solves the max-min equalization problem for the four lowest phase branches: the five-link critical scale is raised from Round 3's 0.998754371668 to 0.998903750476. The four branches use entirely distinct contact topologies, and the sensitivity matrix shows that no single parameter direction can raise all four branches simultaneously.</p>
+    <div class="claim-box">
+      Exploratory numerical research; not a formal proof; not a universal covering certificate
+      <span class="note">— Stage status as self-declared by the in-package documents, reproduced verbatim. Curve family: mirror-symmetric five-link curves. Container kernel: the exact three-normal formula for the certified Wetzel triangle.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.3/">Round 3 · Contact-Ledger Reverse Generation</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.5/">Round 5 · Contact-Event Equations and the Isolated Candidate</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>4 / 15</div>
+    </div>
+  <blockquote class="cite">“Different branches respond to the same parameter in mutually conflicting directions. No local direction can raise all four branches at once, so a max-min equalization point forms… the curve's difficulty is not a single contact ledger, but a multi-ledger balance among a set of competing placement branches.” — excerpted from Sections 5 and 7 of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Core Content of Round 4</h2>
+    <p class="doc-meta">The branch-equalization results table, parameter reallocation, the branch contact ledgers (four distinct topologies), the branch sensitivity matrix, the second-layer branch-pressure ledger, the research assessment, and the direction for Round 5 (formalizing contact events as equations).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.4.1.zip" download>Download full package (486.8 KB)</a>
+    <p class="zip-note">sha256 acc4235cb12e35ef597e353cbfd35c5f054502c463c113ab1d455760bf3b1485</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.4.1/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_04_REPORT.md");
+loadFiles();
+</script>
+</body>
+</html>

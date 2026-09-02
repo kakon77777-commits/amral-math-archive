@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 8 · Finite-Width Curvature Layer Surpasses the Five-Link · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 8: smoothing the internal kinks of the five-link's side wings, we find that a finite-width tanh curvature layer can slightly surpass the discrete-event five-link polyline platform (s*=0.998914339084632, about 1.058e-5 above s₀=0.998903757132509). Cross-checked against an independent support-path method using a dense point cloud of about 240,000 points, together with a multi-resolution audit, the two methods agree at the ~1e-14 level. Still awaiting arbitrary-precision and interval-certificate confirmation; this does not constitute a new Moser lower bound.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.8.3/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.8.3/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.8.3/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.8.3/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.8.3">Rounds</a>
+    <span>/</span>
+    <span>Round 8</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 8</span>
+      <span class="tag">v0.8.3</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Finite-Width Curvature Layer, a Smooth Candidate's Surpassing Result, and Dual-Path Support Cross-Checks</h1>
+    <p class="h1-sub">Using an endpoint-normalized hyperbolic-tangent layer to smooth the internal kinks of the five-link's side wings, we originally expected ε→0 to simply converge back to the polyline event root, but numerical continuation reveals a stronger, non-monotonic phenomenon: a smooth curvature layer of intermediate width can sit slightly above the polyline event root itself. The best candidate is s*=0.998914339084632, about 1.058×10⁻⁵ above the five-link event control s₀=0.998903757132509. This corrects the simplified account from Round 7 that “curvature concentration only recovers the polyline limit” — spreading the curvature too wide lowers the pressure, concentrating it too narrowly returns to the polyline, and an intermediate width can produce a small surpassing gain. This has been cross-checked through a multi-resolution audit and an independent support-path method using a dense point cloud of about 240,000 points (the two methods agree at the 10⁻¹⁴ level), but arbitrary-precision and interval-certificate confirmation are still pending.</p>
+    <div class="claim-box">
+      Exploratory numerical research; not a formal proof; not an interval certificate
+      <span class="note">— Stage status as stated by the package's own documents, reproduced verbatim. Continues Moser Skew Lab v0.7.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../round-v0.7/">Round 7 · Mixed Polyline–Curvature-Arc Families</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../round-v0.9/">Round 9 · Arbitrary-Precision Reconstruction and the Darboux Cusp Envelope</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>8 / 15</div>
+    </div>
+  <blockquote class="cite">“The real result is the discovery that the five-link polyline platform can be slightly surpassed by a finite-width smooth curvature layer. This result has been cross-checked through multi-resolution and dense-point-cloud support checks, but arbitrary-precision and interval-certificate confirmation are still pending.” — from Section 12, “Conclusion,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 8 Core Content</h2>
+    <p class="doc-meta">The original problem, the event control, four-branch contour continuation (a nine-width scan), a narrow peak scan (best tested width ε*=0.037), the four control branches, the multi-resolution audit, the independent dense-point-cloud support path, the curvature ledger, the research verdict, what cannot yet be claimed, the direction for Round 9, and the conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 8 Finite-Width Surpassing Review</h2>
+    <p class="doc-meta">Nine widths re-reviewed using four-branch epigraph contours; the best width is ε*=0.04, flagged as “candidate breakthrough, pending independent verification.”</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-crosscheck">
+    <h2 class="doc-h2">Round 8 Dense Point-Cloud Cross-Check</h2>
+    <p class="doc-meta">An independent method that does not use tangent–normal stationary-point inversion, computing directly over 240017 points, supporting that the finite-width positive gain is not an artifact of a single implementation.</p>
+    <div class="doc" id="doc-crosscheck-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-peakcrosscheck">
+    <h2 class="doc-h2">Round 8 Peak-Candidate Dense Point-Cloud Cross-Check</h2>
+    <p class="doc-meta">An independent point-cloud review of the peak candidate ε=0.037, incorporating the exact special phases 120° and 270° directly into the global comparison; the discrepancy between methods is only -2.997602166488e-14.</p>
+    <div class="doc" id="doc-peakcrosscheck-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.8.3.zip" download>Download full package (1575.6 KB)</a>
+    <p class="zip-note">sha256 26ea8d85f9f4678c181c7e07dcf6f504603cbfd1be5fb907e0760d6bfca86f12</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.8.3/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_08_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_08_FINITE_WIDTH_AUDIT.md");
+loadDoc("doc-crosscheck-body", "reports/ROUND_08_DENSE_POINTCLOUD_CROSSCHECK.md");
+loadDoc("doc-peakcrosscheck-body", "reports/ROUND_08_PEAK_DENSE_POINTCLOUD_CROSSCHECK.md");
+loadFiles();
+</script>
+</body>
+</html>

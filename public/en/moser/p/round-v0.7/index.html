@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 7 · Mixed Polyline–Curvature-Arc Families · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 7: compares piecewise-curvature wings (m = 2, 3, 4, 6, 8) against continuous constant-curvature circular-arc wings, testing whether the near-parallel two-sided wings of Rounds 3–6 are a discrete-kink skeleton or a coarse approximation of a smooth wing. Ranking: the discrete-event five-link (0.998904) &gt; the constant-curvature arc wing (0.998862) &gt; the best multi-segment candidate (0.998839). Spreading finite turning continuously releases a small amount of congruent-containment pressure.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.7/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.7/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.7/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.7/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.7">Rounds</a>
+    <span>/</span>
+    <span>Round 7</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 7</span>
+      <span class="tag">v0.7</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Mixed Polyline–Curvature-Arc Families, Curvature Concentration, and the Value of Discrete Kinks</h1>
+    <p class="h1-sub">Compares piecewise-curvature wings (2/3/4/6/8 segments per side) against continuous constant-curvature circular-arc wings, testing whether the near-parallel two-sided wings of Rounds 3–6 are really a discrete-kink skeleton, or just a coarse discrete approximation of a smooth low-curvature wing. Final ranking: discrete-event five-link &gt; constant-curvature arc wing &gt; this round's best multi-segment candidate — spreading finite turning out continuously does release a small amount of congruent-containment pressure.</p>
+    <div class="claim-box">
+      Exploratory numerical research; not a formal proof; not an interval certificate
+      <span class="note">— Stage status as stated by the package's own documents, reproduced verbatim. Continues Moser Skew Lab v0.6. Container: the Wetzel triangle.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../round-v0.6.1/">Round 6 · Chiral Escape and Local Stability</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../round-v0.8.3/">Round 8 · Finite-Width Curvature Layer Surpasses the Five-Link</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>7 / 15</div>
+    </div>
+  <blockquote class="cite">“The discrete-event skeleton concentrates the total turning angle at the kink between the two segments; the constant-curvature wing, by contrast, spreads that same turning angle across the entire side wing … the effective factor may not be ‘whether or not curvature is present,’ but rather: where the curvature is concentrated along the curve's parameter.” — from Section 7, “The Curvature-Concentration Working Proposition,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 7 Core Content</h2>
+    <p class="doc-meta">A results table for piecewise-curvature wings (comparing five segment counts), the necessary search audit (a warning that the heuristic search did not recover the known control solution), the analytic contour of the continuous constant-curvature wing, the final ranking table, the curvature-concentration working proposition, points where the results should not be over-generalized, a resolution audit of the best segmented candidate, and the direction for Round 8 (a controllable curvature-concentration family).</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-interpretation">
+    <h2 class="doc-h2">Interpretation · Interpretation</h2>
+    <p class="doc-meta">A comparison of two reliable higher-order controls and a tentative working proposition, stated as applying only to this round's research family.</p>
+    <div class="doc" id="doc-interpretation-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Search-Control Audit</h2>
+    <p class="doc-meta">Explains why the heuristic search result for the m=2 segment family cannot be taken directly as evidence of that family's mathematical disadvantage — it is under-search, not a curvature effect.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.7.zip" download>Download full package (351.6 KB)</a>
+    <p class="zip-note">sha256 61b02f8d8864a5b8cfb183e1c14203e57e360816d602cfb3b3ebbaba321f41ec</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.7/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_07_REPORT.md");
+loadDoc("doc-interpretation-body", "reports/ROUND_07_INTERPRETATION.md");
+loadDoc("doc-audit-body", "reports/ROUND_07_SEARCH_AUDIT.md");
+loadFiles();
+</script>
+</body>
+</html>

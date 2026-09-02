@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Round 11 · Derivative Interval Boxes and a Dedicated 120°/270° Certificate · Moser's Worm Problem · AMRAL</title>
+<meta name="description" content="Moser Skew Lab Round 11: rewrites all 18 contact boundaries as exact closed-form expressions, builds 579 adaptive derivative interval boxes (0 unresolved) and 12 stationary-point root boxes, and gives the first explicit error box for the 10⁻⁹-level 120°/270° competition: s₁₂₀-s₂₇₀∈[1.635e-9,1.642e-9], strictly positive. Self-declared as a semi-verified certificate — substantially stronger than grid scanning, but not full directed-rounding throughout, and still short of the rigorous certificates from dedicated interval libraries such as Arb/MPFI.">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/moser/p/round-v0.11/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/moser/p/round-v0.11/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/moser/p/round-v0.11/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link active" href="../../">Moser's Worm Problem</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis (中文)</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture (中文)</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="lang-switch" href="../../../../moser/p/round-v0.11/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Moser's Worm Problem</a>
+    <span>/</span>
+    <a href="../../#round-v0.11">Rounds</a>
+    <span>/</span>
+    <span>Round 11</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Round 11</span>
+      <span class="tag">v0.11</span>
+      <span class="tag">2026-07-26</span>
+    </div>
+    <h1>Exact Contact Boundaries, Derivative Interval Boxes, and a Dedicated 120°/270° Difference Certificate</h1>
+    <p class="h1-sub">Round 10's 18 interval boundaries were still described mainly by double-precision numerical root-finding. This round makes three advances: it rewrites all contact boundaries as exact closed-form expressions (in terms of fractions of α, β, π, differing from Round 10's numerical boundaries by at most 5.24×10⁻¹⁴); it builds adaptive derivative boxes for all 18 intervals — 579 sub-boxes in total, 0 unresolved — proving that a zero derivative sign is excluded everywhere in the interior of the intervals; and it builds an independent closed-form error envelope for the most sensitive branches, 120° and 270°, giving the first explicit box: s₁₂₀-s₂₇₀∈[1.6350×10⁻⁹,1.6417×10⁻⁹], with the lower bound strictly positive. All 12 smooth stationary-point root boxes also pass second-derivative zero-exclusion. Honest boundary: NumPy's basic operations are not directed-rounding throughout, so the precise characterization is a “semi-verified computational certificate with closed-form error bounds, floating-point outward rounding, and box-by-box exclusion” — substantially stronger than grid scanning, but still short of the rigorous certificates from dedicated interval libraries such as Arb and MPFI.</p>
+    <div class="claim-box">
+      Semi-verified interval boxes; not directed-rounding throughout; not a formal proof
+      <span class="note">— A stage-status self-declaration from the package's own documents, reproduced as-is. Continues Moser Skew Lab v0.10.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections · Connections</h2>
+    <p class="section-note">Relationship to other packages, stated as far as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous round</span><a href="../round-v0.10/">Round 10 · Full-Phase Contact Interval Map</a></div>
+      <div class="conn-card"><span class="k">Next round</span><a href="../round-v0.12/">Round 12 · Independent mpmath.iv Replay</a></div>
+      <div class="conn-card"><span class="k">Round progress</span>11 / 15</div>
+    </div>
+  <blockquote class="cite">“This is the first time in this series that an explicit error box has been given for the 10⁻⁹-level 120°/270° competition, rather than simply comparing two high-precision central values.” — from Section 3, “Closed-Form Envelope for the Special Branches,” of this package's main document.</blockquote>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">Round 11 Core Content</h2>
+    <p class="doc-meta">Round 11 objectives, exact contact boundaries (19 closed-form expressions), closed-form envelope for the special branches (dedicated 120°/270° error box), comparison with the five-linkage event control, derivative-box coverage (579 sub-boxes), smooth stationary-point root boxes (12), neighborhoods of the contact boundaries, certificate status table, honest boundaries, direction for Round 12, conclusion.</p>
+    <div class="doc" id="doc-main-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-audit">
+    <h2 class="doc-h2">Round 11 Special-Branch and Interval-Box Audit</h2>
+    <p class="doc-meta">270° envelope, 120°-270° envelope, smooth candidate minus event control, derivative-box and root-box statistics, boundary statistics, limitations.</p>
+    <div class="doc" id="doc-audit-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="doc-handoff">
+    <h2 class="doc-h2">Round 12 Arb/Ball Arithmetic Handoff Interface</h2>
+    <p class="doc-meta">List of objects that must be recomputed, five passing criteria (special branches, event control, derivative sub-boxes, root boxes, boundary boxes), the scope that can be claimed upon success.</p>
+    <div class="doc" id="doc-handoff-body"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">Files · Files</h2>
+    <div id="filelist-out"><p class="loading">Loading…</p></div>
+    <a class="zip-dl" href="../../../../moser/packages/Moser_Skew_Lab_v0.11.zip" download>Download full package (176.7 KB)</a>
+    <p class="zip-note">sha256 82f6ea0be019ae7b4bb5aeacb78940c7aeb635459eddb26a24d714b9ddf30bf2</p>
+  </section>
+
+  <footer class="sitefoot">
+    <p>The per-package detail-page format follows <a href="../round-v0.1/">Round 1</a>. <a href="../../">Back to Moser's Worm Problem</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+const F = (p) => amralFetchText("./files/" + p);
+
+async function loadDoc(elId, file) {
+  const el = document.getElementById(elId);
+  try {
+    el.innerHTML = amralRenderDoc(await F(file));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+}
+
+async function loadFiles() {
+  const el = document.getElementById("filelist-out");
+  try {
+    const idx = await fetch("./files.json").then((r) => r.json());
+    const groups = { "Documents": [], "Data": [], "Figures": [], "Code": [] };
+    for (const f of idx.files) {
+      const ext = f.path.split(".").pop().toLowerCase();
+      if (ext === "md") groups["Documents"].push(f);
+      else if (f.path.startsWith("figures/")) groups["Figures"].push(f);
+      else if (f.path.startsWith("data/")) groups["Data"].push(f);
+      else if (ext === "py") groups["Code"].push(f);
+    }
+    const fmt = (b) => b < 1024 ? b + " B" : (b / 1024).toFixed(1) + " KB";
+    const hrefFor = (f) => f.path.startsWith("reports/")
+      ? "./files/" + encodeURIComponent(f.path)
+      : "../../../../moser/p/round-v0.11/files/" + encodeURIComponent(f.path);
+    el.innerHTML = Object.entries(groups).filter(([, files]) => files.length).map(([label, files]) => `
+      <div class="filegroup">
+        <h3>${label}</h3>
+        <ul class="filelist">
+          ${files.map((f) => `<li><a href="${hrefFor(f)}" download>${amralEsc(f.path)}${f.path.startsWith("reports/") ? "" : " (Chinese)"}</a><span class="fsize">${fmt(f.size)}</span></li>`).join("")}
+        </ul>
+      </div>`).join("");
+  } catch (e) {
+    el.innerHTML = `<p class="error">File list failed to load: ${e.message}</p>`;
+  }
+}
+
+loadDoc("doc-main-body", "reports/ROUND_11_REPORT.md");
+loadDoc("doc-audit-body", "reports/ROUND_11_CERTIFICATE_AUDIT.md");
+loadDoc("doc-handoff-body", "reports/ROUND_12_BALL_ARITHMETIC_HANDOFF.md");
+loadFiles();
+</script>
+</body>
+</html>
