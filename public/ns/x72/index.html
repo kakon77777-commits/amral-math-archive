@@ -26,7 +26,9 @@
   <a class="link" href="../../bsd/">BSD 猜想</a>
   <a class="link" href="../../cpl/">臨界線比例梯</a>
   <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
-  <a class="link active" href="../../ns/">NS 納維-斯托克斯</a>
+  <a class="link active" href="../">NS 納維-斯托克斯</a>
+  <a class="link" href="../../collatz/">考拉茲猜想</a>
+  <a class="lang-switch" href="../../en/ns/x72/" hreflang="en">EN</a>
 </div></nav>
 <div class="wrap">
   <header class="page">
@@ -34,8 +36,8 @@
     <h1>NS-X72</h1>
     <p class="subtitle">Pure-Continuous Proof-Route Experiment · 71 輪中 69 輪已建置 · 全域正則性 OPEN</p>
     <p class="lede">
-      NS-X72 是全站規模最大的 NS 子線(71 輪 + 2 篇方法論基礎文件),但它不屬於 <a href="rfp/">NS-RFP</a> 到
-      <a href="rkap/">NS-RKAP</a> 那條十一段接力研究血緣,是完全獨立的另一套實驗方法論。起點是兩篇方法論基礎文件:
+      NS-X72 是全站規模最大的 NS 子線(71 輪 + 2 篇方法論基礎文件),但它不屬於 <a href="../rfp/">NS-RFP</a> 到
+      <a href="../rkap/">NS-RKAP</a> 那條十一段接力研究血緣,是完全獨立的另一套實驗方法論。起點是兩篇方法論基礎文件:
       <strong>《廣義結構連續統假設》(GSCH)</strong>主張整數階、模式序號、有限分割等離散表示,在被證明「本質離散」
       之前,應先檢驗是否存在無損、動力學閉合的連續重積;《離散本體證明責任原則》把同一原則推廣成一般認識論義務。
       X72 系列把 GSCH 當成嚴格的證明遊戲規則:每一輪只能使用連續時間、連續空間、連續尺度、PDE/distribution、
@@ -48,13 +50,13 @@
       單向接力鏈,但走法迂迴——常常在某個方向撞牆後回頭,或在兩個獨立方向間來回,而不是單調逼近。名稱裡的
       「72」來自 Round 01 標題本身的「NS × X 積分 × 24/72 範式實戰」標記,指向幾份未收錄在本次投遞中的內部
       「X 積分」與「24/72 計算範式」基礎文件(Round 01 自己的來源錨點有列出篇名);「X」則是這條路線追蹤的
-      NS 種子物件本身。這批 checkpoint 系列與 <a href="rmrm/">NS-RMRM</a> 同期展開且互相引用——Round 01 自己的
+      NS 種子物件本身。這批 checkpoint 系列與 <a href="../rmrm/">NS-RMRM</a> 同期展開且互相引用——Round 01 自己的
       來源錨點就列了一份 <code>NS_RMRM_Proof_Process_Checkpoint_v2</code>,兩條線在方法論上互相參照,但關注的
       NS 障礙結構彼此獨立,不是同一條血緣的兩個化名。
     </p>
     <p class="notice">
       <strong>誠實揭露</strong>:Round 11 與 Round 14 在原始投遞資料夾與所有 <code>.zip</code> 封存包內都逐一確認
-      不存在(汲取 <a href="dcrp/">NS-DCRP</a> 先前 01/02 兩輪被誤判為「zip 內無法取出」的教訓,這次已逐一拆封
+      不存在(汲取 <a href="../dcrp/">NS-DCRP</a> 先前 01/02 兩輪被誤判為「zip 內無法取出」的教訓,這次已逐一拆封
       核對,不是單憑檔名判斷),是真正的資料缺口,71 輪中實際建置 69 輪。Round 15 自己的交接段落提到 Round 14
       已建立的臨界商載體 <code>Q(t)</code>、非線性規範與成長恆等式,讓讀者仍能從下一輪的引用間接得知缺失內容
       的輪廓。從 Round 49 起,約半數輪次(共 23 篇)額外附有 <code>verify_*.py</code> 數值驗證腳本,其中 14 篇
@@ -471,7 +473,7 @@
     <p class="section-note">
       Round 01-64 的原始檔案多數已是資料夾中的獨立 <code>.md</code>;Round 65-71 只以
       <code>Round_and_Checkpoint.zip</code> 封存包形式存在(每包含論文 <code>.md</code>、對應的巨型 checkpoint
-      日誌、部分含 <code>verify_*.py</code> 與 <code>.csv</code>)。與 <a href="rmrm/">NS-RMRM</a> 相同,X72
+      日誌、部分含 <code>verify_*.py</code> 與 <code>.csv</code>)。與 <a href="../rmrm/">NS-RMRM</a> 相同,X72
       也有一份持續增長的 52 版本 <code>PureContinuous_Checkpoint</code> 日誌(v2 至 v64,同樣缺 v15,最大版本
       已逾 1.5MB),checkpoint 版本號同樣與本系列 Round 編號大致對應——但因 Round 論文本身已個別發布且逐篇易讀,
       本頁不再重複揭露整份 checkpoint 日誌,只在此註記其存在與規模,原始資料夾保留完整版本。
