@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>閉包不變量、投影、注意力視圖與靜態／動態編譯 · CSM · AMRAL</title>
+<meta name="description" content="處理閉包空間物件被壓縮/摘要/渲染成視覺化、AI 注意力窗口、資料庫或人類可讀介面時會發生什麼。區分 Native Closure State(完整型別圖+範圍+假設+證書+債務+版本+出處+登錄簿)與 Projected Closure View,明確允許有損投影,前提是所有可能影響閉包結論的損失都必須型別化、記帳,轉成「投影債務」。定義 13 個成員的閉包關鍵不變量家族,要求投影-閉包交換律成">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CSM_Paper_05_Closure_Invariants_Projection_and_Static_Dynamic_Compilation_v0.1_2026-08-27.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/p/05-closure-invariants-projection/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/p/05-closure-invariants-projection/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../data-access/">資料存取</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../collatz/">考拉茲猜想</a>
+  <a class="link active" href="../../">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CSM</a>
+    <span>/</span>
+    <span>05 · 閉包不變量、投影、注意力視圖與靜態／動態編譯</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CSM · 05</span>
+      <span class="tag">v0.1 · 表示與投影核心論文</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>閉包不變量、投影、注意力視圖與靜態／動態編譯</h1>
+    <p class="h1-sub">處理閉包空間物件被壓縮/摘要/渲染成視覺化、AI 注意力窗口、資料庫或人類可讀介面時會發生什麼。區分 Native Closure State(完整型別圖+範圍+假設+證書+債務+版本+出處+登錄簿)與 Projected Closure View,明確允許有損投影,前提是所有可能影響閉包結論的損失都必須型別化、記帳,轉成「投影債務」。定義 13 個成員的閉包關鍵不變量家族,要求投影-閉包交換律成立後,投影視圖上的圖關係才能被當成原生閉包結論。比較動態增量投影與靜態批次投影,主張「先原生推理/閉合,再投影」是較安全的預設。另形式化注意力投影——只要未載入的前沿/割集/阻斷/債務被外部化且有可追溯的邊界合約,AI 或研究者可安全地只處理部分子圖。</p>
+    <div class="claim-box">
+      投影視圖必須滿足投影-閉包交換律才能被當成原生閉包結論;未載入的前沿與債務必須外部化並可追溯
+      <span class="note">10 項 Projection No-Go 之首:可見 ⇏ 完整;不可見 ⇏ 已閉合或不相關;圖鄰接 ⇏ 邏輯蘊含;同一視覺分群 ⇏ 同一路徑類別。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../04-closure-dynamics/">04 · 閉包動力學、重開、遲滯與不動點演化</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../06-closure-conservation/">06 · 閉包守恆、傳遞律與跨域不變性</a></div>
+      <div class="conn-card"><span class="k">CSM 進度</span>05 / 09(共 10 篇,00–09)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CSM</a>
+    <a href="../../files/CSM_Paper_05_Closure_Invariants_Projection_and_Static_Dynamic_Compilation_v0.1_2026-08-27.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CSM_Paper_05_Closure_Invariants_Projection_and_Static_Dynamic_Compilation_v0.1_2026-08-27.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

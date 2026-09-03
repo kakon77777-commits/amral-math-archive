@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS_GSM:Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格 · CSM · AMRAL</title>
+<meta name="description" content="CSM 系列停止擴充抽象理論、首次把它完整實例化到 Navier–Stokes 長程研究本體的橋接論文,建立「NS_GSM v0.1」。固定三個不互相崩塌的 NS 域(formal/Clay 導向、簽章參數化的 generalized NS-like family、physical realization),定義九條內部研究線的系列本體(ETN–X Integration、C1/C2、C3–C6、">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CSM_Paper_09_NS_GSM_Canonical_Domain_Model_and_Ingestion_Specification_v0.1_2026-08-27.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/p/09-ns-gsm-domain-model/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/p/09-ns-gsm-domain-model/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../data-access/">資料存取</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../collatz/">考拉茲猜想</a>
+  <a class="link active" href="../../">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CSM</a>
+    <span>/</span>
+    <span>09 · NS_GSM:Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CSM · 09</span>
+      <span class="tag">v0.1 · 域實例化 / NS_GSM 橋接論文</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>NS_GSM:Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格</h1>
+    <p class="h1-sub">CSM 系列停止擴充抽象理論、首次把它完整實例化到 Navier–Stokes 長程研究本體的橋接論文,建立「NS_GSM v0.1」。固定三個不互相崩塌的 NS 域(formal/Clay 導向、簽章參數化的 generalized NS-like family、physical realization),定義九條內部研究線的系列本體(ETN–X Integration、C1/C2、C3–C6、RFP、MORP、X72、DCRP、FCBP、Proof Asset Map)、六個正典節點家族(TARGET、CLAIM、ROUTE、OBSTRUCTION、SURVIVOR、FRONTIER)加八個支援層,要求原始來源標籤(CLOSED/OPEN/NO-GO/SURVIVOR/STOP/CONDITIONAL)必須先經過候選層與管線(Ingest→Extract→Normalize→Validate→ApplyClosure→Rebuild→Snapshot)才能成為原生圖狀態。定義 v0.1 種子語料庫的七個節點:ETN–X Integration、C1、C2、C6-Q、DCRP103、DCRP104、DCRP105。文件明確聲明:「NS_GSM」是本系列的 canonical 專案/框架代碼,本文不擅自替 GSM 補上未經發起者指定的英文展開。</p>
+    <div class="claim-box">
+      原始研究標籤必須先經候選層與六階段管線驗證才能成為原生圖狀態;v0.1 只處理七節點種子語料庫
+      <span class="note">§132 明確列出本文不做的八件事,含:不執行完整 203+ 個檔案匯入、不宣稱路徑完備、不建立絕對 NS 證明空間、不宣稱任何物理 NS 修改。五道防火牆(認識論/數學/系列/域/Runtime)進一步鎖死邊界。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../08-runtime-semantics/">08 · Runtime 語義、狀態機、登錄器與可執行參考模型</a></div>
+      
+      <div class="conn-card"><span class="k">CSM 進度</span>09 / 09(共 10 篇,00–09)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CSM</a>
+    <a href="../../files/CSM_Paper_09_NS_GSM_Canonical_Domain_Model_and_Ingestion_Specification_v0.1_2026-08-27.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CSM_Paper_09_NS_GSM_Canonical_Domain_Model_and_Ingestion_Specification_v0.1_2026-08-27.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

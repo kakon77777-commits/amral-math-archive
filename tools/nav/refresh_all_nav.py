@@ -16,6 +16,16 @@ changes nothing. Pass --apply to actually write.
 
     python refresh_all_nav.py            # dry run, review the report first
     python refresh_all_nav.py --apply    # write
+    python refresh_all_nav.py --lang=zh --apply   # one language only
+
+--lang=zh|en scopes the run to one language -- for the case where a new
+CASES entry has ZH content ready but EN translation is a deliberately
+later, separate step (Neo's own stated sequencing, 2026-09-03: ship ZH,
+translate after). Running the default both-language refresh with a case
+registered but only one language's pages built would add a nav link to
+the OTHER language's pages pointing at a page that doesn't exist yet --
+this flag exists so that mistake requires no code change to avoid, just
+remembering to build both languages' pages before the next unscoped run.
 
 newline="" is used on both read and write so a page whose nav doesn't
 change is byte-identical afterward, regardless of that file's own
@@ -28,6 +38,11 @@ import amral_nav as N
 nav_re = re.compile(r'<nav class="sitenav">.*?</nav>', re.DOTALL)
 
 APPLY = "--apply" in sys.argv
+LANG_ARG = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--lang=")), None)
+if LANG_ARG not in (None, "zh", "en"):
+    raise SystemExit(f"--lang must be zh or en, got {LANG_ARG!r}")
+LANGS = [("zh", N.ZH_ROOT), ("en", N.EN_ROOT)] if LANG_ARG is None else \
+    [("zh", N.ZH_ROOT)] if LANG_ARG == "zh" else [("en", N.EN_ROOT)]
 
 
 def walk_lang(lang, root):
@@ -65,7 +80,7 @@ def main():
     no_nav_found = 0
     unchanged = 0
 
-    for lang, root in [("zh", N.ZH_ROOT), ("en", N.EN_ROOT)]:
+    for lang, root in LANGS:
         for path in walk_lang(lang, root):
             with open(path, encoding="utf-8", newline="") as f:
                 content = f.read()

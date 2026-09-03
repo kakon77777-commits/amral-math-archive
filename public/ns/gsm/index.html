@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS-GSM · NS 專區 · AMRAL</title>
+<meta name="description" content="AMRAL NS 專區第 17 條子線:NS_GSM,把閉包空間數學論(CSM)方法論實際套用到既有 NS 研究本體(C1-C6、X72、DCRP、RFP、MORP、FCBP)上的可執行 Reference Runtime 軟體與稽核紀錄。種子資料集 + 7 個版本,從全語料匯入、候選審查、證明權威審查、獨立驗證、形式化交叉複現,一路到 FELRA 形式證明橋接。全程 C1、C2 與 formal NS root 維持 OPEN,只有 13 個窄範圍局部引理/定理逐步升級稽核層級。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/gsm/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/gsm/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../">AMRAL</a>
+  <a class="link" href="../../about/">關於</a>
+  <a class="link" href="../../methodology/">方法論</a>
+  <a class="link" href="../../protocols/">研究協議</a>
+  <a class="link" href="../../validation/">驗證</a>
+  <a class="link" href="../../research-modes/">自主模式</a>
+  <a class="link" href="../../data-access/">資料存取</a>
+  <a class="link" href="../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../skew-field/">歪度場</a>
+  <a class="link" href="../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../">NS 納維-斯托克斯</a>
+  <a class="link" href="../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../csm/">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← NS 專區</a> · NS-GSM</p>
+    <h1>NS-GSM</h1>
+    <p class="subtitle">第 17 條子線 · 種子資料集 + 7 個版本(v0.1–v0.7)</p>
+    <p class="lede">
+      「NS_GSM」是這個系列自己使用的 canonical 代碼,原始文件明確聲明不擅自替 GSM 補上未經發起者指定的英文展開,
+      本站沿用這個界線,只用 NS_GSM 這個代碼,不猜測展開。這不是一批論文,而是一套<strong>可執行的軟體與稽核紀錄</strong>——
+      把 <a href="../../csm/">閉包空間數學論(CSM)</a> 方法論(見 <a href="../../csm/p/09-ns-gsm-domain-model/">Paper 09</a>)
+      實際套用到既有 NS 研究本體上的 Reference Runtime,逐版把既有研究文件匯入、審查、稽核、驗證、形式化、
+      嘗試橋接到外部證明工具。
+    </p>
+    <p class="notice">
+      <strong>誠實的終點</strong>:八個版本走完,root formal NS、C1、C2 全部維持 OPEN,沒有任何淨變化。真正移動的只有
+      13 個窄範圍的局部/有界引理定理(DCRP103/104/105 的張量代數恆等式,加 4 條 RFP 定理),沿著內部權威階梯往上爬
+      (候選 → 結構性 → AUDIT → PROOF → 形式化/複現 → Lean 骨架但未核驗),過程中反覆、明確聲明這一切都不會
+      關閉母問題 NS 或 C1/C2 的證明義務。MORP 與 FCBP 雖然從 v0.2 就已完整收進語料,但在 v0.4–v0.7 的稽核管線裡
+      從未被個別碰觸。v0.7 建成通往外部工具 FELRA(Lean 後端)的翻譯管線,但這個建置環境裡沒有 lake/lean/felra
+      執行檔,實際 Lean 核驗結果是 0。
+    </p>
+  </header>
+
+  <section id="versions">
+    <h2 class="doc-h2">種子資料集 + 7 個版本</h2>
+    <div class="case-grid">
+      <a class="case-card" href="./p/seed/"><span class="k">v0.1 · 2026-08-27</span><h3>種子資料集</h3><p>7 個邏輯種子單元,對應既有 NS 研究線的匯入狀態表,root NS、C1、C2 全部標記 OPEN...</p></a>
+      <a class="case-card" href="./p/v0.1/"><span class="k">v0.1 · 2026-08-27</span><h3>Reference Runtime 首版</h3><p>把種子資料集變成可重放驗證的運行系統,52/52 回歸測試通過,精確重放雜湊可重現...</p></a>
+      <a class="case-card" href="./p/v0.2/"><span class="k">v0.2 · 2026-08-27</span><h3>全語料匯入</h3><p>46 篇既有 NS 研究文件收進候選層,1460 筆候選萃取紀錄,219 條跨系列提案,0 筆自動商化...</p></a>
+      <a class="case-card" href="./p/v0.3/"><span class="k">v0.3 · 2026-08-27</span><h3>候選審查與晉升</h3><p>1726 筆候選全數完成結構性審查,727 筆晉升為 frontier/nonclaim/survivor 層級,無一筆晉升為定理或障礙層級...</p></a>
+      <a class="case-card" href="./p/v0.4/"><span class="k">v0.4 · 2026-08-28</span><h3>證明權威審查</h3><p>13 個窄範圍局部引理/定理晉升為 AUDIT 層級證明資產,C1 與 C2 仍明確標記為未解證明義務...</p></a>
+      <a class="case-card" href="./p/v0.5/"><span class="k">v0.5 · 2026-08-28</span><h3>獨立驗證</h3><p>12 個 AUDIT 資產升級為 PROOF,2 個刻意不升級,驗證器是套件內獨立重新推導,不是第三方或證明助理審查...</p></a>
+      <a class="case-card" href="./p/v0.6/"><span class="k">v0.6 · 2026-08-28</span><h3>形式化與交叉複現</h3><p>12 個 PROOF 資產全部通過獨立第二套實作交叉複現(12/12 MATCH),附一筆真實外部文獻錨定...</p></a>
+      <a class="case-card" href="./p/v0.7/"><span class="k">v0.7 · 2026-08-28</span><h3>FELRA 形式證明橋接</h3><p>建成通往 FELRA/Lean 的翻譯管線與失敗即關閉的匯入閘門,5 筆 FIR→Lean 翻譯已產生,實際 Lean 核驗結果為 0...</p></a>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← NS 專區</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

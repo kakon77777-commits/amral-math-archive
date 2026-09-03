@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>閉包空間數學論(CSM) · AMRAL</title>
+<meta name="description" content="AMRAL 案例:閉包空間數學論(Closure-Space Mathematics, CSM)。一套關於「怎麼把長程數學研究狀態組成可驗證、可重放的相對全域閉包空間」的方法論理論——區分 Observed Proof Space、Admissible Proof Space、Mathematical Reality,把 Route Closure 跟 Theorem Proof 分開,主張 Globality Typing Principle。十篇論文從形式基礎、全域性型別、型別閉包圖、前沿幾何、閉包動力學、投影、跨域轉移、可執行演算、Runtime 語義,一路到把整套理論實例化到 Navier–Stokes 研究本體的 NS_GSM 橋接論文。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">關於</a>
+  <a class="link" href="../methodology/">方法論</a>
+  <a class="link" href="../protocols/">研究協議</a>
+  <a class="link" href="../validation/">驗證</a>
+  <a class="link" href="../research-modes/">自主模式</a>
+  <a class="link" href="../data-access/">資料存取</a>
+  <a class="link" href="../riemann/">黎曼猜想</a>
+  <a class="link" href="../moser/">Moser 蟲問題</a>
+  <a class="link" href="../skew-field/">歪度場</a>
+  <a class="link" href="../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../bsd/">BSD 猜想</a>
+  <a class="link" href="../cpl/">臨界線比例梯</a>
+  <a class="link" href="../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../collatz/">考拉茲猜想</a>
+  <a class="link active" href="./">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-CSM</p>
+    <h1>閉包空間數學論</h1>
+    <p class="subtitle">Closure-Space Mathematics · 十篇,00–09</p>
+    <p class="lede">
+      跟這裡其他案例不同,CSM 不是攻打某一個具體猜想,而是一套關於「長程數學研究狀態本身該怎麼組織」的方法論理論——
+      當研究已累積大量命題、假設、證明嘗試、反例、障礙、橋接後,能否組成一個可驗證、可重放、可更新的相對全域數學
+      空間,對哪些區域已閉合、哪些仍開放、哪些只是局部受阻給出明確的型別化判定。三條核心原則貫穿全系列:
+      <strong>Observed Proof Space ≠ Admissible Proof Space ≠ Mathematical Reality</strong>;
+      <strong>Route Closure ≠ Theorem Proof</strong>;以及 <strong>Globality Typing Principle</strong>——任何
+      「全域」都必須說明它在哪一個軸上全域。
+    </p>
+    <p class="notice">
+      十篇一路遞進:00 形式基礎 → 01 全域性型別 → 02 型別閉包圖 → 03 前沿幾何與耗盡 → 04 閉包動力學 → 05 投影與編譯 →
+      06 跨域轉移 → 07 閉包演算 → 08 Runtime 語義 → 09 把整套理論實例化到 Navier–Stokes 研究本體,建立
+      「NS_GSM v0.1」。每一篇都用完整的「不主張」清單或一系列「No-Go」定理明確畫出邊界,最一致的一句話貫穿全系列:
+      沒有證明承載證書,就沒有定理級的變異。NS_GSM 對既有 AMRAL NS 研究線(C1–C6、X72、DCRP、RFP、MORP、FCBP 等)
+      的具體實例化,見 <a href="../ns/gsm/">NS 專區 · NS_GSM 子線</a>。
+    </p>
+  </header>
+
+  <section id="papers">
+    <h2 class="doc-h2">十篇論文 · Papers 00–09</h2>
+    <div class="case-grid">
+      <a class="case-card" href="./p/00-formal-foundations/"><span class="k">00</span><h3>閉包空間數學論的形式基礎</h3><p>長程研究狀態可組成 typed multilayer mathematical graph,closure promotion 必須攜帶證書,globality 必須型別化...</p></a>
+      <a class="case-card" href="./p/01-globality-typing/"><span class="k">01</span><h3>全域性型別與命題域分層</h3><p>全域性是型別化的量詞側寫,不是可全序排列的單一強度;跨域定理升格必須攜帶明確證書...</p></a>
+      <a class="case-card" href="./p/02-typed-closure-graphs/"><span class="k">02</span><h3>型別閉包圖、阻斷傳播、重開與前沿收縮</h3><p>阻斷只有在假設、範圍、表示法、橋接、目標保真度全部對齊時才能沿依賴邊傳播為定理級阻斷...</p></a>
+      <a class="case-card" href="./p/03-frontier-geometry/"><span class="k">03</span><h3>前沿幾何、割集、障礙覆蓋與相對耗盡</h3><p>唯有路徑完備、割集完備、阻斷覆蓋、範圍保真、母問題橋接五者同時成立,才能把觀察到的耗盡升格為母問題級相對耗盡...</p></a>
+      <a class="case-card" href="./p/04-closure-dynamics/"><span class="k">04</span><h3>閉包動力學、重開、遲滯與不動點演化</h3><p>固定政策下的閉包不動點只是相對不動點,絕不等於數學空間完整;閉包狀態通常非單調,可被重開降級...</p></a>
+      <a class="case-card" href="./p/05-closure-invariants-projection/"><span class="k">05</span><h3>閉包不變量、投影、注意力視圖與靜態／動態編譯</h3><p>投影視圖必須滿足投影-閉包交換律才能被當成原生閉包結論;未載入的前沿與債務必須外部化並可追溯...</p></a>
+      <a class="case-card" href="./p/06-closure-conservation/"><span class="k">06</span><h3>閉包守恆、傳遞律與跨域不變性</h3><p>可轉移結構不等於可轉移閉包權威;formal-NS 結果可作特例錨點,但不能自動升格為家族級或物理定律級狀態...</p></a>
+      <a class="case-card" href="./p/07-closure-calculus/"><span class="k">07</span><h3>閉包演算、組合規則與證明承載算子</h3><p>兩個個別合法的算子仍需明確組合證書才能讓組合合法;無證明承載證書就沒有定理級變異...</p></a>
+      <a class="case-card" href="./p/08-runtime-semantics/"><span class="k">08</span><h3>Runtime 語義、狀態機、登錄器與可執行參考模型</h3><p>所有定理級狀態變異都必須經過原子交易;沒有證書路徑就沒有原生定理變異;runtime 實作方式無關緊要...</p></a>
+      <a class="case-card" href="./p/09-ns-gsm-domain-model/"><span class="k">09</span><h3>NS_GSM:Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格</h3><p>原始研究標籤必須先經候選層與六階段管線驗證才能成為原生圖狀態;v0.1 只處理七節點種子語料庫...</p></a>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>

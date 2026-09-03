@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS_GSM 證明權威審查 v0.4 · NS-GSM · AMRAL</title>
+<meta name="description" content="第一次把特定、人工精選的候選(僅限 ETN-X、DCRP103/104/105、3 篇 RFP 論文,不是整個 1726 筆候選池)推過來源雜湊/陳述/範圍/假設/證書的完整稽核。20 個稽核對象,結果:13 筆晉升(12 筆 PROOF_ASSET + 1 筆 OBSTRUCTION),上限鎖定在 AUDIT 權威;4 筆對已有原生物件的再確認;3 筆延後。具體晉升:DCRP103 五條有界局部">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_GSM_PROOF_AUTHORITY_REVIEW_V0.4_REPORT.md">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/gsm/p/v0.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/gsm/p/v0.4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link" href="../../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link active" href="../../../">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-GSM</a>
+    <span>/</span>
+    <span>v0.4 · 證明權威審查</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-GSM · v0.4</span>
+      <span class="tag">證明權威審查</span>
+      <span class="tag">2026-08-28</span>
+    </div>
+    <h1>NS_GSM 證明權威審查 v0.4</h1>
+    <p class="h1-sub">第一次把特定、人工精選的候選(僅限 ETN-X、DCRP103/104/105、3 篇 RFP 論文,不是整個 1726 筆候選池)推過來源雜湊/陳述/範圍/假設/證書的完整稽核。20 個稽核對象,結果:13 筆晉升(12 筆 PROOF_ASSET + 1 筆 OBSTRUCTION),上限鎖定在 AUDIT 權威;4 筆對已有原生物件的再確認;3 筆延後。具體晉升:DCRP103 五條有界局部張量代數引理(D103.1–D103.5)、DCRP105 四條有界引理(D105.1–D105.4)、RFP 四條定理中三條晉升(RFP-05 Thm 32.1、RFP-10 Thm 42.1、RFP-12 Thm 12.1)加一條晉升為障礙(RFP-12 Thm 19.1),RFP-10 Thm 39.1 因前提(形成完備性、有限強制覆蓋)未確立而明確延後。ETN-X 的 C1、C2 仍然明確標記 DEFER,「仍是未解的證明義務」。</p>
+    <div class="claim-box">
+      13 個窄範圍局部引理/定理晉升為 AUDIT 層級證明資產,C1 與 C2 仍明確標記為未解證明義務
+      <span class="note">報告原句:「本版本不獨立證明被稽核的數學內容。來源內部結果鎖定在 AUDIT 權威,除非有明確 VALID 的獨立驗證結果。」防火牆:來源定理標籤 ≠ 來源內部證明資產 ≠ 獨立驗證的證明權威 ≠ 母問題定理閉合。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他版本的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一版</span><a href="../v0.3/">v0.3 · 候選審查與晉升</a></div>
+      <div class="conn-card"><span class="k">下一版</span><a href="../v0.5/">v0.5 · 獨立驗證</a></div>
+      <div class="conn-card"><span class="k">NS-GSM 進度</span>v0.4(共 8 版:種子資料集 + v0.1–v0.7)</div>
+      <div class="conn-card"><span class="k">方法論依據</span><a href="../../../../csm/p/09-ns-gsm-domain-model/">CSM Paper 09 · NS_GSM Canonical Domain Model</a></div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-GSM</a>
+    <a href="../../files/CSM_Reference_Runtime_v0.4_NS_GSM_Proof_Authority_Review_2026-08-28.zip" download>下載完整套件 .zip</a>
+    <a href="../../files/NS_GSM_PROOF_AUTHORITY_REVIEW_V0.4_REPORT.md" download>下載報告 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_GSM_PROOF_AUTHORITY_REVIEW_V0.4_REPORT.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

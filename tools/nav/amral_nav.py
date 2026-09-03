@@ -68,6 +68,7 @@ CASES = [
     ("ccm", "CCM 計算複合方法論", "CCM Computational Composite Methodology"),
     ("ns", "NS 納維-斯托克斯", "Navier–Stokes"),
     ("collatz", "考拉茲猜想", "Collatz Conjecture"),
+    ("csm", "CSM 閉包空間數學論", "CSM Closure-Space Mathematics"),
 ]
 CASE_SLUGS = {slug for slug, _, _ in CASES}
 
@@ -122,14 +123,21 @@ def render_nav(lang, page_dir):
     for slug, zh_label, en_label in CASES:
         item(slug, zh_label if lang == "zh" else en_label)
 
-    # lang-switch: mirror path in the OTHER language tree
+    # lang-switch: mirror path in the OTHER language tree -- only if that
+    # page actually exists. A case can ship in one language before the
+    # other (Neo's own stated sequencing, 2026-09-03: ZH first, translate
+    # later); until the mirror exists, a lang-switch link would point at
+    # a page that isn't there yet -- the same class of dangling link this
+    # whole mechanism exists to prevent, just aimed at the OTHER language
+    # tree instead of a cross-section case link.
     rel_from_root = os.path.relpath(page_dir, lang_root).replace("\\", "/")
     other_dir = other_root if rel_from_root == "." else os.path.join(other_root, rel_from_root)
-    ups_to_other = relpath_slash(other_dir, page_dir)
-    if lang == "zh":
-        lines.append(f'  <a class="lang-switch" href="{ups_to_other}" hreflang="en">EN</a>')
-    else:
-        lines.append(f'  <a class="lang-switch" href="{ups_to_other}" hreflang="zh-Hant">中文</a>')
+    if os.path.isfile(os.path.join(other_dir, "index.html")):
+        ups_to_other = relpath_slash(other_dir, page_dir)
+        if lang == "zh":
+            lines.append(f'  <a class="lang-switch" href="{ups_to_other}" hreflang="en">EN</a>')
+        else:
+            lines.append(f'  <a class="lang-switch" href="{ups_to_other}" hreflang="zh-Hant">中文</a>')
 
     lines.append('</div></nav>')
     return "\n".join(lines)

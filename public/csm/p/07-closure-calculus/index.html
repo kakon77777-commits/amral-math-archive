@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>閉包演算、組合規則與證明承載算子 · CSM · AMRAL</title>
+<meta name="description" content="把 Paper 00–06 收斂成第一個可執行演算。每個閉包算子都獲得明確的型別簽章、前置條件、轉換、後置條件、證書、債務與版本,打包成「證明承載閉包算子」(PCO)。定義 18 個成員的第一版算子家族(Infer、Block、Refute、Prove、Condition、Bridge、Project、Transfer、Quotient、Split、Reopen、Discharge、Cut、Cov">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CSM_Paper_07_Closure_Calculus_Composition_and_Proof_Carrying_Operators_v0.1_2026-08-27.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/p/07-closure-calculus/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/p/07-closure-calculus/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../data-access/">資料存取</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../collatz/">考拉茲猜想</a>
+  <a class="link active" href="../../">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CSM</a>
+    <span>/</span>
+    <span>07 · 閉包演算、組合規則與證明承載算子</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CSM · 07</span>
+      <span class="tag">v0.1 · 可執行演算核心論文</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>閉包演算、組合規則與證明承載算子</h1>
+    <p class="h1-sub">把 Paper 00–06 收斂成第一個可執行演算。每個閉包算子都獲得明確的型別簽章、前置條件、轉換、後置條件、證書、債務與版本,打包成「證明承載閉包算子」(PCO)。定義 18 個成員的第一版算子家族(Infer、Block、Refute、Prove、Condition、Bridge、Project、Transfer、Quotient、Split、Reopen、Discharge、Cut、Cover、Exhaust、Promote、Replay、Compile)。關鍵主張:合法性不會自由組合——兩個個別合法的算子仍需要明確的「組合證書」才能讓組合算子合法,涵蓋型別/範圍/證書/債務可組合性、權威不膨脹、版本一致性、橋接一致性與重開失效。引入閉包正規形式管線(Normalize→Validate→Infer→Propagate→Resolve→Rebuild→Project),以及舊文件標籤必須先被解析成候選層物件才能進入演算的最小 NS 編譯器介面。</p>
+    <div class="claim-box">
+      兩個個別合法的算子仍需明確組合證書才能讓組合合法;無證明承載證書就沒有定理級變異
+      <span class="note">結論明確重申的核心安全原則:no proof-carrying certificate ⇒ no theorem-level mutation。8 條 Core No-Go 首條:算子存在 ⇏ 算子應用合法。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../06-closure-conservation/">06 · 閉包守恆、傳遞律與跨域不變性</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../08-runtime-semantics/">08 · Runtime 語義、狀態機、登錄器與可執行參考模型</a></div>
+      <div class="conn-card"><span class="k">CSM 進度</span>07 / 09(共 10 篇,00–09)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CSM</a>
+    <a href="../../files/CSM_Paper_07_Closure_Calculus_Composition_and_Proof_Carrying_Operators_v0.1_2026-08-27.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CSM_Paper_07_Closure_Calculus_Composition_and_Proof_Carrying_Operators_v0.1_2026-08-27.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runtime 語義、狀態機、登錄器與可執行參考模型 · CSM · AMRAL</title>
+<meta name="description" content="把 Paper 00–07 的理論轉成第一版可實作的 runtime 規格。定義機器狀態(原生圖、狀態映射、證書登錄器、債務登錄器、前沿、割集、阻斷覆蓋、耗盡、政策、登錄簿頭、版本),所有定理級變異都必須經過原子交易。固定三層 runtime:L0 canonical append-only 事件登錄簿(真相來源)、L1 原生具現化閉包狀態(必須可由重放重建)、L2 特定用途視圖(權威絕不超過 L">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/p/08-runtime-semantics/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/p/08-runtime-semantics/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">關於</a>
+  <a class="link" href="../../../methodology/">方法論</a>
+  <a class="link" href="../../../protocols/">研究協議</a>
+  <a class="link" href="../../../validation/">驗證</a>
+  <a class="link" href="../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../data-access/">資料存取</a>
+  <a class="link" href="../../../riemann/">黎曼猜想</a>
+  <a class="link" href="../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../collatz/">考拉茲猜想</a>
+  <a class="link active" href="../../">CSM 閉包空間數學論</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CSM</a>
+    <span>/</span>
+    <span>08 · Runtime 語義、狀態機、登錄器與可執行參考模型</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CSM · 08</span>
+      <span class="tag">v0.1 · 可執行 Runtime 規格</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>Runtime 語義、狀態機、登錄器與可執行參考模型</h1>
+    <p class="h1-sub">把 Paper 00–07 的理論轉成第一版可實作的 runtime 規格。定義機器狀態(原生圖、狀態映射、證書登錄器、債務登錄器、前沿、割集、阻斷覆蓋、耗盡、政策、登錄簿頭、版本),所有定理級變異都必須經過原子交易。固定三層 runtime:L0 canonical append-only 事件登錄簿(真相來源)、L1 原生具現化閉包狀態(必須可由重放重建)、L2 特定用途視圖(權威絕不超過 L1)。核心安全原則:沒有證書路徑 ⇒ 沒有原生定理變異。明確聲明 runtime 與實作無關——不論實現成 LLM、定理證明器、GUI、網頁服務或分散式資料庫都無妨,重要的是確定性語義、登錄器、登錄簿、PCO、交易、重放、查詢與一致性測試。</p>
+    <div class="claim-box">
+      所有定理級狀態變異都必須經過原子交易;沒有證書路徑就沒有原生定理變異;runtime 實作方式無關緊要
+      <span class="note">8 項 Runtime Nonclaims 中的旗艦一項:不主張 NS ingestion 完成即等於 Clay proof。另:不主張 deterministic replay 解決語意歧義。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">跟其他文件的關係,盡量用它自己文件裡的話,不是我的解讀。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一篇</span><a href="../07-closure-calculus/">07 · 閉包演算、組合規則與證明承載算子</a></div>
+      <div class="conn-card"><span class="k">下一篇</span><a href="../09-ns-gsm-domain-model/">09 · NS_GSM:Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格</a></div>
+      <div class="conn-card"><span class="k">CSM 進度</span>08 / 09(共 10 篇,00–09)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">載入中…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CSM</a>
+    <a href="../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md" download>下載原始 .md</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
