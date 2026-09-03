@@ -1,0 +1,20 @@
+check,parameter,value_1,value_2,value_3,residual,note
+renewal_identity,0.0,0.04215154678632968,0,0.042151546786329687,-6.9388939039072284e-18,"J, completed reward R, unfinished U"
+renewal_identity,0.35,0.099905414831444023,0,0.099905414831442899,1.124100812432971e-15,"J, completed reward R, unfinished U"
+renewal_identity,0.6,0.11400936053198366,0,0.11400936053208006,-9.6408991900887031e-14,"J, completed reward R, unfinished U"
+renewal_identity,1.0,0.19916578417851805,0.093115119765973281,0.10605066441274452,-1.9975687770568129e-13,"J, completed reward R, unfinished U"
+renewal_identity,1.35,0.378333827555694,0.068256883298840998,0.31007694425677151,8.149037000748649e-14,"J, completed reward R, unfinished U"
+renewal_identity,1.7,0.44206784569752988,0.068256883298840998,0.37381096239843165,2.5723867480564877e-13,"J, completed reward R, unfinished U"
+renewal_identity,2.0,0.44511809658607282,0.41798023215466468,0.027137864431408157,-1.3877787807814457e-17,"J, completed reward R, unfinished U"
+completion_field_moments,0.7,0.13481084385978861,0.13481084385978861,,0,direct future field vs 8-moment formula
+completion_field_moments,1.0,-0.042831557967663698,-0.042831557967663664,,-3.4694469519536142e-17,direct future field vs 8-moment formula
+completion_field_moments,1.4,0.13406742632407834,0.13406742632407831,,2.7755575615628914e-17,direct future field vs 8-moment formula
+block_identity,"T=0.2,L=0.8",0.11579100341272364,0.093115119765973281,0.022675883646945588,-1.9523271888033378e-13,"block energy, delta completed reward, delta unfinished inventory"
+block_identity,"T=0.5,L=1.0",0.31302033149326902,0.068256883298840998,0.24476344819742238,-2.9943547641408941e-12,"block energy, delta completed reward, delta unfinished inventory"
+block_identity,"T=0.9,L=0.7",0.27766434008675689,-0.024858236467132283,0.30252257655387704,1.2101430968414206e-14,"block energy, delta completed reward, delta unfinished inventory"
+actual_prime_completion,5,-0.0064774720095109872,0.11501740760073792,-0.12149487961024891,,"total jump, self reward, offdiag future reward; Gamma=-0.08439928239"
+actual_prime_completion,7,0.023689187617972604,0.12009713590667953,-0.096407948288706927,,"total jump, self reward, offdiag future reward; Gamma=-0.0655403991"
+actual_prime_completion,11,0.022023336232305873,0.11605206216386933,-0.094028725931563459,,"total jump, self reward, offdiag future reward; Gamma=-0.06502744448"
+actual_prime_completion,13,-0.025853825025473287,0.11235679991227882,-0.1382106249377521,,"total jump, self reward, offdiag future reward; Gamma=-0.09714139064"
+actual_prime_completion,17,0.028485836638600409,0.10483221446885607,-0.076346377830255663,,"total jump, self reward, offdiag future reward; Gamma=-0.055552502"
+actual_prime_completion,19,-0.038115299563055427,0.10130634337688618,-0.13942164293994161,,"total jump, self reward, offdiag future reward; Gamma=-0.1031987513"

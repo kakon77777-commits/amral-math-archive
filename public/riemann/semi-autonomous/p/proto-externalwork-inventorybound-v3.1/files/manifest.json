@@ -1,0 +1,43 @@
+{
+  "version": "v3.1",
+  "date": "2026-09-03",
+  "status": "RENEWAL_REWARD_DECOMPOSITION_BOUNDARY_ONLY_NO_GO",
+  "rh_claim": false,
+  "renewal_tracker_dimension": 23,
+  "boundary_only_closure": "rejected",
+  "max_renewal_identity_residual": 2.994354764140894e-12,
+  "max_completion_field_moment_residual": 3.469446951953614e-17,
+  "max_completion_kernel_poly_residual": 2.7755575615628914e-17,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_ExternalWork_InventoryBound_v3.1_2026-09-03.md",
+      "sha256": "b18e106fa8b5cb546935b204759fb45af8b9eb6b0bc15d33aa57de471b59fd2b"
+    },
+    {
+      "name": "v31_lifecycle_inventory_reference.py",
+      "sha256": "d5d3b3162a3671726fce513a27a5eb34b00a02667838a7abe6d09191871edeff"
+    },
+    {
+      "name": "v31_inventory_crosscheck.csv",
+      "sha256": "f2bbc02decc011719517a8859629c487875e367c91f2d5bd3e2250f9c4c864c8"
+    },
+    {
+      "name": "v31_inventory_candidate_schema.json",
+      "sha256": "2c0199449e5c3f5ceedd8ac7a2b319697cdf0379e8ce2323fa2c3115b33e4a50"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "renewal_identity_crosscheck": true,
+    "block_identity_crosscheck": true,
+    "completion_field_moment_crosscheck": true,
+    "actual_prime_completion_sample": true
+  }
+}

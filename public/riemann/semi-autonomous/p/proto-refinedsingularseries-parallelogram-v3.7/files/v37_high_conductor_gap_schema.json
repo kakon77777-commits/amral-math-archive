@@ -1,0 +1,40 @@
+{
+  "node": "RH-RefinedSingularSeries-Parallelogram v3.7",
+  "status": {
+    "zero_mode": "CLOSED",
+    "finite_conductor_model": "POWER_SAVED",
+    "high_conductor_tail": "OPEN",
+    "full_model_eta_positive": false,
+    "prime_deviation_eta_positive": false
+  },
+  "finite_modulus_theorem": {
+    "object": "K4_q(h,d)",
+    "mean": 0,
+    "fourier_zero_mode": 0
+  },
+  "weighted_discrepancy": {
+    "condition": "squarefree q <= N",
+    "bound": "N^4 q (q/phi(q))^3"
+  },
+  "primorial_truncation": {
+    "y": "theta log N",
+    "bound": "N^(4+theta+o(1))",
+    "truncated_eta": "1-theta"
+  },
+  "canonical_open_gap": {
+    "name": "PHCT_eta",
+    "object": "high-conductor tail T_4,N(y)",
+    "warning": "logarithmic tail saving is not fixed-power progress"
+  },
+  "automatic_reject": [
+    "generic R4 average applied directly to parallelogram family",
+    "Wick pairings used as pointwise identity",
+    "finite-modulus saving promoted to full singular-series saving",
+    "1/log N tail promoted as fixed eta",
+    "zero-mode cancellation promoted as RH progress"
+  ],
+  "next_node": "RH-Parallelogram-RamanujanTail v3.8",
+  "trust": {
+    "rh_claim": false
+  }
+}

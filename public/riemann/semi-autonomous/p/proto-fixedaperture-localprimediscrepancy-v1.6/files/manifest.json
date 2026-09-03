@@ -1,0 +1,31 @@
+{
+  "version": "v1.6",
+  "date": "2026-09-02",
+  "status": "FIXED_APERTURE_LOCAL_PRIME_CRITERION_FINITE_MEMORY",
+  "rh_claim": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_FixedAperture_LocalPrimeDiscrepancy_v1.6_2026-09-02.md",
+      "sha256": "07436ce02e678143bcf39d817c4e8ce75b1a7de23cf03fab46f957be88af30bf"
+    },
+    {
+      "name": "fixed_aperture_local_prime_reference.py",
+      "sha256": "c7bf740b1676fae272b32af0b43384f7daccf591a81933a08338e5e305ac0f97"
+    },
+    {
+      "name": "fixed_aperture_certificate_schema.json",
+      "sha256": "336edd14178dc61e10b48ce0a957e474850fe2710693aac77ca34f2ffdcb48a5"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "schema_non_evidentiary_warning": true
+  }
+}

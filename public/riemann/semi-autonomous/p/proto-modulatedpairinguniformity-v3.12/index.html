@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modulated Pairing Uniformity:UMP4 反例、Parallelogram Constraint-Adapted Centering 與 Double-Axis Remainder · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="對 v3.11 提出的候選閘門做可移植性審計,得到明確的反例:用唯一的有限模數與特定調變值構造精確反例,證明候選閘門對每一個參數都不成立——未調變時消失的高階共振,在此調變下被平移回零頻率,使配對後餘項精確達到目標尺度。更深一層,發現「全域 Wick centering」與「平行四邊形限制下的 centering」並不等價,提出修正後的精確分解(一維中心化軸加二維無軸餘項),並證明無軸餘項的兩個 ">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_ModulatedPairingUniformity_v3.12_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-modulatedpairinguniformity-v3.12/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-modulatedpairinguniformity-v3.12/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-modulatedpairinguniformity-v3.12">工程紀錄</a>
+    <span>/</span>
+    <span>Modulated Pairing Uniformity:UMP4 反例、Parallelogram Constraint-Adapted Centering 與 Double-Axis Remainder</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.12</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">UMP4_COUNTEREXAMPLE_CONSTRAINT_ADAPTED_DOUBLE_CENTERING</span>
+    </div>
+    <h1>Modulated Pairing Uniformity:UMP4 反例、Parallelogram Constraint-Adapted Centering 與 Double-Axis Remainder</h1>
+    <p class="h1-sub">對 v3.11 提出的候選閘門做可移植性審計,得到明確的反例:用唯一的有限模數與特定調變值構造精確反例,證明候選閘門對每一個參數都不成立——未調變時消失的高階共振,在此調變下被平移回零頻率,使配對後餘項精確達到目標尺度。更深一層,發現「全域 Wick centering」與「平行四邊形限制下的 centering」並不等價,提出修正後的精確分解(一維中心化軸加二維無軸餘項),並證明無軸餘項的兩個 Fourier 軸皆恰為零。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">局部平移一致的陳述不能推出一致的全域配對分解——v3.11 的推論方向被否定;文獻中的配對定理在其原本設定下仍然正確,問題出在把它移植到新設定的方式,不是文獻本身的錯。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">v3.11 提出候選閘門作為候選;v3.12 完成可移植性審計,結果不是「仍然開放」而是「對每個參數都不成立」——直接推翻 v3.11 提出的延續方向。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.11</span><a href="../proto-parallelogram-addingfractionsrestriction-v3.11/">Parallelogram Adding-Fractions Restriction:Odd-Theorem No-Gain、Even Pairing 結構與 Modulated Pairing Gate</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.13</span><a href="../proto-parallelogram-constraintadaptedpairing-v3.13/">Parallelogram Constraint-Adapted Pairing:1D Axis、2D Axis-Free Remainder 與 Mixed Sobolev Gate</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v312_constraint_adapted_gate_schema.json" download>v312_constraint_adapted_gate_schema.json</a></li>
+      <li><a href="./files/v312_constraint_centering_crosscheck.csv" download>v312_constraint_centering_crosscheck.csv</a></li>
+      <li><a href="./files/v312_modulation_counterexample_reference.py" download>v312_modulation_counterexample_reference.py</a></li>
+      <li><a href="./files/v312_q2_modulation_scaling.csv" download>v312_q2_modulation_scaling.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_ModulatedPairingUniformity_v3.12_2026-09-03.zip" download>下載完整封包 (13.8 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_ModulatedPairingUniformity_v3.12_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

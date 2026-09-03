@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Band-limited Twist Averaging Gate 與 Uniform Local-Correlation Frontier · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="處理是否真的需要對每個垂直扭轉做逐點一致估計的問題。先證明固定孔徑下,扭轉區塊能量作為扭轉變數的函數,其 Fourier 支撐精確落在有限範圍內;再證明逐點上確界與單位頻帶平均在指數強度上等價,因此連續的垂直量詞可壓縮成可數個整數單位頻帶證書。但將此目標對照現有方法逐一稽核後,發現沒有一個提供所需的一致正校正後 κ——本篇改善的是垂直量詞的幾何結構與證明工程,不是 RH 本身。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_BandlimitedTwist_AveragingGate_v2.4_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-bandlimitedtwist-averaginggate-v2.4/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-bandlimitedtwist-averaginggate-v2.4/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-bandlimitedtwist-averaginggate-v2.4">工程紀錄</a>
+    <span>/</span>
+    <span>Band-limited Twist Averaging Gate 與 Uniform Local-Correlation Frontier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v2.4</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">BANDLIMITED_TWIST_GATE_LOCAL_AVERAGE_EQUIVALENCE</span>
+    </div>
+    <h1>Band-limited Twist Averaging Gate 與 Uniform Local-Correlation Frontier</h1>
+    <p class="h1-sub">處理是否真的需要對每個垂直扭轉做逐點一致估計的問題。先證明固定孔徑下,扭轉區塊能量作為扭轉變數的函數,其 Fourier 支撐精確落在有限範圍內;再證明逐點上確界與單位頻帶平均在指數強度上等價,因此連續的垂直量詞可壓縮成可數個整數單位頻帶證書。但將此目標對照現有方法逐一稽核後,發現沒有一個提供所需的一致正校正後 κ——本篇改善的是垂直量詞的幾何結構與證明工程,不是 RH 本身。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">對擴張中的扭轉範圍取整體平均,不能推出對單位頻帶的一致控制——因為有限個例外共振頻帶可能被平均掉而未被排除。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v1.9、v2.1–v2.3 的鏈條,回到高頻 Gallagher/twisted local correlation 處理一個剩餘問題。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v2.3</span><a href="../proto-sensitivitynormalized-multiscalereconstruction-v2.3/">Sensitivity-Normalized Multiscale Reconstruction 與 False-κ 守恆律</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v2.5</span><a href="../proto-cauchypoisson-twistscalarization-v2.5/">Cauchy–Poisson Twist Scalarization 與 Canonical Resolvent Green Energy</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v24_method_strength_table.csv" download>v24_method_strength_table.csv</a></li>
+      <li><a href="./files/v24_twist_band_reference.py" download>v24_twist_band_reference.py</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_BandlimitedTwist_AveragingGate_v2.4_2026-09-03.zip" download>下載完整封包 (11.6 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_BandlimitedTwist_AveragingGate_v2.4_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

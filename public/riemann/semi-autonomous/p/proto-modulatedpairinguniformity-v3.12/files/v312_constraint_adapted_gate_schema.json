@@ -1,0 +1,35 @@
+{
+  "node": "RH-ModulatedPairingUniformity v3.12",
+  "decisions": {
+    "UMP4": "FALSE",
+    "averaged_UMP4": "FALSE",
+    "global_Wick_centering_on_parallelogram": "MISALIGNED",
+    "constraint_adapted_centering": "REQUIRED"
+  },
+  "exact_counterexample": {
+    "conductor": 2,
+    "modulation": "lambda=1/2",
+    "pointwise_remainder_scale": "Theta(H^4)",
+    "character_averaged_remainder_scale": "Theta(H^3)"
+  },
+  "constraint_adapted_decomposition": {
+    "axis": "A_q(d)=mu_q(d)^2-(A(q)-1)",
+    "axis_free": "K4_perp=K4-A_q(d)",
+    "K4_perp_alpha_zero_axis": 0,
+    "K4_perp_beta_zero_axis": 0,
+    "K4_perp_symmetric": true
+  },
+  "automatic_reject": [
+    "UMP4 or averaged UMP4",
+    "local shift-uniform lemmas promoted to global shift-uniform pairing theorem",
+    "all three Wick channels separated before constrained centering",
+    "pairing channels bounded independently by absolute value",
+    "axis-free mixed Sobolev numerics promoted as theorem"
+  ],
+  "next_node": "RH-Parallelogram-ConstraintAdaptedPairing v3.13",
+  "trust": {
+    "rh_claim": false,
+    "eta_M_positive_proved": false,
+    "eta_Q_positive_proved": false
+  }
+}

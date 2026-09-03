@@ -1,0 +1,38 @@
+{
+  "version": "v1.65",
+  "date": "2026-09-02",
+  "status": "INDEPENDENT_AUDIT_VALIDATED_AS_REDUCTION",
+  "rh_claim": false,
+  "finite_global_problem": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "numerical_crosscheck": {
+    "cases": 9,
+    "max_abs_D_residual": "7.2083205467460630445e-69",
+    "max_abs_local_block_residual": "1.159126922089819183e-69",
+    "precision_decimal_digits": 70
+  },
+  "artifacts": [
+    {
+      "name": "RH_FixedAperture_v1.65_IndependentAudit_2026-09-02.md",
+      "sha256": "bffc36c2510c736a3e0a271588664b5690f25757b20ed3ec7bc73d7d7fd3b243"
+    },
+    {
+      "name": "vrh165_independent_audit.py",
+      "sha256": "8ccdc65d9ed7290e659d616a98a0ed573ce25c35eecc00ced2c881241d89ba10"
+    },
+    {
+      "name": "vrh165_crosscheck_residuals.csv",
+      "sha256": "aaa01c49b2e6ba3fbc30e572fca08d7b254ba13278e34385b7a107f77c3aac62"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "crosscheck_csv_generated": true
+  }
+}

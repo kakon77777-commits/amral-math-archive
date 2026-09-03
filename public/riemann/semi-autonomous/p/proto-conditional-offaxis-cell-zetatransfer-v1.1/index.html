@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>條件式偏軸 Cell 轉移、Weil 局部負慣性與 Li 全域壓縮 · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="承接前一批次 v0.9–v1.0 交接文件,處理「假設存在偏軸零點,如何轉移為合法 occupancy cell」的介面問題。把座標系統擴充為二維 (δ, γ),證明偏軸零點的水平對稱 pair 在 Weil 二次型的局部子空間中天然產生不定 (indefinite) 的 2×2 block,嚴格證明該局部限制矩陣行列式為負、慣性為 (1,1)——純代數結果,不依賴浮點近似。另引入 Li / Bo">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_ConditionalOffAxisCell_ZetaTransfer_v1.1_2026-09-02.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-conditional-offaxis-cell-zetatransfer-v1.1/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-conditional-offaxis-cell-zetatransfer-v1.1/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-conditional-offaxis-cell-zetatransfer-v1.1">工程紀錄</a>
+    <span>/</span>
+    <span>條件式偏軸 Cell 轉移、Weil 局部負慣性與 Li 全域壓縮</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v1.1</span>
+      <span class="tag">2026-09-02</span>
+      <span class="status">CONDITIONAL_TRANSFER_CLOSED_GLOBAL_WEIL_ISOLATION_OPEN</span>
+    </div>
+    <h1>條件式偏軸 Cell 轉移、Weil 局部負慣性與 Li 全域壓縮</h1>
+    <p class="h1-sub">承接前一批次 v0.9–v1.0 交接文件,處理「假設存在偏軸零點,如何轉移為合法 occupancy cell」的介面問題。把座標系統擴充為二維 (δ, γ),證明偏軸零點的水平對稱 pair 在 Weil 二次型的局部子空間中天然產生不定 (indefinite) 的 2×2 block,嚴格證明該局部限制矩陣行列式為負、慣性為 (1,1)——純代數結果,不依賴浮點近似。另引入 Li / Bombieri–Lagarias 判準,把連續零點位置的全稱量詞轉換成可數序列的離散問題。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">「local negative Weil direction」只指目標偏軸 symmetry block 在所構造二維 test-function subspace 的 restriction,不等於完整 Weil quadratic form 已為負——local quartet negative inertia 能否推出 global Weil negative witness,仍完全開放。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">接續上一批次 v1.0 的指示:不再以擴大 local radius 為主要目標,轉而定位真正剩下的缺口是全域 Weil isolation。是本批次 38 個包的第一個。</p>
+    <div class="connections">
+      
+      <div class="conn-card"><span class="k">下一節點 · v1.2</span><a href="../proto-globalquantifier-primepower-convexcompression-v1.2/">全域量詞壓縮:有限高度 Li 極值與質數冪凸最小值判準</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_ConditionalOffAxisCell_ZetaTransfer_v1.1_2026-09-02.zip" download>下載完整封包 (10.7 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_ConditionalOffAxisCell_ZetaTransfer_v1.1_2026-09-02.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

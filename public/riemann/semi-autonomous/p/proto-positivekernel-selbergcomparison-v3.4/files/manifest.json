@@ -1,0 +1,46 @@
+{
+  "version": "v3.4",
+  "date": "2026-09-03",
+  "status": "ELLIPTIC_MEANSQUARE_EQUIVALENCE_REPRESENTATION_CLOSURE",
+  "rh_claim": false,
+  "h": "log(2)",
+  "symbol_grid_min": 0.042861036769697845,
+  "symbol_grid_min_x": 0.0,
+  "symbol_grid_max": 1.0929889551934318,
+  "symbol_grid_max_x": 4.2,
+  "symbol_high_frequency_limit": 0.4440328693185726,
+  "symbol_S120_to_limit_residual": 0.0009067126528928826,
+  "max_local_energy_to_upper_bound_ratio": 0.03799286749586267,
+  "representation_closure": true,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_PositiveKernel_SelbergComparison_v3.4_2026-09-03.md",
+      "sha256": "b0ad24655ced8cb655fb2bc1973c8881202afa12a9f7b3ece2097a89ed5fcb57"
+    },
+    {
+      "name": "v34_elliptic_comparison_reference.py",
+      "sha256": "1d2de3ab0441e36bcb3cde588965783707d29c459d26823325e9d7d4f9274127"
+    },
+    {
+      "name": "v34_elliptic_comparison_crosscheck.csv",
+      "sha256": "94e445d6cc8d6f96ca7d2d06d731a77ad989c87a82e146aade093a76e472d958"
+    },
+    {
+      "name": "v34_representation_closure_schema.json",
+      "sha256": "4c5ad2448397fcfbda4ac1f9d5463ccdef07e394ef7e9aecba5b84ca748cbb55"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "symbol_positive_reference_grid": true,
+    "high_frequency_limit_check": true,
+    "actual_prime_local_upper_check": true
+  }
+}

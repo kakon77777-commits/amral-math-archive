@@ -1,0 +1,84 @@
+{
+  "_warning": "SCHEMA ONLY. No finite batch proves RH.",
+  "certificate_type": "RH_FIXED_APERTURE_LOCAL_PRIME_CHECKPOINT",
+  "aperture": {
+    "h_interval": [
+      "",
+      ""
+    ],
+    "special_mode": "GENERAL",
+    "service_threshold_upper": ""
+  },
+  "checkpoint": {
+    "t_interval": [
+      "",
+      ""
+    ],
+    "x_interval": [
+      "",
+      ""
+    ],
+    "event_type": "ENDPOINT|INTERIOR_MINIMUM|GENERIC",
+    "active_prime_power_count": 0,
+    "active_prime_power_hash": ""
+  },
+  "arithmetic": {
+    "local_prime_sum_interval": [
+      "",
+      ""
+    ],
+    "main_density_interval": [
+      "",
+      ""
+    ],
+    "local_discrepancy_interval": [
+      "",
+      ""
+    ]
+  },
+  "archimedean": {
+    "trivial_correction_interval": [
+      "",
+      ""
+    ],
+    "service_curvature_interval": [
+      "",
+      ""
+    ]
+  },
+  "observable": {
+    "D_h_interval": [
+      "",
+      ""
+    ],
+    "workload_interval": [
+      "",
+      ""
+    ],
+    "identity_residual_interval": [
+      "",
+      ""
+    ]
+  },
+  "state": {
+    "left_active_weight_interval": [
+      "",
+      ""
+    ],
+    "right_active_weight_interval": [
+      "",
+      ""
+    ],
+    "event_impulse_interval": [
+      "",
+      ""
+    ]
+  },
+  "trust": {
+    "rounding_mode": "",
+    "precision_bits": 0,
+    "implementation_hash": "",
+    "source_hash": "",
+    "verdict": "FINITE_CHECK_ONLY"
+  }
+}

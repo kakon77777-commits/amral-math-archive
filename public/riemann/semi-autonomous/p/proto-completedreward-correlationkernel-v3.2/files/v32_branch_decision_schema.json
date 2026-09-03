@@ -1,0 +1,23 @@
+{
+  "branch": "COMPLETED_REWARD",
+  "version": "v3.2",
+  "decision": "DEPRIORITIZE_AS_MAIN_RH_CLOSURE_ROUTE",
+  "keep_for": [
+    "renewal tracker",
+    "causal diagnostics",
+    "completion correlation certificates",
+    "finite-state bookkeeping"
+  ],
+  "reasons": {
+    "off_axis_exponent_discount": false,
+    "vertical_blind_spots": false,
+    "positivity_preserved": false,
+    "boundary_term_known_lower_order": false
+  },
+  "main_return_target": "positive Cauchy / arithmetic innovation energy",
+  "next_node": "RH-PositiveKernel-InnovationSpectrum v3.3",
+  "trust": {
+    "rh_claim": false,
+    "global_quadratic_explicit_formula_formalized": false
+  }
+}

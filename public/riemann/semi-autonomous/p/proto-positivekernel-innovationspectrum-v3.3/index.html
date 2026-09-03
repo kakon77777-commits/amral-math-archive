@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positive Kernel Innovation Spectrum:固定正頻窗不可約性、Resolvent Hierarchy 與 Spectral False-κ · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="回到正定頻譜能量,測試能否把 RH-complete 的 Cauchy 能量切成較弱的正頻譜片段,藉此建立漸進變弱的定理強度階梯。精確計算固定孔徑零點轉移函數,證明對任何偏軸零點,它在整條垂直線上都不為零,因此任何固定的非零正頻窗都保留相同的指數,係數再小也不會削弱指數。進一步推出移動頻帶的 false-κ 修正律,並建立一族正多項式尾端 resolvent 階層,確認原本的核已是其中維度最小的成">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_PositiveKernel_InnovationSpectrum_v3.3_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-positivekernel-innovationspectrum-v3.3/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-positivekernel-innovationspectrum-v3.3/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-positivekernel-innovationspectrum-v3.3">工程紀錄</a>
+    <span>/</span>
+    <span>Positive Kernel Innovation Spectrum:固定正頻窗不可約性、Resolvent Hierarchy 與 Spectral False-κ</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.3</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">POSITIVE_SPECTRAL_IRREDUCIBILITY_RESOLVENT_HIERARCHY</span>
+    </div>
+    <h1>Positive Kernel Innovation Spectrum:固定正頻窗不可約性、Resolvent Hierarchy 與 Spectral False-κ</h1>
+    <p class="h1-sub">回到正定頻譜能量,測試能否把 RH-complete 的 Cauchy 能量切成較弱的正頻譜片段,藉此建立漸進變弱的定理強度階梯。精確計算固定孔徑零點轉移函數,證明對任何偏軸零點,它在整條垂直線上都不為零,因此任何固定的非零正頻窗都保留相同的指數,係數再小也不會削弱指數。進一步推出移動頻帶的 false-κ 修正律,並建立一族正多項式尾端 resolvent 階層,確認原本的核已是其中維度最小的成員。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">正頻譜分解具有診斷/證書價值,但目前沒有提供真正的定理強度折扣——固定正頻譜切片不會自動產生較弱的 RH 定理。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v2.5、v2.4,以及 v3.2 的決定(帶號分支降級),回到正頻譜能量問這條路能否切出較弱的定理。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.2</span><a href="../proto-completedreward-correlationkernel-v3.2/">Completed Reward Correlation Kernel:Zero-Mode Transfer、Strict Positivity 與 Strength Audit</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.4</span><a href="../proto-positivekernel-selbergcomparison-v3.4/">Positive Kernel–Selberg Comparison:Elliptic Mean-Square Equivalence 與 Representation Closure</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v33_positive_kernel_candidate_schema.json" download>v33_positive_kernel_candidate_schema.json</a></li>
+      <li><a href="./files/v33_positive_spectrum_reference.py" download>v33_positive_spectrum_reference.py</a></li>
+      <li><a href="./files/v33_spectral_piece_crosscheck.csv" download>v33_spectral_piece_crosscheck.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_PositiveKernel_InnovationSpectrum_v3.3_2026-09-03.zip" download>下載完整封包 (13.4 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_PositiveKernel_InnovationSpectrum_v3.3_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

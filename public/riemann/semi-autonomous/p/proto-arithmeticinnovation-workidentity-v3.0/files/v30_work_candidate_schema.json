@@ -1,0 +1,27 @@
+{
+  "candidate_type": "RH_EXTERNAL_WORK_OR_INVENTORY_BOUND",
+  "version": "v3.0",
+  "allowed_objects": [
+    "positive acceleration-work variation",
+    "external prime lifecycle work",
+    "unfinished lifecycle inventory",
+    "finite-horizon kinetic-to-work deficit"
+  ],
+  "automatic_reject": [
+    "complete lifecycle net work equals zero",
+    "pair lifecycle net work equals zero",
+    "universal tent integration-by-parts identity",
+    "finite lifecycle cancellation without a tail bound",
+    "absolute-value bound applied before prime/background centering"
+  ],
+  "required_translation": {
+    "target_output": "Cauchy block energy or equivalent energy exponent",
+    "sigma_required": true,
+    "breakthrough": "sigma < 1/2",
+    "rh_scale": "sigma = 0"
+  },
+  "trust": {
+    "rh_claim": false,
+    "lifecycle_neutrality_is_universal": true
+  }
+}

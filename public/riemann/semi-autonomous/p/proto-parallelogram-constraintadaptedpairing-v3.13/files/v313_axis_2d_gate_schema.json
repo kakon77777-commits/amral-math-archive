@@ -1,0 +1,31 @@
+{
+  "node": "RH-Parallelogram-ConstraintAdaptedPairing v3.13",
+  "decomposition": {
+    "axis": "A_q(d)=mu_q(d)^2-(A(q)-1)",
+    "axis_free": "K4_perp=K4-A_q(d)"
+  },
+  "finite_conductor_results": {
+    "axis_sobolev": "uniform O(1)",
+    "mixed_sobolev": "O_epsilon(q^epsilon)",
+    "axis_weighted_sharp": "O(N^4)",
+    "axis_free_weighted_sharp": "O_epsilon(N^(4+epsilon))",
+    "axis_free_smooth_interior": "O_epsilon(N^(3+epsilon))"
+  },
+  "open_gates": {
+    "APST": "1D centered pair-square Ramanujan finite-box tail",
+    "MSTT": "2D mixed-Sobolev finite-box tail"
+  },
+  "automatic_reject": [
+    "mixed q^epsilon bound promoted to uniform O(1)",
+    "finite-conductor antiderivative promoted to full pointwise antiderivative",
+    "smooth-interior N^3 bound promoted to exact sharp-Cesaro N^3",
+    "axis and axis-free remainder forced into one generic restriction theorem"
+  ],
+  "next_node": "RH-PairSquareAxis-RamanujanTail v3.14",
+  "trust": {
+    "rh_claim": false,
+    "APST_proved": false,
+    "MSTT_proved": false,
+    "eta_M_positive_proved": false
+  }
+}

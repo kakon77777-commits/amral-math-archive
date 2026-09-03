@@ -1,0 +1,26 @@
+check,parameter,value_1,value_2,residual,note
+prime_square_identity,"p=2, n=1",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=2, n=2",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=2, n=5",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=3, n=1",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=3, n=3",4,4,0,c_p(n)^2 identity
+prime_square_identity,"p=3, n=7",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=5, n=1",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=5, n=5",16,16,0,c_p(n)^2 identity
+prime_square_identity,"p=5, n=11",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=7, n=1",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=7, n=7",36,36,0,c_p(n)^2 identity
+prime_square_identity,"p=7, n=15",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=11, n=1",1,1,0,c_p(n)^2 identity
+prime_square_identity,"p=11, n=11",100,100,0,c_p(n)^2 identity
+prime_square_identity,"p=11, n=23",1,1,0,c_p(n)^2 identity
+finite_prime_axis_expansion,n=1,-0.298031412760416,-0.29803141276041595,-5.5511151231257827e-17,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=2,-1.1730581156412754,-1.1730581156412754,0,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=3,-0.298031412760416,-0.29803141276041584,-1.6653345369377348e-16,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=4,-1.1730581156412754,-1.1730581156412754,0,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=5,-0.298031412760416,-0.29803141276041606,5.5511151231257827e-17,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=6,1.6159242757161465,1.6159242757161443,2.2204460492503131e-15,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=10,-0.650509440104166,-0.65050944010416767,1.6653345369377348e-15,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=12,1.6159242757161465,1.6159242757161443,2.2204460492503131e-15,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=30,5.510806477864584,5.5108064778645796,4.4408920985006262e-15,"P={2,3,5,7,11}"
+finite_prime_axis_expansion,n=60,5.510806477864584,5.5108064778645796,4.4408920985006262e-15,"P={2,3,5,7,11}"

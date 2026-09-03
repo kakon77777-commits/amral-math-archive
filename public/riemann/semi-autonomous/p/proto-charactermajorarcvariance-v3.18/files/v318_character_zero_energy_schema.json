@@ -1,0 +1,34 @@
+{
+  "node": "RH-CharacterMajorArcVariance v3.18",
+  "status": {
+    "minor_arc_prime_fourth_moment": "FIXED_POWER",
+    "character_zero_energy": "OPEN",
+    "density_only_fixed_power": "NO",
+    "PPEU_eta_positive": "OPEN",
+    "eta_Q_positive": "OPEN"
+  },
+  "minor_arc": {
+    "input": "Maynard-Pandey-Radziwill 2026",
+    "bound": "|S| <= N^o(1)(N/B^(1/2)+N^(19/24))",
+    "fourth_moment_saving": "min(theta,5/12)"
+  },
+  "major_arc": {
+    "decomposition": "pole + character zero packets + explicit-formula remainder",
+    "cross_kernel_scale": "x^(1+2 Re rho)",
+    "pure_zero_scale": "x^(4 Re rho - 1)"
+  },
+  "canonical_gates": {
+    "CMZE_eta": "Z2+Z4 << x^(3-eta+o(1))",
+    "EMAE_eta": "full exceptional character-major-arc structured variance << x^(3-eta+o(1))"
+  },
+  "next_node": "RH-ExceptionalZeroEnergy v3.19",
+  "automatic_reject": [
+    "minor-arc fourth moment promoted directly to full pair variance",
+    "zero-density population bound promoted to fixed zero strip",
+    "isolated-zero channel scale promoted to complete-packet lower bound"
+  ],
+  "trust": {
+    "rh_claim": false,
+    "eta_Q_positive_proved": false
+  }
+}

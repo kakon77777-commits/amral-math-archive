@@ -1,0 +1,27 @@
+{
+  "candidate_type": "RH_COMPLETED_REWARD_CORRELATION_BOUND",
+  "version": "v3.1",
+  "canonical_decomposition": "block_energy = completed_reward_increment + unfinished_inventory_change",
+  "state": {
+    "v27_base_dimension": 18,
+    "extra_completion_moments": 4,
+    "completed_reward_scalar": 1,
+    "renewal_tracker_dimension": 23
+  },
+  "automatic_reject": [
+    "boundary-only telescoping claim",
+    "completed lifecycle work neutrality used as stored-energy cancellation",
+    "unfinished inventory bound used without completed bulk reward bound",
+    "finite-dimensional tracker promoted as finite global proof"
+  ],
+  "promotion_requirements": {
+    "bulk_completed_reward_bound": "required",
+    "boundary_inventory_bound": "required or dominated",
+    "sigma": "required",
+    "breakthrough": "sigma < 1/2",
+    "rh_scale": "sigma = 0"
+  },
+  "trust": {
+    "rh_claim": false
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mellin 對稱積分、標準化 PNT 誤差與緊緻 FIR 濾波器橋接 · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="完成 v1.8 指出必要卻尚未做到的表示層重整化:證明局部質數偏差同時等於三個看似不同的物件——質數–archimedean 差異測度的三角卷積、加權累積 PNT 誤差的精確 Mellin 對稱積分、以及古典標準化 PNT 誤差的一個緊支撐 FIR 濾波器。藉此把 AMRAL 的局部質數能量精確接上古典 PNT 均方框架,並證明三向等價定理:古典均方判準、標準化 PNT 誤差區塊能量、與濾波後區塊">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_MellinSymmetry_PNTFilterBridge_v1.9_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-mellinsymmetry-pntfilterbridge-v1.9/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-mellinsymmetry-pntfilterbridge-v1.9/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-mellinsymmetry-pntfilterbridge-v1.9">工程紀錄</a>
+    <span>/</span>
+    <span>Mellin 對稱積分、標準化 PNT 誤差與緊緻 FIR 濾波器橋接</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v1.9</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">MELLIN_SYMMETRY_FIR_PNT_FILTER_BRIDGE</span>
+    </div>
+    <h1>Mellin 對稱積分、標準化 PNT 誤差與緊緻 FIR 濾波器橋接</h1>
+    <p class="h1-sub">完成 v1.8 指出必要卻尚未做到的表示層重整化:證明局部質數偏差同時等於三個看似不同的物件——質數–archimedean 差異測度的三角卷積、加權累積 PNT 誤差的精確 Mellin 對稱積分、以及古典標準化 PNT 誤差的一個緊支撐 FIR 濾波器。藉此把 AMRAL 的局部質數能量精確接上古典 PNT 均方框架,並證明三向等價定理:古典均方判準、標準化 PNT 誤差區塊能量、與濾波後區塊能量三者對 RH 邏輯強度完全相同。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">這個濾波後區塊能量的一致上界本身已經與 RH 等強,因此現有對稱積分/Gallagher/短區間工具不能只靠常規強度直接關閉,否則就已經證明 RH——更好的垂直平滑不等於 RH,有限協方差半徑不等於有限整體證明。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v1.8 指出的問題:直接展開局部質數能量會出現遠大於目標尺度的項,逐項估計必然失敗;本篇先在表示層完成重整化。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v1.8</span><a href="../proto-localenergy-correlationaperturetradeoff-v1.8/">局部能量關聯消去與孔徑–資訊權衡</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v2.0</span><a href="../proto-filteredpnt-gallagherstrengthaudit-v2.0/">Filtered PNT／Gallagher 強度稽核:現有方法距離 RH 還有多遠</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v19_filter_identity_crosscheck.csv" download>v19_filter_identity_crosscheck.csv</a></li>
+      <li><a href="./files/v19_pnt_filter_bridge_reference.py" download>v19_pnt_filter_bridge_reference.py</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_MellinSymmetry_PNTFilterBridge_v1.9_2026-09-03.zip" download>下載完整封包 (12.3 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_MellinSymmetry_PNTFilterBridge_v1.9_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

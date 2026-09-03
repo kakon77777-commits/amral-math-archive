@@ -1,0 +1,52 @@
+{
+  "_warning": "SCHEMA ONLY. This is not an RH proof or counterexample.",
+  "certificate_type": "RH_CANONICAL_BOX_TOEPLITZ_MATRIX",
+  "grid": {
+    "h_interval": [
+      "",
+      ""
+    ],
+    "m": 0,
+    "support_extent_interval": [
+      "",
+      ""
+    ]
+  },
+  "prime_side": {
+    "prime_power_cutoff_upper": "",
+    "enumeration_count": 0,
+    "enumeration_hash": "",
+    "finite_matrix_artifact": "",
+    "tent_identity_verified": false
+  },
+  "archimedean_side": {
+    "arch_matrix_artifact": "",
+    "lerch_cutoff": 0,
+    "lerch_tail_bound": ""
+  },
+  "total_matrix": {
+    "split_matrix_artifact": "",
+    "direct_second_difference_artifact": "",
+    "split_vs_direct_interval_difference": [
+      "",
+      ""
+    ],
+    "toeplitz_verified": false,
+    "diagonal_checkpoint_verified": false
+  },
+  "psd": {
+    "method": "",
+    "minimum_eigenvalue_interval": [
+      "",
+      ""
+    ],
+    "generalized_schur_artifact": "",
+    "verdict": "INCONCLUSIVE"
+  },
+  "trust": {
+    "rounding_mode": "",
+    "precision_bits": 0,
+    "implementation_hash": "",
+    "source_hash": ""
+  }
+}

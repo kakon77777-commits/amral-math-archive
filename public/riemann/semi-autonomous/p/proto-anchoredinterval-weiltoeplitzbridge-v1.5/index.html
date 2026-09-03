@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>錨定區間 Weil–Toeplitz 橋接 · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="對 v1.4 的對角恆等式做正規化稽核,發現若要把完整 screw kernel 解讀成矩形 basis 的 Weil Gram matrix,必須改用「共同左端點」的錨定區間指示函數,才能得到精確的全矩陣恆等式。對此取差分後證明局部 box Gram matrix 是精確的 Toeplitz 矩陣,且任一固定大小的 box matrix 只需有限個質數冪資料。另證明第二個 no-go:固定孔徑時">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_AnchoredInterval_WeilToeplitzBridge_v1.5_2026-09-02.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-anchoredinterval-weiltoeplitzbridge-v1.5/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-anchoredinterval-weiltoeplitzbridge-v1.5/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-anchoredinterval-weiltoeplitzbridge-v1.5">工程紀錄</a>
+    <span>/</span>
+    <span>錨定區間 Weil–Toeplitz 橋接</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v1.5</span>
+      <span class="tag">2026-09-02</span>
+      <span class="status">EXACT_FULL_MATRIX_BRIDGE_TOEPLITZ_PRIME_LOCALIZATION</span>
+    </div>
+    <h1>錨定區間 Weil–Toeplitz 橋接</h1>
+    <p class="h1-sub">對 v1.4 的對角恆等式做正規化稽核,發現若要把完整 screw kernel 解讀成矩形 basis 的 Weil Gram matrix,必須改用「共同左端點」的錨定區間指示函數,才能得到精確的全矩陣恆等式。對此取差分後證明局部 box Gram matrix 是精確的 Toeplitz 矩陣,且任一固定大小的 box matrix 只需有限個質數冪資料。另證明第二個 no-go:固定孔徑時,RH 下該 Toeplitz 矩陣的譜測度是純原子測度,其巢狀 Schur innovation variance 必趨於零,連經正規化的 reserve 也不能期待一致正下界。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">若 RH 成立,uniform-box nested Schur innovation 不可能有固定正下界;uniform determinant/eigenvalue/Schur-innovation 下界都不可作為證明目標,合理方向是「符號正確、精度隨尺度調整」而非固定 margin;新的 box matrix 是否等於原本的 arithmetic matrix,也尚未證明。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">修正 v1.4 的矩形 basis 選擇(中心對稱→錨定左端點),並修正其對 Recovery-Witness Reserve 的預期,改為三項分解。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v1.4</span><a href="../proto-weilcheckpoint-greendiagonalbridge-v1.4/">Weil 正錐、Suzuki 對角脊線與 Recovery-Witness Schur Reserve</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v1.6</span><a href="../proto-fixedaperture-localprimediscrepancy-v1.6/">固定孔徑局部質數偏差判準與有限記憶三脈衝系統</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/box_toeplitz_certificate_schema.json" download>box_toeplitz_certificate_schema.json</a></li>
+      <li><a href="./files/box_toeplitz_reference.py" download>box_toeplitz_reference.py</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_AnchoredInterval_WeilToeplitzBridge_v1.5_2026-09-02.zip" download>下載完整封包 (14.3 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_AnchoredInterval_WeilToeplitzBridge_v1.5_2026-09-02.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

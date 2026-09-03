@@ -1,0 +1,42 @@
+{
+  "version": "v3.0",
+  "date": "2026-09-03",
+  "status": "WORK_ENERGY_IDENTITY_LIFECYCLE_NEUTRALITY_EXTERNAL_WORK_GATE",
+  "rh_claim": false,
+  "complete_lifecycle_neutrality": "universal_structure_blind",
+  "max_L_plus_A_kernel_residual": 2.220446049250313e-16,
+  "action_pair_residual": 0.0,
+  "work_pair_residual": 4.440892098500626e-16,
+  "full_balance_residual": 4.440892098500626e-16,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_ArithmeticInnovation_WorkIdentity_v3.0_2026-09-03.md",
+      "sha256": "717c23185002e37e7310e265ddd07ffbbf7c78d7853f81528cb13ba8e3625969"
+    },
+    {
+      "name": "v30_work_identity_reference.py",
+      "sha256": "daeacd94de0505e45530aa008b9b63f976bde81db55b0c58f9a11157e3b835ec"
+    },
+    {
+      "name": "v30_lifecycle_work_crosscheck.csv",
+      "sha256": "782aca17edf6531e22f0ba5b9d29571d024d947b1f6742818cc4089f9593409b"
+    },
+    {
+      "name": "v30_work_candidate_schema.json",
+      "sha256": "9bf6def54114bd738af8187fc81f7363a0e61616373a12f341918c175e11607b"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "work_energy_atom_crosscheck": true,
+    "kernel_L_equals_minus_A": true,
+    "actual_prime_lifecycle_sample": true
+  }
+}

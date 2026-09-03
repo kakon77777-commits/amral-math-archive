@@ -1,0 +1,36 @@
+{
+  "version": "v2.4",
+  "date": "2026-09-03",
+  "status": "BANDLIMITED_TWIST_GATE_LOCAL_AVERAGE_EQUIVALENCE",
+  "rh_claim": false,
+  "twist_bandwidth": "2h",
+  "vertical_certificate_index": "integer unit bands j in Z",
+  "current_corrected_kappa": 0,
+  "max_main_factor_numeric_residual": 1.0052400472933895e-10,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_BandlimitedTwist_AveragingGate_v2.4_2026-09-03.md",
+      "sha256": "bd3f90d5232384339787de23913a38bb8800a1cf2c9a9f0029b4cd49e18c0383"
+    },
+    {
+      "name": "v24_twist_band_reference.py",
+      "sha256": "e7dc7ea2af4e13b31cedbe9945d8bb070a67e73d1f8b29c3fea94cd68253a69f"
+    },
+    {
+      "name": "v24_method_strength_table.csv",
+      "sha256": "b650487195671d63be6252d644979bf38b3ab27f365c4275d4ef9fd8c4b61215"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "twisted_main_factor_crosscheck": true,
+    "method_strength_csv_generated": true
+  }
+}

@@ -1,0 +1,8 @@
+check,parameter,value_1,value_2,residual,note
+character_delta,"(1, 4, 7, 10)",1,1,0,L=0; M=161
+character_delta,"(2, 5, 8, 11)",1,1,0,L=0; M=161
+character_delta,"(1, 3, 6, 9)",-1.3170968801453719e-16,0,1.4872958600449582e-16,L=1; M=161
+character_delta,"(2, 6, 7, 12)",-1.3170968801453719e-16,0,1.4872958600449582e-16,L=1; M=161
+modulation_translation,"alpha=0.13, lambda=0.07",0.031657797401559905+-0.097432681886015504i,0.031657797401564776+-0.097432681886020417i,6.9182825324590692e-15,"E_mod(alpha,lambda) vs E_base(alpha+lambda)"
+modulation_translation,"alpha=0.21, lambda=0.31",-0.016617652743568231+0.015605014626175528i,-0.016617652743556664+0.015605014626180039i,1.2415364411417723e-14,"E_mod(alpha,lambda) vs E_base(alpha+lambda)"
+modulation_translation,"alpha=0.49, lambda=0.125",-0.018463120589796142+-0.042665754308204837i,-0.018463120589807147+-0.042665754308199758i,1.2120680637770741e-14,"E_mod(alpha,lambda) vs E_base(alpha+lambda)"

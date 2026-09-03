@@ -1,0 +1,13 @@
+kind,parameter,omega,energy_beta_effective,implied_half_strip_gauge,note
+current_VK_Bellotti_asymptotic_gauge,100,2.4823992753466571,0.95035201449306683,0.47517600724653342,asymptotic class illustration; implicit constants omitted
+current_VK_Bellotti_asymptotic_gauge,1000,9.1128324216394034,0.98177433515672119,0.49088716757836059,asymptotic class illustration; implicit constants omitted
+current_VK_Bellotti_asymptotic_gauge,10000,34.250399117856084,0.99314992017642867,0.49657496008821433,asymptotic class illustration; implicit constants omitted
+current_VK_Bellotti_asymptotic_gauge,100000,130.40181436659515,0.99739196371266803,0.49869598185633401,asymptotic class illustration; implicit constants omitted
+current_VK_Bellotti_asymptotic_gauge,1000000,500.54990680868934,0.9989989001863826,0.4994994500931913,asymptotic class illustration; implicit constants omitted
+current_VK_Bellotti_asymptotic_gauge,10000000,1932.2264682978112,0.9996135547063405,0.49980677735317025,asymptotic class illustration; implicit constants omitted
+fixed_exponent_saving_gate,0.01,,0.98999999999999999,0.495,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip
+fixed_exponent_saving_gate,0.05,,0.94999999999999996,0.47499999999999998,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip
+fixed_exponent_saving_gate,0.1,,0.90000000000000002,0.45000000000000001,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip
+fixed_exponent_saving_gate,0.25,,0.75,0.375,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip
+fixed_exponent_saving_gate,0.5,,0.5,0.25,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip
+fixed_exponent_saving_gate,0.9,,0.099999999999999978,0.049999999999999989,rigorous Q_h <= exp((1-eps)T+o(T)) would imply this fixed half-strip

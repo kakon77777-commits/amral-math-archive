@@ -1,0 +1,13 @@
+check,parameter,value_1,value_2,residual,note
+pair_parseval,random length 12,117.49203355673242,117.49203355673247,-4.2632564145606011e-14,full Fourier polynomial
+structured_identity,random complex arrays,3.5527136788005009e-15,0,3.5527136788005009e-15,algebra residual
+PVAA_envelope,random complex arrays,5.918688041211233,17.342418759302799,0.34128388452368202,value_1 <= value_2; residual stores ratio
+Selberg_L2_fraction,theta=0.25,0.75,1-theta,0,R=N^theta residual fraction
+Selberg_L2_fraction,theta=0.5,0.5,1-theta,0,R=N^theta residual fraction
+Selberg_L2_fraction,theta=0.75,0.25,1-theta,0,R=N^theta residual fraction
+Selberg_L2_fraction,theta=0.9,0.099999999999999978,1-theta,0,R=N^theta residual fraction
+Selberg_L2_fraction,theta=0.99,0.010000000000000009,1-theta,0,R=N^theta residual fraction
+PPEU_translation,eta=0.1,Theta<=0.95,EPV exponent=3.9,,pair exponent=2.9
+PPEU_translation,eta=0.25,Theta<=0.875,EPV exponent=3.75,,pair exponent=2.75
+PPEU_translation,eta=0.5,Theta<=0.75,EPV exponent=3.5,,pair exponent=2.5
+PPEU_translation,eta=0.75,Theta<=0.625,EPV exponent=3.25,,pair exponent=2.25

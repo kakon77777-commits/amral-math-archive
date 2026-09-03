@@ -1,0 +1,42 @@
+{
+  "candidate_type": "RH_CRITICAL_CENTERED_LYAPUNOV",
+  "version": "v2.8",
+  "coordinate_system": {
+    "required": "critical_centered_relative",
+    "raw_state_allowed": false,
+    "moment_only_allowed": false,
+    "energy_state_required": true
+  },
+  "strength": {
+    "sigma": null,
+    "interpretation": {
+      "0.5": "structure-blind baseline",
+      "(0,0.5)": "fixed zero-strip progress",
+      "0": "RH scale"
+    }
+  },
+  "candidate": {
+    "P_matrix": null,
+    "extra_state": null,
+    "arithmetic_input_lemma": null
+  },
+  "proof_obligations": {
+    "flow_inequality": "OPEN",
+    "enter_jump_inequality": "OPEN",
+    "center_jump_inequality": "OPEN",
+    "exit_jump_inequality": "OPEN",
+    "coercivity_with_energy_state": "OPEN",
+    "zero_strip_translation": "OPEN"
+  },
+  "automatic_reject": [
+    "raw positive-definite coercivity",
+    "moment-only coercivity",
+    "structure-blind TV/support argument claiming sigma < 1/2",
+    "finite simulation without analytic inequalities",
+    "candidate without declared sigma"
+  ],
+  "trust": {
+    "rh_claim": false,
+    "finite_numerics_are_evidence_only": true
+  }
+}

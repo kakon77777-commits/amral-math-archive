@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallelogram Sobolev Tail Transfer:√N Restriction Threshold、Denominator Tail 與 Large-Sieve Criticality · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="追問 v3.9 已證的一致 Sobolev 控制,能否透過標準 large sieve 有理頻率限制工具,定量轉移到真正的有限方框。結果分兩部分:正面地,利用二維 large sieve 證明兩個既約分母皆不超過方框規模平方根的聯合有理頻率貢獻可完全控制;反面地,標準 large sieve 在超過此門檻後失效,因為 Farey 間距小於方框的 Fourier 解析度,即使係數本身確實以冪次衰減,">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_Parallelogram_SobolevTailTransfer_v3.10_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-parallelogram-sobolevtailtransfer-v3.10/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-parallelogram-sobolevtailtransfer-v3.10/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-parallelogram-sobolevtailtransfer-v3.10">工程紀錄</a>
+    <span>/</span>
+    <span>Parallelogram Sobolev Tail Transfer:√N Restriction Threshold、Denominator Tail 與 Large-Sieve Criticality</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.10</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">LOW_CONDUCTOR_RESTRICTION_CLOSED_SQRT_N_THRESHOLD_HIGH_CONDUCTOR_OPEN</span>
+    </div>
+    <h1>Parallelogram Sobolev Tail Transfer:√N Restriction Threshold、Denominator Tail 與 Large-Sieve Criticality</h1>
+    <p class="h1-sub">追問 v3.9 已證的一致 Sobolev 控制,能否透過標準 large sieve 有理頻率限制工具,定量轉移到真正的有限方框。結果分兩部分:正面地,利用二維 large sieve 證明兩個既約分母皆不超過方框規模平方根的聯合有理頻率貢獻可完全控制;反面地,標準 large sieve 在超過此門檻後失效,因為 Farey 間距小於方框的 Fourier 解析度,即使係數本身確實以冪次衰減,仍無法單靠此衰減分離擠在同一解析格內的高分母有理頻率。將問題精確定位為一個「超-√N 有理限制定理」的缺口。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">係數衰減加上一般的 Farey 間距,不足以用目前的論證在固定指數下關閉整個無窮導子範圍——標準 large sieve 的失敗是目前論證的失敗,不是數學上的不可能定理。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v3.9 的一致 Sobolev 界,問能否透過標準工具定量轉移到有限方框——只解決了低導子部分。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.9</span><a href="../proto-parallelogram-sobolevconductor-v3.9/">Parallelogram Sobolev Conductor:Uniform d-Antiderivative Bound、Finite-Conductor N⁴ Scale 與 Besicovitch Transfer Gap</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.11</span><a href="../proto-parallelogram-addingfractionsrestriction-v3.11/">Parallelogram Adding-Fractions Restriction:Odd-Theorem No-Gain、Even Pairing 結構與 Modulated Pairing Gate</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v310_denominator_slice_diagnostics.csv" download>v310_denominator_slice_diagnostics.csv</a></li>
+      <li><a href="./files/v310_large_sieve_threshold_checks.csv" download>v310_large_sieve_threshold_checks.csv</a></li>
+      <li><a href="./files/v310_restriction_gate_schema.json" download>v310_restriction_gate_schema.json</a></li>
+      <li><a href="./files/v310_restriction_threshold_reference.py" download>v310_restriction_threshold_reference.py</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_Parallelogram_SobolevTailTransfer_v3.10_2026-09-03.zip" download>下載完整封包 (13.9 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_Parallelogram_SobolevTailTransfer_v3.10_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

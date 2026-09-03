@@ -1,0 +1,17 @@
+{
+  "artifact": "RH_ConditionalOffAxisCell_ZetaTransfer_v1.1_2026-09-02.md",
+  "version": "v1.1",
+  "date": "2026-09-02",
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "sha256": "d5281244b3c38a9353cd5a8f59a26148164cda47fba774188ff7c137c2be4ffc",
+  "validation": {
+    "utf8_readback": true,
+    "forbidden_latex_delimiters_absent": true,
+    "display_math_delimiters_paired": true,
+    "inline_math_delimiters_sanity_checked": true
+  }
+}

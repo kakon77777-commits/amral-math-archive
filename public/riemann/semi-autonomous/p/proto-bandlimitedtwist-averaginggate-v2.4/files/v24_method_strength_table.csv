@@ -1,0 +1,6 @@
+method,averaging_family,strength,energy_beta,direct_fixed_kappa,status
+Generic Montgomery-Vaughan / large sieve,Mellin twist interval,X * polylog(X),1,0,diagonal/spacing barrier
+Gallagher / Cesaro,spectral-to-local transfer,transfer only,,,needs arithmetic covariance input
+Barban-Davenport-Halberstam,moduli/residue classes,strong variance,,,different character family; bridge needed
+Averaged Hardy-Littlewood / almost-all shifts,shifts / interval positions,logarithmic or subpower in audited sources,1 at fixed-power classification,0,not uniform RH-sensitive twist theorem
+Uniform unit twist-band centered variance,all integer twist bands,X^(1-kappa+o(1)),1-kappa,kappa,canonical open target

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four-Point Prime Deviation:Actual Λ Barrier、Endpoint Pair Variance Gate 與 Log-Uniformity Limitation · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="在 v3.15 將確定性模型完全關閉後,正式轉向「實際質數偏差」——真實質數關聯與模型之間的差距——並明確聲明本節點未對此偏差證明任何固定冪次節省。完成三項化約:推導出將偏差精確拆成四點型態誤差加配對誤差修正項的恆等式;定義端點對變異量閘門,證明任何無條件的此類閘門都會立即導出真正的固定零點帶,使其成為充分的化約目標;審查最新文獻後發現目前並無任何無條件的固定冪次節省,只有對數/o(1) 的無條件">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_FourPointPrimeDeviation_v3.16_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-fourpointprimedeviation-v3.16/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-fourpointprimedeviation-v3.16/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-fourpointprimedeviation-v3.16">工程紀錄</a>
+    <span>/</span>
+    <span>Four-Point Prime Deviation:Actual Λ Barrier、Endpoint Pair Variance Gate 與 Log-Uniformity Limitation</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.16</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">ACTUAL_PRIME_DEVIATION_ENDPOINT_PAIR_VARIANCE_GATE</span>
+    </div>
+    <h1>Four-Point Prime Deviation:Actual Λ Barrier、Endpoint Pair Variance Gate 與 Log-Uniformity Limitation</h1>
+    <p class="h1-sub">在 v3.15 將確定性模型完全關閉後,正式轉向「實際質數偏差」——真實質數關聯與模型之間的差距——並明確聲明本節點未對此偏差證明任何固定冪次節省。完成三項化約:推導出將偏差精確拆成四點型態誤差加配對誤差修正項的恆等式;定義端點對變異量閘門,證明任何無條件的此類閘門都會立即導出真正的固定零點帶,使其成為充分的化約目標;審查最新文獻後發現目前並無任何無條件的固定冪次節省,只有對數/o(1) 的無條件節省,或依賴 GRH 的條件式校準(且明確聲明此校準僅供比對,不可用於 RH 證明本身)。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">目前不存在任何無條件的固定冪次質數對誤差變異量界,也不存在任何無條件的端點對變異量閘門——實際質數這一支目前嚴格意義下仍停留在零節省;更高一致性帶來的對數節省不等於固定冪次節省,依賴 GRH 的校準只能用於比對,不能用在 RH 證明本身。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">v3.15 關閉了整個確定性模型;v3.16 標記明確的轉折——從已關閉的確定性分支轉向仍完全開放的實際質數分支。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.15</span><a href="../proto-axisfree-mixedramanujantail-v3.15/">Axis-Free Mixed Ramanujan Tail:Prime-Set Shell、Q=N^(1/2) Balance 與 Deterministic Model Fixed-Power Closure</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.17</span><a href="../proto-primestructuredapproximationgap-v3.17/">Prime Structured Approximation Gap:Λ♯、Selberg Λ_R、Pair-Variance Adapted Norm 與 Character Interface</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v316_prime_deviation_gate_schema.json" download>v316_prime_deviation_gate_schema.json</a></li>
+      <li><a href="./files/v316_prime_deviation_reference.py" download>v316_prime_deviation_reference.py</a></li>
+      <li><a href="./files/v316_prime_gate_crosscheck.csv" download>v316_prime_gate_crosscheck.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_FourPointPrimeDeviation_v3.16_2026-09-03.zip" download>下載完整封包 (11.7 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_FourPointPrimeDeviation_v3.16_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

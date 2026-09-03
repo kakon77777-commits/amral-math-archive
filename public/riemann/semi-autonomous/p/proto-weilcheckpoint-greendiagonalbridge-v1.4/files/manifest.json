@@ -1,0 +1,28 @@
+{
+  "version": "v1.4",
+  "date": "2026-09-02",
+  "status": "EXACT_DIAGONAL_BRIDGE_UNIFORM_GAP_NO_GO",
+  "rh_claim": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_WeilCheckpoint_GreenDiagonalBridge_v1.4_2026-09-02.md",
+      "sha256": "cd6f960e0c7083fbaa466ace865fccef1dcb4186aa68d588b7c9d852efaad4db"
+    },
+    {
+      "name": "checkpoint_schur_certificate_schema.json",
+      "sha256": "b468e0049f0e0f715aee779d8fe57fb5ee50f500eb57ee318a77ba353baae3d9"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "forbidden_delimiter_substrings_absent": true,
+    "display_math_delimiters_paired": true,
+    "inline_math_delimiters_sanity_checked": true,
+    "schema_non_evidentiary_warning": true
+  }
+}

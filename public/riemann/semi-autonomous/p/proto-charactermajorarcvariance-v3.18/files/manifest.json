@@ -1,0 +1,50 @@
+{
+  "version": "v3.18",
+  "date": "2026-09-03",
+  "status": "MINOR_ARC_FIXED_POWER_CHARACTER_MAJOR_ZERO_ENERGY_OPEN",
+  "rh_claim": false,
+  "deterministic_eta_M": "1/2",
+  "minor_arc_max_reference_saving": 0.4166666666666665,
+  "character_major_zero_energy_proved": false,
+  "PPEU_eta_positive_proved": false,
+  "eta_Q_positive_proved": false,
+  "max_character_energy_residual": 3.552713678800501e-15,
+  "max_kernel_scaling_residual": 1.528132866464668e-16,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_CharacterMajorArcVariance_v3.18_2026-09-03.md",
+      "sha256": "ec91a11e93035fcbbbf3a44fbb4423ad641fb14b9eef9b71c4eeb80903d9f249"
+    },
+    {
+      "name": "v318_character_major_arc_reference.py",
+      "sha256": "fbe0184386c0d445cae257a1932445975ca6b7ea240f744e49eee8d321bbb239"
+    },
+    {
+      "name": "v318_character_kernel_crosscheck.csv",
+      "sha256": "16144a0ca9d8c1641e584669c5d015fabae454dba802ff18717bb28135f4528b"
+    },
+    {
+      "name": "v318_minor_arc_exponent_table.csv",
+      "sha256": "90a010ceda1bbf61ebd530c4c26361b8dba061c9f2fffbcd5eb3623bdfc9564a"
+    },
+    {
+      "name": "v318_character_zero_energy_schema.json",
+      "sha256": "86334065c89d3f50f6933f285808e31a2777dc08bae2a7414e485c1bd7bc8238"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "character_orthogonality": true,
+    "kernel_scaling": true,
+    "core_energy_scaling": true,
+    "minor_arc_exponent_table": true
+  }
+}

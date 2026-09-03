@@ -1,0 +1,30 @@
+{
+  "node": "RH-Parallelogram-AddingFractionsRestriction v3.11",
+  "decisions": {
+    "direct_odd_adding_fractions": "NO_GAIN",
+    "preferred_external_structure": "even pairing theorem",
+    "canonical_next_gate": "UMP4"
+  },
+  "UMP4": {
+    "sign_pattern": [
+      "+lambda",
+      "-lambda",
+      "-lambda",
+      "+lambda"
+    ],
+    "target_delta": "1/28",
+    "status": "OPEN"
+  },
+  "automatic_reject": [
+    "odd adding-fractions count quoted without comparison to Q^4/N+Q^2",
+    "fixed smooth O_f constant treated as uniform under H-dependent modulation",
+    "parallelogram Fourier average performed after dropping pairing terms",
+    "smooth constrained theorem promoted directly to the sharp Omega_N geometry"
+  ],
+  "next_node": "RH-ModulatedPairingUniformity v3.12",
+  "trust": {
+    "rh_claim": false,
+    "UMP4_proved": false,
+    "eta_M_positive_proved": false
+  }
+}

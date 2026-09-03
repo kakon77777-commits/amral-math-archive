@@ -1,0 +1,36 @@
+{
+  "version": "v2.5",
+  "date": "2026-09-03",
+  "status": "CAUCHY_POISSON_SCALARIZATION_RESOLVENT_GREEN_ENERGY",
+  "rh_claim": false,
+  "v24_uniform_all_twists_target": "rejected_as_overstrong",
+  "canonical_cauchy_scale": 1,
+  "max_reference_residual": 2.220446049250313e-15,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_CauchyPoisson_TwistScalarization_v2.5_2026-09-03.md",
+      "sha256": "4ff8f55dbe96f40c95bdc4b48dbab5f1248bfe167dd61f86f2347460252b7037"
+    },
+    {
+      "name": "v25_cauchy_poisson_reference.py",
+      "sha256": "2beb7bdb5a1d2a0fa68079f1e7e3763b1ef5a9b1a52418acd518043c769a66a8"
+    },
+    {
+      "name": "v25_reference_checks.csv",
+      "sha256": "d19abfd7dce1a8480899ea8f8ba2fa6fd275feab8ad87944ca69a57a2188356f"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "cauchy_fourier_crosscheck": true,
+    "finite_pair_crosscheck": true,
+    "resolvent_energy_crosscheck": true
+  }
+}

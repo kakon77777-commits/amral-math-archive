@@ -1,0 +1,10 @@
+h,d,S0_pair_finite_product,S0_four_finite_product,K4_finite_product,raw_four_singular_series_finite_product,note
+2,4,0.32034025715822056,0.52566865078794756,0.42305077043175265,0,"illustrative finite Euler product, not a proof value"
+2,6,0.32034025715822056,0.28079028816983342,0.17817240781363852,4.151494529543263,"illustrative finite Euler product, not a proof value"
+4,6,0.32034025715822056,2.0140416621060231,1.9114237817498283,8.3029890590865278,"illustrative finite Euler product, not a proof value"
+6,10,1.6406805143164411,3.7472930360422403,1.0554604859845784,12.45448358862982,"illustrative finite Euler product, not a proof value"
+3,5,-1,-0.35931948568355887,-1.3593194856835589,0,"illustrative finite Euler product, not a proof value"
+4,10,0.32034025715822056,-1.1883930343347364,-1.2910109146909312,0,"illustrative finite Euler product, not a proof value"
+6,12,1.6406805143164411,-1.7197804522932163,-4.4116130023508777,8.3029890590865261,"illustrative finite Euler product, not a proof value"
+10,14,0.76045367621096416,-3.0680924138979369,-3.6463822075607069,0,"illustrative finite Euler product, not a proof value"
+10,20,0.76045367621096416,-2.1102505651624441,-2.6885403588252141,0,"illustrative finite Euler product, not a proof value"

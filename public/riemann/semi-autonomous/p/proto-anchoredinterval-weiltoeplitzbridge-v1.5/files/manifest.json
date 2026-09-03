@@ -1,0 +1,31 @@
+{
+  "version": "v1.5",
+  "date": "2026-09-02",
+  "status": "EXACT_FULL_MATRIX_BRIDGE_TOEPLITZ_PRIME_LOCALIZATION",
+  "rh_claim": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_AnchoredInterval_WeilToeplitzBridge_v1.5_2026-09-02.md",
+      "sha256": "77b570e0379950126b227a59e7bbf2cea7c3d7ae384b33e7ff5cade039ec1f27"
+    },
+    {
+      "name": "box_toeplitz_reference.py",
+      "sha256": "a2d785715bdfde121fec376d83c690605a3f17c385376c612c5d143b73a3ae24"
+    },
+    {
+      "name": "box_toeplitz_certificate_schema.json",
+      "sha256": "020f97b3cf85278358dadf97719238af4fb5fa002b3c7d084d545fa896e25e43"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "schema_non_evidentiary_warning": true
+  }
+}

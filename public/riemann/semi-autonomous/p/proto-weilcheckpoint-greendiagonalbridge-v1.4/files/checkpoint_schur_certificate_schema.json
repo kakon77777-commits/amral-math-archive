@@ -1,0 +1,61 @@
+{
+  "_warning": "SCHEMA ONLY. No numerical values in this file constitute an RH proof or counterexample.",
+  "certificate_type": "RH_RECOVERY_WITNESS_SCHUR_RESERVE",
+  "checkpoint": {
+    "id": "",
+    "t_interval": [
+      "",
+      ""
+    ],
+    "psi_interval": [
+      "",
+      ""
+    ],
+    "prime_power_reference": ""
+  },
+  "anchor_set": {
+    "times": [],
+    "kernel_matrix_interval_artifact": "",
+    "positive_definite_certificate": ""
+  },
+  "extension": {
+    "cross_vector_interval_artifact": "",
+    "diagonal_capacity_interval": [
+      "",
+      ""
+    ],
+    "schur_cost_interval": [
+      "",
+      ""
+    ],
+    "schur_reserve_interval": [
+      "",
+      ""
+    ],
+    "normalized_reserve_interval": [
+      "",
+      ""
+    ]
+  },
+  "recovery_dynamics": {
+    "workload_interval": [
+      "",
+      ""
+    ],
+    "service_clock_interval": [
+      "",
+      ""
+    ],
+    "local_drawdown_interval": [
+      "",
+      ""
+    ]
+  },
+  "trust": {
+    "rounding_mode": "",
+    "precision_bits": 0,
+    "implementation_hash": "",
+    "source_hash": "",
+    "verdict": "INCONCLUSIVE"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "artifact": "RH_GlobalQuantifier_PrimePowerConvexCompression_v1.2_2026-09-02.md",
+  "version": "v1.2",
+  "date": "2026-09-02",
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "status": "GLOBAL_QUANTIFIER_COMPRESSION",
+  "rh_claim": false,
+  "sha256": "cc35a8fe0ade1cf49aa791580a7f875b167ba8f2f1db9c0bab8fe85eec8962e8",
+  "validation": {
+    "utf8_readback": true,
+    "forbidden_latex_delimiters_absent": true,
+    "display_math_delimiters_paired": true,
+    "inline_math_delimiters_sanity_checked": true
+  }
+}

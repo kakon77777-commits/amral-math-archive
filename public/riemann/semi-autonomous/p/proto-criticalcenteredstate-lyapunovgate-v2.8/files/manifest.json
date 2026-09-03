@@ -1,0 +1,43 @@
+{
+  "version": "v2.8",
+  "date": "2026-09-03",
+  "status": "CRITICAL_CENTERING_LYAPUNOV_GATE_RAW_QUADRATIC_NO_GO",
+  "rh_claim": false,
+  "structure_blind_sigma_baseline": 0.5,
+  "raw_coercive_quadratic": "rejected",
+  "moment_only_coercivity": "rejected",
+  "max_zero_mode_alignment_error": 5.551115123125783e-17,
+  "moment_nullspace_residual": 2.7755575615628914e-17,
+  "moment_nullspace_positive_energy": 0.04795304747977772,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_CriticalCenteredState_LyapunovGate_v2.8_2026-09-03.md",
+      "sha256": "2e87e4e514e184639c2da174b1d4a3c7ffe13d7fa2779baf430340371ca70e2f"
+    },
+    {
+      "name": "v28_critical_centering_reference.py",
+      "sha256": "b250eb162e15e64c50bfc24193c56a24e0cd45f54f3dc830eee84e91f69a5ae6"
+    },
+    {
+      "name": "v28_centered_state_crosscheck.csv",
+      "sha256": "078ad5ed04e9221ea18e92f638be5baa64ea35e24806a5d8f9d10f836ad6ae68"
+    },
+    {
+      "name": "v28_lyapunov_candidate_schema.json",
+      "sha256": "6e8ba904fe7b40294acd89c24d03ec98a3723a9aaf78315cb06236e8a1197980"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "finite_prime_centering_check": true,
+    "moment_nullspace_check": true,
+    "zero_mode_alignment_check": true
+  }
+}

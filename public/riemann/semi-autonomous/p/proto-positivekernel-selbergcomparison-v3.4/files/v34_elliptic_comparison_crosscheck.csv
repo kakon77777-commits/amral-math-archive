@@ -1,0 +1,9 @@
+check,parameter,value_1,value_2,value_3,residual_or_ratio,note
+local_positive_upper,2.0,0.017977182029879177,0.7258963820427029,4.1619230955411339,0.0043194411855276681,"Cauchy energy, local e^2, theorem upper bound, ratio"
+local_positive_upper,3.0,0.021428259141281381,0.32957667934417917,1.8896261607673934,0.011339946274123968,"Cauchy energy, local e^2, theorem upper bound, ratio"
+local_positive_upper,4.0,0.019489470092689039,0.16193775393704579,0.92846926203718105,0.020990969641716123,"Cauchy energy, local e^2, theorem upper bound, ratio"
+local_positive_upper,5.0,0.02044837500889669,0.10240068302192926,0.58711377851044688,0.034828640984675578,"Cauchy energy, local e^2, theorem upper bound, ratio"
+local_positive_upper,6.0,0.016519396107019427,0.075835521001020534,0.43480256152864349,0.03799286749586267,"Cauchy energy, local e^2, theorem upper bound, ratio"
+symbol_grid_min,0.0,0.042861036769697845,,,,numerical reference only
+symbol_grid_max,4.2,1.0929889551934318,,,,numerical reference only
+symbol_high_frequency,120.0,0.44493958197146549,0.44403286931857261,,0.00090671265289288261,S_h(120) vs 4h^3/3 asymptotic limit

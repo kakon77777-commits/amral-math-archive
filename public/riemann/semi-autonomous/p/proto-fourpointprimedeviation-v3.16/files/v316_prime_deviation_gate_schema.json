@@ -1,0 +1,30 @@
+{
+  "node": "RH-FourPointPrimeDeviation v3.16",
+  "status": {
+    "deterministic_eta_M": "1/2",
+    "actual_prime_eta": "OPEN",
+    "EPV_eta_positive": "OPEN",
+    "FPD_eta_positive": "OPEN",
+    "higher_uniformity_fixed_power": "NOT_OBTAINED"
+  },
+  "canonical_gates": {
+    "EPV_eta": "sum_{j~N} sum_{h<j} |Q_j(h)|^2 << N^(4-eta+o(1))",
+    "FPD_eta": "|E_4,N| << N^(5-eta+o(1))"
+  },
+  "conditional_calibration": {
+    "GRH_pair_variance": "N^(5/2) polylog",
+    "GRH_EPV_eta": "1/2 up to logs"
+  },
+  "automatic_reject": [
+    "log-power higher-uniformity saving promoted as fixed eta",
+    "GRH pair-variance bound used unconditionally",
+    "minor-arc fixed power claimed sufficient without major-arc pair control",
+    "deterministic eta_M promoted to complete quartic eta_Q"
+  ],
+  "next_node": "RH-PrimeStructuredApproximationGap v3.17",
+  "trust": {
+    "rh_claim": false,
+    "eta_Q_positive_proved": false,
+    "kappa_I_positive_proved": false
+  }
+}

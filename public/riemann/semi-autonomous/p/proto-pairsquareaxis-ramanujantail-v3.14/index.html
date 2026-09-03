@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pair-Square Axis Ramanujan Tail:Exact Coefficients、APST(1) 與 N^(17/4) Axis Closure · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="專攻 v3.13 遺留的一維軸缺口,並在自然冪次處將其證明關閉,是本批次少見的完整正面結果。由質數恆等式出發,證明中心化後的一維軸仍落在無平方 Ramanujan 基底中,其係數滿足固定冪次界,由此導出逐點尾項界,冪次與既有古典結果一致(但只是上界,不是漸近式)。將低、高分母部分平衡後,得到整個一維軸在精確權重下的完整固定冪次界,相對原始四階尺度得到固定節省,使一維軸不再被視為主要的確定性障礙。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_PairSquareAxis_RamanujanTail_v3.14_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-pairsquareaxis-ramanujantail-v3.14/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-pairsquareaxis-ramanujantail-v3.14/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-pairsquareaxis-ramanujantail-v3.14">工程紀錄</a>
+    <span>/</span>
+    <span>Pair-Square Axis Ramanujan Tail:Exact Coefficients、APST(1) 與 N^(17/4) Axis Closure</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.14</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">PAIR_SQUARE_AXIS_APST_CLOSED_FIXED_POWER_AXIS_CLOSED</span>
+    </div>
+    <h1>Pair-Square Axis Ramanujan Tail:Exact Coefficients、APST(1) 與 N^(17/4) Axis Closure</h1>
+    <p class="h1-sub">專攻 v3.13 遺留的一維軸缺口,並在自然冪次處將其證明關閉,是本批次少見的完整正面結果。由質數恆等式出發,證明中心化後的一維軸仍落在無平方 Ramanujan 基底中,其係數滿足固定冪次界,由此導出逐點尾項界,冪次與既有古典結果一致(但只是上界,不是漸近式)。將低、高分母部分平衡後,得到整個一維軸在精確權重下的完整固定冪次界,相對原始四階尺度得到固定節省,使一維軸不再被視為主要的確定性障礙。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">只證明了配對平方尾端的上界,不能從奇異級數尾項定理直接推出配對平方漸近式;此固定冪次界只是確定性模型本身的界,節省量與後續整體模型、實際質數偏差所需的節省量並不相同,這裡也沒有證明任何二維無軸固定節省或質數偏差節省。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">v3.13 分離出一維確定性軸,留下的缺口是這裡的攻擊目標;v3.14 在自然冪次幾乎完整關閉這個缺口。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.13</span><a href="../proto-parallelogram-constraintadaptedpairing-v3.13/">Parallelogram Constraint-Adapted Pairing:1D Axis、2D Axis-Free Remainder 與 Mixed Sobolev Gate</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.15</span><a href="../proto-axisfree-mixedramanujantail-v3.15/">Axis-Free Mixed Ramanujan Tail:Prime-Set Shell、Q=N^(1/2) Balance 與 Deterministic Model Fixed-Power Closure</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v314_axis_closed_schema.json" download>v314_axis_closed_schema.json</a></li>
+      <li><a href="./files/v314_axis_coefficient_crosscheck.csv" download>v314_axis_coefficient_crosscheck.csv</a></li>
+      <li><a href="./files/v314_axis_weight_scaling.csv" download>v314_axis_weight_scaling.csv</a></li>
+      <li><a href="./files/v314_pair_square_axis_reference.py" download>v314_pair_square_axis_reference.py</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_PairSquareAxis_RamanujanTail_v3.14_2026-09-03.zip" download>下載完整封包 (11.3 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_PairSquareAxis_RamanujanTail_v3.14_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

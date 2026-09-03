@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Shift Fourier Gap:四點等距 Covariance、Refined Singular Series 與真正 N⁵ Barrier · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="將 v3.5 的位移閘門做真正的四指標展開,追問哪一類指標四元組才真正具有最大組合容量。證明同對角與唯一的共享指標半對角都遠低於目標尺度,因此整個閘門在指數層次等價於一個真正四個指標互異的等距(平行四邊形)covariance。證明配對層級的 singular-series 中心化在四階並不足夠,利用更精細的奇異級數定義四點 covariance 骨幹,並以有限數值樣本說明它一般不為零且會變號。最">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_CenteredShift_FourierGap_v3.6_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-centeredshift-fouriergap-v3.6/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-centeredshift-fouriergap-v3.6/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-centeredshift-fouriergap-v3.6">工程紀錄</a>
+    <span>/</span>
+    <span>Centered Shift Fourier Gap:四點等距 Covariance、Refined Singular Series 與真正 N⁵ Barrier</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.6</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">CENTERED_QUARTIC_GAP_FOUR_DISTINCT_REFINED_SINGULAR_SERIES</span>
+    </div>
+    <h1>Centered Shift Fourier Gap:四點等距 Covariance、Refined Singular Series 與真正 N⁵ Barrier</h1>
+    <p class="h1-sub">將 v3.5 的位移閘門做真正的四指標展開,追問哪一類指標四元組才真正具有最大組合容量。證明同對角與唯一的共享指標半對角都遠低於目標尺度,因此整個閘門在指數層次等價於一個真正四個指標互異的等距(平行四邊形)covariance。證明配對層級的 singular-series 中心化在四階並不足夠,利用更精細的奇異級數定義四點 covariance 骨幹,並以有限數值樣本說明它一般不為零且會變號。最終把問題拆成確定性模型與實際質數偏差兩個獨立、皆未解決的子問題。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">現有的高一致性與幾乎處處結果給出強力的對數或 o(1) 節省,但沒有任何已審核的固定冪次界能涵蓋這個等距四點 covariance。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v3.5,把第一個算術 L² 閘門做真正的四指標展開,問到底哪一類四元組能產生最大尺度。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.5</span><a href="../proto-meansquare-arithmeticgap-v3.5/">Mean-Square Arithmetic Gap:Singular-Series Centering 與第一個真正 Off-Diagonal Power-Saving Gate</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.7</span><a href="../proto-refinedsingularseries-parallelogram-v3.7/">Refined Singular Series Parallelogram:Local Centering Theorem、零 Fourier Mode 消失與 High-Conductor Gap</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v36_quartic_candidate_schema.json" download>v36_quartic_candidate_schema.json</a></li>
+      <li><a href="./files/v36_quartic_decomposition_crosscheck.csv" download>v36_quartic_decomposition_crosscheck.csv</a></li>
+      <li><a href="./files/v36_quartic_gap_reference.py" download>v36_quartic_gap_reference.py</a></li>
+      <li><a href="./files/v36_refined_singular_series_samples.csv" download>v36_refined_singular_series_samples.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_CenteredShift_FourierGap_v3.6_2026-09-03.zip" download>下載完整封包 (14.5 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_CenteredShift_FourierGap_v3.6_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

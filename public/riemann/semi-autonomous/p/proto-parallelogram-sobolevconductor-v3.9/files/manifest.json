@@ -1,0 +1,48 @@
+{
+  "version": "v3.9",
+  "date": "2026-09-03",
+  "status": "UNIFORM_CONDUCTOR_SOBOLEV_FINITE_MODEL_N4_BESICOVITCH_TRANSFER_OPEN",
+  "rh_claim": false,
+  "uniform_finite_q_sobolev": true,
+  "full_fixed_eta_M_positive_proved": false,
+  "max_DeltaG_minus_K_residual": 1.7763568394002505e-14,
+  "max_parseval_residual": 1.4210854715202004e-14,
+  "max_weighted_sbp_residual": 2.9103830456733704e-11,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_Parallelogram_SobolevConductor_v3.9_2026-09-03.md",
+      "sha256": "fc800def360f090c7a622a1218ad705395f23378931fcb43a4357a875c19be48"
+    },
+    {
+      "name": "v39_uniform_sobolev_reference.py",
+      "sha256": "e2e3a7c154deb57fe8c0f9844e8a74d5c3d311974b3fa83b8263660b8e7022d1"
+    },
+    {
+      "name": "v39_sobolev_crosscheck.csv",
+      "sha256": "3e897571e0b597b8b5543c2d79b1349d0d1ee14e738a3db1e317ce920d53b6c6"
+    },
+    {
+      "name": "v39_weighted_summation_by_parts.csv",
+      "sha256": "2c84bbc72b43017035bdeb3c89bd1503ef576713b624bc3cf1c843e2efa89fd7"
+    },
+    {
+      "name": "v39_sobolev_tail_schema.json",
+      "sha256": "d6e4f5e9df97ab7d9c4a79beb7ba663067815e80e2cfbb5b90162b9284a78fc4"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "finite_q_sobolev_checks": true,
+    "analytic_majorant_checks": true,
+    "antiderivative_parseval_check": true,
+    "weighted_summation_by_parts_check": true
+  }
+}

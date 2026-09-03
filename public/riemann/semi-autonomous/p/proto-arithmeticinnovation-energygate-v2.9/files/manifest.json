@@ -1,0 +1,40 @@
+{
+  "version": "v2.9",
+  "date": "2026-09-03",
+  "status": "ARITHMETIC_INNOVATION_ENERGY_GATE",
+  "rh_claim": false,
+  "external_input_dimension": 1,
+  "current_2026_fixed_sigma": 0.5,
+  "max_moment_ibp_residual": 5.773159728050814e-15,
+  "max_energy_to_upper_bound_ratio": 0.00037166869700384014,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_ArithmeticInnovation_EnergyGate_v2.9_2026-09-03.md",
+      "sha256": "50a9e000f4ec57980e3fb028b521f61d4d7d7284ea69d135d7f2939c6879929d"
+    },
+    {
+      "name": "v29_arithmetic_innovation_reference.py",
+      "sha256": "47e94fe5cb535abc157a9ee2a7a6ee0e5e30f5d53c591919b41feb4756069058"
+    },
+    {
+      "name": "v29_innovation_crosscheck.csv",
+      "sha256": "7745a7976dce6de08e58c90b41e80ab293178937d0fdefc9311b5a78501763e3"
+    },
+    {
+      "name": "v29_innovation_lyapunov_schema.json",
+      "sha256": "6643796c139c229658dddf963eec814c9b5cb6fcceb53d3b8e88f7f7bf2c457a"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "moment_ibp_crosscheck": true,
+    "innovation_Hminus1_bound_crosscheck": true
+  }
+}

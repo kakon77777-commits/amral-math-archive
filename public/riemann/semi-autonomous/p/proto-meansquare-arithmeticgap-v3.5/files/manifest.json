@@ -1,0 +1,46 @@
+{
+  "version": "v3.5",
+  "date": "2026-09-03",
+  "status": "ARITHMETIC_MEANSQUARE_GAP_SINGULAR_SERIES_CENTERED",
+  "rh_claim": false,
+  "twin_constant_reference": 0.660162251419913,
+  "max_reconstruction_residual": 1.2834789231419563e-08,
+  "max_fourier_coefficient_residual": 6.984919309616089e-10,
+  "max_cauchy_ratio": 0.016523908167744503,
+  "trivial_shift_variance_exponent": 5,
+  "positive_eta_shift_proved": false,
+  "positive_kappa_proved": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_MeanSquare_ArithmeticGap_v3.5_2026-09-03.md",
+      "sha256": "e3d6ae8995328f6e2a6edfa4d03b3368879ee9b7773337b0ec2345d5fd0ffe62"
+    },
+    {
+      "name": "v35_arithmetic_gap_reference.py",
+      "sha256": "23ec5ccebf83d81daca14e1e90ab5ae05c05b6f6283bb10d45be4930d6ca498d"
+    },
+    {
+      "name": "v35_shift_residual_crosscheck.csv",
+      "sha256": "3655d82a058c732418fa03f6f3267bd108c2ecaa94c537f564547e73f9000236"
+    },
+    {
+      "name": "v35_arithmetic_gap_schema.json",
+      "sha256": "84c0195df7ca6012e95746cdfa1dd327f3904486701df6ca2449607f824b38cf"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "discrete_continuous_identity": true,
+    "diagonal_shift_reconstruction": true,
+    "singular_series_centered_reconstruction": true,
+    "shift_L2_cauchy_check": true,
+    "positive_fourier_coefficient_check": true
+  }
+}

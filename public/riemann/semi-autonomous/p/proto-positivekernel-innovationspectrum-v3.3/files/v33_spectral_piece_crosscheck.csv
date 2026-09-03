@@ -1,0 +1,58 @@
+check,parameter_1,parameter_2,value_1,value_2,residual,note
+B_transfer,0.01,0.0,0.23083694701222823,0.23083694701222823,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.01,0.5,0.22625726688317496,0.22625726688317424,7.2164496600635175e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.01,1.0,0.21300448597964855,0.21300448597964836,1.9428902930940239e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.01,5.0,0.024284613987848997,0.02428461398784899,6.9388939039072284e-18,direct complex transfer vs exact magnitude formula
+B_transfer,0.01,14.134725,0.00037380682135250626,0.00037380682135250632,-5.4210108624275222e-20,direct complex transfer vs exact magnitude formula
+B_transfer,0.01,50.0,2.5473285765213408e-06,2.5473285765213395e-06,1.2705494208814505e-21,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,0.0,0.23102000756826907,0.23102000756826907,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,0.5,0.22643777862785444,0.22643777862785572,-1.27675647831893e-15,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,1.0,0.2131775424619079,0.21317754246190823,-3.3306690738754696e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,5.0,0.024324703285401834,0.024324703285401827,6.9388939039072284e-18,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,14.134725,0.00037469121356714256,0.00037469121356714256,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.1,50.0,2.5533876465305237e-06,2.5533876465305228e-06,8.4703294725430034e-22,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,0.0,0.23199296867843483,0.23199296867843483,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,0.5,0.22739720190465273,0.2273972019046531,-3.6082248300317588e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,1.0,0.21409736722417691,0.21409736722417694,-2.7755575615628914e-17,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,5.0,0.024538107427581973,0.024538107427581973,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,14.134725,0.00037940946000145645,0.00037940946000145645,0,direct complex transfer vs exact magnitude formula
+B_transfer,0.25,50.0,2.5857197183280739e-06,2.5857197183280747e-06,-8.4703294725430034e-22,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,0.0,0.23531176072861357,0.23531176072861359,-2.7755575615628914e-17,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,0.5,0.23066992925510155,0.23066992925510182,-2.7755575615628914e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,1.0,0.21723534923065954,0.21723534923065968,-1.3877787807814457e-16,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,5.0,0.025270190796189931,0.025270190796189935,-3.4694469519536142e-18,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,14.134725,0.00039572778161366703,0.00039572778161366698,5.4210108624275222e-20,direct complex transfer vs exact magnitude formula
+B_transfer,0.49,50.0,2.6976300535382279e-06,2.6976300535382283e-06,-4.2351647362715017e-22,direct complex transfer vs exact magnitude formula
+fixed_band_positive,0.01,0.0,0.22930487909518371,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.01,14.134725,0.00037097315394036618,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.01,50.0,2.4994267879465831e-06,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.01,100.0,1.3374280089365477e-10,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.1,0.0,0.22948708789312608,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.1,14.134725,0.00037185531332821107,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.1,50.0,2.505429304886363e-06,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.1,100.0,1.4138241235864256e-10,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.25,0.0,0.23045552495780641,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.25,14.134725,0.00037656175860526473,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.25,50.0,2.5374607741546835e-06,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.25,100.0,1.8959999341711194e-10,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.49,0.0,0.23375892325648759,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.49,14.134725,0.00039284066455094334,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.49,50.0,2.6483454583724252e-06,,,"window [-0.5,0.5], coefficient must be > 0"
+fixed_band_positive,0.49,100.0,4.5065479333510732e-10,,,"window [-0.5,0.5], coefficient must be > 0"
+moving_band_U4,50.0,,1.6484187791241783e-08,0.10302617369526114,,Xi and U^4 Xi
+moving_band_U4,100.0,,2.849680754537493e-07,28.496807545374931,,Xi and U^4 Xi
+moving_band_U4,200.0,,1.3170565358980647e-08,21.072904574369037,,Xi and U^4 Xi
+moving_band_U4,500.0,,2.3278828428662144e-10,14.54926776791384,,Xi and U^4 Xi
+moving_band_U4,1000.0,,3.9896871991050723e-12,3.9896871991050724,,Xi and U^4 Xi
+resolvent_kernel,1,0.0,1.0000000000000002,1,2.2204460492503131e-16,normalized Fourier kernel
+resolvent_kernel,1,0.2,0.81873075307798315,0.81873075307798182,1.3322676295501878e-15,normalized Fourier kernel
+resolvent_kernel,1,0.7,0.49658530379140875,0.49658530379140953,-7.7715611723760958e-16,normalized Fourier kernel
+resolvent_kernel,1,1.5,0.22313016014843035,0.22313016014842982,5.2735593669694936e-16,normalized Fourier kernel
+resolvent_kernel,2,0.0,1.0000000000000002,1,2.2204460492503131e-16,normalized Fourier kernel
+resolvent_kernel,2,0.2,0.9824769036935781,0.9824769036935781,0,normalized Fourier kernel
+resolvent_kernel,2,0.7,0.84419501644539652,0.84419501644539618,3.3306690738754696e-16,normalized Fourier kernel
+resolvent_kernel,2,1.5,0.55782540037107453,0.55782540037107453,0,normalized Fourier kernel
+resolvent_kernel,3,0.0,1,1,0,normalized Fourier kernel
+resolvent_kernel,3,0.2,0.99339331373461826,0.99339331373461792,3.3306690738754696e-16,normalized Fourier kernel
+resolvent_kernel,3,0.7,0.92530394939799332,0.9253039493979931,2.2204460492503131e-16,normalized Fourier kernel
+resolvent_kernel,3,1.5,0.7251730204823974,0.72517302048239696,4.4408920985006262e-16,normalized Fourier kernel

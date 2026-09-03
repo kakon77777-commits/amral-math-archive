@@ -1,0 +1,39 @@
+{
+  "candidate_type": "RH_ARITHMETIC_INNOVATION_ENERGY_LYAPUNOV",
+  "version": "v2.9",
+  "aperture": "fixed h",
+  "strength": {
+    "sigma": null,
+    "baseline_sigma": 0.5,
+    "breakthrough_condition": "sigma < 0.5",
+    "rh_scale": "sigma = 0"
+  },
+  "state": {
+    "innovation_measure": "dI = weighted prime log measure - exp(t/2) dt",
+    "innovation_primitive": "b(t)",
+    "critical_centered_moments": 14,
+    "energy_state_required": true
+  },
+  "allowed_routes": [
+    "local mean-square innovation bound",
+    "direct Cauchy energy bound",
+    "energy-aware flow/jump Lyapunov"
+  ],
+  "automatic_reject": [
+    "pointwise PNT bound with no fixed-exponent improvement",
+    "innovation magnitude only claiming sigma < 1/2",
+    "zero-density argument allowing one rightmost exceptional zero",
+    "logarithmic/subpower saving promoted as fixed sigma improvement",
+    "finite numerical stability promoted as tail theorem"
+  ],
+  "proof_obligations": {
+    "innovation_centering_exact": "CLOSED",
+    "energy_coercivity": "OPEN_PER_CANDIDATE",
+    "flow_or_work_inequality": "OPEN_PER_CANDIDATE",
+    "event_inequality": "OPEN_PER_CANDIDATE",
+    "sigma_translation": "REQUIRED"
+  },
+  "trust": {
+    "rh_claim": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": "v3.11",
+  "date": "2026-09-03",
+  "status": "ODD_ADDING_FRACTIONS_NO_GAIN_MODULATED_PAIRING_GATE",
+  "rh_claim": false,
+  "direct_odd_route_gain": false,
+  "UMP4_proved": false,
+  "target_UMP4_delta": "1/28",
+  "max_character_delta_residual": 1.4872958600449582e-16,
+  "max_modulation_translation_residual": 1.2415364411417723e-14,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_Parallelogram_AddingFractionsRestriction_v3.11_2026-09-03.md",
+      "sha256": "d36a3b13fe15e0cacd334984dee204905bf356dd08b06f7767188dfdc379ad00"
+    },
+    {
+      "name": "v311_modulation_gate_reference.py",
+      "sha256": "a7802d6d61d4010c6f8d99066a9dd8e7c0c0a53dd14baaec0ebaffb6dd50238d"
+    },
+    {
+      "name": "v311_odd_fraction_no_gain.csv",
+      "sha256": "7fc8ca2281e36053bf3cfd0e0223737812d179bafcd0c9fcbe8c2bcd71d51382"
+    },
+    {
+      "name": "v311_modulation_identity_crosscheck.csv",
+      "sha256": "4f0f686c36f65dfbab7af7cb54b7ed120fbbb114ef645f090c51738259578ec3"
+    },
+    {
+      "name": "v311_modulated_pairing_gate_schema.json",
+      "sha256": "0fe96eac2fafd9e5bc20450dd1fdd634604d2ce84d72a7268633386504170b29"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "finite_character_orthogonality": true,
+    "modulation_translation_identity": true,
+    "odd_theorem_scale_comparison": true
+  }
+}

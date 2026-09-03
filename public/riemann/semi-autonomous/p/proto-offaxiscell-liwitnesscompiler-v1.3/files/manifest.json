@@ -1,0 +1,31 @@
+{
+  "version": "v1.3",
+  "date": "2026-09-02",
+  "status": "CONDITIONAL_EFFECTIVE_WITNESS_COMPILER",
+  "rh_claim": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_OffAxisCell_LiWitnessCompiler_v1.3_2026-09-02.md",
+      "sha256": "6615bb8e89ff115a25ae88c9a5419ccb689b79383d6e6054088cb090cf16d8a9"
+    },
+    {
+      "name": "li_witness_certificate_checker.py",
+      "sha256": "5eb38eb6e4cfbe098c5a14543209fd6ccadef0b0b862280d7dd511a8fc7be17b"
+    },
+    {
+      "name": "certificate_schema_example.json",
+      "sha256": "ed769ac8eb0fb659b4a0e0f2d7ea4bda7c198124bdbbda80e32b485833f1ad17"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "example_is_explicitly_non_evidentiary": true
+  }
+}

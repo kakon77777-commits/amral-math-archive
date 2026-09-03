@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mean-Square Arithmetic Gap:Singular-Series Centering 與第一個真正 Off-Diagonal Power-Saving Gate · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="承接 v3.4 的表示層封閉,正式轉向直接的算術攻擊,固定均方誤差目標。利用離散替代量精確展開出對角加位移聚合項的分解,證明對角項遠低於第一個目標尺度,真正的障礙落在離軸位移聚合項。指出「原始」位移方差不是正確目標,因為其中含有確定性的 Hardy–Littlewood 奇異級數骨幹;扣除此骨幹後定義出中心化位移殘量,並得到兩個充分閘門,其中較強的一個可與 dispersion 等工具介接。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_MeanSquare_ArithmeticGap_v3.5_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-meansquare-arithmeticgap-v3.5/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-meansquare-arithmeticgap-v3.5/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-meansquare-arithmeticgap-v3.5">工程紀錄</a>
+    <span>/</span>
+    <span>Mean-Square Arithmetic Gap:Singular-Series Centering 與第一個真正 Off-Diagonal Power-Saving Gate</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.5</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">ARITHMETIC_MEANSQUARE_GAP_SINGULAR_SERIES_CENTERED</span>
+    </div>
+    <h1>Mean-Square Arithmetic Gap:Singular-Series Centering 與第一個真正 Off-Diagonal Power-Saving Gate</h1>
+    <p class="h1-sub">承接 v3.4 的表示層封閉,正式轉向直接的算術攻擊,固定均方誤差目標。利用離散替代量精確展開出對角加位移聚合項的分解,證明對角項遠低於第一個目標尺度,真正的障礙落在離軸位移聚合項。指出「原始」位移方差不是正確目標,因為其中含有確定性的 Hardy–Littlewood 奇異級數骨幹;扣除此骨幹後定義出中心化位移殘量,並得到兩個充分閘門,其中較強的一個可與 dispersion 等工具介接。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">本節點沒有證明任何正的冪次節省,下一步攻擊是中心化四次 Fourier 缺口本身——正 η 位移界與正 κ 界都尚未證明。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v3.4 的表示層封閉、v2.0、v2.1,固定 arithmetic target 後停止尋找新表示,直接展開均方誤差。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.4</span><a href="../proto-positivekernel-selbergcomparison-v3.4/">Positive Kernel–Selberg Comparison:Elliptic Mean-Square Equivalence 與 Representation Closure</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.6</span><a href="../proto-centeredshift-fouriergap-v3.6/">Centered Shift Fourier Gap:四點等距 Covariance、Refined Singular Series 與真正 N⁵ Barrier</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v35_arithmetic_gap_reference.py" download>v35_arithmetic_gap_reference.py</a></li>
+      <li><a href="./files/v35_arithmetic_gap_schema.json" download>v35_arithmetic_gap_schema.json</a></li>
+      <li><a href="./files/v35_shift_residual_crosscheck.csv" download>v35_shift_residual_crosscheck.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_MeanSquare_ArithmeticGap_v3.5_2026-09-03.zip" download>下載完整封包 (13.5 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_MeanSquare_ArithmeticGap_v3.5_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

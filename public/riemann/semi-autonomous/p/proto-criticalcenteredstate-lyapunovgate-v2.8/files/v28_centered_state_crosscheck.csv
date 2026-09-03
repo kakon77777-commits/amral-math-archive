@@ -1,0 +1,8 @@
+check,parameter,value_1,value_2,value_3,note
+actual_prime_centering,2,3.039268911482016,3.3134534852394584,0.27418457375744243,"max raw-relative-prime, max continuum-backbone, max centered residual"
+actual_prime_centering,4,9.946889999417074,9.006900398370712,0.9399896010463618,"max raw-relative-prime, max continuum-backbone, max centered residual"
+actual_prime_centering,6,23.501086958493172,24.48329368363164,0.9822067251384681,"max raw-relative-prime, max continuum-backbone, max centered residual"
+actual_prime_centering,8,66.58310490420612,66.55249232104201,0.21445931481267166,"max raw-relative-prime, max continuum-backbone, max centered residual"
+actual_prime_centering,10,181.17973169918957,180.90843051494863,0.2713011842409401,"max raw-relative-prime, max continuum-backbone, max centered residual"
+moment_nullspace,8 right-side atoms,2.7755575615628914e-17,0.04795304747977772,,"max 7-moment residual, positive Cauchy energy"
+zero_mode_alignment,rho=0.63+14.134725i,0.12999999999999995,0.13,0.13,"min channel slope, max channel slope, expected beta-1/2"

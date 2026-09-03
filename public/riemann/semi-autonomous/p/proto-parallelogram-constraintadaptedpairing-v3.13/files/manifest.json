@@ -1,0 +1,51 @@
+{
+  "version": "v3.13",
+  "date": "2026-09-03",
+  "status": "CONSTRAINT_ADAPTED_AXIS_AND_2D_MIXED_SOBOLEV",
+  "rh_claim": false,
+  "axis_uniform_sobolev": true,
+  "mixed_uniform_sobolev": false,
+  "mixed_subpower_sobolev": true,
+  "APST_proved": false,
+  "MSTT_proved": false,
+  "eta_M_positive_proved": false,
+  "max_double_sbp_residual": 1.4551915228366852e-11,
+  "max_axis_sbp_residual": 0.0,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_Parallelogram_ConstraintAdaptedPairing_v3.13_2026-09-03.md",
+      "sha256": "18ad2cfcf5e5cd141576cb92acc699fa37b5cc90497f1e8106ddc613a31a6596"
+    },
+    {
+      "name": "v313_constraint_adapted_reference.py",
+      "sha256": "c81ecc7e4a6a99f4d6efcc7feaf9d549588254231e444e4323a719ededaab849"
+    },
+    {
+      "name": "v313_axis_mixed_sobolev_crosscheck.csv",
+      "sha256": "9ec4c819751ac502d8bc28fc9a3a384a48dabc81df1df7536720a05a17a11e0d"
+    },
+    {
+      "name": "v313_double_summation_by_parts.csv",
+      "sha256": "ed87a91264151bd87e4e717211cd506f15b67e390b6f8f693abe2d973bed9cab"
+    },
+    {
+      "name": "v313_axis_2d_gate_schema.json",
+      "sha256": "5eb5fc2e91b069f210d5d70451c045bd1bdca30507681721d94dad65b796ce9a"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "axis_sobolev_crosscheck": true,
+    "mixed_sobolev_crosscheck": true,
+    "double_antiderivative_sbp": true,
+    "axis_antiderivative_sbp": true
+  }
+}

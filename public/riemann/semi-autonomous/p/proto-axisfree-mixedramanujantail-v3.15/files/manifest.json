@@ -1,0 +1,54 @@
+{
+  "version": "v3.15",
+  "date": "2026-09-03",
+  "status": "FULL_DETERMINISTIC_MODEL_FIXED_POWER_CLOSED",
+  "rh_claim": false,
+  "axis_free_exponent": "9/2+epsilon",
+  "axis_free_eta": "1/2",
+  "full_deterministic_exponent": "9/2+epsilon",
+  "eta_M": "1/2",
+  "eta_Q_positive_proved": false,
+  "best_reference_theta": 0.5,
+  "best_reference_exponent": 4.5,
+  "max_shell_reconstruction_residual": 2.6645352591003757e-15,
+  "max_shell_axis_residual": 4.469871095015165e-17,
+  "max_shell_bad_denominator_residual": 0.0,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_AxisFree_MixedRamanujanTail_v3.15_2026-09-03.md",
+      "sha256": "2342e9788ebd99bfd356f5ccc474b5a4578431aee9de839c7daf8662a4a7e8a0"
+    },
+    {
+      "name": "v315_prime_shell_tail_reference.py",
+      "sha256": "a196082fef8187b4df719787bd1dbe43d50dc2637a1095185119cf0bd93ec3dd"
+    },
+    {
+      "name": "v315_prime_shell_crosscheck.csv",
+      "sha256": "061de40a743e6aa460b9bb7448220ac9e03b107df7e1db310641a19dc2540753"
+    },
+    {
+      "name": "v315_deterministic_balance.csv",
+      "sha256": "f188fa931cf4eb6c3c97b954236e702e8e3ecef8032d557673976a4c5f59a574"
+    },
+    {
+      "name": "v315_deterministic_closure_schema.json",
+      "sha256": "3506524e1a2cea4be682b729609d0bc9150cd1f2e6b6b6deaee321a9d9c5db06"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "prime_shell_reconstruction": true,
+    "shell_axis_cancellation": true,
+    "shell_denominator_support": true,
+    "low_high_exponent_balance": true,
+    "four_distinct_discriminant_scope_explicit": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "node": "RH-Parallelogram-SobolevTailTransfer v3.10",
+  "status": {
+    "joint_denominator_le_sqrtN": "CLOSED_AT_N4",
+    "denominator_raw_tail": "Q^(-2+epsilon)",
+    "denominator_sobolev_tail": "Q^(-1+epsilon)",
+    "super_sqrtN_restriction": "OPEN",
+    "full_fixed_eta_M": "OPEN",
+    "actual_prime_deviation": "OPEN"
+  },
+  "canonical_threshold": "Q = sqrt(N)",
+  "canonical_open_gates": {
+    "SRR": "uniform short-rectangle L2 restriction for rational antiderivative partial sums",
+    "STR_delta": "finite-box high-conductor tail with power decay"
+  },
+  "automatic_reject": [
+    "global B2 tail promoted directly to finite-box tail",
+    "standard large sieve above sqrt(N) described as an impossibility theorem",
+    "pair singular-series tail theorem inserted without a 2D refined-parallelogram translation",
+    "logarithmic conductor saving promoted as fixed eta"
+  ],
+  "next_node": "RH-Parallelogram-AddingFractionsRestriction v3.11",
+  "trust": {
+    "rh_claim": false,
+    "SRR_proved": false,
+    "STR_positive_delta_proved": false
+  }
+}

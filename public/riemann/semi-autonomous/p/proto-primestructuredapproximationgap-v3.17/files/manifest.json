@@ -1,0 +1,47 @@
+{
+  "version": "v3.17",
+  "date": "2026-09-03",
+  "status": "PRIME_STRUCTURED_APPROXIMATION_PAIR_ADAPTED_GATE",
+  "rh_claim": false,
+  "deterministic_eta_M": "1/2",
+  "actual_prime_eta_positive_proved": false,
+  "PVAA_proved": false,
+  "PPEU_eta_positive_proved": false,
+  "pair_parseval_residual": -4.263256414560601e-14,
+  "structured_identity_residual": 3.552713678800501e-15,
+  "PVAA_envelope_ratio_reference": 0.341283884523682,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_PrimeStructuredApproximationGap_v3.17_2026-09-03.md",
+      "sha256": "bdb60447bc54220a7d96da1df7bada221cfc0418da377279ffaff630767ac9d1"
+    },
+    {
+      "name": "v317_structured_pair_variance_reference.py",
+      "sha256": "996312593eace75bbf897ceeaa900104e53abff0d8f9b325aaaced2bc5c5c9f9"
+    },
+    {
+      "name": "v317_structured_pair_variance_crosscheck.csv",
+      "sha256": "e86c9d08ee5e3c6c741ded21e92c0172dcc930cc52db159d2a803cdbea30a9d3"
+    },
+    {
+      "name": "v317_pair_adapted_approximation_schema.json",
+      "sha256": "f604f705345d19c865a3e34829f01f66aa88ca9fa45e86e01a778ae34bce74e9"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "pair_parseval_identity": true,
+    "structured_approximation_identity": true,
+    "PVAA_envelope": true,
+    "Selberg_cutoff_audit": true,
+    "PPEU_translation": true
+  }
+}

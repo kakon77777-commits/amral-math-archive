@@ -1,0 +1,38 @@
+{
+  "node": "RH-MeanSquare-ArithmeticGap v3.5",
+  "main_target": "I(X) << X^(3-kappa+o(1))",
+  "gate_A": {
+    "name": "minimal_signed_aggregate",
+    "condition": "|sum_h R_N(h)| << N^(3-kappa+o(1))",
+    "translation": "kappa -> Theta <= 1-kappa/2"
+  },
+  "gate_B": {
+    "name": "centered_shift_L2",
+    "condition": "sum_h |R_N(h)|^2 << N^(5-eta+o(1))",
+    "translation": "kappa=eta/2; Theta <= 1-eta/4"
+  },
+  "gate_C": {
+    "name": "Chou_prime_pair_error_variance",
+    "condition": "E_pair(N) << N^(3-eta)",
+    "translation": "Theta <= 1-eta/2",
+    "source": "Chou-Haag-Huryn-Ledoan, JNT 278 (2026)"
+  },
+  "required_centering": {
+    "sequence": "a_n = Lambda(n)-1",
+    "shift_backbone": "(singular_series(h)-1) W_N(h)"
+  },
+  "automatic_reject": [
+    "raw shift variance without singular-series subtraction",
+    "logarithmic or subpower saving promoted as fixed kappa",
+    "diagonal-only improvement promoted as first strip progress",
+    "zero-density estimate that allows one rightmost exceptional zero",
+    "finite numerical shift cancellation promoted as tail theorem",
+    "new RH-equivalent representation without arithmetic saving"
+  ],
+  "next_node": "RH-CenteredShift-FourierGap v3.6",
+  "trust": {
+    "rh_claim": false,
+    "eta_shift_positive_proved": false,
+    "kappa_positive_proved": false
+  }
+}

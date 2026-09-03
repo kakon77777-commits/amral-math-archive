@@ -1,0 +1,50 @@
+{
+  "version": "v3.14",
+  "date": "2026-09-03",
+  "status": "PAIR_SQUARE_AXIS_APST_CLOSED_FIXED_POWER_AXIS_CLOSED",
+  "rh_claim": false,
+  "APST": "delta=1-o(1)",
+  "axis_weighted_exponent": "17/4+epsilon",
+  "axis_saving_eta": "3/4",
+  "eta_M_positive_proved": false,
+  "eta_Q_positive_proved": false,
+  "max_prime_square_identity_residual": 0.0,
+  "max_finite_axis_expansion_residual": 4.440892098500626e-15,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_PairSquareAxis_RamanujanTail_v3.14_2026-09-03.md",
+      "sha256": "be761c4d0a4d7f5bfa31eb3887ecf4356294510d11b16b64e06b46c264b60545"
+    },
+    {
+      "name": "v314_pair_square_axis_reference.py",
+      "sha256": "c1162bc85ecd995e55ec900678e487a9eb239072863a0f45aa489ba4097fb329"
+    },
+    {
+      "name": "v314_axis_coefficient_crosscheck.csv",
+      "sha256": "50be9d86ca04955e6fa9c490d77ce858a001eeb6e644a7c2f6ff2b02a396cec1"
+    },
+    {
+      "name": "v314_axis_weight_scaling.csv",
+      "sha256": "806c32423b137e9cefa0613e101dcfd2043cca75e872be7f21caef9cac797968"
+    },
+    {
+      "name": "v314_axis_closed_schema.json",
+      "sha256": "0fcb2913e6e4121194a2a0bd9265adc007ac7fbffaec8f02f407d09f617ac937"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "prime_ramanujan_square_identity": true,
+    "finite_prime_axis_expansion": true,
+    "collapsed_weight_scaling": true,
+    "denominator_split_optimization": true
+  }
+}

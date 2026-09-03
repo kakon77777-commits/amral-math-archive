@@ -1,0 +1,39 @@
+{
+  "version": "v2.3",
+  "date": "2026-09-03",
+  "status": "MULTISCALE_RECONSTRUCTION_SENSITIVITY_NORMALIZATION",
+  "rh_claim": false,
+  "corrected_kappa_formula_second_order": "kappa_corrected = kappa_raw - 4 alpha",
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "checks": {
+    "max_raw_multiscale_residual": 8.881784197001252e-16,
+    "max_normalized_multiscale_residual": 4.888450755302642e-15,
+    "last_modal_limit_error": 0.0007231210856978762,
+    "last_tent_normalization_error": 5.208610214246789e-07
+  },
+  "artifacts": [
+    {
+      "name": "RH_SensitivityNormalized_MultiscaleReconstruction_v2.3_2026-09-03.md",
+      "sha256": "281108d082e6dd65f1b56c81c51c39cc6da991f546a74083a8126342e73b3b3c"
+    },
+    {
+      "name": "v23_multiscale_sensitivity_reference.py",
+      "sha256": "642801c75dfc8999dd753f6984a33e79be7a5f242df491d847af153f5f5ea6f3"
+    },
+    {
+      "name": "v23_corrected_kappa_ladder.csv",
+      "sha256": "5d18b529fe966c8bfe31e292a66234fd9b6d325157b7cc29fdd80269181e3ee4"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "multiscale_identity_crosscheck": true,
+    "corrected_kappa_csv_generated": true
+  }
+}

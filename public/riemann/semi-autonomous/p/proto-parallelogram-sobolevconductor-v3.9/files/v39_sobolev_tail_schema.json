@@ -1,0 +1,30 @@
+{
+  "node": "RH-Parallelogram-SobolevConductor v3.9",
+  "status": {
+    "uniform_finite_conductor_sobolev": "CLOSED",
+    "finite_q_le_N_weighted_model": "N^4",
+    "full_B2_antiderivative": "CLOSED_IN_HILBERT_COMPLETION",
+    "full_fixed_eta_M": "OPEN",
+    "actual_prime_deviation": "OPEN"
+  },
+  "main_theorem": "sup_{squarefree q} H_d(q) < infinity",
+  "key_tools": [
+    "Young l^(4/3) convolution inequality",
+    "CRT factorization",
+    "coprime csc^2 / Jordan J_2 identity",
+    "discrete summation by parts",
+    "Besicovitch B^2 weak compactness"
+  ],
+  "automatic_reject": [
+    "finite-q Sobolev growth cited as remaining obstruction",
+    "B2 equality promoted to pointwise equality",
+    "full O(N^4) claimed without quantitative finite-box transfer",
+    "finite q<=N bound promoted directly to infinite-conductor theorem"
+  ],
+  "canonical_open_gap": "quantitative Besicovitch/rational-spectrum to finite-box transfer",
+  "next_node": "RH-Parallelogram-SobolevTailTransfer v3.10",
+  "trust": {
+    "rh_claim": false,
+    "full_eta_M_positive_proved": false
+  }
+}

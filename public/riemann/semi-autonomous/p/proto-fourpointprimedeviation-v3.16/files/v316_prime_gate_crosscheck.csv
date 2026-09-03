@@ -1,0 +1,13 @@
+check,parameter,value_1,value_2,residual,note
+local_FPD_identity,"(0.7, -1.2, 0.4, 2.1, 0.3, -0.8)",0.27439999999999998,0.27439999999999987,1.1102230246251565e-16,pure algebra
+local_FPD_identity,"(1.1, 0.2, -0.6, 0.8, -0.4, 1.7)",-1.5896000000000001,-1.5895999999999999,-2.2204460492503131e-16,pure algebra
+local_FPD_identity,"(-0.3, 2.0, 1.4, -1.1, 0.05, 0.9)",0.13600000000000001,0.13600000000000004,-2.7755575615628914e-17,pure algebra
+endpoint_pair_identity,"j=30,h=2",1.2974900719993805,1.2974900719993823,-1.7763568394002505e-15,Q_j vs r_j-E corrections
+endpoint_pair_identity,"j=35,h=4",-20.417902875615493,-20.417902875615486,-7.1054273576010019e-15,Q_j vs r_j-E corrections
+endpoint_pair_identity,"j=45,h=6",18.397068813180141,18.397068813180137,3.5527136788005009e-15,Q_j vs r_j-E corrections
+endpoint_pair_identity,"j=55,h=10",12.036152334274945,12.03615233427494,5.3290705182007514e-15,Q_j vs r_j-E corrections
+EPV_Cauchy_gate,N=30,6754360.0122961821,7716606.3133438192,0.87530187987124752,value_1 <= value_2; residual column stores ratio
+exponent_translation,eta=0.1,I exponent=2.95,Theta<=0.975,,V exponent=4.9
+exponent_translation,eta=0.25,I exponent=2.875,Theta<=0.9375,,V exponent=4.75
+exponent_translation,eta=0.5,I exponent=2.75,Theta<=0.875,,V exponent=4.5
+exponent_translation,eta=0.75,I exponent=2.625,Theta<=0.8125,,V exponent=4.25

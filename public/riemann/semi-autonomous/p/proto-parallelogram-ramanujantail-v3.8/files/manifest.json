@@ -1,0 +1,53 @@
+{
+  "version": "v3.8",
+  "date": "2026-09-03",
+  "status": "RAMANUJAN_AXIS_CANCELLATION_LIMIT_PERIODIC_SUBPOWER_CLOSURE",
+  "rh_claim": false,
+  "beta_zero_axis": "exactly_zero",
+  "full_deterministic_model": "o(N^5)",
+  "fixed_eta_M_positive_proved": false,
+  "max_coefficient_formula_residual": 9.84891180956361e-16,
+  "max_beta_zero_axis_residual": 0.0,
+  "max_row_mean_residual": 2.935218206056604e-15,
+  "max_alpha_zero_axis_residual": 1.1124819797847743e-16,
+  "max_omega_transform_residual": 1.4665161412810538e-11,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_Parallelogram_RamanujanTail_v3.8_2026-09-03.md",
+      "sha256": "f07266b0d5e1c775ed5cf25435ef54380c1e878f0ccab520ecd95f58f2f9deb7"
+    },
+    {
+      "name": "v38_ramanujan_tail_reference.py",
+      "sha256": "cd2c6a6f714578bf7fa8df739394f18b21007792b01d16555c24f80a82051be2"
+    },
+    {
+      "name": "v38_spectral_axis_crosscheck.csv",
+      "sha256": "ce383ccbeac308d80abac7d6cb00a5db65cb157e1e3e4040014754c1ad63ae73"
+    },
+    {
+      "name": "v38_finite_conductor_sobolev_diagnostics.csv",
+      "sha256": "040203a46036c11411925043c51ec1245d6ce4ea35921ebe33d2f157d1e69408"
+    },
+    {
+      "name": "v38_ramanujan_tail_schema.json",
+      "sha256": "62823d442aba4a9c34f3048fe65d3e59b19995f3f1e95a329f0e4bcfe0af9e1e"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "finite_q_coefficient_formula": true,
+    "entire_beta_zero_axis": true,
+    "rowwise_mean_zero": true,
+    "alpha_zero_axis_identity": true,
+    "omega_transform_formula": true,
+    "finite_q_sobolev_diagnostics": true
+  }
+}

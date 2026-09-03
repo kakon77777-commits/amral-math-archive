@@ -1,0 +1,35 @@
+{
+  "node": "RH-Parallelogram-RamanujanTail v3.8",
+  "status": {
+    "beta_zero_axis": "CLOSED_EXACT",
+    "full_deterministic_model": "o(N^5)",
+    "fixed_eta_M": "OPEN",
+    "actual_prime_deviation": "OPEN"
+  },
+  "exact_spectrum": {
+    "phase": "h alpha + d beta",
+    "surviving_condition": "beta != 0",
+    "alpha_zero_axis": "second pairing channel"
+  },
+  "weight_multiplier": {
+    "exact_formula": "sum_{n<m} w(n)w(m)e((m-n)beta)E_{n-1}(alpha)",
+    "bound": "N^3 M_N(alpha) M_N(beta)"
+  },
+  "candidate_gates": {
+    "PRT_eta": "beta-rational coefficient tail << N^(1-eta+o(1))",
+    "two_dimensional": "sum |Khat| M_N(alpha)M_N(beta) << N^(2-eta+o(1))",
+    "sobolev": "quantitative control of sum |Khat|^2/|1-e(beta)|^2"
+  },
+  "automatic_reject": [
+    "zero total mean treated as fixed eta",
+    "o(N^5) treated as fixed eta",
+    "finite-q Sobolev numerics promoted as uniform theorem",
+    "beta=0 modes reintroduced after pair-square subtraction",
+    "adding-fractions theorem cited without translating to the even four-fraction beta-tail"
+  ],
+  "next_node": "RH-Parallelogram-SobolevConductor v3.9",
+  "trust": {
+    "rh_claim": false,
+    "full_eta_M_positive_proved": false
+  }
+}

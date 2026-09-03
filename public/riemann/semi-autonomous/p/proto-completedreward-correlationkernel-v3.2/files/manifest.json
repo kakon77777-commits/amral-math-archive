@@ -1,0 +1,41 @@
+{
+  "version": "v3.2",
+  "date": "2026-09-03",
+  "status": "COMPLETED_REWARD_STRENGTH_AUDIT_BRANCH_DEPRIORITIZED",
+  "rh_claim": false,
+  "min_phi_on_reference_grid": 2.2701376258256592e-05,
+  "max_direct_vs_convolution_residual": 6.153300091682468e-12,
+  "max_mode_exponent_slope_error": 5.551115123125783e-17,
+  "branch_decision": "deprioritize_as_main_closure_route",
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_CompletedReward_CorrelationKernel_v3.2_2026-09-03.md",
+      "sha256": "bda672fbe4ca6501cd4469bdedb1426090827dce61a12efa88c1d08f5cbffc3f"
+    },
+    {
+      "name": "v32_completed_reward_transfer_reference.py",
+      "sha256": "67bccb8fe3fe2cb6ba82009ceb54f6597772e6d759b59dda292f6ec3a1421c03"
+    },
+    {
+      "name": "v32_transfer_positivity_crosscheck.csv",
+      "sha256": "8419ad227676f454ff68986f4b8ec495d05a25ce5b8c47e551d9cb832e0cd6a2"
+    },
+    {
+      "name": "v32_branch_decision_schema.json",
+      "sha256": "2f1a07b52e30aa2f5b2db6b79d09aca3fef5d8b8403cd43162ed5a71c96e2672"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "strict_transfer_positivity_grid": true,
+    "positive_convolution_crosscheck": true,
+    "mode_exponent_check": true
+  }
+}

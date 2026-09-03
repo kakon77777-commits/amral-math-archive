@@ -1,0 +1,23 @@
+{
+  "node": "RH-PairSquareAxis-RamanujanTail v3.14",
+  "status": {
+    "exact_axis_ramanujan_coefficients": "CLOSED",
+    "APST": "CLOSED_AT_DELTA_1_MINUS_EPSILON",
+    "full_axis_weighted": "N^(17/4+epsilon)",
+    "axis_fixed_saving_eta": "3/4",
+    "axis_main_obstruction": false,
+    "axis_free_2D_tail": "OPEN"
+  },
+  "canonical_split": "Q=N^(3/4)",
+  "automatic_reject": [
+    "axis eta=3/4 promoted to full deterministic eta",
+    "ordinary singular-series sharp tail asymptotic claimed for pair-square tail",
+    "square-summable antiderivative coefficients promoted to absolute convergence"
+  ],
+  "next_node": "RH-AxisFree-MixedRamanujanTail v3.15",
+  "trust": {
+    "rh_claim": false,
+    "eta_M_positive_proved": false,
+    "eta_Q_positive_proved": false
+  }
+}

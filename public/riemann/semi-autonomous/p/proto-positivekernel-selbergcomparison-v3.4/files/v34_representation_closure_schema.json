@@ -1,0 +1,26 @@
+{
+  "node": "RH_PositiveKernel_SelbergComparison_v3.4",
+  "decision": "REPRESENTATION_CLOSURE",
+  "canonical_positive_object": "Cauchy/tent energy p=1",
+  "classical_comparator": "normalized PNT mean square I(X)/X^2",
+  "fixed_exponent_strength": "equivalent",
+  "local_comparison": {
+    "upper": "C_h(t) <= 2(h+1)^2 integral_window |e|^2",
+    "universal_lower": false,
+    "lower_no_go_reason": "local homogeneous mode e'+e/2=0"
+  },
+  "global_comparison": {
+    "full_center_two_sided": true,
+    "exponentially_weighted_two_sided": true,
+    "symbol": "S_h(xi)=(xi^2+1/4) Hhat_h(xi)"
+  },
+  "autonomous_reject": [
+    "new RH-equivalent positive representation without arithmetic strength gain",
+    "short-interval saving without aperture normalization",
+    "numerical symbol bounds promoted as arithmetic progress"
+  ],
+  "next_target": "I(X) << X^(3-kappa+o(1)) for some kappa>0",
+  "trust": {
+    "rh_claim": false
+  }
+}

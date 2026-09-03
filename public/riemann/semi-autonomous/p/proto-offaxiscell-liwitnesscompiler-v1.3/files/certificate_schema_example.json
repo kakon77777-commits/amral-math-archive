@@ -1,0 +1,10 @@
+{
+  "_warning": "SCHEMA EXAMPLE ONLY — NOT ZETA DATA AND NOT AN RH COUNTEREXAMPLE.",
+  "n": 10,
+  "K": 1,
+  "R_lower": "1.01",
+  "R2_upper": "1.005",
+  "cosine_sum_lower": "0.5",
+  "zero_count_upper": 100,
+  "Z2_upper": "0.01"
+}

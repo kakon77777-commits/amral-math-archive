@@ -1,0 +1,39 @@
+{
+  "version": "v1.7",
+  "date": "2026-09-02",
+  "status": "MEAN_ENERGY_BRIDGE_FINITE_RANGE_PAIR_FORM",
+  "rh_claim": false,
+  "finite_global_problem": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "sample_blocks": 8,
+  "max_tent_kernel_numeric_residual": 1.7761311865704954e-10,
+  "artifacts": [
+    {
+      "name": "RH_LocalPrime_MeanEnergyBridge_v1.7_2026-09-02.md",
+      "sha256": "28676f014576e962f238585bda85a95b6cadfa499d9431dd8b67f47c7cbccd9a"
+    },
+    {
+      "name": "local_prime_energy_reference.py",
+      "sha256": "8fcacd2a884fbd4a64cd8a0436dd371858840562482598e65089215a0939cb11"
+    },
+    {
+      "name": "v17_sample_block_energies.csv",
+      "sha256": "bc34d179f758ec9080eb3c2042be11fcfae62ae63717aa84e5ffdc288091eae3"
+    },
+    {
+      "name": "local_prime_energy_certificate_schema.json",
+      "sha256": "74fee45945e3ca2193eb3f86619a580d55211c3197f11c03c9829d78c469e1fa"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "sample_energy_csv_generated": true,
+    "tent_kernel_numeric_crosscheck": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "node": "RH-AxisFree-MixedRamanujanTail v3.15",
+  "status": {
+    "axis_free_fixed_power": "CLOSED",
+    "axis_free_exponent": "9/2+epsilon",
+    "axis_free_eta": "1/2",
+    "full_deterministic_exponent": "9/2+epsilon",
+    "full_deterministic_eta_M": "1/2",
+    "actual_prime_deviation": "OPEN"
+  },
+  "canonical_split": "Q=N^(1/2)",
+  "proof_architecture": {
+    "low": "prime-set shells + mixed Sobolev + product Farey large sieve",
+    "high": "Euler-product shell pointwise tail using collision discriminant"
+  },
+  "automatic_reject": [
+    "deterministic eta_M promoted to full quartic eta_Q",
+    "Euler-shell tail applied to actual prime deviation",
+    "axis-free N^(9/2) bound claimed as a zero-strip theorem"
+  ],
+  "next_node": "RH-FourPointPrimeDeviation v3.16",
+  "trust": {
+    "rh_claim": false,
+    "eta_M": "1/2",
+    "eta_Q_positive_proved": false
+  }
+}

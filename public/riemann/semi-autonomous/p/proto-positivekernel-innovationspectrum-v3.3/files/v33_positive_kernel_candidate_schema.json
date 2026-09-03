@@ -1,0 +1,28 @@
+{
+  "candidate_type": "RH_POSITIVE_SPECTRAL_KERNEL",
+  "version": "v3.3",
+  "required_fields": {
+    "weight_family": null,
+    "fixed_or_T_dependent": null,
+    "spectral_center_U_of_T": null,
+    "raw_energy_exponent_beta": null,
+    "zero_sensitivity_tax_chi": null,
+    "corrected_beta": null
+  },
+  "automatic_reject": [
+    "fixed positive piece claimed weaker only because coefficient is small",
+    "moving high-frequency saving without spectral sensitivity correction",
+    "Littlewood-Paley piece promoted as exponent ladder without zero-transfer audit",
+    "higher resolvent order promoted as weaker theorem solely due stronger smoothing"
+  ],
+  "canonical_fixed_weight": {
+    "family": "omega_p = c_p (1+tau^2)^(-p)",
+    "allowed_p": "p > 1/2",
+    "preferred_engineering_p": 1
+  },
+  "trust": {
+    "rh_claim": false,
+    "compact_window_full_equivalence_claimed": false,
+    "polynomial_tail_hierarchy_reduction_claimed": true
+  }
+}

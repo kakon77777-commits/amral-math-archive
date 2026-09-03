@@ -1,0 +1,1 @@
+cc35a8fe0ade1cf49aa791580a7f875b167ba8f2f1db9c0bab8fe85eec8962e8  RH_GlobalQuantifier_PrimePowerConvexCompression_v1.2_2026-09-02.md

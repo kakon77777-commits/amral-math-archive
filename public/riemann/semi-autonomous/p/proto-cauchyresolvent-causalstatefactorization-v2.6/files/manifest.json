@@ -1,0 +1,36 @@
+{
+  "version": "v2.6",
+  "date": "2026-09-03",
+  "status": "CAUSAL_FACTORIZATION_FOUR_STATE_TRANSFER",
+  "rh_claim": false,
+  "state_dimension": 4,
+  "event_complexity": "O(N) per fixed t",
+  "max_actual_source_pair_residual": 2.9388297351218284e-13,
+  "max_lift_matrix_residual": 1.1102230246251565e-16,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_CauchyResolvent_CausalStateFactorization_v2.6_2026-09-03.md",
+      "sha256": "a003d8af5158fad7b9887c1a5cd95627e65e9eb399e552aa9c0d02b86ea013c2"
+    },
+    {
+      "name": "v26_causal_state_reference.py",
+      "sha256": "6741ff058bcbea9bca0ef8b9bfb87871669eeb0cf5c2684be2efff19b3fc9e6c"
+    },
+    {
+      "name": "v26_actual_local_source_crosscheck.csv",
+      "sha256": "8a2ae25970dee6fc1d427a8d4596c4d565ae5a7dda4cb89f31320307b140ae17"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "actual_source_pair_crosscheck": true,
+    "four_state_matrix_crosscheck": true
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>偏軸 Cell 到有限 Li 負證人的條件式有效編譯器 · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="先做一次外部文獻校正:發現 v1.2 的質數冪凸性化簡與 2026 年 8 月公開的 Prime-Power Checkpoint 系列高度重疊,主動把該部分重新標記為「獨立再推導」而非原創定理,避免在已高度發展的路線上重複工作。核心新結果是:若某個偏軸 rational cell 的佔用性已被嚴格證實,則可演算法式地編譯出一個有限、可重播、可獨立驗證的 Li 係數負值證書——這不是尋找偏軸零點本">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_OffAxisCell_LiWitnessCompiler_v1.3_2026-09-02.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-offaxiscell-liwitnesscompiler-v1.3/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-offaxiscell-liwitnesscompiler-v1.3/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-offaxiscell-liwitnesscompiler-v1.3">工程紀錄</a>
+    <span>/</span>
+    <span>偏軸 Cell 到有限 Li 負證人的條件式有效編譯器</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v1.3</span>
+      <span class="tag">2026-09-02</span>
+      <span class="status">CONDITIONAL_EFFECTIVE_WITNESS_COMPILER</span>
+    </div>
+    <h1>偏軸 Cell 到有限 Li 負證人的條件式有效編譯器</h1>
+    <p class="h1-sub">先做一次外部文獻校正:發現 v1.2 的質數冪凸性化簡與 2026 年 8 月公開的 Prime-Power Checkpoint 系列高度重疊,主動把該部分重新標記為「獨立再推導」而非原創定理,避免在已高度發展的路線上重複工作。核心新結果是:若某個偏軸 rational cell 的佔用性已被嚴格證實,則可演算法式地編譯出一個有限、可重播、可獨立驗證的 Li 係數負值證書——這不是尋找偏軸零點本身,純粹是把「幾何反例」接到「算術負證人」的介面,從存在性升級為條件式有效構造。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">只建立「若偏軸零點被嚴格證實,則可有效編譯出有限負證人」的條件句;目前沒有已知的偏軸 cell 被證實佔用,編譯器目前沒有輸入可以運行。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">修正 v1.2 的原創性宣稱為「獨立再推導/外部對齊」,並直接沿用 v1.1 的偏軸 cell 與 v1.2 的有限高度化簡。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v1.2</span><a href="../proto-globalquantifier-primepower-convexcompression-v1.2/">全域量詞壓縮:有限高度 Li 極值與質數冪凸最小值判準</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v1.4</span><a href="../proto-weilcheckpoint-greendiagonalbridge-v1.4/">Weil 正錐、Suzuki 對角脊線與 Recovery-Witness Schur Reserve</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/certificate_schema_example.json" download>certificate_schema_example.json</a></li>
+      <li><a href="./files/li_witness_certificate_checker.py" download>li_witness_certificate_checker.py</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_OffAxisCell_LiWitnessCompiler_v1.3_2026-09-02.zip" download>下載完整封包 (11.6 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_OffAxisCell_LiWitnessCompiler_v1.3_2026-09-02.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

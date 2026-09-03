@@ -1,0 +1,11 @@
+type,parameter,pair_mean,pair_second_mean,triple_mean,parallelogram_four_mean,K4_mean_or_fft00,max_abs_K4,note
+prime_local,2,1,2,1,2,,,expected second/four mean = 2
+prime_local,3,1,9/8,1,9/8,,,expected second/four mean = 9/8
+prime_local,5,1,65/64,1,65/64,,,expected second/four mean = 65/64
+prime_local,7,1,217/216,1,217/216,,,expected second/four mean = 217/216
+prime_local,11,1,1001/1000,1,1001/1000,,,expected second/four mean = 1001/1000
+prime_local,13,1,1729/1728,1,1729/1728,,,expected second/four mean = 1729/1728
+finite_modulus,2,,,,,mean=0; fft00=0,0,finite q mean-zero / zero Fourier mode check
+finite_modulus,6,,,,,mean=-6.846375318521799e-16; fft00=-6.6613381477509392e-16,4.2499999999999964,finite q mean-zero / zero Fourier mode check
+finite_modulus,30,,,,,mean=-9.5084434153452289e-16; fft00=-9.8489118095636102e-16,9.8281249999999893,finite q mean-zero / zero Fourier mode check
+finite_modulus,210,,,,,mean=-9.5393584691828651e-16; fft00=-9.5768190555919851e-16,19.314344618055546,finite q mean-zero / zero Fourier mode check

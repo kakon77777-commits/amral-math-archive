@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallelogram Ramanujan Tail:整條 Spectral Axis 消失、Limit-Periodic Subpower Closure 與 High-Conductor Quantitative Gap · 半自主研究 · 黎曼猜想 · AMRAL</title>
+<meta name="description" content="把 v3.7「單一零模消失」大幅加強為「整條頻譜軸消失」:利用有理頻率展開,證明對每個有限模數與每個頻率,骨幹的 Fourier 變換皆為零——即每一個固定位移的列在另一方向平均皆為零,而不只是常數項。並利用極限週期論證證明局部 Euler 乘積誤差可加總收斂,最終得到完整模型的 subpower closure:完整確定性模型沒有持續的主項。但特別強調此結果與仍存在冪次節省的情形相容,並不代表任">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="./files/RH_Parallelogram_RamanujanTail_v3.8_2026-09-03.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-parallelogram-ramanujantail-v3.8/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/riemann/semi-autonomous/p/proto-parallelogram-ramanujantail-v3.8/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">關於</a>
+  <a class="link" href="../../../../methodology/">方法論</a>
+  <a class="link" href="../../../../protocols/">研究協議</a>
+  <a class="link" href="../../../../validation/">驗證</a>
+  <a class="link" href="../../../../research-modes/">自主模式</a>
+  <a class="link" href="../../../../data-access/">資料存取</a>
+  <a class="link active" href="../../../">黎曼猜想</a>
+  <a class="link" href="../../../../moser/">Moser 蟲問題</a>
+  <a class="link" href="../../../../skew-field/">歪度場</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../../../../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../../../../bsd/">BSD 猜想</a>
+  <a class="link" href="../../../../cpl/">臨界線比例梯</a>
+  <a class="link" href="../../../../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../../../../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../../../../collatz/">考拉茲猜想</a>
+  <a class="link" href="../../../../csm/">CSM 閉包空間數學論</a>
+  <a class="link" href="../../../../amrr/">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← 半自主研究</a>
+    <span>/</span>
+    <a href="../../#proto-parallelogram-ramanujantail-v3.8">工程紀錄</a>
+    <span>/</span>
+    <span>Parallelogram Ramanujan Tail:整條 Spectral Axis 消失、Limit-Periodic Subpower Closure 與 High-Conductor Quantitative Gap</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">工程紀錄</span>
+      <span class="tag">v3.8</span>
+      <span class="tag">2026-09-03</span>
+      <span class="status">RAMANUJAN_AXIS_CANCELLATION_LIMIT_PERIODIC_SUBPOWER_CLOSURE</span>
+    </div>
+    <h1>Parallelogram Ramanujan Tail:整條 Spectral Axis 消失、Limit-Periodic Subpower Closure 與 High-Conductor Quantitative Gap</h1>
+    <p class="h1-sub">把 v3.7「單一零模消失」大幅加強為「整條頻譜軸消失」:利用有理頻率展開,證明對每個有限模數與每個頻率,骨幹的 Fourier 變換皆為零——即每一個固定位移的列在另一方向平均皆為零,而不只是常數項。並利用極限週期論證證明局部 Euler 乘積誤差可加總收斂,最終得到完整模型的 subpower closure:完整確定性模型沒有持續的主項。但特別強調此結果與仍存在冪次節省的情形相容,並不代表任何固定冪次節省已被證明。</p>
+    <div class="claim-box">
+      RH_CLAIM = False
+      <span class="note">不代表任何固定的正冪次節省已被證明——這個界與更弱的漸近形式相容,因此尚未關閉 v3.6 提出的閘門 B。</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">連接 · Connections</h2>
+    <p class="section-note">承接 v3.7 已證的單一零模消失,大幅加強為對每個有理頻率都成立。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">上一節點 · v3.7</span><a href="../proto-refinedsingularseries-parallelogram-v3.7/">Refined Singular Series Parallelogram:Local Centering Theorem、零 Fourier Mode 消失與 High-Conductor Gap</a></div>
+      <div class="conn-card"><span class="k">下一節點 · v3.9</span><a href="../proto-parallelogram-sobolevconductor-v3.9/">Parallelogram Sobolev Conductor:Uniform d-Antiderivative Bound、Finite-Conductor N⁴ Scale 與 Besicovitch Transfer Gap</a></div>
+    </div>
+  </section>
+
+  <section id="doc-main">
+    <h2 class="doc-h2">技術說明</h2>
+    <div class="doc" id="doc-tech"><p class="loading">載入中…</p></div>
+  </section>
+
+  <section id="files">
+    <h2 class="doc-h2">檔案 · Files</h2>
+    <p class="section-note">參考程式、交叉核對資料與 schema,原樣列出。</p>
+    <ul class="filelist">
+      <li><a href="./files/SHA256SUMS.txt" download>SHA256SUMS.txt</a></li>
+      <li><a href="./files/manifest.json" download>manifest.json</a></li>
+      <li><a href="./files/v38_finite_conductor_sobolev_diagnostics.csv" download>v38_finite_conductor_sobolev_diagnostics.csv</a></li>
+      <li><a href="./files/v38_ramanujan_tail_reference.py" download>v38_ramanujan_tail_reference.py</a></li>
+      <li><a href="./files/v38_ramanujan_tail_schema.json" download>v38_ramanujan_tail_schema.json</a></li>
+      <li><a href="./files/v38_spectral_axis_crosscheck.csv" download>v38_spectral_axis_crosscheck.csv</a></li>
+    </ul>
+    <a class="zip-dl" href="../../packages/AMRAL_RH_Parallelogram_RamanujanTail_v3.8_2026-09-03.zip" download>下載完整封包 (13.5 KB)</a>
+  </section>
+
+  <footer class="sitefoot">
+    <p>半自主軌道逐包詳細頁。<a href="../../">回半自主研究</a></p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc-tech");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("./files/RH_Parallelogram_RamanujanTail_v3.8_2026-09-03.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">載入失敗:${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

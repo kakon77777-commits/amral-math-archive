@@ -1,0 +1,43 @@
+{
+  "node": "RH-CenteredShift-FourierGap v3.6",
+  "canonical_gate": {
+    "name": "QEGC_eta",
+    "object": "genuine four-distinct equal-gap covariance Q_N",
+    "condition": "|Q_N| << N^(5-eta+o(1))",
+    "range": "0 < eta < 1",
+    "translation": {
+      "shift_variance": "V_N << N^(5-eta+o(1))",
+      "PNT_mean_square": "I(N) << N^(3-eta/2+o(1))",
+      "zero_strip": "Theta <= 1-eta/4"
+    }
+  },
+  "quartic_partition": {
+    "same_pair_diagonal": "O(N^(4+o(1)))",
+    "shared_index_semidiagonal": "O(N^(4+o(1)))",
+    "genuine_four_distinct": "only N^5-capable family"
+  },
+  "model_aware_gate": {
+    "offsets": "{0,h,d,d+h}",
+    "refined_singular_series": "S0",
+    "covariance_backbone": "K4(h,d)=S0(0,h,d,d+h)-(S(h)-1)^2",
+    "required_subtasks": [
+      "bound constrained refined-singular-series aggregate M_4,N",
+      "bound actual prime deviation E_4,N"
+    ]
+  },
+  "automatic_reject": [
+    "diagonal-only quartic improvement",
+    "semi-diagonal-only quartic improvement",
+    "pair centering treated as four-point independence",
+    "generic four-tuple singular-series average applied directly to parallelogram tuples",
+    "logarithmic N^5/log^A saving promoted as fixed eta",
+    "large-value or zero-density theorem with no Q_N translation",
+    "finite N^4 log^2 numerical behavior promoted as theorem"
+  ],
+  "next_node": "RH-RefinedSingularSeries-Parallelogram v3.7",
+  "trust": {
+    "rh_claim": false,
+    "eta_Q_positive_proved": false,
+    "K4_sample_is_numerical_only": true
+  }
+}

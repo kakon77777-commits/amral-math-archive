@@ -1,0 +1,34 @@
+{
+  "version": "v2.0",
+  "date": "2026-09-03",
+  "status": "METHOD_STRENGTH_AUDIT_EXPONENTIAL_CLASS_GAP",
+  "rh_claim": false,
+  "current_unconditional_energy_exponent": 1,
+  "rh_energy_exponent": 0,
+  "first_progress_gate": "any rigorous fixed exponent beta < 1",
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_FilteredPNT_GallagherStrengthAudit_v2.0_2026-09-03.md",
+      "sha256": "21ed01fe44e8165f1d5f0b52b7fc2e6478ac5402c8e4e38ac321ac194e57ae3a"
+    },
+    {
+      "name": "v20_strength_gate_reference.py",
+      "sha256": "0e981eb444af1ae2acb69e2a44988701fc8d856186934d9dc75d866aa24ff3a2"
+    },
+    {
+      "name": "v20_strength_ladder.csv",
+      "sha256": "b96574bf832417e270e8be9ca3d6542017c49b208c395afd92c652f0bd9e74fc"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "strength_ladder_csv_generated": true
+  }
+}

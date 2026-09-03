@@ -1,0 +1,2 @@
+cd6f960e0c7083fbaa466ace865fccef1dcb4186aa68d588b7c9d852efaad4db  RH_WeilCheckpoint_GreenDiagonalBridge_v1.4_2026-09-02.md
+b468e0049f0e0f715aee779d8fe57fb5ee50f500eb57ee318a77ba353baae3d9  checkpoint_schur_certificate_schema.json

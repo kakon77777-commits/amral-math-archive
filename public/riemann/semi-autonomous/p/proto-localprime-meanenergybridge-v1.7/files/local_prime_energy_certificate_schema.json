@@ -1,0 +1,44 @@
+{
+  "_warning": "SCHEMA ONLY. Finite energy prefixes do not prove RH.",
+  "certificate_type": "RH_LOCAL_PRIME_MEAN_ENERGY_PREFIX",
+  "aperture": {
+    "h_interval": [
+      "",
+      ""
+    ],
+    "mode": "GENERAL|DYADIC"
+  },
+  "range": {
+    "t_start": "",
+    "t_end": "",
+    "prime_power_cutoff_upper": ""
+  },
+  "finite_data": {
+    "prime_power_count": 0,
+    "prime_power_hash": "",
+    "event_count": 0
+  },
+  "energy": {
+    "block_energy_intervals": [],
+    "cumulative_energy_interval": [
+      "",
+      ""
+    ],
+    "normalized_energy_interval": [
+      "",
+      ""
+    ]
+  },
+  "pair_kernel": {
+    "interaction_radius_log": "",
+    "pair_count": 0,
+    "pair_quadratic_artifact": ""
+  },
+  "trust": {
+    "rounding_mode": "",
+    "precision_bits": 0,
+    "implementation_hash": "",
+    "source_hash": "",
+    "verdict": "FINITE_PREFIX_ONLY"
+  }
+}

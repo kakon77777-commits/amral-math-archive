@@ -1,0 +1,46 @@
+{
+  "version": "v3.16",
+  "date": "2026-09-03",
+  "status": "ACTUAL_PRIME_DEVIATION_ENDPOINT_PAIR_VARIANCE_GATE",
+  "rh_claim": false,
+  "deterministic_eta_M": "1/2",
+  "actual_prime_eta_positive_proved": false,
+  "EPV_eta_positive_proved": false,
+  "FPD_eta_positive_proved": false,
+  "max_local_FPD_identity_residual": 2.220446049250313e-16,
+  "max_endpoint_identity_residual": 7.105427357601002e-15,
+  "EPV_gate_ratio_reference": 0.8753018798712475,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_FourPointPrimeDeviation_v3.16_2026-09-03.md",
+      "sha256": "24371df50078c93f0ab9ca14de30ebe199942e1820d56e80d66d8d3e803b7446"
+    },
+    {
+      "name": "v316_prime_deviation_reference.py",
+      "sha256": "6a62683e18465bcbbb1c46bdafb72b23a1b6872d0869fb9d350cea60a01e4e23"
+    },
+    {
+      "name": "v316_prime_gate_crosscheck.csv",
+      "sha256": "3ae99850cdbac08d76b14a7bd011b1d0f40a5fde52c1d37738d9be0edf17509c"
+    },
+    {
+      "name": "v316_prime_deviation_gate_schema.json",
+      "sha256": "17b8d1bc08907aff02016a9bfd0f1a67f501105a03d447a3c0c119a6523caec1"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "local_FPD_identity": true,
+    "endpoint_pair_identity": true,
+    "EPV_Cauchy_gate": true,
+    "exponent_translation": true
+  }
+}

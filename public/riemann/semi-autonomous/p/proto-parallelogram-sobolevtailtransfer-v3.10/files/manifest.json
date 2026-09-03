@@ -1,0 +1,44 @@
+{
+  "version": "v3.10",
+  "date": "2026-09-03",
+  "status": "LOW_CONDUCTOR_RESTRICTION_CLOSED_SQRT_N_THRESHOLD_HIGH_CONDUCTOR_OPEN",
+  "rh_claim": false,
+  "joint_denominator_sqrtN_closed": true,
+  "SRR_proved": false,
+  "STR_positive_delta_proved": false,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_Parallelogram_SobolevTailTransfer_v3.10_2026-09-03.md",
+      "sha256": "280ee89889c4b220d472c28bbc068dd97e8b8135fff6989b249e5597b80aa7b8"
+    },
+    {
+      "name": "v310_restriction_threshold_reference.py",
+      "sha256": "15230c30dbdeaeaba46017b6ce7be18828ec1a62b5b21849885822b59f9f03b6"
+    },
+    {
+      "name": "v310_denominator_slice_diagnostics.csv",
+      "sha256": "e0c5aeac25bd3eb133d7d016886c9792fd187885796d33a635e69e3e652cb569"
+    },
+    {
+      "name": "v310_large_sieve_threshold_checks.csv",
+      "sha256": "3a5d0c65579933e7ac8254c3711a8db878a6d391b0bc0759487d12ed27f2dfb4"
+    },
+    {
+      "name": "v310_restriction_gate_schema.json",
+      "sha256": "d51ba29359a004ede87296c696589fa1f6e3886e56678b54074d19ba5bf0dfbc"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "canonical_source_no_chat_citations": true,
+    "python_syntax": true,
+    "denominator_slice_diagnostics": true,
+    "product_large_sieve_diagnostics": true
+  }
+}

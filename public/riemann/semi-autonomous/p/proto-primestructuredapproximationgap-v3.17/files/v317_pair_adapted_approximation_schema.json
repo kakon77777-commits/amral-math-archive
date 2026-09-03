@@ -1,0 +1,28 @@
+{
+  "node": "RH-PrimeStructuredApproximationGap v3.17",
+  "status": {
+    "PVAA": "OPEN",
+    "PPEU_eta_positive": "OPEN",
+    "deterministic_eta_M": "1/2",
+    "actual_prime_eta_positive": false
+  },
+  "approximation_audit": {
+    "Lambda_sharp": "log-power pseudorandom control; subpolynomial structured cutoff",
+    "Selberg_Lambda_R": "polynomial cutoff but residual L2 energy N log(N/R)"
+  },
+  "canonical_pair_energies": {
+    "M": "|| |A|^2 - V ||_2^2",
+    "X": "integral |A|^2 |B|^2",
+    "U": "||B||_4^4"
+  },
+  "strong_gate": {
+    "name": "PPEU_eta",
+    "formula": "E_pair(x) << x^(3-eta+o(1))",
+    "direct_zero_strip": "Theta <= 1-eta/2"
+  },
+  "next_node": "RH-CharacterMajorArcVariance v3.18",
+  "trust": {
+    "rh_claim": false,
+    "eta_Q_positive_proved": false
+  }
+}

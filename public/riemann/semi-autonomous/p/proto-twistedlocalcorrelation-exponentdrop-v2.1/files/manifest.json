@@ -1,0 +1,36 @@
+{
+  "version": "v2.1",
+  "date": "2026-09-03",
+  "status": "VARIANCE_SAVING_CONVERTER_TWISTED_LOCAL_CORRELATION_GATE",
+  "rh_claim": false,
+  "current_unconditional_kappa_fixed_power": 0,
+  "first_fixed_strip_gate": "kappa > 0",
+  "rh_exponent_gate": "kappa = 1 at fixed multiplicative aperture",
+  "max_twisted_main_numeric_residual": 1.7870885412391372e-10,
+  "encoding": "UTF-8",
+  "canonical_math_delimiters": [
+    "$...$",
+    "$$...$$"
+  ],
+  "artifacts": [
+    {
+      "name": "RH_TwistedLocalCorrelation_ExponentDrop_v2.1_2026-09-03.md",
+      "sha256": "bbb9f3961ee1c17aec5708f91f862f6f173352d37c199b563e31787e6ed4744f"
+    },
+    {
+      "name": "v21_variance_saving_converter.py",
+      "sha256": "e25be126b2264373f566d9c3cf4050bcf778f7c025e0e644c8b4637d22edf465"
+    },
+    {
+      "name": "v21_power_saving_strip_ladder.csv",
+      "sha256": "81639e799a3774515b8811dd1ebc2e71d0c49e15b4c4cfa59eaf9fcbd26700d0"
+    }
+  ],
+  "validation": {
+    "utf8_readback": true,
+    "canonical_latex_delimiters": true,
+    "python_syntax": true,
+    "twisted_main_factor_crosscheck": true,
+    "strength_ladder_csv_generated": true
+  }
+}
