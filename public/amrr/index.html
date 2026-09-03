@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMRR 自主數學研究 Runtime · AMRAL</title>
+<meta name="description" content="AMRAL 案例:AMRR(Autonomous Mathematical Research Runtime,自主數學研究 Runtime)。四篇論文 + 技術白皮書,提出 Mathematical Domain Gap Map(13 域問題診斷)、Constrained Mathematical Domain Completion(受約束數學域補全)、Problem Identity Protocol(禁止偷換問題)三套機制,疊加在通用認知 runtime ACR 之上。本站獨立查核:M0–M2(schema 凍結、狀態轉接、版本化儲存)已真正實作並有測試佐證,但 M3–M11(診斷、修補、驗證、持續研究迴圈)九個階段完全沒有程式碼。">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/amrr/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/amrr/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../">AMRAL</a>
+  <a class="link" href="../about/">關於</a>
+  <a class="link" href="../methodology/">方法論</a>
+  <a class="link" href="../protocols/">研究協議</a>
+  <a class="link" href="../validation/">驗證</a>
+  <a class="link" href="../research-modes/">自主模式</a>
+  <a class="link" href="../data-access/">資料存取</a>
+  <a class="link" href="../riemann/">黎曼猜想</a>
+  <a class="link" href="../moser/">Moser 蟲問題</a>
+  <a class="link" href="../skew-field/">歪度場</a>
+  <a class="link" href="../p-np-dual/">P/NP 對偶預演</a>
+  <a class="link" href="../glc-framework/">GLC 閉合框架</a>
+  <a class="link" href="../bsd/">BSD 猜想</a>
+  <a class="link" href="../cpl/">臨界線比例梯</a>
+  <a class="link" href="../ccm/">CCM 計算複合方法論</a>
+  <a class="link" href="../ns/">NS 納維-斯托克斯</a>
+  <a class="link" href="../collatz/">考拉茲猜想</a>
+  <a class="link" href="../csm/">CSM 閉包空間數學論</a>
+  <a class="link active" href="./">AMRR 自主數學研究 Runtime</a>
+</div></nav>
+<div class="wrap">
+  <header class="page">
+    <p class="eyebrow"><a href="../">← AMRAL</a> · PROGRAM-AMRR</p>
+    <h1>AMRR 自主數學研究 Runtime</h1>
+    <p class="subtitle">Autonomous Mathematical Research Runtime · 四篇論文 + 技術白皮書</p>
+    <p class="lede">
+      跟 CSM 一樣,AMRR 不是攻打某一個具體猜想,而是一套關於「AI 怎麼自主進行數學研究」的方法論與可執行架構——
+      但 CSM 處理的是研究狀態本身該怎麼組織成可驗證的閉包空間,AMRR 處理的是更下游的問題:一個系統要具備哪些
+      機制,才能在問題本身不完整、定義有缺口、方法不足時,自己診斷缺的是什麼、在受約束條件下補出缺失數學、
+      並證明自己沒有偷偷把問題換掉。核心提出三套機制:<strong>Mathematical Domain Gap Map</strong>
+      (把研究卡住的原因拆成 13 個獨立域)、<strong>Constrained Mathematical Domain Completion, CMDC</strong>
+      (受約束數學域補全,每次生成都要背負對應數學義務)、<strong>Problem Identity Protocol</strong>
+      (禁止「數學洗白」——把加了假設證出的結果報告成證出原問題)。三者疊加在 ACR(Addressable Cognitive Runtime,
+      一個更通用、獨立、已有自己 6 篇理論與 MVP 的認知 runtime)之上,合起來定義 AMRR。
+    </p>
+    <p class="notice">
+      <strong>誠實的工程進度</strong>:AMRR 規劃了 M0 到 M11 共 12 個實作階段。本站直接查核了與四篇論文、白皮書
+      同批交付的程式碼——獨立重新實作雜湊演算法、獨立驗證所有 schema 與範例、逐一核對 SHA-256,不只是讀文件
+      宣稱——確認 <strong>M0(19 個數學 schema 凍結)、M1(數學狀態轉接器)、M2(Problem/Theory/Assumption
+      版本化儲存)三個階段真的做出來了</strong>,程式碼、schema、測試都是真的,不是空殼。但這三階段做的事情是
+      「定義詞彙」「描述現況」「把版本存起來」。<strong>M3 到 M11 這九個階段——診斷研究卡在哪裡、生成修補候選、
+      追蹤數學義務、把宣稱路由給對的驗證器、建立理論橋接、跑一個不需要人類每步提示的持續研究迴圈——目前一行
+      程式碼都沒有,不是部分完成。</strong>也就是說「Autonomous Mathematical Research Runtime」這個名字現在
+      承諾的是自主研究,但目前只有檔案櫃,還沒有會思考的東西。M11 自己的驗收條件也明講:要先在「受控數學研究
+      沙盒」裡跑 50–100 次自主研究轉換,明確排除直接拿去解真正的未解問題;整個套件也刻意零依賴 LLM 或任何數學
+      引擎,是 M0–M2 本身的範圍限制,不是疏漏。
+    </p>
+  </header>
+
+  <section id="papers">
+    <h2 class="doc-h2">四篇論文 + 技術白皮書</h2>
+    <div class="case-grid">
+      <a class="case-card" href="./p/01-cmdc-and-amrr/"><span class="k">系列奠基論文</span><h3>從數學解題到自主數學研究:受約束數學域補全與自主數學研究 Runtime</h3><p>AI 可先辨認問題卡在哪個域、再受約束地補出缺失數學,並證明自己沒有偷偷把問題換掉...</p></a>
+      <a class="case-card" href="./p/02-domain-gap-diagnosis/"><span class="k">多域診斷論文</span><h3>數學問題不是只有可解與不可解:多域問題診斷與 CMDC</h3><p>研究卡住的原因可拆解成 13 個獨立域,診斷結果組成有依賴關係的 Gap DAG,診斷本身必須可被否證、可被評估精確率與召回率...</p></a>
+      <a class="case-card" href="./p/03-problem-identity/"><span class="k">問題身份論文</span><h3>問題身份、理論擴張與數學義務:AI 生成數學的合法變換框架</h3><p>問題的任何非顯然變化都必須留下明確、有型別的變換記錄;血緣關係不能替代語意等價的證明,禁止把加了假設證出的結果報告成證出原問題...</p></a>
+      <a class="case-card" href="./p/04-amrr-runtime/"><span class="k">可執行架構論文</span><h3>自主數學研究 Runtime:從可定址認知到自主理論建構</h3><p>AMRR 是疊加在 ACR 之上、不修改 ACR 核心的九層數學研究擴充;M0–M11 十二階段的實作狀態必須以實際通過驗收關卡的 release artifact 為準,不能以規...</p></a>
+      <a class="case-card" href="./p/05-technical-whitepaper/"><span class="k">技術白皮書</span><h3>AMRR 技術白皮書</h3><p>AMRR = ACR + 八層數學研究擴充,劃出明確的工程狀態邊界:已驗證基線僅 ACR Phase 0–2,AMRR 專屬十二階段的文字本身一律標記規格/提案...</p></a>
+    </div>
+  </section>
+
+  <section id="engineering">
+    <h2 class="doc-h2">工程產物 · M0–M2 原始碼包</h2>
+    <p class="section-note">跟論文分開列,因為這是程式碼包,不是研究文件——保留原始壓縮檔,不重新打包。</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">M0 · 數學 Schema 凍結</span>19 個數學 JSON Schema(problem-record、theory-record、gap、obligation、verification-receipt 等),無執行邏輯。 <a href="./files/Addressable_Cognitive_Runtime_AMRR_MVP_v0.1_M0_Math_Schema_Freeze_2026-08-23.zip" download>下載 .zip</a></div>
+      <div class="conn-card"><span class="k">M1 · 數學狀態轉接器</span>把 extensions.math 觀測值正規化並摺進既有 SemanticState 的決定性編碼器,無數學推理。 <a href="./files/Addressable_Cognitive_Runtime_AMRR_MVP_v0.1_M1_Mathematical_State_Adapter_2026-08-23.zip" download>下載 .zip</a></div>
+      <div class="conn-card"><span class="k">M2 · Problem / Theory / Assumption 版本化儲存</span>不可覆寫、逐版本、可溯源的檔案式物件儲存,只負責存,不負責判斷內容是否合理。 <a href="./files/Addressable_Cognitive_Runtime_AMRR_MVP_v0.1_M2_Problem_Theory_Stores_2026-08-23.zip" download>下載 .zip</a></div>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../">← AMRAL</a>
+    <span>SHA-256 逐篇核驗 · 原始位元組,不重新打包</span>
+  </footer>
+</div>
+</body>
+</html>
