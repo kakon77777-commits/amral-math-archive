@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valuation Language and the Accelerated Collatz Map · Collatz Conjecture · AMRAL</title>
+<meta name="description" content="From run-length encoding of parity words and exact v₂ drift to a valuation-order correction. Restates the old heuristic that "the exponential contraction of 2 eventually overwhelms the amplification b">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/Valuation Language 與 Accelerated Collatz.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/collatz/p/06-valuation-language/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/collatz/p/06-valuation-language/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/collatz/p/06-valuation-language/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="link active" href="../../">Collatz Conjecture</a>
+  <a class="lang-switch" href="../../../../collatz/p/06-valuation-language/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← Collatz Conjecture</a>
+    <span>/</span>
+    <span>Paper 06</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">Core Theorem</span>
+      <span class="tag">v0.1</span>
+      <span class="tag">2026-08-10</span>
+    </div>
+    <h1>Valuation Language and the Accelerated Collatz Map</h1>
+    <p class="h1-sub">From run-length encoding of parity words and exact v₂ drift to a valuation-order correction. Restates the old heuristic that "the exponential contraction of 2 eventually overwhelms the amplification by 3" as a precise valuation language, using the finite-word affine atlas built in the first five papers: κ(n)=v₂(3n+1), accelerated odd map S(n)=(3n+1)/2^κ(n).</p>
+    <div class="claim-box">
+      Restates an old statistical intuition as a precise valuation language: κ(n)=v₂(3n+1)
+      <span class="note">The paper does not prove that Fₖ(N) has a uniform extinction depth for all N, does not prove a closed asymptotic upper bound for K(N), and does not rule out an integer-anchored infinite hard branch — it only converts an old statistical/heuristic intuition into precise language; precision is not the same as a global proof.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series — the source document itself already points to the "next paper," reproduced here as-is.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../05-contraction-boundary/">Paper 05 · Finite-Word Contraction Boundaries and the Binomial Cylinder Law</a></div><div class="conn-card"><span class="k">Next</span><a href="../07-generalized-mxr-systems/">Paper 07 · Generalized (mx+r) Systems and Residue-Class Operation Translation</a></div>
+      <div class="conn-card"><span class="k">Series progress</span>Core series 6 / 9</div>
+    </div>
+    
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← Collatz Conjecture</a>
+    <a href="../../files/Valuation Language 與 Accelerated Collatz.md" download>Download original .md (English)</a>
+    <span>Author: Neo.K</span>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/Valuation Language 與 Accelerated Collatz.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>
