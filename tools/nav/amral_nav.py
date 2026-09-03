@@ -69,6 +69,7 @@ CASES = [
     ("ns", "NS 納維-斯托克斯", "Navier–Stokes"),
     ("collatz", "考拉茲猜想", "Collatz Conjecture"),
     ("csm", "CSM 閉包空間數學論", "CSM Closure-Space Mathematics"),
+    ("amrr", "AMRR 自主數學研究 Runtime", "AMRR Autonomous Mathematical Research Runtime"),
 ]
 CASE_SLUGS = {slug for slug, _, _ in CASES}
 
