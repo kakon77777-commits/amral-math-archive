@@ -20,12 +20,16 @@ Case order matches the template already in production use on every
 Collatz page (the freshest, most-recently-verified template on the site
 as of 2026-09-03) -- not an invented order.
 
-ZH includes research-modes/data-access as normal cross-linked pre-items.
-EN deliberately excludes them from the cross-link list -- an established,
-pre-existing scope decision ("same scope boundary held since Riemann/BSD"),
-not something this module introduces. The two EN pages for those sections
-(en/research-modes/, en/data-access/) are therefore OUT OF SCOPE for
-regeneration -- refresh_all_nav.py must not touch them.
+PRE_ITEMS_ZH and PRE_ITEMS_EN must name the same slugs, in the same order
+-- one case list, labels translated, per line. An earlier version of this
+module excluded research-modes/data-access from PRE_ITEMS_EN on the belief
+that EN deliberately omitted them; 墜衡 (independent live verification,
+2026-09-03) found both pages fully built and translated, orphaned from
+EN nav entirely as a result -- unreachable from any other EN page, and
+themselves stuck on a stale template no refresh run could fix, since the
+exclusion lived in this file, not in coverage. Two per-language lists that
+can independently drift is the exact failure this module exists to end;
+keep them in lockstep.
 """
 import os
 
@@ -48,6 +52,8 @@ PRE_ITEMS_EN = [
     ("methodology", "Methodology"),
     ("protocols", "Protocols"),
     ("validation", "Validation"),
+    ("research-modes", "Research Modes"),
+    ("data-access", "Data Access"),
 ]
 
 # Canonical case order -- append new cases here, in ship order.
@@ -64,12 +70,6 @@ CASES = [
     ("collatz", "考拉茲猜想", "Collatz Conjecture"),
 ]
 CASE_SLUGS = {slug for slug, _, _ in CASES}
-
-# Pages outside PRE_ITEMS/CASES entirely -- these don't participate in the
-# canonical nav vocabulary. EN's own research-modes/data-access pages are
-# structurally out of scope (see module docstring); ZH's are normal
-# PRE_ITEMS pages and DO participate.
-EN_EXCLUDED_OWN_SECTIONS = {"research-modes", "data-access"}
 
 
 def relpath_slash(target_dir, from_dir):

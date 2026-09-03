@@ -35,9 +35,6 @@ def walk_lang(lang, root):
     for dirpath, dirnames, filenames in os.walk(root):
         if lang == "zh" and dirpath == root:
             dirnames[:] = [d for d in dirnames if d != "en"]  # en/ is a separate root, walked on its own pass
-        if lang == "en" and os.path.basename(dirpath) in N.EN_EXCLUDED_OWN_SECTIONS:
-            dirnames[:] = []  # don't descend into excluded sections either
-            continue
         if "index.html" in filenames:
             pages.append(os.path.join(dirpath, "index.html"))
     return pages
@@ -83,13 +80,18 @@ def main():
                 out.append(f"NO NAV: [{lang}] {os.path.relpath(path, root)}")
                 continue
             old_nav = m.group(0)
-            if old_nav == new_nav:
+            # render_nav always joins with plain "\n"; match this file's own
+            # prevailing line ending so comparison isn't fooled by line-ending
+            # style alone, and so a written file doesn't end up with mixed
+            # endings (nav block LF, rest of file CRLF from an earlier write).
+            file_new_nav = new_nav.replace("\n", "\r\n") if "\r\n" in content else new_nav
+            if old_nav == file_new_nav:
                 unchanged += 1
                 continue
             sig = f"[{lang}] " + diff_signature(old_nav, new_nav)
             changes[sig] = changes.get(sig, 0) + 1
             examples.setdefault(sig, os.path.relpath(path, root))
-            to_write.append((path, content, old_nav, new_nav))
+            to_write.append((path, content, old_nav, file_new_nav))
 
     out.append(f"Unchanged (already canonical): {unchanged}")
     out.append(f"Out of scope (excluded sections): {skipped_out_of_scope}")
