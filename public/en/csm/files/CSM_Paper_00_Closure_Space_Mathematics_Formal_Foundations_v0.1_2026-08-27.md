@@ -1,24 +1,24 @@
 # CSM Paper 00
-# 閉包空間數學論的形式基礎
+# Formal Foundations of Closure-Space Mathematics
 ## Closure-Space Mathematics: Formal Foundations for Relative-Global Mathematical Closure
 
-**版本：** v0.1  
-**日期：** 2026-08-27  
-**系列：** Closure-Space Mathematics / CSM  
-**文件地位：** 母理論奠基論文 / Formal Foundations  
-**Canonical source：** UTF-8 Markdown  
-**Canonical math delimiters：** `$...$` 與 `$$...$$`  
-**研究狀態：** 理論框架、定義系統、形式命題與後續證明計畫；不是對任何未解數學問題的完成證明。
+**Version:** v0.1  
+**Date:** 2026-08-27  
+**Series:** Closure-Space Mathematics / CSM  
+**Status:** Foundational Paper / Formal Foundations  
+**Canonical source:** UTF-8 Markdown  
+**Canonical math delimiters:** `$...$` and `$$...$$`  
+**Research Status:** Theoretical framework, definition system, formal propositions, and subsequent proof plans; not a completed proof of any unsolved mathematical problem.
 
 ---
 
-# 摘要
+# Abstract
 
-本文提出 **閉包空間數學論**（Closure-Space Mathematics, CSM）的第一版形式基礎。CSM 的核心問題不是「如何再生成一條證明路徑」，而是：當一個長程數學研究計畫已累積大量命題、假設、證明嘗試、反例、障礙、橋接、表示、局部成功與失敗後，能否把這些研究狀態組成一個可驗證、可重放、可更新的相對全域數學空間，並對其中哪些區域已閉合、哪些仍開放、哪些只是局部受阻，給出明確的型別化判定。
+This paper presents the first version of the formal foundations for **Closure-Space Mathematics** (CSM). The core problem of CSM is not "how to generate another proof route," but rather: after a long-term mathematical research program has accumulated a massive amount of propositions, assumptions, proof attempts, counterexamples, obstructions, bridges, representations, and local successes and failures, can these research states be organized into a verifiable, replayable, and updatable relative-global mathematical space? Furthermore, can we provide explicit, typed determinations of which regions within this space are closed, which remain open, and which are merely locally blocked?
 
-CSM 吸收但不等同於兩條既有內部理論線。第一條是 Logic-Space Integration and Proof-Space Dynamics（LSI-PSD），其已建立 semantic quotient、route graph、proof basin、obstruction confluence、theorem-strength preorder 與 Proof-Space Observatory。第二條是 UGC/CUR / Unified Closure Theory（UCT），其建立 typed non-collapse、generative closure、reachability、transformation closure、bridge certificate、debt 與 ledger。本文將兩者提升為一個新的數學研究對象：**closure space 本身**。
+CSM absorbs but is not identical to two existing internal theoretical lines. The first is Logic-Space Integration and Proof-Space Dynamics (LSI-PSD), which has established the semantic quotient, route graph, proof basin, obstruction confluence, theorem-strength preorder, and Proof-Space Observatory. The second is UGC/CUR / Unified Closure Theory (UCT), which established typed non-collapse, generative closure, reachability, transformation closure, bridge certificate, debt, and ledger. This paper elevates both into a new mathematical research object: **the closure space itself**.
 
-本文的第一個核心原則是：
+The first core principle of this paper is:
 
 $$
 \boxed{
@@ -30,9 +30,9 @@ $$
 }
 $$
 
-因此本文只首先定義 **相對全域閉包**（relative-global closure），而不把有限 corpus、有限搜尋制度或有限圖結構冒充成全部可能數學路徑。
+Therefore, this paper primarily defines **relative-global closure**, rather than masquerading a finite corpus, finite search regime, or finite graph structure as the entirety of all possible mathematical routes.
 
-第二個核心原則是：
+The second core principle is:
 
 $$
 \boxed{
@@ -42,9 +42,9 @@ $$
 }
 $$
 
-若研究者希望把「所有候選路徑都被封住」升格成定理，必須額外提供 route-completeness / decomposition-completeness 類證書，證明被列舉並商化後的路徑族對目標命題的指定 admissible mechanism class 是完備的。
+If a researcher wishes to promote "all candidate routes are blocked" to a theorem, they must provide an additional route-completeness / decomposition-completeness certificate, proving that the enumerated and quotiented route family is complete with respect to the designated admissible mechanism class for the target proposition.
 
-第三個核心原則是 **Globality Typing Principle**：任何「全域」都必須說明它在哪一個軸上全域。以 Navier--Stokes 為第一個大型實驗場，本文區分 Clay/formal mathematical NS、physical realization NS，以及 generalized NS-like equation family，並主張：
+The third core principle is the **Globality Typing Principle**: any claim of "globality" must specify on which axis it is global. Using Navier--Stokes as the first large-scale experimental ground, this paper distinguishes between Clay/formal mathematical NS, physical realization NS, and the generalized NS-like equation family, asserting that:
 
 $$
 \boxed{
@@ -56,41 +56,41 @@ $$
 }
 $$
 
-本文最後定義 typed closure-space object、節點與超邊、closure actions、frontier、closure debt、reopening、relative-global closure grade、route-completeness certificate，以及 NS Relative-Global Closure Space 的第一版資料模型。後續 CSM 系列將把既有 NS C1--C6、X72、DCRP、MORP、RFP、FCBP 與 Proof Asset Map 中的正結果、NO-GO、survivor、OPEN、conditional bridge 逐步投影進同一個閉包空間，真正把「研究過的路徑」轉化成可被再次運算的數學資產。
+Finally, this paper defines the typed closure-space object, nodes and hyperedges, closure actions, frontier, closure debt, reopening, relative-global closure grade, route-completeness certificate, and the first-version data model of the NS Relative-Global Closure Space. Subsequent CSM series will progressively project the positive results, NO-GOs, survivors, OPENs, and conditional bridges from the existing NS C1--C6, X72, DCRP, MORP, RFP, FCBP, and Proof Asset Map into the same closure space, truly transforming "researched routes" into computable mathematical assets.
 
 ---
 
-# 0. 研究地位與非主張
+# 0. Research Status and Non-Claims
 
-本文不主張：
+This paper does not claim that:
 
-1. 已建立所有數學問題唯一自然的 proof space；
-2. 任意數學命題的所有證明路徑都可被有限列舉；
-3. graph / hypergraph representation 與數學本體相同；
-4. semantic quotient 可由 embedding 或 LLM 相似度自動完成；
-5. 多條路徑撞上同一 obstruction 即可證明命題為假或不可證；
-6. 某個 basin 被封閉即代表整個 proof space 被封閉；
-7. relative-global closure 自動等於 absolute mathematical closure；
-8. closure operator 在所有 CSM 層上都自動滿足傳統 closure algebra 的 extensivity、monotonicity 與 idempotence；
-9. Clay Navier--Stokes 的 global regularity proof 等同於物理世界中所有流體現象的全域證明；
-10. generalized NS-like family 已有唯一 canonical 定義；
-11. CSM 可以取代 theorem-level verification；
-12. CSM 已解決 Navier--Stokes existence and smoothness。
+1. The unique, natural proof space for all mathematical problems has been established;
+2. All proof routes for any mathematical proposition can be finitely enumerated;
+3. Graph / hypergraph representations are identical to mathematical ontology;
+4. Semantic quotients can be automatically completed by embeddings or LLM similarity;
+5. Multiple routes hitting the same obstruction proves a proposition false or unprovable;
+6. The closure of a certain basin implies the closure of the entire proof space;
+7. Relative-global closure automatically equals absolute mathematical closure;
+8. Closure operators on all CSM layers automatically satisfy the extensivity, monotonicity, and idempotence of traditional closure algebra;
+9. The global regularity proof of Clay Navier--Stokes equates to a global proof of all fluid phenomena in the physical world;
+10. The generalized NS-like family already has a unique canonical definition;
+11. CSM can replace theorem-level verification;
+12. CSM has solved Navier--Stokes existence and smoothness.
 
-本文只主張：
+This paper only claims that:
 
-- 長程研究狀態可以被整理成 typed multilayer mathematical graph；
-- 不同 closure type 必須保持型別差異；
-- 「已觀察」「已封路」「已證明」「已反證」「相對全域已閉」必須分開；
-- closure promotion 必須攜帶 certificate；
-- globality 必須型別化；
-- relative-global closure 可以成為可操作、可稽核、可逐步逼近的研究對象。
+- Long-term research states can be organized into a typed multilayer mathematical graph;
+- Different closure types must maintain type differentiation;
+- "Observed," "route-blocked," "proven," "falsified," and "relative-globally closed" must be separated;
+- Closure promotion must carry a certificate;
+- Globality must be typed;
+- Relative-global closure can become an operable, auditable, and progressively approximable research object.
 
 ---
 
-# 1. 從證明路徑到閉包空間
+# 1. From Proof Routes to Closure Spaces
 
-傳統數學論文通常將研究過程壓縮成：
+Traditional mathematical papers typically compress the research process into:
 
 $$
 A_0
@@ -102,27 +102,27 @@ A_1
 Q.
 $$
 
-失敗的嘗試通常只以敘述方式留下，甚至完全消失。
+Failed attempts are usually only left as narrative descriptions, or disappear entirely.
 
-但長程 AI 數學研究會產生大量：
+However, long-term AI mathematical research generates a massive amount of:
 
-- theorem candidate；
-- lemma；
-- assumption；
-- proof route；
-- representation；
-- counterexample；
-- obstruction；
-- NO-GO；
-- survivor；
-- conditional theorem；
-- bridge；
-- failed bridge；
-- reopened route；
-- repaired theorem；
-- descendant problem。
+- theorem candidates;
+- lemmas;
+- assumptions;
+- proof routes;
+- representations;
+- counterexamples;
+- obstructions;
+- NO-GOs;
+- survivors;
+- conditional theorems;
+- bridges;
+- failed bridges;
+- reopened routes;
+- repaired theorems;
+- descendant problems.
 
-CSM 的第一個轉換是：
+The first transformation of CSM is:
 
 $$
 \boxed{
@@ -132,29 +132,29 @@ $$
 }
 $$
 
-這個 state space 不只保存答案，而保存「哪些路徑為什麼被打開、被封閉、被條件化、被修復、被商化或被重新開啟」。
+This state space preserves not only the answers, but also "which routes were opened, blocked, conditionalized, repaired, quotiented, or reopened, and why."
 
 ---
 
-# 2. 三種空間不得塌縮
+# 2. Three Spaces Must Not Collapse
 
-對目標命題 $Q$，定義三個層次。
+For a target proposition $Q$, three levels are defined.
 
-## 2.1 數學可能空間
+## 2.1 Mathematical Possibility Space
 
-以：
+Let:
 
 $$
 \Omega^{\rm math}(Q)
 $$
 
-表示與 $Q$ 有關的全部數學上可能 proof / counterexample / reduction / representation / mechanism space。
+denote the entire mathematically possible proof / counterexample / reduction / representation / mechanism space related to $Q$.
 
-本文不假設它可被有效列舉，也不假設它天然具有唯一圖表示。
+This paper does not assume that it can be effectively enumerated, nor does it assume that it naturally possesses a unique graph representation.
 
-## 2.2 可接受路徑空間
+## 2.2 Admissible Route Space
 
-在宣告形式域 $D$、證明制度 $\Theta$、語言與 admissibility rule $\mathcal A$ 下：
+Under a declared formal domain $D$, proof regime $\Theta$, language, and admissibility rule $\mathcal A$:
 
 $$
 \Omega^{\rm adm}_{D,\Theta,\mathcal A}(Q)
@@ -162,19 +162,19 @@ $$
 \Omega^{\rm math}(Q).
 $$
 
-它代表在目前問題設定下被認為合法的 proof objects、transformations、reductions 與 certificates。
+It represents the proof objects, transformations, reductions, and certificates considered legal under the current problem setting.
 
-## 2.3 已觀察研究空間
+## 2.3 Observed Research Space
 
-在搜尋制度 $R$、資源上限 $N$、歷史 $H$ 下：
+Under a search regime $R$, resource bound $N$, and history $H$:
 
 $$
 \Omega^{\rm obs}_{R,N,H}(Q).
 $$
 
-它是實際被研究、抓取、生成、驗證或記錄到的部分。
+It is the portion that is actually researched, scraped, generated, verified, or recorded.
 
-通常只能假設：
+Usually, one can only assume:
 
 $$
 \Omega^{\rm obs}_{R,N,H}(Q)
@@ -182,9 +182,9 @@ $$
 \Omega^{\rm adm}_{D,\Theta,\mathcal A}(Q),
 $$
 
-而不能反向假設兩者相等。
+and cannot inversely assume the two are equal.
 
-因此 CSM 的基礎非塌縮是：
+Therefore, the foundational non-collapse of CSM is:
 
 $$
 \boxed{
@@ -196,27 +196,27 @@ $$
 }
 $$
 
-除非另有獨立證書建立等價。
+unless an independent certificate establishes equivalence.
 
 ---
 
-# 3. 相對全域，而不是絕對全域
+# 3. Relative Globality, Not Absolute Globality
 
-CSM 使用「相對全域」是刻意的。
+CSM's use of "relative-global" is deliberate.
 
-定義：
+Define:
 
 $$
 \mathfrak C^{\rm rel}_{D,\Theta,\mathcal A,R,N,H}(Q)
 $$
 
-為在指定 domain、proof regime、admissibility rule、搜尋制度、資源與歷史下，經過 audited quotient 與 certified closure actions 所得到的 closure-space state。
+as the closure-space state obtained through audited quotients and certified closure actions under a specified domain, proof regime, admissibility rule, search regime, resources, and history.
 
-其中「global」表示：
+Here, "global" means:
 
-> 對**宣告作用域內目前可接受且被閉包程序覆蓋的全部結構**做全域化整合。
+> A globalized integration over **all structures currently admissible within the declared scope and covered by the closure procedure**.
 
-它不表示：
+It does not mean:
 
 $$
 \mathfrak C^{\rm rel}
@@ -224,7 +224,7 @@ $$
 \Omega^{\rm math}(Q).
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -238,9 +238,9 @@ $$
 
 # 4. Globality Typing Principle
 
-「global」不是單一布林值。
+"Global" is not a single boolean value.
 
-對任何 claim $Q$，定義 scope / globality vector：
+For any claim $Q$, define the scope / globality vector:
 
 $$
 \mathsf{GScope}(Q)
@@ -260,21 +260,21 @@ G_{\rm proof}
 \right\rangle.
 $$
 
-各軸至少表示：
+Each axis represents at least:
 
-- $G_t$：時間範圍；
-- $G_x$：空間域；
-- $G_{\rm eq}$：方程／模型族；
-- $G_{\rm sol}$：solution notion；
-- $G_{\rm data}$：initial / boundary data class；
-- $G_{\rm bdry}$：boundary family；
-- $G_{\rm force}$：forcing family；
-- $G_{\rm reg}$：regularity class；
-- $G_{\rm rep}$：representation family；
-- $G_{\rm phys}$：physical realization / interpretation domain；
-- $G_{\rm proof}$：proof system / admissibility regime。
+- $G_t$: time scope;
+- $G_x$: spatial domain;
+- $G_{\rm eq}$: equation / model family;
+- $G_{\rm sol}$: solution notion;
+- $G_{\rm data}$: initial / boundary data class;
+- $G_{\rm bdry}$: boundary family;
+- $G_{\rm force}$: forcing family;
+- $G_{\rm reg}$: regularity class;
+- $G_{\rm rep}$: representation family;
+- $G_{\rm phys}$: physical realization / interpretation domain;
+- $G_{\rm proof}$: proof system / admissibility regime.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -292,7 +292,7 @@ $$
 }
 $$
 
-任何未標記 scope vector 的「全域」主張，在 CSM 中至少屬於：
+Any "global" claim without a marked scope vector belongs, in CSM, at least to:
 
 $$
 \mathsf{ILL\_SCOPED}.
@@ -300,9 +300,9 @@ $$
 
 ---
 
-# 5. CSM 的基本物件
+# 5. Basic Objects of CSM
 
-第一版 closure space 定義為：
+The first version of the closure space is defined as:
 
 $$
 \boxed{
@@ -326,29 +326,29 @@ E,
 }
 $$
 
-其中：
+Where:
 
-- $D$：declared mathematical domain；
-- $V$：typed nodes；
-- $E$：typed edges / hyperedges；
-- $\tau_V$：node type；
-- $\tau_E$：edge type；
-- $\sim$：audited equivalence / quotient family；
-- $\preceq$：strength / refinement preorder；
-- $\sigma$：epistemic / closure status；
-- $\mathfrak O$：closure action family；
-- $\partial\mathfrak C$：active frontier；
-- $\mathsf{Cert}$：proof / bridge / closure certificates；
-- $\mathsf{Debt}$：尚未支付的 proof obligations；
-- $\mathsf{Ledger}$：versioned research history。
+- $D$: declared mathematical domain;
+- $V$: typed nodes;
+- $E$: typed edges / hyperedges;
+- $\tau_V$: node type;
+- $\tau_E$: edge type;
+- $\sim$: audited equivalence / quotient family;
+- $\preceq$: strength / refinement preorder;
+- $\sigma$: epistemic / closure status;
+- $\mathfrak O$: closure action family;
+- $\partial\mathfrak C$: active frontier;
+- $\mathsf{Cert}$: proof / bridge / closure certificates;
+- $\mathsf{Debt}$: outstanding proof obligations;
+- $\mathsf{Ledger}$: versioned research history.
 
 ---
 
-# 6. 為什麼使用 typed hypergraph
+# 6. Why Use a Typed Hypergraph
 
-普通 graph 的 edge 通常只有一個 source 和一個 target。
+Edges in a standard graph typically have only one source and one target.
 
-但數學推導常是：
+But mathematical derivations are often:
 
 $$
 A_1\land A_2\land A_3
@@ -356,7 +356,7 @@ A_1\land A_2\land A_3
 Q.
 $$
 
-因此 canonical edge 應允許：
+Therefore, a canonical edge should allow:
 
 $$
 e:
@@ -365,9 +365,9 @@ e:
 v'.
 $$
 
-同時不同 edge 具有不同語義。
+At the same time, different edges possess different semantics.
 
-第一版 edge type：
+The first version of edge types:
 
 $$
 \tau_E(e)
@@ -392,13 +392,13 @@ $$
 \}.
 $$
 
-不同 edge 不得因為圖上都畫成箭頭就被當成同一種 implication。
+Different edges must not be treated as the same kind of implication simply because they are all drawn as arrows on a graph.
 
 ---
 
 # 7. Node Type System
 
-第一版節點至少包含：
+The first version of nodes includes at least:
 
 $$
 \tau_V(v)
@@ -422,15 +422,15 @@ $$
 \}.
 $$
 
-CSM 不把 paper file 當作基本數學節點。
+CSM does not treat paper files as basic mathematical nodes.
 
-artifact 是 provenance container；真正運算的單位是其中的 typed mathematical objects。
+An artifact is a provenance container; the true units of computation are the typed mathematical objects within it.
 
 ---
 
-# 8. Closure status type system
+# 8. Closure Status Type System
 
-定義：
+Define:
 
 $$
 \sigma(v)
@@ -446,21 +446,21 @@ $$
 \}.
 $$
 
-## 8.1 Positive closure
+## 8.1 Positive Closure
 
 $$
 \mathsf{CLOSED}^{+}
 $$
 
-表示指定 claim 已有作用域內有效證明證書。
+Indicates that the specified claim has a valid proof certificate within the scope.
 
-## 8.2 Negative closure
+## 8.2 Negative Closure
 
 $$
 \mathsf{CLOSED}^{-}
 $$
 
-表示 claim 已被反例、矛盾證明或 theorem-level no-go 排除。
+Indicates that the claim has been ruled out by a counterexample, proof of contradiction, or theorem-level no-go.
 
 ## 8.3 Blocked
 
@@ -468,11 +468,11 @@ $$
 \mathsf{BLOCKED}
 $$
 
-是 route-level / mechanism-level 狀態：
+Is a route-level / mechanism-level state:
 
-> 在目前 assumptions、representation、bridge 與 theorem set 下，這條路無法完成指定升格。
+> Under the current assumptions, representation, bridges, and theorem set, this route cannot complete the specified promotion.
 
-它不等於：
+It is not equal to:
 
 $$
 \mathsf{CLOSED}^{-}.
@@ -484,7 +484,7 @@ $$
 \mathsf{CONDITIONAL}
 $$
 
-表示：
+Indicates that:
 
 $$
 A_1\land\cdots\land A_k
@@ -492,25 +492,25 @@ A_1\land\cdots\land A_k
 Q
 $$
 
-已證，但至少一個 $A_i$ 仍未閉合。
+is proven, but at least one $A_i$ remains unclosed.
 
-## 8.5 Relative independence
+## 8.5 Relative Independence
 
 $$
 \mathsf{INDEPENDENT}_{\mathcal T}
 $$
 
-只可用於已明確指定 formal theory $\mathcal T$ 且有獨立性證明的情況。
+Can only be used when a formal theory $\mathcal T$ has been explicitly specified and an independence proof exists.
 
-「AI 一直失敗」不是 independence certificate。
+"AI keeps failing" is not an independence certificate.
 
 ---
 
-# 9. Closure 不只一種
+# 9. More Than One Kind of Closure
 
-CSM 將 closure 拆成多個 typed action，而不是預設只有一個 $\operatorname{Cl}$。
+CSM decomposes closure into multiple typed actions, rather than defaulting to a single $\operatorname{Cl}$.
 
-第一版：
+First version:
 
 $$
 \mathfrak O
@@ -526,13 +526,13 @@ $$
 \}.
 $$
 
-這些 action 可以互相作用，但不預設同型。
+These actions can interact with each other, but are not presumed to be isomorphic.
 
 ---
 
 # 10. Implication Closure
 
-給定節點集合 $S$，若存在已驗證 implication hyperedge：
+Given a node set $S$, if there exists a verified implication hyperedge:
 
 $$
 \{v_1,\ldots,v_k\}
@@ -540,7 +540,7 @@ $$
 v',
 $$
 
-且：
+and:
 
 $$
 \{v_1,\ldots,v_k\}
@@ -548,7 +548,7 @@ $$
 S,
 $$
 
-則：
+then:
 
 $$
 v'
@@ -556,28 +556,28 @@ v'
 \mathsf{Cl}_{\rm imp}(S).
 $$
 
-但 implication closure 只傳播已證 implication。
+However, implication closure only propagates proven implications.
 
-它不得把：
+It must not treat:
 
-- semantic similarity；
-- empirical correlation；
-- heuristic plausibility；
-- representation proximity；
+- semantic similarity;
+- empirical correlation;
+- heuristic plausibility;
+- representation proximity;
 
-當成 implication edge。
+as implication edges.
 
 ---
 
 # 11. Dependency Closure
 
-若 claim $Q$ 依賴：
+If claim $Q$ depends on:
 
 $$
 A_1,\ldots,A_k,
 $$
 
-則 dependency closure 保存：
+then dependency closure preserves:
 
 $$
 \operatorname{Dep}(Q)
@@ -585,23 +585,23 @@ $$
 \{A_1,\ldots,A_k\}
 $$
 
-及其遞歸祖先。
+and its recursive ancestors.
 
-如果上游 assumption 被反證，descendant claim 不應被自動刪除，而應進入：
+If an upstream assumption is falsified, descendant claims should not be automatically deleted, but should instead enter:
 
 $$
 \mathsf{REQUIRES\_DESCENDANT\_AUDIT}.
 $$
 
-因為某些 descendant 可能存在獨立重證或更弱的 surviving formulation。
+Because some descendants may possess independent reproofs or weaker surviving formulations.
 
 ---
 
 # 12. Quotient Closure
 
-LSI-PSD 已指出 raw artifact count 不等於 route count。
+LSI-PSD has pointed out that raw artifact count does not equal route count.
 
-CSM 定義多種 equivalence relation：
+CSM defines multiple equivalence relations:
 
 $$
 \sim_{\rm prop},
@@ -615,15 +615,15 @@ $$
 \sim_{\rm rep}.
 $$
 
-因此：
+Therefore:
 
 $$
 \mathsf{Cl}_{\rm quot}
 $$
 
-不是「刪掉重複」，而是建立 quotient classes 同時保留原始 provenance。
+is not "deleting duplicates," but rather establishing quotient classes while preserving the original provenance.
 
-核心規則：
+Core rule:
 
 $$
 \boxed{
@@ -637,9 +637,9 @@ $$
 
 # 13. Obstruction Closure
 
-設 $O$ 是某 route family 上已證 obstruction。
+Let $O$ be a proven obstruction on a certain route family.
 
-最危險的錯誤是：
+The most dangerous error is:
 
 $$
 O(R_1)
@@ -647,34 +647,34 @@ O(R_1)
 O(R_2)
 $$
 
-只因兩者「看起來類似」。
+simply because the two "look similar".
 
-CSM 要求 obstruction transfer certificate：
+CSM requires an obstruction transfer certificate:
 
 $$
 \mathsf{ObsTransferCert}
 (O,R_1\to R_2).
 $$
 
-證書至少說明：
+The certificate must at least specify:
 
-- target statement 是否一致；
-- assumptions 是否包含；
-- obstruction mechanism 是否 invariant；
-- representation change 是否保真；
-- domain 是否相容；
-- bridge 是否 sound；
-- counterexample 是否被排除。
+- whether the target statements are consistent;
+- whether the assumptions are included;
+- whether the obstruction mechanism is invariant;
+- whether the representation change is sound;
+- whether the domains are compatible;
+- whether the bridge is sound;
+- whether counterexamples are excluded.
 
-只有如此，$\mathsf{Cl}_{\rm obs}$ 才能把 barrier 合法地傳播到 descendant route。
+Only then can $\mathsf{Cl}_{\rm obs}$ legally propagate the barrier to descendant routes.
 
 ---
 
 # 14. Bridge Closure
 
-跨 domain、representation、proof system 或 model class 的升格必須透過 bridge。
+Promotions across domains, representations, proof systems, or model classes must be mediated through bridges.
 
-一般形式：
+General form:
 
 $$
 X
@@ -682,22 +682,20 @@ X
 Y.
 $$
 
-CSM 不固定 bridge backend。
+CSM does not fix the bridge backend.
 
-它可以由：
+It can be realized by:
 
-- equivalence theorem；
-- reduction；
-- interpretation；
-- conservative extension；
-- functor / morphism；
-- lifting theorem；
-- model correspondence；
-- asymptotic limit theorem；
+- equivalence theorem;
+- reduction;
+- interpretation;
+- conservative extension;
+- functor / morphism;
+- lifting theorem;
+- model correspondence;
+- asymptotic limit theorem.
 
-實現。
-
-但沒有 bridge certificate 時：
+But without a bridge certificate:
 
 $$
 \boxed{
@@ -711,28 +709,28 @@ $$
 
 # 15. Generative Closure of Research States
 
-受到 UCT generative closure 啟發，CSM 定義 proof-state generative closure：
+Inspired by UCT generative closure, CSM defines proof-state generative closure:
 
 $$
 \operatorname{GenCl}^{\rm proof}_{D,T}
 (S\mid\Theta).
 $$
 
-它表示：
+It represents:
 
-> 從目前 state $S$，在指定 operators、admissibility rules、resources 與 proof regime 下，可合法生成的研究／證明狀態族。
+> The family of research/proof states that can be legally generated from the current state $S$, under specified operators, admissibility rules, resources, and proof regimes.
 
-它包含：
+It includes:
 
-- theorem descendants；
-- refined assumptions；
-- alternative representations；
-- counterexample targets；
-- bridge candidates；
-- obstruction descendants；
-- reopened routes。
+- theorem descendants;
+- refined assumptions;
+- alternative representations;
+- counterexample targets;
+- bridge candidates;
+- obstruction descendants;
+- reopened routes.
 
-但：
+But:
 
 $$
 \boxed{
@@ -742,15 +740,15 @@ $$
 }
 $$
 
-生成能力不是數學可能性的完備證明。
+Generative capacity is not a complete proof of mathematical possibility.
 
 ---
 
 # 16. Closure-on-Closure Dynamics
 
-研究空間會因新證明、新反例、新 bridge、新 representation 而改變。
+The research space will change due to new proofs, new counterexamples, new bridges, and new representations.
 
-定義：
+Define:
 
 $$
 \mathfrak C_{t+1}
@@ -762,45 +760,45 @@ $$
 \right),
 $$
 
-其中 $e_t$ 可以是：
+where $e_t$ can be:
 
-- theorem certification；
-- counterexample；
-- obstruction proof；
-- assumption revision；
-- quotient merge / split；
-- bridge creation / invalidation；
-- domain refinement；
-- route reopen；
-- target rewrite。
+- theorem certification;
+- counterexample;
+- obstruction proof;
+- assumption revision;
+- quotient merge / split;
+- bridge creation / invalidation;
+- domain refinement;
+- route reopen;
+- target rewrite.
 
-因此 CSM 的 closure 是**動態版本化閉包**，不是永遠不可改的塗黑節點。
+Therefore, CSM's closure is a **dynamic, versioned closure**, not a permanently unalterable blacked-out node.
 
 ---
 
 # 17. Reopening Principle
 
-一條 route 在 $t$ 時刻可能：
+A route at time $t$ might be:
 
 $$
 \sigma_t(R)=\mathsf{BLOCKED}.
 $$
 
-但若之後：
+But if later:
 
-- assumption 改變；
-- representation 改變；
-- 新 theorem 出現；
-- obstruction 的適用條件被削弱；
-- 新 bridge 建立；
+- assumptions change;
+- representations change;
+- new theorems appear;
+- the applicability conditions of the obstruction are weakened;
+- new bridges are established;
 
-則可存在：
+then there can exist:
 
 $$
 \sigma_{t+1}(R)=\mathsf{OPEN}.
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -808,55 +806,55 @@ $$
 }
 $$
 
-這和 theorem truth status 必須分開。
+This must be separated from theorem truth status.
 
 ---
 
-# 18. Theorem Closure 與 Search Closure 的不同單調性
+# 18. Different Monotonicities of Theorem Closure and Search Closure
 
-若 $Q$ 已在固定 formal system 中有有效證明，且後續只是 conservative extension，則其 proof certificate 可以保持有效。
+If $Q$ already has a valid proof in a fixed formal system, and subsequent work is merely a conservative extension, then its proof certificate can remain valid.
 
-但 search closure 可能被重新打開。
+But search closure may be reopened.
 
-所以 CSM 區分：
+Thus, CSM distinguishes between:
 
 $$
 \mathsf{LogicalClosure}
 $$
 
-與：
+and:
 
 $$
 \mathsf{SearchClosure}.
 $$
 
-前者處理 theorem validity；後者處理目前 route family 是否仍有研究價值與可達性。
+The former handles theorem validity; the latter handles whether the current route family still holds research value and reachability.
 
-兩者不得塌縮。
+The two must not collapse.
 
 ---
 
 # 19. Frontier
 
-定義 active frontier：
+Define the active frontier:
 
 $$
 \partial\mathfrak C(Q)
 $$
 
-為目前與目標 $Q$ 有關，且至少滿足下列一項的節點／route classes：
+as the nodes/route classes currently related to the target $Q$ and satisfying at least one of the following:
 
-- 尚未被正閉包；
-- 尚未被負閉包；
-- 有合法 incoming / outgoing proof transition；
-- conditional premise 尚未解決；
-- obstruction 尚未 transferable；
-- bridge debt 尚未支付；
-- representation completeness 未建立。
+- not yet positively closed;
+- not yet negatively closed;
+- has legal incoming / outgoing proof transitions;
+- conditional premises remain unresolved;
+- obstructions are not yet transferable;
+- bridge debts remain unpaid;
+- representation completeness is not established.
 
-但 raw frontier size 沒有意義。
+But raw frontier size is meaningless.
 
-因此定義 quotient frontier：
+Therefore, define the quotient frontier:
 
 $$
 \boxed{
@@ -867,13 +865,13 @@ $$
 }
 $$
 
-真正需要縮小的是 audited frontier classes，而不是文件數量。
+What truly needs to be reduced are the audited frontier classes, not the document count.
 
 ---
 
 # 20. Closure Debt
 
-任何 closure claim 都可以帶有 debt vector：
+Any closure claim can carry a debt vector:
 
 $$
 \mathsf{Debt}(Q)
@@ -892,19 +890,19 @@ $$
 \right\rangle.
 $$
 
-其中最重要的是：
+Among which the most important is:
 
 $$
 \delta_{\rm completeness}.
 $$
 
-只要 route completeness 尚未建立，就不能把 relative-global route closure 升成 absolute theorem closure。
+As long as route completeness has not been established, relative-global route closure cannot be promoted to absolute theorem closure.
 
 ---
 
 # 21. Route-Completeness Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -913,21 +911,21 @@ $$
 }
 $$
 
-為 route-completeness certificate。
+as the route-completeness certificate.
 
-最低 obligation：
+Minimum obligations:
 
-1. 明確定義 admissible route grammar；
-2. 證明所有指定 mechanism class 都可被 grammar 表示；
-3. 證明 quotient 不會合併非等價 route；
-4. 證明 representation family 的 completeness 或給出作用域限制；
-5. bridge family 完備或明確限制；
-6. obstruction transfer soundness；
-7. target fidelity；
-8. formal verification / independent proof witness；
-9. 對未覆蓋 route class 明確記 debt。
+1. Explicitly define the admissible route grammar;
+2. Prove that all specified mechanism classes can be represented by the grammar;
+3. Prove that the quotient will not merge non-equivalent routes;
+4. Prove the completeness of the representation family or provide scope limitations;
+5. Bridge family is complete or explicitly limited;
+6. Obstruction transfer soundness;
+7. Target fidelity;
+8. Formal verification / independent proof witness;
+9. Explicitly record debt for uncovered route classes.
 
-沒有 $\mathsf{RCCert}$，禁止：
+Without $\mathsf{RCCert}$, the following is prohibited:
 
 $$
 \text{all observed routes blocked}
@@ -939,35 +937,35 @@ $$
 
 # 22. Relative-Global Closure Grade
 
-第一版定義：
+First version definitions:
 
 ### RGC-0 — Ill-Typed
 
-scope、target 或 node/edge typing 不完整。
+Scope, target, or node/edge typing is incomplete.
 
 ### RGC-1 — Local Closure
 
-單一 lemma、route segment 或 local mechanism 已閉。
+A single lemma, route segment, or local mechanism is closed.
 
 ### RGC-2 — Basin Closure
 
-某 quotient-aware proof basin 內的 active frontier 已閉，但 basin 外仍未知。
+The active frontier within a quotient-aware proof basin is closed, but outside the basin remains unknown.
 
 ### RGC-3 — Observed Relative-Global Closure
 
-在宣告 corpus / regime 的 audited quotient space 中，所有已觀察 frontier 已閉。
+In the audited quotient space of the declared corpus / regime, all observed frontiers are closed.
 
 ### RGC-4 — Admissible Relative-Global Closure Candidate
 
-存在 route/decomposition completeness certificate，使指定 admissible mechanism space 被覆蓋並閉合。
+A route/decomposition completeness certificate exists, such that the specified admissible mechanism space is covered and closed.
 
-即使 RGC-4，也只相對：
+Even RGC-4 is only relative to:
 
 $$
 (D,\Theta,\mathcal A).
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -981,22 +979,22 @@ $$
 
 # 23. Closure Proof Principle
 
-CSM 不否定傳統一條成功 proof path 的證明形式。
+CSM does not negate the traditional proof format of a single successful proof path.
 
-如果有：
+If there is:
 
 $$
 P:
 A_0\Rightarrow\cdots\Rightarrow Q
 $$
 
-且 proof verifier 接受，則 $Q$ 可以正閉包。
+and the proof verifier accepts it, then $Q$ can be positively closed.
 
-CSM 新增的是另一類研究結構：
+What CSM adds is another type of research structure:
 
-> 若 target 的失敗／反例／奇點形成機制能被證明具有一個完備 decomposition，而 decomposition 的每一個 branch 都被 theorem-level obstruction 封閉，則可以由 closure-space exhaustion 形成一個新的 proof route。
+> If the failure / counterexample / singularity formation mechanism of a target can be proven to have a complete decomposition, and every branch of the decomposition is blocked by a theorem-level obstruction, then a new proof route can be formed by closure-space exhaustion.
 
-但關鍵仍是：
+But the key remains:
 
 $$
 \boxed{
@@ -1008,23 +1006,23 @@ $$
 }
 $$
 
-只有「我們想到的 branch 都死了」不夠。
+Merely "all the branches we thought of are dead" is not enough.
 
 ---
 
 # 24. No-Premature-Closure Principle
 
-任何 node 不得因下列理由被提升成 $\mathsf{CLOSED}^{-}$：
+No node may be promoted to $\mathsf{CLOSED}^{-}$ for the following reasons:
 
-- 搜尋不到新路；
-- 多模型都失敗；
-- novelty 很低；
-- basin recurrence 很高；
-- 文章數很多；
-- obstruction confluence 很高；
-- 某 representation 長期失敗。
+- unable to search for new routes;
+- multiple models all fail;
+- novelty is very low;
+- basin recurrence is very high;
+- paper count is very high;
+- obstruction confluence is very high;
+- a certain representation fails long-term.
 
-正確狀態最多是：
+The correct state is at most:
 
 $$
 \mathsf{BLOCKED},
@@ -1034,15 +1032,15 @@ $$
 \mathsf{UNKNOWN}.
 $$
 
-這是 CSM 的 epistemic firewall。
+This is the epistemic firewall of CSM.
 
 ---
 
 # 25. No-Premature-Quotient Principle
 
-兩個 route 只有在足夠條件下才能 quotient。
+Two routes can only be quotiented under sufficient conditions.
 
-若：
+If:
 
 $$
 R_1
@@ -1050,7 +1048,7 @@ R_1
 R_2
 $$
 
-但 representation 對 prover / theorem backend 的成功率不同，則：
+but the representation has different success rates for the prover / theorem backend, then:
 
 $$
 [R_1]_{\rm math}
@@ -1058,7 +1056,7 @@ $$
 [R_2]_{\rm math}
 $$
 
-仍可以同時有：
+can still simultaneously have:
 
 $$
 [R_1]_{\rm search}
@@ -1066,45 +1064,45 @@ $$
 [R_2]_{\rm search}.
 $$
 
-所以 CSM 維持多層 quotient。
+Therefore, CSM maintains multi-layered quotients.
 
 ---
 
 # 26. Theorem-Strength and Route-Refinement Order
 
-若：
+If:
 
 $$
 Q_1\Rightarrow Q_2,
 $$
 
-但：
+but:
 
 $$
 Q_2\not\Rightarrow Q_1,
 $$
 
-定義：
+define:
 
 $$
 Q_1\succeq Q_2.
 $$
 
-同理，若 route $R_2$ 包含 $R_1$ 的全部合法步驟並額外處理更一般條件，可寫：
+Similarly, if route $R_2$ contains all legal steps of $R_1$ and additionally handles more general conditions, one can write:
 
 $$
 R_1\preceq R_2.
 $$
 
-因此 closure space 同時包含 quotient classes 與 partial/refinement order。
+Therefore, the closure space simultaneously contains quotient classes and a partial/refinement order.
 
-它不是單純 cluster graph。
+It is not a simple cluster graph.
 
 ---
 
 # 27. Obstruction Confluence in CSM
 
-如果多條真正不同的 route：
+If multiple genuinely distinct routes:
 
 $$
 [R_i]_{\rm route}
@@ -1112,7 +1110,7 @@ $$
 [R_j]_{\rm route}
 $$
 
-但都被歸約到同一 audited obstruction class：
+are all reduced to the same audited obstruction class:
 
 $$
 [O(R_i)]_{\rm obs}
@@ -1120,9 +1118,9 @@ $$
 [O^{\star}]_{\rm obs},
 $$
 
-則形成 obstruction confluence。
+then an obstruction confluence is formed.
 
-但：
+But:
 
 $$
 \boxed{
@@ -1132,19 +1130,19 @@ $$
 }
 $$
 
-它只是提高該 obstruction 成為下一個研究對象的優先度。
+It merely raises the priority of that obstruction becoming the next research target.
 
 ---
 
 # 28. Closure-Space Ledger
 
-每一次狀態改變必須寫入：
+Every state change must be written to:
 
 $$
 \mathsf{Ledger}_t.
 $$
 
-最低事件欄位：
+Minimum event fields:
 
 $$
 \mathsf{Event}
@@ -1164,21 +1162,21 @@ $$
 \right\rangle.
 $$
 
-所以：
+Thus:
 
-- theorem repair；
-- obstruction invalidation；
-- route reopen；
-- quotient split；
-- target rewrite；
+- theorem repair;
+- obstruction invalidation;
+- route reopen;
+- quotient split;
+- target rewrite;
 
-都可追溯。
+are all traceable.
 
 ---
 
-# 29. CSM 與 Proof-Space Observatory 的差異
+# 29. Differences Between CSM and Proof-Space Observatory
 
-Proof-Space Observatory 的角色是：
+The role of the Proof-Space Observatory is:
 
 $$
 \boxed{
@@ -1186,7 +1184,7 @@ $$
 }
 $$
 
-CSM 的角色是：
+The role of CSM is:
 
 $$
 \boxed{
@@ -1194,7 +1192,7 @@ $$
 }
 $$
 
-因此：
+Therefore:
 
 $$
 \text{PSO}
@@ -1202,7 +1200,7 @@ $$
 \text{possible CSM instrumentation backends},
 $$
 
-但：
+But:
 
 $$
 \text{CSM}
@@ -1212,9 +1210,9 @@ $$
 
 ---
 
-# 30. CSM 與 UCT 的關係
+# 30. Relationship Between CSM and UCT
 
-UCT 建立：
+UCT establishes:
 
 $$
 \operatorname{GenCl},
@@ -1230,9 +1228,9 @@ $$
 \mathsf{Ledger}.
 $$
 
-CSM 將這些概念投影到數學研究域，但不宣稱它們完全同構。
+CSM projects these concepts onto the mathematical research domain, but does not claim they are completely isomorphic.
 
-主要對照：
+Primary correspondences:
 
 $$
 \operatorname{GenCl}
@@ -1258,7 +1256,7 @@ $$
 \text{cross-domain / cross-representation transfer certificates}.
 $$
 
-CSM 保持：
+CSM maintains:
 
 $$
 \boxed{
@@ -1270,23 +1268,23 @@ $$
 
 ---
 
-# 31. Navier--Stokes 的三域分離
+# 31. Three-Domain Separation of Navier--Stokes
 
-CSM 的第一個大型實驗場是 Navier--Stokes。
+The first large-scale experimental ground for CSM is Navier--Stokes.
 
-定義三個不同 target domain。
+Define three distinct target domains.
 
 ## 31.1 Formal Clay / Mathematical NS
 
-記為：
+Denoted as:
 
 $$
 \mathfrak N_{\rm C}.
 $$
 
-它代表固定 mathematical formulation 下的 Navier--Stokes existence / smoothness 類 target。
+It represents Navier--Stokes existence / smoothness type targets under a fixed mathematical formulation.
 
-重點是：
+The key is that:
 
 $$
 \text{equation},
@@ -1302,19 +1300,19 @@ $$
 \text{regularity target}
 $$
 
-都被型別化。
+are all typed.
 
 ## 31.2 Physical NS Realization Domain
 
-記為：
+Denoted as:
 
 $$
 \mathfrak N_{\rm P}.
 $$
 
-它處理數學模型與實際物理流體、近似、尺度、可測量量、constitutive assumptions、有效理論範圍之間的 correspondence。
+It handles the correspondence between mathematical models and actual physical fluids, approximations, scales, measurable quantities, constitutive assumptions, and effective theoretical ranges.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1324,31 +1322,31 @@ $$
 }
 $$
 
-這不是否定 mathematical NS，而是拒絕把 formal theorem 自動升格成全部物理現實。
+This is not a negation of mathematical NS, but a refusal to automatically promote formal theorems to the entirety of physical reality.
 
 ## 31.3 Generalized NS-Like Equation Family
 
-記為：
+Denoted as:
 
 $$
 \mathfrak N_{\rm G}^{\Sigma}.
 $$
 
-其中 $\Sigma$ 是 family signature。
+where $\Sigma$ is the family signature.
 
-第一版只要求 $\Sigma$ 可以宣告：
+The first version only requires that $\Sigma$ can declare:
 
-- transport / advection operator；
-- incompressibility 或 generalized constraint；
-- diffusion / dissipation operator；
-- pressure / projection / nonlocal coupling；
-- nonlinear interaction order；
-- forcing；
-- domain / boundary；
-- scale-transfer structure；
-- solution / regularity class。
+- transport / advection operator;
+- incompressibility or generalized constraint;
+- diffusion / dissipation operator;
+- pressure / projection / nonlocal coupling;
+- nonlinear interaction order;
+- forcing;
+- domain / boundary;
+- scale-transfer structure;
+- solution / regularity class.
 
-形式上可寫：
+Formally, one can write:
 
 $$
 \mathcal E
@@ -1356,19 +1354,19 @@ $$
 \mathfrak N_{\rm G}^{\Sigma}
 $$
 
-若 $\mathcal E$ 滿足 signature predicate：
+if $\mathcal E$ satisfies the signature predicate:
 
 $$
 \Sigma(\mathcal E)=1.
 $$
 
-這仍是**相對 generalized family**，不是「所有流體方程」或「所有物理 PDE」。
+This is still a **relative generalized family**, not "all fluid equations" or "all physical PDEs".
 
 ---
 
 # 32. NS Globality Non-Collapse
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1378,7 +1376,7 @@ $$
 }
 $$
 
-同樣：
+Similarly:
 
 $$
 \boxed{
@@ -1388,9 +1386,9 @@ $$
 }
 $$
 
-除非有額外 bridge。
+Unless there is an additional bridge.
 
-所以 NS 領域圖應寫成 typed graph，而不是簡單集合包含：
+Thus, the NS domain graph should be written as a typed graph, rather than simple set inclusions:
 
 $$
 \mathfrak N_{\rm C}
@@ -1398,7 +1396,7 @@ $$
 \mathfrak N_{\rm G}^{\Sigma},
 $$
 
-以及：
+and:
 
 $$
 \mathfrak N_{\rm C}
@@ -1407,25 +1405,25 @@ $$
 \mathfrak N_{\rm P}.
 $$
 
-每條 edge 需要獨立 certificate。
+Each edge requires an independent certificate.
 
 ---
 
-# 33. 為什麼 Clay NS 看似全域卻仍是限縮的
+# 33. Why Clay NS Appears Global but Remains Restricted
 
-Clay-type global regularity 中的「global」主要針對固定 formulation 的時間延拓與 solution regularity。
+The "global" in Clay-type global regularity primarily targets time continuation and solution regularity for a fixed formulation.
 
-其 scope 很大，但仍然固定了：
+Its scope is large, but it still fixes:
 
-- equation family；
-- dimension；
-- incompressibility；
-- viscosity regime；
-- domain / boundary alternatives；
-- solution notion；
-- data assumptions。
+- equation family;
+- dimension;
+- incompressibility;
+- viscosity regime;
+- domain / boundary alternatives;
+- solution notion;
+- data assumptions.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1435,7 +1433,7 @@ $$
 }
 $$
 
-更重要的是：
+More importantly:
 
 $$
 \boxed{
@@ -1445,13 +1443,13 @@ $$
 }
 $$
 
-這是 CSM 對「全域」一詞的第一個形式化修正。
+This is CSM's first formal correction to the term "global".
 
 ---
 
 # 34. NS Relative-Global Closure Space
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1459,30 +1457,30 @@ $$
 }
 $$
 
-為 Navier--Stokes 研究的相對全域閉包空間。
+as the relative-global closure space for Navier--Stokes research.
 
-第一版資料來源可包含：
+The first version's data sources may include:
 
-- ETN--X Integration；
-- C1 / C2；
-- C3--C6；
-- X72；
-- DCRP；
-- RFP；
-- MORP；
-- FCBP；
-- Proof Asset Map；
-- theorem-check scripts；
-- external theorem anchors；
-- later corrections and supersessions。
+- ETN--X Integration;
+- C1 / C2;
+- C3--C6;
+- X72;
+- DCRP;
+- RFP;
+- MORP;
+- FCBP;
+- Proof Asset Map;
+- theorem-check scripts;
+- external theorem anchors;
+- later corrections and supersessions.
 
-但這些 artifact 必須先拆成 typed objects 後才能進圖。
+However, these artifacts must first be decomposed into typed objects before entering the graph.
 
 ---
 
-# 35. NS 中「封路」的新含義
+# 35. The New Meaning of "Blocked Routes" in NS
 
-假設一篇研究得到：
+Suppose a study yields:
 
 $$
 \text{scalar additive budget}
@@ -1490,15 +1488,15 @@ $$
 \text{blow-up exclusion}.
 $$
 
-CSM 不把整個 Navier--Stokes target 標成失敗。
+CSM does not mark the entire Navier--Stokes target as a failure.
 
-它只在對應 route class 上建立：
+It only establishes:
 
 $$
 O_{\rm scalar-budget}.
 $$
 
-並將：
+on the corresponding route class. And sets:
 
 $$
 \sigma(R_{\rm scalar})
@@ -1506,7 +1504,7 @@ $$
 \mathsf{BLOCKED}
 $$
 
-或在 theorem-level counterexample 足夠時：
+or, when theorem-level counterexamples are sufficient:
 
 $$
 \sigma(Q_{\rm scalar-sufficiency})
@@ -1514,13 +1512,13 @@ $$
 \mathsf{CLOSED}^{-}.
 $$
 
-其他 route 不受影響，除非 obstruction-transfer certificate 成立。
+Other routes are unaffected, unless an obstruction-transfer certificate holds.
 
 ---
 
-# 36. Survivor 不是失敗，而是 frontier compression
+# 36. Survivor is Not a Failure, but Frontier Compression
 
-NS C3--C6、X72、DCRP 中大量結果最後不是 theorem completion，而是：
+A large number of results in NS C3--C6, X72, and DCRP ultimately are not theorem completions, but rather:
 
 $$
 R_1\vee R_2\vee\cdots\vee R_k
@@ -1530,7 +1528,7 @@ S_1\vee\cdots\vee S_m,
 m<k.
 $$
 
-CSM 將這種結果定義為：
+CSM defines this kind of result as:
 
 $$
 \boxed{
@@ -1538,37 +1536,37 @@ $$
 }
 $$
 
-若 compression 有 theorem-level proof，則它本身是正的數學資產。
+If the compression has a theorem-level proof, it is itself a positive mathematical asset.
 
-即使最終 target 尚 OPEN，frontier volume / complexity 已被縮小。
+Even if the final target is still OPEN, the frontier volume / complexity has been reduced.
 
 ---
 
-# 37. Closure Volume 不等於節點數
+# 37. Closure Volume Does Not Equal Node Count
 
-令 raw frontier 有：
+Let the raw frontier have:
 
 $$
 N
 $$
 
-個節點。
+nodes.
 
-若 quotient 後只有：
+If after quotienting there are only:
 
 $$
 N_{\rm eff}
 $$
 
-個獨立 route / obstruction classes，則真正 closure-space size 應基於：
+independent route / obstruction classes, then the true closure-space size should be based on:
 
 $$
 N_{\rm eff},
 $$
 
-而不是 $N$。
+rather than $N$.
 
-未來可研究：
+Future research may investigate:
 
 $$
 \operatorname{Vol}_{\rm CSM}
@@ -1577,13 +1575,13 @@ $$
 \right),
 $$
 
-但本文不預設存在唯一自然測度。
+but this paper does not presume the existence of a unique natural measure.
 
 ---
 
-# 38. Closure Density 與 Saturation
+# 38. Closure Density and Saturation
 
-局部 basin $B$ 可以具有高 closure density：
+A local basin $B$ can have a high closure density:
 
 $$
 \rho_{\rm cl}(B)
@@ -1595,7 +1593,7 @@ $$
 }.
 $$
 
-但：
+But:
 
 $$
 \boxed{
@@ -1605,23 +1603,21 @@ $$
 }
 $$
 
-因此 saturation 仍只能是 relative observational state，除非 completeness certificate 介入。
+Therefore, saturation can still only be a relative observational state, unless a completeness certificate intervenes.
 
 ---
 
 # 39. Closure Boundary as Research Target
 
-在 CSM 中，研究下一步不再單純選「最新 paper 的 TODO」。
+In CSM, the next step in research is no longer simply selecting the "TODOs of the latest paper".
 
-可以對：
+One can perform priority ranking on:
 
 $$
 \partial^{\ast}\mathfrak C(Q)
 $$
 
-做 priority ranking。
-
-候選 priority function：
+Candidate priority function:
 
 $$
 \mathsf{Priority}(v)
@@ -1637,21 +1633,21 @@ F
 \right).
 $$
 
-這樣 AI 可以選擇：
+This allows AI to choose:
 
-> 哪一個 boundary node 一旦閉合，會封掉最多 descendant space 或打開最多新的合法 route。
+> Which boundary node, once closed, will block the most descendant space or open the most new legal routes.
 
 ---
 
 # 40. Closure as a Search Strategy
 
-CSM 的研究策略可以從：
+CSM's research strategy can be upgraded from:
 
 $$
 \text{find one promising path}
 $$
 
-升級成：
+to:
 
 $$
 \boxed{
@@ -1659,13 +1655,13 @@ $$
 }
 $$
 
-但 cost / gain 仍是研究制度參數，不是數學真理本身。
+However, cost / gain remain parameters of the research regime, not mathematical truths themselves.
 
 ---
 
 # 41. Minimum Closure Certificate
 
-任何 closure event 至少攜帶：
+Any closure event must carry at least:
 
 ```yaml
 closure_id:
@@ -1686,7 +1682,7 @@ provenance:
 version:
 ```
 
-若 closure type 是 `BLOCKED`，必須額外標：
+If the closure type is `BLOCKED`, it must additionally tag:
 
 ```yaml
 block_scope:
@@ -1694,7 +1690,7 @@ reopen_conditions:
 transferability:
 ```
 
-避免把暫時 blockage 偽裝成 permanent no-go。
+To avoid disguising a temporary blockage as a permanent no-go.
 
 ---
 
@@ -1747,65 +1743,65 @@ bridge_ids:
 
 ---
 
-# 44. CSM 核心公理 / 規範 v0.1
+# 44. Core Axioms / Norms of CSM v0.1
 
 ## CSM-A1 — Typed Node Principle
 
-不同數學角色不得只因都出現在研究文本中而被視為同型節點。
+Different mathematical roles must not be treated as isomorphic nodes simply because they both appear in the research text.
 
 ## CSM-A2 — Typed Edge Principle
 
-implication、dependency、representation、bridge、block 與 contradiction 不得塌縮。
+Implication, dependency, representation, bridge, block, and contradiction must not collapse.
 
 ## CSM-A3 — Relative Globality Principle
 
-任何 global closure 都相對 declared scope，除非另有 absolute-completeness proof。
+Any global closure is relative to the declared scope, unless there is an absolute-completeness proof.
 
 ## CSM-A4 — No Premature Promotion
 
-observational evidence 不得無證升格為 theorem closure。
+Observational evidence must not be promoted to theorem closure without a certificate.
 
 ## CSM-A5 — No Premature Quotient
 
-semantic similarity 不得無證升格為 mathematical equivalence。
+Semantic similarity must not be promoted to mathematical equivalence without a certificate.
 
 ## CSM-A6 — Provenance Preservation
 
-任何 quotient / closure / repair 後都必須可追溯回原始 evidence。
+Any quotient / closure / repair must be traceable back to the original evidence.
 
 ## CSM-A7 — Blockage Non-Finality
 
-route blockage 不是 proposition falsehood，且可被合法 reopen。
+Route blockage is not proposition falsehood, and can be legally reopened.
 
 ## CSM-A8 — Bridge Explicitness
 
-跨 domain / representation / model 的 transfer 必須有 bridge certificate。
+Transfers across domains / representations / models must have a bridge certificate.
 
 ## CSM-A9 — Completeness Debt Preservation
 
-未建立 route / decomposition completeness 時，relative closure 不得冒充 absolute closure。
+When route / decomposition completeness is not established, relative closure must not masquerade as absolute closure.
 
 ## CSM-A10 — Globality Typing
 
-任何 global claim 必須附 scope vector 或等價的 domain declaration。
+Any global claim must be accompanied by a scope vector or an equivalent domain declaration.
 
 ## CSM-A11 — Closure Non-Collapse
 
-不同 closure action 不預設互推或同構。
+Different closure actions are not presumed to be mutually derivable or isomorphic.
 
 ## CSM-A12 — Ledgered Dynamics
 
-closure-space state change 必須 versioned and auditable。
+Closure-space state changes must be versioned and auditable.
 
 ---
 
-# 45. 第一批可證命題
+# 45. First Batch of Provable Propositions
 
-以下為 CSM v0.1 的結構性命題，並非深層新數學定理。
+The following are structural propositions of CSM v0.1, not deep new mathematical theorems.
 
 ## Proposition 45.1 — Observed Closure Non-Completeness
 
-若：
+If:
 
 $$
 \Omega^{\rm obs}
@@ -1813,7 +1809,7 @@ $$
 \Omega^{\rm adm},
 $$
 
-則：
+then:
 
 $$
 \mathsf{Closed}(\Omega^{\rm obs})
@@ -1821,59 +1817,59 @@ $$
 \mathsf{Closed}(\Omega^{\rm adm}).
 $$
 
-這是集合包含直接導出的 epistemic firewall。
+This is an epistemic firewall directly derived from set inclusion.
 
 ## Proposition 45.2 — Quotient Preservation Requirement
 
-若 quotient map：
+If a quotient map:
 
 $$
 q:\Omega\to\Omega/\sim
 $$
 
-不保留 target-relevant assumptions 或 theorem strength，則 quotient closure 不能作為 target closure 的 sound certificate。
+does not preserve target-relevant assumptions or theorem strength, then the quotient closure cannot serve as a sound certificate for the target closure.
 
 ## Proposition 45.3 — Bridge-Soundness Requirement
 
-若 $X$ 到 $Y$ 的 closure claim 使用 bridge $B$，但 $B$ 未證 sound，則 $Y$ 的 closure status 至少保留 bridge debt。
+If a closure claim from $X$ to $Y$ uses bridge $B$, but $B$ is not proven sound, then the closure status of $Y$ retains at least the bridge debt.
 
 ## Proposition 45.4 — Blockage Reopening Possibility
 
-若 blockage proof 依賴 assumption set $A$，而新的 route $R'$ 不滿足 $A$，則舊 blockage 不能無證 transfer 到 $R'$。
+If a blockage proof depends on assumption set $A$, and a new route $R'$ does not satisfy $A$, then the old blockage cannot transfer to $R'$ without a certificate.
 
 ## Proposition 45.5 — Relative-Global Closure Bound
 
-任何：
+The claim strength of any:
 
 $$
 \mathfrak C^{\rm rel}_{D,\Theta,\mathcal A,R,N,H}(Q)
 $$
 
-的 claim strength 不得超過其 domain、bridge、completeness 與 verification certificates 的共同強度。
+must not exceed the combined strength of its domain, bridge, completeness, and verification certificates.
 
 ---
 
-# 46. NS 的第一個 Closure-Space Research Program
+# 46. The First Closure-Space Research Program for NS
 
-第一版 NS 實驗不直接追求「把 203 篇全部畫成圖」。
+The first version of the NS experiment does not directly pursue "drawing all 203 papers into a graph".
 
-應依序：
+It should proceed sequentially:
 
-1. 固定 $\mathfrak N_{\rm C}$ formal target；
-2. 建 $\mathfrak N_{\rm P}$ 與 $\mathfrak N_{\rm G}^{\Sigma}$ 的 domain records；
-3. 對既有 corpus 抽取 Claim / Assumption / Lemma / Route / Obstruction / Survivor；
-4. 建 $\sim_{\rm prop}$、$\sim_{\rm route}$、$\sim_{\rm obs}$；
-5. 建 implication DAG；
-6. 建 route hypergraph；
-7. 建 obstruction transfer edges；
-8. 對 C1--C6、X72、DCRP 等建立 lineage；
-9. 標記 CLOSED+, CLOSED-, BLOCKED, CONDITIONAL, OPEN；
-10. 計算 quotient frontier；
-11. 找 closure-central nodes；
-12. 逐一研究高 closure-gain targets；
-13. 每次閉合後重新計算整個相對全域圖。
+1. Fix the $\mathfrak N_{\rm C}$ formal target;
+2. Build the domain records for $\mathfrak N_{\rm P}$ and $\mathfrak N_{\rm G}^{\Sigma}$;
+3. Extract Claims / Assumptions / Lemmas / Routes / Obstructions / Survivors from the existing corpus;
+4. Establish $\sim_{\rm prop}$, $\sim_{\rm route}$, $\sim_{\rm obs}$;
+5. Build the implication DAG;
+6. Build the route hypergraph;
+7. Build obstruction transfer edges;
+8. Establish lineage for C1--C6, X72, DCRP, etc.;
+9. Tag CLOSED+, CLOSED-, BLOCKED, CONDITIONAL, OPEN;
+10. Calculate the quotient frontier;
+11. Find closure-central nodes;
+12. Systematically research high closure-gain targets;
+13. Recalculate the entire relative-global graph after each closure.
 
-這就是：
+This is:
 
 $$
 \boxed{
@@ -1883,74 +1879,74 @@ $$
 
 ---
 
-# 47. 與傳統「找證明」的互補關係
+# 47. Complementary Relationship with Traditional "Proof Finding"
 
-CSM 不主張未來數學都要用 closure-space exhaustion。
+CSM does not claim that all future mathematics must use closure-space exhaustion.
 
-某些問題仍可能因一個漂亮 lemma 直接完成。
+Some problems may still be solved directly by a single elegant lemma.
 
-CSM 的價值主要出現在：
+The value of CSM primarily emerges when:
 
-- proof space 極大；
-- 研究歷史很長；
-- failure / obstruction 很多；
-- 多 representation 並存；
-- 多 agent / 多工具並行；
-- route 重訪頻繁；
-- no-go 與 survivor 可重用；
-- target 本身存在多 domain / scope interpretation。
+- the proof space is extremely large;
+- the research history is very long;
+- failures / obstructions are numerous;
+- multiple representations coexist;
+- multiple agents / tools operate in parallel;
+- routes are frequently revisited;
+- no-gos and survivors are reusable;
+- the target itself possesses multiple domain / scope interpretations.
 
-NS 正是這類實驗場。
-
----
-
-# 48. CSM 的真正長期問題
-
-CSM 最終不是只問：
-
-> 哪些 route 已經走過？
-
-而是問：
-
-1. closure-space 是否存在穩定的 quotient geometry？
-2. obstruction 是否有可組合的 transfer algebra？
-3. frontier 是否存在可證的壓縮率？
-4. completeness certificate 在哪些數學領域可能實現？
-5. 某些 theorem 是否可以被重寫成 finite / transfinite closure problem？
-6. closure actions 是否在特定子類形成 lattice / category / fixed-point structure？
-7. closure-space dynamics 是否存在 invariant、attractor 或 recurrent basin？
-8. 是否能證明某些 proof domains 的 route grammar 完備？
-9. 是否存在「閉包本身的閉包」與 meta-closure hierarchy？
-10. CSM 是否能從研究方法論進一步形成可重用的形式數學工具？
-
-這些都是後續 Paper 01+ 的主題。
+NS is exactly this kind of experimental ground.
 
 ---
 
-# 49. 建議系列結構
+# 48. The True Long-Term Questions of CSM
 
-CSM 第一輪建議：
+Ultimately, CSM does not merely ask:
 
-- **Paper 00**：Formal Foundations；
-- **Paper 01**：Globality Typing and Domain Stratification；
-- **Paper 02**：Typed Route Hypergraphs and Quotient Geometry；
-- **Paper 03**：Obstruction Closure, Transfer and Reopening；
-- **Paper 04**：Frontier Mathematics and Relative-Global Closure Grades；
-- **Paper 05**：Route-Completeness Certificates and Closure Proofs；
-- **Paper 06**：Closure-Space Dynamics, Fixed Points and Meta-Closure；
-- **NS Application 00**：NS Relative-Global Closure Graph v0.1；
-- **NS Application 01**：C1--C6 / X72 / DCRP Closure Reconstruction；
-- **Runtime 00**：CSM Graph Builder / Closure Verifier MVP。
+> Which routes have already been taken?
+
+Rather, it asks:
+
+1. Does a stable quotient geometry exist for the closure-space?
+2. Do obstructions possess a composable transfer algebra?
+3. Does the frontier have a provable compression rate?
+4. In which mathematical domains can completeness certificates be realized?
+5. Can certain theorems be rewritten as finite / transfinite closure problems?
+6. Do closure actions form lattice / category / fixed-point structures in specific subclasses?
+7. Do closure-space dynamics possess invariants, attractors, or recurrent basins?
+8. Can the route grammar of certain proof domains be proven complete?
+9. Is there a "closure of the closure itself" and a meta-closure hierarchy?
+10. Can CSM further evolve from a research methodology into a reusable formal mathematical tool?
+
+These are all topics for subsequent Paper 01+.
+
+---
+
+# 49. Proposed Series Structure
+
+CSM first round proposal:
+
+- **Paper 00**: Formal Foundations;
+- **Paper 01**: Globality Typing and Domain Stratification;
+- **Paper 02**: Typed Route Hypergraphs and Quotient Geometry;
+- **Paper 03**: Obstruction Closure, Transfer and Reopening;
+- **Paper 04**: Frontier Mathematics and Relative-Global Closure Grades;
+- **Paper 05**: Route-Completeness Certificates and Closure Proofs;
+- **Paper 06**: Closure-Space Dynamics, Fixed Points and Meta-Closure;
+- **NS Application 00**: NS Relative-Global Closure Graph v0.1;
+- **NS Application 01**: C1--C6 / X72 / DCRP Closure Reconstruction;
+- **Runtime 00**: CSM Graph Builder / Closure Verifier MVP.
 
 Paper numbering can be changed later; this is a proposed research route, not canonical commitment beyond Paper 00.
 
 ---
 
-# 50. 結論
+# 50. Conclusion
 
-CSM 的核心不是把數學研究「畫成圖」。
+The core of CSM is not about "drawing graphs" of mathematical research.
 
-它要做的是把：
+What it aims to do is transform:
 
 $$
 \text{Claim},
@@ -1968,15 +1964,15 @@ $$
 \text{Closure}
 $$
 
-變成可以被數學化操作的 typed objects。
+into typed objects that can be mathematically manipulated.
 
-最終研究狀態不是：
+The final research state is not:
 
 $$
 \text{we tried many things}.
 $$
 
-而是：
+but rather:
 
 $$
 \boxed{
@@ -1986,7 +1982,7 @@ $$
 }
 $$
 
-研究下一步也不再只是「再想一條路」，而是：
+The next step in research is no longer just "think of another route," but rather:
 
 $$
 \boxed{
@@ -1994,7 +1990,7 @@ $$
 }
 $$
 
-但整個框架始終保留最後一道防火牆：
+However, the entire framework always retains a final firewall:
 
 $$
 \boxed{
@@ -2004,13 +2000,13 @@ $$
 }
 $$
 
-只有當 route / decomposition completeness 本身成為可證定理，closure-space exhaustion 才能被提升為真正的 exhaustive proof mechanism。
+Only when route / decomposition completeness itself becomes a provable theorem can closure-space exhaustion be promoted to a true exhaustive proof mechanism.
 
-對 Navier--Stokes 而言，這意味著過去所有被封住的路線、NO-GO、survivor 與 OPEN 不再是研究廢料，而是第一個大型 closure space 的結構材料。
+For Navier--Stokes, this means that all previously blocked routes, NO-GOs, survivors, and OPENs are no longer research waste, but the structural materials for the first large-scale closure space.
 
 ---
 
-# 附錄 A：核心符號
+# Appendix A: Core Symbols
 
 | Symbol | Meaning |
 |---|---|
@@ -2045,23 +2041,23 @@ $$
 
 ---
 
-# 附錄 B：內部理論血統
+# Appendix B: Internal Theoretical Lineage
 
-本篇形式設計主要承接下列既有內部研究資產：
+The formal design of this paper primarily inherits the following existing internal research assets:
 
-1. **LSI-PSD / Logic-Space Integration and Proof-Space Dynamics**：semantic quotient、route graph、proof basin、obstruction confluence、theorem-strength preorder、Proof-Space Observatory、epistemic firewall。
-2. **UGC/CUR / Unified Closure Theory**：typed non-collapse、generative closure、reachability、transformation closure、bridge certificate、debt、ledger、relative-global promotion discipline。
-3. **NS ETN--X Integration**：將 Navier--Stokes 研究重寫成 multiscale legality / UV-chain / obstruction program，並保持 formal NS target 與研究語言的分層。
-4. **NS C1--C6 / X72 / DCRP**：提供大量已閉、受阻、條件化、survivor 與 reopened proof-state 實例，作為 CSM 第一個大型 closure-space corpus。
-5. **Productive Mis-Specification / Descendant Survival line**：parent formulation、model 或 assumption 即使被修正，也不能自動刪除所有 descendant mathematical assets；需要 lineage-aware audit。
+1. **LSI-PSD / Logic-Space Integration and Proof-Space Dynamics**: semantic quotient, route graph, proof basin, obstruction confluence, theorem-strength preorder, Proof-Space Observatory, epistemic firewall.
+2. **UGC/CUR / Unified Closure Theory**: typed non-collapse, generative closure, reachability, transformation closure, bridge certificate, debt, ledger, relative-global promotion discipline.
+3. **NS ETN--X Integration**: rewriting Navier--Stokes research into a multiscale legality / UV-chain / obstruction program, while maintaining the stratification of the formal NS target and research language.
+4. **NS C1--C6 / X72 / DCRP**: providing a massive number of closed, blocked, conditionalized, survivor, and reopened proof-state instances as the first large-scale closure-space corpus for CSM.
+5. **Productive Mis-Specification / Descendant Survival line**: even if a parent formulation, model, or assumption is revised, all descendant mathematical assets cannot be automatically deleted; a lineage-aware audit is required.
 
-這些來源是 CSM 的理論血統，不代表它們彼此完全等價，也不代表 CSM 已完成與外部 graph theory、proof theory、category theory 或 closure algebra 的學術對照。
+These sources constitute the theoretical lineage of CSM; this does not imply that they are completely equivalent to each other, nor does it imply that CSM has completed academic benchmarking against external graph theory, proof theory, category theory, or closure algebra.
 
 ---
 
-# 附錄 C：下一步
+# Appendix C: Next Steps
 
-Paper 00 完成後，下一個最重要的理論任務不是立即建立完整 NS 圖，而是先寫：
+After the completion of Paper 00, the next most important theoretical task is not to immediately build the complete NS graph, but to first write:
 
 $$
 \boxed{
@@ -2069,6 +2065,6 @@ $$
 }
 $$
 
-因為若不先把「哪一種 global、哪一個 domain、哪些 bridge 可合法跨域」說清楚，後面的 NS Closure Graph 會再次把 Clay mathematical NS、physical realization 與 generalized NS-like family 混在一起。
+Because if we do not first clarify "which kind of global, which domain, and which bridges can legally cross domains," the subsequent NS Closure Graph will once again conflate Clay mathematical NS, physical realization, and the generalized NS-like family.
 
 **END OF CSM PAPER 00 v0.1**

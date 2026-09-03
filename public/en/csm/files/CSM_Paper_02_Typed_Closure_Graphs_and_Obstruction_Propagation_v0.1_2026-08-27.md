@@ -1,39 +1,39 @@
 # CSM Paper 02 — Typed Closure Graphs and Obstruction Propagation
 
-## 閉包空間數學論：型別閉包圖、阻斷傳播、重開與前沿收縮
+## Closure-Space Mathematics: Typed Closure Graphs, Obstruction Propagation, Reopening, and Frontier Contraction
 
 **English Title:** *Closure-Space Mathematics: Typed Closure Graphs, Obstruction Propagation, Reopening, and Frontier Contraction*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 02  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** en-US  
 **Status:** Formal Theory / Graph-Operational Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的第一個圖論運算核心。Paper 00 已將研究中的命題、路徑、障礙、證書、前沿、債務與帳本組織為相對全域閉包空間；Paper 01 進一步將「全域」拆成量詞作用域與 domain typing，禁止從較窄作用域無證升格到較廣作用域。本文現在處理下一個核心問題：
+This paper establishes the first graph-theoretic operational core of Closure-Space Mathematics (CSM). Paper 00 organized propositions, routes, obstructions, certificates, frontiers, debts, and ledgers in research into a relative-global closure space; Paper 01 further decomposed "globality" into quantifier scopes and domain typing, prohibiting uncertified promotion from narrower to broader scopes. This paper now addresses the next core problem:
 
-> 一個大型數學問題中，如何把「這條路被堵住」「這個分支已證明」「這個條件命題成立」「這個障礙只在某些 assumptions 下有效」「後續新 bridge 使舊死路重新開放」全部表示為同一個可稽核圖論系統？
+> In a large-scale mathematical problem, how can "this route is blocked," "this branch is proven," "this conditional proposition holds," "this obstruction is only valid under certain assumptions," and "a subsequent new bridge reopens an old dead end" all be represented within the same auditable graph-theoretic system?
 
-本文主張，普通有向圖不足以承載成熟 proof-space closure。真正需要的是一個帶型別、帶作用域、帶證書、允許多前提、多輸出、條件化與版本化的 **typed directed hypergraph**。在此圖上，我們分別定義：
+This paper argues that ordinary directed graphs are insufficient to carry a mature proof-space closure. What is truly needed is a **typed directed hypergraph** equipped with types, scopes, certificates, multiple premises, multiple outputs, conditionalization, and versioning. On this graph, we define respectively:
 
-1. implication closure；
-2. equivalence quotient closure；
-3. conditional closure；
-4. obstruction propagation closure；
-5. bridge-mediated closure；
-6. reopening operator；
-7. frontier contraction operator；
-8. debt propagation；
-9. closure ledger；
-10. relative route-exhaustion certificate。
+1. implication closure;
+2. equivalence quotient closure;
+3. conditional closure;
+4. obstruction propagation closure;
+5. bridge-mediated closure;
+6. reopening operator;
+7. frontier contraction operator;
+8. debt propagation;
+9. closure ledger;
+10. relative route-exhaustion certificate.
 
-本文的核心非坍縮原則是：
+The core non-collapse principle of this paper is:
 
 $$
 \boxed{
@@ -47,17 +47,17 @@ $$
 }
 $$
 
-一個 obstruction 只有在其 assumption、scope、representation、bridge 與 target fidelity 全部匹配時，才允許沿合法依賴邊傳播。任何跨作用域、跨表示、跨方程族、跨模型類的 obstruction promotion 都必須附帶傳播證書；否則只能形成局部 blocked state，而不能升格為 theorem-level no-go。
+An obstruction is allowed to propagate along legal dependency edges only when its assumption, scope, representation, bridge, and target fidelity all match. Any obstruction promotion across scopes, representations, equation families, or model classes must be accompanied by a propagation certificate; otherwise, it can only form a local blocked state and cannot be elevated to a theorem-level no-go.
 
-另一方面，CSM 不把 closure 視為永遠單調。當舊 assumption 被移除、新 representation 出現、新 bridge 被證明、obstruction 被限縮、counterexample 被撤銷或 parent theorem 被修訂時，先前 blocked 的 route 可以合法重新成為 OPEN。因此本文引入 **Reopening Operator** 與 **Versioned Closure Ledger**，使 proof-space closure 成為可回放、可修正、可局部逆轉的動態圖演化。
+On the other hand, CSM does not view closure as permanently monotonic. When old assumptions are removed, new representations emerge, new bridges are proven, obstructions are narrowed, counterexamples are retracted, or parent theorems are revised, previously blocked routes can legally become OPEN again. Therefore, this paper introduces the **Reopening Operator** and the **Versioned Closure Ledger**, making proof-space closure a replayable, revisable, and locally reversible dynamic graph evolution.
 
-本文最後提出 NS 相對全域閉包圖的最小實例化規則：過去 C1--C6、X72、DCRP、MORP、RFP、FCBP 與其他 proof families 中的 `NO-GO`、`OPEN`、`SURVIVOR`、`CONDITIONAL`、`CLOSED` 不再只是文件標籤，而被編譯成 typed nodes、hyperedges、obstruction certificates 與 frontier states。這使未來「一步一步封住命題」不再是一種研究敘事，而可以成為一個明確的圖論閉包程序。
+Finally, this paper proposes the minimal instantiation rules for the NS relative-global closure graph: `NO-GO`, `OPEN`, `SURVIVOR`, `CONDITIONAL`, and `CLOSED` in past C1--C6, X72, DCRP, MORP, RFP, FCBP, and other proof families are no longer just document labels, but are compiled into typed nodes, hyperedges, obstruction certificates, and frontier states. This ensures that "closing a proposition step by step" in the future is no longer just a research narrative, but can become an explicit graph-theoretic closure procedure.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-本文不重新定義 CSM 的全部本體。Paper 00 已建立：
+This paper does not redefine the entire ontology of CSM. Paper 00 has established:
 
 $$
 \mathfrak C
@@ -79,28 +79,28 @@ E,
 \right\rangle.
 $$
 
-Paper 01 已建立 scope contract 與 globality typing。
+Paper 01 has established scope contracts and globality typing.
 
-本文專注於：
+This paper focuses on:
 
 $$
 \boxed{
-\text{如何讓 }\mathfrak C
-\text{ 真正執行 closure operations。}
+\text{How to make }\mathfrak C
+\text{ truly execute closure operations.}
 }
 $$
 
 ---
 
-# 2. 為什麼普通 directed graph 不夠
+# 2. Why Ordinary Directed Graphs Are Insufficient
 
-典型數學推導不是：
+A typical mathematical derivation is not:
 
 $$
 A\to B.
 $$
 
-而常是：
+But rather often:
 
 $$
 A_1,\ldots,A_k
@@ -108,7 +108,7 @@ A_1,\ldots,A_k
 B_1,\ldots,B_m.
 $$
 
-例如一個 obstruction 可能要求：
+For example, an obstruction might require:
 
 $$
 A_{\rm regularity}
@@ -120,13 +120,13 @@ A_{\rm scale}
 A_{\rm boundary}
 $$
 
-才推出：
+to deduce:
 
 $$
 \neg R.
 $$
 
-因此 CSM 的 primitive edge 必須允許：
+Therefore, the primitive edge in CSM must allow:
 
 $$
 e:
@@ -135,13 +135,13 @@ e:
 \{w_1,\ldots,w_m\}.
 $$
 
-本文以 directed hyperedge 為基本關係單位。
+This paper uses directed hyperedges as the fundamental relational unit.
 
 ---
 
 # 3. Typed Closure Hypergraph
 
-定義 CSM 閉包超圖：
+Define the CSM closure hypergraph:
 
 $$
 \boxed{
@@ -151,23 +151,23 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $V$：節點集合；
-- $E$：directed hyperedge 集合；
-- $\tau_V$：節點型別；
-- $\tau_E$：邊型別；
-- $\sigma$：epistemic / closure status；
-- $\lambda$：scope label；
-- $\pi$：provenance；
-- $\chi$：certificate metadata；
-- $\nu$：版本資訊。
+- $V$: set of nodes;
+- $E$: set of directed hyperedges;
+- $\tau_V$: node types;
+- $\tau_E$: edge types;
+- $\sigma$: epistemic / closure status;
+- $\lambda$: scope label;
+- $\pi$: provenance;
+- $\chi$: certificate metadata;
+- $\nu$: version information.
 
 ---
 
-# 4. 節點型別
+# 4. Node Types
 
-最小 node type family 定義為：
+The minimal node type family is defined as:
 
 $$
 \tau_V(v)
@@ -191,13 +191,13 @@ $$
 \}.
 $$
 
-不是所有節點都能互相直接連邊。
+Not all nodes can be directly connected to each other by edges.
 
 ---
 
-# 5. 邊型別
+# 5. Edge Types
 
-最小 edge type family：
+The minimal edge type family:
 
 $$
 \tau_E(e)
@@ -224,13 +224,13 @@ $$
 \}.
 $$
 
-任何 edge type 都必須有 source/target type signature。
+Any edge type must have a source/target type signature.
 
 ---
 
 # 6. Edge Signature
 
-令：
+Let:
 
 $$
 \operatorname{sig}(e)
@@ -242,7 +242,7 @@ $$
 \right).
 $$
 
-若 edge 不符合其 signature，則：
+If an edge does not conform to its signature, then:
 
 $$
 \boxed{
@@ -250,7 +250,7 @@ e\notin E_{\rm legal}.
 }
 $$
 
-例如：
+For example:
 
 $$
 \mathsf{Obstruction}
@@ -258,9 +258,9 @@ $$
 \mathsf{RouteState}
 $$
 
-合法。
+is legal.
 
-但：
+But:
 
 $$
 \mathsf{Representation}
@@ -268,13 +268,13 @@ $$
 \mathsf{Claim}
 $$
 
-若沒有 theorem-level counterexample bridge，則不合法。
+is illegal without a theorem-level counterexample bridge.
 
 ---
 
 # 7. Closure Status
 
-節點 status：
+Node status:
 
 $$
 \sigma(v)
@@ -291,29 +291,29 @@ $$
 \}.
 $$
 
-其中：
+Where:
 
 $$
 \mathsf{CLOSED}^{+}
 $$
 
-表示正向證成。
+indicates positive proof.
 
 $$
 \mathsf{CLOSED}^{-}
 $$
 
-表示 theorem-level refutation 或 certified counterexample。
+indicates a theorem-level refutation or certified counterexample.
 
 $$
 \mathsf{BLOCKED}
 $$
 
-表示 route 在目前 scope/assumption/regime 下不能繼續。
+indicates that the route cannot proceed under the current scope/assumption/regime.
 
 ---
 
-# 8. 第一非坍縮原則
+# 8. First Non-Collapse Principle
 
 $$
 \boxed{
@@ -323,13 +323,13 @@ $$
 }
 $$
 
-若一條 proof route 被 estimate barrier 阻斷，只能得到：
+If a proof route is blocked by an estimate barrier, one can only obtain:
 
 $$
 \sigma(R)=\mathsf{BLOCKED}.
 $$
 
-不能得到：
+One cannot obtain:
 
 $$
 \sigma(Q)=\mathsf{CLOSED}^{-}.
@@ -337,7 +337,7 @@ $$
 
 ---
 
-# 9. 第二非坍縮原則
+# 9. Second Non-Collapse Principle
 
 $$
 \boxed{
@@ -347,23 +347,23 @@ $$
 }
 $$
 
-一個 route family：
+If a route family:
 
 $$
 B_i
 $$
 
-全部 blocked，不代表：
+is entirely blocked, it does not mean that:
 
 $$
 Q
 $$
 
-已無其他 admissible route family。
+has no other admissible route families.
 
 ---
 
-# 10. 第三非坍縮原則
+# 10. Third Non-Collapse Principle
 
 $$
 \boxed{
@@ -373,25 +373,25 @@ $$
 }
 $$
 
-任何 obstruction 都必須帶 scope：
+Any obstruction must carry a scope:
 
 $$
 \lambda(O).
 $$
 
-若：
+If:
 
 $$
 \lambda(O)=D_0,
 $$
 
-則除非另有 promotion certificate，不可自動把：
+then unless there is a promotion certificate, one cannot automatically elevate:
 
 $$
 O
 $$
 
-提升至：
+to:
 
 $$
 D_1\supsetneq D_0.
@@ -401,7 +401,7 @@ $$
 
 # 11. Assumption Envelope
 
-每個 theorem、route 或 obstruction 帶：
+Every theorem, route, or obstruction carries:
 
 $$
 \boxed{
@@ -411,7 +411,7 @@ $$
 }
 $$
 
-阻斷傳播的第一必要條件：
+The first necessary condition for obstruction propagation:
 
 $$
 \boxed{
@@ -421,19 +421,19 @@ $$
 }
 $$
 
-若不成立，則 obstruction 不可直接作用。
+If this does not hold, the obstruction cannot act directly.
 
 ---
 
 # 12. Scope Envelope
 
-每個物件同時帶 scope contract：
+Every object simultaneously carries a scope contract:
 
 $$
 \mathsf{Scope}(x).
 $$
 
-阻斷傳播需要：
+Obstruction propagation requires:
 
 $$
 \mathsf{Scope}(R)
@@ -441,35 +441,35 @@ $$
 \mathsf{Scope}(O)
 $$
 
-或存在合法的 scope bridge。
+or the existence of a legal scope bridge.
 
-這裡 $\preceq$ 表示 obstruction 的作用域至少覆蓋 route 所在作用域。
+Here $\preceq$ indicates that the obstruction's scope covers at least the scope where the route resides.
 
 ---
 
 # 13. Representation Envelope
 
-令：
+Let:
 
 $$
 \mathsf{Rep}(x)
 $$
 
-表示證明物件使用的 representation class。
+denote the representation class used by the proof object.
 
-若 obstruction 只對：
+If an obstruction is only valid for:
 
 $$
 \rho_1
 $$
 
-有效，而 route 轉到：
+and the route switches to:
 
 $$
 \rho_2,
 $$
 
-則：
+then:
 
 $$
 \boxed{
@@ -479,7 +479,7 @@ O_{\rho_2}.
 }
 $$
 
-除非有：
+Unless there is a:
 
 $$
 \mathsf{RepTransferCert}_{\rho_1\to\rho_2}.
@@ -489,37 +489,37 @@ $$
 
 # 14. Target Fidelity
 
-每個 obstruction 還必須對齊 target：
+Every obstruction must also align with a target:
 
 $$
 \mathsf{Target}(O).
 $$
 
-若 route 的真正 target 是：
+If the true target of the route is:
 
 $$
 Q',
 $$
 
-但 obstruction 證明的是：
+but the obstruction proves:
 
 $$
 \neg Q,
 $$
 
-且：
+and:
 
 $$
 Q'\not\Rightarrow Q,
 $$
 
-則 obstruction 不能傳播。
+then the obstruction cannot propagate.
 
 ---
 
 # 15. Obstruction Record
 
-定義 obstruction：
+Define an obstruction:
 
 $$
 \boxed{
@@ -555,19 +555,19 @@ $$
 \}.
 $$
 
-只有後三類在適當 scope 下具有 theorem-level closure effect。
+Only the latter three classes have a theorem-level closure effect under the appropriate scope.
 
 ---
 
-# 17. Diagnostic Obstruction 不封命題
+# 17. Diagnostic Obstructions Do Not Close Propositions
 
-若：
+If:
 
 $$
 \mathsf{Strength}(O)=\mathsf{DIAGNOSTIC},
 $$
 
-則最多：
+then at most:
 
 $$
 R
@@ -575,7 +575,7 @@ R
 \mathsf{BLOCKED}.
 $$
 
-不得：
+It must not be that:
 
 $$
 Q
@@ -585,15 +585,15 @@ $$
 
 ---
 
-# 18. Formal No-Go 的局部封路
+# 18. Local Route Blocking by Formal No-Go
 
-若：
+If:
 
 $$
 \mathsf{Strength}(O)=\mathsf{FORMAL\_NO\_GO}
 $$
 
-且 propagation contract 滿足，則可有：
+and the propagation contract is satisfied, then we can have:
 
 $$
 O
@@ -601,19 +601,19 @@ O
 R.
 $$
 
-若 $R$ 本身就是完整 claim branch，則：
+If $R$ itself is a complete claim branch, then:
 
 $$
 \sigma(R)=\mathsf{CLOSED}^{-}.
 $$
 
-但 parent problem 是否 closed 仍另行判定。
+However, whether the parent problem is closed is still determined separately.
 
 ---
 
 # 19. Obstruction Propagation Contract
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -621,44 +621,44 @@ $$
 }
 $$
 
-至少包含：
+which must at least include:
 
-1. target match；
-2. assumption coverage；
-3. scope compatibility；
-4. representation compatibility；
-5. dependency validity；
-6. theorem-strength compatibility；
-7. version freshness；
-8. exception audit；
-9. bridge status；
-10. provenance reference。
+1. target match;
+2. assumption coverage;
+3. scope compatibility;
+4. representation compatibility;
+5. dependency validity;
+6. theorem-strength compatibility;
+7. version freshness;
+8. exception audit;
+9. bridge status;
+10. provenance reference.
 
 ---
 
 # 20. Propagation Rule
 
-若：
+If:
 
 $$
 \mathsf{OPCert}(O\to R)=\mathsf{PASS},
 $$
 
-則：
+then:
 
 $$
 O\triangleright R.
 $$
 
-即 obstruction 可以作用於 route。
+Meaning the obstruction can act on the route.
 
-若：
+If:
 
 $$
 \mathsf{OPCert}(O\to R)\neq\mathsf{PASS},
 $$
 
-則：
+then:
 
 $$
 O\ntriangleright R.
@@ -668,7 +668,7 @@ $$
 
 # 21. Obstruction Propagation Closure
 
-對 obstruction set $\mathfrak O$ 定義：
+For an obstruction set $\mathfrak O$, define:
 
 $$
 \boxed{
@@ -684,15 +684,15 @@ R:
 }
 $$
 
-這不是傳統 topological closure。
+This is not a traditional topological closure.
 
-它是一個 typed proof-space closure operator family。
+It is a typed proof-space closure operator family.
 
 ---
 
 # 22. Implication Closure
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -705,13 +705,13 @@ S\vdash_{\mathcal H}q
 }
 $$
 
-其中 hypergraph derivation 必須只使用合法 certified implication edges。
+Where the hypergraph derivation must only use legal certified implication edges.
 
 ---
 
 # 23. Conditional Closure
 
-若：
+If:
 
 $$
 A_1,\ldots,A_k
@@ -719,7 +719,7 @@ A_1,\ldots,A_k
 Q
 $$
 
-已證明，但 $A_i$ 尚未全部 closed，則：
+is proven, but $A_i$ are not all closed, then:
 
 $$
 \boxed{
@@ -727,7 +727,7 @@ $$
 }
 $$
 
-對應：
+Corresponding to:
 
 $$
 \operatorname{Cl}_{\rm cond}(S).
@@ -737,7 +737,7 @@ $$
 
 # 24. Quotient Closure
 
-已有 equivalence relation：
+Given equivalence relations:
 
 $$
 \sim_{\rm prop},
@@ -747,7 +747,7 @@ $$
 \sim_{\rm obs}.
 $$
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -757,29 +757,29 @@ $$
 }
 $$
 
-但 quotient closure 不刪除 search provenance。
+However, quotient closure does not delete search provenance.
 
 ---
 
-# 25. Quotient 不得消滅 genealogy
+# 25. Quotients Must Not Erase Genealogy
 
-若：
+If:
 
 $$
 R_1\sim_{\rm route}R_2,
 $$
 
-則數學 identity 可 quotient。
+then the mathematical identity can be quotiented.
 
-但：
+But:
 
 $$
 \pi(R_1)\neq\pi(R_2)
 $$
 
-仍可保留。
+can still be preserved.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -793,7 +793,7 @@ $$
 
 # 26. Bridge Closure
 
-若：
+If:
 
 $$
 X
@@ -801,7 +801,7 @@ X
 Y
 $$
 
-且：
+and:
 
 $$
 \mathsf{BridgeCert}^{X\to Y}
@@ -809,13 +809,13 @@ $$
 \mathsf{PASS},
 $$
 
-則：
+then:
 
 $$
 Y
 $$
 
-可進入：
+can enter:
 
 $$
 \operatorname{Cl}_{\rm bridge}(X).
@@ -823,9 +823,9 @@ $$
 
 ---
 
-# 27. Bridge 不保證 lossless
+# 27. Bridges Are Not Guaranteed to Be Lossless
 
-即使：
+Even if:
 
 $$
 \mathsf{BridgeCert}^{X\to Y}
@@ -833,21 +833,21 @@ $$
 \mathsf{PASS},
 $$
 
-仍可能：
+it is still possible that:
 
 $$
 \mathsf{Loss}(X\to Y)>0.
 $$
 
-因此 closure metadata 必須記錄 bridge loss。
+Therefore, closure metadata must record bridge loss.
 
 ---
 
 # 28. Closure Family
 
-CSM 不假設單一 closure operator。
+CSM does not assume a single closure operator.
 
-令：
+Let:
 
 $$
 \boxed{
@@ -868,9 +868,9 @@ $$
 
 # 29. Heterogeneous Closure Principle
 
-不同 closure operator 的語義不同。
+Different closure operators have different semantics.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -882,13 +882,13 @@ $$
 }
 $$
 
-它們不可只因符號都叫 closure 就被同一化。
+They cannot be equated simply because their symbols are all called closure.
 
 ---
 
 # 30. Closure Composition
 
-某些情況可做：
+In some cases, one can perform:
 
 $$
 \operatorname{Cl}_{\rm obs}
@@ -896,7 +896,7 @@ $$
 \operatorname{Cl}_{\Rightarrow}.
 $$
 
-但不保證：
+But it is not guaranteed that:
 
 $$
 \operatorname{Cl}_{\Rightarrow}
@@ -912,7 +912,7 @@ $$
 
 # 31. Noncommutative Closure
 
-因此一般：
+Thus, in general:
 
 $$
 \boxed{
@@ -926,13 +926,13 @@ $$
 }
 $$
 
-這是 proof-space order dependence 的正式來源之一。
+This is one of the formal sources of proof-space order dependence.
 
 ---
 
 # 32. Closure Schedule
 
-定義 closure schedule：
+Define a closure schedule:
 
 $$
 \boxed{
@@ -942,19 +942,19 @@ $$
 }
 $$
 
-同一 initial graph 在不同 schedule 下可能得到不同 intermediate state。
+The same initial graph under different schedules may yield different intermediate states.
 
 ---
 
 # 33. Stable Closure State
 
-若某 graph state $G^\star$ 滿足：
+If a graph state $G^\star$ satisfies:
 
 $$
 C_i(G^\star)=G^\star
 $$
 
-對所有當前 active closure operator 成立，則稱：
+for all currently active closure operators, it is said that:
 
 $$
 \boxed{
@@ -963,13 +963,13 @@ G^\star
 }
 $$
 
-這不代表 absolute mathematical completeness。
+This does not imply absolute mathematical completeness.
 
 ---
 
 # 34. Frontier
 
-定義 active frontier：
+Define the active frontier:
 
 $$
 \boxed{
@@ -990,13 +990,13 @@ v\leadsto Q
 }
 $$
 
-其中 $v\leadsto Q$ 表示存在合法 route 或 bridge reachability。
+Where $v\leadsto Q$ indicates the existence of a legal route or bridge reachability.
 
 ---
 
 # 35. Quotient Frontier
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1006,13 +1006,13 @@ $$
 }
 $$
 
-這比 raw frontier size 更接近真正獨立 route mass。
+This is closer to the true independent route mass than the raw frontier size.
 
 ---
 
 # 36. Frontier Mass
 
-可定義：
+One can define:
 
 $$
 \boxed{
@@ -1023,13 +1023,13 @@ w([r]).
 }
 $$
 
-其中 $w([r])$ 可反映 route independence、generality 或 certificate quality。
+Where $w([r])$ can reflect route independence, generality, or certificate quality.
 
 ---
 
 # 37. Frontier Contraction
 
-若一個合法 closure step 使：
+If a legal closure step causes:
 
 $$
 M_{\partial,t+1}(Q)
@@ -1037,7 +1037,7 @@ M_{\partial,t+1}(Q)
 M_{\partial,t}(Q),
 $$
 
-稱為：
+it is called:
 
 $$
 \boxed{
@@ -1045,21 +1045,21 @@ $$
 }
 $$
 
-但 frontier contraction 不等於 theorem progress，除非被 closure certificates 支持。
+However, frontier contraction does not equal theorem progress unless supported by closure certificates.
 
 ---
 
 # 38. False Contraction
 
-若 frontier 變小只是因：
+If the frontier shrinks merely due to:
 
-- over-aggressive quotient；
-- assumption 偷換；
-- scope 偷縮；
-- representation deletion；
-- unsupported obstruction propagation；
+- over-aggressive quotient;
+- assumption bait-and-switch;
+- scope shrinking;
+- representation deletion;
+- unsupported obstruction propagation;
 
-則稱：
+then it is called:
 
 $$
 \boxed{
@@ -1071,7 +1071,7 @@ $$
 
 # 39. Frontier Expansion
 
-新 representation、新 theorem、新 bridge 或 assumption relaxation 可能使：
+New representations, new theorems, new bridges, or assumption relaxations may cause:
 
 $$
 M_{\partial,t+1}(Q)
@@ -1079,29 +1079,29 @@ M_{\partial,t+1}(Q)
 M_{\partial,t}(Q).
 $$
 
-這不一定是退步。
+This is not necessarily a regression.
 
-它可能表示研究空間變得更忠實。
+It may indicate that the research space has become more faithful.
 
 ---
 
 # 40. Reopening Principle
 
-若某 route $R$ 曾：
+If a route $R$ once had:
 
 $$
 \sigma_t(R)=\mathsf{BLOCKED},
 $$
 
-但後續：
+but subsequently:
 
-- obstruction 被限縮；
-- assumption 被移除；
-- representation 改變；
-- bridge 出現；
-- theorem 被修訂；
+- the obstruction is narrowed;
+- an assumption is removed;
+- the representation changes;
+- a bridge appears;
+- the theorem is revised;
 
-則允許：
+then it is allowed that:
 
 $$
 \boxed{
@@ -1113,7 +1113,7 @@ $$
 
 # 41. Reopening Operator
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1121,11 +1121,11 @@ $$
 }
 $$
 
-不是傳統 inverse closure。
+This is not a traditional inverse closure.
 
-它表示：
+It signifies:
 
-> 對過去 closure decision 做版本化重新稽核，撤銷不再有效的 blocked/closed inheritance。
+> Performing a versioned re-audit of past closure decisions, revoking blocked/closed inheritances that are no longer valid.
 
 ---
 
@@ -1137,23 +1137,23 @@ $$
 }
 $$
 
-至少包含：
+must at least include:
 
-1. previous closure event；
-2. invalidated premise；
-3. changed scope/representation/bridge；
-4. surviving dependencies；
-5. new status；
-6. provenance；
-7. version reference。
+1. previous closure event;
+2. invalidated premise;
+3. changed scope/representation/bridge;
+4. surviving dependencies;
+5. new status;
+6. provenance;
+7. version reference.
 
 ---
 
-# 43. Closure 不必全域單調
+# 43. Closure Need Not Be Globally Monotonic
 
-在固定 theorem base 與固定 assumptions 下，某些 closure operator 可單調。
+Under a fixed theorem base and fixed assumptions, certain closure operators can be monotonic.
 
-但在研究系統中：
+But in a research system:
 
 $$
 \boxed{
@@ -1163,15 +1163,15 @@ $$
 }
 $$
 
-不是普遍真理。
+is not a universal truth.
 
-因為 revision 可撤銷舊 closure。
+Because revisions can revoke old closures.
 
 ---
 
 # 44. Monotone Evidence / Nonmonotone Status
 
-更精確地：
+More precisely:
 
 $$
 \boxed{
@@ -1180,13 +1180,13 @@ while Closure Status may be nonmonotone}.
 }
 $$
 
-舊證據不刪除，但舊結論可以被修正。
+Old evidence is not deleted, but old conclusions can be revised.
 
 ---
 
 # 45. Closure Ledger
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1198,7 +1198,7 @@ e_1,e_2,\ldots
 }
 $$
 
-每個 closure event：
+Every closure event:
 
 $$
 e_t
@@ -1219,7 +1219,7 @@ $$
 
 # 46. Event-Sourced Closure
 
-系統狀態：
+System state:
 
 $$
 \boxed{
@@ -1229,13 +1229,13 @@ $$
 }
 $$
 
-任何 reopening 都是新 event，不是抹去舊 history。
+Any reopening is a new event, not an erasure of old history.
 
 ---
 
 # 47. Closure Debt
 
-若 closure decision 缺少部分 proof obligation，定義：
+If a closure decision lacks a partial proof obligation, define:
 
 $$
 \boxed{
@@ -1243,34 +1243,34 @@ $$
 }
 $$
 
-例如：
+For example:
 
-- missing scope proof；
-- missing bridge proof；
-- missing route-completeness proof；
-- missing representation robustness；
-- missing target fidelity；
-- missing independence audit。
+- missing scope proof;
+- missing bridge proof;
+- missing route-completeness proof;
+- missing representation robustness;
+- missing target fidelity;
+- missing independence audit.
 
 ---
 
 # 48. Debt Propagation
 
-若：
+If:
 
 $$
 A\Rightarrow B
 $$
 
-但 $A$ 帶未償 debt，則：
+but $A$ carries an unfulfilled debt, then:
 
 $$
 B
 $$
 
-不能自動被標記成 debt-free。
+cannot automatically be marked as debt-free.
 
-可定義：
+One can define:
 
 $$
 \boxed{
@@ -1284,7 +1284,7 @@ $$
 
 # 49. Closure with Debt
 
-允許：
+Allow:
 
 $$
 \boxed{
@@ -1296,21 +1296,21 @@ $$
 }
 $$
 
-這比硬分 PASS/FAIL 更符合長程研究。
+This aligns better with long-term research than a rigid PASS/FAIL dichotomy.
 
 ---
 
 # 50. Route Exhaustion
 
-令：
+Let:
 
 $$
 \mathcal R_{\rm adm}(Q)
 $$
 
-為 admissible route classes。
+be the admissible route classes.
 
-若：
+If:
 
 $$
 \forall [R]\in\mathcal R_{\rm adm}(Q),
@@ -1322,21 +1322,21 @@ $$
 \},
 $$
 
-仍不能立刻說：
+one still cannot immediately say:
 
 $$
 Q
 $$
 
-被反證。
+is refuted.
 
-因為 route space 本身可能不完備。
+Because the route space itself may be incomplete.
 
 ---
 
 # 51. Route-Completeness Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1344,7 +1344,7 @@ $$
 }
 $$
 
-其目標是證：
+Its goal is to prove:
 
 $$
 \boxed{
@@ -1354,13 +1354,13 @@ $$
 }
 $$
 
-相對指定 route grammar / mechanism class。
+relative to a specified route grammar / mechanism class.
 
 ---
 
 # 52. Relative Route Completeness
 
-通常只能證：
+Usually, one can only prove:
 
 $$
 \boxed{
@@ -1370,21 +1370,21 @@ $$
 }
 $$
 
-其中 $\Gamma$ 是明確 route grammar。
+where $\Gamma$ is an explicit route grammar.
 
-這仍然是相對完備。
+This is still relative completeness.
 
 ---
 
 # 53. Exhaustion Theorem Pattern
 
-若：
+If:
 
-1. $\mathsf{RCCert}(Q,\Gamma)=\mathsf{PASS}$；
-2. 每個 admissible route class 都被 certified obstruction 排除；
-3. obstruction propagation 全部 scope-valid；
+1. $\mathsf{RCCert}(Q,\Gamma)=\mathsf{PASS}$;
+2. every admissible route class is excluded by a certified obstruction;
+3. obstruction propagations are all scope-valid;
 
-則可得到：
+then one can obtain:
 
 $$
 \boxed{
@@ -1396,9 +1396,9 @@ $$
 
 ---
 
-# 54. Route Exhaustion 不等於 Claim Refutation
+# 54. Route Exhaustion Does Not Equal Claim Refutation
 
-若 $Q$ 本身不是「存在某 route」的命題，而是外部數學命題，仍需要 bridge：
+If $Q$ itself is not a proposition about "the existence of a route," but an external mathematical proposition, a bridge is still needed:
 
 $$
 \neg\operatorname{RouteExists}(Q)
@@ -1406,13 +1406,13 @@ $$
 \neg Q.
 $$
 
-該 bridge 也必須有 certificate。
+This bridge must also have a certificate.
 
 ---
 
 # 55. Positive Exhaustion
 
-反之，若 claim 可被分解為有限或可控 branch family：
+Conversely, if a claim can be decomposed into a finite or controllable branch family:
 
 $$
 Q
@@ -1420,27 +1420,27 @@ Q
 Q_1\vee\cdots\vee Q_n,
 $$
 
-且某 $Q_i$ 被證成，則：
+and some $Q_i$ is proven, then:
 
 $$
 Q
 $$
 
-正閉合。
+is positively closed.
 
-若所有 $Q_i$ 都被反證，則：
+If all $Q_i$ are refuted, then:
 
 $$
 Q
 $$
 
-負閉合。
+is negatively closed.
 
 ---
 
 # 56. Branch Decomposition Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1453,39 +1453,39 @@ Q
 }
 $$
 
-沒有 branch decomposition certificate，就不能把 branch closure 推到 parent closure。
+Without a branch decomposition certificate, branch closure cannot be promoted to parent closure.
 
 ---
 
 # 57. Hypergraph Cut
 
-對 target $Q$ 定義 cut set：
+For a target $Q$, define a cut set:
 
 $$
 C\subset V
 $$
 
-使得每條 admissible route 到 $Q$ 都通過 $C$。
+such that every admissible route to $Q$ passes through $C$.
 
-若：
+If:
 
 $$
 C
 $$
 
-被完整 certified closure，則可能形成高槓桿 obstruction boundary。
+is completely certified closed, it may form a high-leverage obstruction boundary.
 
 ---
 
 # 58. Certified Cut
 
-若：
+If:
 
 $$
 \mathsf{CutCert}(C,Q)=\mathsf{PASS},
 $$
 
-且：
+and:
 
 $$
 \forall c\in C,
@@ -1493,49 +1493,49 @@ $$
 \sigma(c)=\mathsf{CLOSED}^{-},
 $$
 
-則：
+then all routes to:
 
 $$
 Q
 $$
 
-的所有 route 被截斷。
+are truncated.
 
-但仍需 parent bridge 判定是否推出 $\neg Q$。
+However, a parent bridge is still needed to determine whether $\neg Q$ is deduced.
 
 ---
 
 # 59. Obstruction Centrality
 
-定義：
+Define:
 
 $$
 Z(O)
 $$
 
-表示 obstruction 在 route graph 中截斷的獨立 route mass。
+to represent the independent route mass truncated by the obstruction in the route graph.
 
-這不是 theorem truth score。
+This is not a theorem truth score.
 
 ---
 
 # 60. High-Centrality Obstruction
 
-若：
+If:
 
 $$
 Z(O)\gg0,
 $$
 
-表示：
+it indicates that:
 
 $$
 O
 $$
 
-值得優先研究。
+is worth prioritizing for research.
 
-但：
+But:
 
 $$
 \boxed{
@@ -1550,19 +1550,19 @@ $$
 
 # 61. Obstruction Confluence
 
-若不同 route quotient class：
+If different route quotient classes:
 
 $$
 [R_i]_{\rm route}
 $$
 
-都命中同一 obstruction class：
+all hit the same obstruction class:
 
 $$
 [O^\star]_{\rm obs},
 $$
 
-則形成：
+it forms an:
 
 $$
 \boxed{
@@ -1574,9 +1574,9 @@ $$
 
 # 62. False Confluence
 
-若不同 route 其實共享同一 hidden premise 或只是 notation variant，則 confluence 強度必須降權。
+If different routes actually share the same hidden premise or are merely notation variants, the confluence strength must be down-weighted.
 
-因此：
+Therefore:
 
 $$
 C_{\rm raw}(O)
@@ -1588,7 +1588,7 @@ $$
 
 # 63. Closure Robustness
 
-可定義：
+One can define:
 
 $$
 \boxed{
@@ -1605,13 +1605,13 @@ C_L,
 }
 $$
 
-但它仍是 research metric，不是 proof substitute。
+But it remains a research metric, not a proof substitute.
 
 ---
 
 # 64. Survivor
 
-若一個 route family 經過當前所有合法 obstruction propagation 後仍 OPEN，稱：
+If a route family remains OPEN after all current legal obstruction propagations, it is called a:
 
 $$
 \boxed{
@@ -1619,21 +1619,21 @@ $$
 }
 $$
 
-Survivor 不代表 route 可成功。
+A survivor does not mean the route will succeed.
 
-它只表示目前尚未被封。
+It only means it has not yet been blocked.
 
 ---
 
 # 65. Minimal Survivor
 
-若：
+If:
 
 $$
 R
 $$
 
-是 survivor，且所有更弱或更一般的 sibling routes 都被封，則：
+is a survivor, and all weaker or more general sibling routes are blocked, then:
 
 $$
 \boxed{
@@ -1641,13 +1641,13 @@ $$
 }
 $$
 
-這是下一輪研究的高槓桿 target。
+This is a high-leverage target for the next round of research.
 
 ---
 
 # 66. Survivor Compression
 
-一個成熟研究流程會反覆：
+A mature research workflow will iterate:
 
 $$
 \text{many routes}
@@ -1659,17 +1659,17 @@ $$
 \text{new obstruction audit}.
 $$
 
-這就是 closure-space dynamics 的第一個基本循環。
+This is the first fundamental cycle of closure-space dynamics.
 
 ---
 
-# 67. Reopening 與 Survivor 的互動
+# 67. Interaction Between Reopening and Survivors
 
-舊 survivor 可以被新 obstruction 封閉。
+Old survivors can be closed by new obstructions.
 
-舊 blocked route 也可以被新 bridge 重開。
+Old blocked routes can also be reopened by new bridges.
 
-因此 graph frontier 是：
+Therefore, the graph frontier is a:
 
 $$
 \boxed{
@@ -1677,24 +1677,24 @@ $$
 }
 $$
 
-不是靜態清單。
+not a static list.
 
 ---
 
-# 68. NS 編譯規則：文件標籤到圖狀態
+# 68. NS Compilation Rules: From Document Labels to Graph States
 
-NS 過去文件常用：
+Past NS documents frequently used:
 
-- `CLOSED`；
-- `OPEN`；
-- `NO-GO`；
-- `SURVIVOR`；
-- `CONDITIONAL`；
-- `STOP-*`。
+- `CLOSED`;
+- `OPEN`;
+- `NO-GO`;
+- `SURVIVOR`;
+- `CONDITIONAL`;
+- `STOP-*`.
 
-CSM 不直接把這些文字當 theorem status。
+CSM does not directly treat these texts as theorem statuses.
 
-每一筆都必須先編譯成：
+Every entry must first be compiled into:
 
 $$
 \boxed{
@@ -1713,19 +1713,19 @@ $$
 
 ---
 
-# 69. NS 的 NO-GO 編譯
+# 69. NS NO-GO Compilation
 
-若某文件說：
+If a document states:
 
 > scalar additive budget NO-GO
 
-則不能直接生成：
+It cannot directly generate:
 
 $$
 \mathsf{CLOSED}^{-}(\text{Navier--Stokes blow-up}).
 $$
 
-應生成：
+It should generate:
 
 $$
 \boxed{
@@ -1737,9 +1737,9 @@ $$
 
 ---
 
-# 70. NS 的 SURVIVOR 編譯
+# 70. NS SURVIVOR Compilation
 
-若某 route 仍存活，例如 shear/polarization survivor，則建立：
+If a route is still surviving, such as a shear/polarization survivor, then establish:
 
 $$
 \sigma(R_{\rm sh/pol})
@@ -1747,7 +1747,7 @@ $$
 \mathsf{OPEN}.
 $$
 
-它不是：
+It is not:
 
 $$
 \mathsf{PROVEN}.
@@ -1755,11 +1755,11 @@ $$
 
 ---
 
-# 71. NS 的 STOP 編譯
+# 71. NS STOP Compilation
 
-`STOP-D105` 不是 claim refutation。
+`STOP-D105` is not a claim refutation.
 
-應編譯為：
+It should be compiled as:
 
 $$
 \boxed{
@@ -1770,13 +1770,13 @@ $$
 }
 $$
 
-這是一個 active boundary node。
+This is an active boundary node.
 
 ---
 
-# 72. NS 的相對全域 closure graph
+# 72. NS Relative-Global Closure Graph
 
-最小模型：
+The minimal model:
 
 $$
 \boxed{
@@ -1802,9 +1802,9 @@ $$
 
 # 73. Cross-Series Bridge
 
-不同 NS 系列只有在 claim/assumption/scope 對齊時才可共用 obstruction。
+Different NS series can only share obstructions when their claims/assumptions/scopes are aligned.
 
-因此必須有：
+Therefore, there must be a:
 
 $$
 \mathsf{SeriesBridgeCert}.
@@ -1814,11 +1814,11 @@ $$
 
 # 74. Cross-Series False Merge
 
-若兩篇都說：
+If two papers both mention:
 
 > carrier escape
 
-但一篇指 spatial carrier，另一篇指 spectral carrier，則：
+But one refers to a spatial carrier and the other to a spectral carrier, then:
 
 $$
 \boxed{
@@ -1826,40 +1826,40 @@ O_1\not\sim_{\rm obs}O_2
 }
 $$
 
-除非另有 formal mapping。
+Unless there is a formal mapping otherwise.
 
 ---
 
-# 75. Closure Graph 的研究目標
+# 75. First Goal of the Closure Graph
 
-NS closure graph 的第一目標不是證明 Clay。
+The primary goal of the NS closure graph is not to prove Clay.
 
-而是：
+Rather, it is:
 
 $$
 \boxed{
-\text{把已知 route、obstruction、survivor、debt
-轉成可查詢、可傳播、可重開的相對全域圖。}
+\text{To convert known routes, obstructions, survivors, and debts
+into a queryable, propagatable, and reopenable relative-global graph.}
 }
 $$
 
 ---
 
-# 76. Closure Graph 的第二目標
+# 76. Second Goal of the Closure Graph
 
-計算：
+To compute:
 
 $$
 \partial^\ast\mathfrak C_{\rm NS}(Q_{\rm Clay})
 $$
 
-即 quotient 後的 active independent frontier。
+which is the active independent frontier after quotienting.
 
 ---
 
-# 77. Closure Graph 的第三目標
+# 77. Third Goal of the Closure Graph
 
-尋找：
+To find:
 
 $$
 \boxed{
@@ -1867,27 +1867,25 @@ $$
 }
 $$
 
-它們可能比盲目新增 paper 更有研究槓桿。
+They may offer more research leverage than blindly adding papers.
 
 ---
 
-# 78. Closure Graph 的第四目標
+# 78. Fourth Goal of the Closure Graph
 
-檢查哪些 blocked route 可被：
+To check which blocked routes can be legally reopened by:
 
-- assumption relaxation；
-- new representation；
-- new external theorem；
-- bridge proof；
-- domain retyping；
-
-合法重開。
+- assumption relaxation;
+- new representation;
+- new external theorem;
+- bridge proof;
+- domain retyping.
 
 ---
 
 # 79. Closure-Space Update
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1908,17 +1906,17 @@ $$
 
 # 80. Closure Fixed Point
 
-若在固定 corpus、固定 theorem base、固定 bridge set 下：
+If under a fixed corpus, fixed theorem base, and fixed bridge set:
 
 $$
 \mathfrak U(\mathfrak C^\star)=\mathfrak C^\star,
 $$
 
-稱局部 closure fixed point。
+it is called a local closure fixed point.
 
 ---
 
-# 81. Fixed Point 不等於數學完備
+# 81. Fixed Point Does Not Equal Mathematical Completeness
 
 $$
 \boxed{
@@ -1935,7 +1933,7 @@ $$
 
 # 82. Closure Expansion
 
-新 theorem 或 representation 可使：
+A new theorem or representation can cause:
 
 $$
 \mathfrak C^\star
@@ -1943,15 +1941,15 @@ $$
 \mathfrak C^{\star\prime}
 $$
 
-並重新出現 frontier。
+and the frontier reappears.
 
-因此 CSM 的 closure 是可再展開閉包。
+Therefore, CSM's closure is an re-expandable closure.
 
 ---
 
 # 83. Closure-Space Conservation of History
 
-本文要求：
+This paper requires:
 
 $$
 \boxed{
@@ -1959,13 +1957,13 @@ $$
 }
 $$
 
-即使 route 被重新打開，舊 obstruction event 仍保留。
+Even if a route is reopened, the old obstruction event is still preserved.
 
 ---
 
-# 84. Proof Object 與 Search Event 雙身份
+# 84. Dual Identity of Proof Objects and Search Events
 
-同一 artifact 同時具有：
+The same artifact simultaneously possesses a:
 
 $$
 \boxed{
@@ -1973,7 +1971,7 @@ $$
 }
 $$
 
-與：
+and a:
 
 $$
 \boxed{
@@ -1981,30 +1979,30 @@ $$
 }
 $$
 
-數學上 quotient 不代表歷史上刪除。
+A mathematical quotient does not mean historical deletion.
 
 ---
 
 # 85. Closure-Space Auditability
 
-任何 status 必須可回答：
+Any status must be able to answer:
 
-1. 誰把它關閉？
-2. 用哪個 theorem？
-3. assumptions 是什麼？
-4. scope 是什麼？
-5. 是否跨 representation？
-6. 是否存在 bridge？
-7. 是否有 debt？
-8. 是否曾 reopen？
-9. 哪個版本有效？
-10. 哪些 descendants 繼承此 status？
+1. Who closed it?
+2. Using which theorem?
+3. What are the assumptions?
+4. What is the scope?
+5. Does it cross representations?
+6. Is there a bridge?
+7. Is there a debt?
+8. Has it ever been reopened?
+9. Which version is valid?
+10. Which descendants inherit this status?
 
 ---
 
 # 86. Claim-Level Closure Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -2012,21 +2010,21 @@ $$
 }
 $$
 
-包括：
+which includes:
 
-- theorem proof / counterexample reference；
-- branch decomposition；
-- route completeness；
-- obstruction propagation；
-- scope fidelity；
-- version；
-- debt status。
+- theorem proof / counterexample reference;
+- branch decomposition;
+- route completeness;
+- obstruction propagation;
+- scope fidelity;
+- version;
+- debt status.
 
 ---
 
 # 87. Relative-Global Closure Certificate
 
-對 domain $D$：
+For domain $D$:
 
 $$
 \boxed{
@@ -2034,13 +2032,13 @@ $$
 }
 $$
 
-它表示：
+It signifies:
 
-> 在指定 domain、route grammar、theorem base、representation policy 與 bridge policy 下，$Q$ 的 closure status 已完整稽核。
+> Under the specified domain, route grammar, theorem base, representation policy, and bridge policy, the closure status of $Q$ has been fully audited.
 
 ---
 
-# 88. Relative-Global 不等於 Absolute
+# 88. Relative-Global Does Not Equal Absolute
 
 $$
 \boxed{
@@ -2054,7 +2052,7 @@ $$
 
 # 89. Local-to-Absolute Gate
 
-若要升格：
+To elevate:
 
 $$
 \mathsf{RGClCert}_{D}(Q)
@@ -2062,15 +2060,15 @@ $$
 \mathsf{AbsoluteClosure}(Q),
 $$
 
-至少必須解決：
+one must at least resolve:
 
-- domain completeness；
-- route grammar completeness；
-- representation completeness；
-- theorem-base adequacy；
-- hidden assumption absence；
-- bridge completeness；
-- undecidability/independence status。
+- domain completeness;
+- route grammar completeness;
+- representation completeness;
+- theorem-base adequacy;
+- hidden assumption absence;
+- bridge completeness;
+- undecidability/independence status.
 
 ---
 
@@ -2245,57 +2243,57 @@ $$
 R_1
 $$
 
-在：
+fails under the:
 
 $$
 L^p
 $$
 
-estimate 下失敗。
+estimate.
 
-若沒有 theorem 證明所有 admissible norms 都失敗，則：
+If there is no theorem proving that all admissible norms fail, then:
 
 $$
 \sigma(R_1)=\mathsf{BLOCKED}.
 $$
 
-Parent claim 保持 OPEN。
+The parent claim remains OPEN.
 
 ---
 
 # 102. Validation Scenario B — Counterexample
 
-若有合法 counterexample：
+If there is a legal counterexample:
 
 $$
 c\models\neg Q,
 $$
 
-則：
+then:
 
 $$
 \sigma(Q)=\mathsf{CLOSED}^{-}.
 $$
 
-這不是 route-level blocked，而是 claim-level refutation。
+This is not a route-level block, but a claim-level refutation.
 
 ---
 
 # 103. Validation Scenario C — Conditional theorem
 
-若：
+If:
 
 $$
 A\Rightarrow Q
 $$
 
-已證明，但：
+is proven, but:
 
 $$
 \sigma(A)=\mathsf{OPEN},
 $$
 
-則：
+then:
 
 $$
 \sigma(Q)=\mathsf{CONDITIONAL}.
@@ -2305,27 +2303,27 @@ $$
 
 # 104. Validation Scenario D — Representation reopening
 
-若：
+If:
 
 $$
 R_{\rho_1}
 $$
 
-被 obstruction $O_{\rho_1}$ 阻斷，但：
+is blocked by obstruction $O_{\rho_1}$, but:
 
 $$
 R_{\rho_2}
 $$
 
-不受該 obstruction，則：
+is unaffected by this obstruction, then:
 
 $$
 R_{\rho_2}
 $$
 
-仍 OPEN。
+remains OPEN.
 
-若兩者是同一 route 的 representation variants，可記錄：
+If both are representation variants of the same route, one can record:
 
 $$
 \mathsf{REOPENED}.
@@ -2335,19 +2333,19 @@ $$
 
 # 105. Validation Scenario E — Scope promotion forbidden
 
-若 obstruction 對：
+If an obstruction holds for:
 
 $$
 D_0
 $$
 
-成立，但 target route 位於：
+but the target route is located in:
 
 $$
 D_1\supsetneq D_0,
 $$
 
-且無 promotion certificate，則：
+and there is no promotion certificate, then:
 
 $$
 O\ntriangleright R_{D_1}.
@@ -2357,7 +2355,7 @@ $$
 
 # 106. Validation Scenario F — Branch exhaustion
 
-若：
+If:
 
 $$
 Q
@@ -2365,7 +2363,7 @@ Q
 Q_1\vee Q_2\vee Q_3
 $$
 
-有 $\mathsf{BDCert}$，且三個 branch 全部 theorem-level refuted，則：
+has a $\mathsf{BDCert}$, and all three branches are theorem-level refuted, then:
 
 $$
 \sigma(Q)=\mathsf{CLOSED}^{-}.
@@ -2375,13 +2373,13 @@ $$
 
 # 107. Validation Scenario G — Route grammar incomplete
 
-若所有已列 route 都 blocked，但沒有 $\mathsf{RCCert}$，則：
+If all listed routes are blocked, but there is no $\mathsf{RCCert}$, then:
 
 $$
 \sigma(Q)\neq\mathsf{CLOSED}^{-}
 $$
 
-僅能說：
+One can only say:
 
 $$
 \text{observed route space exhausted}.
@@ -2391,21 +2389,21 @@ $$
 
 # 108. Validation Scenario H — Obstruction superseded
 
-若 theorem $T_1$ 被更強 theorem $T_2$ 修訂，使舊 obstruction scope 縮小，則所有依賴舊 scope 的 closure event 進入 re-audit。
+If theorem $T_1$ is revised by a stronger theorem $T_2$, causing the old obstruction scope to shrink, then all closure events depending on the old scope enter a re-audit.
 
 ---
 
 # 109. Validation Scenario I — False quotient
 
-若兩 route 只因 lexical similarity 被合併，但 assumptions 不同，應拆回不同 route class。
+If two routes are merged merely due to lexical similarity, but their assumptions differ, they should be split back into different route classes.
 
-避免 false frontier contraction。
+This avoids false frontier contraction.
 
 ---
 
 # 110. Validation Scenario J — NS scalar budget no-go
 
-若 scalar/additive budget route 被正式 NO-GO，則：
+If the scalar/additive budget route is formally NO-GO, then:
 
 $$
 R_{\rm scalar}
@@ -2413,31 +2411,31 @@ R_{\rm scalar}
 \mathsf{BLOCKED}
 $$
 
-而：
+While:
 
 $$
 Q_{\rm NS}
 $$
 
-仍 OPEN。
+remains OPEN.
 
 ---
 
 # 111. Validation Scenario K — NS survivor
 
-若 DCRP shear/polarization branch 尚未被 theorem-level no-go 排除，則：
+If the DCRP shear/polarization branch has not yet been excluded by a theorem-level no-go, then:
 
 $$
 \sigma(R_{\rm sh/pol})=\mathsf{OPEN}.
 $$
 
-即使其他 sibling branches 已封。
+Even if other sibling branches are closed.
 
 ---
 
 # 112. Validation Scenario L — Cross-series merge
 
-若 X72 與 DCRP obstruction 經 semantic/assumption/scope audit 確認同一，才允許：
+Only if X72 and DCRP obstructions are confirmed identical via semantic/assumption/scope audit is it allowed that:
 
 $$
 O_{\rm X72}
@@ -2447,17 +2445,17 @@ $$
 
 ---
 
-# 113. CSM 與 LSI-PSD 的關係
+# 113. Relationship Between CSM and LSI-PSD
 
-LSI-PSD 主要回答：
+LSI-PSD primarily answers:
 
-> 我們如何觀測、去重、分 basin、衡量 recurrence 與 obstruction confluence？
+> How do we observe, deduplicate, partition basins, and measure recurrence and obstruction confluence?
 
-CSM 進一步問：
+CSM further asks:
 
-> 一旦這些物件被建立，closure status 如何成為可運算、可傳播、可撤銷、可稽核的圖論對象？
+> Once these objects are established, how does the closure status become a computable, propagatable, revocable, and auditable graph-theoretic object?
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -2467,23 +2465,23 @@ $$
 }
 $$
 
-這裡的 $\subset$ 是架構用途上的包含，不主張歷史或理論本體完全等價。
+The $\subset$ here denotes inclusion in architectural utility, not asserting complete equivalence in history or theoretical ontology.
 
 ---
 
-# 114. CSM 與 UCT 的關係
+# 114. Relationship Between CSM and UCT
 
-UCT 提供：
+UCT provides:
 
-- typed non-collapse；
-- bridge certificate；
-- debt；
-- ledger；
-- relative-global gate。
+- typed non-collapse;
+- bridge certificate;
+- debt;
+- ledger;
+- relative-global gate.
 
-CSM 將其具體化到 mathematical proof-space。
+CSM instantiates these into the mathematical proof-space.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -2493,11 +2491,11 @@ $$
 }
 $$
 
-但 CSM 不等於 UCT 全部。
+But CSM is not equivalent to the entirety of UCT.
 
 ---
 
-# 115. CSM 的第一個主要研究命題
+# 115. First Major Research Proposition of CSM
 
 $$
 \boxed{
@@ -2505,13 +2503,13 @@ $$
 }
 $$
 
-在一個 typed finite or finitely generated closure hypergraph 中，若所有 edge signatures、scope contracts、obstruction certificates 與 revision events 都可判定，則 relative-global closure status 可被演算法性重建與重放。
+In a typed finite or finitely generated closure hypergraph, if all edge signatures, scope contracts, obstruction certificates, and revision events are decidable, then the relative-global closure status can be algorithmically reconstructed and replayed.
 
-這是 runtime 層未來要實作的核心。
+This is the core to be implemented at the runtime layer in the future.
 
 ---
 
-# 116. 第二主要研究命題
+# 116. Second Major Research Proposition
 
 $$
 \boxed{
@@ -2519,19 +2517,19 @@ $$
 }
 $$
 
-若 quotient policy、route grammar、scope typing 與 obstruction propagation 全部通過 audit，則：
+If the quotient policy, route grammar, scope typing, and obstruction propagation all pass audit, then:
 
 $$
 \partial^\ast\mathfrak C(Q)
 $$
 
-比 raw paper count 或 raw route count 更接近「目前真正尚未封閉的獨立 proof obligations」。
+is closer to the "truly unclosed independent proof obligations" than raw paper counts or raw route counts.
 
-本文不主張它等於 absolute proof frontier。
+This paper does not assert that it equals the absolute proof frontier.
 
 ---
 
-# 117. 第三主要研究命題
+# 117. Third Major Research Proposition
 
 $$
 \boxed{
@@ -2539,7 +2537,7 @@ $$
 }
 $$
 
-只有：
+Only when:
 
 $$
 \mathsf{BranchDecomposition}
@@ -2551,11 +2549,11 @@ $$
 \mathsf{ScopeFidelity}
 $$
 
-同時成立時，route exhaustion 才能安全升格成 parent-level closure conclusion。
+hold simultaneously can route exhaustion be safely elevated to a parent-level closure conclusion.
 
 ---
 
-# 118. 第四主要研究命題
+# 118. Fourth Major Research Proposition
 
 $$
 \boxed{
@@ -2563,29 +2561,29 @@ $$
 }
 $$
 
-在非固定 theorem base、非固定 representation、非固定 scope 的長程研究系統中，blocked-route status 應預設為可重審，而不是永久終態。
+In a long-term research system with a non-fixed theorem base, non-fixed representations, and non-fixed scopes, a blocked-route status should default to being re-auditable, rather than a permanent final state.
 
 ---
 
-# 119. 對 NS 的直接意義
+# 119. Direct Significance for NS
 
-NS 現有大量工作最有價值的部分，不只是「某次沒證出來」。
+The most valuable part of the massive existing work on NS is not merely "it wasn't proven this time."
 
-真正價值是：
+The true value is:
 
 $$
 \boxed{
-\text{我們已經累積大量可編譯的 obstruction、survivor、branch split、scope correction 與 reopening evidence。}
+\text{We have accumulated a massive amount of compilable obstructions, survivors, branch splits, scope corrections, and reopening evidence.}
 }
 $$
 
-CSM 使這些結果可以第一次被組裝成一個相對全域 closure space。
+CSM allows these results to be assembled into a relative-global closure space for the first time.
 
 ---
 
-# 120. 下一階段
+# 120. Next Stage
 
-Paper 03 應處理：
+Paper 03 should address:
 
 $$
 \boxed{
@@ -2593,24 +2591,24 @@ $$
 }
 $$
 
-即：
+Namely:
 
-- frontier topology / graph geometry；
-- minimal cut；
-- obstruction cover；
-- route-completeness；
-- exhaustion certificate；
-- closure radius；
-- reopened frontier；
-- global-vs-relative proof boundary。
+- frontier topology / graph geometry;
+- minimal cut;
+- obstruction cover;
+- route-completeness;
+- exhaustion certificate;
+- closure radius;
+- reopened frontier;
+- global-vs-relative proof boundary.
 
 ---
 
-# 121. 結論
+# 121. Conclusion
 
-本文將「封路」從研究敘事轉為型別圖論運算。
+This paper transforms "route blocking" from a research narrative into a typed graph-theoretic operation.
 
-其核心結論可濃縮為：
+Its core conclusions can be condensed as:
 
 $$
 \boxed{
@@ -2644,7 +2642,7 @@ $$
 }
 $$
 
-以及：
+And:
 
 $$
 \boxed{
@@ -2652,67 +2650,67 @@ $$
 }
 $$
 
-當這些條件被滿足後，一個大型未解問題的長程研究史才可能被轉成真正可運算的閉包空間，而不只是文件堆積。
+Only when these conditions are met can the long-term research history of a large-scale unsolved problem be transformed into a truly computable closure space, rather than just a pile of documents.
 
 ---
 
-## 附錄 A — CSM Paper 02 最小不變量
+## Appendix A — CSM Paper 02 Minimal Invariants
 
-1. blocked 不等於 refuted；
-2. branch closure 不等於 problem closure；
-3. obstruction 必須有 assumption envelope；
-4. obstruction 必須有 scope envelope；
-5. representation-specific obstruction 不得無證跨 representation；
-6. cross-domain propagation 必須有 bridge；
-7. quotient 不刪 provenance；
-8. closure status 可 nonmonotone；
-9. evidence ledger 不刪除；
-10. reopening 必須有 certificate；
-11. frontier contraction 必須防 false contraction；
-12. route exhaustion 必須有 route-completeness certificate；
-13. local closure 不得偷升 absolute closure；
-14. machine record 必須保存 version；
-15.所有 closure event 必須可 replay。
+1. blocked does not equal refuted;
+2. branch closure does not equal problem closure;
+3. obstructions must have an assumption envelope;
+4. obstructions must have a scope envelope;
+5. representation-specific obstructions must not cross representations without a certificate;
+6. cross-domain propagation must have a bridge;
+7. quotients do not delete provenance;
+8. closure status can be nonmonotone;
+9. the evidence ledger is not deleted;
+10. reopening must have a certificate;
+11. frontier contraction must prevent false contraction;
+12. route exhaustion must have a route-completeness certificate;
+13. local closure must not be stealthily elevated to absolute closure;
+14. machine records must preserve versions;
+15. all closure events must be replayable.
 
 ---
 
-## 附錄 B — CSM Series Dependencies
+## Appendix B — CSM Series Dependencies
 
 ### Paper 00
 
-提供：
+Provides:
 
-- Relative-Global Closure Space；
-- typed research objects；
-- closure status；
-- frontier；
-- debt；
-- ledger；
-- route-completeness obligation。
+- Relative-Global Closure Space;
+- typed research objects;
+- closure status;
+- frontier;
+- debt;
+- ledger;
+- route-completeness obligation.
 
 ### Paper 01
 
-提供：
+Provides:
 
-- Globality Typing Principle；
-- scope contract；
-- domain stratification；
-- globality promotion certificate；
-- NS formal / physical / generalized domain separation。
+- Globality Typing Principle;
+- scope contract;
+- domain stratification;
+- globality promotion certificate;
+- NS formal / physical / generalized domain separation.
 
 ### Paper 02
 
-新增：
+Adds:
 
-- typed closure hypergraph；
-- obstruction propagation contract；
-- closure family；
-- noncommutative closure schedule；
-- reopening operator；
-- frontier contraction；
-- branch decomposition certificate；
-- route exhaustion machinery；
-- NS graph compilation rules。
+- typed closure hypergraph;
+- obstruction propagation contract;
+- closure family;
+- noncommutative closure schedule;
+- reopening operator;
+- frontier contraction;
+- branch decomposition certificate;
+- route exhaustion machinery;
+- NS graph compilation rules.
 
 ---
 

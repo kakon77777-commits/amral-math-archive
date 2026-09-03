@@ -1,19 +1,19 @@
 # CSM Paper 08 — Closure-Space Runtime Semantics and Executable Reference Model
-## 閉包空間數學論：Runtime 語義、狀態機、登錄器與可執行參考模型
+## Closure-Space Mathematics: Runtime Semantics, State Machines, Registries, and Executable Reference Model
 
 **Version:** v0.1  
 **Date:** 2026-08-27  
 **Status:** Executable Runtime Specification  
-**Language:** zh-TW  
+**Language:** en-US  
 **Canonical source:** UTF-8 Markdown
 
 ---
 
-## 摘要
+## Abstract
 
-Paper 00–07 已建立 CSM 的 closure object、scope typing、typed graph、frontier / cut / exhaustion、reopening dynamics、projection、cross-domain transfer 與 proof-carrying operator calculus。本文把它們收斂為第一版可直接實作的 runtime semantics。
+Papers 00–07 have established CSM's closure objects, scope typing, typed graphs, frontiers / cuts / exhaustions, reopening dynamics, projections, cross-domain transfers, and proof-carrying operator calculus. This paper converges them into the first version of directly implementable runtime semantics.
 
-核心 machine state：
+Core machine state:
 
 $$
 \boxed{
@@ -25,9 +25,9 @@ G_\nu,\Sigma_\nu,C_\nu,D_\nu,F_\nu,K_\nu,O_\nu,X_\nu,P_\nu,L_\nu,\nu
 }
 $$
 
-其中依序為 native graph、status map、certificate registry、debt registry、frontier、cuts、obstruction covers、exhaustion、policies、ledger head 與 version。
+These represent, in order, the native graph, status map, certificate registry, debt registry, frontier, cuts, obstruction covers, exhaustion, policies, ledger head, and version.
 
-所有 theorem-level mutation 必須以 transaction 執行：
+All theorem-level mutations must be executed as transactions:
 
 $$
 \boxed{
@@ -38,7 +38,7 @@ $$
 }
 $$
 
-核心安全原則：
+Core security principle:
 
 $$
 \boxed{
@@ -50,9 +50,9 @@ $$
 
 ---
 
-# 1. 三層 Runtime
+# 1. Three-Tier Runtime
 
-CSM Runtime 固定分三層：
+The CSM Runtime is strictly divided into three tiers:
 
 $$
 L_0=\text{Canonical Event Ledger},
@@ -66,13 +66,13 @@ $$
 L_2=\text{Purpose-Specific Views}.
 $$
 
-`L0` 是 committed history 的 canonical source；`L1` 必可由 replay 重建；`L2` 包含 audit / research / visual / execution views，authority 永遠不得超過 native state。
+`L0` is the canonical source of committed history; `L1` must be reconstructible via replay; `L2` contains audit / research / visual / execution views, whose authority must never exceed the native state.
 
 ---
 
 # 2. Canonical Event Ledger
 
-每個 committed event：
+Each committed event:
 
 $$
 e_i
@@ -89,7 +89,7 @@ e_i
 \rangle.
 $$
 
-Ledger append-only：
+The ledger is append-only:
 
 $$
 \boxed{
@@ -97,13 +97,13 @@ L_\nu\subseteq L_{\nu+1}.
 }
 $$
 
-錯誤不覆寫，而新增 `CORRECTION` / `SUPERSEDE` event。
+Errors are not overwritten; instead, `CORRECTION` / `SUPERSEDE` events are appended.
 
 ---
 
 # 3. Runtime State and Native State Hash
 
-每個 native state 必 canonical serialize：
+Every native state must be canonically serialized:
 
 $$
 h_\nu
@@ -114,22 +114,22 @@ h_\nu
 ).
 $$
 
-canonical serialization 至少要求：
+Canonical serialization requires at least:
 
-- deterministic field ordering；
-- UTF-8；
-- stable IDs；
-- explicit null；
-- schema version；
-- deterministic scalar normalization。
+- deterministic field ordering;
+- UTF-8 encoding;
+- stable IDs;
+- explicit nulls;
+- schema versioning;
+- deterministic scalar normalization.
 
-state hash 是一致性工具，不是 mathematical truth score。
+The state hash is a consistency tool, not a mathematical truth score.
 
 ---
 
 # 4. Runtime Registries
 
-Runtime 至少有六個 registry：
+The runtime has at least six registries:
 
 1. `ObjectRegistry`
 2. `CertificateRegistry`
@@ -138,13 +138,13 @@ Runtime 至少有六個 registry：
 5. `SnapshotRegistry`
 6. `SchemaRegistry`
 
-它們不得塌縮成單一 record，因為 object identity、proof authority、unresolved obligation、policy 與 materialization version 是不同語義。
+They must not collapse into a single record type, because object identity, proof authority, unresolved obligations, policies, and materialization versions possess distinct semantics.
 
 ---
 
 # 5. Object Registry
 
-Object record 最低欄位：
+Minimum fields for an object record:
 
 ```yaml
 object:
@@ -158,7 +158,7 @@ object:
   provenance_refs: []
 ```
 
-Stable ID 不得依 filename、visual position、parser order 或 temporary DB row id。
+Stable IDs must not depend on filenames, visual positions, parser order, or temporary DB row IDs.
 
 ---
 
@@ -177,11 +177,11 @@ certificate:
   status:
 ```
 
-status：
+status:
 
 `VALID | STALE | REVOKED | PENDING | FAILED`
 
-證書失效不刪除歷史。
+Certificate invalidation does not delete history.
 
 ---
 
@@ -200,11 +200,11 @@ debt:
   status:
 ```
 
-status：
+status:
 
 `OPEN | PARTIAL | DISCHARGED | SUPERSEDED`
 
-核心不變量：
+Core invariant:
 
 $$
 \boxed{
@@ -216,7 +216,7 @@ $$
 
 # 8. Status Record
 
-status 不是自由覆寫欄位，而是 versioned record：
+Status is not a freely overwritable field, but a versioned record:
 
 ```yaml
 status_record:
@@ -230,7 +230,7 @@ status_record:
   valid_to:
 ```
 
-因此：
+Therefore:
 
 $$
 \mathsf{BLOCKED}
@@ -238,13 +238,13 @@ $$
 \mathsf{REOPENED}
 $$
 
-不會刪掉原本的 blocked history。
+will not delete the original blocked history.
 
 ---
 
 # 9. Candidate Layer
 
-所有非 deterministic / heuristic ingestion，例如自然語言 parsing、LLM extraction、embedding cluster，都先進：
+All non-deterministic / heuristic ingestion, such as natural language parsing, LLM extraction, and embedding clustering, must first enter the:
 
 $$
 \boxed{
@@ -252,7 +252,7 @@ $$
 }
 $$
 
-Candidate record：
+Candidate record:
 
 ```yaml
 candidate:
@@ -265,7 +265,7 @@ candidate:
   parser_version:
 ```
 
-核心 firewall：
+Core firewall:
 
 $$
 \boxed{
@@ -279,7 +279,7 @@ $$
 
 # 10. Candidate-to-Native Promotion
 
-Candidate 只有經：
+Candidates can only enter the native layer after passing through:
 
 $$
 \mathsf{Extract}
@@ -289,15 +289,15 @@ $$
 \mathsf{Validate}
 $$
 
-並取得相應 certificate 後，才能進 native layer。
+and obtaining the corresponding certificates.
 
-因此 LLM extraction 可以 non-deterministic；Native Closure Layer 的 mutation 不可以靠未驗證自然語言直接決定。
+Thus, LLM extraction can be non-deterministic; mutations in the Native Closure Layer cannot be directly determined by unverified natural language.
 
 ---
 
 # 11. Closure Transaction
 
-transaction：
+transaction:
 
 ```yaml
 closure_transaction:
@@ -335,7 +335,7 @@ $$
 }
 $$
 
-任一 critical gate 失敗：
+Failure at any critical gate:
 
 $$
 \to
@@ -346,7 +346,7 @@ $$
 
 # 13. Atomicity
 
-Theorem-level mutation 必須 atomic：
+Theorem-level mutations must be atomic:
 
 $$
 \boxed{
@@ -356,29 +356,29 @@ $$
 }
 $$
 
-禁止 partial native mutation。
+Partial native mutations are strictly prohibited.
 
 ---
 
 # 14. Preflight
 
-Preflight 必檢查：
+Preflight must check:
 
-- input state hash；
-- object existence；
-- version freshness；
-- operator composition；
-- scope compatibility；
-- certificate validity；
-- debt compatibility；
-- authority boundary；
-- expected output types。
+- input state hash;
+- object existence;
+- version freshness;
+- operator composition;
+- scope compatibility;
+- certificate validity;
+- debt compatibility;
+- authority boundary;
+- expected output types.
 
 ---
 
 # 15. Stale Transaction
 
-若 transaction 建立後 native head 已變：
+If the native head has changed after the transaction was created:
 
 $$
 \boxed{
@@ -386,20 +386,20 @@ $$
 }
 $$
 
-不得 blind commit。
+Blind commits are prohibited.
 
 ---
 
 # 16. Deterministic Commit
 
-在固定：
+Given fixed:
 
-- input state hash；
-- operator versions；
-- policy version；
-- certificate results；
+- input state hash;
+- operator versions;
+- policy version;
+- certificate results;
 
-下，相同 transaction 必得到相同 output hash。
+the same transaction must yield the same output hash.
 
 ---
 
@@ -417,7 +417,7 @@ P_\nu
 }
 $$
 
-Replay 驗證：
+Replay verification:
 
 $$
 \boxed{
@@ -430,19 +430,19 @@ h_\nu.
 }
 $$
 
-不相等時：
+Upon mismatch:
 
 $$
 \mathsf{RUNTIME\_INCONSISTENT}.
 $$
 
-並 fail closed。
+and fail closed.
 
 ---
 
 # 18. Snapshot
 
-Snapshot 可加速恢復，但不是 canonical source：
+Snapshots can accelerate recovery but are not the canonical source:
 
 ```yaml
 snapshot:
@@ -454,13 +454,13 @@ snapshot:
   artifact_refs: []
 ```
 
-restore 後必 replay-check。
+A replay-check is mandatory after restoration.
 
 ---
 
 # 19. Query Model
 
-Query：
+Query:
 
 $$
 \mathsf{Query}:
@@ -469,7 +469,7 @@ $$
 \mathsf{QueryResult}.
 $$
 
-Result 不能只有 boolean：
+The result cannot be merely boolean:
 
 $$
 \boxed{
@@ -491,7 +491,7 @@ $$
 
 # 20. Query Family v0.1
 
-最低支援：
+Minimum support:
 
 - `status(object)`
 - `why_blocked(route)`
@@ -509,7 +509,7 @@ $$
 
 # 21. Query Authority
 
-若 query source 是 projected view：
+If the query source is a projected view:
 
 $$
 \mathsf{Authority}(result)
@@ -517,49 +517,49 @@ $$
 \mathsf{Authority}(view).
 $$
 
-DISPLAY view 不得回答 proof-authority query。
+A DISPLAY view must not answer proof-authority queries.
 
 ---
 
 # 22. Why-Blocked
 
-`why_blocked` 至少回傳：
+`why_blocked` must return at least:
 
-- applicable obstruction；
-- OPCert；
-- scope；
-- assumptions；
-- cert refs；
-- active debt；
-- version。
+- applicable obstruction;
+- OPCert;
+- scope;
+- assumptions;
+- cert refs;
+- active debt;
+- version.
 
-因此 runtime 不只回「被封了」，而回答「誰、在什麼條件下、用什麼證書封的」。
+Thus, the runtime does not merely reply "blocked," but answers "who blocked it, under what conditions, and with what certificate."
 
 ---
 
 # 23. Frontier Engine
 
-輸入：
+Input:
 
-- native graph；
-- status map；
-- quotient policy；
-- target；
-- route grammar。
+- native graph;
+- status map;
+- quotient policy;
+- target;
+- route grammar.
 
-輸出：
+Output:
 
 $$
 \partial^\ast_{D,\Gamma,\rho,\nu}\mathfrak C(Q).
 $$
 
-若 route completeness 尚未證，必附 `RouteCompletenessDebt`。
+If route completeness is unproven, a `RouteCompletenessDebt` must be attached.
 
 ---
 
 # 24. Cut / Cover Engines
 
-Graph algorithm 只能產生：
+Graph algorithms can only generate:
 
 $$
 \mathsf{CutCandidate},
@@ -567,7 +567,7 @@ $$
 \mathsf{CoverCandidate}.
 $$
 
-不能直接生成 theorem-level：
+They cannot directly generate theorem-level:
 
 $$
 \mathsf{CutCert},
@@ -575,35 +575,35 @@ $$
 \mathsf{CoverCert}.
 $$
 
-這是 Candidate-to-Native firewall 在 graph mining 上的具體實現。
+This is the concrete implementation of the Candidate-to-Native firewall in graph mining.
 
 ---
 
 # 25. Exhaustion Engine
 
-只有：
+Only when:
 
-- RCCert；
-- CutCert；
-- CoverCert；
-- scope fidelity；
-- parent bridge；
+- RCCert;
+- CutCert;
+- CoverCert;
+- scope fidelity;
+- parent bridge;
 
-符合 Paper 03 條件時，才能產生 RECert。
+meet the conditions of Paper 03 can an RECert be generated.
 
-輸出仍必標：
+The output must still be labeled:
 
 $$
 \mathsf{EXH}_{k}^{D,\Gamma,\nu}.
 $$
 
-不得冒充 absolute exhaustion。
+It must not masquerade as absolute exhaustion.
 
 ---
 
 # 26. Projection Engine
 
-Projection output：
+Projection output:
 
 ```yaml
 projection_artifact:
@@ -618,7 +618,7 @@ projection_artifact:
   status:
 ```
 
-Native reopening / revision 發生後，相依 view：
+After a native reopening / revision occurs, dependent views transition:
 
 $$
 \mathsf{VALID}
@@ -639,7 +639,7 @@ verifier:
   trust_policy:
 ```
 
-Verifier result：
+Verifier result:
 
 ```yaml
 verification_result:
@@ -650,13 +650,13 @@ verification_result:
   verifier_version:
 ```
 
-若 verifier 結果衝突：
+If verifier results conflict:
 
 $$
 \mathsf{CERT\_CONFLICT}
 $$
 
-theorem-level mutation必 DEFER / REFUSE。
+theorem-level mutations must DEFER / REFUSE.
 
 ---
 
@@ -676,13 +676,13 @@ $$
 }
 $$
 
-`PASS_runtime` 不等於 theorem proven；它只代表 operation 符合 runtime semantics。
+`PASS_runtime` does not equal theorem proven; it merely indicates that the operation conforms to runtime semantics.
 
 ---
 
 # 29. Fail-Closed Semantics
 
-critical precondition FAIL：
+Critical precondition FAIL:
 
 $$
 \boxed{
@@ -690,48 +690,48 @@ $$
 }
 $$
 
-資訊不足：
+Insufficient information:
 
 $$
 \mathsf{DEFER}
 $$
 
-並新增 debt。
+and append a debt.
 
-未分類：
+Unclassified:
 
 $$
 \mathsf{UNKNOWN}.
 $$
 
-runtime/schema bug：
+Runtime/schema bug:
 
 $$
 \mathsf{ERROR}.
 $$
 
-ERROR 不得被誤當 mathematical status。
+ERROR must not be mistaken for a mathematical status.
 
 ---
 
 # 30. Crash Recovery
 
-Transaction recovery 至少分類：
+Transaction recovery must classify at least:
 
 - `NOT_STARTED`
 - `PREPARED`
 - `COMMITTED`
 - `COMMIT_STATE_UNKNOWN`
 
-不確定時以 ledger head 為基準重建；禁止 blind recommit。
+When uncertain, reconstruct based on the ledger head; blind recommits are prohibited.
 
 ---
 
 # 31. Idempotency
 
-每個 mutation transaction 應有 stable idempotency key。
+Every mutation transaction should have a stable idempotency key.
 
-同一 committed txn 不得重複產生 theorem mutation。
+The same committed txn must not repeatedly generate theorem mutations.
 
 ---
 
@@ -756,7 +756,7 @@ $$
 
 # 33. NS Ingestion Profile v0.1
 
-第一個大型實例：
+The first large-scale instance:
 
 $$
 \boxed{
@@ -764,19 +764,19 @@ $$
 }
 $$
 
-預期來源：
+Expected sources:
 
-- ETN--X Integration；
-- C1；
-- C2；
-- C3--C6；
-- X72；
-- DCRP；
-- RFP；
-- MORP；
-- FCBP；
-- Proof Asset Map；
-- validation scripts。
+- ETN--X Integration;
+- C1;
+- C2;
+- C3--C6;
+- X72;
+- DCRP;
+- RFP;
+- MORP;
+- FCBP;
+- Proof Asset Map;
+- validation scripts.
 
 ---
 
@@ -816,11 +816,11 @@ ns_claim_candidate:
 
 # 36. NS Status Labels Are Hints
 
-原始：
+Original:
 
 `CLOSED | OPEN | NO-GO | SURVIVOR | STOP | CONDITIONAL`
 
-只能解析成：
+Can only be parsed into:
 
 - `StatusCandidate`
 - `OpenClaimCandidate`
@@ -829,13 +829,13 @@ ns_claim_candidate:
 - `FrontierCandidate`
 - `ConditionalCandidate`
 
-不能直接 mutate native status。
+Cannot directly mutate native status.
 
 ---
 
 # 37. NS Operator Planning
 
-例如 `NO-GO`：
+For example, `NO-GO`:
 
 $$
 \mathsf{Extract}
@@ -847,52 +847,52 @@ $$
 \mathsf{Block?}
 $$
 
-不是：
+Not:
 
 $$
 \mathsf{Refute}.
 $$
 
-`CLOSED` 可能最後被判為：
+`CLOSED` might ultimately be evaluated as:
 
 - `Prove`
 - `Condition`
 - `Block`
 - `UNVERIFIED`
 
-依 actual evidence 決定。
+Determined by actual evidence.
 
 ---
 
 # 38. NS Seed Dataset
 
-第一版 seed 建議先用：
+The first version seed is recommended to start with:
 
-1. ETN--X Integration；
-2. C1；
-3. C2；
-4. C6-Q；
-5. DCRP103；
-6. DCRP104；
-7. DCRP105。
+1. ETN--X Integration;
+2. C1;
+3. C2;
+4. C6-Q;
+5. DCRP103;
+6. DCRP104;
+7. DCRP105.
 
-原因是這組同時具有：
+The reason is that this set simultaneously features:
 
-- CLOSED；
-- OPEN；
-- NO-GO；
-- survivor；
-- STOP；
-- cross-series / cross-stage semantics；
-- validation scripts。
+- CLOSED;
+- OPEN;
+- NO-GO;
+- survivor;
+- STOP;
+- cross-series / cross-stage semantics;
+- validation scripts.
 
-足以測試 compiler，而不用一開始吞整個 corpus。
+This is sufficient to test the compiler without having to ingest the entire corpus at the outset.
 
 ---
 
 # 39. NS Native Graph v0.1
 
-第一版只宣稱：
+The first version only claims:
 
 $$
 \boxed{
@@ -900,9 +900,9 @@ $$
 }
 $$
 
-即 observed-relative graph。
+i.e., the observed-relative graph.
 
-不宣稱：
+It does not claim:
 
 $$
 \Omega_{\rm NS}^{\rm math}.
@@ -912,7 +912,7 @@ $$
 
 # 40. NS Frontier v0.1
 
-輸出：
+Output:
 
 $$
 \boxed{
@@ -920,34 +920,34 @@ $$
 }
 $$
 
-任何 route completeness 未證部分都進 debt registry。
+Any unproven parts of route completeness enter the debt registry.
 
 ---
 
 # 41. Runtime Conformance Suite
 
-CSM Runtime v0.1 必有 conformance suite。
+CSM Runtime v0.1 must have a conformance suite.
 
-最小 12 vectors：
+Minimum 12 vectors:
 
-1. diagnostic obstruction；
-2. counterexample；
-3. proof + unmet assumption；
-4. debt discharge；
-5. projected-view mutation refusal；
-6. lossy transfer；
-7. reopening wave；
-8. false quotient split；
-9. deterministic replay；
-10. stale transaction；
-11. NS `NO-GO` candidate；
-12. NS `CLOSED` without cert。
+1. diagnostic obstruction;
+2. counterexample;
+3. proof + unmet assumption;
+4. debt discharge;
+5. projected-view mutation refusal;
+6. lossy transfer;
+7. reopening wave;
+8. false quotient split;
+9. deterministic replay;
+10. stale transaction;
+11. NS `NO-GO` candidate;
+12. NS `CLOSED` without cert.
 
 ---
 
 # 42. Conformance Vector — Deterministic Replay
 
-同 ledger + 同 policy replay 兩次：
+Replaying twice with the same ledger + same policy:
 
 $$
 h_1=h_2.
@@ -957,7 +957,7 @@ $$
 
 # 43. Conformance Vector — Block Is Not Refute
 
-route OPEN + valid obstruction：
+route OPEN + valid obstruction:
 
 $$
 \mathsf{OPEN}
@@ -965,13 +965,13 @@ $$
 \mathsf{BLOCKED}.
 $$
 
-Parent claim 不變。
+Parent claim remains unchanged.
 
 ---
 
 # 44. Conformance Vector — Conditional
 
-proof cert 有效但 assumption 未償：
+proof cert is valid but assumption is undischarged:
 
 $$
 \sigma(Q)=\mathsf{CONDITIONAL}.
@@ -981,7 +981,7 @@ $$
 
 # 45. Conformance Vector — Debt Discharge
 
-debt discharge 後：
+After debt discharge:
 
 $$
 \mathsf{CONDITIONAL}
@@ -989,29 +989,29 @@ $$
 \mathsf{CLOSED}^{+}
 $$
 
-若其它 cert 全 valid。
+if all other certs are valid.
 
 ---
 
 # 46. Conformance Vector — Reopening
 
-共用 premise 被 invalidated：
+A shared premise is invalidated:
 
-- downstream certs -> STALE；
-- routes -> REOPENED / audit；
-- frontier rebuild。
+- downstream certs -> STALE;
+- routes -> REOPENED / audit;
+- frontier rebuild.
 
 ---
 
 # 47. Conformance Vector — NS NO-GO
 
-文件標 `NO-GO`：
+Document labeled `NO-GO`:
 
-Expected：
+Expected:
 
 `ObstructionCandidate`
 
-而不是：
+Instead of:
 
 `CLOSED_NEGATIVE`.
 
@@ -1019,9 +1019,9 @@ Expected：
 
 # 48. Conformance Vector — NS CLOSED
 
-文件標 `CLOSED` 但沒有 proof cert：
+Document labeled `CLOSED` but lacks a proof cert:
 
-Expected：
+Expected:
 
 `StatusCandidate / UNVERIFIED`.
 
@@ -1051,15 +1051,15 @@ csm_runtime/
 
 # 50. MVP Boundary
 
-CSM Reference Runtime v0.1 **不需要**：
+CSM Reference Runtime v0.1 **does not require**:
 
-- LLM；
-- theorem prover；
-- GUI；
-- web service；
-- distributed database。
+- LLMs;
+- theorem provers;
+- GUIs;
+- web services;
+- distributed databases.
 
-它只需要：
+It only requires:
 
 $$
 \boxed{
@@ -1085,24 +1085,24 @@ $$
 
 # 51. Runtime Nonclaims
 
-本文不主張：
+This paper does not claim that:
 
-1. runtime 可自動證明所有 theorem；
-2. graph completeness 可自動決定；
-3. LLM extraction 等於 formal verification；
-4. state hash 等於 truth；
-5. deterministic replay 解決 semantic ambiguity；
-6. NS ingestion 完成即等於 Clay proof；
-7. candidate cut 等於 theorem cut；
-8. observed frontier 等於 absolute frontier。
+1. the runtime can automatically prove all theorems;
+2. graph completeness can be automatically determined;
+3. LLM extraction equals formal verification;
+4. state hash equals truth;
+5. deterministic replay resolves semantic ambiguity;
+6. completion of NS ingestion equals a Clay proof;
+7. candidate cuts equal theorem cuts;
+8. observed frontiers equal absolute frontiers.
 
 ---
 
-# 52. 核心命題
+# 52. Core Propositions
 
 ## 52.1 Ledger Reconstruction Principle
 
-固定 ledger、policy、schema、operator versions：
+Given fixed ledger, policy, schema, and operator versions:
 
 $$
 \boxed{
@@ -1113,7 +1113,7 @@ $$
 
 ## 52.2 Transactional Closure Principle
 
-theorem-level mutation：
+theorem-level mutations:
 
 $$
 \boxed{
@@ -1123,25 +1123,25 @@ $$
 
 ## 52.3 Registry Separation Principle
 
-Object、Cert、Debt、Policy、Snapshot 不得語義塌縮。
+Objects, Certs, Debts, Policies, and Snapshots must not undergo semantic collapse.
 
 ## 52.4 Query Authority Principle
 
-任何 query result 必帶 authority / scope / cert / debt / version / source layer。
+Any query result must carry authority / scope / cert / debt / version / source layer metadata.
 
 ## 52.5 Candidate Isolation Principle
 
-heuristic extraction 只能進 Candidate Layer。
+Heuristic extraction can only enter the Candidate Layer.
 
 ## 52.6 NS Safe-Ingestion Principle
 
-NS 的自然語言 status label 只作 hints；closure status 必由 runtime calculus 重建。
+NS natural language status labels serve only as hints; closure status must be reconstructed by the runtime calculus.
 
 ---
 
-# 53. 下一階段
+# 53. Next Phase
 
-Paper 09 應回到第一個大型實例：
+Paper 09 should return to the first large-scale instance:
 
 $$
 \boxed{
@@ -1150,26 +1150,26 @@ Canonical Domain Model and Ingestion Specification}
 }
 $$
 
-Paper 09 不再新增通用 CSM 基礎，而開始定義：
+Paper 09 will no longer introduce general CSM foundations, but will begin defining:
 
-- NS target objects；
-- formal / generalized / physical domain graph；
-- series ontology；
-- route family taxonomy；
-- obstruction taxonomy；
-- survivor taxonomy；
-- artifact inventory schema；
-- seed ingestion order；
-- cross-series bridges；
-- canonical graph construction plan。
+- NS target objects;
+- formal / generalized / physical domain graphs;
+- series ontology;
+- route family taxonomy;
+- obstruction taxonomy;
+- survivor taxonomy;
+- artifact inventory schema;
+- seed ingestion order;
+- cross-series bridges;
+- canonical graph construction plan.
 
 ---
 
-# 54. 結論
+# 54. Conclusion
 
-Paper 08 使 CSM 從 closure calculus 進入 machine semantics。
+Paper 08 transitions CSM from closure calculus into machine semantics.
 
-現在整個系統已經具有：
+The entire system now possesses:
 
 $$
 \boxed{
@@ -1191,7 +1191,7 @@ $$
 }
 $$
 
-最重要的 runtime boundary 是：
+The most important runtime boundary is:
 
 $$
 \boxed{
@@ -1200,7 +1200,7 @@ deterministic closure authority inside}.
 }
 $$
 
-以及：
+And:
 
 $$
 \boxed{
@@ -1210,24 +1210,24 @@ $$
 }
 $$
 
-因此未來 NS corpus 進入系統時，不再是「把幾百篇文章塞進 graph」，而是把每一篇 artifact 編譯成 candidate events，再逐步通過 validation、operator transaction、replay 與 frontier rebuild，形成真正可稽核的 observed-relative closure state。
+Therefore, when the NS corpus enters the system in the future, it will no longer be a matter of "stuffing hundreds of articles into a graph," but rather compiling each artifact into candidate events, and then progressively passing them through validation, operator transactions, replays, and frontier rebuilds to form a truly auditable observed-relative closure state.
 
 ---
 
-## 附錄 A — Paper 08 核心不變量
+## Appendix A — Paper 08 Core Invariants
 
-1. ledger append-only；
-2. native state replayable；
-3. theorem mutation atomic；
-4. candidate layer 無 theorem authority；
-5. debt 無 discharge 不消失；
-6. cert revoke/stale 不刪歷史；
-7. projected view 不得 native mutate；
-8. replay mismatch fail closed；
-9. operator/schema/policy 全部 versioned；
-10. NS status labels 只作 candidate hints；
-11. query 必帶 authority metadata；
-12. observed NS graph 不冒充 absolute proof space。
+1. ledger is append-only;
+2. native state is replayable;
+3. theorem mutations are atomic;
+4. candidate layer has no theorem authority;
+5. debts do not disappear without discharge;
+6. cert revoke/stale does not delete history;
+7. projected views must not natively mutate;
+8. replay mismatches fail closed;
+9. operators/schemas/policies are all versioned;
+10. NS status labels serve only as candidate hints;
+11. queries must carry authority metadata;
+12. observed NS graphs do not masquerade as absolute proof spaces.
 
 ---
 

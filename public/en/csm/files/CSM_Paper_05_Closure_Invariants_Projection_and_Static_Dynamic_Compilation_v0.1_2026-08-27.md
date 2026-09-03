@@ -1,26 +1,26 @@
 # CSM Paper 05 — Closure Invariants, Projection, and Static/Dynamic Compilation
 
-## 閉包空間數學論：閉包不變量、投影、注意力視圖與靜態／動態編譯
+## Closure-Space Mathematics: Closure Invariants, Projection, Attention Views, and Static/Dynamic Compilation
 
 **English Title:** *Closure-Space Mathematics: Closure Invariants, Projection, Attention Views, and Static/Dynamic Compilation*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 05  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** English  
 **Status:** Formal Theory / Representation and Projection Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的表示、投影與編譯核心。Paper 00–04 已依序建立相對全域閉包空間、全域性型別、typed closure hypergraph、frontier / cut / exhaustion，以及時間索引的 closure dynamics。當這些物件真正進入可視化、AI attention、資料庫、圖論 runtime、有限工作集或人類可讀介面時，一個新的根本問題出現：
+This paper establishes the representation, projection, and compilation core of Closure-Space Mathematics (CSM). Papers 00–04 have sequentially established the relative-global closure space, globality typing, typed closure hypergraphs, frontier / cut / exhaustion, and time-indexed closure dynamics. When these objects actually enter visualization, AI attention, databases, graph-theoretic runtimes, bounded working sets, or human-readable interfaces, a new fundamental problem emerges:
 
-> 閉包空間在被投影、壓縮、分層、裁切、摘要或逐步物化時，哪些資訊可以省略，哪些資訊一旦丟失，就會使「封路」「重開」「耗盡」等結論失真？
+> When a closure space is projected, compressed, layered, cropped, summarized, or incrementally materialized, which information can be omitted, and which information, once lost, will distort conclusions such as "route blocking," "reopening," and "exhaustion"?
 
-本文區分 **Native Closure State** 與 **Projected Closure View**。原生狀態保存完整 typed graph、scope、assumption、certificate、debt、version、provenance 與 event ledger；任何有限表示皆只是對該狀態的投影：
+This paper distinguishes between the **Native Closure State** and the **Projected Closure View**. The native state preserves the complete typed graph, scope, assumption, certificate, debt, version, provenance, and event ledger; any finite representation is merely a projection of this state:
 
 $$
 \boxed{
@@ -31,9 +31,9 @@ $$
 }
 $$
 
-本文不要求所有投影無損。相反地，CSM 明確允許 lossy projection，但要求所有可能影響 closure conclusion 的損失被型別化、記帳並形成 projection debt。
+This paper does not require all projections to be lossless. On the contrary, CSM explicitly permits lossy projections, but requires that any loss potentially affecting closure conclusions be typed, accounted for, and formed into a projection debt.
 
-本文提出 **Closure-Critical Invariant Family**：
+This paper proposes the **Closure-Critical Invariant Family**:
 
 $$
 \boxed{
@@ -57,7 +57,7 @@ I_{\rm version}
 }
 $$
 
-一個投影只有在指定用途所需的不變量被保存時，才具有 closure authority。由此導出：
+A projection possesses closure authority only when the invariants required for its designated purpose are preserved. This derives:
 
 $$
 \boxed{
@@ -69,7 +69,7 @@ $$
 }
 $$
 
-本文進一步引入 **Projection–Closure Commutation**。若：
+This paper further introduces **Projection–Closure Commutation**. If:
 
 $$
 \Pi\circ\operatorname{Cl}
@@ -77,11 +77,11 @@ $$
 \operatorname{Cl}'\circ\Pi,
 $$
 
-則投影後仍可安全地執行對應 closure operation。若此交換律未證，則禁止從 projected view 的局部圖形關係直接升格成 native closure conclusion。
+then the corresponding closure operation can be safely executed after projection. If this commutativity is unproven, it is prohibited to directly promote local graphical relations from the projected view into native closure conclusions.
 
-本文並比較兩種編譯策略。
+This paper also compares two compilation strategies.
 
-第一種是 **Dynamic Incremental Projection**：
+The first is **Dynamic Incremental Projection**:
 
 $$
 \mathfrak C_0
@@ -94,7 +94,7 @@ $$
 \to\cdots
 $$
 
-第二種是 **Static Batched Projection**：
+The second is **Static Batched Projection**:
 
 $$
 \mathfrak C_0
@@ -104,9 +104,9 @@ $$
 \mathcal V_T.
 $$
 
-若 projection 是 lossy，且被省略的 state 會參與 closure、reopening、quotient 或 bridge 判定，則「先完成 native closure，再一次投影」通常具有更強的 closure safety。本文將此正式化為 **Static Projection Safety Principle**。
+If the projection is lossy, and the omitted state participates in closure, reopening, quotient, or bridge determinations, then "completing native closure first, followed by a single projection" generally provides stronger closure safety. This paper formalizes this as the **Static Projection Safety Principle**.
 
-同時，本文不把 static 一概視為 superior。若 projection operator 與 closure update 已被證明 incremental-safe，且所有 delta 都攜帶足夠 invariants，則 dynamic projection 可以合法工作。因此真正的區分不是 static vs dynamic，而是：
+At the same time, this paper does not universally consider static to be superior. If the projection operator and closure update have been proven incremental-safe, and all deltas carry sufficient invariants, then dynamic projection can operate legitimately. Therefore, the true distinction is not static vs. dynamic, but rather:
 
 $$
 \boxed{
@@ -116,13 +116,13 @@ $$
 }
 $$
 
-本文最後引入 **Attention Projection**：AI 或研究者只載入相對全域空間的一個 working subgraph。只要未載入的 frontier、cut、obstruction 或 debt 被明確 externalize 並保留 boundary contract，有限 attention 仍可安全工作。這使 CSM 可以在不要求每次將整個 proof space 塞入上下文的情況下，維持 global closure accountability。
+Finally, this paper introduces **Attention Projection**: an AI or researcher loads only a working subgraph of the relative-global space. As long as the unloaded frontier, cut, obstruction, or debt is explicitly externalized and the boundary contract is preserved, bounded attention can still operate safely. This allows CSM to maintain global closure accountability without requiring the entire proof space to be stuffed into the context every time.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-Paper 04 已建立：
+Paper 04 has established:
 
 $$
 \mathfrak C_t
@@ -130,7 +130,7 @@ $$
 \mathfrak C_{t+1}.
 $$
 
-本文新增：
+This paper adds:
 
 $$
 \boxed{
@@ -140,21 +140,21 @@ $$
 }
 $$
 
-$\mathcal V_t$ 可以是：
+$\mathcal V_t$ can be:
 
-- 人類可視圖；
-- AI working set；
-- database materialized view；
-- graph export；
-- theorem-prover slice；
-- static report；
-- compressed state。
+- a human-readable visual graph;
+- an AI working set;
+- a database materialized view;
+- a graph export;
+- a theorem-prover slice;
+- a static report;
+- a compressed state.
 
 ---
 
 # 2. Native Closure State
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -162,29 +162,29 @@ $$
 }
 $$
 
-為具有最高 closure authority 的原生狀態。
+is the native state possessing the highest closure authority.
 
-它至少保存：
+It preserves at least:
 
-1. typed graph；
-2. claim identity；
-3. assumptions；
-4. scope；
-5. representation；
-6. epistemic status；
-7. certificates；
-8. debt；
-9. provenance；
-10. event ledger；
-11. quotient policy；
-12. bridge policy；
-13. current version。
+1. typed graph;
+2. claim identity;
+3. assumptions;
+4. scope;
+5. representation;
+6. epistemic status;
+7. certificates;
+8. debt;
+9. provenance;
+10. event ledger;
+11. quotient policy;
+12. bridge policy;
+13. current version.
 
 ---
 
 # 3. Projected Closure View
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -196,7 +196,7 @@ $$
 }
 $$
 
-它不是原生空間本身。
+It is not the native space itself.
 
 ---
 
@@ -210,7 +210,7 @@ $$
 }
 $$
 
-除非 $\Pi$ 被證明為該用途下的同構表示。
+Unless $\Pi$ is proven to be an isomorphic representation for that purpose.
 
 ---
 
@@ -235,13 +235,13 @@ $$
 
 # 6. Lossless Projection
 
-若存在：
+If there exists:
 
 $$
 \Pi^{-1}
 $$
 
-使：
+such that:
 
 $$
 \Pi^{-1}\Pi(\mathfrak C)
@@ -249,13 +249,13 @@ $$
 \mathfrak C,
 $$
 
-稱 representation-lossless。
+it is called representation-lossless.
 
 ---
 
 # 7. Semantic Losslessness
 
-即使位元層不是可逆，只要 closure-relevant semantics 完全可恢復，也可稱：
+Even if it is not reversible at the bit level, as long as the closure-relevant semantics are fully recoverable, it can also be called:
 
 $$
 \boxed{
@@ -267,39 +267,39 @@ $$
 
 # 8. Lossy Projection
 
-若存在 native distinctions：
+If there exist native distinctions:
 
 $$
 x\neq y
 $$
 
-但：
+but:
 
 $$
 \Pi(x)=\Pi(y),
 $$
 
-則 projection 在該 distinction 上 lossy。
+then the projection is lossy on that distinction.
 
 ---
 
-# 9. Loss 不必非法
+# 9. Loss is Not Necessarily Invalid
 
-CSM 允許：
+CSM permits:
 
 $$
 \mathsf{LOSSY}.
 $$
 
-非法的是：
+What is invalid is:
 
-> 丟失 closure-critical information 後，仍把 projected result 冒充 native theorem state。
+> Passing off the projected result as the native theorem state after losing closure-critical information.
 
 ---
 
 # 10. Projection Contract
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -328,15 +328,15 @@ $$
 }
 $$
 
-表示 $\Pi$ 對用途 $\mathcal U$ 保留足夠 closure semantics。
+indicates that $\Pi$ preserves sufficient closure semantics for purpose $\mathcal U$.
 
 ---
 
 # 12. Purpose-Relative Validity
 
-同一 projection 可對 visualization 合法，但對 theorem inference 非法。
+The same projection may be valid for visualization, but invalid for theorem inference.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -350,7 +350,7 @@ $$
 
 # 13. Closure-Critical Invariant Family
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -382,9 +382,9 @@ $$
 I_{\rm id}
 $$
 
-要求：
+Requires:
 
-> projected node 可以唯一回指 native object 或其 canonical equivalence class。
+> A projected node can uniquely refer back to the native object or its canonical equivalence class.
 
 ---
 
@@ -394,7 +394,7 @@ $$
 I_{\rm target}
 $$
 
-要求 claim 的 formal target 不因摘要而偷換。
+Requires that the formal target of a claim is not surreptitiously altered due to summarization.
 
 ---
 
@@ -404,7 +404,7 @@ $$
 I_{\rm scope}
 $$
 
-要求 domain / quantifier scope 保留或明確標記被省略。
+Requires that the domain / quantifier scope is preserved or explicitly marked as omitted.
 
 ---
 
@@ -414,7 +414,7 @@ $$
 I_{\rm asm}
 $$
 
-要求 obstruction / theorem 的 active assumptions 不可從投影中消失後仍保留原 closure authority。
+Requires that the active assumptions of an obstruction / theorem cannot disappear from the projection while still retaining the original closure authority.
 
 ---
 
@@ -424,7 +424,7 @@ $$
 I_{\rm status}
 $$
 
-要求：
+Requires:
 
 $$
 \mathsf{BLOCKED}
@@ -432,7 +432,7 @@ $$
 \mathsf{CLOSED}^{-}
 $$
 
-等 typed status 在 projected view 中不被合併成單一「失敗」。
+that typed statuses such as the above are not merged into a single "failure" in the projected view.
 
 ---
 
@@ -442,7 +442,7 @@ $$
 I_{\rm cert}
 $$
 
-要求 theorem-level status 能回指 certificate。
+Requires that theorem-level statuses can refer back to their certificates.
 
 ---
 
@@ -452,7 +452,7 @@ $$
 I_{\rm debt}
 $$
 
-要求 unresolved proof obligations 不因視圖簡化而消失。
+Requires that unresolved proof obligations do not disappear due to view simplification.
 
 ---
 
@@ -462,7 +462,7 @@ $$
 I_{\rm provenance}
 $$
 
-要求 closure event 的來源可追溯。
+Requires that the provenance of closure events is traceable.
 
 ---
 
@@ -472,7 +472,7 @@ $$
 I_{\rm dependency}
 $$
 
-要求關鍵 dependency / hyperedge 不被錯誤投影成普通 adjacency。
+Requires that critical dependencies / hyperedges are not incorrectly projected as ordinary adjacencies.
 
 ---
 
@@ -482,7 +482,7 @@ $$
 I_{\rm bridge}
 $$
 
-要求跨 domain / representation 的 bridge 狀態與 loss 保留。
+Requires that cross-domain / cross-representation bridge states and losses are preserved.
 
 ---
 
@@ -492,7 +492,7 @@ $$
 I_{\rm frontier}
 $$
 
-要求 active frontier 若未顯示，至少必被 externalize 到 projection boundary。
+Requires that if an active frontier is not displayed, it must at least be externalized to the projection boundary.
 
 ---
 
@@ -502,7 +502,7 @@ $$
 I_{\rm cut}
 $$
 
-要求 certified cut 的 coverage scope 不被省略。
+Requires that the coverage scope of a certified cut is not omitted.
 
 ---
 
@@ -512,13 +512,13 @@ $$
 I_{\rm version}
 $$
 
-要求 projected view 不混合不同版本的 closure status。
+Requires that the projected view does not mix closure statuses from different versions.
 
 ---
 
 # 27. Invariant Profile
 
-對用途 $\mathcal U$ 定義：
+For purpose $\mathcal U$, define:
 
 $$
 \boxed{
@@ -532,19 +532,19 @@ $$
 
 # 28. Minimal Invariant Set
 
-一個 visualization 可能只需：
+A visualization might only require:
 
 $$
 \{I_{\rm id},I_{\rm status},I_{\rm scope},I_{\rm version}\}.
 $$
 
-但 theorem audit 可能需要全部。
+But a theorem audit may require all of them.
 
 ---
 
 # 29. Invariant Loss
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -560,13 +560,13 @@ $$
 
 # 30. Projection Debt
 
-若：
+If:
 
 $$
 \mathsf{InvLoss}\neq\varnothing,
 $$
 
-建立：
+establish:
 
 $$
 \boxed{
@@ -576,19 +576,19 @@ $$
 
 ---
 
-# 31. Projection Debt 不等於 Proof Debt
+# 31. Projection Debt is Not Proof Debt
 
-projection debt 是表示層未承載的義務。
+Projection debt is an obligation not carried by the representation layer.
 
-proof debt 是原生數學仍未完成的義務。
+Proof debt is an obligation still unfulfilled in the native mathematics.
 
-兩者不可混合。
+The two must not be conflated.
 
 ---
 
 # 32. Projection Boundary
 
-對有限 view：
+For a finite view:
 
 $$
 \mathcal V
@@ -596,7 +596,7 @@ $$
 \mathfrak C,
 $$
 
-定義 boundary：
+define the boundary:
 
 $$
 \boxed{
@@ -604,13 +604,13 @@ $$
 }
 $$
 
-它記錄所有跨出 view 的 dependency / bridge / frontier / debt references。
+It records all dependency / bridge / frontier / debt references that cross out of the view.
 
 ---
 
 # 33. Boundary Completeness
 
-有限 working set 安全的最低要求：
+The minimum requirement for a safe finite working set:
 
 $$
 \boxed{
@@ -624,13 +624,13 @@ $$
 
 # 34. Missing-Boundary Failure
 
-如果一條 visible route 實際依賴 view 外 assumption，但 boundary 沒記錄，則 projection 不具 closure authority。
+If a visible route actually depends on an assumption outside the view, but the boundary does not record it, then the projection lacks closure authority.
 
 ---
 
 # 35. Projection–Closure Commutation
 
-對 closure operator $C$，考慮：
+For a closure operator $C$, consider:
 
 $$
 \boxed{
@@ -644,7 +644,7 @@ $$
 
 # 36. Closure-Homomorphic Projection
 
-若：
+If:
 
 $$
 \Pi(C(\mathfrak C))
@@ -652,7 +652,7 @@ $$
 C^\Pi(\Pi(\mathfrak C))
 $$
 
-在指定用途與 scope 下成立，稱：
+holds under a designated purpose and scope, it is called:
 
 $$
 \boxed{
@@ -665,7 +665,7 @@ $$
 
 # 37. Noncommuting Projection
 
-若：
+If:
 
 $$
 \Pi C
@@ -673,33 +673,31 @@ $$
 C^\Pi\Pi,
 $$
 
-則不能在 projected view 上執行該 closure operator並聲稱等價於 native closure。
+then one cannot execute that closure operator on the projected view and claim it is equivalent to the native closure.
 
 ---
 
 # 38. Operator-Relative Projection Safety
 
-projection 可能對：
+A projection may be safe for:
 
 $$
 \operatorname{Cl}_{\Rightarrow}
 $$
 
-安全，但對：
+but unsafe for:
 
 $$
 \operatorname{Cl}_{\rm obs}
 $$
 
-不安全。
-
-因此安全性必須 operator-indexed。
+Therefore, safety must be operator-indexed.
 
 ---
 
 # 39. Quotient Projection
 
-semantic quotient 本身是一種 projection：
+A semantic quotient is itself a projection:
 
 $$
 \Pi_\sim:
@@ -712,44 +710,44 @@ $$
 
 # 40. Quotient Preservation
 
-若 theorem strength / assumption difference 被 quotient 掉，則：
+If theorem strength / assumption differences are quotiented away, then:
 
 $$
 \Pi_\sim
 $$
 
-不能承擔 implication closure。
+cannot undertake implication closure.
 
 ---
 
 # 41. Obstruction Projection
 
-若 obstruction record 只顯示：
+If an obstruction record only displays:
 
 > NO-GO
 
-而不顯示 scope / assumption / strength，則 closure fidelity 失敗。
+without displaying scope / assumption / strength, then closure fidelity fails.
 
 ---
 
 # 42. Frontier Projection
 
-若只顯示 minimal survivors，可合法省略已封 branch。
+If only minimal survivors are displayed, closed branches can be legitimately omitted.
 
-但必保留：
+But it must preserve:
 
-- quotient policy；
-- coverage cert；
-- omitted branch count / refs；
-- reopening risk。
+- quotient policy;
+- coverage cert;
+- omitted branch count / refs;
+- reopening risk.
 
 ---
 
 # 43. Cut Projection
 
-一張圖可以只畫 certified cut。
+A graph may draw only the certified cut.
 
-但必標：
+But it must label:
 
 $$
 \mathsf{CutCert},
@@ -765,13 +763,13 @@ $$
 
 # 44. Visual Fidelity
 
-定義：
+Definition:
 
 $$
 \mathsf{Fid}_{\rm visual}.
 $$
 
-它衡量人類看到的 layout / grouping 是否忠實呈現 intended view。
+It measures whether the layout / grouping seen by humans faithfully represents the intended view.
 
 ---
 
@@ -783,7 +781,7 @@ $$
 }
 $$
 
-衡量 projected view 是否保存 closure-critical invariants。
+measures whether the projected view preserves closure-critical invariants.
 
 ---
 
@@ -795,7 +793,7 @@ $$
 }
 $$
 
-要求足以重現 theorem-level inference。
+requires being sufficient to reproduce theorem-level inference.
 
 ---
 
@@ -815,7 +813,7 @@ $$
 
 # 48. Static Batched Projection
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -833,13 +831,13 @@ $$
 
 # 49. Static Projection Principle
 
-若：
+If:
 
-1. projection lossy；
-2. omitted state 會影響 closure；
-3. native update 尚未穩定；
+1. the projection is lossy;
+2. the omitted state affects closure;
+3. the native update is not yet stable;
 
-則優先：
+then prioritize:
 
 $$
 \boxed{
@@ -850,19 +848,19 @@ $$
 
 ---
 
-# 50. Static 不等於 Immutable
+# 50. Static is Not Immutable
 
-static 指的是：
+Static means:
 
-> 在某個 materialization checkpoint 上一次投影。
+> Projecting all at once at a certain materialization checkpoint.
 
-native closure state 仍可繼續演化。
+The native closure state can still continue to evolve.
 
 ---
 
 # 51. Dynamic Incremental Projection
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -879,34 +877,34 @@ $$
 
 # 52. Incremental Projection Safety
 
-只有在：
+Only when:
 
 $$
 \mathsf{IncProjCert}
 $$
 
-成立時，dynamic projected state 才可承擔 closure inference。
+holds, can the dynamic projected state undertake closure inference.
 
 ---
 
 # 53. Incremental Projection Certificate
 
-至少包含：
+Contains at least:
 
-1. delta completeness；
-2. invariant preservation；
-3. event ordering；
-4. replay equivalence；
-5. stale invalidation；
-6. reopening propagation；
-7. boundary update；
-8. version coherence。
+1. delta completeness;
+2. invariant preservation;
+3. event ordering;
+4. replay equivalence;
+5. stale invalidation;
+6. reopening propagation;
+7. boundary update;
+8. version coherence.
 
 ---
 
 # 54. Dynamic Projection Failure 1 — Order Drift
 
-若事件先後改變 materialized view，而 projected runtime 沒有 canonical replay，會形成：
+If the sequence of events alters the materialized view, and the projected runtime lacks a canonical replay, it forms:
 
 $$
 \boxed{
@@ -918,44 +916,44 @@ $$
 
 # 55. Dynamic Projection Failure 2 — Attention Drift
 
-逐輪只保留當下 salient nodes，可能讓早先低 attention 但 closure-critical 的 assumption 消失。
+Retaining only currently salient nodes round by round may cause earlier low-attention but closure-critical assumptions to disappear.
 
 ---
 
 # 56. Dynamic Projection Failure 3 — Boundary Rot
 
-external references 隨 update 改變，但 working view 邊界沒有更新。
+External references change with updates, but the working view boundary is not updated.
 
 ---
 
 # 57. Dynamic Projection Failure 4 — Stale Closure
 
-native route 已 reopening，但 projected view 還顯示 CLOSED。
+A native route has reopened, but the projected view still displays CLOSED.
 
 ---
 
 # 58. Dynamic Projection Failure 5 — Premature Quotient
 
-在 evidence 尚未完整前就 merge route，後續差異可能無法恢復。
+Merging routes before evidence is complete; subsequent differences may be unrecoverable.
 
 ---
 
 # 59. Static Projection Advantage
 
-static batch 在完整 native snapshot 後再投影，可避免部分：
+A static batch projects after a complete native snapshot, which can avoid some:
 
-- order drift；
-- premature quotient；
-- stale intermediate inference；
-- attention-driven loss。
+- order drift;
+- premature quotient;
+- stale intermediate inference;
+- attention-driven loss.
 
 ---
 
 # 60. Static Projection Limitation
 
-static view 會快速過時。
+A static view becomes outdated quickly.
 
-因此必須帶：
+Therefore, it must carry:
 
 $$
 \boxed{
@@ -967,13 +965,13 @@ $$
 
 # 61. Dynamic Projection Advantage
 
-dynamic view 可即時反映新 theorem / reopening。
+A dynamic view can reflect new theorems / reopenings in real-time.
 
 ---
 
 # 62. Dynamic Projection Limitation
 
-若沒有完整 incremental invariants，容易形成 hidden state drift。
+Without complete incremental invariants, it easily forms hidden state drift.
 
 ---
 
@@ -995,7 +993,7 @@ $$
 
 # 64. Certified Dynamic Projection
 
-理想 dynamic projection 應滿足：
+An ideal dynamic projection should satisfy:
 
 $$
 \boxed{
@@ -1013,7 +1011,7 @@ $$
 
 # 65. Incremental Equivalence
 
-若：
+If:
 
 $$
 \mathfrak P^\ast(
@@ -1029,19 +1027,19 @@ e_1,\ldots,e_t
 ),
 $$
 
-則 incremental materialization 與 native-then-project 等價。
+then incremental materialization is equivalent to native-then-project.
 
 ---
 
 # 66. Projection Fixed Point
 
-對 fixed native state：
+For a fixed native state:
 
 $$
 \mathfrak C^\star,
 $$
 
-若：
+If:
 
 $$
 \Pi(\mathfrak C^\star)
@@ -1049,11 +1047,11 @@ $$
 \mathcal V^\star
 $$
 
-且 materializer 再運算不改變 view，可稱 projected fixed point。
+and recomputation by the materializer does not change the view, it can be called a projected fixed point.
 
 ---
 
-# 67. Projected Fixed Point 不等於 Native Fixed Point
+# 67. Projected Fixed Point is Not Native Fixed Point
 
 $$
 \boxed{
@@ -1067,9 +1065,9 @@ $$
 
 # 68. False Stability
 
-projection 可能因省略 active frontier 而看起來穩定。
+A projection may appear stable due to omitting the active frontier.
 
-這是：
+This is:
 
 $$
 \boxed{
@@ -1081,7 +1079,7 @@ $$
 
 # 69. Multi-Layer Projection
 
-一個 native state 可同時投影為：
+A native state can be simultaneously projected into:
 
 $$
 \mathcal V_{\rm audit},
@@ -1113,7 +1111,7 @@ $$
 
 # 71. Higher Projection Cannot Recover Lost Authority
 
-若 audit layer 已丟 invariant，後面的 visual layer 不能自己補回 theorem authority。
+If the audit layer has already lost an invariant, the subsequent visual layer cannot recover the theorem authority on its own.
 
 ---
 
@@ -1123,7 +1121,7 @@ $$
 \Pi_2\circ\Pi_1
 $$
 
-只有在兩層 preservation contract 可組合時才安全。
+is safe only when the preservation contracts of the two layers are composable.
 
 ---
 
@@ -1141,7 +1139,7 @@ $$
 
 # 74. Projection No-Go
 
-即使：
+Even if:
 
 $$
 \mathsf{ProjCert}(\Pi_1)
@@ -1155,7 +1153,7 @@ $$
 \mathsf{PASS},
 $$
 
-也不自動推出：
+it does not automatically imply:
 
 $$
 \mathsf{ProjCert}(\Pi_2\Pi_1)
@@ -1167,7 +1165,7 @@ $$
 
 # 75. Attention Projection
 
-定義 AI working attention projection：
+Define the AI working attention projection:
 
 $$
 \boxed{
@@ -1186,21 +1184,21 @@ $$
 \mathcal W_A
 $$
 
-只包含當下任務需要的：
+contains only what is needed for the current task:
 
-- target；
-- active frontier；
-- relevant assumptions；
-- relevant obstructions；
-- relevant bridges；
-- local debt；
-- boundary references。
+- target;
+- active frontier;
+- relevant assumptions;
+- relevant obstructions;
+- relevant bridges;
+- local debt;
+- boundary references.
 
 ---
 
 # 77. Attention Projection Invariant
 
-最小要求：
+Minimum requirement:
 
 $$
 \boxed{
@@ -1223,7 +1221,7 @@ $$
 
 # 78. Attention Projection Boundary
 
-未載入 working set 的 closure-critical object 必須轉成：
+Closure-critical objects not loaded into the working set must be converted into:
 
 $$
 \boxed{
@@ -1231,13 +1229,13 @@ $$
 }
 $$
 
-而不是消失。
+rather than disappearing.
 
 ---
 
 # 79. Attention Debt
 
-若 attention budget 無法載入必要 context：
+If the attention budget cannot load the necessary context:
 
 $$
 \boxed{
@@ -1247,7 +1245,7 @@ $$
 
 ---
 
-# 80. Attention Debt 不得被當成 Proof Failure
+# 80. Attention Debt Must Not Be Treated as Proof Failure
 
 $$
 \boxed{
@@ -1263,19 +1261,19 @@ $$
 
 # 81. Attention Rehydration
 
-當 task 觸及 boundary ref，必允許：
+When a task touches a boundary ref, it must allow:
 
 $$
 \mathsf{Rehydrate}(r)
 $$
 
-重新載入原生內容。
+to reload the native content.
 
 ---
 
 # 82. Attention Projection Safety
 
-如果 working set 中的所有 active inference 都只依賴：
+If all active inferences in the working set depend only on:
 
 $$
 \mathcal W_A
@@ -1283,25 +1281,25 @@ $$
 \partial_A,
 $$
 
-則可在有限 attention 下安全工作。
+then one can work safely under bounded attention.
 
 ---
 
 # 83. Static Attention Projection
 
-先完成完整 task-state selection，再一次載入 working set。
+Complete the full task-state selection first, then load the working set all at once.
 
 ---
 
 # 84. Dynamic Attention Projection
 
-逐 token / round 根據 salience 更新 working set。
+Update the working set token by token / round by round based on salience.
 
 ---
 
 # 85. Attention Hysteresis
 
-dynamic attention 若讓早期關鍵 state 被逐步遺忘，可能產生：
+If dynamic attention causes early critical states to be gradually forgotten, it may produce:
 
 $$
 \boxed{
@@ -1313,27 +1311,27 @@ $$
 
 # 86. Attention Closure Principle
 
-任何 closure-critical node 若被 attention projection 移除，至少要留下：
+If any closure-critical node is removed by attention projection, it must leave at least:
 
-- identity；
-- status；
-- dependency count；
-- boundary ref；
-- debt marker。
+- identity;
+- status;
+- dependency count;
+- boundary ref;
+- debt marker.
 
 ---
 
 # 87. Attention Projection Fixed Point
 
-對一個 task，如果 working set 經多輪更新後不再改變，可稱 task-relative attention fixed point。
+For a task, if the working set no longer changes after multiple rounds of updates, it can be called a task-relative attention fixed point.
 
-它不代表 full closure space fixed。
+It does not mean the full closure space is fixed.
 
 ---
 
 # 88. Observer Projection
 
-不同 observer 可有：
+Different observers can have:
 
 $$
 \Pi_{O_1},
@@ -1344,7 +1342,7 @@ $$
 
 # 89. Observer-Relative View
 
-兩個 observer 看到不同 view：
+Two observers seeing different views:
 
 $$
 \mathcal V_{O_1}
@@ -1352,33 +1350,33 @@ $$
 \mathcal V_{O_2}
 $$
 
-不代表 native closure state 不一致。
+does not mean the native closure state is inconsistent.
 
 ---
 
 # 90. Observer Agreement
 
-如果兩個不同 projection 都保存同一 closure invariants，可在 closure conclusion 上一致。
+If two different projections both preserve the same closure invariants, they can agree on closure conclusions.
 
 ---
 
 # 91. Observer Disagreement Audit
 
-若 projected conclusions 不同，先檢查：
+If projected conclusions differ, first check:
 
-- projection loss；
-- scope；
-- version；
-- quotient；
-- attention boundary；
+- projection loss;
+- scope;
+- version;
+- quotient;
+- attention boundary;
 
-再談 theorem disagreement。
+before discussing theorem disagreement.
 
 ---
 
 # 92. Projection as Compilation
 
-本文將 projection 視為：
+This paper views projection as:
 
 $$
 \boxed{
@@ -1390,19 +1388,19 @@ $$
 
 # 93. Carrier
 
-target carrier 可是：
+The target carrier can be:
 
-- JSON graph；
-- database；
-- SVG / visual graph；
-- theorem prover declarations；
-- compressed archive；
-- AI tensor / vector representation；
-- image / spatial layout。
+- JSON graph;
+- database;
+- SVG / visual graph;
+- theorem prover declarations;
+- compressed archive;
+- AI tensor / vector representation;
+- image / spatial layout.
 
 ---
 
-# 94. Carrier 不決定 Closure Semantics
+# 94. Carrier Does Not Determine Closure Semantics
 
 $$
 \boxed{
@@ -1435,15 +1433,15 @@ $$
 
 # 96. Reversible Compilation
 
-若 target 可 deterministic decode 回 closure-equivalent state，可稱 reversible closure compilation。
+If the target can be deterministically decoded back to a closure-equivalent state, it can be called reversible closure compilation.
 
 ---
 
 # 97. Non-Reversible Compilation
 
-visual summary 通常不可逆。
+A visual summary is typically non-reversible.
 
-它只能作 view，不可作 canonical source。
+It can only serve as a view, not as a canonical source.
 
 ---
 
@@ -1459,7 +1457,7 @@ $$
 
 # 99. Materialization
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -1467,13 +1465,13 @@ $$
 }
 $$
 
-為某 projection 的實際 materialized artifact。
+is the actual materialized artifact of a certain projection.
 
 ---
 
 # 100. Materialization Checkpoint
 
-每個 artifact 必標：
+Every artifact must be labeled with:
 
 $$
 (t,\nu,\Pi,\mathsf{Policy}).
@@ -1483,7 +1481,7 @@ $$
 
 # 101. Materialization Debt
 
-如果 artifact 延後更新，它有：
+If the artifact's update is delayed, it has:
 
 $$
 \boxed{
@@ -1495,13 +1493,13 @@ $$
 
 # 102. Snapshot Authority
 
-只有在 snapshot version 與 native ledger head 對齊時，view 才可聲稱 current。
+Only when the snapshot version aligns with the native ledger head can the view claim to be current.
 
 ---
 
 # 103. Projection Ledger
 
-每次生成 view：
+Each time a view is generated:
 
 $$
 e_\Pi
@@ -1520,7 +1518,7 @@ $$
 
 # 104. Projection Replay
 
-可由 native snapshot + projection contract 重建 view。
+The view can be reconstructed from the native snapshot + projection contract.
 
 ---
 
@@ -1538,9 +1536,9 @@ $$
 
 # 106. Semantic Diff
 
-visual diff 不一定等於 closure semantic diff。
+Visual diff does not necessarily equal closure semantic diff.
 
-需另外計：
+It must be computed separately:
 
 $$
 \boxed{
@@ -1552,19 +1550,19 @@ $$
 
 # 107. Projection Noise
 
-layout / ordering / color / grouping 改變但 closure semantics 不變，屬 projection noise。
+Changes in layout / ordering / color / grouping while closure semantics remain unchanged constitute projection noise.
 
 ---
 
 # 108. Semantic Projection Drift
 
-closure semantics 改變但 visual diff 很小，則有 semantic drift risk。
+If closure semantics change but the visual diff is small, there is a risk of semantic drift.
 
 ---
 
 # 109. Projection Compression
 
-可定義：
+Can define:
 
 $$
 \boxed{
@@ -1578,56 +1576,56 @@ $$
 }
 $$
 
-但 raw compression ratio 不代表 quality。
+But the raw compression ratio does not represent quality.
 
 ---
 
 # 110. Compression–Fidelity Tradeoff
 
-通常：
+Usually:
 
 $$
 \operatorname{PCR}\uparrow
 $$
 
-可能使：
+may cause:
 
 $$
 \mathsf{Fid}_{\rm closure}\downarrow.
 $$
 
-但不是必然。
+But it is not inevitable.
 
 ---
 
 # 111. Sufficient Statistic Analogy
 
-如果 projected state 對指定 closure query 是 sufficient，則可大幅壓縮。
+If the projected state is sufficient for a designated closure query, it can be heavily compressed.
 
-本文把這作類比，不預設統計學充分統計量結構自動成立。
+This paper uses this as an analogy and does not presume that the structure of statistical sufficient statistics automatically holds.
 
 ---
 
 # 112. Closure Query
 
-定義：
+Definition:
 
 $$
 q_{\rm Cl}(\mathfrak C).
 $$
 
-例如：
+For example:
 
-- route 是否 blocked；
-- frontier 是否包含 $R$；
-- cut 是否 valid；
-- cert 是否 stale。
+- whether a route is blocked;
+- whether the frontier contains $R$;
+- whether a cut is valid;
+- whether a cert is stale.
 
 ---
 
 # 113. Query-Sufficient Projection
 
-若：
+If:
 
 $$
 q_{\rm Cl}(\mathfrak C)
@@ -1635,26 +1633,26 @@ q_{\rm Cl}(\mathfrak C)
 q^\Pi_{\rm Cl}(\Pi(\mathfrak C))
 $$
 
-對 query family 全成立，稱 query-sufficient。
+holds for the entire query family, it is called query-sufficient.
 
 ---
 
-# 114. Universal Projection 不必要
+# 114. Universal Projection is Unnecessary
 
-不同 query family 可以有不同最佳 projection。
+Different query families can have different optimal projections.
 
 ---
 
 # 115. Static Compilation Theorem Schema
 
-若：
+If:
 
-1. native state 已 replay-consistent；
-2. snapshot fixed；
-3. projection contract complete；
-4. required invariants preserved；
+1. the native state is replay-consistent;
+2. the snapshot is fixed;
+3. the projection contract is complete;
+4. required invariants are preserved;
 
-則：
+then:
 
 $$
 \boxed{
@@ -1662,21 +1660,21 @@ $$
 }
 $$
 
-對 declared purpose closure-safe。
+is closure-safe for the declared purpose.
 
 ---
 
 # 116. Incremental Compilation Theorem Schema
 
-若：
+If:
 
-1. delta stream complete；
-2. event order preserved；
-3. projection–closure commutation 成立；
-4. stale / reopen events 完整傳播；
-5. boundary 完整更新；
+1. the delta stream is complete;
+2. event order is preserved;
+3. projection–closure commutation holds;
+4. stale / reopen events are fully propagated;
+5. the boundary is fully updated;
 
-則：
+then:
 
 $$
 \boxed{
@@ -1686,13 +1684,13 @@ $$
 }
 $$
 
-相對指定 semantics。
+is valid relative to the designated semantics.
 
 ---
 
 # 117. Static Safety No-Go
 
-如果 omitted state 會影響 native closure，但 projection 在 closure 前執行且資訊無法 recover，則：
+If the omitted state affects native closure, but the projection is executed before closure and the information cannot be recovered, then:
 
 $$
 \boxed{
@@ -1700,13 +1698,13 @@ $$
 }
 $$
 
-無 theorem authority。
+lacks theorem authority.
 
 ---
 
 # 118. Dynamic Safety No-Go
 
-如果 incremental view 沒有 stale / reopen propagation，則：
+If the incremental view lacks stale / reopen propagation, then:
 
 $$
 \boxed{
@@ -1840,13 +1838,13 @@ $$
 
 # 129. NS Closure Projection
 
-未來 NS native graph：
+The future NS native graph:
 
 $$
 \mathfrak C_{\rm NS}^{\rm nat}.
 $$
 
-可投影出：
+can project into:
 
 $$
 \mathcal V_{\rm NS}^{\rm overview},
@@ -1872,69 +1870,69 @@ $$
 
 # 130. NS Overview View
 
-只顯示：
+Displays only:
 
-- C1--C6；
-- X72；
-- DCRP；
-- MORP；
-- RFP；
-- FCBP；
+- C1--C6;
+- X72;
+- DCRP;
+- MORP;
+- RFP;
+- FCBP;
 
-等 major series 與主 frontier。
+and other major series and primary frontiers.
 
-不能用來作 theorem inference。
+Cannot be used for theorem inference.
 
 ---
 
 # 131. NS Audit View
 
-需要保留：
+Needs to preserve:
 
-- claim；
-- assumptions；
-- scope；
-- proof status；
-- obstruction cert；
-- route quotient；
-- debt；
-- provenance。
+- claim;
+- assumptions;
+- scope;
+- proof status;
+- obstruction cert;
+- route quotient;
+- debt;
+- provenance.
 
 ---
 
 # 132. NS Active Frontier View
 
-只顯示：
+Displays only:
 
 $$
 \partial^\ast_{\rm NS}.
 $$
 
-但 boundary 必回指已封 siblings 與 route-completeness debt。
+But the boundary must refer back to closed siblings and route-completeness debt.
 
 ---
 
 # 133. NS Static Snapshot
 
-在一輪大規模 corpus ingestion 完成後，先 freeze：
+After a round of large-scale corpus ingestion is completed, first freeze:
 
 $$
 \mathfrak C_{\rm NS}^{(\nu)}.
 $$
 
-再生成 overview / frontier / audit views。
+Then generate the overview / frontier / audit views.
 
 ---
 
 # 134. NS Dynamic Update
 
-後續新 paper / theorem 以 event stream 更新 native graph，再增量刷新 views。
+Subsequent new papers / theorems update the native graph via an event stream, and then incrementally refresh the views.
 
 ---
 
 # 135. NS Projection Invariant
 
-至少：
+At least:
 
 $$
 \boxed{
@@ -1949,13 +1947,13 @@ I_{\rm version}
 }
 $$
 
-不可在 audit view 丟失。
+must not be lost in the audit view.
 
 ---
 
 # 136. NS False Closure Risk
 
-如果舊 `NO-GO` 被畫成紅色終點而不顯 scope，容易造成：
+If an old `NO-GO` is drawn as a red endpoint without displaying its scope, it easily causes:
 
 $$
 \boxed{
@@ -1967,7 +1965,7 @@ $$
 
 # 137. NS Survivor Risk
 
-如果 `SURVIVOR` 被畫成綠色成功路徑，也會造成：
+If a `SURVIVOR` is drawn as a green successful path, it will also cause:
 
 $$
 \boxed{
@@ -1979,31 +1977,31 @@ $$
 
 # 138. Status Visual Contract
 
-建議 visual layer 明確分：
+It is recommended that the visual layer explicitly distinguish:
 
-- PROVEN；
-- REFUTED；
-- BLOCKED；
-- CONDITIONAL；
-- OPEN；
-- SURVIVOR；
-- STALE；
-- REOPENED；
-- UNKNOWN。
+- PROVEN;
+- REFUTED;
+- BLOCKED;
+- CONDITIONAL;
+- OPEN;
+- SURVIVOR;
+- STALE;
+- REOPENED;
+- UNKNOWN.
 
 ---
 
 # 139. Projection Color Is Noncanonical
 
-顏色只是 carrier convention。
+Color is merely a carrier convention.
 
-status semantics 必由 machine-readable data 決定。
+Status semantics must be determined by machine-readable data.
 
 ---
 
 # 140. Projection to Image / Spatial Layout
 
-若 closure graph 最終投影到圖像／無限畫布，空間位置只是一種 carrier coordinate。
+If the closure graph is ultimately projected onto an image / infinite canvas, spatial position is merely a carrier coordinate.
 
 $$
 \boxed{
@@ -2013,49 +2011,49 @@ $$
 }
 $$
 
-除非 layout contract 明確定義。
+Unless explicitly defined by the layout contract.
 
 ---
 
 # 141. Spatial Layering
 
-可將：
+Can place:
 
-- claim；
-- obstruction；
-- debt；
-- bridge；
-- frontier；
+- claim;
+- obstruction;
+- debt;
+- bridge;
+- frontier;
 
-放不同 layer。
+into different layers.
 
-這是合法 projection strategy。
+This is a valid projection strategy.
 
 ---
 
 # 142. Layer Merge Risk
 
-若 visual layer 疊合後讓不同 edge type 無法區分，closure fidelity 降低。
+If the superposition of visual layers makes different edge types indistinguishable, closure fidelity decreases.
 
 ---
 
 # 143. Static Layer Batch
 
-先完成每一 layer 的 native membership，再一次 spatial composition，可降低逐步 layout drift。
+Completing the native membership of each layer first, followed by a single spatial composition, can reduce gradual layout drift.
 
 ---
 
 # 144. Dynamic Layer Update
 
-若需要即時更新，必須讓 node identity 與 edge semantics 不依賴畫面位置。
+If real-time updates are required, node identity and edge semantics must not depend on screen position.
 
 ---
 
 # 145. Attention Projection to AI
 
-AI 不需要每次讀取整張圖。
+AI does not need to read the entire graph every time.
 
-只需要：
+It only needs:
 
 $$
 \boxed{
@@ -2069,14 +2067,14 @@ $$
 
 # 146. Global Accountability under Local Attention
 
-只要：
+As long as:
 
-1. local dependencies 完整；
-2. external refs 不消失；
-3. missing frontier 被標 debt；
-4. scope / version 保留；
+1. local dependencies are complete;
+2. external refs do not disappear;
+3. missing frontiers are marked as debt;
+4. scope / version are preserved;
 
-就可以：
+one can achieve:
 
 $$
 \boxed{
@@ -2090,7 +2088,7 @@ $$
 
 # 147. Projection and Reopening
 
-如果 native route reopen，所有具 closure authority 的 projected views 必收到 invalidation event。
+If a native route reopens, all projected views with closure authority must receive an invalidation event.
 
 ---
 
@@ -2109,7 +2107,7 @@ $$
 
 # 149. Stale View
 
-若未刷新：
+If not refreshed:
 
 $$
 \sigma(\mathcal V)
@@ -2121,7 +2119,7 @@ $$
 
 # 150. View Authority Level
 
-定義：
+Definition:
 
 $$
 \mathsf{Authority}(\mathcal V)
@@ -2138,19 +2136,19 @@ $$
 
 # 151. Authority Promotion
 
-view 從 DISPLAY 升 AUDIT 必有 projection certificate。
+Promoting a view from DISPLAY to AUDIT must have a projection certificate.
 
 ---
 
 # 152. Proof Authority
 
-只有 closure-semantically sufficient 且可回指 native cert stack 的 view 才可能具有 PROOF authority。
+Only a view that is closure-semantically sufficient and can refer back to the native cert stack may possess PROOF authority.
 
 ---
 
 # 153. Canonical Native Authority
 
-最高權限仍來自：
+The highest authority still comes from:
 
 $$
 \boxed{
@@ -2166,7 +2164,7 @@ $$
 
 # 154. Projection Policy
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -2187,7 +2185,7 @@ $$
 
 # 155. Policy Version
 
-每一 projection artifact 必標：
+Every projection artifact must be labeled with:
 
 $$
 \mathsf{ProjPolicyVersion}.
@@ -2197,13 +2195,13 @@ $$
 
 # 156. Policy Change
 
-projection policy 改變不應改 native mathematical state。
+A change in projection policy should not alter the native mathematical state.
 
 ---
 
 # 157. Policy-Induced View Change
 
-若 view 變了但 native state 沒變，應標：
+If the view changes but the native state does not, it should be labeled:
 
 $$
 \boxed{
@@ -2215,7 +2213,7 @@ $$
 
 # 158. Native Semantic Change
 
-若 native state 變化，即使 view layout 不變，也要標 semantic change。
+If the native state changes, even if the view layout remains unchanged, a semantic change must be labeled.
 
 ---
 
@@ -2296,111 +2294,111 @@ incremental_projection:
 
 # 163. Validation Scenario A — Visual-only projection
 
-只保存 node + label + status color。
+Preserves only node + label + status color.
 
-可 DISPLAY，不可 AUDIT。
+Can DISPLAY, cannot AUDIT.
 
 ---
 
 # 164. Validation Scenario B — Missing scope
 
-NO-GO node 未帶 scope。
+NO-GO node lacks scope.
 
-projection closure authority FAIL。
+Projection closure authority FAIL.
 
 ---
 
 # 165. Validation Scenario C — Static batch safety
 
-native closure 完成後一次投影，required invariants 全保存。
+Projected all at once after native closure is completed; required invariants are fully preserved.
 
-PASS。
+PASS.
 
 ---
 
 # 166. Validation Scenario D — Dynamic stale route
 
-native route REOPENED，view 未更新。
+Native route REOPENED, view not updated.
 
-view status STALE。
+View status STALE.
 
 ---
 
 # 167. Validation Scenario E — Incremental equivalence
 
-delta materializer 結果與 native-then-project hash/semantic hash 一致。
+Delta materializer result matches the native-then-project hash/semantic hash.
 
-IncProjCert PASS。
+IncProjCert PASS.
 
 ---
 
 # 168. Validation Scenario F — Premature quotient
 
-兩 route 在證據不足時 merge，後來 assumption 不同。
+Two routes merge when evidence is insufficient; later, assumptions differ.
 
-必 quotient split + frontier rebuild。
+Must undergo quotient split + frontier rebuild.
 
 ---
 
 # 169. Validation Scenario G — Attention working set
 
-local graph 未載入某 external bridge，但 boundary ref 完整。
+Local graph does not load a certain external bridge, but the boundary ref is complete.
 
-可研究，不能把 external bridge 當已證。
+Can be researched, but the external bridge cannot be treated as proven.
 
 ---
 
 # 170. Validation Scenario H — Attention loss
 
-關鍵 assumption 被完全丟棄且沒有 external ref。
+Critical assumption is completely discarded and has no external ref.
 
-attention projection FAIL。
+Attention projection FAIL.
 
 ---
 
 # 171. Validation Scenario I — Projected fixed point
 
-visual view 不再變，但 native graph仍新增 frontier。
+Visual view no longer changes, but the native graph still adds frontiers.
 
-不得宣稱 closure fixed point。
+Must not claim a closure fixed point.
 
 ---
 
 # 172. Validation Scenario J — NS overview
 
-NS overview view 只做導航，不具 theorem authority。
+NS overview view is for navigation only and lacks theorem authority.
 
 ---
 
 # 173. Validation Scenario K — NS audit view
 
-保留 claim/scope/status/cert/debt/provenance。
+Preserves claim/scope/status/cert/debt/provenance.
 
-可具 AUDIT authority。
+Can possess AUDIT authority.
 
 ---
 
 # 174. Validation Scenario L — NS visual illusion
 
-SURVIVOR 與 PROVEN 使用同一語義樣式。
+SURVIVOR and PROVEN use the same semantic style.
 
-projection contract FAIL。
+Projection contract FAIL.
 
 ---
 
-# 175. Paper 05 核心命題一
+# 175. Core Proposition I
 
 ## Closure Invariant Preservation Principle
 
-任何 projected view 若要承擔 closure conclusion，必須保存該 conclusion 所依賴的不變量。
+Any projected view, in order to undertake a closure conclusion, must preserve the invariants upon which that conclusion depends.
 
 ---
 
-# 176. Paper 05 核心命題二
+# 176. Core Proposition II
 
 ## Projection–Closure Commutation Principle
 
-只有在：
+Only on an operator family where:
 
 $$
 \Pi C
@@ -2408,15 +2406,15 @@ $$
 C^\Pi\Pi
 $$
 
-有 certificate 的 operator family 上，projected closure 才可升格為 native-equivalent closure。
+has a certificate, can a projected closure be promoted to a native-equivalent closure.
 
 ---
 
-# 177. Paper 05 核心命題三
+# 177. Core Proposition III
 
 ## Static Projection Safety Principle
 
-若 projection 會丟失參與 closure dynamics 的 state，則：
+If a projection loses state that participates in closure dynamics, then:
 
 $$
 \boxed{
@@ -2426,7 +2424,7 @@ $$
 }
 $$
 
-比：
+possesses stronger closure authority than:
 
 $$
 \text{projection first}
@@ -2434,79 +2432,77 @@ $$
 \text{closure on projection}
 $$
 
-具有更強的 closure authority。
-
 ---
 
-# 178. Paper 05 核心命題四
+# 178. Core Proposition IV
 
 ## Certified Incremental Materialization Principle
 
-dynamic projection 並非不安全；只要 delta completeness、ordering、stale invalidation、reopening propagation 與 replay equivalence 全部被證明，即可與 static native-then-project 等價。
+Dynamic projection is not inherently unsafe; as long as delta completeness, ordering, stale invalidation, reopening propagation, and replay equivalence are all proven, it can be equivalent to static native-then-project.
 
 ---
 
-# 179. Paper 05 核心命題五
+# 179. Core Proposition V
 
 ## Attention Boundary Principle
 
-有限 attention working set 不需要包含整個 relative-global closure space，但所有 closure-critical external dependencies 必被保留成可 rehydrate 的 boundary references。
+A bounded attention working set does not need to contain the entire relative-global closure space, but all closure-critical external dependencies must be preserved as rehydratable boundary references.
 
 ---
 
-# 180. Paper 05 核心命題六
+# 180. Core Proposition VI
 
 ## Canonical Source Separation Principle
 
-任何 human-facing / AI-facing projection 都不得在沒有明確 authority transfer certificate 的情況下取代 native canonical closure state。
+No human-facing / AI-facing projection may replace the native canonical closure state without an explicit authority transfer certificate.
 
 ---
 
-# 181. 與 CSM Paper 00–04 的整合
+# 181. Integration with CSM Papers 00–04
 
-Paper 00：
+Paper 00:
 
 $$
 \mathfrak C
 $$
 
-定義原生 closure space。
+defines the native closure space.
 
-Paper 01：
+Paper 01:
 
 $$
 D
 $$
 
-與 scope typing 決定 projection 必須保留的 globality information。
+and scope typing determine the globality information that a projection must preserve.
 
-Paper 02：
+Paper 02:
 
-obstruction / bridge / debt 提供 closure-critical invariants。
+obstruction / bridge / debt provide closure-critical invariants.
 
-Paper 03：
+Paper 03:
 
-frontier / cut / exhaustion 形成 projection 中最容易被誤壓縮的結構。
+frontier / cut / exhaustion form the structures most easily miscompressed in a projection.
 
-Paper 04：
+Paper 04:
 
-dynamic events / reopening 要求 projected view 可 invalidation 與 replay。
+dynamic events / reopening require projected views to be capable of invalidation and replay.
 
-Paper 05：
+Paper 05:
 
-建立 native-to-view 的 projection authority model。
-
----
-
-# 182. 與 UCT 的關係
-
-UCT 的 non-collapse、bridge、ledger 與 observer-relative representation，在本文具體化為 closure projection contract。
+establishes the native-to-view projection authority model.
 
 ---
 
-# 183. 與 LSI-PSD 的關係
+# 182. Relationship with UCT
 
-LSI-PSD 的 semantic quotient / search representation sensitivity，在本文進一步變成：
+UCT's non-collapse, bridge, ledger, and observer-relative representation are concretized in this paper as the closure projection contract.
+
+---
+
+# 183. Relationship with LSI-PSD
+
+LSI-PSD's semantic quotient / search representation sensitivity further becomes in this paper:
 
 $$
 \boxed{
@@ -2517,29 +2513,29 @@ $$
 
 ---
 
-# 184. 與一般資料庫 View 的關係
+# 184. Relationship with General Database Views
 
-本文借用 materialized view / incremental update 的工程概念。
+This paper borrows the engineering concepts of materialized views / incremental updates.
 
-CSM 的新增問題是：
+The new question added by CSM is:
 
-> view 是否保存 theorem closure authority 所需的 typed invariants？
-
----
-
-# 185. 與視覺圖論的關係
-
-graph drawing 只是一種 projection carrier。
-
-本文不把 layout topology 等同 proof topology。
+> Does the view preserve the typed invariants required for theorem closure authority?
 
 ---
 
-# 186. 與 AI Context 的關係
+# 185. Relationship with Visual Graph Theory
 
-attention view 是 closure space 的 bounded working projection。
+Graph drawing is merely a projection carrier.
 
-它的正確性依賴：
+This paper does not equate layout topology with proof topology.
+
+---
+
+# 186. Relationship with AI Context
+
+An attention view is a bounded working projection of the closure space.
+
+Its correctness depends on:
 
 $$
 \boxed{
@@ -2553,11 +2549,11 @@ $$
 
 ---
 
-# 187. CSM Paper 05 的主要風險
+# 187. Primary Risk of CSM Paper 05
 
-最大的風險不是 projection loss 本身。
+The greatest risk is not projection loss itself.
 
-而是：
+But rather:
 
 $$
 \boxed{
@@ -2569,17 +2565,17 @@ $$
 
 # 188. Honest Loss Principle
 
-如果 view 明確標：
+If a view explicitly labels:
 
-> 這只是 overview，不保存 assumptions / certs。
+> This is only an overview and does not preserve assumptions / certs.
 
-那它是合法的 DISPLAY projection。
+Then it is a valid DISPLAY projection.
 
 ---
 
 # 189. Dishonest Loss
 
-若相同 overview 被拿去支持 theorem closure，則是 authority violation。
+If the same overview is used to support theorem closure, it is an authority violation.
 
 ---
 
@@ -2597,13 +2593,13 @@ $$
 }
 $$
 
-升級必須有 certificate。
+Promotion must have a certificate.
 
 ---
 
-# 191. Paper 06 路線
+# 191. Paper 06 Roadmap
 
-下一篇應處理：
+The next paper should address:
 
 $$
 \boxed{
@@ -2611,23 +2607,23 @@ $$
 }
 $$
 
-核心問題：
+Core issues:
 
-- closure invariants 跨 domain bridge 如何保存；
-- theorem / obstruction / debt 的 transfer law；
-- conservative vs lossy bridge；
-- closure quantity 是否存在守恆／單調量；
-- cross-domain closure equivalence；
-- local-to-global promotion invariants；
-- NS formal / generalized / physical domains 的合法傳遞。
+- how closure invariants are preserved across domain bridges;
+- transfer laws for theorems / obstructions / debts;
+- conservative vs. lossy bridges;
+- whether conserved / monotonic quantities exist for closure quantities;
+- cross-domain closure equivalence;
+- local-to-global promotion invariants;
+- valid transmission across NS formal / generalized / physical domains.
 
 ---
 
-# 192. 結論
+# 192. Conclusion
 
-CSM 的 closure space 不可能永遠以完整原生形式呈現在每一個人類、AI、資料庫或可視化介面中。
+CSM's closure space cannot always be presented in its complete native form in every human, AI, database, or visualization interface.
 
-因此真正可擴張的系統必須允許：
+Therefore, a truly scalable system must allow:
 
 $$
 \boxed{
@@ -2637,7 +2633,7 @@ $$
 }
 $$
 
-但 projection 必須接受一個嚴格限制：
+But projection must accept a strict limitation:
 
 $$
 \boxed{
@@ -2645,9 +2641,9 @@ $$
 }
 $$
 
-如果 closure-critical information 尚未完成，先把它逐步投影出去再依賴投影做 closure，可能產生 order drift、attention drift、premature quotient 與 false closure。
+If closure-critical information is not yet complete, incrementally projecting it out first and then relying on the projection for closure may produce order drift, attention drift, premature quotient, and false closure.
 
-因此在 lossy projection 下：
+Therefore, under lossy projection:
 
 $$
 \boxed{
@@ -2659,9 +2655,9 @@ $$
 }
 $$
 
-是一個具有強 closure safety 的基本策略。
+is a fundamental strategy with strong closure safety.
 
-另一方面，只要 incremental projection 能證明：
+On the other hand, as long as incremental projection can prove:
 
 $$
 \boxed{
@@ -2675,9 +2671,9 @@ $$
 }
 $$
 
-dynamic materialization 同樣可以安全。
+dynamic materialization can be equally safe.
 
-最後，有限 attention 也不與相對全域數學衝突。CSM 所要求的不是「每次看到全部」，而是：
+Finally, bounded attention does not conflict with relative-global mathematics. What CSM requires is not "seeing everything every time," but rather:
 
 $$
 \boxed{
@@ -2687,31 +2683,31 @@ $$
 }
 $$
 
-只要所有未載入但 closure-critical 的資訊仍存在於可追溯 boundary 中，局部 AI attention、靜態圖像、分層視圖與動態可視化都可以成為同一原生 closure space 的合法載體。
+As long as all unloaded but closure-critical information still exists in a traceable boundary, local AI attention, static images, layered views, and dynamic visualizations can all serve as valid carriers of the same native closure space.
 
 ---
 
-## 附錄 A — Paper 05 核心不變量
+## Appendix A — Paper 05 Core Invariants
 
-1. projected view 不等於 native closure state；
-2. visual fidelity 不等於 closure fidelity；
-3. closure fidelity 不等於 proof fidelity；
-4. projection authority 不得超過 preserved invariants；
-5. scope / assumption / status / cert / debt / version 為核心 closure invariants；
-6. lossy projection 必須記 projection debt；
-7. projected closure 需要 projection–closure commutation certificate；
-8. static projection 不等於永遠 superior；
-9. uncertified incremental projection 不具 closure authority；
-10. certified incremental materialization 可與 native-then-project 等價；
-11. attention omission 必須留下 boundary reference；
-12. not loaded 不等於 not relevant；
-13. projected fixed point 不等於 native fixed point；
-14. visual cluster 不等於 mathematical equivalence；
-15. projected views 不得靜默取代 canonical native source。
+1. A projected view is not equal to the native closure state;
+2. Visual fidelity is not equal to closure fidelity;
+3. Closure fidelity is not equal to proof fidelity;
+4. Projection authority must not exceed preserved invariants;
+5. Scope / assumption / status / cert / debt / version are core closure invariants;
+6. Lossy projection must record projection debt;
+7. Projected closure requires a projection–closure commutation certificate;
+8. Static projection is not always superior;
+9. Uncertified incremental projection lacks closure authority;
+10. Certified incremental materialization can be equivalent to native-then-project;
+11. Attention omission must leave a boundary reference;
+12. Not loaded is not equal to not relevant;
+13. Projected fixed point is not equal to native fixed point;
+14. Visual cluster is not equal to mathematical equivalence;
+15. Projected views must not silently replace the canonical native source.
 
 ---
 
-## 附錄 B — 系列依賴
+## Appendix B — Series Dependencies
 
 ### Paper 00
 - Native Closure Space

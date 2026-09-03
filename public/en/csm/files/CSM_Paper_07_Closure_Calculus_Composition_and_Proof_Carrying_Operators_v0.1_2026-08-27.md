@@ -1,24 +1,24 @@
 # CSM Paper 07 — Closure Calculus, Composition Rules, and Proof-Carrying Operators
 
-## 閉包空間數學論：閉包演算、組合規則與證明承載算子
+## Closure-Space Mathematics: Closure Calculus, Composition Rules, and Proof-Carrying Operators
 
 **English Title:** *Closure-Space Mathematics: Closure Calculus, Composition Rules, and Proof-Carrying Operators*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 07  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** en  
 **Status:** Formal Theory / Executable Calculus Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的第一版可執行演算核心。Paper 00–06 已分別建立：相對全域閉包空間、全域性型別、typed closure hypergraph、frontier / cut / exhaustion、closure dynamics、projection invariants，以及 cross-domain transfer laws。本文將這些物件進一步收斂成一套 **proof-carrying closure calculus**，使 closure operation 不再只是敘述性規則，而是具有明確輸入型別、前置條件、作用域、輸出型別、狀態轉移、證書、債務與版本的可驗證算子。
+This paper establishes the first version of the executable calculus core for Closure-Space Mathematics (CSM). Papers 00–06 have respectively established: relative-global closure spaces, globality typing, typed closure hypergraphs, frontier / cut / exhaustion, closure dynamics, projection invariants, and cross-domain transfer laws. This paper further converges these objects into a **proof-carrying closure calculus**, ensuring that closure operations are no longer merely descriptive rules, but verifiable operators with explicit input types, preconditions, scopes, output types, state transitions, certificates, debts, and versions.
 
-基本算子寫為：
+The basic operator is written as:
 
 $$
 \boxed{
@@ -29,14 +29,14 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $X_i$：輸入 closure objects；
-- $\Gamma$：作用域、假設、representation、policy 與版本環境；
-- $Y_j$：輸出 closure objects；
-- 部分箭頭 $\rightharpoonup$ 表示 operator 可能因 type / scope / certificate / debt 不足而拒絕執行。
+- $X_i$: input closure objects;
+- $\Gamma$: scope, assumptions, representation, policy, and version environment;
+- $Y_j$: output closure objects;
+- The partial arrow $\rightharpoonup$ indicates that the operator may refuse execution due to insufficient type / scope / certificate / debt.
 
-本文提出：
+This paper proposes:
 
 $$
 \boxed{
@@ -54,9 +54,9 @@ $$
 }
 $$
 
-稱為 **Proof-Carrying Closure Operator**。
+referred to as the **Proof-Carrying Closure Operator**.
 
-算子在執行後不得只輸出 result，還必須輸出：
+Upon execution, the operator must not only output the result, but must also output:
 
 $$
 \boxed{
@@ -70,42 +70,42 @@ $$
 }
 $$
 
-本文建立第一版 operator family：
+This paper establishes the first version of the operator family:
 
-1. $\mathsf{Infer}$：implication closure；
-2. $\mathsf{Block}$：obstruction propagation；
-3. $\mathsf{Refute}$：claim-level negative closure；
-4. $\mathsf{Prove}$：claim-level positive closure；
-5. $\mathsf{Condition}$：conditional closure；
-6. $\mathsf{Bridge}$：cross-domain / cross-representation lift；
-7. $\mathsf{Project}$：native-to-view projection；
-8. $\mathsf{Transfer}$：cross-domain authority transfer；
-9. $\mathsf{Quotient}$：semantic / route / obstruction quotient；
-10. $\mathsf{Split}$：撤銷過度 quotient；
-11. $\mathsf{Reopen}$：重開；
-12. $\mathsf{Discharge}$：debt 清償；
-13. $\mathsf{Cut}$：cut certification；
-14. $\mathsf{Cover}$：obstruction cover；
-15. $\mathsf{Exhaust}$：relative exhaustion；
-16. $\mathsf{Promote}$：globality / authority promotion；
-17. $\mathsf{Replay}$：ledger reconstruction；
-18. $\mathsf{Compile}$：runtime / graph / view compilation。
+1. $\mathsf{Infer}$: implication closure;
+2. $\mathsf{Block}$: obstruction propagation;
+3. $\mathsf{Refute}$: claim-level negative closure;
+4. $\mathsf{Prove}$: claim-level positive closure;
+5. $\mathsf{Condition}$: conditional closure;
+6. $\mathsf{Bridge}$: cross-domain / cross-representation lift;
+7. $\mathsf{Project}$: native-to-view projection;
+8. $\mathsf{Transfer}$: cross-domain authority transfer;
+9. $\mathsf{Quotient}$: semantic / route / obstruction quotient;
+10. $\mathsf{Split}$: revokes excessive quotienting;
+11. $\mathsf{Reopen}$: reopens a closure;
+12. $\mathsf{Discharge}$: discharges debt;
+13. $\mathsf{Cut}$: cut certification;
+14. $\mathsf{Cover}$: obstruction cover;
+15. $\mathsf{Exhaust}$: relative exhaustion;
+16. $\mathsf{Promote}$: globality / authority promotion;
+17. $\mathsf{Replay}$: ledger reconstruction;
+18. $\mathsf{Compile}$: runtime / graph / view compilation.
 
-本文特別強調 closure operators 的組合不是自由的。即使：
+This paper particularly emphasizes that the composition of closure operators is not free. Even if:
 
 $$
 \mathcal O_1
-\quad\text{與}\quad
+\quad\text{and}\quad
 \mathcal O_2
 $$
 
-各自合法，也不代表：
+are individually legal, it does not mean that:
 
 $$
 \mathcal O_2\circ\mathcal O_1
 $$
 
-合法。組合需要：
+is legal. Composition requires:
 
 $$
 \boxed{
@@ -113,20 +113,20 @@ $$
 }
 $$
 
-本文因此定義：
+This paper therefore defines:
 
-- type composability；
-- scope composability；
-- certificate composability；
-- debt composability；
-- authority monotonicity；
-- version coherence；
-- bridge coherence；
-- projection closure-commutation；
-- transfer conservation；
-- reopening invalidation。
+- type composability;
+- scope composability;
+- certificate composability;
+- debt composability;
+- authority monotonicity;
+- version coherence;
+- bridge coherence;
+- projection closure-commutation;
+- transfer conservation;
+- reopening invalidation.
 
-本文提出第一版 **Closure Normal Form**：
+This paper proposes the first version of the **Closure Normal Form**:
 
 $$
 \boxed{
@@ -148,15 +148,15 @@ $$
 }
 $$
 
-其中 `Project` 預設在 native closure state 完成後執行；若採 incremental projection，必須附帶 Paper 05 所定義的 incremental materialization certificate。
+Where `Project` is executed by default after the native closure state is completed; if incremental projection is adopted, it must be accompanied by the incremental materialization certificate defined in Paper 05.
 
-本文最後定義 NS closure graph compiler 的最小 interface。NS 過去文件中的 `CLOSED`、`OPEN`、`NO-GO`、`SURVIVOR`、`STOP`、`CONDITIONAL` 不再直接變成 graph status，而要先被 parse 成 claim / assumption / scope / certificate candidates，再經 closure calculus 決定真正 status。由此，CSM 從本文開始具備直接進入 reference runtime 的形式基礎。
+Finally, this paper defines the minimal interface for the NS closure graph compiler. The `CLOSED`, `OPEN`, `NO-GO`, `SURVIVOR`, `STOP`, and `CONDITIONAL` labels from past NS documents will no longer directly become graph statuses. Instead, they must first be parsed into claim / assumption / scope / certificate candidates, and then the closure calculus will determine their true status. Thus, starting from this paper, CSM acquires the formal foundation to directly enter a reference runtime.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-CSM Paper 00–06 已提供：
+CSM Papers 00–06 have provided:
 
 $$
 \text{Objects}
@@ -170,7 +170,7 @@ $$
 \text{Transfer}.
 $$
 
-本文新增：
+This paper adds:
 
 $$
 \boxed{
@@ -182,7 +182,7 @@ $$
 
 # 2. Closure Judgment
 
-定義 closure judgment：
+Define the closure judgment:
 
 $$
 \boxed{
@@ -197,14 +197,14 @@ x
 }
 $$
 
-其中：
+Where:
 
-- $\Gamma$：closure environment；
-- $x$：object；
-- $\tau$：object type；
-- $\sigma$：closure status；
-- $\chi$：certificate set；
-- $d$：debt set。
+- $\Gamma$: closure environment;
+- $x$: object;
+- $\tau$: object type;
+- $\sigma$: closure status;
+- $\chi$: certificate set;
+- $d$: debt set.
 
 ---
 
@@ -227,22 +227,22 @@ A,
 }
 $$
 
-其中：
+Where:
 
-- $D$：domain / scope；
-- $A$：active assumptions；
-- $\rho$：representation；
-- $\Gamma_R$：route grammar；
-- $\mathcal T$：theorem base；
-- $\mathcal B$：bridge set；
-- $\mathcal P$：policy；
-- $\nu$：version。
+- $D$: domain / scope;
+- $A$: active assumptions;
+- $\rho$: representation;
+- $\Gamma_R$: route grammar;
+- $\mathcal T$: theorem base;
+- $\mathcal B$: bridge set;
+- $\mathcal P$: policy;
+- $\nu$: version.
 
 ---
 
 # 4. Judgment Noncollapse
 
-同一 object 在不同 $\Gamma$ 下可有不同 status：
+The same object can have different statuses under different $\Gamma$:
 
 $$
 \Gamma_1\vdash x[\mathsf{OPEN}],
@@ -252,7 +252,7 @@ $$
 \Gamma_2\vdash x[\mathsf{BLOCKED}].
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -265,7 +265,7 @@ $$
 
 # 5. Proof-Carrying Closure Operator
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -305,16 +305,16 @@ $$
 \mathsf{Pre}(\mathcal O,\Gamma,X)
 $$
 
-至少可包含：
+May at least include:
 
-- type；
-- scope；
-- assumptions；
-- target fidelity；
-- bridge validity；
-- certificate presence；
-- representation compatibility；
-- version freshness。
+- type;
+- scope;
+- assumptions;
+- target fidelity;
+- bridge validity;
+- certificate presence;
+- representation compatibility;
+- version freshness.
 
 ---
 
@@ -335,19 +335,19 @@ $$
 \mathsf{Post}_{\mathcal O}(Y,\Gamma')
 $$
 
-定義 output 的：
+Defines the output's:
 
-- status；
-- authority；
-- debt；
-- provenance；
-- ledger event。
+- status;
+- authority;
+- debt;
+- provenance;
+- ledger event.
 
 ---
 
 # 10. Operator Certificate
 
-每次 theorem-level operator execution 產生：
+Every theorem-level operator execution generates:
 
 $$
 \boxed{
@@ -359,7 +359,7 @@ $$
 
 # 11. Operator Debt Delta
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -394,7 +394,7 @@ $$
 
 # 13. Fail-Closed Rule
 
-若 precondition 任一 theorem-critical gate FAIL：
+If any theorem-critical gate in the precondition FAILs:
 
 $$
 \boxed{
@@ -404,13 +404,13 @@ $$
 }
 $$
 
-不得 best-effort 偷升 status。
+It must not stealthily upgrade the status on a best-effort basis.
 
 ---
 
 # 14. Defer Rule
 
-若資訊不足但未證非法：
+If information is insufficient but not proven illegal:
 
 $$
 \boxed{
@@ -420,11 +420,11 @@ $$
 }
 $$
 
-並新增 debt。
+and adds debt.
 
 ---
 
-# 15. Refuse 與 Defer 不同
+# 15. Refuse is Distinct from Defer
 
 $$
 \boxed{
@@ -438,7 +438,7 @@ $$
 
 # 16. Operator Family
 
-第一版：
+First version:
 
 $$
 \boxed{
@@ -482,24 +482,24 @@ $$
 
 # 18. Infer Preconditions
 
-需要：
+Requires:
 
-- implication certificate；
-- assumptions satisfied；
-- scope compatible；
-- version current。
+- implication certificate;
+- assumptions satisfied;
+- scope compatible;
+- version current.
 
 ---
 
 # 19. Infer Output
 
-若 proof complete：
+If the proof is complete:
 
 $$
 \sigma=\mathsf{CLOSED}^{+}.
 $$
 
-若 assumptions 未閉：
+If the assumptions are not closed:
 
 $$
 \sigma=\mathsf{CONDITIONAL}.
@@ -520,7 +520,7 @@ $$
 
 # 21. Block Preconditions
 
-需要：
+Requires:
 
 $$
 \mathsf{OPCert}
@@ -532,7 +532,7 @@ $$
 
 # 22. Block Output
 
-通常：
+Typically:
 
 $$
 \mathsf{OPEN}
@@ -630,17 +630,17 @@ $$
 
 # 31. Bridge Preconditions
 
-- source object valid；
-- bridge active；
-- scope map valid；
-- target type defined；
-- loss/debt declared。
+- source object valid;
+- bridge active;
+- scope map valid;
+- target type defined;
+- loss/debt declared.
 
 ---
 
 # 32. Bridge Output Authority
 
-authority 由 bridge cert 決定，不由 source status 自動複製。
+Authority is determined by the bridge cert, not automatically copied from the source status.
 
 ---
 
@@ -657,7 +657,7 @@ $$
 
 # 34. Project Preconditions
 
-需要：
+Requires:
 
 $$
 \mathsf{ProjCert}.
@@ -690,7 +690,7 @@ $$
 
 # 37. Transfer Preconditions
 
-需要：
+Requires:
 
 $$
 \mathsf{TContract},
@@ -702,11 +702,11 @@ $$
 
 # 38. Transfer Output
 
-可為：
+Can be:
 
-- conservative；
-- lossy；
-- undefined。
+- conservative;
+- lossy;
+- undefined.
 
 ---
 
@@ -723,13 +723,13 @@ $$
 
 # 40. Quotient Preconditions
 
-需要 equivalence evidence。
+Requires equivalence evidence.
 
 ---
 
 # 41. Quotient No-Go
 
-embedding / lexical similarity 不足以執行 theorem-level quotient。
+Embedding / lexical similarity is insufficient to execute a theorem-level quotient.
 
 ---
 
@@ -746,16 +746,16 @@ $$
 
 # 43. Split Trigger
 
-- false equivalence；
-- assumption divergence；
-- scope divergence；
-- representation semantic divergence。
+- false equivalence;
+- assumption divergence;
+- scope divergence;
+- representation semantic divergence.
 
 ---
 
 # 44. Split Output
 
-通常觸發：
+Typically triggers:
 
 $$
 \text{frontier rebuild}.
@@ -776,7 +776,7 @@ $$
 
 # 46. Reopen Preconditions
 
-需要 invalidated premise / bridge / theorem / scope。
+Requires an invalidated premise / bridge / theorem / scope.
 
 ---
 
@@ -803,13 +803,13 @@ $$
 
 # 49. Discharge Preconditions
 
-debt-specific certificate。
+A debt-specific certificate.
 
 ---
 
 # 50. Discharge Cascade
 
-清償 parent debt 可能使 downstream CONDITIONAL 升 CLOSED。
+Discharging a parent debt may upgrade a downstream CONDITIONAL to CLOSED.
 
 ---
 
@@ -826,7 +826,7 @@ $$
 
 # 52. Cut Preconditions
 
-route grammar + route completeness scope 必明確。
+The route grammar + route completeness scope must be explicit.
 
 ---
 
@@ -858,13 +858,13 @@ $$
 
 # 55. Exhaust Preconditions
 
-不得有 uncovered admissible route。
+There must be no uncovered admissible routes.
 
 ---
 
 # 56. Exhaust Output
 
-只產生 relative exhaustion level。
+Only generates a relative exhaustion level.
 
 ---
 
@@ -884,12 +884,12 @@ $$
 
 # 58. Promote Preconditions
 
-- quantifier lift；
-- scope；
-- uniformity；
-- representation；
-- bridge；
-- debt。
+- quantifier lift;
+- scope;
+- uniformity;
+- representation;
+- bridge;
+- debt.
 
 ---
 
@@ -918,7 +918,7 @@ $$
 
 # 61. Replay Determinism
 
-固定 ledger + policy 下應 deterministic。
+Should be deterministic under a fixed ledger + policy.
 
 ---
 
@@ -935,19 +935,19 @@ $$
 
 # 63. Compile Preconditions
 
-需 projection / serialization contract。
+Requires a projection / serialization contract.
 
 ---
 
 # 64. Compile Authority
 
-runtime artifact authority 不得超過 source state。
+The runtime artifact authority must not exceed the source state.
 
 ---
 
 # 65. Composition
 
-令：
+Let:
 
 $$
 \mathcal O_1:
@@ -959,7 +959,7 @@ $$
 B\rightharpoonup C.
 $$
 
-形式上可寫：
+Formally written as:
 
 $$
 \mathcal O_2\circ\mathcal O_1.
@@ -969,7 +969,7 @@ $$
 
 # 66. Type Composability
 
-需要：
+Requires:
 
 $$
 \operatorname{cod}(\mathcal O_1)
@@ -985,31 +985,31 @@ $$
 \Gamma_1'
 $$
 
-必滿足 $\mathcal O_2$ 的 scope preconditions。
+must satisfy the scope preconditions of $\mathcal O_2$.
 
 ---
 
 # 68. Certificate Composability
 
-$\chi_1$ 若是 $\mathcal O_2$ prerequisite，必可驗證。
+If $\chi_1$ is a prerequisite for $\mathcal O_2$, it must be verifiable.
 
 ---
 
 # 69. Debt Composability
 
-若 $\mathcal O_1$ 產生 unresolved debt，$\mathcal O_2$ 不得假裝 debt-free。
+If $\mathcal O_1$ generates unresolved debt, $\mathcal O_2$ must not pretend to be debt-free.
 
 ---
 
 # 70. Version Composability
 
-兩 operator 必在 compatible versions 上執行。
+Both operators must execute on compatible versions.
 
 ---
 
 # 71. Authority Composability
 
-下游 operator 不得無證提升 upstream authority。
+Downstream operators must not upgrade upstream authority without a certificate.
 
 ---
 
@@ -1027,16 +1027,16 @@ $$
 
 # 73. Composition Failure
 
-如果任一：
+If any of:
 
-- type；
-- scope；
-- cert；
-- debt；
-- version；
-- authority；
+- type;
+- scope;
+- cert;
+- debt;
+- version;
+- authority;
 
-不相容：
+is incompatible:
 
 $$
 \boxed{
@@ -1050,7 +1050,7 @@ $$
 
 # 74. Associativity Warning
 
-即使三個 operator pairwise composable，也不自動保證：
+Even if three operators are pairwise composable, it does not automatically guarantee:
 
 $$
 (\mathcal O_3\circ\mathcal O_2)\circ\mathcal O_1
@@ -1062,7 +1062,7 @@ $$
 
 # 75. Associativity Debt
 
-如果 composition 會引入不同 intermediate debt / scope，需：
+If the composition introduces different intermediate debt / scope, it requires:
 
 $$
 \mathsf{AssocCert}.
@@ -1072,7 +1072,7 @@ $$
 
 # 76. Commutation
 
-若：
+If:
 
 $$
 \mathcal O_1\mathcal O_2
@@ -1080,31 +1080,31 @@ $$
 \mathcal O_2\mathcal O_1,
 $$
 
-稱 commute。
+they are said to commute.
 
 ---
 
 # 77. Noncommuting Operator Pair
 
-典型：
+Typically:
 
 $$
 \mathsf{Quotient}
 $$
 
-與：
+and:
 
 $$
 \mathsf{Block}
 $$
 
-可能不交換。
+may not commute.
 
 ---
 
 # 78. Reopen–Project Noncommutation
 
-如果 view 未支援 invalidation：
+If the view does not support invalidation:
 
 $$
 \mathsf{Project}\circ\mathsf{Reopen}
@@ -1116,13 +1116,13 @@ $$
 
 # 79. Transfer–Refute Noncommutation
 
-source refutation 不一定可 transfer 到 target。
+Source refutation may not necessarily transfer to the target.
 
 ---
 
 # 80. Operator Authority Order
 
-定義：
+Define:
 
 $$
 \mathcal O_1
@@ -1130,13 +1130,13 @@ $$
 \mathcal O_2
 $$
 
-若 $\mathcal O_2$ 可產生較高 authority output。
+if $\mathcal O_2$ can produce a higher authority output.
 
 ---
 
 # 81. Authority Inflation No-Go
 
-operator composition 不得憑空提升：
+Operator composition must not arbitrarily inflate:
 
 $$
 \boxed{
@@ -1146,13 +1146,13 @@ A_{\rm out}
 }
 $$
 
-除非 composition 中包含新的 theorem / promotion cert。
+unless the composition includes a new theorem / promotion cert.
 
 ---
 
 # 82. Proof-Carrying Composition
 
-合法 composition 必輸出 composite cert：
+A legal composition must output a composite cert:
 
 $$
 \boxed{
@@ -1180,15 +1180,15 @@ $$
 
 # 84. Operator Normalization
 
-同一 closure effect 可能由多條 operator sequence 產生。
+The same closure effect may be generated by multiple operator sequences.
 
-需要 normalization。
+Normalization is required.
 
 ---
 
 # 85. Closure Normal Form
 
-第一版：
+First version:
 
 $$
 \boxed{
@@ -1214,93 +1214,93 @@ $$
 
 # 86. Normalize Phase
 
-執行：
+Executes:
 
-- canonical identity；
-- scope normalization；
-- assumption normalization；
-- representation normalization；
-- quotient candidates。
+- canonical identity;
+- scope normalization;
+- assumption normalization;
+- representation normalization;
+- quotient candidates.
 
 ---
 
 # 87. Validate Phase
 
-驗證：
+Validates:
 
-- certs；
-- theorem status；
-- versions；
-- bridge；
-- provenance。
+- certs;
+- theorem status;
+- versions;
+- bridge;
+- provenance.
 
 ---
 
 # 88. Infer Phase
 
-執行 implication / conditional theorem inference。
+Executes implication / conditional theorem inference.
 
 ---
 
 # 89. Propagate Phase
 
-執行 obstruction / bridge / debt propagation。
+Executes obstruction / bridge / debt propagation.
 
 ---
 
 # 90. Resolve Phase
 
-處理：
+Handles:
 
-- prove；
-- refute；
-- block；
-- discharge；
-- reopen；
-- split / merge。
+- prove;
+- refute;
+- block;
+- discharge;
+- reopen;
+- split / merge.
 
 ---
 
 # 91. Rebuild Phase
 
-重建：
+Rebuilds:
 
-- frontier；
-- cuts；
-- covers；
-- exhaustion；
-- fixed-point candidates。
+- frontier;
+- cuts;
+- covers;
+- exhaustion;
+- fixed-point candidates.
 
 ---
 
 # 92. Project Phase
 
-依用途生成：
+Generates based on use case:
 
-- audit；
-- research；
-- visual；
-- execution view。
+- audit;
+- research;
+- visual;
+- execution view.
 
 ---
 
-# 93. CNF 不要求唯一
+# 93. CNF Does Not Require Uniqueness
 
-不同合法 schedules 可能同樣得到 closure-equivalent state。
+Different legal schedules may equally result in a closure-equivalent state.
 
 ---
 
 # 94. CNF Goal
 
-目的不是 theorem proof normal form。
+The goal is not a theorem proof normal form.
 
-而是 runtime state transition 的 canonical discipline。
+Rather, it is a canonical discipline for runtime state transitions.
 
 ---
 
 # 95. Proof-Carrying Operator Graph
 
-每個 runtime operation 本身也形成 graph：
+Every runtime operation itself also forms a graph:
 
 $$
 \boxed{
@@ -1312,7 +1312,7 @@ $$
 
 # 96. Operator Node
 
-節點是 operator instance：
+Nodes are operator instances:
 
 $$
 o_i.
@@ -1322,7 +1322,7 @@ $$
 
 # 97. Operator Edge
 
-若 output of $o_i$ 是 input of $o_j$：
+If the output of $o_i$ is the input of $o_j$:
 
 $$
 o_i\to o_j.
@@ -1332,19 +1332,19 @@ $$
 
 # 98. Operator DAG
 
-單次 closure transaction 理想上應可形成 DAG。
+A single closure transaction should ideally form a DAG.
 
 ---
 
 # 99. Operator Cycle
 
-如果存在 replay / reopen / split，可跨 transaction 形成 cycle。
+If replay / reopen / split exist, cycles can form across transactions.
 
 ---
 
 # 100. Transaction
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1352,28 +1352,28 @@ $$
 }
 $$
 
-為一組 atomic closure operations。
+as a set of atomic closure operations.
 
 ---
 
 # 101. Transaction Preconditions
 
-- version head；
-- policy；
-- input hashes；
-- cert availability。
+- version head;
+- policy;
+- input hashes;
+- cert availability.
 
 ---
 
 # 102. Transaction Commit
 
-成功：
+Success:
 
 $$
 \mathsf{COMMIT}.
 $$
 
-失敗：
+Failure:
 
 $$
 \mathsf{ABORT}.
@@ -1383,25 +1383,25 @@ $$
 
 # 103. Partial Commit No-Go
 
-theorem-level status mutation 不允許無記錄 partial commit。
+Theorem-level status mutations do not allow unrecorded partial commits.
 
 ---
 
 # 104. Transaction Ledger
 
-每次 transaction 產生：
+Each transaction generates:
 
-- input state hash；
-- event list；
-- output state hash；
-- cert list；
-- debt delta。
+- input state hash;
+- event list;
+- output state hash;
+- cert list;
+- debt delta.
 
 ---
 
 # 105. Idempotence
 
-某些 operator 應滿足：
+Certain operators should satisfy:
 
 $$
 \mathcal O(\mathcal O(x))
@@ -1409,30 +1409,30 @@ $$
 \mathcal O(x).
 $$
 
-例如已正規化 Normalize。
+For example, a normalized Normalize.
 
 ---
 
 # 106. Non-Idempotent Operators
 
-Reopen / Transfer / Promote 未必 idempotent。
+Reopen / Transfer / Promote are not necessarily idempotent.
 
 ---
 
 # 107. Idempotence Certificate
 
-runtime 可標記 operator 是否：
+The runtime can tag whether an operator is:
 
-- idempotent；
-- monotone；
-- reversible；
-- lossy。
+- idempotent;
+- monotone;
+- reversible;
+- lossy.
 
 ---
 
 # 108. Monotone Operator
 
-對固定 environment：
+For a fixed environment:
 
 $$
 X\preceq Y
@@ -1440,13 +1440,13 @@ X\preceq Y
 \mathcal O(X)\preceq\mathcal O(Y).
 $$
 
-不假設全部 operator monotone。
+It is not assumed that all operators are monotone.
 
 ---
 
 # 109. Reversible Operator
 
-若有 verified inverse：
+If there is a verified inverse:
 
 $$
 \mathcal O^{-1}.
@@ -1456,7 +1456,7 @@ $$
 
 # 110. Lossy Operator
 
-Projection / Transfer 可 lossy。
+Projection / Transfer can be lossy.
 
 ---
 
@@ -1480,31 +1480,31 @@ $$
 
 # 112. Read-Only Operator
 
-例如 query / inspect。
+For example, query / inspect.
 
 ---
 
 # 113. Mutating Operator
 
-例如 Refute / Reopen / Quotient。
+For example, Refute / Reopen / Quotient.
 
 ---
 
 # 114. Mutation Authority
 
-mutating operator 必有 authority level。
+A mutating operator must have an authority level.
 
 ---
 
 # 115. Operator Capability Boundary
 
-runtime 不應讓 visualization operator 改 native theorem status。
+The runtime should not allow a visualization operator to mutate native theorem status.
 
 ---
 
 # 116. Proof-Carrying Mutation
 
-每次 native status mutation：
+Every native status mutation:
 
 $$
 \boxed{
@@ -1516,13 +1516,13 @@ $$
 }
 $$
 
-不可分。
+is inseparable.
 
 ---
 
 # 117. Closure Query Calculus
 
-除了 mutation，也定義 query：
+In addition to mutation, query is also defined:
 
 $$
 \mathsf{Query}_{\rm Cl}.
@@ -1532,25 +1532,25 @@ $$
 
 # 118. Query Types
 
-- status；
-- frontier；
-- cut membership；
-- obstruction coverage；
-- debt；
-- transferability；
-- replay history。
+- status;
+- frontier;
+- cut membership;
+- obstruction coverage;
+- debt;
+- transferability;
+- replay history.
 
 ---
 
 # 119. Query Authority
 
-query result 必標 native / projected source。
+Query results must tag the native / projected source.
 
 ---
 
 # 120. Query on Projection
 
-如果 query 超出 projection authority：
+If a query exceeds projection authority:
 
 $$
 \boxed{
@@ -1562,38 +1562,38 @@ $$
 
 # 121. Proof-Carrying Refusal
 
-refusal 也可附：
+A refusal may also attach:
 
-- missing invariant；
-- missing cert；
-- missing scope；
-- required rehydration。
+- missing invariant;
+- missing cert;
+- missing scope;
+- required rehydration.
 
 ---
 
 # 122. Closure Exception
 
-若 operator 遇到未分類 case：
+If an operator encounters an unclassified case:
 
 $$
 \mathsf{UNKNOWN}.
 $$
 
-不要自動 BLOCKED。
+Do not automatically set to BLOCKED.
 
 ---
 
 # 123. UNKNOWN vs DEFER
 
-UNKNOWN 表示 semantic status 不明。
+UNKNOWN indicates that the semantic status is unclear.
 
-DEFER 表示目前 execution 缺資訊。
+DEFER indicates that the current execution lacks information.
 
 ---
 
 # 124. Runtime Status Lattice
 
-可用 operational partial order：
+Can use the operational partial order:
 
 $$
 \mathsf{UNKNOWN},
@@ -1606,13 +1606,13 @@ $$
 \mathsf{STALE}.
 $$
 
-本文不主張它是單一線性 lattice。
+This paper does not claim it is a single linear lattice.
 
 ---
 
 # 125. Status Transition Table
 
-合法例：
+Legal examples:
 
 $$
 \mathsf{OPEN}
@@ -1642,7 +1642,7 @@ $$
 
 # 126. Illegal Direct Transition
 
-例如：
+For example:
 
 $$
 \mathsf{BLOCKED}
@@ -1650,13 +1650,13 @@ $$
 \mathsf{CLOSED}^{-}
 $$
 
-沒有 RefuteCert 時非法。
+is illegal without a RefuteCert.
 
 ---
 
 # 127. Transition Certificate
 
-每個 status transition 都有：
+Every status transition has:
 
 $$
 \boxed{
@@ -1668,7 +1668,7 @@ $$
 
 # 128. Debt-Carrying Status
 
-同一 status 可有不同 debt：
+The same status can have different debts:
 
 $$
 \mathsf{CONDITIONAL}\langle d_1\rangle,
@@ -1682,7 +1682,7 @@ $$
 
 # 129. Certificate Stack
 
-輸出 theorem-level closure 需：
+Outputting a theorem-level closure requires:
 
 $$
 \boxed{
@@ -1710,39 +1710,39 @@ $$
 
 # 131. Certificate Minimality
 
-不必每次附全 corpus。
+It is not necessary to attach the full corpus every time.
 
-但需要可追溯 refs。
+But traceable refs are required.
 
 ---
 
 # 132. Proof-Carrying Reference
 
-certificate 可是：
+A certificate can be:
 
-- proof object；
-- theorem reference；
-- validation artifact；
-- executable check；
-- hash-locked source。
+- proof object;
+- theorem reference;
+- validation artifact;
+- executable check;
+- hash-locked source.
 
 ---
 
 # 133. Runtime Trust Model
 
-CSM runtime 不自行把自然語言 claim 當 theorem。
+The CSM runtime does not automatically treat natural language claims as theorems.
 
 ---
 
 # 134. Source Extraction Boundary
 
-自然語言 artifact 先經：
+Natural language artifacts first go through:
 
 $$
 \mathsf{Extract}
 $$
 
-產生 candidate objects。
+to generate candidate objects.
 
 ---
 
@@ -1759,7 +1759,7 @@ $$
 
 # 136. Candidate Status
 
-extract output 預設：
+Extract output defaults to:
 
 $$
 \mathsf{UNVERIFIED}.
@@ -1769,7 +1769,7 @@ $$
 
 # 137. Candidate-to-Native Promotion
 
-需要：
+Requires:
 
 $$
 \mathsf{Validate}.
@@ -1779,7 +1779,7 @@ $$
 
 # 138. NS Document Compiler
 
-對 NS 文件：
+For NS documents:
 
 $$
 \boxed{
@@ -1795,11 +1795,11 @@ $$
 
 # 139. NS Label Parsing
 
-原始：
+Original:
 
 `CLOSED`
 
-不得直接變：
+must not directly become:
 
 $$
 \mathsf{CLOSED}^{+}.
@@ -1809,7 +1809,7 @@ $$
 
 # 140. NS CLOSED Candidate
 
-先生成：
+First generates:
 
 $$
 \mathsf{StatusCandidate}(\texttt{CLOSED}).
@@ -1819,7 +1819,7 @@ $$
 
 # 141. NS NO-GO Candidate
 
-先生成：
+First generates:
 
 $$
 \mathsf{ObstructionCandidate}.
@@ -1829,7 +1829,7 @@ $$
 
 # 142. NS SURVIVOR Candidate
 
-先生成：
+First generates:
 
 $$
 \mathsf{RouteStateCandidate}.
@@ -1839,7 +1839,7 @@ $$
 
 # 143. NS STOP Candidate
 
-先生成：
+First generates:
 
 $$
 \mathsf{FrontierCandidate}.
@@ -1849,7 +1849,7 @@ $$
 
 # 144. NS OPEN Candidate
 
-先生成：
+First generates:
 
 $$
 \mathsf{OpenClaimCandidate}.
@@ -1859,21 +1859,21 @@ $$
 
 # 145. NS Validation Pass
 
-再抽取：
+Then extracts:
 
-- statement；
-- assumptions；
-- scope；
-- theorem source；
-- proof/check；
-- dependencies；
-- version。
+- statement;
+- assumptions;
+- scope;
+- theorem source;
+- proof/check;
+- dependencies;
+- version.
 
 ---
 
 # 146. NS Closure Promotion
 
-只有 validation 後才執行：
+Only executed after validation:
 
 $$
 \mathsf{Prove},
@@ -1886,7 +1886,7 @@ $$
 
 # 147. NS Cross-Series Composition
 
-例如：
+For example:
 
 $$
 \mathsf{Extract}_{\rm X72}
@@ -1898,13 +1898,13 @@ $$
 \mathsf{Block}.
 $$
 
-每一步都需 cert。
+Every step requires a cert.
 
 ---
 
 # 148. NS False Merge Prevention
 
-若 transfer cert 不足：
+If the transfer cert is insufficient:
 
 $$
 \mathsf{Quotient}
@@ -1916,7 +1916,7 @@ $$
 
 # 149. NS Runtime Transaction
 
-一篇新 paper 進入：
+A new paper enters:
 
 $$
 \boxed{
@@ -1940,59 +1940,57 @@ $$
 
 # 150. NS Snapshot
 
-輸出：
+Outputs:
 
-- native graph hash；
-- frontier；
-- active obstructions；
-- survivors；
-- debt；
-- cuts；
-- exhaustion level；
-- version。
+- native graph hash;
+- frontier;
+- active obstructions;
+- survivors;
+- debt;
+- cuts;
+- exhaustion level;
+- version.
 
 ---
 
 # 151. NS View Compile
 
-再：
+Then:
 
 $$
 \mathsf{Project}
 $$
 
-生成：
+generates:
 
-- overview；
-- audit；
-- frontier；
-- obstruction；
-- survivor views。
+- overview;
+- audit;
+- frontier;
+- obstruction;
+- survivor views.
 
 ---
 
 # 152. Runtime Proof Boundary
 
-graph mining / clustering / LLM extraction 不具有 theorem mutation authority。
+Graph mining / clustering / LLM extraction do not possess theorem mutation authority.
 
 ---
 
 # 153. Human/AI Audit Boundary
 
-某些 Cert 可由：
+Certain Certs can be provided by:
 
-- theorem prover；
-- symbolic checker；
-- independent audit；
-- human review；
-
-提供。
+- theorem prover;
+- symbolic checker;
+- independent audit;
+- human review.
 
 ---
 
 # 154. Mixed Verification
 
-不同 cert source 可組合，但需 provenance。
+Different cert sources can be composed, but provenance is required.
 
 ---
 
@@ -2090,7 +2088,7 @@ ns_closure_compiler:
 
 # 160. Validation Scenario A — Block is not Refute
 
-Input obstruction + route。
+Input obstruction + route.
 
 expected:
 
@@ -2098,93 +2096,93 @@ $$
 \mathsf{OPEN}\to\mathsf{BLOCKED},
 $$
 
-parent claim unchanged。
+parent claim unchanged.
 
 ---
 
 # 161. Validation Scenario B — Refute requires counterexample/no-go cert
 
-No cert。
+No cert.
 
-expected: REFUSE。
+expected: REFUSE.
 
 ---
 
 # 162. Validation Scenario C — Conditional to Proven
 
-Debt discharge satisfies assumptions。
+Debt discharge satisfies assumptions.
 
-expected: CONDITIONAL -> CLOSED_POSITIVE。
+expected: CONDITIONAL -> CLOSED_POSITIVE.
 
 ---
 
 # 163. Validation Scenario D — Invalid composition
 
-Project visual-only view then Refute on view。
+Project visual-only view then Refute on view.
 
-expected: composition REFUSE。
+expected: composition REFUSE.
 
 ---
 
 # 164. Validation Scenario E — Valid projection composition
 
-Audit projection with proof-fidelity cert then read-only query。
+Audit projection with proof-fidelity cert then read-only query.
 
-expected: PASS。
+expected: PASS.
 
 ---
 
 # 165. Validation Scenario F — Transfer authority downgrade
 
-Lossy transfer theorem source to broader target。
+Lossy transfer theorem source to broader target.
 
-expected: authority lowered + debt added。
+expected: authority lowered + debt added.
 
 ---
 
 # 166. Validation Scenario G — Reopen stale downstream
 
-Invalidated common premise。
+Invalidated common premise.
 
-expected: Reopen + rebuild frontier。
+expected: Reopen + rebuild frontier.
 
 ---
 
 # 167. Validation Scenario H — Quotient then split
 
-False equivalence discovered。
+False equivalence discovered.
 
-expected: split + restore histories + frontier rebuild。
+expected: split + restore histories + frontier rebuild.
 
 ---
 
 # 168. Validation Scenario I — Exhaust relative only
 
-RCCert/Cut/Cover PASS。
+RCCert/Cut/Cover PASS.
 
-expected: relative exhaustion cert, not absolute claim proof without parent bridge。
+expected: relative exhaustion cert, not absolute claim proof without parent bridge.
 
 ---
 
 # 169. Validation Scenario J — NS NO-GO parsing
 
-Document says NO-GO。
+Document says NO-GO.
 
-expected: obstruction candidate, not native CLOSED_NEGATIVE。
+expected: obstruction candidate, not native CLOSED_NEGATIVE.
 
 ---
 
 # 170. Validation Scenario K — NS STOP parsing
 
-Document says STOP-D105。
+Document says STOP-D105.
 
-expected: frontier candidate。
+expected: frontier candidate.
 
 ---
 
 # 171. Validation Scenario L — Authority inflation cycle
 
-ANALOGY -> STRUCTURE -> THEOREM without new cert。
+ANALOGY -> STRUCTURE -> THEOREM without new cert.
 
 expected: FAIL.
 
@@ -2286,43 +2284,43 @@ $$
 
 ---
 
-# 180. Paper 07 核心命題一
+# 180. Paper 07 Core Proposition 1
 
 ## Proof-Carrying Operator Principle
 
-任何 theorem-level closure mutation 都必須由 proof-carrying operator 執行；其輸出至少包含 result、certificate、debt delta 與 ledger event。
+Any theorem-level closure mutation must be executed by a proof-carrying operator; its output must at least include the result, certificate, debt delta, and ledger event.
 
 ---
 
-# 181. Paper 07 核心命題二
+# 181. Paper 07 Core Proposition 2
 
 ## Composition Safety Principle
 
-合法 operator composition 需要 type、scope、certificate、debt、version 與 authority 六類 compatibility 同時通過。
+Legal operator composition requires type, scope, certificate, debt, version, and authority compatibilities to all pass simultaneously.
 
 ---
 
-# 182. Paper 07 核心命題三
+# 182. Paper 07 Core Proposition 3
 
 ## Authority Noninflation Principle
 
-沒有新 theorem / promotion certificate 的 operator composition，不得增加 closure authority。
+Operator composition without a new theorem / promotion certificate must not increase closure authority.
 
 ---
 
-# 183. Paper 07 核心命題四
+# 183. Paper 07 Core Proposition 4
 
 ## Fail-Closed Mutation Principle
 
-theorem-critical precondition 失敗時，runtime 必須拒絕 native status mutation，而不是 best-effort 繼續。
+When a theorem-critical precondition fails, the runtime must refuse native status mutation, rather than continuing on a best-effort basis.
 
 ---
 
-# 184. Paper 07 核心命題五
+# 184. Paper 07 Core Proposition 5
 
 ## Closure Normal Form Principle
 
-對大多數 artifact-driven closure update，可優先採：
+For most artifact-driven closure updates, the following can be prioritized:
 
 $$
 \mathsf{Normalize}
@@ -2342,53 +2340,53 @@ $$
 
 ---
 
-# 185. Paper 07 核心命題六
+# 185. Paper 07 Core Proposition 6
 
 ## Candidate-to-Native Firewall
 
-任何從自然語言、圖像、LLM extraction 或 heuristic mining 得到的 object，預設只能進 Candidate Layer；只有通過 validation / certificate gate 才能進 Native Closure Layer。
+Any object obtained from natural language, images, LLM extraction, or heuristic mining can by default only enter the Candidate Layer; it can only enter the Native Closure Layer after passing the validation / certificate gate.
 
 ---
 
-# 186. Paper 07 核心命題七
+# 186. Paper 07 Core Proposition 7
 
 ## NS Compiler Safety Principle
 
-NS 過去文件中的 `CLOSED / OPEN / NO-GO / SURVIVOR / STOP / CONDITIONAL` 皆必須先編譯成候選物件，不得直接控制 native theorem status。
+The `CLOSED / OPEN / NO-GO / SURVIVOR / STOP / CONDITIONAL` labels from past NS documents must all first be compiled into candidate objects, and must not directly control native theorem status.
 
 ---
 
-# 187. 與 Paper 00–06 的整合
+# 187. Integration with Papers 00–06
 
-Paper 00：
-- closure object model。
+Paper 00:
+- closure object model.
 
-Paper 01：
-- scope / globality types。
+Paper 01:
+- scope / globality types.
 
-Paper 02：
-- graph / obstruction / reopening。
+Paper 02:
+- graph / obstruction / reopening.
 
-Paper 03：
-- frontier / cut / exhaustion。
+Paper 03:
+- frontier / cut / exhaustion.
 
-Paper 04：
-- event dynamics / replay。
+Paper 04:
+- event dynamics / replay.
 
-Paper 05：
-- projection / attention / compilation。
+Paper 05:
+- projection / attention / compilation.
 
-Paper 06：
-- cross-domain transfer / authority。
+Paper 06:
+- cross-domain transfer / authority.
 
-Paper 07：
-- proof-carrying executable calculus。
+Paper 07:
+- proof-carrying executable calculus.
 
 ---
 
 # 188. Reference Runtime Boundary
 
-從本文開始，理論已足以設計：
+Starting from this paper, the theory is sufficient to design:
 
 $$
 \boxed{
@@ -2396,33 +2394,33 @@ $$
 }
 $$
 
-但 runtime 尚未在本文實作。
+However, the runtime is not yet implemented in this paper.
 
 ---
 
-# 189. Runtime MVP 最小能力
+# 189. Runtime MVP Minimal Capabilities
 
-1. parse canonical records；
-2. validate type signatures；
-3. store native graph；
-4. execute PCOs；
-5. maintain status ledger；
-6. propagate obstruction；
-7. reopen stale routes；
-8. calculate frontier；
-9. build cuts/covers；
-10. track debt；
-11. transfer / project；
-12. replay；
-13. export snapshots。
+1. parse canonical records;
+2. validate type signatures;
+3. store native graph;
+4. execute PCOs;
+5. maintain status ledger;
+6. propagate obstruction;
+7. reopen stale routes;
+8. calculate frontier;
+9. build cuts/covers;
+10. track debt;
+11. transfer / project;
+12. replay;
+13. export snapshots.
 
 ---
 
 # 190. NS Runtime MVP
 
-NS 可作第一個大型 dataset。
+NS can serve as the first large-scale dataset.
 
-但先建立：
+But first establish:
 
 $$
 \boxed{
@@ -2430,13 +2428,13 @@ $$
 }
 $$
 
-再做 theorem automation。
+before performing theorem automation.
 
 ---
 
-# 191. Paper 08 路線
+# 191. Paper 08 Roadmap
 
-下一篇應處理：
+The next paper should address:
 
 $$
 \boxed{
@@ -2444,33 +2442,33 @@ $$
 }
 $$
 
-內容：
+Contents:
 
-- machine state；
-- transition system；
-- deterministic replay；
-- transaction semantics；
-- certificate registry；
-- debt registry；
-- graph storage；
-- query language；
-- compiler interfaces；
-- NS ingestion profile；
-- conformance tests。
+- machine state;
+- transition system;
+- deterministic replay;
+- transaction semantics;
+- certificate registry;
+- debt registry;
+- graph storage;
+- query language;
+- compiler interfaces;
+- NS ingestion profile;
+- conformance tests.
 
 ---
 
-# 192. 結論
+# 192. Conclusion
 
-CSM 到 Paper 06 為止，已經有完整的理論物件，但仍可能停留在：
+Up to Paper 06, CSM already possesses complete theoretical objects, but it may still remain at the level of:
 
-> 我們知道 closure 應該怎麼運作。
+> We know how closure should operate.
 
-Paper 07 的目標是把它轉成：
+The goal of Paper 07 is to transform this into:
 
-> 系統究竟允許哪個 operator 在什麼前提下改變哪個 closure status。
+> Exactly which operator the system allows to change which closure status under what preconditions.
 
-因此本文的核心不是新增更多術語，而是建立：
+Therefore, the core of this paper is not to add more terminology, but to establish:
 
 $$
 \boxed{
@@ -2488,7 +2486,7 @@ $$
 }
 $$
 
-最重要的安全原則為：
+The most important safety principles are:
 
 $$
 \boxed{
@@ -2498,7 +2496,7 @@ $$
 }
 $$
 
-以及：
+and:
 
 $$
 \boxed{
@@ -2508,49 +2506,49 @@ $$
 }
 $$
 
-這使 closure space 不再只是圖，而開始成為可以被執行、驗證、拒絕、回放與編譯的數學運算系統。
+This ensures that the closure space is no longer just a graph, but begins to become a mathematical computing system that can be executed, verified, refused, replayed, and compiled.
 
-對 NS 而言，這也是非常關鍵的一步：過去幾百篇研究稿中的各種 status label，不再直接支配我們的判斷，而先被抽取、正規化、驗證，再由 closure calculus 決定它真正能封哪一條路、在哪個 scope 下有效、能否跨 series 傳遞、是否還有 debt，以及何時應該 reopening。
+For NS, this is also a highly critical step: the various status labels in hundreds of past research drafts no longer directly dictate our judgments. Instead, they are first extracted, normalized, and validated, and then the closure calculus determines which route they can truly close, under which scope they are valid, whether they can be transferred across series, whether there is still debt, and when they should be reopened.
 
-這就是從：
+This is the true transition from:
 
 $$
 \boxed{
-\text{研究文獻堆}
+\text{Pile of research literature}
 }
 $$
 
-真正走向：
+truly moving towards:
 
 $$
 \boxed{
-\text{可執行相對全域閉包空間}.
+\text{Executable relative-global closure space}.
 }
 $$
 
 ---
 
-## 附錄 A — Paper 07 核心不變量
+## Appendix A — Paper 07 Core Invariants
 
-1. theorem-level mutation 必須 proof-carrying；
-2. operator application 必須通過 precondition；
-3. operator composition 必須有 CompCert；
-4. debt 不得在 composition 中消失；
-5. authority 不得無證膨脹；
-6. Block 不等於 Refute；
-7. Project 不得提升 native authority；
-8. Transfer 不得自動複製 source status；
-9. Quotient 必須有 equivalence evidence；
-10. Split 必須可恢復 search history；
-11. Reopen 必須有 invalidated-condition evidence；
-12. Exhaust 只能產生 relative exhaustion；
-13. Promote 必須有 globality / authority cert；
-14. Candidate layer 不得直接修改 Native Closure Layer；
-15. runtime success 不等於 theorem proof。
+1. theorem-level mutation must be proof-carrying;
+2. operator application must pass preconditions;
+3. operator composition must have a CompCert;
+4. debt must not disappear during composition;
+5. authority must not inflate without a certificate;
+6. Block is not equal to Refute;
+7. Project must not upgrade native authority;
+8. Transfer must not automatically copy source status;
+9. Quotient must have equivalence evidence;
+10. Split must be able to restore search history;
+11. Reopen must have invalidated-condition evidence;
+12. Exhaust can only generate relative exhaustion;
+13. Promote must have a globality / authority cert;
+14. Candidate layer must not directly modify the Native Closure Layer;
+15. runtime success does not equal a theorem proof.
 
 ---
 
-## 附錄 B — 系列依賴
+## Appendix B — Series Dependencies
 
 ### Paper 00
 Relative-Global Closure Space

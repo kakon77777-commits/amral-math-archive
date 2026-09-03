@@ -1,36 +1,36 @@
 # CSM Paper 03 — Frontier Geometry, Cut Sets, and Relative Exhaustion
 
-## 閉包空間數學論：前沿幾何、割集、障礙覆蓋與相對耗盡
+## Closure-Space Mathematics: Frontier Geometry, Cut Sets, Obstruction Covers, and Relative Exhaustion
 
 **English Title:** *Closure-Space Mathematics: Frontier Geometry, Cut Sets, Obstruction Covers, and Relative Exhaustion*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 03  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** English  
 **Status:** Formal Theory / Frontier and Exhaustion Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的前沿幾何與相對耗盡理論。Paper 00 建立相對全域閉包空間；Paper 01 建立全域性型別與作用域契約；Paper 02 建立 typed closure hypergraph、obstruction propagation、reopening 與 route-completeness obligation。本文現在處理一個長程數學研究中最容易被誤判、也最關鍵的問題：
+This paper establishes the frontier geometry and relative exhaustion theory of Closure-Space Mathematics (CSM). Paper 00 established the relative-global closure space; Paper 01 established globality typing and scope contracts; Paper 02 established the typed closure hypergraph, obstruction propagation, reopening, and route-completeness obligations. This paper now addresses one of the most easily misjudged and critical problems in long-range mathematical research:
 
-> 當一個大型命題的許多研究路徑已被證明、反證、阻斷、條件閉合或商化後，剩下的「真正未閉部分」究竟是什麼？又在什麼條件下，封住這些剩餘前沿可以合法升格為命題層的耗盡結論？
+> After many research routes of a large-scale proposition have been proven, refuted, blocked, conditionally closed, or quotiented, what exactly is the remaining "truly unclosed portion"? Under what conditions can sealing these remaining frontiers be legally promoted to an exhaustion conclusion at the proposition level?
 
-本文首先定義 **active frontier**、**quotient frontier**、**weighted frontier mass**、**frontier component**、**closure distance** 與 **reopening boundary**。接著將普通 graph cut 推廣到 CSM 的 typed directed hypergraph，區分：
+This paper first defines **active frontier**, **quotient frontier**, **weighted frontier mass**, **frontier component**, **closure distance**, and **reopening boundary**. It then generalizes the standard graph cut to the typed directed hypergraph of CSM, distinguishing:
 
-1. route cut；
-2. assumption cut；
-3. obstruction cut；
-4. bridge cut；
-5. scope cut；
-6. representation cut；
-7. mixed typed cut。
+1. route cut;
+2. assumption cut;
+3. obstruction cut;
+4. bridge cut;
+5. scope cut;
+6. representation cut;
+7. mixed typed cut.
 
-本文引入 **Certified Cut** 與 **Obstruction Cover**：前者要求每條 admissible route 都必穿過指定 cut；後者要求一組已認證 obstruction 能覆蓋所有 cut elements 或所有 admissible route classes。只有在：
+This paper introduces the **Certified Cut** and **Obstruction Cover**: the former requires that every admissible route must pass through a specified cut; the latter requires that a set of certified obstructions can cover all cut elements or all admissible route classes. Only when:
 
 $$
 \boxed{
@@ -46,9 +46,9 @@ $$
 }
 $$
 
-同時成立時，才允許把「觀測到的路徑都被封住」升格成 parent-level relative exhaustion。
+hold simultaneously, is it permissible to promote "all observed routes are sealed" to a parent-level relative exhaustion.
 
-本文特別區分：
+This paper specifically distinguishes:
 
 $$
 \boxed{
@@ -62,17 +62,17 @@ $$
 }
 $$
 
-這一分層直接阻止一個常見錯誤：研究 corpus 中的 frontier 變小，並不等於數學空間的 frontier 變小；proof basin 被挖到很深，也不等於整個 proof space 已被走遍。
+This stratification directly prevents a common fallacy: a shrinking frontier in the research corpus does not equate to a shrinking frontier in the mathematical space; digging deeply into a proof basin does not mean the entire proof space has been traversed.
 
-本文並引入 **Frontier Reopening Geometry**。若新表示、新 bridge、新 theorem、scope revision 或 assumption relaxation 使舊 cut 失效，先前的 exhaustion certificate 必須進入 `STALE` 或 `REOPENED` 狀態，並重新計算 frontier。由此，CSM 的「耗盡」不是一次性的最終宣告，而是帶版本、帶作用域、可回放、可撤銷的 relative-global closure event。
+This paper also introduces **Frontier Reopening Geometry**. If a new representation, new bridge, new theorem, scope revision, or assumption relaxation invalidates an old cut, the previous exhaustion certificate must enter a `STALE` or `REOPENED` state, and the frontier must be recomputed. Thus, "exhaustion" in CSM is not a one-time final declaration, but a versioned, scoped, replayable, and revocable relative-global closure event.
 
-最後，本文為 Navier--Stokes 相對全域閉包圖提出第一版 frontiers：不是以論文數量，而是以 quotient route classes、independent obstruction mass、survivor components、bridge debt 與 route-completeness debt 來表示。這使「一步一步封住 NS 命題」第一次具有可操作的幾何意義：研究的直接目標不再是增加 paper count，而是縮減經過 quotient 與 certificate audit 後的有效前沿，同時避免 false contraction。
+Finally, this paper proposes the first version of frontiers for the Navier--Stokes relative-global closure graph: expressed not by paper count, but by quotient route classes, independent obstruction mass, survivor components, bridge debt, and route-completeness debt. This gives "step-by-step sealing of the NS proposition" an operational geometric meaning for the first time: the direct goal of research is no longer to increase paper count, but to shrink the effective frontier after quotienting and certificate audits, while avoiding false contractions.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-本文承接：
+This paper builds upon:
 
 $$
 \mathcal H_{\rm CSM}
@@ -80,19 +80,19 @@ $$
 (V,E,\tau_V,\tau_E,\sigma,\lambda,\pi,\chi,\nu).
 $$
 
-Paper 02 已能回答：
+Paper 02 can already answer:
 
-- 哪條 route 被哪個 obstruction 封住；
-- 哪個 status 只是 blocked；
-- 哪個 branch 真正 closed；
-- 哪個 closure 可以 reopening。
+- which route is sealed by which obstruction;
+- which status is merely blocked;
+- which branch is truly closed;
+- which closure can be reopened.
 
-本文進一步問：
+This paper further asks:
 
 $$
 \boxed{
-\text{哪些 OPEN / CONDITIONAL / UNKNOWN / REOPENED
-節點真正構成 target 的有效前沿？}
+\text{Which OPEN / CONDITIONAL / UNKNOWN / REOPENED
+nodes truly constitute the effective frontier of the target?}
 }
 $$
 
@@ -100,7 +100,7 @@ $$
 
 # 2. Raw Frontier
 
-對 target $Q$，定義 raw frontier：
+For a target $Q$, define the raw frontier:
 
 $$
 \partial_{\rm raw}\mathfrak C(Q)
@@ -119,26 +119,26 @@ v\leadsto Q
 \right\}.
 $$
 
-這只是一個候選集合。
+This is merely a candidate set.
 
 ---
 
-# 3. Raw Frontier 的缺陷
+# 3. Flaws of the Raw Frontier
 
-raw frontier 可能嚴重高估未閉空間，因為：
+The raw frontier may severely overestimate the unclosed space because:
 
-- 多個節點可能是同一命題；
-- 多條 route 只是 representation variant；
-- 多個 obstruction debt 其實同源；
-- 一條 parent route 的不同細節分支可能被重複計數。
+- multiple nodes might represent the same proposition;
+- multiple routes might just be representation variants;
+- multiple obstruction debts might actually share the same origin;
+- different detailed branches of a parent route might be double-counted.
 
-因此 raw frontier 不能作為 exhaustion basis。
+Therefore, the raw frontier cannot serve as an exhaustion basis.
 
 ---
 
 # 4. Quotient Frontier
 
-使用：
+Use:
 
 $$
 \sim_{\rm prop},
@@ -148,9 +148,9 @@ $$
 \sim_{\rm obs}
 $$
 
-進行商化。
+to perform quotienting.
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -161,7 +161,7 @@ $$
 }
 $$
 
-必要時再對 claim layer 做：
+If necessary, further apply to the claim layer:
 
 $$
 \partial_{\rm prop}^\ast.
@@ -171,24 +171,24 @@ $$
 
 # 5. Frontier Identity Principle
 
-兩個節點在 frontier 中是否算「同一個」，必須由 quotient policy 決定，而不能只看：
+Whether two nodes are considered "the same" in the frontier must be determined by the quotient policy, and cannot solely rely on:
 
-- lexical similarity；
-- embedding proximity；
-- notation similarity；
-- same-paper ancestry。
+- lexical similarity;
+- embedding proximity;
+- notation similarity;
+- same-paper ancestry.
 
 ---
 
 # 6. Frontier Weight
 
-對 route class $[R]$ 定義：
+For a route class $[R]$, define:
 
 $$
 w([R])\ge0.
 $$
 
-可由以下因素構成：
+It can be composed of the following factors:
 
 $$
 w([R])
@@ -215,15 +215,15 @@ w([R]).
 }
 $$
 
-這是一個 research-space observable。
+This is a research-space observable.
 
-它不是「距離證明完成還有百分之多少」。
+It is not "the percentage remaining until the proof is complete."
 
 ---
 
-# 8. Frontier Cardinality 與 Mass 不同
+# 8. Frontier Cardinality is Not Mass
 
-可能：
+It is possible that:
 
 $$
 |\partial^\ast_1|
@@ -231,7 +231,7 @@ $$
 |\partial^\ast_2|
 $$
 
-但：
+but:
 
 $$
 M_{\partial,1}
@@ -239,13 +239,13 @@ M_{\partial,1}
 M_{\partial,2}.
 $$
 
-因為較少的 route 可能更一般、更獨立、更難被封。
+Because fewer routes might be more general, more independent, and harder to seal.
 
 ---
 
 # 9. Frontier Component
 
-在 quotient route graph 上，若 frontier nodes 形成 connected component：
+On the quotient route graph, if frontier nodes form a connected component:
 
 $$
 F_i
@@ -253,7 +253,7 @@ F_i
 \partial^\ast\mathfrak C(Q),
 $$
 
-稱為：
+it is called a:
 
 $$
 \boxed{
@@ -263,21 +263,21 @@ $$
 
 ---
 
-# 10. Component 不等於 Basin
+# 10. Component is Not Basin
 
-proof basin 是歷史／搜尋動力學上的高密度子圖。
+A proof basin is a high-density subgraph in historical/search dynamics.
 
-frontier component 是：
+A frontier component is:
 
-> 當前未閉 obligations 之間的結構連通分量。
+> the structural connected component among currently unclosed obligations.
 
-兩者可重疊但不等價。
+The two can overlap but are not equivalent.
 
 ---
 
 # 11. Frontier Boundary Type
 
-每個 frontier component 可有 dominant type：
+Each frontier component can have a dominant type:
 
 $$
 \tau_F(F_i)
@@ -299,7 +299,7 @@ $$
 
 # 12. Frontier Debt
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -307,23 +307,23 @@ $$
 }
 $$
 
-表示 component 尚未支付的 proof obligations。
+to represent the proof obligations that the component has not yet discharged.
 
-例如：
+For example:
 
-- route completeness；
-- branch decomposition；
-- missing bridge；
-- uniformity；
-- representation robustness；
-- scope promotion；
-- hidden-assumption audit。
+- route completeness;
+- branch decomposition;
+- missing bridge;
+- uniformity;
+- representation robustness;
+- scope promotion;
+- hidden-assumption audit.
 
 ---
 
 # 13. Frontier Contraction
 
-若：
+If:
 
 $$
 M_{\partial,t+1}(Q)
@@ -331,7 +331,7 @@ M_{\partial,t+1}(Q)
 M_{\partial,t}(Q),
 $$
 
-且下降來自 certified closure event，則稱：
+and the decrease comes from a certified closure event, it is called a:
 
 $$
 \boxed{
@@ -343,7 +343,7 @@ $$
 
 # 14. Frontier Expansion
 
-若新研究發現此前未建模的 route class：
+If new research discovers a previously unmodeled route class:
 
 $$
 M_{\partial,t+1}(Q)
@@ -351,7 +351,7 @@ M_{\partial,t+1}(Q)
 M_{\partial,t}(Q),
 $$
 
-稱為：
+it is called a:
 
 $$
 \boxed{
@@ -359,7 +359,7 @@ $$
 }
 $$
 
-這不必然是退步。
+This is not necessarily a regression.
 
 ---
 
@@ -367,29 +367,29 @@ $$
 
 $$
 \boxed{
-\text{更忠實但更大的 frontier}
+\text{A more faithful but larger frontier}
 >
-\text{錯誤地縮小的 frontier}.
+\text{A falsely contracted frontier}.
 }
 $$
 
-在 epistemic quality 上，false contraction 比 truthful expansion 更糟。
+In terms of epistemic quality, a false contraction is worse than a truthful expansion.
 
 ---
 
 # 16. False Frontier Contraction
 
-若 frontier 變小源自：
+If the frontier shrinks due to:
 
-1. false quotient；
-2. scope 偷縮；
-3. unsupported obstruction transfer；
-4. representation deletion；
-5. hidden assumption；
-6. stale theorem；
-7. branch omission；
+1. false quotient;
+2. stealthy scope reduction;
+3. unsupported obstruction transfer;
+4. representation deletion;
+5. hidden assumption;
+6. stale theorem;
+7. branch omission;
 
-則標記：
+then it is marked as:
 
 $$
 \boxed{
@@ -401,13 +401,13 @@ $$
 
 # 17. Frontier Reopening
 
-若舊 closure 被撤銷，對應 route class 回到：
+If an old closure is revoked, the corresponding route class returns to:
 
 $$
 \partial^\ast\mathfrak C(Q).
 $$
 
-稱：
+This is called a:
 
 $$
 \boxed{
@@ -419,7 +419,7 @@ $$
 
 # 18. Reopening Boundary
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -427,35 +427,33 @@ $$
 }
 $$
 
-為因 revision 而重新進入 active frontier 的 route classes。
+as the route classes that re-enter the active frontier due to a revision.
 
 ---
 
 # 19. Closure Distance
 
-對節點 $v$ 到 target $Q$ 定義 typed closure distance：
+For a node $v$ to a target $Q$, define the typed closure distance:
 
 $$
 d_{\rm Cl}(v,Q).
 $$
 
-它不是純 edge count。
+It is not a pure edge count.
 
-它可以依：
+It can be weighted by:
 
-- unresolved assumptions；
-- bridge count；
-- certificate debt；
-- scope promotions；
-- obstruction depth；
-
-加權。
+- unresolved assumptions;
+- bridge count;
+- certificate debt;
+- scope promotions;
+- obstruction depth.
 
 ---
 
 # 20. Closure Radius
 
-對 target frontier 定義：
+For the target frontier, define:
 
 $$
 \boxed{
@@ -468,7 +466,7 @@ $$
 
 ---
 
-# 21. Radius 不等於 Difficulty
+# 21. Radius is Not Difficulty
 
 $$
 \boxed{
@@ -478,29 +476,29 @@ R_{\rm Cl}(Q)
 }
 $$
 
-一條很短的 route 可能包含極難 lemma。
+A very short route may contain an extremely difficult lemma.
 
 ---
 
 # 22. Closure Depth
 
-定義 route 的 closure depth：
+Define the closure depth of a route:
 
 $$
 D_{\rm Cl}(R)
 $$
 
-表示目前已通過多少 certified narrowing / branch elimination 層。
+representing how many layers of certified narrowing / branch elimination it has currently passed.
 
-它可用於比較同一 route family 的研究成熟度。
+It can be used to compare the research maturity of the same route family.
 
 ---
 
 # 23. Directed Hypergraph Route
 
-一條 route 不再只是 vertex sequence。
+A route is no longer just a vertex sequence.
 
-它是：
+It is:
 
 $$
 R
@@ -508,7 +506,7 @@ R
 (e_1,e_2,\ldots,e_k)
 $$
 
-其中每個 $e_i$ 是 directed hyperedge，且前一批輸出滿足後一批輸入要求。
+where each $e_i$ is a directed hyperedge, and the output of the preceding batch satisfies the input requirements of the succeeding batch.
 
 ---
 
@@ -518,15 +516,15 @@ $$
 R\in\mathcal R_{\rm adm}(Q)
 $$
 
-需滿足：
+must satisfy:
 
-1. edge type legal；
-2. assumption consistent；
-3. scope valid；
-4. bridge certified；
-5. target fidelity；
-6. no forbidden promotion；
-7. version current。
+1. edge type legal;
+2. assumption consistent;
+3. scope valid;
+4. bridge certified;
+5. target fidelity;
+6. no forbidden promotion;
+7. version current.
 
 ---
 
@@ -536,9 +534,9 @@ $$
 \mathcal R_{\rm obs}(Q)
 $$
 
-是 corpus / research history 中真正出現過的 route classes。
+are the route classes that have actually appeared in the corpus / research history.
 
-一般：
+Generally:
 
 $$
 \boxed{
@@ -548,7 +546,7 @@ $$
 }
 $$
 
-但不能假設等號。
+but equality cannot be assumed.
 
 ---
 
@@ -558,13 +556,13 @@ $$
 \mathcal R_{\rm enum}^{\Gamma}(Q)
 $$
 
-是指定 route grammar $\Gamma$ 下生成出的 route classes。
+are the route classes generated under a specified route grammar $\Gamma$.
 
 ---
 
 # 27. Relative Route Completeness
 
-若：
+If:
 
 $$
 \boxed{
@@ -574,19 +572,19 @@ $$
 }
 $$
 
-稱：
+we say:
 
 $$
 \mathsf{RCCert}_{\Gamma}(Q)
 $$
 
-通過。
+passes.
 
 ---
 
 # 28. Absolute Route Completeness
 
-若要說：
+To claim:
 
 $$
 \mathcal R_{\rm enum}(Q)
@@ -594,27 +592,27 @@ $$
 \mathcal R_{\rm adm}(Q)
 $$
 
-必須證明 route grammar 本身沒有漏掉 admissible mechanism class。
+one must prove that the route grammar itself does not miss any admissible mechanism class.
 
-這通常非常強。
+This is usually very strong.
 
 ---
 
 # 29. Cut Set
 
-令：
+Let:
 
 $$
 C\subset V.
 $$
 
-若每條：
+If every:
 
 $$
 R\in\mathcal R_{\rm adm}^{\Gamma}(Q)
 $$
 
-都至少經過 $C$ 中一個 element，則稱 $C$ 是：
+passes through at least one element in $C$, then $C$ is called a:
 
 $$
 \boxed{
@@ -626,7 +624,7 @@ $$
 
 # 30. Typed Cut
 
-cut 本身有型別：
+The cut itself has a type:
 
 $$
 \tau_C(C)
@@ -646,7 +644,7 @@ $$
 
 # 31. Route Cut
 
-若 cut elements 是 route states，稱：
+If the cut elements are route states, it is denoted as:
 
 $$
 C_R.
@@ -656,61 +654,61 @@ $$
 
 # 32. Assumption Cut
 
-若所有 admissible routes 都依賴至少一個：
+If all admissible routes depend on at least one:
 
 $$
 A\in C_A,
 $$
 
-則 $C_A$ 是 assumption cut。
+then $C_A$ is an assumption cut.
 
-若所有 $A$ 被 refute，可形成高槓桿 closure。
+If all $A$ are refuted, it can form a high-leverage closure.
 
 ---
 
 # 33. Bridge Cut
 
-若所有 route 都必須經過至少一個 bridge：
+If all routes must pass through at least one bridge:
 
 $$
 B\in C_B,
 $$
 
-則 $C_B$ 是 bridge cut。
+then $C_B$ is a bridge cut.
 
-這對跨 domain / representation theorem 很重要。
+This is important for cross-domain / cross-representation theorems.
 
 ---
 
 # 34. Scope Cut
 
-若所有 route 都需要一個 scope promotion：
+If all routes require a scope promotion:
 
 $$
 S\in C_S,
 $$
 
-則其 completeness 可轉成 scope-level obstruction 問題。
+then its completeness can be transformed into a scope-level obstruction problem.
 
 ---
 
 # 35. Representation Cut
 
-若所有現有 route family 都依賴某 representation family：
+If all existing route families depend on a certain representation family:
 
 $$
 \rho\in C_{\rho},
 $$
 
-那只代表觀測 route 空間具有 representation bottleneck。
+that only means the observed route space has a representation bottleneck.
 
-它不自動是 admissible proof-space cut。
+It is not automatically an admissible proof-space cut.
 
 ---
 
 # 36. Mixed Cut
 
-成熟問題往往需要：
+Mature problems often require:
 
 $$
 C=
@@ -723,13 +721,13 @@ C_R
 C_S.
 $$
 
-這形成 mixed typed cut。
+This forms a mixed typed cut.
 
 ---
 
 # 37. Cut Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -737,7 +735,7 @@ $$
 }
 $$
 
-其目標是證：
+Its goal is to prove:
 
 $$
 \forall R\in\mathcal R_{\rm adm}^{\Gamma}(Q),
@@ -749,7 +747,7 @@ $$
 
 # 38. Cut Completeness Debt
 
-若只能對 observed routes 證：
+If one can only prove for observed routes:
 
 $$
 \forall R\in\mathcal R_{\rm obs}(Q),
@@ -757,7 +755,7 @@ $$
 R\cap C\neq\varnothing,
 $$
 
-則形成：
+then it forms:
 
 $$
 \boxed{
@@ -773,13 +771,13 @@ $$
 
 # 39. Minimal Cut
 
-若 $C$ 是 cut，且任意真子集：
+If $C$ is a cut, and any proper subset:
 
 $$
 C'\subsetneq C
 $$
 
-都不再是 cut，則稱：
+is no longer a cut, it is called a:
 
 $$
 \boxed{
@@ -791,13 +789,13 @@ $$
 
 # 40. Minimum Cut
 
-若有 cost function：
+If there is a cost function:
 
 $$
 \kappa:C\to\mathbb R_{\ge0},
 $$
 
-則最小總成本 cut：
+then the minimum total cost cut is:
 
 $$
 C^\star
@@ -806,31 +804,31 @@ C^\star
 \sum_{c\in C}\kappa(c).
 $$
 
-這是 research-routing heuristic。
+This is a research-routing heuristic.
 
-它不取代 theorem proof。
+It does not replace a theorem proof.
 
 ---
 
 # 41. Hypergraph Transversal
 
-若每條 admissible route 可視為一個 hyperedge family，則 cut 可理解為 route-family transversal。
+If every admissible route can be viewed as a hyperedge family, then a cut can be understood as a route-family transversal.
 
-CSM 使用這個概念，但保留：
+CSM uses this concept but retains:
 
-- typed edges；
-- scope；
-- certificate；
-- version；
-- reopening；
+- typed edges;
+- scope;
+- certificate;
+- version;
+- reopening;
 
-因此不是單純靜態 hypergraph hitting-set 問題。
+Therefore, it is not a simple static hypergraph hitting-set problem.
 
 ---
 
 # 42. Obstruction Cover
 
-令 obstruction family：
+Let the obstruction family be:
 
 $$
 \mathcal O
@@ -838,19 +836,19 @@ $$
 \{O_1,\ldots,O_m\}.
 $$
 
-若對每條 admissible route $R$，至少存在：
+If for every admissible route $R$, there exists at least one:
 
 $$
 O_i
 $$
 
-使：
+such that:
 
 $$
 \mathsf{OPCert}(O_i\to R)=\mathsf{PASS},
 $$
 
-則稱：
+then it is said that:
 
 $$
 \boxed{
@@ -862,29 +860,29 @@ $$
 
 ---
 
-# 43. Cover 不等於 Cut
+# 43. Cover is Not Cut
 
-cut 是 route 必經的 structural set。
+A cut is a structural set that routes must pass through.
 
-obstruction cover 是能合法封住 route 的 obstruction family。
+An obstruction cover is an obstruction family that can legally seal the routes.
 
-兩者不同。
+The two are different.
 
 ---
 
 # 44. Cut-to-Cover Strategy
 
-一個高槓桿證明策略：
+A high-leverage proof strategy:
 
-1. 先證明小 cut；
-2. 再只對 cut elements 建 obstruction；
-3. 由 cut completeness 推回全部 route。
+1. First prove a small cut;
+2. Then build obstructions only for the cut elements;
+3. Deduce back to all routes via cut completeness.
 
 ---
 
 # 45. Cover Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -892,19 +890,19 @@ $$
 }
 $$
 
-需要：
+Requires:
 
-- route completeness；
-- propagation certificates；
-- scope match；
-- no uncovered class；
-- version freshness。
+- route completeness;
+- propagation certificates;
+- scope match;
+- no uncovered class;
+- version freshness.
 
 ---
 
 # 46. Obstruction Cover Debt
 
-若存在 uncovered route class：
+If there exists an uncovered route class:
 
 $$
 [R]\notin
@@ -912,7 +910,7 @@ $$
 \mathsf{BlockedBy}(O_i),
 $$
 
-則：
+then:
 
 $$
 \mathsf{Debt}_{\rm cover}\neq\varnothing.
@@ -922,7 +920,7 @@ $$
 
 # 47. Survivor Set
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -939,7 +937,7 @@ $$
 
 # 48. Survivor Frontier
 
-若：
+If:
 
 $$
 \mathcal S(Q)
@@ -947,13 +945,13 @@ $$
 \partial^\ast\mathfrak C(Q)
 $$
 
-表示所有 active frontier 都已被壓成 survivor route classes。
+it indicates that all active frontiers have been compressed into survivor route classes.
 
 ---
 
 # 49. Minimal Survivor Set
 
-若所有 survivor 的更一般 parent classes 都已被封或分解，得到：
+If all more general parent classes of the survivors have been sealed or decomposed, we obtain:
 
 $$
 \boxed{
@@ -965,7 +963,7 @@ $$
 
 # 50. Survivor Compression Ratio
 
-可定義：
+We can define:
 
 $$
 \boxed{
@@ -979,19 +977,19 @@ $$
 }
 $$
 
-只用作 research diagnostic。
+Used only as a research diagnostic.
 
 ---
 
 # 51. Exhaustion Level 0 — Corpus Exhaustion
 
-若：
+If:
 
 $$
 \partial_{\rm raw}
 $$
 
-在目前 corpus 中沒有新節點，僅能說：
+has no new nodes in the current corpus, one can only say:
 
 $$
 \boxed{
@@ -1005,7 +1003,7 @@ $$
 
 # 52. Exhaustion Level 1 — Observed Route Exhaustion
 
-若：
+If:
 
 $$
 \forall R\in\mathcal R_{\rm obs}(Q),
@@ -1013,7 +1011,7 @@ $$
 R\text{ closed/blocked},
 $$
 
-稱：
+it is called:
 
 $$
 \boxed{
@@ -1025,13 +1023,13 @@ $$
 
 # 53. Exhaustion Level 2 — Grammar-Relative Exhaustion
 
-若：
+If:
 
 $$
 \mathsf{RCCert}_{\Gamma}(Q)=\mathsf{PASS}
 $$
 
-且：
+and:
 
 $$
 \forall R\in\mathcal R_{\rm adm}^{\Gamma}(Q),
@@ -1039,7 +1037,7 @@ $$
 R\text{ certified closed},
 $$
 
-稱：
+it is called:
 
 $$
 \boxed{
@@ -1051,7 +1049,7 @@ $$
 
 # 54. Exhaustion Level 3 — Domain-Relative Mathematical Exhaustion
 
-若再有 parent bridge：
+If there is additionally a parent bridge:
 
 $$
 \neg\operatorname{RouteExists}_{\Gamma}(Q)
@@ -1059,7 +1057,7 @@ $$
 \neg Q
 $$
 
-或對正向 target 有對應 closure bridge，則：
+or a corresponding closure bridge for a positive target, then:
 
 $$
 \boxed{
@@ -1071,13 +1069,13 @@ $$
 
 # 55. Exhaustion Level 4 — Cross-Representation Exhaustion
 
-若所有 admissible representation classes：
+If all admissible representation classes:
 
 $$
 \rho\in\mathcal P_{\rm adm}
 $$
 
-都已覆蓋，且 representation robustness 成立：
+are covered, and representation robustness holds:
 
 $$
 \boxed{
@@ -1089,7 +1087,7 @@ $$
 
 # 56. Exhaustion Level 5 — Absolute Exhaustion Candidate
 
-只有在 domain、representation、route grammar、bridge 與 formal-system completeness obligations 都被處理後，才可討論：
+Only after domain, representation, route grammar, bridge, and formal-system completeness obligations have all been addressed, can one discuss:
 
 $$
 \boxed{
@@ -1099,7 +1097,7 @@ $$
 }
 $$
 
-本文不假設它通常可證。
+This paper does not assume it is generally provable.
 
 ---
 
@@ -1121,13 +1119,13 @@ $$
 }
 $$
 
-禁止跳級。
+Skipping levels is prohibited.
 
 ---
 
 # 58. Relative Exhaustion Certificate
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1135,32 +1133,32 @@ $$
 }
 $$
 
-至少包含：
+It contains at least:
 
-1. target statement；
-2. domain；
-3. route grammar；
-4. route-completeness cert；
-5. cut cert；
-6. obstruction cover cert；
-7. bridge cert；
-8. representation policy；
-9. scope policy；
-10. debt ledger；
-11. version；
-12. reopening policy。
+1. target statement;
+2. domain;
+3. route grammar;
+4. route-completeness cert;
+5. cut cert;
+6. obstruction cover cert;
+7. bridge cert;
+8. representation policy;
+9. scope policy;
+10. debt ledger;
+11. version;
+12. reopening policy.
 
 ---
 
 # 59. Exhaustion with Debt
 
-若：
+If:
 
 $$
 \mathsf{Debt}\neq\varnothing,
 $$
 
-則 exhaustion status 只能標：
+then the exhaustion status can only be marked as:
 
 $$
 \boxed{
@@ -1172,13 +1170,13 @@ $$
 
 # 60. Exhaustion Staleness
 
-若 theorem base、scope、representation family 或 bridge set 改變，舊：
+If the theorem base, scope, representation family, or bridge set changes, the old:
 
 $$
 \mathsf{RECert}
 $$
 
-必須進入：
+must enter:
 
 $$
 \mathsf{STALE}.
@@ -1188,7 +1186,7 @@ $$
 
 # 61. Revalidated Exhaustion
 
-只有重新跑 closure audit 後，才可：
+Only after re-running the closure audit can it transition:
 
 $$
 \mathsf{STALE}
@@ -1200,7 +1198,7 @@ $$
 
 # 62. Parent Closure Bridge
 
-若 route exhaustion 要推出 parent claim closure，需要：
+If route exhaustion is to deduce parent claim closure, it requires:
 
 $$
 \boxed{
@@ -1208,7 +1206,7 @@ $$
 }
 $$
 
-例如：
+For example:
 
 $$
 \neg\operatorname{RouteExists}
@@ -1216,13 +1214,13 @@ $$
 \neg Q.
 $$
 
-這條 implication 不能被默認。
+This implication cannot be taken for granted.
 
 ---
 
 # 63. Positive Parent Bridge
 
-對 existence theorem：
+For an existence theorem:
 
 $$
 \exists R\in\mathcal R_{\rm adm}(Q)
@@ -1232,13 +1230,13 @@ $$
 Q.
 $$
 
-也需要 target fidelity。
+target fidelity is also required.
 
 ---
 
 # 64. Negative Parent Bridge
 
-對 impossibility theorem：
+For an impossibility theorem:
 
 $$
 \forall R\in\mathcal R_{\rm adm}(Q),
@@ -1247,23 +1245,23 @@ $$
 \neg Q
 $$
 
-通常需要 route completeness 與 proof-form completeness。
+route completeness and proof-form completeness are usually required.
 
 ---
 
-# 65. Exhaustion 不等於 Falsehood
+# 65. Exhaustion is Not Falsehood
 
-即使：
+Even if:
 
 $$
 \mathsf{EXH}_2^\Gamma
 $$
 
-成立，也只表示：
+holds, it only means:
 
-> 在 $\Gamma$ 中沒有存活 route。
+> there are no surviving routes in $\Gamma$.
 
-不能直接寫：
+One cannot directly write:
 
 $$
 \neg Q.
@@ -1271,9 +1269,9 @@ $$
 
 ---
 
-# 66. Exhaustion 不等於 Unprovability
+# 66. Exhaustion is Not Unprovability
 
-同樣：
+Similarly:
 
 $$
 \mathsf{EXH}_2^\Gamma
@@ -1283,9 +1281,9 @@ $$
 
 ---
 
-# 67. Exhaustion 不等於 Independence
+# 67. Exhaustion is Not Independence
 
-只有指定 formal theory $\mathcal T$ 下真正證明：
+Only by truly proving under a specified formal theory $\mathcal T$:
 
 $$
 \mathcal T\nvdash Q,
@@ -1293,25 +1291,25 @@ $$
 \mathcal T\nvdash\neg Q
 $$
 
-才能說 relative independence。
+can one claim relative independence.
 
 ---
 
 # 68. Cut Centrality
 
-定義 cut centrality：
+Define cut centrality:
 
 $$
 Z(C)
 $$
 
-表示 cut 所截斷的 independent route mass。
+representing the independent route mass truncated by the cut.
 
 ---
 
 # 69. Obstruction Centrality
 
-定義：
+Define:
 
 $$
 Z(O)
@@ -1323,7 +1321,7 @@ $$
 
 ---
 
-# 70. Centrality 不是 Necessity
+# 70. Centrality is Not Necessity
 
 $$
 \boxed{
@@ -1337,13 +1335,13 @@ $$
 
 # 71. Closure Bottleneck
 
-若少數 cut elements 承擔大部分 route mass：
+If a small number of cut elements bear the majority of the route mass:
 
 $$
 Z(C)/M_{\mathcal R}\to1,
 $$
 
-稱：
+it is called a:
 
 $$
 \boxed{
@@ -1355,23 +1353,23 @@ $$
 
 # 72. Bottleneck Research Priority
 
-對 closure bottleneck 優先研究，通常能最大化：
+Prioritizing research on closure bottlenecks can usually maximize:
 
 $$
 \Delta M_{\partial}
 $$
 
-的預期減少。
+the expected reduction of.
 
-這是 routing heuristic。
+This is a routing heuristic.
 
 ---
 
 # 73. Bottleneck Reopening Risk
 
-高 centrality cut 一旦失效，也可能造成大規模 frontier reopening。
+Once a high-centrality cut becomes invalid, it may also cause massive frontier reopening.
 
-因此要記：
+Therefore, one must record:
 
 $$
 \boxed{
@@ -1383,9 +1381,9 @@ $$
 
 # 74. Redundant Cut
 
-若多個 cut elements 實際屬於同一 obstruction class，raw cut size 會高估。
+If multiple cut elements actually belong to the same obstruction class, the raw cut size will be overestimated.
 
-需 quotient：
+Quotienting is required:
 
 $$
 C^\ast=C/\sim_{\rm obs}.
@@ -1408,31 +1406,31 @@ $$
 
 # 76. Route-Cut Duality Candidate
 
-在某些有限 typed graph 中，minimal route cover 與 obstruction cut 可能形成對偶問題。
+In certain finite typed graphs, the minimal route cover and obstruction cut might form a duality problem.
 
-本文只將其作為研究方向，不主張一般 max-flow/min-cut 類定理已自動成立。
+This paper only treats this as a research direction and does not claim that general max-flow/min-cut type theorems automatically hold.
 
 ---
 
 # 77. Hypergraph Duality Debt
 
-若要建立一般對偶定理，需要處理：
+To establish a general duality theorem, one needs to handle:
 
-- hyperedge multiplicity；
-- edge typing；
-- nonlocal assumptions；
-- scope；
-- bridge loss；
-- reopening；
-- versioning。
+- hyperedge multiplicity;
+- edge typing;
+- nonlocal assumptions;
+- scope;
+- bridge loss;
+- reopening;
+- versioning.
 
 ---
 
 # 78. Frontier Topology
 
-本文暫不把 frontier 宣稱為傳統拓撲空間。
+This paper does not yet claim the frontier to be a traditional topological space.
 
-但可定義 graph-induced neighborhood：
+But a graph-induced neighborhood can be defined:
 
 $$
 N_k(v)
@@ -1444,7 +1442,7 @@ $$
 
 # 79. Closure Neighborhood
 
-更適合 CSM 的是：
+More suitable for CSM is:
 
 $$
 \boxed{
@@ -1459,7 +1457,7 @@ $$
 
 # 80. Shared-Obstruction Neighborhood
 
-若兩 route 都受同一 obstruction family 約束：
+If two routes are both constrained by the same obstruction family:
 
 $$
 O\triangleright R_1,
@@ -1467,21 +1465,21 @@ O\triangleright R_1,
 O\triangleright R_2,
 $$
 
-則可視為同一 closure neighborhood。
+then they can be viewed as being in the same closure neighborhood.
 
 ---
 
 # 81. Shared-Bridge Neighborhood
 
-若多條 route 共用同一 bridge debt，則形成 bridge-frontier cluster。
+If multiple routes share the same bridge debt, they form a bridge-frontier cluster.
 
 ---
 
 # 82. Frontier Curvature Heuristic
 
-若一個 frontier node 的小型修改造成大量 neighboring routes reopen/close，可定義高 sensitivity。
+If a minor modification to a frontier node causes a large number of neighboring routes to reopen/close, high sensitivity can be defined.
 
-本文暫稱：
+This paper tentatively calls:
 
 $$
 \boxed{
@@ -1489,27 +1487,27 @@ $$
 }
 $$
 
-為 frontier curvature heuristic。
+the frontier curvature heuristic.
 
-這不是微分幾何曲率。
+This is not differential geometric curvature.
 
 ---
 
 # 83. High-Curvature Frontier
 
-高 $\kappa_{\rm F}$ 節點通常是：
+High $\kappa_{\rm F}$ nodes are typically:
 
-- key lemma；
-- scope gate；
-- representation bridge；
-- common assumption；
-- central obstruction。
+- key lemma;
+- scope gate;
+- representation bridge;
+- common assumption;
+- central obstruction.
 
 ---
 
 # 84. Frontier Flat Region
 
-大量彼此相似、低影響、低獨立性的 open nodes 可形成：
+A large number of mutually similar, low-impact, low-independence open nodes can form a:
 
 $$
 \boxed{
@@ -1517,13 +1515,13 @@ $$
 }
 $$
 
-通常應先 quotient。
+They should usually be quotiented first.
 
 ---
 
 # 85. Frontier Singularity Heuristic
 
-若所有 active route mass 在少數 unresolved nodes 聚集：
+If all active route mass concentrates in a few unresolved nodes:
 
 $$
 M_{\partial}(F_{\rm core})
@@ -1532,15 +1530,15 @@ M_{\partial}(Q)
 \to1,
 $$
 
-可稱 closure-frontier concentration。
+it can be called closure-frontier concentration.
 
-本文不把它等同 PDE singularity。
+This paper does not equate it to a PDE singularity.
 
 ---
 
 # 86. Closure Cone
 
-對某 unresolved assumption $A$，所有依賴它的 downstream routes：
+For an unresolved assumption $A$, all downstream routes depending on it are:
 
 $$
 \boxed{
@@ -1554,19 +1552,19 @@ $$
 
 # 87. Cone Closure
 
-若 $A$ 被 theorem-level refute，且 inheritance cert 完整，整個 cone 可批次進入 blocked / closed audit。
+If $A$ is refuted at the theorem level, and the inheritance cert is complete, the entire cone can enter a blocked / closed audit in batch.
 
 ---
 
 # 88. Cone Reopening
 
-若 $A$ 的 refutation 被限縮，整個 cone 進入 reopening audit。
+If the refutation of $A$ is restricted, the entire cone enters a reopening audit.
 
 ---
 
 # 89. Closure Shell
 
-以 closure distance 分層：
+Stratified by closure distance:
 
 $$
 \boxed{
@@ -1580,15 +1578,15 @@ $$
 
 # 90. Shell Progression
 
-研究歷史可追蹤 frontier 從遠 shell 壓向近 shell，或反之。
+Research history can track the frontier compressing from distant shells to near shells, or vice versa.
 
-這是幾何描述，不保證 proof completion。
+This is a geometric description and does not guarantee proof completion.
 
 ---
 
 # 91. Closure Core
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1596,19 +1594,19 @@ $$
 }
 $$
 
-為所有 admissible route class 的高 overlap 子結構。
+as the high-overlap substructure of all admissible route classes.
 
 ---
 
-# 92. Core 不等於 Necessary Lemma
+# 92. Core is Not Necessary Lemma
 
-只有有 CutCert 時，core 才能升格成 route-necessary region。
+Only when a CutCert is present can the core be promoted to a route-necessary region.
 
 ---
 
 # 93. Relative Global Frontier
 
-對 domain $D$：
+For domain $D$:
 
 $$
 \boxed{
@@ -1616,19 +1614,19 @@ $$
 }
 $$
 
-不同 domain 的 frontier 不必相同。
+Frontiers of different domains need not be the same.
 
 ---
 
 # 94. Domain Projection of Frontier
 
-若：
+If:
 
 $$
 D_0\preceq D_1,
 $$
 
-可有投影：
+there can be a projection:
 
 $$
 \Pi_{D_1\to D_0}
@@ -1638,13 +1636,13 @@ $$
 \partial_{D_0}^\ast.
 $$
 
-但不能預設 injective 或 surjective。
+But it cannot be presumed injective or surjective.
 
 ---
 
 # 95. Scope Expansion Creates Frontier
 
-當 globality scope 擴張，新 proof obligations 可出現：
+When the globality scope expands, new proof obligations can appear:
 
 $$
 \boxed{
@@ -1659,7 +1657,7 @@ $$
 
 # 96. NS Formal Frontier
 
-對 Clay/formal NS domain：
+For the Clay/formal NS domain:
 
 $$
 \boxed{
@@ -1667,7 +1665,7 @@ $$
 }
 $$
 
-只包含對 formal target 有合法 route relevance 的 obligations。
+it only contains obligations that have legal route relevance to the formal target.
 
 ---
 
@@ -1677,9 +1675,9 @@ $$
 \partial_{\mathfrak N_{\rm P}}^\ast
 $$
 
-還會包含 model-to-world bridge obligations。
+will also contain model-to-world bridge obligations.
 
-因此：
+Therefore:
 
 $$
 \partial_{\mathfrak N_{\rm C}}^\ast
@@ -1691,21 +1689,21 @@ $$
 
 # 98. NS Generalized Frontier
 
-對：
+For:
 
 $$
 \mathfrak N_{\rm G}^{\Sigma}
 $$
 
-frontier 依 signature $\Sigma$ 改變。
+the frontier changes according to the signature $\Sigma$.
 
-沒有 $\Sigma$ 就沒有唯一 generalized frontier。
+Without $\Sigma$, there is no unique generalized frontier.
 
 ---
 
 # 99. NS Cross-Series Frontier
 
-NS 的 relative graph 應整合：
+The relative graph of NS should integrate:
 
 $$
 \mathcal H_{\rm C1-C6},
@@ -1716,34 +1714,34 @@ $$
 \mathcal H_{\rm FCBP}.
 $$
 
-但先做 route/obstruction quotient。
+But route/obstruction quotienting must be done first.
 
 ---
 
-# 100. NS Frontier Node 類型
+# 100. NS Frontier Node Types
 
-典型 frontier node：
+Typical frontier nodes:
 
-- unresolved bridge；
-- minimal survivor；
-- conditional lemma；
-- route completeness debt；
-- representation ambiguity；
-- scope mismatch；
-- external theorem interface；
-- potential counterexample class。
+- unresolved bridge;
+- minimal survivor;
+- conditional lemma;
+- route completeness debt;
+- representation ambiguity;
+- scope mismatch;
+- external theorem interface;
+- potential counterexample class.
 
 ---
 
 # 101. NS Obstruction Cover
 
-未來可建立：
+In the future, one can establish:
 
 $$
 \mathcal O_{\rm NS}^{\rm active}
 $$
 
-並測試：
+and test:
 
 $$
 \mathsf{CoverCert}_{\Gamma_{\rm NS}}
@@ -1753,29 +1751,29 @@ Q_{\rm Clay}
 ).
 $$
 
-早期預期大概率 FAIL / PARTIAL。
+In the early stages, it is highly expected to be FAIL / PARTIAL.
 
 ---
 
 # 102. NS Cut Discovery
 
-可從現有 corpus 中找：
+One can search within the existing corpus for:
 
 $$
 C_{\rm NS}^{\rm candidate}
 $$
 
-例如高 confluence assumptions、bridge、carrier states 或 recurrent survivor classes。
+such as high-confluence assumptions, bridges, carrier states, or recurrent survivor classes.
 
-但 candidate cut 不是 certified cut。
+But a candidate cut is not a certified cut.
 
 ---
 
-# 103. NS-203 的新用途
+# 103. New Use for NS-203
 
-過去 NS-203 corpus 不再只用於 novelty / saturation analysis。
+The historical NS-203 corpus is no longer used solely for novelty / saturation analysis.
 
-它現在可以作：
+It can now serve as:
 
 $$
 \boxed{
@@ -1807,22 +1805,22 @@ $$
 
 ---
 
-# 105. Mining 不等於 Proof
+# 105. Mining is Not Proof
 
-任何自動 graph mining：
+Any automatic graph mining:
 
 $$
 \not\Rightarrow
 \mathsf{CutCert}.
 $$
 
-formal / theorem-level audit 仍必要。
+formal / theorem-level audit remains necessary.
 
 ---
 
 # 106. Exhaustion Proof Pattern A — Finite Branching
 
-若：
+If:
 
 $$
 Q
@@ -1830,58 +1828,58 @@ Q
 Q_1\vee\cdots\vee Q_n
 $$
 
-有 BDCert，且每個 branch theorem-level refuted，則：
+has a BDCert, and each branch is refuted at the theorem level, then:
 
 $$
 Q
 $$
 
-負閉合。
+is negatively closed.
 
 ---
 
 # 107. Exhaustion Proof Pattern B — Certified Cut
 
-若：
+If:
 
-1. CutCert 成立；
-2. 每個 cut node 都被 refute；
-3. propagation valid；
-4. parent bridge valid；
+1. CutCert holds;
+2. Every cut node is refuted;
+3. propagation is valid;
+4. parent bridge is valid;
 
-則 parent negative closure 可成立。
+then parent negative closure can hold.
 
 ---
 
 # 108. Exhaustion Proof Pattern C — Obstruction Cover
 
-若：
+If:
 
 $$
 \mathcal O
 $$
 
-對 admissible route space 是 complete cover，且 route completeness 已證，則可得到 route exhaustion。
+is a complete cover for the admissible route space, and route completeness is proven, then route exhaustion can be obtained.
 
 ---
 
 # 109. Exhaustion Proof Pattern D — Representation Family
 
-若每個 admissible representation family 都有 route exhaustion，還需要 cross-representation completeness。
+If every admissible representation family has route exhaustion, cross-representation completeness is still required.
 
 ---
 
 # 110. Exhaustion Proof Pattern E — Scope Family
 
-若 target 帶 parameter family：
+If the target carries a parameter family:
 
 $$
 \theta\in\Theta,
 $$
 
-每個局部 $\theta$ 的 closure 不自動推出 uniform closure。
+the closure of each local $\theta$ does not automatically deduce uniform closure.
 
-需 uniformity certificate。
+A uniformity certificate is required.
 
 ---
 
@@ -1895,7 +1893,7 @@ $$
 }
 $$
 
-仍不一定推出：
+still does not necessarily deduce:
 
 $$
 \mathsf{RECert}
@@ -1904,21 +1902,21 @@ $$
 ).
 $$
 
-需要 uniform proof object。
+A uniform proof object is required.
 
 ---
 
 # 112. Compactness Bridge
 
-某些情況可利用 compactness 把局部 closure 升格 uniform closure。
+In some cases, compactness can be used to promote local closure to uniform closure.
 
-但 compactness 本身必須在指定 topology / parameterization 下證明。
+But compactness itself must be proven under the specified topology / parameterization.
 
 ---
 
 # 113. Finite Cover Bridge
 
-若 parameter space 可由有限 certified regions 覆蓋：
+If the parameter space can be covered by finite certified regions:
 
 $$
 \Theta
@@ -1926,33 +1924,33 @@ $$
 \bigcup_{i=1}^n\Theta_i,
 $$
 
-且每區有 closure cert，可形成 finite-cover exhaustion。
+and each region has a closure cert, it can form a finite-cover exhaustion.
 
 ---
 
 # 114. Infinite Cover Debt
 
-若只證 countably many cases，但不能證 exhaustiveness，仍有 coverage debt。
+If only countably many cases are proven, but exhaustiveness cannot be proven, there is still a coverage debt.
 
 ---
 
 # 115. Closure Measure Warning
 
-本文不主張存在自然機率測度：
+This paper does not claim the existence of a natural probability measure:
 
 $$
 \mu(\Omega^{\rm math}).
 $$
 
-所以不應寫：
+Therefore, one should not write:
 
-> NS proof space 已關閉 93%。
+> The NS proof space is 93% closed.
 
 ---
 
 # 116. Operational Coverage
 
-可以相對指定 finite graph 定義：
+One can define relative to a specified finite graph:
 
 $$
 \operatorname{Cov}_{\Gamma}
@@ -1965,7 +1963,7 @@ M_{\rm total}^{\Gamma}
 }.
 $$
 
-但必須標：
+But it must be labeled as:
 
 $$
 \boxed{
@@ -1975,7 +1973,7 @@ $$
 
 ---
 
-# 117. Coverage 不等於 Truth Probability
+# 117. Coverage is Not Truth Probability
 
 $$
 \boxed{
@@ -1989,17 +1987,17 @@ $$
 
 # 118. Closure Saturation
 
-若新增研究事件長期無法產生新 frontier class 或新 cut escape，可稱：
+If new research events fail to generate new frontier classes or new cut escapes over a long period, it can be called:
 
 $$
 \mathsf{Sat}_{\rm Cl}(B;R,N).
 $$
 
-它仍是 regime-relative。
+It is still regime-relative.
 
 ---
 
-# 119. Saturation 不等於 Exhaustion
+# 119. Saturation is Not Exhaustion
 
 $$
 \boxed{
@@ -2011,11 +2009,11 @@ $$
 
 ---
 
-# 120. Exhaustion 不等於 Closure
+# 120. Exhaustion is Not Closure
 
-某 route space 可耗盡，但 parent target 仍未閉合。
+A certain route space may be exhausted, but the parent target remains unclosed.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -2027,15 +2025,15 @@ $$
 
 ---
 
-# 121. Closure 不等於 Completeness
+# 121. Closure is Not Completeness
 
-一個 claim closed 不代表 surrounding theory complete。
+A claim being closed does not mean the surrounding theory is complete.
 
 ---
 
 # 122. Relative Completeness
 
-CSM 最常使用：
+CSM most frequently uses:
 
 $$
 \boxed{
@@ -2043,13 +2041,13 @@ $$
 }
 $$
 
-而不是 absolute completeness。
+rather than absolute completeness.
 
 ---
 
 # 123. Closure Certificate Stack
 
-一個成熟 closure conclusion 應攜帶：
+A mature closure conclusion should carry:
 
 $$
 \boxed{
@@ -2071,23 +2069,23 @@ $$
 
 # 124. Certificate Failure Modes
 
-任一層失敗都應降格：
+Failure at any layer should downgrade the status of the:
 
-- claim；
-- branch；
-- exhaustion；
-- cut；
-- cover；
+- claim;
+- branch;
+- exhaustion;
+- cut;
+- cover;
 
-的 status，而不是硬維持 closed。
+, rather than forcefully maintaining it as closed.
 
 ---
 
 # 125. Certificate Composition
 
-certificates 的組合本身需要 compatibility。
+The composition of certificates itself requires compatibility.
 
-不能假設：
+One cannot assume:
 
 $$
 \mathsf{Cert}_1+\mathsf{Cert}_2
@@ -2099,13 +2097,13 @@ $$
 
 # 126. Certificate Coherence
 
-若不同 cert 對 scope / assumptions / representation 標示不同，必須進行 coherence audit。
+If different certs indicate different scope / assumptions / representation, a coherence audit must be performed.
 
 ---
 
 # 127. Exhaustion Ledger
 
-每次 exhaustion event：
+Each exhaustion event:
 
 $$
 e_{\rm exh}
@@ -2122,13 +2120,13 @@ $$
 
 # 128. Reopening Exhaustion Event
 
-若 cut 失效：
+If a cut becomes invalid:
 
 $$
 e_{\rm reopen}
 $$
 
-引用舊 exhaustion event，而不是刪除。
+references the old exhaustion event, rather than deleting it.
 
 ---
 
@@ -2140,13 +2138,13 @@ $$
 }
 $$
 
-不同版本不可無證合併。
+Different versions cannot be merged without certification.
 
 ---
 
 # 130. Frontier Version
 
-同樣：
+Similarly:
 
 $$
 \partial^{\ast,(\nu)}\mathfrak C(Q).
@@ -2156,7 +2154,7 @@ $$
 
 # 131. Frontier Drift
 
-定義版本間：
+Define between versions:
 
 $$
 \Delta\partial^\ast
@@ -2166,13 +2164,13 @@ $$
 \partial^{\ast,(\nu)}.
 $$
 
-可分析新增／消失／重開 route classes。
+This allows analysis of newly added / disappeared / reopened route classes.
 
 ---
 
 # 132. Closure Drift
 
-closure status distribution 隨版本改變：
+The closure status distribution changes with versions:
 
 $$
 \Delta\sigma.
@@ -2182,19 +2180,19 @@ $$
 
 # 133. Research Value of Negative Results
 
-formal no-go 若能形成高-centrality obstruction cover，其價值可能高於許多孤立 positive lemmas。
+If a formal no-go can form a high-centrality obstruction cover, its value may be higher than many isolated positive lemmas.
 
 ---
 
 # 134. Research Value of Reopening
 
-找到一個使高-centrality false cut 失效的 counterexample 或 bridge，也可能極高價值。
+Finding a counterexample or bridge that invalidates a high-centrality false cut can also be of extremely high value.
 
 ---
 
 # 135. Proof-Space Geometry Is Not Truth Geometry
 
-CSM 必須保持：
+CSM must maintain:
 
 $$
 \boxed{
@@ -2204,13 +2202,13 @@ $$
 }
 $$
 
-圖上「近」不代表邏輯上「近真」。
+"Close" on the graph does not mean logically "close to truth."
 
 ---
 
 # 136. Search Geometry Is Not Proof Geometry
 
-同樣：
+Similarly:
 
 $$
 \boxed{
@@ -2220,7 +2218,7 @@ $$
 }
 $$
 
-embedding cluster 不是 theorem relation。
+An embedding cluster is not a theorem relation.
 
 ---
 
@@ -2238,25 +2236,25 @@ $$
 
 # 138. Frontier Geometry Is Operational
 
-本文的「幾何」首先指：
+The "geometry" in this paper primarily refers to:
 
-- graph structure；
-- quotient structure；
-- reachability；
-- cuts；
-- covers；
-- weighted neighborhoods；
-- closure distance。
+- graph structure;
+- quotient structure;
+- reachability;
+- cuts;
+- covers;
+- weighted neighborhoods;
+- closure distance.
 
-不自動主張 smooth manifold structure。
+It does not automatically claim a smooth manifold structure.
 
 ---
 
-# 139. Paper 03 核心命題一
+# 139. Core Proposition I of Paper 03
 
 ## Relative Exhaustion Theorem Schema
 
-若：
+If:
 
 $$
 \mathsf{RCCert}_{\Gamma}(Q)=\mathsf{PASS},
@@ -2272,7 +2270,7 @@ $$
 \sigma(c)=\mathsf{CLOSED}^{-},
 $$
 
-且 closure inheritance 全部有 cert，則：
+and all closure inheritances have certs, then:
 
 $$
 \boxed{
@@ -2284,11 +2282,11 @@ $$
 
 ---
 
-# 140. Paper 03 核心命題二
+# 140. Core Proposition II of Paper 03
 
 ## Parent Closure Theorem Schema
 
-若另有：
+If there is additionally:
 
 $$
 \mathsf{ParentBridgeCert}
@@ -2298,7 +2296,7 @@ $$
 \neg Q,
 $$
 
-則：
+then:
 
 $$
 \boxed{
@@ -2308,27 +2306,27 @@ D,\Gamma
 }
 $$
 
-這是 relative-domain theorem conclusion。
+This is a relative-domain theorem conclusion.
 
 ---
 
-# 141. Paper 03 核心命題三
+# 141. Core Proposition III of Paper 03
 
 ## Reopening Theorem Schema
 
-若：
+If:
 
 $$
 \mathsf{CutCert}^{(\nu)}
 $$
 
-依賴 premise $A$，而新版本證：
+depends on premise $A$, and the new version proves:
 
 $$
 \neg\mathsf{Valid}^{(\nu+1)}(A),
 $$
 
-則舊 exhaustion cert 必標：
+then the old exhaustion cert must be marked as:
 
 $$
 \boxed{
@@ -2336,31 +2334,31 @@ $$
 }
 $$
 
-並重建 frontier。
+and the frontier must be reconstructed.
 
 ---
 
-# 142. Paper 03 核心命題四
+# 142. Core Proposition IV of Paper 03
 
 ## False Exhaustion No-Go
 
-若以下任何一項缺失：
+If any of the following is missing:
 
-- route completeness；
-- cut completeness；
-- obstruction cover；
-- scope fidelity；
-- parent bridge；
+- route completeness;
+- cut completeness;
+- obstruction cover;
+- scope fidelity;
+- parent bridge;
 
-則禁止從 observed route closure 推出 parent theorem closure。
+then deducing parent theorem closure from observed route closure is prohibited.
 
 ---
 
-# 143. Paper 03 核心命題五
+# 143. Core Proposition V of Paper 03
 
 ## Relative-Global Frontier Principle
 
-任何「全域 frontier」都必須寫成：
+Any "global frontier" must be written as:
 
 $$
 \boxed{
@@ -2369,35 +2367,35 @@ $$
 }
 $$
 
-至少標明：
+indicating at least:
 
-- domain；
-- route grammar；
-- representation policy；
-- version。
-
----
-
-# 144. NS 實例化前置條件
-
-在真正建立 NS closure graph 前，至少需要：
-
-1. canonical artifact inventory；
-2. claim extraction；
-3. assumption extraction；
-4. route quotient；
-5. obstruction quotient；
-6. scope normalization；
-7. cross-series bridge audit；
-8. status reclassification；
-9. survivor extraction；
-10. frontier reconstruction。
+- domain;
+- route grammar;
+- representation policy;
+- version.
 
 ---
 
-# 145. NS 第一版不追求全域完備
+# 144. NS Instantiation Prerequisites
 
-v0.1 只建立：
+Before truly establishing the NS closure graph, the following are required at minimum:
+
+1. canonical artifact inventory;
+2. claim extraction;
+3. assumption extraction;
+4. route quotient;
+5. obstruction quotient;
+6. scope normalization;
+7. cross-series bridge audit;
+8. status reclassification;
+9. survivor extraction;
+10. frontier reconstruction.
+
+---
+
+# 145. NS Version 1 Does Not Pursue Global Completeness
+
+v0.1 only establishes:
 
 $$
 \boxed{
@@ -2406,13 +2404,13 @@ $$
 }
 $$
 
-即 observed relative frontier。
+namely the observed relative frontier.
 
 ---
 
-# 146. NS 第二版
+# 146. NS Version 2
 
-在 route grammar 建立後：
+After the route grammar is established:
 
 $$
 \partial^{\ast}_{\Gamma_{\rm NS}}
@@ -2421,9 +2419,9 @@ $$
 
 ---
 
-# 147. NS 第三版
+# 147. NS Version 3
 
-只有在 route-completeness 有部分 theorem 支持後，才討論：
+Only after route-completeness is supported by partial theorems can one discuss:
 
 $$
 \mathsf{EXH}_2^{\Gamma_{\rm NS}}.
@@ -2431,9 +2429,9 @@ $$
 
 ---
 
-# 148. NS 的初始高風險錯誤
+# 148. Initial High-Risk Errors for NS
 
-最需要避免：
+Most necessary to avoid:
 
 $$
 \boxed{
@@ -2445,7 +2443,7 @@ $$
 
 ---
 
-# 149. 第二個高風險錯誤
+# 149. Second High-Risk Error
 
 $$
 \boxed{
@@ -2457,7 +2455,7 @@ $$
 
 ---
 
-# 150. 第三個高風險錯誤
+# 150. Third High-Risk Error
 
 $$
 \boxed{
@@ -2469,7 +2467,7 @@ $$
 
 ---
 
-# 151. 第四個高風險錯誤
+# 151. Fourth High-Risk Error
 
 $$
 \boxed{
@@ -2481,15 +2479,15 @@ $$
 
 ---
 
-# 152. NS 的真正研究目標
+# 152. True Research Goal for NS
 
-初期不是追求：
+In the early stages, the pursuit is not:
 
 $$
 \mathsf{Proof}(Q_{\rm NS}).
 $$
 
-而是建立：
+but rather to establish:
 
 $$
 \boxed{
@@ -2499,50 +2497,50 @@ $$
 
 ---
 
-# 153. CSM Paper 03 與 LSI-PSD 的關係
+# 153. Relationship Between CSM Paper 03 and LSI-PSD
 
-LSI-PSD 已建立：
+LSI-PSD has established:
 
-- proof basins；
-- semantic quotient；
-- obstruction confluence；
-- search regime limitation；
-- observatory governance。
+- proof basins;
+- semantic quotient;
+- obstruction confluence;
+- search regime limitation;
+- observatory governance.
 
-本文吸收其方法論，但將 frontier/cut/exhaustion 升格為 CSM closure operations。
-
----
-
-# 154. CSM Paper 03 與 UCT 的關係
-
-UCT 的 relative-global gate、bridge/debt/ledger 在此具體化為：
-
-- CutCert；
-- CoverCert；
-- RECert；
-- ParentBridgeCert；
-- reopening ledger。
+This paper absorbs its methodology but promotes frontier/cut/exhaustion to CSM closure operations.
 
 ---
 
-# 155. CSM Paper 03 與一般圖論的關係
+# 154. Relationship Between CSM Paper 03 and UCT
 
-本文使用：
+The relative-global gate, bridge/debt/ledger of UCT are concretized here as:
 
-- directed graph；
-- hypergraph；
-- cut；
-- transversal；
-- cover；
-- connected component；
+- CutCert;
+- CoverCert;
+- RECert;
+- ParentBridgeCert;
+- reopening ledger.
 
-作為形式工具。
+---
 
-本文不宣稱發明這些一般概念。
+# 155. Relationship Between CSM Paper 03 and General Graph Theory
 
-CSM 的新增研究焦點在於：
+This paper uses:
 
-> 將它們與 typed proof objects、scope contracts、obstruction certificates、reopening、debt、versioned ledger 與 relative-global theorem gates 綁在同一 operational framework 中。
+- directed graph;
+- hypergraph;
+- cut;
+- transversal;
+- cover;
+- connected component;
+
+as formal tools.
+
+This paper does not claim to have invented these general concepts.
+
+The newly added research focus of CSM lies in:
+
+> binding them together with typed proof objects, scope contracts, obstruction certificates, reopening, debt, versioned ledgers, and relative-global theorem gates into the same operational framework.
 
 ---
 
@@ -2630,163 +2628,163 @@ relative_exhaustion:
 
 # 160. Validation Scenario A — Small raw frontier, bad quotient
 
-若 raw frontier 100 nodes 被錯誤合併成 1 class，則即使：
+If 100 raw frontier nodes are falsely merged into 1 class, then even if:
 
 $$
 |\partial^\ast|=1
 $$
 
-也不能接受。
+it is unacceptable.
 
-gold audit 必須抓出 false quotient。
+A gold audit must catch the false quotient.
 
 ---
 
 # 161. Validation Scenario B — True minimal cut
 
-若所有 admissible routes 都經 $A$，且 CutCert 成立，則：
+If all admissible routes pass through $A$, and CutCert holds, then:
 
 $$
 C=\{A\}
 $$
 
-是真 minimal cut。
+is a true minimal cut.
 
 ---
 
 # 162. Validation Scenario C — Observed-only cut
 
-若 $A$ 只截斷所有 observed routes，則：
+If $A$ only truncates all observed routes, then:
 
 $$
 \mathsf{CutCert}_{\rm obs}
 $$
 
-不能升格為 grammar-relative CutCert。
+cannot be promoted to a grammar-relative CutCert.
 
 ---
 
 # 163. Validation Scenario D — Complete obstruction cover
 
-若 route completeness 成立且每個 route 都有 valid OPCert，則 obstruction cover PASS。
+If route completeness holds and every route has a valid OPCert, then the obstruction cover PASSes.
 
 ---
 
 # 164. Validation Scenario E — One uncovered survivor
 
-若只有一個 route class 未被 cover，則 exhaustion FAIL。
+If even one route class is not covered, then exhaustion FAILs.
 
-該 class 成為 minimal survivor candidate。
+That class becomes a minimal survivor candidate.
 
 ---
 
 # 165. Validation Scenario F — Reopened cut
 
-若 cut element 的 obstruction 被新 counterexample 限縮，cut 必須重審。
+If the obstruction of a cut element is restricted by a new counterexample, the cut must be re-audited.
 
 ---
 
 # 166. Validation Scenario G — Parent bridge missing
 
-route exhaustion 已證，但沒有：
+Route exhaustion is proven, but without:
 
 $$
 \neg\operatorname{RouteExists}\Rightarrow\neg Q,
 $$
 
-則 parent claim仍不得 CLOSED negative。
+then the parent claim still cannot be CLOSED negative.
 
 ---
 
 # 167. Validation Scenario H — Scope expansion
 
-若從一個 parameter region 擴張到全 parameter space，舊 cut 不自動維持 completeness。
+If expanding from one parameter region to the entire parameter space, the old cut does not automatically maintain completeness.
 
 ---
 
 # 168. Validation Scenario I — Cross-representation escape
 
-representation $\rho_1$ exhaustion 不排除 $\rho_2$。
+Exhaustion of representation $\rho_1$ does not exclude $\rho_2$.
 
-若 $\rho_2$ 是 admissible，frontier reopening。
+If $\rho_2$ is admissible, the frontier reopens.
 
 ---
 
 # 169. Validation Scenario J — NS observed frontier
 
-將 NS `OPEN / SURVIVOR / STOP` 編譯後，只能先得到：
+After compiling NS `OPEN / SURVIVOR / STOP`, one can initially only obtain:
 
 $$
 \partial_{\rm obs}^\ast\mathfrak C_{\rm NS}.
 $$
 
-不得宣稱 absolute frontier。
+One must not claim an absolute frontier.
 
 ---
 
 # 170. Validation Scenario K — NS scalar NO-GO
 
-scalar-budget NO-GO 可成為高-centrality obstruction，但若其他 geometric/nonlocal routes 不經它，就不是 global cut。
+A scalar-budget NO-GO can become a high-centrality obstruction, but if other geometric/nonlocal routes do not pass through it, it is not a global cut.
 
 ---
 
 # 171. Validation Scenario L — NS survivor concentration
 
-若大量 sibling branches 被封，只剩少數 shear/polarization / ancient-profile classes，這是 survivor compression，不是 theorem completion。
+If a large number of sibling branches are sealed, leaving only a few shear/polarization / ancient-profile classes, this is survivor compression, not theorem completion.
 
 ---
 
 # 172. Non-Claim 1
 
-本文不主張所有 proof spaces 天然具有唯一 graph representation。
+This paper does not claim that all proof spaces naturally possess a unique graph representation.
 
 ---
 
 # 173. Non-Claim 2
 
-本文不主張所有 mathematical routes 可有效列舉。
+This paper does not claim that all mathematical routes can be effectively enumerated.
 
 ---
 
 # 174. Non-Claim 3
 
-本文不主張 finite corpus 可以證明 absolute route completeness。
+This paper does not claim that a finite corpus can prove absolute route completeness.
 
 ---
 
 # 175. Non-Claim 4
 
-本文不主張 frontier mass 是客觀自然測度。
+This paper does not claim that frontier mass is an objective natural measure.
 
 ---
 
 # 176. Non-Claim 5
 
-本文不主張 minimal cut 自動等於最重要數學 lemma。
+This paper does not claim that a minimal cut automatically equals the most important mathematical lemma.
 
 ---
 
 # 177. Non-Claim 6
 
-本文不主張 graph centrality 等於 theorem necessity。
+This paper does not claim that graph centrality equals theorem necessity.
 
 ---
 
 # 178. Non-Claim 7
 
-本文不主張 obstruction confluence 等於 unprovability。
+This paper does not claim that obstruction confluence equals unprovability.
 
 ---
 
 # 179. Non-Claim 8
 
-本文不主張 relative exhaustion 等於 absolute mathematical exhaustion。
+This paper does not claim that relative exhaustion equals absolute mathematical exhaustion.
 
 ---
 
-# 180. Paper 04 路線
+# 180. Paper 04 Route
 
-下一篇應處理：
+The next paper should address:
 
 $$
 \boxed{
@@ -2794,25 +2792,25 @@ $$
 }
 $$
 
-包括：
+Including:
 
-- time-indexed closure states；
-- schedule dependence；
-- closure fixed points；
-- reopening waves；
-- debt discharge；
-- closure hysteresis；
-- frontier attractors；
-- relative equilibrium；
-- research routing dynamics。
+- time-indexed closure states;
+- schedule dependence;
+- closure fixed points;
+- reopening waves;
+- debt discharge;
+- closure hysteresis;
+- frontier attractors;
+- relative equilibrium;
+- research routing dynamics.
 
 ---
 
-# 181. 結論
+# 181. Conclusion
 
-本文將 CSM 從「能封路」推進到「能描述剩餘未閉空間」。
+This paper advances CSM from "being able to seal routes" to "being able to describe the remaining unclosed space."
 
-其核心鏈條為：
+Its core chain is:
 
 $$
 \boxed{
@@ -2830,7 +2828,7 @@ $$
 }
 $$
 
-最重要的非坍縮是：
+The most important non-collapse is:
 
 $$
 \boxed{
@@ -2844,41 +2842,41 @@ $$
 }
 $$
 
-因此，「一步一步把命題封住」只有在 route completeness、cut completeness、obstruction coverage、scope fidelity 與 parent bridge 全部有證書時，才真正具有 theorem-level 意義。
+Therefore, "step-by-step sealing of the proposition" truly possesses theorem-level significance only when route completeness, cut completeness, obstruction coverage, scope fidelity, and parent bridge all have certificates.
 
-CSM 的目標不是把數學研究變成漂亮的圖，而是讓：
+The goal of CSM is not to turn mathematical research into pretty graphs, but to ensure that:
 
 $$
 \boxed{
-\text{每一次封閉、每一次遺漏、每一次重開、每一次耗盡宣告}
+\text{every closure, every omission, every reopening, and every exhaustion declaration}
 }
 $$
 
-都能被精確定位在它真正有權限作用的相對數學空間中。
+can be precisely located within the relative mathematical space where it truly has the authority to operate.
 
 ---
 
-## 附錄 A — Paper 03 核心不變量
+## Appendix A — Core Invariants of Paper 03
 
-1. raw frontier 不等於 quotient frontier；
-2. frontier contraction 不等於 proof progress；
-3. false contraction 必須可檢測；
-4. cut 必須有 route coverage proof；
-5. observed cut 不等於 admissible cut；
-6. cut 不等於 obstruction cover；
-7. obstruction cover 必須有 OPCert；
-8. survivor 不等於 successful route；
-9. route exhaustion 不等於 parent claim closure；
-10. exhaustion ladder 不可跳級；
-11. representation exhaustion 不得無證跨 representation；
-12. scope-local exhaustion 不得無證升格；
-13. exhaustion certificate 可 stale；
-14. reopening 必須重建 frontier；
-15. relative-global frontier 必須標 domain / grammar / representation / version。
+1. raw frontier does not equal quotient frontier;
+2. frontier contraction does not equal proof progress;
+3. false contraction must be detectable;
+4. cut must have a route coverage proof;
+5. observed cut does not equal admissible cut;
+6. cut does not equal obstruction cover;
+7. obstruction cover must have an OPCert;
+8. survivor does not equal successful route;
+9. route exhaustion does not equal parent claim closure;
+10. exhaustion ladder cannot be skipped;
+11. representation exhaustion must not cross representations without certification;
+12. scope-local exhaustion must not be promoted without certification;
+13. exhaustion certificate can become stale;
+14. reopening must reconstruct the frontier;
+15. relative-global frontier must indicate domain / grammar / representation / version.
 
 ---
 
-## 附錄 B — 系列依賴
+## Appendix B — Series Dependencies
 
 ### Paper 00
 - Relative-Global Closure Space

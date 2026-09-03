@@ -1,26 +1,33 @@
+---
+title: CSM Paper 04 — Closure Dynamics, Reopening, and Fixed-Point Evolution
+subtitle: Closure-Space Mathematics: Closure Dynamics, Reopening, Hysteresis, and Fixed-Point Evolution
+status: Formal Theory / Dynamic Core
+epistemic_status: Formal Theory / Dynamic Core
+---
+
 # CSM Paper 04 — Closure Dynamics, Reopening, and Fixed-Point Evolution
 
-## 閉包空間數學論：閉包動力學、重開、遲滯與不動點演化
+## Closure-Space Mathematics: Closure Dynamics, Reopening, Hysteresis, and Fixed-Point Evolution
 
 **English Title:** *Closure-Space Mathematics: Closure Dynamics, Reopening, Hysteresis, and Fixed-Point Evolution*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 04  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** en  
 **Status:** Formal Theory / Dynamic Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的動態核心。前四個基礎層次已依序完成：Paper 00 建立相對全域閉包空間；Paper 01 建立全域性型別與作用域分層；Paper 02 建立 typed closure hypergraph、obstruction propagation 與 reopening；Paper 03 建立 frontier geometry、cut、obstruction cover 與 relative exhaustion。本文現在處理下一個不可避免的問題：
+This paper establishes the dynamic core of Closure-Space Mathematics (CSM). The first four foundational layers have been completed in sequence: Paper 00 established the relative-global closure space; Paper 01 established globality typing and scope stratification; Paper 02 established the typed closure hypergraph, obstruction propagation, and reopening; Paper 03 established frontier geometry, cuts, obstruction covers, and relative exhaustion. This paper now addresses the next inevitable question:
 
-> 一個 closure space 在研究過程中如何隨新 theorem、counterexample、representation、bridge、scope revision、obstruction revision、debt discharge 與 reopening 持續演化？
+> How does a closure space continuously evolve during the research process with new theorems, counterexamples, representations, bridges, scope revisions, obstruction revisions, debt discharges, and reopenings?
 
-本文不把 closure space 視為一張靜態最終圖，而定義時間索引狀態：
+Instead of viewing the closure space as a static final graph, this paper defines a time-indexed state:
 
 $$
 \boxed{
@@ -37,7 +44,7 @@ $$
 }
 $$
 
-並以 event-driven update：
+And uses an event-driven update:
 
 $$
 \boxed{
@@ -51,9 +58,9 @@ e_t
 }
 $$
 
-描述研究狀態演化。事件可新增 theorem、撤銷舊 assumption、改變 scope、加入 bridge、限縮 obstruction、建立 counterexample、修正 representation 或清償 proof debt。
+to describe the evolution of the research state. Events can add theorems, revoke old assumptions, change scopes, add bridges, narrow obstructions, establish counterexamples, revise representations, or discharge proof debts.
 
-本文核心主張之一是：
+One of the core propositions of this paper is:
 
 $$
 \boxed{
@@ -62,28 +69,28 @@ while closure status is generally nonmonotone.}
 }
 $$
 
-也就是舊證據不被刪除，但舊的 `BLOCKED`、`CLOSED`、`EXHAUSTED` 狀態可能因新資訊進入 `STALE`、`REOPENED` 或更弱的 relative status。
+That is, old evidence is not deleted, but old `BLOCKED`, `CLOSED`, or `EXHAUSTED` statuses may transition into `STALE`, `REOPENED`, or weaker relative statuses due to new information.
 
-本文定義：
+This paper defines:
 
-1. closure event；
-2. closure schedule；
-3. event commutation；
-4. schedule dependence；
-5. closure hysteresis；
-6. reopening wave；
-7. debt discharge；
-8. frontier drift；
-9. local closure fixed point；
-10. relative equilibrium；
-11. closure attractor；
-12. closure cycle；
-13. metastable closure；
-14. fixed-point invalidation；
-15. closure restoration；
-16. versioned equilibrium certificate。
+1. closure event;
+2. closure schedule;
+3. event commutation;
+4. schedule dependence;
+5. closure hysteresis;
+6. reopening wave;
+7. debt discharge;
+8. frontier drift;
+9. local closure fixed point;
+10. relative equilibrium;
+11. closure attractor;
+12. closure cycle;
+13. metastable closure;
+14. fixed-point invalidation;
+15. closure restoration;
+16. versioned equilibrium certificate.
 
-最重要的非坍縮原則是：
+The most important non-collapse principle is:
 
 $$
 \boxed{
@@ -93,17 +100,17 @@ $$
 }
 $$
 
-一個研究系統在固定 theorem base、固定 route grammar、固定 representation family、固定 bridge policy 下停止改變，只能說它到達 **relative closure fixed point**；不能升格成「數學空間已完備」。
+When a research system stops changing under a fixed theorem base, fixed route grammar, fixed representation family, and fixed bridge policy, it can only be said to have reached a **relative closure fixed point**; it cannot be elevated to the claim that "the mathematical space is complete."
 
-本文亦引入 **Closure Hysteresis**。如果同一組最終 evidence 以不同順序進入系統，且中間的 quotient、bridge、obstruction inheritance 或 scope revision 會影響後續可生成節點，則 closure history 可能產生路徑依賴。這使 closure schedule 本身成為一個可稽核的數學研究變數。
+This paper also introduces **Closure Hysteresis**. If the same final set of evidence enters the system in a different order, and intermediate quotients, bridges, obstruction inheritances, or scope revisions affect subsequently generable nodes, the closure history may exhibit path dependence. This makes the closure schedule itself an auditable mathematical research variable.
 
-最後，本文將此動力學接回 Navier--Stokes closure program：過去被標記為 `NO-GO`、`SURVIVOR`、`STOP`、`CLOSED` 的節點不再是永久標籤，而成為一系列 closure events。當跨系列 bridge、generalized domain、representation rewrite 或新的 theorem 改變依賴條件時，整個 NS relative-global frontier 可發生 reopening wave。這使長程研究第一次具備真正的「時間維度」。
+Finally, this paper connects this dynamics back to the Navier--Stokes closure program: nodes previously marked as `NO-GO`, `SURVIVOR`, `STOP`, or `CLOSED` are no longer permanent labels, but become a series of closure events. When cross-series bridges, generalized domains, representation rewrites, or new theorems change the dependency conditions, the entire NS relative-global frontier can experience a reopening wave. This equips long-range research with a true "time dimension" for the first time.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-Paper 03 的核心結構為：
+The core structure of Paper 03 is:
 
 $$
 \text{Route Space}
@@ -117,7 +124,7 @@ $$
 \text{Relative Exhaustion}.
 $$
 
-本文新增：
+This paper adds:
 
 $$
 \boxed{
@@ -125,13 +132,13 @@ t\mapsto\mathfrak C_t.
 }
 $$
 
-因此 CSM 不只是 closure algebra，也是一個 closure dynamics framework。
+Therefore, CSM is not just a closure algebra, but also a closure dynamics framework.
 
 ---
 
 # 2. Dynamic Closure State
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -150,22 +157,22 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $\mathcal H_t$：當前 typed hypergraph；
-- $\sigma_t$：closure status map；
-- $\partial_t^\ast$：quotient frontier；
-- $\mathfrak O_t$：active obstruction set；
-- $\mathsf{Cert}_t$：active certificate set；
-- $\mathsf{Debt}_t$：未償 proof debt；
-- $\mathsf{Ledger}_{\le t}$：全部歷史事件；
-- $\mathsf{Policy}_t$：當前 quotient / bridge / scope / routing policy。
+- $\mathcal H_t$: current typed hypergraph;
+- $\sigma_t$: closure status map;
+- $\partial_t^\ast$: quotient frontier;
+- $\mathfrak O_t$: active obstruction set;
+- $\mathsf{Cert}_t$: active certificate set;
+- $\mathsf{Debt}_t$: outstanding proof debt;
+- $\mathsf{Ledger}_{\le t}$: all historical events;
+- $\mathsf{Policy}_t$: current quotient / bridge / scope / routing policy.
 
 ---
 
 # 3. Closure Event
 
-定義事件：
+Define the event:
 
 $$
 \boxed{
@@ -221,23 +228,23 @@ $$
 }
 $$
 
-$\mathfrak U$ 不只是 append。
+$\mathfrak U$ is not just an append operation.
 
-它可能觸發：
+It may trigger:
 
-- implication closure；
-- obstruction propagation；
-- stale marking；
-- reopening；
-- frontier rebuild；
-- debt recalculation；
-- exhaustion revalidation。
+- implication closure;
+- obstruction propagation;
+- stale marking;
+- reopening;
+- frontier rebuild;
+- debt recalculation;
+- exhaustion revalidation.
 
 ---
 
 # 6. Derived Update
 
-實際上：
+In practice:
 
 $$
 \mathfrak U
@@ -259,7 +266,7 @@ $$
 \mathfrak U_{\rm ingest}
 $$
 
-只把新 event 寫入 ledger 與 candidate graph。
+Only writes the new event into the ledger and candidate graph.
 
 ---
 
@@ -269,14 +276,14 @@ $$
 \mathfrak U_{\rm validate}
 $$
 
-檢查：
+Checks:
 
-- type signature；
-- scope；
-- certificate；
-- target fidelity；
-- version；
-- provenance。
+- type signature;
+- scope;
+- certificate;
+- target fidelity;
+- version;
+- provenance.
 
 ---
 
@@ -286,13 +293,13 @@ $$
 \mathfrak U_{\rm propagate}
 $$
 
-執行合法：
+Executes valid:
 
-- implication；
-- obstruction propagation；
-- bridge lifting；
-- conditional closure；
-- reopening。
+- implication;
+- obstruction propagation;
+- bridge lifting;
+- conditional closure;
+- reopening.
 
 ---
 
@@ -302,7 +309,7 @@ $$
 \mathfrak U_{\rm rebuild}
 $$
 
-重新計算：
+Recomputes:
 
 $$
 \partial^\ast,
@@ -320,15 +327,15 @@ $$
 
 # 11. Event Validity
 
-若：
+If:
 
 $$
 \mathsf{Validate}(e_t)=\mathsf{FAIL},
 $$
 
-則事件不得直接改變 theorem-level status。
+then the event must not directly change the theorem-level status.
 
-可進：
+It may enter:
 
 $$
 \mathsf{QUARANTINED}.
@@ -338,13 +345,13 @@ $$
 
 # 12. Quarantined Event
 
-一個未完成驗證的事件可存在於 ledger，但不進 active closure state。
+An event that has not completed validation may exist in the ledger, but does not enter the active closure state.
 
 ---
 
 # 13. Evidence Monotonicity
 
-歷史 evidence ledger 滿足：
+The historical evidence ledger satisfies:
 
 $$
 \boxed{
@@ -354,13 +361,13 @@ $$
 }
 $$
 
-舊事件不刪除。
+Old events are not deleted.
 
 ---
 
 # 14. Status Nonmonotonicity
 
-但：
+However:
 
 $$
 \boxed{
@@ -370,7 +377,7 @@ $$
 }
 $$
 
-不是一般單調關係。
+is not a general monotonic relationship.
 
 ---
 
@@ -382,13 +389,13 @@ $$
 \mathsf{REOPENED}
 $$
 
-可因 representation change 發生。
+Can occur due to a representation change.
 
 ---
 
 # 16. Example: CLOSED to STALE
 
-若 closure 依賴 theorem $T$，而 $T$ 被修訂：
+If a closure depends on theorem $T$, and $T$ is revised:
 
 $$
 \mathsf{CLOSED}^{+}
@@ -400,7 +407,7 @@ $$
 
 # 17. Example: CONDITIONAL to CLOSED
 
-若 assumption debt 被清償：
+If an assumption debt is discharged:
 
 $$
 \mathsf{CONDITIONAL}
@@ -412,7 +419,7 @@ $$
 
 # 18. Example: OPEN to CLOSED Negative
 
-若 counterexample 出現：
+If a counterexample appears:
 
 $$
 \mathsf{OPEN}
@@ -424,7 +431,7 @@ $$
 
 # 19. Closure Schedule
 
-對事件序列：
+For an event sequence:
 
 $$
 \Sigma
@@ -432,7 +439,7 @@ $$
 (e_1,e_2,\ldots,e_n)
 $$
 
-定義 closure schedule。
+define the closure schedule.
 
 ---
 
@@ -455,7 +462,7 @@ $$
 
 # 21. Event Commutation
 
-若：
+If:
 
 $$
 \mathfrak U_{e_i}
@@ -467,7 +474,7 @@ $$
 \mathfrak U_{e_i},
 $$
 
-稱：
+we say:
 
 $$
 e_i\parallel e_j.
@@ -477,13 +484,13 @@ $$
 
 # 22. Noncommuting Events
 
-若不相等，則事件順序會改變 intermediate closure state。
+If they are not equal, the event order will change the intermediate closure state.
 
 ---
 
 # 23. Strong Schedule Independence
 
-若所有 permutation $\pi$ 都有：
+If for all permutations $\pi$ we have:
 
 $$
 \mathfrak C_n^{\Sigma}
@@ -491,13 +498,13 @@ $$
 \mathfrak C_n^{\pi(\Sigma)},
 $$
 
-稱 strong schedule independence。
+this is called strong schedule independence.
 
 ---
 
 # 24. Weak Schedule Independence
 
-若最終 quotient-equivalent：
+If they are ultimately quotient-equivalent:
 
 $$
 \mathfrak C_n^{\Sigma}
@@ -505,48 +512,48 @@ $$
 \mathfrak C_n^{\pi(\Sigma)},
 $$
 
-稱 weak schedule independence。
+this is called weak schedule independence.
 
 ---
 
 # 25. Schedule Dependence
 
-若不同順序導致：
+If different orders lead to:
 
-- frontier 不同；
-- debt 不同；
-- active obstruction 不同；
-- reopening 狀態不同；
+- different frontiers;
+- different debts;
+- different active obstructions;
+- different reopening states;
 
-則 closure dynamics 有 schedule dependence。
+then the closure dynamics exhibit schedule dependence.
 
 ---
 
 # 26. Why Schedule Matters
 
-例如：
+For example:
 
-1. 先 quotient merge；
-2. 再加入 obstruction；
+1. First quotient merge;
+2. Then add obstruction;
 
-與：
+versus:
 
-1. 先加入 obstruction；
-2. 後 quotient split；
+1. First add obstruction;
+2. Then quotient split;
 
-可能產生不同 propagation history。
+may produce different propagation histories.
 
 ---
 
 # 27. Closure Hysteresis
 
-若同一最終 evidence set：
+If the same final evidence set:
 
 $$
 E^\star
 $$
 
-因不同 history 產生不同 active closure state：
+produces different active closure states due to different histories:
 
 $$
 \mathfrak C^\star_1
@@ -554,7 +561,7 @@ $$
 \mathfrak C^\star_2,
 $$
 
-稱：
+this is called:
 
 $$
 \boxed{
@@ -564,7 +571,7 @@ $$
 
 ---
 
-# 28. Hysteresis 不代表 Truth Ambiguity
+# 28. Hysteresis Does Not Imply Truth Ambiguity
 
 $$
 \boxed{
@@ -574,26 +581,26 @@ $$
 }
 $$
 
-它是研究狀態的歷史依賴。
+It is the historical dependence of the research state.
 
 ---
 
 # 29. Hysteresis Sources
 
-主要來源：
+Primary sources:
 
-- stale inheritance；
-- quotient merge/split；
-- bridge versioning；
-- scope revision；
-- hidden assumption exposure；
-- incomplete replay。
+- stale inheritance;
+- quotient merge/split;
+- bridge versioning;
+- scope revision;
+- hidden assumption exposure;
+- incomplete replay.
 
 ---
 
 # 30. Canonical Replay
 
-為降低 hysteresis，定義：
+To reduce hysteresis, define:
 
 $$
 \boxed{
@@ -605,13 +612,13 @@ $$
 }
 $$
 
-由完整 ledger 重新建 active state。
+Reconstructs the active state from the complete ledger.
 
 ---
 
 # 31. Replay Equivalence
 
-若：
+If:
 
 $$
 \mathsf{Replay}(\mathsf{Ledger}_{\le t})
@@ -619,18 +626,18 @@ $$
 \mathfrak C_t,
 $$
 
-則當前 state replay-consistent。
+then the current state is replay-consistent.
 
 ---
 
 # 32. Replay Failure
 
-若不相等，表示：
+If they are not equal, it indicates:
 
-- hidden state；
-- unlogged mutation；
-- stale cache；
-- policy mismatch。
+- hidden state;
+- unlogged mutation;
+- stale cache;
+- policy mismatch.
 
 ---
 
@@ -662,7 +669,7 @@ $$
 
 # 35. Local Reopening
 
-若只影響單一 route：
+If it only affects a single route:
 
 $$
 R
@@ -674,25 +681,25 @@ $$
 
 # 36. Reopening Cone
 
-若某 assumption $A$ 被撤銷，所有依賴：
+If an assumption $A$ is revoked, all closure events depending on:
 
 $$
 A\leadsto R
 $$
 
-的 closure events 形成 reopening cone。
+form a reopening cone.
 
 ---
 
 # 37. Reopening Wave
 
-若：
+If:
 
 $$
 |\mathsf{Cone}(A)|\gg1,
 $$
 
-一次 revision 可造成：
+a single revision can cause a:
 
 $$
 \boxed{
@@ -717,7 +724,7 @@ $$
 
 # 39. Reopening Risk
 
-對某 assumption / bridge / cut：
+For a given assumption / bridge / cut:
 
 $$
 \boxed{
@@ -729,13 +736,13 @@ W_{\rm reopen}(x).
 }
 $$
 
-這只是研究風險指標，不是機率真值。
+This is merely a research risk indicator, not a probabilistic truth value.
 
 ---
 
 # 40. Debt State
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -774,31 +781,31 @@ $$
 e_{\rm discharge}(d)
 $$
 
-必須帶 discharge certificate。
+Must carry a discharge certificate.
 
 ---
 
 # 43. Debt Transfer
 
-若 claim $B$ 依賴 $A$：
+If claim $B$ depends on $A$:
 
 $$
 A\Rightarrow B,
 $$
 
-且 $A$ 有 debt，則 debt 可以沿 dependency 傳遞。
+and $A$ has debt, then the debt can propagate along the dependency.
 
 ---
 
 # 44. Debt Absorption
 
-某些 theorem $T$ 可一次清償多個 downstream debt。
+Certain theorems $T$ can discharge multiple downstream debts at once.
 
 ---
 
 # 45. Debt Refinement
 
-一個粗 debt 可拆：
+A coarse debt can be split:
 
 $$
 d
@@ -806,13 +813,13 @@ d
 \{d_1,\ldots,d_k\}.
 $$
 
-這可能使 debt count 增加，但 fidelity 提高。
+This may increase the debt count, but it improves fidelity.
 
 ---
 
 # 46. Debt Compression
 
-若多個 debt 經 audit 屬同一 root cause，可 quotient。
+If multiple debts are audited to share the same root cause, they can be quotiented.
 
 ---
 
@@ -828,7 +835,7 @@ $$
 
 ---
 
-# 48. Debt Mass 不等於 Distance to Proof
+# 48. Debt Mass Does Not Equal Distance to Proof
 
 $$
 M_D
@@ -840,7 +847,7 @@ $$
 
 # 49. Frontier Drift
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -856,7 +863,7 @@ $$
 
 # 50. Positive Drift
 
-新增 frontier class：
+Newly added frontier classes:
 
 $$
 \partial_{t+1}^\ast
@@ -868,7 +875,7 @@ $$
 
 # 51. Negative Drift
 
-被關閉 frontier class：
+Closed frontier classes:
 
 $$
 \partial_t^\ast
@@ -880,7 +887,7 @@ $$
 
 # 52. Reopening Drift
 
-重新出現 class：
+Reappearing classes:
 
 $$
 \partial_{\rm reopen,t+1}^\ast.
@@ -890,7 +897,7 @@ $$
 
 # 53. Frontier Velocity
 
-在離散研究時間下可定義 operational：
+Under discrete research time, we can define the operational:
 
 $$
 \boxed{
@@ -910,31 +917,31 @@ a_F(t)
 v_F(t+1)-v_F(t).
 $$
 
-只作 dynamics diagnostic。
+Used only for dynamics diagnostics.
 
 ---
 
 # 55. Closure Velocity
 
-可定義已閉 mass：
+We can define the closed mass:
 
 $$
 M_{\rm closed}(t).
 $$
 
-其差分為 closure velocity。
+Its difference is the closure velocity.
 
 ---
 
 # 56. Net Progress Warning
 
-若 closure mass 增加但 false contraction 同時增加，不能稱 robust progress。
+If closure mass increases but false contraction also increases simultaneously, it cannot be called robust progress.
 
 ---
 
 # 57. Certified Progress
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -950,13 +957,13 @@ $$
 
 # 58. Local Closure Fixed Point
 
-若在固定：
+If under fixed:
 
 $$
 (D,\Gamma,\rho,\mathsf{Policy},\mathsf{TheoremBase})
 $$
 
-下：
+:
 
 $$
 \boxed{
@@ -969,13 +976,13 @@ e
 }
 $$
 
-對所有當前 admissible null updates / already-known closure operations 成立，稱 local closure fixed point。
+holds for all currently admissible null updates / already-known closure operations, it is called a local closure fixed point.
 
 ---
 
 # 59. Fixed Point Scope
 
-fixed point 必須標：
+A fixed point must be labeled with:
 
 $$
 \boxed{
@@ -985,7 +992,7 @@ $$
 
 ---
 
-# 60. Fixed Point 不等於 Truth Completion
+# 60. Fixed Point Does Not Equal Truth Completion
 
 $$
 \boxed{
@@ -997,21 +1004,21 @@ $$
 
 ---
 
-# 61. Fixed Point 不等於 Exhaustion Level 5
+# 61. Fixed Point Does Not Equal Exhaustion Level 5
 
-一個 local fixed point 可能只有：
+A local fixed point may only have:
 
 $$
 \mathsf{EXH}_1
 $$
 
-甚至只是 search saturation。
+or even just search saturation.
 
 ---
 
 # 62. Fixed Point Certificate
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -1025,7 +1032,7 @@ $$
 
 # 63. Fixed Point Invalidation
 
-若 theorem base 改變：
+If the theorem base changes:
 
 $$
 \mathsf{FPCert}^{(\nu)}
@@ -1037,7 +1044,7 @@ $$
 
 # 64. Relative Equilibrium
 
-若 frontier mass、debt mass、obstruction set 在一段時間內穩定，但仍有 active OPEN nodes，稱：
+If the frontier mass, debt mass, and obstruction set remain stable over a period of time, but there are still active OPEN nodes, it is called:
 
 $$
 \boxed{
@@ -1047,15 +1054,15 @@ $$
 
 ---
 
-# 65. Equilibrium 不等於 Fixed Point
+# 65. Equilibrium Does Not Equal Fixed Point
 
-equilibrium 允許小幅事件交換與局部 reopen/close 抵消。
+Equilibrium allows for minor event commutations and local reopen/close cancellations.
 
 ---
 
 # 66. Metastable Closure
 
-若 state 長時間近似穩定，但存在少數高-risk reopening gates：
+If the state is approximately stable for a long time, but there exist a few high-risk reopening gates:
 
 $$
 \boxed{
@@ -1067,7 +1074,7 @@ $$
 
 # 67. Metastability Indicator
 
-可定義：
+Can be defined as:
 
 $$
 \mathsf{Meta}(C)
@@ -1084,7 +1091,7 @@ $$
 
 # 68. Closure Cycle
 
-若：
+If:
 
 $$
 \mathfrak C_{t+k}
@@ -1092,32 +1099,30 @@ $$
 \mathfrak C_t
 $$
 
-對某 $k>0$，且中間 states 不全同，稱 closure cycle。
+for some $k>0$, and the intermediate states are not all identical, it is called a closure cycle.
 
 ---
 
 # 69. Cycle Source
 
-可能由：
+May be caused by:
 
-- assumption alternating；
-- representation switching；
-- conflicting bridge versions；
-- unstable quotient policy；
-
-造成。
+- assumption alternating;
+- representation switching;
+- conflicting bridge versions;
+- unstable quotient policy.
 
 ---
 
-# 70. Cycle 不等於 Mathematical Periodicity
+# 70. Cycle Does Not Equal Mathematical Periodicity
 
-它只是 research-state periodicity。
+It is merely research-state periodicity.
 
 ---
 
 # 71. Closure Attractor
 
-若一族不同初始研究 histories 在固定 policy 下逐步收斂到同一 quotient-equivalent state class：
+If a family of different initial research histories gradually converges to the same quotient-equivalent state class under a fixed policy:
 
 $$
 \boxed{
@@ -1125,11 +1130,11 @@ $$
 }
 $$
 
-稱 closure attractor candidate。
+it is called a closure attractor candidate.
 
 ---
 
-# 72. Attractor 不是 Truth Attractor
+# 72. Attractor is Not Truth Attractor
 
 $$
 \boxed{
@@ -1143,29 +1148,29 @@ $$
 
 # 73. Policy-Induced Attractor
 
-不同 routing policy 可能有不同 attractor。
+Different routing policies may have different attractors.
 
 ---
 
 # 74. Representation-Induced Attractor
 
-不同 representation family 也可產生不同 stable closure basin。
+Different representation families can also produce different stable closure basins.
 
 ---
 
 # 75. Search Basin vs Closure Basin
 
-search basin 是研究行為聚集區。
+A search basin is an aggregation area of research behavior.
 
-closure basin 是 closure dynamics 下容易收斂到相似 status pattern 的 state region。
+A closure basin is a state region that easily converges to similar status patterns under closure dynamics.
 
-兩者不等價。
+The two are not equivalent.
 
 ---
 
 # 76. Closure Basin
 
-定義：
+Definition:
 
 $$
 \boxed{
@@ -1182,7 +1187,7 @@ $$
 
 # 77. Basin Escape
 
-新 representation / theorem / bridge 可使：
+A new representation / theorem / bridge can cause:
 
 $$
 \mathfrak C_t
@@ -1194,14 +1199,14 @@ $$
 
 # 78. Closure Shock
 
-若單一 event 造成大規模：
+If a single event causes large-scale:
 
-- status reversal；
-- frontier expansion；
-- debt explosion；
-- cut invalidation；
+- status reversal;
+- frontier expansion;
+- debt explosion;
+- cut invalidation;
 
-稱：
+it is called:
 
 $$
 \boxed{
@@ -1227,33 +1232,33 @@ S_{\rm shock}(e)
 }
 $$
 
-權重依研究目的。
+Weights depend on the research objective.
 
 ---
 
 # 80. Positive Shock
 
-新 theorem 大幅封閉 frontier。
+A new theorem drastically closes the frontier.
 
 ---
 
 # 81. Negative Shock
 
-新 counterexample / scope correction 大幅重開 frontier。
+A new counterexample / scope correction drastically reopens the frontier.
 
 ---
 
 # 82. Fidelity Shock
 
-有時 frontier 大幅增加是因舊模型過度簡化被修正。
+Sometimes a drastic increase in the frontier is due to the correction of an oversimplified old model.
 
-這是 epistemically positive shock。
+This is an epistemically positive shock.
 
 ---
 
 # 83. Closure Restoration
 
-shock 後重新 rebuild 得到：
+Rebuilding after a shock yields:
 
 $$
 \mathfrak C_{\rm restored}.
@@ -1269,13 +1274,13 @@ $$
 }
 $$
 
-證明所有 stale descendants 已被重新評估。
+Proves that all stale descendants have been re-evaluated.
 
 ---
 
 # 85. Partial Restoration
 
-若仍有 descendants 未 audit：
+If there are still unaudited descendants:
 
 $$
 \mathsf{PARTIAL\_RESTORE}.
@@ -1285,7 +1290,7 @@ $$
 
 # 86. Closure Memory
 
-CSM 要求：
+CSM requires:
 
 $$
 \boxed{
@@ -1293,7 +1298,7 @@ $$
 }
 $$
 
-不是只保存最新 closure graph。
+It does not merely save the latest closure graph.
 
 ---
 
@@ -1303,27 +1308,27 @@ $$
 \mathsf{Snapshot}(\nu)
 $$
 
-保存某版本的：
+Saves a specific version of the:
 
-- graph；
-- frontier；
-- debt；
-- status；
-- active certs。
+- graph;
+- frontier;
+- debt;
+- status;
+- active certs.
 
 ---
 
-# 88. Snapshot 不取代 Ledger
+# 88. Snapshot Does Not Replace Ledger
 
-snapshot 只加速恢復。
+Snapshots only accelerate restoration.
 
-canonical history 仍是 event ledger。
+The canonical history remains the event ledger.
 
 ---
 
 # 89. Closure Diff
 
-版本間：
+Between versions:
 
 $$
 \boxed{
@@ -1331,28 +1336,28 @@ $$
 }
 $$
 
-至少包含：
+contains at least:
 
-- added nodes；
-- removed active nodes；
-- status changes；
-- reopened routes；
-- stale certs；
-- debt changes；
-- cut changes；
-- frontier changes。
+- added nodes;
+- removed active nodes;
+- status changes;
+- reopened routes;
+- stale certs;
+- debt changes;
+- cut changes;
+- frontier changes.
 
 ---
 
 # 90. Dynamic Cut
 
-Paper 03 的 cut：
+The cut in Paper 03:
 
 $$
 C_t.
 $$
 
-現在是時間索引。
+is now time-indexed.
 
 ---
 
@@ -1368,19 +1373,19 @@ $$
 
 # 92. Cut Persistence
 
-若：
+If:
 
 $$
 C_t=C_{t+k}
 $$
 
-長期維持，可定義 persistence score。
+is maintained long-term, a persistence score can be defined.
 
 ---
 
-# 93. Persistent Cut 不等於 Necessary Cut
+# 93. Persistent Cut Does Not Equal Necessary Cut
 
-即使多版本穩定，也不自動變成 absolute theorem necessity。
+Even if stable across multiple versions, it does not automatically become an absolute theorem necessity.
 
 ---
 
@@ -1390,13 +1395,13 @@ $$
 \mathcal O_t^{\rm cover}.
 $$
 
-新 theorem 可能擴大或縮小 cover。
+A new theorem may expand or shrink the cover.
 
 ---
 
 # 95. Cover Failure Event
 
-若某 route reopen 且不再受任何 active obstruction：
+If a route reopens and is no longer subject to any active obstruction:
 
 $$
 \mathsf{CoverCert}
@@ -1412,13 +1417,13 @@ $$
 \mathsf{EXH}_{k,t}.
 $$
 
-exhaustion level 也可下降。
+The exhaustion level can also downgrade.
 
 ---
 
 # 97. Exhaustion Downgrade
 
-例如：
+For example:
 
 $$
 \mathsf{EXH}_3
@@ -1426,13 +1431,13 @@ $$
 \mathsf{EXH}_2
 $$
 
-若 parent bridge 失效。
+if the parent bridge becomes invalid.
 
 ---
 
 # 98. Exhaustion Upgrade
 
-例如：
+For example:
 
 $$
 \mathsf{EXH}_1
@@ -1440,21 +1445,21 @@ $$
 \mathsf{EXH}_2
 $$
 
-若 route completeness 得證。
+if route completeness is proven.
 
 ---
 
 # 99. Exhaustion Hysteresis
 
-不同 audit history 可能暫時給不同 exhaustion level。
+Different audit histories may temporarily yield different exhaustion levels.
 
-canonical replay 應嘗試消除此差異。
+Canonical replay should attempt to eliminate this discrepancy.
 
 ---
 
 # 100. Dynamic Parent Bridge
 
-ParentBridgeCert 也有版本：
+ParentBridgeCert also has versions:
 
 $$
 \mathsf{ParentBridgeCert}^{(\nu)}.
@@ -1464,43 +1469,43 @@ $$
 
 # 101. Bridge Revision
 
-若 bridge 被限縮，所有透過該 bridge 的 closure inference 進入 stale audit。
+If a bridge is narrowed, all closure inferences through that bridge enter stale audit.
 
 ---
 
 # 102. Bridge Expansion
 
-若 bridge scope 擴大，可新生成合法 route / closure propagation。
+If a bridge scope is expanded, new valid routes / closure propagations can be generated.
 
 ---
 
 # 103. Representation Dynamics
 
-representation family：
+representation family:
 
 $$
 \mathcal P_t.
 $$
 
-新 representation 可能增加 frontier。
+A new representation may increase the frontier.
 
 ---
 
 # 104. Representation Retirement
 
-舊 representation 可不再 active，但不能刪除歷史 evidence。
+An old representation may no longer be active, but historical evidence cannot be deleted.
 
 ---
 
 # 105. Representation Equivalence Revision
 
-若：
+If:
 
 $$
 \rho_1\sim\rho_2
 $$
 
-後來被證明過度合併，需 quotient split。
+is later proven to be over-merged, a quotient split is required.
 
 ---
 
@@ -1510,51 +1515,51 @@ $$
 e_{\rm qsplit}
 $$
 
-可能造成 frontier expansion。
+May cause frontier expansion.
 
 ---
 
 # 107. Quotient Merge Event
 
-若兩 route 被證明等價，可 frontier contraction。
+If two routes are proven equivalent, it allows for frontier contraction.
 
 ---
 
-# 108. Quotient Merge 必須可逆歷史
+# 108. Quotient Merge Must Be Historically Reversible
 
-merge 後仍保留兩條 search histories。
+Both search histories are retained after the merge.
 
 ---
 
 # 109. Scope Dynamics
 
-scope contract：
+scope contract:
 
 $$
 D_t.
 $$
 
-擴張 scope 往往增加 frontier。
+Expanding the scope often increases the frontier.
 
 ---
 
 # 110. Scope Narrowing
 
-scope narrowing 可讓 theorem 更容易 closed，但不能被誤報成 stronger global result。
+Scope narrowing can make a theorem easier to close, but it must not be falsely reported as a stronger global result.
 
 ---
 
 # 111. Scope Reversion
 
-若 scope 修正回舊版本，舊 closure cert 也不能自動恢復，需 revalidation。
+If the scope is reverted to an old version, old closure certs cannot be automatically restored and require revalidation.
 
 ---
 
 # 112. Closure Inertia
 
-若某 status 因大量 downstream dependencies 被廣泛使用，系統可能對其 revision 有高重建成本。
+If a status is widely used due to a large number of downstream dependencies, the system may have a high reconstruction cost for its revision.
 
-定義 operational：
+Define the operational:
 
 $$
 I_{\rm Cl}(v).
@@ -1562,7 +1567,7 @@ $$
 
 ---
 
-# 113. Inertia 不代表 Truth Confidence
+# 113. Inertia Does Not Imply Truth Confidence
 
 $$
 \boxed{
@@ -1576,7 +1581,7 @@ $$
 
 # 114. Closure Fragility
 
-若少數 assumptions 一失效就造成大 reopening wave，稱高 fragility。
+If the invalidation of a few assumptions causes a massive reopening wave, it is called high fragility.
 
 ---
 
@@ -1595,14 +1600,14 @@ $$
 
 # 116. Robust Closure
 
-若 closure conclusion 對：
+If the closure conclusion remains stable against:
 
-- representation change；
-- scope-preserving rewrite；
-- proof route perturbation；
-- theorem-base equivalent replacement；
+- representation change;
+- scope-preserving rewrite;
+- proof route perturbation;
+- theorem-base equivalent replacement;
 
-保持 stable，可稱 robust relative closure。
+it can be called a robust relative closure.
 
 ---
 
@@ -1614,13 +1619,13 @@ $$
 }
 $$
 
-仍是 relative。
+It remains relative.
 
 ---
 
 # 118. Dynamic Relative-Global Gate
 
-任何從 local closure 升格 global closure 的 promotion 必須在當前版本重新驗證：
+Any promotion from local closure to global closure must be revalidated in the current version:
 
 $$
 \mathsf{GPCert}_t.
@@ -1634,25 +1639,25 @@ $$
 \mathsf{RCCert}_t
 $$
 
-會因 route grammar 擴張而 stale。
+Will become stale due to route grammar expansion.
 
 ---
 
 # 120. Grammar Expansion
 
-若：
+If:
 
 $$
 \Gamma_t\subsetneq\Gamma_{t+1},
 $$
 
-則舊：
+then the old:
 
 $$
 \mathsf{EXH}_2^{\Gamma_t}
 $$
 
-不得直接轉成：
+must not be directly converted to:
 
 $$
 \mathsf{EXH}_2^{\Gamma_{t+1}}.
@@ -1662,19 +1667,19 @@ $$
 
 # 121. Grammar Contraction
 
-若 route grammar 被證明包含非法 route classes，可收縮，但必須記錄理由。
+If the route grammar is proven to contain invalid route classes, it can be contracted, but the reason must be recorded.
 
 ---
 
 # 122. Closure Fixed-Point Family
 
-不同：
+Different:
 
 $$
 (D,\Gamma,\rho,\mathsf{Policy})
 $$
 
-可有不同 fixed point：
+can have different fixed points:
 
 $$
 \mathfrak C^\star_{D,\Gamma,\rho,\mathsf{Policy}}.
@@ -1684,7 +1689,7 @@ $$
 
 # 123. Fixed-Point Comparison
 
-可比較：
+We can compare:
 
 $$
 \mathfrak C^\star_1
@@ -1692,19 +1697,19 @@ $$
 \mathfrak C^\star_2
 $$
 
-若第二者處理更廣 scope / grammar 且保持第一者 closure conclusions。
+if the latter handles a broader scope / grammar while preserving the closure conclusions of the former.
 
 ---
 
-# 124. Fixed-Point Dominance 不等於 Ontological Superiority
+# 124. Fixed-Point Dominance Does Not Equal Ontological Superiority
 
-更廣 closure state 只代表更廣 audit coverage。
+A broader closure state merely represents broader audit coverage.
 
 ---
 
 # 125. Relative Stable Core
 
-跨多個 policies 都保留相同 status 的節點集合：
+The set of nodes that retain the same status across multiple policies:
 
 $$
 \boxed{
@@ -1719,15 +1724,15 @@ $$
 
 # 126. Stable Core Candidate
 
-它可作為高價值 theorem / obstruction 集合。
+It can serve as a high-value theorem / obstruction set.
 
-但仍需各自 theorem-level verification。
+But it still requires individual theorem-level verification.
 
 ---
 
 # 127. Closure Consensus
 
-多個 independent closure reconstructions 若收斂：
+If multiple independent closure reconstructions converge:
 
 $$
 \mathfrak C_1^\star
@@ -1737,11 +1742,11 @@ $$
 \mathfrak C_m^\star,
 $$
 
-可提高 operational robustness。
+it can improve operational robustness.
 
 ---
 
-# 128. Consensus 不等於 Truth
+# 128. Consensus Does Not Equal Truth
 
 $$
 \boxed{
@@ -1755,27 +1760,25 @@ $$
 
 # 129. Dynamic Research Routing
 
-定義 routing policy：
+Define the routing policy:
 
 $$
 \Pi_t.
 $$
 
-它根據：
+It selects the next research action based on:
 
-- frontier mass；
-- cut centrality；
-- debt；
-- reopen risk；
-- survivor concentration；
-
-選下一個研究 action。
+- frontier mass;
+- cut centrality;
+- debt;
+- reopen risk;
+- survivor concentration.
 
 ---
 
 # 130. Routing Objective
 
-可定義：
+Can be defined as:
 
 $$
 \boxed{
@@ -1791,55 +1794,53 @@ J(\Pi)
 }
 $$
 
-僅為 operational objective。
+This is purely an operational objective.
 
 ---
 
-# 131. Routing 不等於 Proof Search Completeness
+# 131. Routing Does Not Equal Proof Search Completeness
 
-最優 routing 也不保證找到 proof。
+Even optimal routing does not guarantee finding a proof.
 
 ---
 
 # 132. Exploration Event
 
-若選擇新 representation / new domain bridge，屬 exploration。
+Selecting a new representation / new domain bridge belongs to exploration.
 
 ---
 
 # 133. Exploitation Event
 
-若對高-centrality cut 直接證明 lemma，屬 exploitation。
+Directly proving a lemma for a high-centrality cut belongs to exploitation.
 
 ---
 
 # 134. Dynamic Balance
 
-CSM routing 需要在：
+CSM routing requires a balance between:
 
 $$
 \text{frontier contraction}
 $$
 
-與：
+and:
 
 $$
 \text{frontier fidelity expansion}
 $$
 
-之間平衡。
-
 ---
 
 # 135. Closure Deadlock
 
-若：
+If:
 
-- frontier 非空；
-- debt 非空；
-- 所有目前 admissible actions 都不能改變 state；
+- the frontier is non-empty;
+- the debt is non-empty;
+- all currently admissible actions cannot change the state;
 
-稱：
+it is called:
 
 $$
 \boxed{
@@ -1849,7 +1850,7 @@ $$
 
 ---
 
-# 136. Deadlock 不等於 Unprovability
+# 136. Deadlock Does Not Equal Unprovability
 
 $$
 \boxed{
@@ -1863,65 +1864,63 @@ $$
 
 # 137. Deadlock Escape
 
-可能透過：
+Escape may be achieved through:
 
-- new theorem base；
-- new representation；
-- stronger prover；
-- scope re-analysis；
-- external bridge；
-
-逃離。
+- new theorem base;
+- new representation;
+- stronger prover;
+- scope re-analysis;
+- external bridge.
 
 ---
 
 # 138. Closure Stagnation
 
-若長期：
+If for a long period:
 
 $$
 \Delta M_{\partial}\approx0
 $$
 
-且無新 fidelity gain，稱 stagnation。
+and there is no new fidelity gain, it is called stagnation.
 
 ---
 
 # 139. Stagnation vs Equilibrium
 
-equilibrium 是結構穩定狀態描述。
+Equilibrium is a description of a structurally stable state.
 
-stagnation 是研究產出診斷。
+Stagnation is a diagnostic of research output.
 
 ---
 
 # 140. Closure Phase Transition
 
-若單一 theorem / bridge 造成：
+If a single theorem / bridge causes:
 
 $$
 M_{\partial}
 $$
 
-或：
+or:
 
 $$
 M_D
 $$
 
-跨越結構性門檻，可稱 operational phase transition。
+to cross a structural threshold, it can be called an operational phase transition.
 
 ---
 
-# 141. Phase Transition 不等於 Physical Phase Transition
+# 141. Phase Transition Does Not Equal Physical Phase Transition
 
-只是 proof-space dynamics 類比術語。
+It is merely an analogous term for proof-space dynamics.
 
 ---
 
 # 142. NS Dynamic Closure State
 
-Navier--Stokes 實例：
+Navier--Stokes instance:
 
 $$
 \boxed{
@@ -1933,22 +1932,22 @@ $$
 
 # 143. NS Historical Events
 
-過去每一篇 C1--C6、X72、DCRP 等文件可抽成：
+Every past document such as C1--C6, X72, DCRP, etc., can be extracted into:
 
-- claim events；
-- obstruction events；
-- survivor events；
-- scope revisions；
-- bridge events；
-- reopening candidates。
+- claim events;
+- obstruction events;
+- survivor events;
+- scope revisions;
+- bridge events;
+- reopening candidates.
 
 ---
 
 # 144. NS NO-GO as Event
 
-一個 `NO-GO` 文件不是永久 global fact。
+A `NO-GO` document is not a permanent global fact.
 
-它形成：
+It forms:
 
 $$
 e_t^{\rm obs}
@@ -1960,31 +1959,31 @@ $$
 
 # 145. NS Survivor as Event
 
-`SURVIVOR` 形成：
+`SURVIVOR` forms:
 
 $$
 e_t^{\rm survivor}
 $$
 
-使 frontier class 保持 OPEN。
+keeping the frontier class OPEN.
 
 ---
 
 # 146. NS STOP as Frontier Event
 
-`STOP-D105` 類標記形成：
+`STOP-D105` type markers form:
 
 $$
 e_t^{\rm frontier}
 $$
 
-而不是 failure terminal。
+rather than a failure terminal.
 
 ---
 
 # 147. NS Cross-Series Bridge Event
 
-若未來證明：
+If it is proven in the future that:
 
 $$
 O_{\rm X72}
@@ -1992,32 +1991,32 @@ O_{\rm X72}
 O_{\rm DCRP},
 $$
 
-則加入 quotient merge / bridge event。
+then a quotient merge / bridge event is added.
 
 ---
 
 # 148. NS Reopening Wave Example
 
-若某高-centrality assumption 被證明只在 narrower scope 成立，則所有依賴它的：
+If a high-centrality assumption is proven to hold only in a narrower scope, then all its dependent:
 
-- C5；
-- C6；
-- DCRP；
+- C5;
+- C6;
+- DCRP;
 
-descendants 需批次 reopen audit。
+descendants require a batch reopen audit.
 
 ---
 
 # 149. NS Fixed Point
 
-若在目前：
+If under the current:
 
-- corpus；
-- theorem base；
-- route grammar；
-- representation policy；
+- corpus;
+- theorem base;
+- route grammar;
+- representation policy;
 
-下沒有新 status 變化，最多得到：
+there are no new status changes, we obtain at most:
 
 $$
 \boxed{
@@ -2041,21 +2040,21 @@ $$
 
 # 151. NS Metastable Closure
 
-如果大部分 routes 穩定，但少數 key bridge / ancient-profile / representation debt 可能造成大 reopen wave，則更合理稱 metastable。
+If most routes are stable, but a few key bridges / ancient-profiles / representation debts could cause a massive reopen wave, it is more reasonable to call it metastable.
 
 ---
 
 # 152. NS Closure Shock
 
-若新的 external theorem 一次排除或重開大量 survivor classes，則為 closure shock。
+If a new external theorem simultaneously eliminates or reopens a large number of survivor classes, it constitutes a closure shock.
 
 ---
 
 # 153. NS Dynamic Research Goal
 
-第一階段不是最小化 paper count。
+The first stage is not to minimize the paper count.
 
-而是：
+Rather, it is to:
 
 $$
 \boxed{
@@ -2087,18 +2086,18 @@ $$
 
 # 155. Runtime Implication
 
-CSM runtime 必須能：
+The CSM runtime must be able to:
 
-1. append event；
-2. validate；
-3. propagate；
-4. mark stale；
-5. reopen；
-6. recompute frontier；
-7. recompute cuts/covers；
-8. replay；
-9. diff versions；
-10. export certificates。
+1. append event;
+2. validate;
+3. propagate;
+4. mark stale;
+5. reopen;
+6. recompute frontier;
+7. recompute cuts/covers;
+8. replay;
+9. diff versions;
+10. export certificates.
 
 ---
 
@@ -2199,75 +2198,75 @@ closure_diff:
 
 # 161. Validation Scenario A — Monotone evidence, nonmonotone status
 
-新增 theorem 後，舊 BLOCKED route REOPENED。
+After adding a theorem, an old BLOCKED route is REOPENED.
 
-ledger 必增長，status 可逆。
+The ledger must grow, but the status is reversible.
 
 ---
 
 # 162. Validation Scenario B — Schedule commutation
 
-兩個 independent theorem events 若作用不同 components，應 commute。
+Two independent theorem events should commute if they act on different components.
 
 ---
 
 # 163. Validation Scenario C — Schedule dependence
 
-quotient merge 與 obstruction propagation 先後不同，若產生不同 intermediate state，必記 schedule dependence。
+If quotient merge and obstruction propagation occur in different orders and produce different intermediate states, schedule dependence must be recorded.
 
 ---
 
 # 164. Validation Scenario D — Replay consistency
 
-從完整 ledger 重建 state，hash 應等於 active state hash。
+Reconstructing the state from the complete ledger should yield a hash equal to the active state hash.
 
 ---
 
 # 165. Validation Scenario E — Debt discharge
 
-bridge debt 被證明後，CONDITIONAL claim 可升 CLOSED positive。
+After a bridge debt is proven, a CONDITIONAL claim can be promoted to CLOSED positive.
 
 ---
 
 # 166. Validation Scenario F — Reopening wave
 
-一個 common assumption 被撤銷，所有 dependent blocked routes 進 reopen audit。
+A common assumption is revoked, and all dependent blocked routes enter a reopen audit.
 
 ---
 
 # 167. Validation Scenario G — Fixed point
 
-在固定 policy 下無 active closure changes，可標 relative fixed point。
+With no active closure changes under a fixed policy, it can be labeled a relative fixed point.
 
 ---
 
 # 168. Validation Scenario H — Fixed point invalidation
 
-新增 representation family 後舊 FPCert 進 STALE。
+After adding a representation family, the old FPCert enters STALE.
 
 ---
 
 # 169. Validation Scenario I — Metastable state
 
-frontier mass穩定但 reopen risk 高，不得稱 robust fixed point。
+If the frontier mass is stable but the reopen risk is high, it must not be called a robust fixed point.
 
 ---
 
 # 170. Validation Scenario J — Exhaustion downgrade
 
-ParentBridgeCert 失效，EXH3 降 EXH2。
+ParentBridgeCert becomes invalid, and EXH3 downgrades to EXH2.
 
 ---
 
 # 171. Validation Scenario K — NS NO-GO revision
 
-若某 NS NO-GO scope 被限縮，cross-series descendants 必 re-audit。
+If an NS NO-GO scope is narrowed, cross-series descendants must be re-audited.
 
 ---
 
 # 172. Validation Scenario L — NS relative fixed point
 
-即使目前 corpus 不再產生新 route，也只能標 relative closure fixed point，不得宣稱 NS solved。
+Even if the current corpus no longer generates new routes, it can only be labeled a relative closure fixed point; it must not be claimed that NS is solved.
 
 ---
 
@@ -2355,11 +2354,11 @@ $$
 
 ---
 
-# 180. Paper 04 核心命題一
+# 180. Paper 04 Core Proposition I
 
 ## Event-Replay Principle
 
-若所有 theorem-level state mutations 都 event-sourced，且 update rules deterministic under fixed policy，則：
+If all theorem-level state mutations are event-sourced, and the update rules are deterministic under a fixed policy, then:
 
 $$
 \boxed{
@@ -2375,86 +2374,86 @@ $$
 
 ---
 
-# 181. Paper 04 核心命題二
+# 181. Paper 04 Core Proposition II
 
 ## Relative Fixed-Point Principle
 
-在固定：
+Under fixed:
 
 $$
 (D,\Gamma,\rho,\mathsf{Policy},\mathsf{TheoremBase})
 $$
 
-下，若所有 active closure operations 不再改變 state，則可宣告 relative closure fixed point。
+if all active closure operations no longer change the state, a relative closure fixed point can be declared.
 
-不能宣告 absolute completeness。
+Absolute completeness cannot be declared.
 
 ---
 
-# 182. Paper 04 核心命題三
+# 182. Paper 04 Core Proposition III
 
 ## Reopening Wave Principle
 
-若一個被多 route 共用的 closure premise $A$ 被 invalidated，則所有依賴其 closure inheritance 的 descendants 都必進 stale / reopen audit。
+If a closure premise $A$ shared by multiple routes is invalidated, then all descendants relying on its closure inheritance must enter a stale / reopen audit.
 
 ---
 
-# 183. Paper 04 核心命題四
+# 183. Paper 04 Core Proposition IV
 
 ## Dynamic Exhaustion Principle
 
-任何 exhaustion certificate 都是 versioned object；route grammar、scope、representation family、bridge set 或 theorem base 改變時，舊 exhaustion 必重新驗證。
+Any exhaustion certificate is a versioned object; when the route grammar, scope, representation family, bridge set, or theorem base changes, the old exhaustion must be revalidated.
 
 ---
 
-# 184. Paper 04 核心命題五
+# 184. Paper 04 Core Proposition V
 
 ## Closure Hysteresis Control Principle
 
-若 canonical replay 對同一 ledger 與同一 policy 產生唯一 state，則可把 history-induced active-state divergence 限縮為 policy / logging / validation defect，而不是數學 truth divergence。
+If canonical replay produces a unique state for the same ledger and the same policy, then history-induced active-state divergence can be constrained to a policy / logging / validation defect, rather than a mathematical truth divergence.
 
 ---
 
-# 185. CSM 與動態不動點觀念
+# 185. CSM and the Concept of Dynamic Fixed Points
 
-本文使用 fixed-point language，但只表示 closure-state stability。
+This paper uses fixed-point language, but it only denotes closure-state stability.
 
-它不把所有數學真理等同於 dynamic fixed point。
-
----
-
-# 186. CSM 與 UCT
-
-UCT 的：
-
-- ledger；
-- bridge；
-- debt；
-- relative-global gate；
-
-在本文轉成 versioned dynamic closure machinery。
+It does not equate all mathematical truth with dynamic fixed points.
 
 ---
 
-# 187. CSM 與 LSI-PSD
+# 186. CSM and UCT
 
-LSI-PSD 強調長程 research history、basin、obstruction confluence。
+UCT's:
 
-本文把 research history 轉成 event-sourced closure dynamics。
+- ledger;
+- bridge;
+- debt;
+- relative-global gate;
 
----
-
-# 188. CSM 與軟體 event sourcing
-
-CSM 借用 event-sourced state reconstruction 的工程模式。
-
-本文不主張 event sourcing 本身是新的數學概念。
+are transformed into versioned dynamic closure machinery in this paper.
 
 ---
 
-# 189. CSM 的新增研究焦點
+# 187. CSM and LSI-PSD
 
-新焦點在：
+LSI-PSD emphasizes long-range research history, basins, and obstruction confluence.
+
+This paper transforms research history into event-sourced closure dynamics.
+
+---
+
+# 188. CSM and Software Event Sourcing
+
+CSM borrows the engineering pattern of event-sourced state reconstruction.
+
+This paper does not claim that event sourcing itself is a new mathematical concept.
+
+---
+
+# 189. CSM's New Research Focus
+
+The new focus is on:
 
 $$
 \boxed{
@@ -2472,13 +2471,13 @@ $$
 }
 $$
 
-被放入同一動態閉包框架。
+being placed into the same dynamic closure framework.
 
 ---
 
-# 190. Paper 05 路線
+# 190. Paper 05 Roadmap
 
-下一篇應處理：
+The next paper should address:
 
 $$
 \boxed{
@@ -2486,22 +2485,22 @@ $$
 }
 $$
 
-主要問題：
+Main issues:
 
-- 哪些 closure invariants 必須跨更新保存；
-- projection 是否會丟失 closure-critical information；
-- dynamic incremental projection 與 static batched projection 的差異；
-- attention / observation projection invariants；
-- closure graph 到可計算／可視化表示的編譯；
-- representation change 下的 invariant preservation。
+- which closure invariants must be preserved across updates;
+- whether projection loses closure-critical information;
+- the difference between dynamic incremental projection and static batched projection;
+- attention / observation projection invariants;
+- compilation of the closure graph into computable/visualizable representations;
+- invariant preservation under representation changes.
 
 ---
 
-# 191. 結論
+# 191. Conclusion
 
-Paper 04 將 CSM 從靜態閉包圖推進成動態閉包系統。
+Paper 04 advances CSM from a static closure graph to a dynamic closure system.
 
-核心關係為：
+The core relationship is:
 
 $$
 \boxed{
@@ -2511,7 +2510,7 @@ $$
 }
 $$
 
-但：
+However:
 
 $$
 \boxed{
@@ -2521,16 +2520,16 @@ $$
 }
 $$
 
-因此 fixed point 必須永遠帶：
+Therefore, a fixed point must always carry:
 
-- domain；
-- route grammar；
-- representation；
-- theorem base；
-- policy；
-- version。
+- domain;
+- route grammar;
+- representation;
+- theorem base;
+- policy;
+- version.
 
-同樣：
+Similarly:
 
 $$
 \boxed{
@@ -2539,9 +2538,9 @@ while closure status remains revisable}.
 }
 $$
 
-這使「封住一條路」不再意味著永遠埋葬它；而「找到一個穩定 closure state」也不再被誤寫成數學完備。
+This means that "closing a route" no longer implies burying it forever; and "finding a stable closure state" is no longer mischaracterized as mathematical completeness.
 
-CSM 的 closure space 從此具有真正的時間維度：
+The closure space of CSM henceforth possesses a true time dimension:
 
 $$
 \boxed{
@@ -2557,31 +2556,31 @@ $$
 }
 $$
 
-這正是長程數學研究實際運作的結構，也是未來 NS Relative-Global Closure Graph 必須具備的動態基礎。
+This is exactly the operational structure of long-range mathematical research, and it is the dynamic foundation that the future NS Relative-Global Closure Graph must possess.
 
 ---
 
-## 附錄 A — Paper 04 核心不變量
+## Appendix A — Paper 04 Core Invariants
 
-1. evidence ledger 單調保存；
-2. closure status 可非單調；
-3. theorem-level mutation 必須 event-sourced；
-4. reopening 不刪歷史；
-5. closure schedule 可 noncommutative；
-6. hysteresis 是 research-state history dependence，不是真值歧義；
-7. debt discharge 必須有 certificate；
-8. frontier drift 必須 versioned；
-9. fixed point 必須標 domain / grammar / representation / theorem base / policy；
-10. fixed point 不等於 absolute completeness；
-11. exhaustion certificate 可 downgrade；
-12. route grammar 擴張會使舊 completeness stale；
-13. quotient split 可造成 frontier reopening；
-14. scope expansion 通常增加 proof obligations；
-15. canonical replay 必須可重建 active state。
+1. evidence ledger is preserved monotonically;
+2. closure status can be nonmonotonic;
+3. theorem-level mutations must be event-sourced;
+4. reopening does not delete history;
+5. closure schedules can be noncommutative;
+6. hysteresis is research-state history dependence, not truth-value ambiguity;
+7. debt discharge must have a certificate;
+8. frontier drift must be versioned;
+9. fixed points must be labeled with domain / grammar / representation / theorem base / policy;
+10. fixed points do not equal absolute completeness;
+11. exhaustion certificates can downgrade;
+12. route grammar expansion makes old completeness stale;
+13. quotient splits can cause frontier reopening;
+14. scope expansion usually increases proof obligations;
+15. canonical replay must be able to reconstruct the active state.
 
 ---
 
-## 附錄 B — 系列依賴
+## Appendix B — Series Dependencies
 
 ### Paper 00
 - Relative-Global Closure Space

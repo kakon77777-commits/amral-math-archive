@@ -1,24 +1,24 @@
 # CSM Paper 01
-# 全域性型別與命題域分層
+# Globality Typing and Domain Stratification
 ## Globality Typing and Domain Stratification in Closure-Space Mathematics
 
-**版本：** v0.1  
-**日期：** 2026-08-27  
-**系列：** Closure-Space Mathematics / CSM  
-**文件地位：** 全域性型別論文 / Domain and Quantifier-Scope Paper  
-**Canonical source：** UTF-8 Markdown  
-**Canonical math delimiters：** `$...$` 與 `$$...$$`  
-**研究狀態：** CSM Paper 00 的直接延伸；建立 globality typing、domain stratification、scope promotion 與 cross-domain proof-transfer 規則。本文不是任何 Navier--Stokes 未解問題的完成證明。
+**Version:** v0.1  
+**Date:** 2026-08-27  
+**Series:** Closure-Space Mathematics / CSM  
+**Status:** Globality Typing Paper / Domain and Quantifier-Scope Paper  
+**Canonical source:** UTF-8 Markdown  
+**Canonical math delimiters:** `$...$` and `$$...$$`  
+**Research Status:** A direct extension of CSM Paper 00; establishes rules for globality typing, domain stratification, scope promotion, and cross-domain proof-transfer. This document is not a completed proof of any unsolved Navier--Stokes problem.
 
 ---
 
-# 摘要
+# Abstract
 
-「全域」在數學與科學敘述中經常被當成單一強度詞使用，但不同全域主張實際上可能量化於完全不同的軸：時間、空間、初始資料類、邊界條件、forcing、參數、solution notion、regularity class、方程族、表示族、形式證明制度，或物理實現域。若忽略這些差異，就容易把「對固定方程全時間成立」錯誤升格為「對整個方程族成立」，或把「形式 PDE 定理」錯誤升格為「所有物理實現都被證明」。
+"Global" is often used as a single intensity modifier in mathematical and scientific discourse, but different global claims may actually quantify over completely different axes: time, space, initial data classes, boundary conditions, forcing, parameters, solution notions, regularity classes, equation families, representation families, formal proof regimes, or physical realization domains. If these differences are ignored, it is easy to erroneously upgrade "holds for all time for a fixed equation" to "holds for the entire equation family," or to falsely elevate a "formal PDE theorem" to "all physical realizations have been proven."
 
-本文建立 Closure-Space Mathematics（CSM）的 **Globality Typing Principle**。其核心主張是：globality 不是單一布林值，也不是無條件可排序的強度，而是一個帶有量詞作用域、domain signature、solution semantics、representation 與 interpretation metadata 的 typed profile。
+This paper establishes the **Globality Typing Principle** of Closure-Space Mathematics (CSM). Its core assertion is that globality is not a single boolean value, nor is it an unconditionally sortable intensity; rather, it is a typed profile carrying a quantifier scope, domain signature, solution semantics, representation, and interpretation metadata.
 
-本文定義：
+This paper defines:
 
 $$
 \boxed{
@@ -34,14 +34,13 @@ $$
 }
 $$
 
-並以：
+And uses:
 
 $$
 \boxed{
 \mathsf{GProf}(Q)
 =
-\left
-\langle
+\left\langle
 G_t,
 G_x,
 G_{\rm data},
@@ -54,14 +53,13 @@ G_{\rm eq},
 G_{\rm rep},
 G_{\rm phys},
 G_{\rm proof}
-\right
-angle
+\right\rangle
 }
 $$
 
-表示命題的 globality profile。
+to represent the globality profile of a proposition.
 
-本文的第一個非塌縮原則是：
+The first non-collapse principle of this paper is:
 
 $$
 \boxed{
@@ -75,7 +73,7 @@ $$
 }
 $$
 
-第二個原則是：
+The second principle is:
 
 $$
 \boxed{
@@ -87,55 +85,55 @@ $$
 }
 $$
 
-第三個原則是：任何從作用域 $D_1$ 向更廣作用域 $D_2$ 的 theorem promotion，都必須攜帶一個 scope/globality promotion certificate，而不能只因兩個問題具有相似方程、相同名稱或共享局部形式就自動升格。
+The third principle is: any theorem promotion from a scope $D_1$ to a broader scope $D_2$ must carry a scope/globality promotion certificate, and cannot be automatically upgraded simply because two problems possess similar equations, identical names, or share local forms.
 
-Navier--Stokes 被用作第一個大型 domain-stratification 實例。本文將 formal/Clay mathematical NS、physical NS realization domain 與 generalized NS-like equation family 分離，並指出 Clay 題目的「global」主要是固定形式問題中的時間全域延拓與指定資料類上的全稱量化；這仍不等於 equation-family globality，也不等於 physical-realization globality。 generalized NS-like family 則必須以明確 signature 參數化，不能把所有「看起來像 NS」的系統混成單一集合。
+Navier--Stokes is used as the first large-scale domain-stratification instance. This paper separates the formal/Clay mathematical NS, the physical NS realization domain, and the generalized NS-like equation family, pointing out that the "global" in the Clay problem primarily refers to global-in-time extension within a fixed formal problem and universal quantification over a specified data class; this still does not equate to equation-family globality, nor does it equate to physical-realization globality. The generalized NS-like family must be parameterized by an explicit signature, and all systems that "look like NS" cannot be conflated into a single set.
 
-最後，本文將 globality typing 接回 CSM 的 closure-space frontier：未閉合 frontier 不只要問「哪個命題還 OPEN」，還要問「哪一個 globality axis 尚未被閉合」。因此後續 NS Relative-Global Closure Graph 不再只有 proof-route 邊界，而會包含 **scope frontier**、**family-extension frontier** 與 **interpretation frontier**。
-
----
-
-# 0. 研究地位與非主張
-
-本文不主張：
-
-1. 「global」存在唯一自然的數值強度；
-2. 所有 globality axis 可形成單一 total order；
-3. 不同 PDE、不同 solution notion 或不同 physical model 可以只靠名稱相似建立 inclusion；
-4. formal mathematical theorem 自動等同 physical truth；
-5. generalized NS-like equation family 已有唯一 canonical boundary；
-6. Clay Navier--Stokes 題目被重新定義；
-7. 本文已證明 Clay Navier--Stokes global regularity；
-8. 本文已證明任何 generalized NS-like family 的 universal regularity；
-9. physical NS realization 可以被一個單一形式模型完整覆蓋；
-10. domain stratification 本身可以取代 theorem-level proof；
-11. scope expansion certificate 一定存在；
-12. relative-global closure 等於 absolute mathematical completeness。
-
-本文只建立：
-
-- globality 的 typed quantifier semantics；
-- domain signature；
-- scope contract；
-- globality profile；
-- scope comparability 與 non-comparability；
-- scope restriction / expansion / model extension 的分離；
-- cross-domain theorem transfer 的證書條件；
-- NS 的第一版三域分層與 generalized family signature；
-- scope frontier 與 closure-space 的耦合。
+Finally, this paper connects globality typing back to the CSM closure-space frontier: an unclosed frontier must not only ask "which proposition is still OPEN," but also "which globality axis has not yet been closed." Therefore, the subsequent NS Relative-Global Closure Graph will no longer solely contain proof-route boundaries, but will include a **scope frontier**, a **family-extension frontier**, and an **interpretation frontier**.
 
 ---
 
-# 1. 為什麼「全域」不是一個詞就夠了
+# 0. Research Status and Non-Claims
 
-考慮兩個敘述：
+This paper does not claim:
 
-1. 對固定 PDE，解對所有有限時間存在；
-2. 對一整族 PDE，所有成員都具有相同性質。
+1. That "global" possesses a unique, natural numerical intensity;
+2. That all globality axes can form a single total order;
+3. That inclusion between different PDEs, different solution notions, or different physical models can be established solely by name similarity;
+4. That a formal mathematical theorem automatically equates to physical truth;
+5. That the generalized NS-like equation family already has a unique canonical boundary;
+6. That the Clay Navier--Stokes problem is being redefined;
+7. That this paper has proven Clay Navier--Stokes global regularity;
+8. That this paper has proven the universal regularity of any generalized NS-like family;
+9. That physical NS realizations can be completely covered by a single formal model;
+10. That domain stratification itself can replace theorem-level proofs;
+11. That a scope expansion certificate always exists;
+12. That relative-global closure equals absolute mathematical completeness.
 
-兩者都可能被自然語言稱為「global」，但其量詞結構完全不同。
+This paper only establishes:
 
-第一種更接近：
+- The typed quantifier semantics of globality;
+- Domain signatures;
+- Scope contracts;
+- Globality profiles;
+- Scope comparability and non-comparability;
+- The separation of scope restriction / expansion / model extension;
+- Certificate conditions for cross-domain theorem transfer;
+- The first version of the three-domain stratification for NS and the generalized family signature;
+- The coupling of the scope frontier with the closure-space.
+
+---
+
+# 1. Why "Global" is Not Enough as a Single Word
+
+Consider two statements:
+
+1. For a fixed PDE, solutions exist for all finite times;
+2. For an entire family of PDEs, all members possess the same property.
+
+Both might be referred to as "global" in natural language, but their quantifier structures are completely different.
+
+The first is closer to:
 
 $$
 \forall t\in T,
@@ -143,7 +141,7 @@ $$
 P(u,t),
 $$
 
-第二種則是：
+while the second is:
 
 $$
 \forall E\in\mathcal E,
@@ -151,7 +149,7 @@ $$
 P(E).
 $$
 
-如果再加入初始資料：
+If we also include initial data:
 
 $$
 \forall u_0\in\mathcal D,
@@ -161,15 +159,15 @@ $$
 P(E,u_0,t),
 $$
 
-其作用域又再次改變。
+its scope changes yet again.
 
-因此 CSM 將「global」從形容詞改造成 **quantifier-scope object**。
+Therefore, CSM reconstructs "global" from an adjective into a **quantifier-scope object**.
 
 ---
 
 # 2. Scope Contract
 
-對命題 $Q$，定義：
+For a proposition $Q$, define:
 
 $$
 \boxed{
@@ -185,15 +183,15 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $\mathsf{DomSig}$：方程、空間、時間、資料、邊界、forcing、參數等 domain signature；
-- $\mathsf{Quant}$：各軸量詞與 uniformity 要求；
-- $\mathsf{Sem}$：solution notion、equality / equivalence、regularity target；
-- $\mathsf{Rep}$：使用的表示與 projection；
-- $\mathsf{ProofReg}$：形式系統、admissibility、外部 theorem set 與 proof verification regime。
+- $\mathsf{DomSig}$: Domain signatures for equations, space, time, data, boundaries, forcing, parameters, etc.;
+- $\mathsf{Quant}$: Quantifiers and uniformity requirements for each axis;
+- $\mathsf{Sem}$: Solution notions, equality / equivalence, regularity targets;
+- $\mathsf{Rep}$: Representations and projections used;
+- $\mathsf{ProofReg}$: Formal systems, admissibility, external theorem sets, and proof verification regimes.
 
-若一個 theorem claim 缺失足以決定作用域的欄位，CSM 記為：
+If a theorem claim lacks sufficient fields to determine its scope, CSM denotes it as:
 
 $$
 \boxed{
@@ -205,7 +203,7 @@ $$
 
 # 3. Domain Signature
 
-第一版：
+Version 1:
 
 $$
 \boxed{
@@ -226,26 +224,26 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $\mathcal E$：equation / operator domain；
-- $\mathcal X$：spatial domain / geometry；
-- $\mathcal T$：time domain；
-- $\mathcal D$：initial / admissible data class；
-- $\mathcal S$：solution notion；
-- $\mathcal B$：boundary family；
-- $\mathcal F$：forcing family；
-- $\mathcal P$：parameter / coefficient domain；
-- $\mathcal R$：regularity / topology / norm target；
-- $\mathcal I$：interpretation / realization context。
+- $\mathcal E$: equation / operator domain;
+- $\mathcal X$: spatial domain / geometry;
+- $\mathcal T$: time domain;
+- $\mathcal D$: initial / admissible data class;
+- $\mathcal S$: solution notion;
+- $\mathcal B$: boundary family;
+- $\mathcal F$: forcing family;
+- $\mathcal P$: parameter / coefficient domain;
+- $\mathcal R$: regularity / topology / norm target;
+- $\mathcal I$: interpretation / realization context.
 
-CSM 不要求所有問題都使用全部欄位，但任何未宣告欄位不能被默認成「對所有可能情形」。
+CSM does not require all problems to use every field, but any undeclared field cannot be defaulted to "for all possible cases."
 
 ---
 
 # 4. Quantifier Envelope
 
-對每一個 axis $a$，定義：
+For each axis $a$, define:
 
 $$
 \mathsf{Quant}_a(Q)
@@ -257,23 +255,23 @@ $$
 \right\rangle.
 $$
 
-$\mathsf{Mode}_a$ 可包含：
+$\mathsf{Mode}_a$ may include:
 
-- `all`；
-- `exists`；
-- `generic`；
-- `almost-everywhere`；
-- `conditional`；
-- `asymptotic`；
-- `unknown`。
+- `all`;
+- `exists`;
+- `generic`;
+- `almost-everywhere`;
+- `conditional`;
+- `asymptotic`;
+- `unknown`.
 
-因此兩篇 theorem 即使都出現「global」一詞，只要 quantifier envelope 不同，就不能直接視為相同 claim。
+Thus, even if two theorems both use the word "global," as long as their quantifier envelopes differ, they cannot be directly treated as the same claim.
 
 ---
 
 # 5. Globality Profile
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -296,9 +294,9 @@ G_{\rm proof}
 }
 $$
 
-每個 component 不是單純的 $0/1$，而是相對宣告 domain 的 scope descriptor。
+Each component is not a simple $0/1$, but a scope descriptor relative to the declared domain.
 
-第一版 descriptor：
+Version 1 descriptors:
 
 $$
 G_a
@@ -313,21 +311,21 @@ G_a
 \}.
 $$
 
-其中：
+Where:
 
 $$
 \mathsf{FULL}_{D_a}
 $$
 
-只表示對**已宣告的** $D_a$ 全稱成立，不表示對所有可能 domain 全稱成立。
+only indicates universal validity over the **declared** $D_a$, not universal validity over all possible domains.
 
-這是本文最重要的語義限制之一。
+This is one of the most important semantic restrictions in this paper.
 
 ---
 
 # 6. Globality Typing Principle
 
-CSM 定義：
+CSM defines the:
 
 $$
 \boxed{
@@ -335,9 +333,9 @@ $$
 }
 $$
 
-任何 global claim 必須能被還原成一個有效的 $\mathsf{ScopeContract}$ 與 $\mathsf{GProf}$。
+Any global claim must be reducible to a valid $\mathsf{ScopeContract}$ and $\mathsf{GProf}$.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -363,13 +361,13 @@ $$
 }
 $$
 
-除非有額外的 typed promotion certificate。
+Unless there is an additional typed promotion certificate.
 
 ---
 
-# 7. 時間全域性
+# 7. Time Globality
 
-對固定 formal problem：
+For a fixed formal problem:
 
 $$
 Q(E,u_0):
@@ -379,85 +377,85 @@ Q(E,u_0):
 P(E,u_0,t).
 $$
 
-若：
+If:
 
 $$
 \mathcal T=[0,\infty),
 $$
 
-可稱為該 formal scope 下的 global-in-time claim。
+it can be called a global-in-time claim under that formal scope.
 
-但這不會自動改變：
+But this does not automatically change:
 
-- equation $E$；
-- data class；
-- solution notion；
-- boundary / forcing；
-- physical interpretation。
+- the equation $E$;
+- the data class;
+- the solution notion;
+- the boundary / forcing;
+- the physical interpretation.
 
-所以時間全域性只提升 $G_t$。
+Thus, time globality only elevates $G_t$.
 
 ---
 
-# 8. 空間全域性
+# 8. Spatial Globality
 
-「whole-space problem」與「所有可能 geometry」不是同一件事。
+A "whole-space problem" and "all possible geometries" are not the same thing.
 
-若固定：
+If we fix:
 
 $$
 \mathcal X=\mathbb R^d,
 $$
 
-那麼 theorem 對 $\mathbb R^d$ 的整個 spatial domain 成立，只能寫成：
+then a theorem holding for the entire spatial domain of $\mathbb R^d$ can only be written as:
 
 $$
 G_x=\mathsf{FULL}_{\mathbb R^d}.
 $$
 
-它不推出：
+It does not imply:
 
 $$
 G_x=\mathsf{FULL}_{\text{all manifolds / domains}}.
 $$
 
-因此 whole-space 是一種 spatial-domain choice，不是 geometry-family universal quantifier。
+Therefore, whole-space is a spatial-domain choice, not a geometry-family universal quantifier.
 
 ---
 
-# 9. 資料類全域性
+# 9. Data-Class Globality
 
-若 theorem 對：
+If a theorem holds for all:
 
 $$
 u_0\in\mathcal D_0
 $$
 
-全部成立，則：
+then:
 
 $$
 G_{\rm data}=\mathsf{FULL}_{\mathcal D_0}.
 $$
 
-但若：
+But if:
 
 $$
 \mathcal D_0\subsetneq\mathcal D_1,
 $$
 
-不能直接得到：
+one cannot directly obtain:
 
 $$
 \mathsf{FULL}_{\mathcal D_1}.
 $$
 
-這是典型的 scope expansion，而不是普通 theorem restatement。
+This is a typical scope expansion, not a standard theorem restatement.
 
 ---
 
 # 10. Solution-Notion Globality
 
-同一 PDE 可能具有不同 solution notion：
+The same PDE may have different solution notions:
 
 $$
 \mathcal S
@@ -472,9 +470,9 @@ $$
 \}.
 $$
 
-本文不宣稱這些 notion 在所有 PDE 上具有固定 implication hierarchy。
+This paper does not claim that these notions possess a fixed implication hierarchy across all PDEs.
 
-任何：
+Any:
 
 $$
 Q_{\mathcal S_1}
@@ -482,9 +480,9 @@ Q_{\mathcal S_1}
 Q_{\mathcal S_2}
 $$
 
-必須由指定問題中的已知 theorem 或證書建立。
+must be established by known theorems or certificates within the specified problem.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -496,55 +494,55 @@ $$
 
 ---
 
-# 11. Boundary 與 Forcing Globality
+# 11. Boundary and Forcing Globality
 
-一個 unforced theorem：
+An unforced theorem:
 
 $$
 F=0
 $$
 
-不自動升格成 forced theorem。
+does not automatically upgrade to a forced theorem.
 
-同樣：
+Similarly:
 
 $$
 \mathcal B=\text{periodic}
 $$
 
-與：
+and:
 
 $$
 \mathcal B=\text{no-slip bounded domain}
 $$
 
-是不同 domain signatures。
+are different domain signatures.
 
-因此：
+Therefore:
 
 $$
 G_{\rm force}
 $$
 
-與：
+and:
 
 $$
 G_{\rm bdry}
 $$
 
-必須獨立紀錄。
+must be recorded independently.
 
 ---
 
 # 12. Parameter Globality
 
-對參數：
+For a parameter:
 
 $$
 \lambda\in\Lambda,
 $$
 
-若 theorem 是：
+if the theorem is:
 
 $$
 \forall\lambda\in\Lambda,
@@ -552,9 +550,9 @@ $$
 P(\lambda),
 $$
 
-且 proof constant 對 $\lambda$ uniform，則可以記錄更強的 parameter-globality。
+and the proof constants are uniform with respect to $\lambda$, then a stronger parameter-globality can be recorded.
 
-但若只是逐點：
+But if it is merely pointwise:
 
 $$
 \forall\lambda,
@@ -562,7 +560,7 @@ $$
 \exists C_\lambda,
 $$
 
-與存在 uniform constant：
+it is different from the existence of a uniform constant:
 
 $$
 \exists C,
@@ -570,31 +568,27 @@ $$
 \forall\lambda
 $$
 
-不同。
-
-因此 CSM 把 **quantifier order** 視為 globality metadata 的一部分。
+Therefore, CSM treats **quantifier order** as part of the globality metadata.
 
 ---
 
 # 13. Equation-Family Globality
 
-這是本文新增的主要層。
+This is the main layer newly added in this paper.
 
-固定單一 equation：
+A theorem for a fixed single equation:
 
 $$
 E_0
 $$
 
-的 theorem，不等於對 equation family：
+is not equivalent to a theorem for an equation family:
 
 $$
 \mathcal E_{\Sigma}
 $$
 
-的 theorem。
-
-方程族必須由 signature $\Sigma$ 定義，例如：
+An equation family must be defined by a signature $\Sigma$, for example:
 
 $$
 \Sigma
@@ -611,35 +605,35 @@ $$
 \right\rangle.
 $$
 
-只有在 $\Sigma$ 已明確宣告後，
+Only after $\Sigma$ has been explicitly declared is:
 
 $$
 \mathsf{FAMILY}_{\Sigma}
 $$
 
-才是一個有意義的 globality descriptor。
+a meaningful globality descriptor.
 
 ---
 
 # 14. Representation Globality
 
-一個 proof 在 representation $\rho_1$ 中成功，不代表所有 representation 都能重建相同 proof object。
+A proof succeeding in representation $\rho_1$ does not mean the same proof object can be reconstructed in all representations.
 
-反過來，某 representation 下搜尋失敗，也不能推出所有語義等價表示皆失敗。
+Conversely, a search failure under a certain representation does not imply failure across all semantically equivalent representations.
 
-因此：
+Therefore:
 
 $$
 G_{\rm rep}
 $$
 
-主要描述：
+primarily describes:
 
-- theorem 是否 representation-independent；
-- proof certificate 是否可以跨 representation 重建；
-- search failure 是否只是 representation-local。
+- whether the theorem is representation-independent;
+- whether the proof certificate can be reconstructed across representations;
+- whether a search failure is merely representation-local.
 
-本文保留：
+This paper maintains:
 
 $$
 \boxed{
@@ -653,52 +647,52 @@ $$
 
 # 15. Proof-Regime Globality
 
-形式證明制度也是 scope。
+Formal proof regimes are also scopes.
 
-設：
+Let:
 
 $$
 \Theta_1,
 \Theta_2
 $$
 
-是不同 theorem/proof regimes。
+be different theorem/proof regimes.
 
-在：
+That:
 
 $$
 \Theta_1\vdash Q
 $$
 
-成立，不等於：
+holds does not equate to:
 
 $$
 \Theta_2\vdash Q.
 $$
 
-但若 $\Theta_2$ 是 conservative extension 或已有 formal embedding theorem，才可建立對應 bridge。
+However, if $\Theta_2$ is a conservative extension or already has a formal embedding theorem, a corresponding bridge can be established.
 
-CSM 不自行假設這種 bridge。
+CSM does not assume such bridges on its own.
 
 ---
 
 # 16. Physical-Realization Globality
 
-這一軸不是單純集合 inclusion。
+This axis is not a simple set inclusion.
 
-形式模型：
+A formal model:
 
 $$
 M
 $$
 
-與物理 realization：
+and a physical realization:
 
 $$
 R
 $$
 
-之間需要 interpretation / idealization relation：
+require an interpretation / idealization relation between them:
 
 $$
 M
@@ -710,9 +704,9 @@ M
 R.
 $$
 
-這些 relation 可以是 partial、scale-dependent、regime-dependent，也可以有 model discrepancy。
+These relations can be partial, scale-dependent, regime-dependent, or possess model discrepancy.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -722,27 +716,27 @@ $$
 }
 $$
 
-除非另外定義「Prove$(R)$」的操作意義並證明 interpretation bridge 足以承載該推論。
+Unless the operational meaning of "Prove$(R)$" is separately defined and the interpretation bridge is proven sufficient to carry the inference.
 
 ---
 
-# 17. 三種「更強」不能混在一起
+# 17. Three Types of "Stronger" Must Not Be Mixed
 
-考慮 theorem $Q_0$。
+Consider theorem $Q_0$.
 
 ## 17.1 Theorem strengthening
 
-同一 scope 中，結論變強：
+Within the same scope, the conclusion becomes stronger:
 
 $$
 Q_1\Rightarrow Q_0,
 $$
 
-但 scope 不變。
+but the scope remains unchanged.
 
 ## 17.2 Scope expansion
 
-結論形式大致相同，但量化域變廣：
+The form of the conclusion is largely the same, but the domain of quantification is broadened:
 
 $$
 D_0\subsetneq D_1.
@@ -750,7 +744,7 @@ $$
 
 ## 17.3 Model extension
 
-模型本身被改寫：
+The model itself is rewritten:
 
 $$
 E_0
@@ -758,7 +752,7 @@ E_0
 E_1.
 $$
 
-三者必須分開：
+The three must be separated:
 
 $$
 \boxed{
@@ -774,13 +768,13 @@ $$
 
 # 18. Scope Restriction
 
-如果：
+If:
 
 $$
 D_1\subseteq D_2,
 $$
 
-且 theorem：
+and the theorem:
 
 $$
 \forall x\in D_2,
@@ -788,7 +782,7 @@ $$
 Q(x)
 $$
 
-已證，則在相同 semantics 下可限制到：
+is proven, then under the same semantics it can be restricted to:
 
 $$
 \forall x\in D_1,
@@ -796,39 +790,39 @@ $$
 Q(x).
 $$
 
-這種方向稱：
+This direction is called:
 
 $$
 \mathsf{ScopeRestrict}.
 $$
 
-它通常比 scope expansion 安全，但仍要求 theorem target 與 semantics 未在限制過程中改變。
+It is generally safer than scope expansion, but still requires that the theorem target and semantics remain unchanged during the restriction process.
 
 ---
 
 # 19. Scope Expansion
 
-反方向：
+In the opposite direction, when:
 
 $$
 D_1\subsetneq D_2
 $$
 
-時：
+then:
 
 $$
 \forall x\in D_1,
 Q(x)
 $$
 
-不能自動推出：
+does not automatically imply:
 
 $$
 \forall x\in D_2,
 Q(x).
 $$
 
-CSM 將這種非法升格稱為：
+CSM refers to this illegal upgrade as:
 
 $$
 \boxed{
@@ -840,7 +834,7 @@ $$
 
 # 20. Globality Promotion Certificate
 
-若要從 $D_1$ 推進到 $D_2$，定義：
+To promote from $D_1$ to $D_2$, define:
 
 $$
 \boxed{
@@ -848,7 +842,7 @@ $$
 }
 $$
 
-第一版欄位：
+Version 1 fields:
 
 $$
 \left\langle
@@ -867,13 +861,13 @@ $$
 \right\rangle.
 $$
 
-並非每一種 bridge 都需要所有欄位，但任何缺失欄位必須被標為不適用或 debt，而不能靜默忽略。
+Not every bridge requires all fields, but any missing field must be marked as not applicable or as debt, and cannot be silently ignored.
 
 ---
 
 # 21. Globality Debt
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -895,7 +889,7 @@ $$
 }
 $$
 
-當某 claim 已在較窄 domain 證明，但更廣 domain 尚未完成 promotion obligations 時，它可以標記為：
+When a claim has been proven in a narrower domain, but the promotion obligations for a broader domain are not yet fulfilled, it can be marked as:
 
 $$
 \mathsf{CLOSED}^{+}_{D_1}
@@ -904,13 +898,13 @@ $$
 \mathsf{OPEN}_{D_2\setminus D_1}.
 $$
 
-這比單純寫「partially proven」更精確。
+This is more precise than simply writing "partially proven."
 
 ---
 
-# 22. Globality 不是 total order
+# 22. Globality is Not a Total Order
 
-若兩個 theorem：
+If two theorems:
 
 $$
 Q_A,
@@ -918,29 +912,29 @@ Q_A,
 Q_B,
 $$
 
-其中 $Q_A$ 在時間軸更廣，但 $Q_B$ 在資料類或 equation family 更廣，則未必存在：
+where $Q_A$ is broader on the time axis, but $Q_B$ is broader in data class or equation family, it does not necessarily follow that:
 
 $$
 Q_A\succeq Q_B
 $$
 
-或：
+or:
 
 $$
 Q_B\succeq Q_A.
 $$
 
-因此 CSM 使用 **partial comparability**。
+Therefore, CSM uses **partial comparability**.
 
-定義：
+Define:
 
 $$
 Q_A\preceq_G Q_B
 $$
 
-只在所有比較軸都已對齊且 $Q_B$ 的 scope 至少包含 $Q_A$ 時成立。
+holds only when all comparison axes are aligned and the scope of $Q_B$ at least contains that of $Q_A$.
 
-否則標記：
+Otherwise, it is marked as:
 
 $$
 \boxed{
@@ -950,25 +944,25 @@ $$
 
 ---
 
-# 23. Domain Embedding 也不等於 Theorem Transfer
+# 23. Domain Embedding Does Not Equal Theorem Transfer
 
-即使有：
+Even if there is:
 
 $$
 \iota:D_1\hookrightarrow D_2,
 $$
 
-也只證明 domain embedding。
+it only proves domain embedding.
 
-還需要：
+It also requires:
 
-- equation compatibility；
-- solution semantics compatibility；
-- target preservation；
-- assumptions preservation；
-- relevant estimates / invariants preservation。
+- equation compatibility;
+- solution semantics compatibility;
+- target preservation;
+- assumptions preservation;
+- relevant estimates / invariants preservation.
 
-所以：
+Thus:
 
 $$
 \boxed{
@@ -980,11 +974,11 @@ $$
 
 ---
 
-# 24. Counterexample 的跨域傳遞
+# 24. Cross-Domain Transfer of Counterexamples
 
-Counterexample transfer 比 theorem promotion 方向不同。
+Counterexample transfer has a different direction than theorem promotion.
 
-若目標是 universal claim：
+If the target is a universal claim:
 
 $$
 \forall x\in D_2,
@@ -992,23 +986,23 @@ $$
 Q(x),
 $$
 
-且：
+and:
 
 $$
 x_\star\in D_1\subseteq D_2
 $$
 
-在**相同 target semantics** 下構成真正反例，則：
+constitutes a true counterexample under the **same target semantics**, then:
 
 $$
 \neg Q(x_\star)
 $$
 
-可反駁較廣 universal claim。
+can refute the broader universal claim.
 
-但若 $D_1$ 與 $D_2$ 之間還跨越 model interpretation、solution notion 或 modified equation，則必須重新檢查 counterexample fidelity。
+However, if the gap between $D_1$ and $D_2$ also crosses model interpretation, solution notion, or modified equations, the counterexample fidelity must be re-examined.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1019,29 +1013,29 @@ $$
 
 ---
 
-# 25. Obstruction 的跨域傳遞
+# 25. Cross-Domain Transfer of Obstructions
 
-一個 obstruction：
+Whether an obstruction:
 
 $$
 O_{D_1}
 $$
 
-能否傳到 $D_2$，取決於 obstruction 所使用的 assumptions 是否在 $D_2$ 保存。
+can transfer to $D_2$ depends on whether the assumptions used by the obstruction are preserved in $D_2$.
 
-定義：
+Define:
 
 $$
 \mathsf{ObsTransferCert}_{D_1\to D_2}(O).
 $$
 
-若 obstruction 依賴：
+If the obstruction relies on:
 
 $$
 A_1,\ldots,A_k,
 $$
 
-則至少需要：
+then it requires at least:
 
 $$
 \forall i,
@@ -1049,19 +1043,19 @@ $$
 \mathsf{Preserve}_{D_1\to D_2}(A_i).
 $$
 
-否則 obstruction 只能停留在原 domain。
+Otherwise, the obstruction must remain confined to its original domain.
 
 ---
 
 # 26. Scope Frontier
 
-Paper 00 定義 closure frontier：
+Paper 00 defines the closure frontier:
 
 $$
 \partial\mathfrak C(Q).
 $$
 
-本文進一步定義：
+This paper further defines:
 
 $$
 \boxed{
@@ -1069,17 +1063,17 @@ $$
 }
 $$
 
-作為 **globality / scope frontier**。
+as the **globality / scope frontier**.
 
-其成員不是單純 OPEN theorem，而是：
+Its members are not simply OPEN theorems, but rather:
 
-- 已在部分 axis 閉合；
-- 其他 axis 尚未閉合；
-- promotion bridge 尚有 debt；
-- domain extension 尚未被覆蓋；
-- interpretation 尚未建立。
+- closed on some axes;
+- not yet closed on other axes;
+- promotion bridges still have debt;
+- domain extensions are not yet covered;
+- interpretations are not yet established.
 
-因此完整 frontier 可寫成：
+Thus, the complete frontier can be written as:
 
 $$
 \partial\mathfrak C
@@ -1095,19 +1089,19 @@ $$
 
 ---
 
-# 27. Relative-Global Closure 的新解讀
+# 27. New Interpretation of Relative-Global Closure
 
-Paper 00 的 RGC-4 是：對宣告 admissible mechanism space 有 completeness certificate 且 frontier 閉合。
+RGC-4 in Paper 00 is: having a completeness certificate for the declared admissible mechanism space and a closed frontier.
 
-本文補充：RGC grade 必須綁定 globality profile。
+This paper adds: the RGC grade must be bound to a globality profile.
 
-因此不能只寫：
+Therefore, one cannot simply write:
 
 $$
 \mathsf{RGC4}(Q).
 $$
 
-而應寫：
+but should write:
 
 $$
 \boxed{
@@ -1115,15 +1109,15 @@ $$
 }
 $$
 
-同一命題在不同 globality profile 下可以具有不同 closure grade。
+The same proposition can have different closure grades under different globality profiles.
 
 ---
 
 # 28. Domain Stratification
 
-CSM 不把所有 domain 只排成一條 inclusion chain。
+CSM does not arrange all domains into a single inclusion chain.
 
-定義 domain graph：
+Define the domain graph:
 
 $$
 \boxed{
@@ -1133,7 +1127,7 @@ $$
 }
 $$
 
-edge type 可包含：
+edge types may include:
 
 $$
 \tau_D(e)
@@ -1151,15 +1145,15 @@ $$
 \}.
 $$
 
-只有 `RESTRICTS / EXTENDS` 等少數 edge 在附帶條件下與 set inclusion 直接相關。
+Only a few edges like `RESTRICTS / EXTENDS` are directly related to set inclusion under specific conditions.
 
-`INTERPRETS` 與 `IDEALIZES` 不應被畫成普通 subset arrow。
+`INTERPRETS` and `IDEALIZES` should not be drawn as standard subset arrows.
 
 ---
 
-# 29. Navier--Stokes：formal / Clay mathematical domain
+# 29. Navier--Stokes: formal / Clay mathematical domain
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1167,9 +1161,9 @@ $$
 }
 $$
 
-為 Clay / formal mathematical Navier--Stokes target domain。
+as the Clay / formal mathematical Navier--Stokes target domain.
 
-更精確地，因正式問題可以包含不同 formal clauses / spatial settings，本文允許：
+More precisely, because the formal problem can contain different formal clauses / spatial settings, this paper allows:
 
 $$
 \mathfrak N_{\rm C}
@@ -1181,23 +1175,23 @@ c\in\mathcal C_{\rm formal}
 \}.
 $$
 
-每個 clause 必須記錄自己的：
+Each clause must record its own:
 
-- equation；
-- dimension；
-- spatial domain；
-- data class；
-- solution notion；
-- regularity target；
-- forcing / boundary convention。
+- equation;
+- dimension;
+- spatial domain;
+- data class;
+- solution notion;
+- regularity target;
+- forcing / boundary convention.
 
-本文不將不同 clause 靜默壓成同一 statement。
+This paper does not silently compress different clauses into the same statement.
 
 ---
 
-# 30. Clay NS 的「global」到底在哪裡
+# 30. Where Exactly is the "Global" in Clay NS
 
-在固定 formal clause 下，其典型 global regularity / existence target 至少包含：
+Under a fixed formal clause, its typical global regularity / existence target includes at least:
 
 $$
 G_t
@@ -1205,9 +1199,9 @@ G_t
 \mathsf{FULL}_{[0,\infty)}
 $$
 
-或等價的全有限時間延拓要求，以及對宣告 admissible data class 的 universal quantification。
+or an equivalent requirement for extension over all finite times, as well as universal quantification over the declared admissible data class.
 
-但這仍然不代表：
+But this still does not mean:
 
 $$
 G_{\rm eq}
@@ -1215,7 +1209,7 @@ G_{\rm eq}
 \mathsf{FAMILY}_{\text{all NS-like equations}}.
 $$
 
-也不代表：
+Nor does it mean:
 
 $$
 G_{\rm phys}
@@ -1223,7 +1217,7 @@ G_{\rm phys}
 \mathsf{FULL}_{\text{all physical fluids}}.
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1233,13 +1227,13 @@ $$
 }
 $$
 
-「restricted」在這裡不代表問題小，而是代表其 quantifier contract 有明確邊界。
+"Restricted" here does not mean the problem is small, but rather that its quantifier contract has explicit boundaries.
 
 ---
 
 # 31. Physical Navier--Stokes realization domain
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1247,9 +1241,9 @@ $$
 }
 $$
 
-為 physical NS realization domain。
+as the physical NS realization domain.
 
-它不是：
+It is not:
 
 $$
 \mathfrak N_{\rm C}
@@ -1257,9 +1251,9 @@ $$
 \mathfrak N_{\rm P}
 $$
 
-這種單純 set relation。
+a simple set relation like this.
 
-更合理的是：
+A more reasonable representation is:
 
 $$
 \mathfrak N_{\rm C}
@@ -1271,23 +1265,23 @@ $$
 \mathfrak N_{\rm P}.
 $$
 
-其 bridge 可能依賴：
+Its bridge may rely on:
 
-- continuum approximation；
-- constitutive regime；
-- Reynolds / Mach / Knudsen-like regime；
-- measurement scale；
-- neglected physics；
-- boundary realization；
-- material properties。
+- continuum approximation;
+- constitutive regime;
+- Reynolds / Mach / Knudsen-like regime;
+- measurement scale;
+- neglected physics;
+- boundary realization;
+- material properties.
 
-本文不宣告任何單一 bridge 在所有 physical regimes 完整成立。
+This paper does not declare that any single bridge holds completely across all physical regimes.
 
 ---
 
 # 32. Generalized NS-like family
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1295,9 +1289,9 @@ $$
 }
 $$
 
-為由 signature $\Sigma$ 宣告的 generalized NS-like equation family。
+as the generalized NS-like equation family declared by signature $\Sigma$.
 
-第一版 signature：
+Version 1 signature:
 
 $$
 \boxed{
@@ -1318,26 +1312,26 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $d$：dimension family；
-- $\mathcal X$：geometry / manifold class；
-- $\mathcal C$：constraint class，例如 divergence-free 或其 generalized analogue；
-- $\mathcal B_{\rm nl}$：nonlinear transport / interaction class；
-- $\mathcal A_{\rm diss}$：dissipation operator class；
-- $\mathcal P_{\rm proj}$：pressure / projection / constraint enforcement；
-- $\mathcal F$：forcing class；
-- $\mathcal B_{\rm bdry}$：boundary class；
-- $\mathcal K_{\rm const}$：constitutive / coefficient class；
-- $\mathcal S$：solution semantics。
+- $d$: dimension family;
+- $\mathcal X$: geometry / manifold class;
+- $\mathcal C$: constraint class, e.g., divergence-free or its generalized analogue;
+- $\mathcal B_{\rm nl}$: nonlinear transport / interaction class;
+- $\mathcal A_{\rm diss}$: dissipation operator class;
+- $\mathcal P_{\rm proj}$: pressure / projection / constraint enforcement;
+- $\mathcal F$: forcing class;
+- $\mathcal B_{\rm bdry}$: boundary class;
+- $\mathcal K_{\rm const}$: constitutive / coefficient class;
+- $\mathcal S$: solution semantics.
 
-只有 $\Sigma_{\rm NSL}$ 明確後，「對所有 NS-like system」才是可解析的 theorem target。
+Only after $\Sigma_{\rm NSL}$ is explicitly defined does "for all NS-like systems" become a parsable theorem target.
 
 ---
 
-# 33. Formal NS 不等於 Generalized NS-like family
+# 33. Formal NS Does Not Equal Generalized NS-like Family
 
-即使：
+Even if:
 
 $$
 \mathfrak N_{\rm C}^{(c)}
@@ -1345,9 +1339,9 @@ $$
 \mathfrak N_{\rm G}^{\Sigma}
 $$
 
-在某一 signature 下成立，也只有 membership / embedding 意義。
+holds under a certain signature, it only carries the meaning of membership / embedding.
 
-它不推出：
+It does not imply:
 
 $$
 \operatorname{Prove}(
@@ -1359,7 +1353,7 @@ $$
 ).
 $$
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1369,13 +1363,13 @@ $$
 }
 $$
 
-這是 **Equation-Family Non-Collapse Principle**。
+This is the **Equation-Family Non-Collapse Principle**.
 
 ---
 
-# 34. Formal NS 不等於 Physical NS
+# 34. Formal NS Does Not Equal Physical NS
 
-同理：
+By the same logic:
 
 $$
 \boxed{
@@ -1385,7 +1379,7 @@ $$
 }
 $$
 
-這不是否定 formal PDE theorem 的物理價值，而是要求：
+This does not negate the physical value of formal PDE theorems, but rather requires that:
 
 $$
 \text{formal theorem}
@@ -1393,15 +1387,15 @@ $$
 \text{physical claim}
 $$
 
-必須經過 interpretation bridge。
+must pass through an interpretation bridge.
 
-如果物理 claim 比 formal model 的 validity regime 更廣，還需要額外 scope expansion。
+If the physical claim is broader than the validity regime of the formal model, additional scope expansion is required.
 
 ---
 
-# 35. 三域不應排成簡單階層
+# 35. The Three Domains Should Not Be Arranged in a Simple Hierarchy
 
-禁止無證寫成：
+It is prohibited to write without proof:
 
 $$
 \mathfrak N_{\rm C}
@@ -1411,7 +1405,7 @@ $$
 \mathfrak N_{\rm G}.
 $$
 
-更正確的是 typed graph：
+What is more accurate is a typed graph:
 
 $$
 \boxed{
@@ -1423,7 +1417,7 @@ $$
 }
 $$
 
-以及：
+and:
 
 $$
 \boxed{
@@ -1437,21 +1431,21 @@ $$
 }
 $$
 
-必要時 generalized model family 也可以與 physical domain 建立自己的 model correspondence edge。
+If necessary, the generalized model family can also establish its own model correspondence edges with the physical domain.
 
 ---
 
-# 36. NS Closure Graph 將變成多域圖
+# 36. The NS Closure Graph Will Become a Multi-Domain Graph
 
-未來：
+In the future:
 
 $$
 \mathfrak C_{\rm NS}^{\rm rel}
 $$
 
-不應只有一張 route graph。
+should not consist of just a single route graph.
 
-至少包含：
+It should contain at least:
 
 $$
 \boxed{
@@ -1471,13 +1465,13 @@ $$
 }
 $$
 
-其中 $\mathcal G_{\rm scope}$ 專門追蹤 theorem 在哪些 globality axis 已閉合。
+Where $\mathcal G_{\rm scope}$ specifically tracks on which globality axes a theorem has closed.
 
 ---
 
 # 37. Scope-State Node
 
-為了在圖中操作 globality，定義：
+To manipulate globality within the graph, define:
 
 $$
 \boxed{
@@ -1485,9 +1479,9 @@ $$
 }
 $$
 
-表示命題 $Q$ 在 axis $a$、domain $D_a$ 上的 closure state。
+to represent the closure state of proposition $Q$ on axis $a$ and domain $D_a$.
 
-例如：
+For example:
 
 $$
 \mathsf{ScopeState}(Q,\text{time},[0,\infty))
@@ -1495,7 +1489,7 @@ $$
 \mathsf{CLOSED}^{+}
 $$
 
-並不要求：
+does not require:
 
 $$
 \mathsf{ScopeState}(Q,\text{equation-family},\Sigma)
@@ -1503,13 +1497,13 @@ $$
 \mathsf{CLOSED}^{+}.
 $$
 
-因此同一 theorem 可以沿不同 axis 具有不同 closure status。
+Thus, the same theorem can have different closure statuses along different axes.
 
 ---
 
 # 38. Scope Hyperedge
 
-有些 globality promotion 需要多個前提同時成立：
+Some globality promotions require multiple premises to hold simultaneously:
 
 $$
 \{
@@ -1522,18 +1516,18 @@ U
 Q_{D_2}.
 $$
 
-其中：
+Where:
 
-- $B_i$：bridge theorem；
-- $U$：uniform estimate / compactness / preservation condition。
+- $B_i$: bridge theorem;
+- $U$: uniform estimate / compactness / preservation condition.
 
-因此 scope promotion 是 hyperedge，而不是簡單箭頭。
+Therefore, scope promotion is a hyperedge, not a simple arrow.
 
 ---
 
 # 39. Globality Closure Action
 
-在 Paper 00 的 closure family 上新增：
+Added to the closure family of Paper 00:
 
 $$
 \boxed{
@@ -1541,23 +1535,23 @@ $$
 }
 $$
 
-它只允許以下操作：
+It only allows the following operations:
 
-1. 已證 universal claim 向合法 restriction 傳播；
-2. 有 $\mathsf{GPCert}$ 時向 broader scope promotion；
-3. 有 counterexample-transfer certificate 時向 broader universal claim 傳播 refutation；
-4. 依 axis 分離更新 scope states；
-5. 所有 promotion debt 寫入 ledger。
+1. Propagation of a proven universal claim to a valid restriction;
+2. Promotion to a broader scope when a $\mathsf{GPCert}$ is present;
+3. Propagation of a refutation to a broader universal claim when a counterexample-transfer certificate is present;
+4. Axis-separated updates of scope states;
+5. Writing all promotion debt into the ledger.
 
-它禁止 name-based generalization。
+It prohibits name-based generalization.
 
 ---
 
 # 40. Scope Reopening
 
-若某 scope-level NO-GO 後來被發現依賴一個只在窄 regime 成立的 assumption，則 broader domain 可以重新 OPEN。
+If a scope-level NO-GO is later found to rely on an assumption that only holds in a narrow regime, the broader domain can be re-OPENed.
 
-即：
+That is:
 
 $$
 \boxed{
@@ -1567,15 +1561,15 @@ $$
 }
 $$
 
-若 obstruction transfer certificate 被撤銷或降格。
+if the obstruction transfer certificate is revoked or downgraded.
 
-這是 Paper 00 Reopening Principle 在 globality axis 上的版本。
+This is the globality-axis version of the Reopening Principle from Paper 00.
 
 ---
 
 # 41. Scope Ledger
 
-每一次 globality upgrade / downgrade 必須記錄：
+Every globality upgrade / downgrade must record:
 
 $$
 \mathsf{ScopeLedgerEvent}
@@ -1592,19 +1586,19 @@ D_{\rm to},
 \right\rangle.
 $$
 
-避免後續研究者只看到「global theorem」而不知道它最初只在哪個 domain 成立。
+This prevents subsequent researchers from only seeing a "global theorem" without knowing in which domain it was originally established.
 
 ---
 
-# 42. 第一批 Globality Axioms / Protocol Invariants
+# 42. First Batch of Globality Axioms / Protocol Invariants
 
 ## G-1 — Scope Explicitness
 
-任何 global claim 必須綁定 scope contract。
+Any global claim must be bound to a scope contract.
 
 ## G-2 — Axis Non-Collapse
 
-不同 globality axis 不得無證合併。
+Different globality axes must not be merged without proof.
 
 ## G-3 — Declared-Full Relativity
 
@@ -1612,51 +1606,51 @@ $$
 \mathsf{FULL}_{D}
 $$
 
-只對 $D$ 有效。
+is only valid for $D$.
 
 ## G-4 — No Upward Scope Promotion
 
-窄 domain theorem 不自動推出廣 domain theorem。
+A narrow-domain theorem does not automatically imply a broad-domain theorem.
 
 ## G-5 — Typed Counterexample Transfer
 
-counterexample 只能沿 target-preserving inclusion / bridge 傳遞。
+Counterexamples can only be transferred along target-preserving inclusions / bridges.
 
 ## G-6 — Interpretation Non-Identity
 
-formal model 與 physical realization 不因名稱相同而同一。
+Formal models and physical realizations are not identical just because they share the same name.
 
 ## G-7 — Equation-Family Declaration
 
-所有 equation-family globality 必須先宣告 family signature。
+All equation-family globality must first declare a family signature.
 
 ## G-8 — Quantifier-Order Preservation
 
-交換量詞順序視為 theorem change，除非另證等價。
+Swapping quantifier order is considered a theorem change, unless proven equivalent otherwise.
 
 ## G-9 — Representation Firewall
 
-representation-local success/failure 不自動升格為 semantic-global result。
+Representation-local success/failure does not automatically upgrade to a semantic-global result.
 
 ## G-10 — Proof-Regime Firewall
 
-proof in one formal/admissibility regime 不自動等於 proof in another。
+A proof in one formal/admissibility regime does not automatically equal a proof in another.
 
 ## G-11 — Scope Debt Visibility
 
-所有未支付 promotion obligations 必須可見。
+All unpaid promotion obligations must be visible.
 
 ## G-12 — Relative-Global Firewall
 
-relative-global closure 不得冒充 absolute mathematical completeness。
+Relative-global closure must not masquerade as absolute mathematical completeness.
 
 ---
 
-# 43. 第一批 Derived Propositions
+# 43. First Batch of Derived Propositions
 
 ## Proposition 1 — Restriction Preservation
 
-若 $D_1\subseteq D_2$，且 $Q$ 是在相同 semantics 下對 $D_2$ 的 universal claim，則：
+If $D_1\subseteq D_2$, and $Q$ is a universal claim over $D_2$ under the same semantics, then:
 
 $$
 \mathsf{CLOSED}^{+}_{D_2}(Q)
@@ -1664,13 +1658,13 @@ $$
 \mathsf{CLOSED}^{+}_{D_1}(Q).
 $$
 
-### 條件
+### Conditions
 
-不允許 target、solution notion 或 equation 在 restriction 過程中改變。
+The target, solution notion, or equation is not allowed to change during the restriction process.
 
 ## Proposition 2 — Expansion Non-Entailment
 
-一般而言：
+In general:
 
 $$
 \mathsf{CLOSED}^{+}_{D_1}(Q)
@@ -1678,29 +1672,29 @@ $$
 \mathsf{CLOSED}^{+}_{D_2}(Q)
 $$
 
-對 $D_1\subsetneq D_2$。
+for $D_1\subsetneq D_2$.
 
 ## Proposition 3 — Globality Incomparability
 
-若 $Q_A$ 與 $Q_B$ 在不同 axis 各自較廣，且沒有全部 axis 對齊，則 $Q_A,Q_B$ 可為 $\preceq_G$ 不可比較。
+If $Q_A$ and $Q_B$ are each broader on different axes, and not all axes are aligned, then $Q_A, Q_B$ can be incomparable under $\preceq_G$.
 
 ## Proposition 4 — Counterexample Lift under Inclusion
 
-若 universal target semantics 不變，且 $x_\star\in D_1\subseteq D_2$ 為 $Q$ 的真 counterexample，則 $x_\star$ 同時反駁 $D_2$ 上的 universal claim。
+If the universal target semantics remain unchanged, and $x_\star\in D_1\subseteq D_2$ is a true counterexample to $Q$, then $x_\star$ simultaneously refutes the universal claim over $D_2$.
 
 ## Proposition 5 — Physical Non-Transfer
 
-formal theorem 的 closure status 不經 interpretation certificate 不能直接更新 physical-realization scope state。
+The closure status of a formal theorem cannot directly update the physical-realization scope state without an interpretation certificate.
 
 ## Proposition 6 — Family Non-Transfer
 
-單一 equation member 的 theorem 不經 family-uniform proof 不能直接更新 equation-family scope state為正閉合。
+A theorem for a single equation member cannot directly update the equation-family scope state to positively closed without a family-uniform proof.
 
 ---
 
 # 44. Globality Proof-Obligation Matrix
 
-| Promotion | 最低 obligation |
+| Promotion | Minimum Obligation |
 |---|---|
 | local time $\to$ global time | continuation / blow-up exclusion / appropriate extension theorem |
 | one datum $\to$ data class | uniform or pointwise-all proof over declared class |
@@ -1780,9 +1774,9 @@ globality_record:
 
 ---
 
-# 47. CSM 與 NS Proof-Space 的第一次真正結合
+# 47. The First True Integration of CSM and the NS Proof-Space
 
-過去 NS proof-space 主要追蹤：
+In the past, the NS proof-space primarily tracked:
 
 $$
 \text{Route}
@@ -1792,19 +1786,19 @@ $$
 \text{Survivor}.
 $$
 
-加入 Paper 01 後，每個 survivor 還必須問：
+After incorporating Paper 01, every survivor must also ask:
 
-> 它在哪一個 globality profile 中存活？
+> In which globality profile does it survive?
 
-例如一個 mechanism 可能：
+For example, a mechanism might:
 
-- 在固定 equation 下存活；
-- 在固定 data class 下存活；
-- 只在 vanishing-parameter asymptotic 中存活；
-- 不知道是否能進入 broader equation family；
-- 完全沒有 physical interpretation claim。
+- survive under a fixed equation;
+- survive under a fixed data class;
+- survive only in a vanishing-parameter asymptotic;
+- be unknown whether it can enter a broader equation family;
+- have absolutely no physical interpretation claim.
 
-所以 survivor record 應擴成：
+Therefore, the survivor record should be expanded to:
 
 $$
 \boxed{
@@ -1820,19 +1814,19 @@ $$
 }
 $$
 
-這會直接防止「局部 survivor 被誤讀成全域反例候選」。
+This directly prevents "local survivors from being misinterpreted as global counterexample candidates."
 
 ---
 
-# 48. Closure 的目標也要分層
+# 48. Closure Targets Must Also Be Stratified
 
-未來說：
+In the future, saying:
 
-> 「NS closure space 已經封到 90%」
+> "The NS closure space is 90% closed"
 
-在 CSM 中是不合法的，除非說明 metric 與 globality profile。
+is invalid in CSM, unless the metric and globality profile are specified.
 
-更正確的是：
+What is more accurate is:
 
 $$
 \mathsf{ClosureCoverage}
@@ -1845,21 +1839,21 @@ Q;
 ).
 $$
 
-例如可以有：
+For example, there can be:
 
-- observed-route closure coverage；
-- basin closure coverage；
-- obstruction-certified coverage；
-- admissible-mechanism coverage；
-- scope-axis coverage。
+- observed-route closure coverage;
+- basin closure coverage;
+- obstruction-certified coverage;
+- admissible-mechanism coverage;
+- scope-axis coverage.
 
-不同 coverage 不能合併成一個無條件百分比。
+Different coverages cannot be merged into a single unconditional percentage.
 
 ---
 
 # 49. Scope-Frontier Vector
 
-定義：
+Define:
 
 $$
 \boxed{
@@ -1882,22 +1876,22 @@ F_{\rm proof}
 }
 $$
 
-每個 $F_a$ 表示該 axis 上未閉的 quotient-aware frontier mass / class set。
+Each $F_a$ represents the unclosed quotient-aware frontier mass / class set on that axis.
 
-本文不預設 frontier mass 必須是實數測度。
+This paper does not presuppose that the frontier mass must be a real-valued measure.
 
-第一版可以先使用：
+Version 1 can initially use:
 
-- class count；
-- weighted class count；
-- theorem-strength-weighted count；
-- obstruction-independence-adjusted count。
+- class count;
+- weighted class count;
+- theorem-strength-weighted count;
+- obstruction-independence-adjusted count.
 
 ---
 
 # 50. Globality Closure Dynamics
 
-隨研究前進：
+As research progresses:
 
 $$
 \mathsf{GProf}_{t+1}(Q)
@@ -1911,9 +1905,9 @@ $$
 ).
 $$
 
-但 globality 不必單調增加。
+But globality does not have to increase monotonically.
 
-一個 theorem 可能因 statement correction 被縮小 scope：
+A theorem might have its scope reduced due to a statement correction:
 
 $$
 \mathsf{FULL}_{D_2}
@@ -1923,24 +1917,24 @@ $$
 D_1\subsetneq D_2.
 $$
 
-這不是研究倒退，而是 scope fidelity 提高。
+This is not a regression in research, but an increase in scope fidelity.
 
 ---
 
-# 51. Domain Revision 與 Descendant Survival
+# 51. Domain Revision and Descendant Survival
 
-若 parent domain $D$ 被修訂成 $D'$，不能把所有 descendants 全刪。
+If a parent domain $D$ is revised to $D'$, one cannot simply delete all descendants.
 
-每個 descendant $Q_i$ 需重新問：
+Every descendant $Q_i$ must be re-evaluated:
 
-1. 其 proof 是否實際使用被刪除 assumption？
-2. 其 theorem target 是否仍有意義？
-3. 能否 restriction 到 $D'$？
-4. 是否存在 independent re-proof？
-5. obstruction 是否仍有效？
-6. representation / tool 是否仍可重用？
+1. Does its proof actually use the deleted assumption?
+2. Is its theorem target still meaningful?
+3. Can it be restricted to $D'$?
+4. Does an independent re-proof exist?
+5. Is the obstruction still valid?
+6. Can the representation / tool still be reused?
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -1950,33 +1944,33 @@ $$
 }
 $$
 
-這使 CSM 可以安全處理「問題 framing 被改寫」而不丟掉整個歷史研究空間。
+This allows CSM to safely handle "problem framing being rewritten" without discarding the entire historical research space.
 
 ---
 
-# 52. 對 NS 研究工程的立即影響
+# 52. Immediate Impact on the NS Research Engineering
 
-當 C1--C6、X72、DCRP、MORP、RFP、FCBP 與其他 NS assets 投影到 closure graph 時，每個 claim 至少要附：
+When C1--C6, X72, DCRP, MORP, RFP, FCBP, and other NS assets are projected onto the closure graph, each claim must be accompanied by at least:
 
-- claim type；
-- formal target；
-- domain signature；
-- globality profile；
-- assumptions；
-- proof / no-go / obstruction status；
-- route family；
-- quotient class；
-- bridge dependencies；
-- promotion debt；
-- provenance。
+- claim type;
+- formal target;
+- domain signature;
+- globality profile;
+- assumptions;
+- proof / no-go / obstruction status;
+- route family;
+- quotient class;
+- bridge dependencies;
+- promotion debt;
+- provenance.
 
-因此不能只抽：
+Therefore, one cannot simply extract:
 
 $$
 A,C,L,O,S.
 $$
 
-下一版 NS closure dataset 應擴成：
+The next version of the NS closure dataset should be expanded to:
 
 $$
 \boxed{
@@ -1984,12 +1978,12 @@ A,C,L,O,S,G,D,B,P
 }
 $$
 
-其中：
+Where:
 
-- $G$：globality profile；
-- $D$：domain signature；
-- $B$：bridge set；
-- $P$：promotion / proof debt。
+- $G$: globality profile;
+- $D$: domain signature;
+- $B$: bridge set;
+- $P$: promotion / proof debt.
 
 ---
 
@@ -2036,31 +2030,31 @@ csm_scope_state:
 
 ## Scenario A — Global time, one equation
 
-已證固定 PDE 對全部時間成立。
+A fixed PDE is proven to hold for all time.
 
-正確：
+Correct:
 
 $$
 G_t=\mathsf{FULL}_{\mathcal T}.
 $$
 
-錯誤：
+Incorrect:
 
 $$
 G_{\rm eq}=\mathsf{FAMILY}_{\Sigma}
 $$
 
-無證自動升格。
+Automatic upgrade without proof.
 
 ## Scenario B — One parameter value
 
-已證：
+Proven:
 
 $$
 P(\lambda_0).
 $$
 
-不得寫成：
+Must not be written as:
 
 $$
 \forall\lambda\in\Lambda,
@@ -2069,21 +2063,21 @@ $$
 
 ## Scenario C — Physical agreement in one regime
 
-formal model 在某 operating regime 與實驗吻合。
+The formal model agrees with experiments in a certain operating regime.
 
-不得寫成所有 physical realization 已被證明。
+Must not be written as all physical realizations having been proven.
 
 ## Scenario D — Counterexample in a true subdomain
 
-如果 target semantics 完全相同，subdomain counterexample 可以 refute broader universal claim。
+If the target semantics are exactly the same, a subdomain counterexample can refute a broader universal claim.
 
 ## Scenario E — Representation failure
 
-proof search 在 $\rho_1$ 失敗，不得更新 semantic-global status 為 BLOCKED，除非 representation robustness audit 成立。
+A proof search failing in $\rho_1$ must not update the semantic-global status to BLOCKED, unless a representation robustness audit holds.
 
 ## Scenario F — Generalized NS-like family
 
-若未宣告 $\Sigma_{\rm NSL}$，則「所有 NS-like equation」為：
+If $\Sigma_{\rm NSL}$ is not declared, then "all NS-like equations" is:
 
 $$
 \mathsf{ILL\_SCOPED}.
@@ -2091,7 +2085,7 @@ $$
 
 ---
 
-# 55. CSM Paper 01 的核心 No-Collapse Family
+# 55. The Core No-Collapse Family of CSM Paper 01
 
 $$
 \boxed{
@@ -2163,17 +2157,17 @@ $$
 
 ---
 
-# 56. 下一篇的直接問題
+# 56. The Immediate Question for the Next Paper
 
-Paper 00 定義 closure space。
+Paper 00 defines the closure space.
 
-Paper 01 定義 closure space 的 domain / globality typing。
+Paper 01 defines the domain / globality typing of the closure space.
 
-下一個自然問題是：
+The next natural question is:
 
-> 在已經有 typed domain 的情況下，如何把「命題、路徑、障礙、survivor、NO-GO、bridge」真正組合成可運算的 closure graph，並定義 closure propagation、frontier reduction 與 reopening？
+> Given the existence of typed domains, how do we truly assemble "propositions, routes, obstructions, survivors, NO-GOs, and bridges" into a computable closure graph, and define closure propagation, frontier reduction, and reopening?
 
-因此下一篇建議為：
+Therefore, the proposed next paper is:
 
 $$
 \boxed{
@@ -2181,28 +2175,28 @@ $$
 }
 $$
 
-其任務是建立：
+Its task is to establish:
 
-- typed claim hypergraph；
-- proof-route quotient graph；
-- obstruction transfer；
-- survivor propagation；
-- scope-state graph；
-- closure event algebra；
-- frontier update rules；
-- NS closure graph 的 canonical node / edge schema。
+- typed claim hypergraph;
+- proof-route quotient graph;
+- obstruction transfer;
+- survivor propagation;
+- scope-state graph;
+- closure event algebra;
+- frontier update rules;
+- canonical node / edge schema for the NS closure graph.
 
 ---
 
-# 57. 結論
+# 57. Conclusion
 
-CSM Paper 01 的核心不是把「global」拆成更多名詞，而是把 globality 變成可運算的 theorem metadata。
+The core of CSM Paper 01 is not to split "global" into more nouns, but to transform globality into computable theorem metadata.
 
-一個命題不再只記：
+A proposition is no longer merely recorded as:
 
-> global / local。
+> global / local.
 
-而是記：
+but rather recorded as:
 
 $$
 \boxed{
@@ -2216,16 +2210,16 @@ $$
 }
 $$
 
-這使我們能精確區分：
+This allows us to precisely distinguish:
 
-- 哪些 axis 已閉；
-- 哪些 axis 尚開；
-- 哪些 theorem 只是窄 scope 正確；
-- 哪些 generalization 真正有證書；
-- 哪些 physical interpretation 尚未建立；
-- 哪些 generalized equation-family claim 仍是未定義的自然語言擴張。
+- which axes are closed;
+- which axes are still open;
+- which theorems are only correct in a narrow scope;
+- which generalizations truly possess certificates;
+- which physical interpretations are not yet established;
+- which generalized equation-family claims remain undefined natural language expansions.
 
-對 Navier--Stokes 而言，這一步建立了一個必要的三域防火牆：
+For Navier--Stokes, this step establishes a necessary three-domain firewall:
 
 $$
 \boxed{
@@ -2237,19 +2231,19 @@ $$
 }
 $$
 
-Clay NS 可以在其 formal scope 中具有非常強的 globality，但這種 globality仍然是 typed、bounded-by-definition 的 globality，而不是所有 NS-like equations 或所有 physical fluids 的無界全域性。
+Clay NS can possess very strong globality within its formal scope, but this globality remains a typed, bounded-by-definition globality, rather than an unbounded globality over all NS-like equations or all physical fluids.
 
-因此 CSM 的研究方向不是削弱「global」的力量，而是讓每一種 globality 都獲得它真正的量詞、作用域、bridge 與 closure status。
+Therefore, the research direction of CSM is not to weaken the power of "global", but to ensure that every type of globality acquires its true quantifier, scope, bridge, and closure status.
 
-當這些欄位被投影進 NS closure graph 後，過去數百條 proof route 的「成功、失敗、封路與 survivor」才第一次能被放入同一個相對全域空間中，而且不會因 scope 偷換而產生假閉包。
+Once these fields are projected into the NS closure graph, the "successes, failures, blocked routes, and survivors" of hundreds of past proof routes can, for the first time, be placed into the same relative-global space without generating false closures due to scope bait-and-switch.
 
 ---
 
-# 附錄 A：核心符號
+# Appendix A: Core Symbols
 
 | Symbol | Meaning |
 |---|---|
-| $\mathsf{ScopeContract}(Q)$ | 命題作用域契約 |
+| $\mathsf{ScopeContract}(Q)$ | Proposition scope contract |
 | $\mathsf{DomSig}(Q)$ | domain signature |
 | $\mathsf{Quant}(Q)$ | quantifier envelope |
 | $\mathsf{GProf}(Q)$ | globality profile |
@@ -2270,40 +2264,40 @@ Clay NS 可以在其 formal scope 中具有非常強的 globality，但這種 gl
 
 ---
 
-# 附錄 B：與 CSM Paper 00 的關係
+# Appendix B: Relationship with CSM Paper 00
 
-Paper 00 已建立：
+Paper 00 has established:
 
-- $\Omega^{\rm obs}\neq\Omega^{\rm adm}\neq\Omega^{\rm math}$；
-- relative-global closure；
-- typed closure-space object；
-- closure status；
-- implication / dependency / quotient / obstruction / bridge / generative closure；
-- route-completeness certificate；
-- RGC-0 至 RGC-4；
-- NS formal / physical / generalized 三域的初步區分。
+- $\Omega^{\rm obs}\neq\Omega^{\rm adm}\neq\Omega^{\rm math}$;
+- relative-global closure;
+- typed closure-space objects;
+- closure status;
+- implication / dependency / quotient / obstruction / bridge / generative closure;
+- route-completeness certificates;
+- RGC-0 through RGC-4;
+- The preliminary distinction between the formal, physical, and generalized NS domains.
 
-Paper 01 不取代上述定義，而是把 `Globality Typing Principle` 展開成完整 domain / quantifier system，並規定 RGC status 必須綁定 $\mathsf{GProf}$。
-
----
-
-# 附錄 C：內部理論血統
-
-本文主要承接：
-
-1. **CSM Paper 00** — closure space、relative-global closure、RGC、closure debt、frontier；
-2. **LSI-PSD** — semantic quotient、route graph、proof basin、obstruction confluence、theorem-strength preorder、Proof-Space Observatory；
-3. **UCT / UGC-CUR** — typed non-collapse、bridge certificate、debt、ledger、local-to-absolute gate；
-4. **既有 NS 研究線** — formal NS 與 physical interpretation 不可直接塌縮、NS-203 proof-space instrumentation；
-5. **NS C1--C6 / X72 / DCRP** — 作為後續 closure graph 的實際資料來源，而不是本篇的 theorem content。
+Paper 01 does not replace the above definitions, but expands the `Globality Typing Principle` into a complete domain / quantifier system, and mandates that the RGC status must be bound to $\mathsf{GProf}$.
 
 ---
 
-# 附錄 D：下一步
+# Appendix C: Internal Theoretical Lineage
 
-下一步不應立刻繼續某一條 NS 局部 proof route。
+This paper primarily follows from:
 
-應先完成：
+1. **CSM Paper 00** — closure space, relative-global closure, RGC, closure debt, frontier;
+2. **LSI-PSD** — semantic quotient, route graph, proof basin, obstruction confluence, theorem-strength preorder, Proof-Space Observatory;
+3. **UCT / UGC-CUR** — typed non-collapse, bridge certificate, debt, ledger, local-to-absolute gate;
+4. **Existing NS research lines** — the non-collapsibility of formal NS and physical interpretation, NS-203 proof-space instrumentation;
+5. **NS C1--C6 / X72 / DCRP** — as the actual data sources for the subsequent closure graph, rather than the theorem content of this paper.
+
+---
+
+# Appendix D: Next Steps
+
+The next step should not be to immediately continue any specific local NS proof route.
+
+We should first complete:
 
 $$
 \boxed{
@@ -2311,7 +2305,7 @@ $$
 }
 $$
 
-然後才開始第一個真正的：
+and only then begin the first true:
 
 $$
 \boxed{
@@ -2319,14 +2313,14 @@ $$
 }
 $$
 
-其第一批 ingest source 應優先包含：
+Its first batch of ingest sources should prioritize:
 
-- ETN--X Integration；
-- C1 / C2；
-- C3--C6；
-- X72；
-- DCRP；
-- Proof Asset Map；
-- 已整理的 LSI-PSD NS-203 route / obstruction metadata。
+- ETN--X Integration;
+- C1 / C2;
+- C3--C6;
+- X72;
+- DCRP;
+- Proof Asset Map;
+- Curated LSI-PSD NS-203 route / obstruction metadata.
 
 **END OF CSM PAPER 01 v0.1**

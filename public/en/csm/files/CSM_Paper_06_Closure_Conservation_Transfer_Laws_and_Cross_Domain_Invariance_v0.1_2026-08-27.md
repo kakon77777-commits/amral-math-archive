@@ -1,26 +1,26 @@
 # CSM Paper 06 — Closure Conservation, Transfer Laws, and Cross-Domain Invariance
 
-## 閉包空間數學論：閉包守恆、傳遞律與跨域不變性
+## Closure-Space Mathematics: Closure Conservation, Transfer Laws, and Cross-Domain Invariance
 
 **English Title:** *Closure-Space Mathematics: Closure Conservation, Transfer Laws, and Cross-Domain Invariance*  
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 06  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** en  
 **Status:** Formal Theory / Cross-Domain Transfer Core  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
 ---
 
-## 摘要
+## Abstract
 
-本文建立閉包空間數學論（Closure-Space Mathematics, CSM）的跨域傳遞核心。Paper 00–05 已依序建立相對全域閉包空間、全域性型別、typed closure hypergraph、frontier / cut / exhaustion、closure dynamics，以及 projection / attention / static-dynamic compilation。當一個 closure conclusion 從某個數學 domain、representation 或 proof regime 被搬運到另一個 domain 時，新的核心問題是：
+This paper establishes the cross-domain transfer core of Closure-Space Mathematics (CSM). Papers 00–05 have sequentially established the relative-global closure space, globality typing, typed closure hypergraph, frontier / cut / exhaustion, closure dynamics, and projection / attention / static-dynamic compilation. When a closure conclusion is transported from one mathematical domain, representation, or proof regime to another, the new core question is:
 
-> 哪些 closure 結論可以保存？哪些只能保守降格？哪些會因 scope、assumption、representation、solution notion、model interpretation 或 physical realization 的改變而失去傳遞權限？
+> Which closure conclusions can be preserved? Which must be conservatively downgraded? Which will lose their transfer authority due to changes in scope, assumption, representation, solution notion, model interpretation, or physical realization?
 
-本文將跨域轉換記為：
+This paper denotes the cross-domain transfer as:
 
 $$
 \boxed{
@@ -31,9 +31,9 @@ $$
 }
 $$
 
-箭頭使用部分映射，因為不是所有 closure object 都有合法 target image。
+The arrow uses a partial mapping because not all closure objects have a valid target image.
 
-本文提出 **Closure Transfer Contract**：
+This paper proposes the **Closure Transfer Contract**:
 
 $$
 \boxed{
@@ -52,13 +52,13 @@ $$
 }
 $$
 
-並將 transfer 分成三類：
+and classifies transfers into three categories:
 
-1. **Conservative Transfer**：closure-critical invariants 與 theorem authority 被保存；
-2. **Lossy Transfer**：部分 invariant 被保留，但 closure authority 必降格；
-3. **Non-Transferable**：沒有足夠 bridge / scope / semantic mapping，禁止升格。
+1. **Conservative Transfer**: closure-critical invariants and theorem authority are preserved;
+2. **Lossy Transfer**: partial invariants are preserved, but closure authority must be downgraded;
+3. **Non-Transferable**: insufficient bridge / scope / semantic mapping; promotion is prohibited.
 
-本文核心非坍縮是：
+The core non-collapse of this paper is:
 
 $$
 \boxed{
@@ -68,9 +68,9 @@ $$
 }
 $$
 
-一個 lemma、operator、graph pattern、estimate 或 obstruction 可以在形式上被搬到另一個 domain，但不表示它原本的 theorem status、scope 或 no-go authority 自動跟著搬過去。
+A lemma, operator, graph pattern, estimate, or obstruction can be formally transported to another domain, but this does not mean its original theorem status, scope, or no-go authority automatically transfers with it.
 
-本文定義 **Closure Conservation Profile**：
+This paper defines the **Closure Conservation Profile**:
 
 $$
 \boxed{
@@ -91,9 +91,9 @@ K_{\rm version}
 }
 $$
 
-只有在 transfer 所需的不變量被保存時，才允許相應 closure conclusion 跨域。
+A corresponding closure conclusion is allowed to transfer across domains only when the invariants required for the transfer are preserved.
 
-本文特別處理 Navier--Stokes 三域：
+This paper specifically addresses the three Navier--Stokes domains:
 
 $$
 \mathfrak N_{\rm C},
@@ -103,7 +103,7 @@ $$
 \mathfrak N_{\rm P}.
 $$
 
-其中 formal / Clay NS 的定理可以被用作 generalized NS-like family 的 **special-case anchor**，但不得無證升格成 equation-family theorem；同樣，formal NS theorem 可以支援 physical modeling，但不得被自動稱為 physical law proof。由此得到：
+Theorems from the formal / Clay NS can be used as a **special-case anchor** for a generalized NS-like family, but must not be uncertifiedly promoted to an equation-family theorem; similarly, a formal NS theorem can support physical modeling, but must not be automatically claimed as a physical law proof. Thus, we obtain:
 
 $$
 \boxed{
@@ -113,7 +113,7 @@ $$
 }
 $$
 
-以及：
+and:
 
 $$
 \boxed{
@@ -123,15 +123,15 @@ $$
 }
 $$
 
-但本文不只停在禁止傳遞。更重要的是建立「合法可傳遞的部分」：例如一個 obstruction mechanism、local estimate、spectral decomposition、compactness lemma 或 route split，可以帶著明確 scope 作為 cross-domain transfer asset，只要其 transfer contract 說清楚什麼被保存、什麼被削弱、什麼被留下成 debt。
+However, this paper does not stop at prohibiting transfers. More importantly, it establishes the "legally transferable parts": for example, an obstruction mechanism, local estimate, spectral decomposition, compactness lemma, or route split can serve as a cross-domain transfer asset with a clear scope, provided its transfer contract explicitly states what is preserved, what is weakened, and what is left as debt.
 
-本文最後提出 **Cross-Domain Closure Ledger**：所有 transfer event 都必須記錄 source authority、target authority、invariant preservation、loss、debt、bridge、版本與可逆性，使跨域研究不再是模糊類比，而成為可稽核的 closure operation。
+Finally, this paper proposes the **Cross-Domain Closure Ledger**: all transfer events must record the source authority, target authority, invariant preservation, loss, debt, bridge, version, and reversibility, transforming cross-domain research from vague analogies into auditable closure operations.
 
 ---
 
-# 1. 研究定位
+# 1. Research Positioning
 
-Paper 05 已建立：
+Paper 05 has established:
 
 $$
 \mathfrak C^{\rm nat}
@@ -139,7 +139,7 @@ $$
 \mathcal V.
 $$
 
-本文處理另一種轉換：
+This paper addresses another type of transformation:
 
 $$
 \boxed{
@@ -149,11 +149,11 @@ $$
 }
 $$
 
-這不是 view projection，而是 domain / representation / regime 之間的 closure transfer。
+This is not a view projection, but a closure transfer between domains / representations / regimes.
 
 # 2. Domain
 
-令 $A,B$ 表示兩個 closure domains。domain 可以差在 equation family、parameter family、solution notion、regularity class、boundary condition、dimension、geometry、representation、formal system、model interpretation 或 physical realization。
+Let $A,B$ denote two closure domains. Domains can differ in equation family, parameter family, solution notion, regularity class, boundary condition, dimension, geometry, representation, formal system, model interpretation, or physical realization.
 
 # 3. Transfer Operator
 
@@ -166,11 +166,11 @@ $$
 }
 $$
 
-使用部分映射 $\rightharpoonup$ 表示某些 object 可能沒有合法 image。
+The partial mapping $\rightharpoonup$ is used to indicate that some objects may not have a valid image.
 
 # 4. Transfer Object
 
-可被 transfer 的 object：
+Objects that can be transferred:
 
 $$
 x_A\in
@@ -189,17 +189,17 @@ $$
 
 # 5. Structure Transfer
 
-如果只搬運 formal shape：
+If only the formal shape is transported:
 
 $$
 x_A\mapsto x_B,
 $$
 
-稱 $\mathsf{StructureTransfer}$。
+This is called $\mathsf{StructureTransfer}$.
 
 # 6. Authority Transfer
 
-若連 theorem / closure authority 也搬運：
+If the theorem / closure authority is also transported:
 
 $$
 \sigma_A(x)
@@ -207,7 +207,7 @@ $$
 \sigma_B(x'),
 $$
 
-稱 $\mathsf{AuthorityTransfer}$。
+This is called $\mathsf{AuthorityTransfer}$.
 
 # 7. First Noncollapse
 
@@ -260,7 +260,7 @@ $$
 
 # 11. Domain Map
 
-$\mathsf{DomainMap}_{A\to B}$ 說明 source domain、target domain、shared structure、changed structure、omitted structure 與 added structure。
+$\mathsf{DomainMap}_{A\to B}$ specifies the source domain, target domain, shared structure, changed structure, omitted structure, and added structure.
 
 # 12. Object Map
 
@@ -268,7 +268,7 @@ $$
 \mathsf{ObjectMap}_{A\to B}(x_A)=x_B.
 $$
 
-若無合法 image：
+If there is no valid image:
 
 $$
 \boxed{
@@ -290,11 +290,11 @@ $$
 \sigma_A\rightharpoonup\sigma_B.
 $$
 
-status 可能保留、降格或 undefined。
+The status may be preserved, downgraded, or undefined.
 
 # 15. Bridge
 
-任何非平凡跨域 transfer 必須帶：
+Any non-trivial cross-domain transfer must carry:
 
 $$
 \boxed{
@@ -310,11 +310,11 @@ $$
 }
 $$
 
-記錄 semantic、scope、assumption、representation、certificate 與 completeness loss。
+Records semantic, scope, assumption, representation, certificate, and completeness loss.
 
 # 17. Transfer Debt
 
-若 transfer 後尚缺 uniformity、target fidelity、physical interpretation、solution compatibility 或 representation robustness，建立：
+If uniformity, target fidelity, physical interpretation, solution compatibility, or representation robustness is still lacking after the transfer, establish:
 
 $$
 \boxed{
@@ -336,7 +336,7 @@ $$
 
 # 19. Conservative Transfer
 
-若 closure-critical invariants 全保存，且 authority transfer 有 theorem-level support：
+If all closure-critical invariants are preserved, and the authority transfer has theorem-level support:
 
 $$
 \boxed{
@@ -346,7 +346,7 @@ $$
 
 # 20. Lossy Transfer
 
-若只保存部分 structure：
+If only partial structure is preserved:
 
 $$
 \boxed{
@@ -354,11 +354,11 @@ $$
 }
 $$
 
-target status 必降格。
+The target status must be downgraded.
 
 # 21. Non-Transferable
 
-若沒有合法 bridge：
+If there is no valid bridge:
 
 $$
 \boxed{
@@ -366,7 +366,7 @@ $$
 }
 $$
 
-不能以 analogy 取代 transfer proof。
+Analogy cannot replace a transfer proof.
 
 # 22. Closure Conservation Profile
 
@@ -382,31 +382,31 @@ $$
 
 # 23. Identity Conservation
 
-$K_{\rm id}=1$ 表示 target object 可追溯回 source identity。
+$K_{\rm id}=1$ indicates that the target object can be traced back to the source identity.
 
 # 24. Target Conservation
 
-$K_{\rm target}=1$ 表示 formal target 沒有被偷偷換掉。
+$K_{\rm target}=1$ indicates that the formal target has not been stealthily swapped.
 
 # 25. Scope Conservation
 
-$K_{\rm scope}=1$ 表示 source theorem 的量詞作用域在 target 中被合法保存。
+$K_{\rm scope}=1$ indicates that the quantifier scope of the source theorem is legally preserved in the target.
 
 # 26. Assumption Conservation
 
-$K_{\rm asm}=1$ 表示 target theorem 仍滿足 source assumptions，或 assumptions 有 certified translation。
+$K_{\rm asm}=1$ indicates that the target theorem still satisfies the source assumptions, or the assumptions have a certified translation.
 
 # 27. Status Conservation
 
-$K_{\rm status}=1$ 表示 theorem-level closure status 可保持。
+$K_{\rm status}=1$ indicates that the theorem-level closure status can be maintained.
 
 # 28. Certificate Conservation
 
-$K_{\rm cert}=1$ 表示 source certificate 在 target 中仍可驗證或有 target-side reconstruction。
+$K_{\rm cert}=1$ indicates that the source certificate remains verifiable in the target or has a target-side reconstruction.
 
 # 29. Debt Conservation
 
-Debt 不是應保持數值不變的量，但 transfer 必須：
+Debt is not a quantity whose numerical value should remain unchanged, but the transfer must satisfy:
 
 $$
 \boxed{
@@ -416,15 +416,15 @@ $$
 }
 $$
 
-不得消失。
+It must not disappear.
 
 # 30. Bridge Conservation
 
-跨 multiple transfers 時，bridge lineage 必須保留。
+When crossing multiple transfers, the bridge lineage must be preserved.
 
 # 31. Frontier Conservation
 
-source frontier 映射後，target 可能出現額外 frontier。因此：
+After mapping the source frontier, the target may exhibit additional frontiers. Therefore:
 
 $$
 \boxed{
@@ -434,25 +434,25 @@ $$
 }
 $$
 
-最多是候選關係，不保證等號。
+This is at most a candidate relationship; equality is not guaranteed.
 
 # 32. Version Conservation
 
-所有 transfer conclusion 必標 $(\nu_A,\nu_B)$。
+All transfer conclusions must be tagged with $(\nu_A,\nu_B)$.
 
 # 33. Strong Conservation
 
-若 $K_i=1$ 對 declared invariant family 全成立，稱 strong conservative transfer。
+If $K_i=1$ holds for the entire declared invariant family, it is called a strong conservative transfer.
 
 # 34. Partial Conservation
 
-若只保存 subset：
+If only a subset is preserved:
 
 $$
 \mathfrak K'\subsetneq\mathfrak K,
 $$
 
-則 authority 必 purpose-relative。
+Then the authority must be purpose-relative.
 
 # 35. Transfer Authority Level
 
@@ -471,27 +471,27 @@ $$
 
 # 36. Analogy Authority
 
-最低層：形式相似，可作研究啟發，不能封路。
+The lowest level: formal similarity, can serve as research inspiration, but cannot block routes.
 
 # 37. Structure Authority
 
-可搬運 graph pattern、operator decomposition、proof skeleton，但不能搬 theorem truth。
+Can transport graph patterns, operator decompositions, and proof skeletons, but cannot transport theorem truth.
 
 # 38. Lemma Authority
 
-若 lemma assumptions 在 target 中完整成立，可 transfer lemma。
+If the lemma assumptions hold completely in the target, the lemma can be transferred.
 
 # 39. Obstruction Authority
 
-若 obstruction propagation contract 在 target 中 PASS，才可封 target route。
+A target route can be blocked only if the obstruction propagation contract evaluates to PASS in the target.
 
 # 40. Theorem Authority
 
-若 theorem statement、scope、assumptions、proof object 全部 transfer-valid，可保持 theorem status。
+If the theorem statement, scope, assumptions, and proof object are all transfer-valid, the theorem status can be maintained.
 
 # 41. Domain Authority
 
-最高級：整個 source closure conclusion 對 target domain 仍成立，要求最強。
+The highest level: the entire source closure conclusion remains valid for the target domain, representing the strongest requirement.
 
 # 42. Authority Ladder
 
@@ -513,11 +513,11 @@ $$
 
 # 43. Authority Cannot Jump
 
-禁止 $\mathsf{ANALOGY}\to\mathsf{THEOREM}$ 無證跳級。
+Uncertified jumping from $\mathsf{ANALOGY}\to\mathsf{THEOREM}$ is prohibited.
 
 # 44. Transfer as Typed Promotion
 
-每次 authority 升級都需要：
+Every authority promotion requires:
 
 $$
 \boxed{
@@ -527,21 +527,21 @@ $$
 
 # 45. Representation Transfer
 
-若 $\rho_1\to\rho_2$ 只是 representation change，不應改 mathematical identity。
+If $\rho_1\to\rho_2$ is merely a representation change, it should not alter the mathematical identity.
 
 # 46. Representation-Equivalent Transfer
 
-若有：
+If there is a:
 
 $$
 \mathsf{RepEquivCert}_{\rho_1\leftrightarrow\rho_2},
 $$
 
-則 theorem authority 可保留。
+Then the theorem authority can be preserved.
 
 # 47. Representation-Sensitive Search
 
-即使 theorem identity 不變，search success rate 可不同。因此：
+Even if the theorem identity remains unchanged, the search success rate may differ. Therefore:
 
 $$
 \boxed{
@@ -553,13 +553,13 @@ $$
 
 # 48. Search-Regime Transfer
 
-從 prover / model / method family $R_1$ 到 $R_2$：
+From prover / model / method family $R_1$ to $R_2$:
 
 $$
 \mathcal T_{R_1\to R_2}.
 $$
 
-研究失敗不可自動 transfer。
+Research failures cannot be automatically transferred.
 
 # 49. Failure Nontransfer
 
@@ -573,7 +573,7 @@ $$
 
 # 50. Proof Transfer
 
-若 proof object 可在 target formal system replay，則可建立 proof transfer cert。
+If the proof object can be replayed in the target formal system, a proof transfer cert can be established.
 
 # 51. Formal-System Transfer
 
@@ -581,11 +581,11 @@ $$
 \mathcal T_{\mathcal F_1\to\mathcal F_2}
 $$
 
-需要 syntax / semantics / axiom / theorem bridge。
+Requires a syntax / semantics / axiom / theorem bridge.
 
 # 52. Conservative Formal Translation
 
-若 source proof 在 target system 保持 theorem semantics：
+If the source proof maintains the theorem semantics in the target system:
 
 $$
 \boxed{
@@ -595,11 +595,11 @@ $$
 
 # 53. Non-Conservative Formal Translation
 
-若 target 新 axioms 使 theorem 變容易，不能回推 source。
+If new axioms in the target make the theorem easier to prove, this cannot be retroactively applied to the source.
 
 # 54. Transfer Directionality
 
-一般：
+In general:
 
 $$
 \boxed{
@@ -611,7 +611,7 @@ $$
 
 # 55. Transfer Inversion
 
-只有有 inverse transfer cert 才可雙向。
+Bidirectionality is only possible if an inverse transfer cert exists.
 
 # 56. Transfer Composition
 
@@ -621,7 +621,7 @@ $$
 \mathcal T_{B\to C}\circ\mathcal T_{A\to B}.
 $$
 
-不自動成立。
+Does not hold automatically.
 
 # 57. Transfer Composition Certificate
 
@@ -633,19 +633,19 @@ $$
 
 # 58. Composition Loss
 
-即使兩段各自合法，$\mathsf{Loss}_{A\to C}$ 可能大於單段 loss 的簡單相加。
+Even if both segments are individually valid, $\mathsf{Loss}_{A\to C}$ may be greater than the simple addition of the single-segment losses.
 
 # 59. Nontransitive Transfer
 
-$A\to B$ 且 $B\to C$ 不保證 $A\to C$。
+$A\to B$ and $B\to C$ do not guarantee $A\to C$.
 
 # 60. Transfer Coherence
 
-多條 transfer path 到同一 target 時，應檢查 target status 是否 coherent。
+When multiple transfer paths lead to the same target, the target status should be checked for coherence.
 
 # 61. Coherence Failure
 
-若兩條 path 產生不同 authority / scope，標：
+If two paths produce different authority / scope, tag with:
 
 $$
 \boxed{
@@ -655,7 +655,7 @@ $$
 
 # 62. Transfer Ledger
 
-每個 transfer event：
+Each transfer event:
 
 $$
 e_{\mathcal T}
@@ -667,11 +667,11 @@ $$
 
 # 63. Transfer Replay
 
-跨域 closure conclusion 必可由 transfer ledger 重放。
+Cross-domain closure conclusions must be replayable from the transfer ledger.
 
 # 64. Transfer Diff
 
-不同 transfer policy 可比較：
+Different transfer policies can be compared via:
 
 $$
 \Delta\mathcal T.
@@ -679,15 +679,15 @@ $$
 
 # 65. Scope Transfer
 
-從 scope $D_0$ 到 $D_1$，若 $D_1$ 更廣，通常是 promotion，不是 conservation。
+From scope $D_0$ to $D_1$, if $D_1$ is broader, it is usually a promotion, not a conservation.
 
 # 66. Scope Narrowing
 
-從廣到窄通常較容易 conservative。
+Going from broad to narrow is usually easier to keep conservative.
 
 # 67. Scope Widening
 
-從窄到廣需要：
+Going from narrow to broad requires:
 
 $$
 \boxed{
@@ -695,11 +695,11 @@ $$
 }
 $$
 
-或其他 globality bridge。
+or another globality bridge.
 
 # 68. Parameter Transfer
 
-若 theorem 對 $\theta=\theta_0$ 成立，不自動 transfer 到 $\theta\in\Theta$。
+If a theorem holds for $\theta=\theta_0$, it does not automatically transfer to $\theta\in\Theta$.
 
 # 69. Uniformity Debt
 
@@ -709,35 +709,35 @@ $$
 }
 $$
 
-是最常見 cross-parameter debt。
+is the most common cross-parameter debt.
 
 # 70. Dimension Transfer
 
-2D theorem 不自動 transfer 3D。
+A 2D theorem does not automatically transfer to 3D.
 
 # 71. Geometry Transfer
 
-periodic domain、whole space、bounded domain 之間都需要 boundary / function-space bridge。
+Transfers between periodic domains, whole spaces, and bounded domains all require boundary / function-space bridges.
 
 # 72. Boundary Transfer
 
-boundary condition 改變可能改變 energy identity、spectrum、pressure representation、compactness 與 regularity。
+A change in boundary conditions may alter the energy identity, spectrum, pressure representation, compactness, and regularity.
 
 # 73. Solution-Notion Transfer
 
-weak solution、mild solution、strong solution、ancient solution 等不可混用。
+Weak solutions, mild solutions, strong solutions, ancient solutions, etc., cannot be mixed.
 
 # 74. Regularity Transfer
 
-從 $H^s$ 到 $C^\alpha$ 需要 embedding / regularity theorem。
+Transferring from $H^s$ to $C^\alpha$ requires an embedding / regularity theorem.
 
 # 75. Operator Transfer
 
-formal operator 可在 domain change 後保留 algebraic form，但 analytic properties 可能改變。
+A formal operator may retain its algebraic form after a domain change, but its analytic properties may change.
 
 # 76. Estimate Transfer
 
-一個 estimate 的 constant 可能依 domain / parameter 爆炸。因此：
+The constant of an estimate may blow up depending on the domain / parameter. Therefore:
 
 $$
 \boxed{
@@ -749,33 +749,31 @@ $$
 
 # 77. Obstruction Transfer
 
-source obstruction $O_A$ 只有在 target：
+A source obstruction $O_A$ can block a route only when the target satisfies:
 
 $$
 \mathsf{OPCert}_B(O_B\to R_B)=\mathsf{PASS}
 $$
 
-時才可封路。
-
 # 78. Obstruction Downgrade
 
-若 source 是 FORMAL_NO_GO，但 target 只保留部分 assumptions，可降為 DIAGNOSTIC 或 CONDITIONAL_NO_GO。
+If the source is FORMAL_NO_GO, but the target only preserves partial assumptions, it can be downgraded to DIAGNOSTIC or CONDITIONAL_NO_GO.
 
 # 79. Survivor Transfer
 
-source survivor 不代表 target survivor。
+A source survivor does not imply a target survivor.
 
 # 80. Survivor Lift
 
-只有當 target 新 constraints 不封 route 時，才可 transfer survivor。
+A survivor can be transferred only when the new constraints in the target do not block the route.
 
 # 81. Frontier Transfer
 
-source minimal survivor 可變成 target 的 survivor、blocked、irrelevant、split frontier 或 undefined。
+A source minimal survivor can become a survivor, blocked, irrelevant, split frontier, or undefined in the target.
 
 # 82. Cut Transfer
 
-source cut $C_A$ 不自動是 target cut。需要：
+A source cut $C_A$ is not automatically a target cut. It requires:
 
 $$
 \boxed{
@@ -785,7 +783,7 @@ $$
 
 # 83. Cover Transfer
 
-source obstruction cover 到 target 必重新檢查 uncovered route classes。
+When a source obstruction cover is transferred to the target, the uncovered route classes must be re-examined.
 
 # 84. Exhaustion Transfer
 
@@ -793,11 +791,11 @@ $$
 \mathsf{EXH}_{k,A}
 $$
 
-不自動 transfer 到 $\mathsf{EXH}_{k,B}$。
+does not automatically transfer to $\mathsf{EXH}_{k,B}$.
 
 # 85. Exhaustion Downgrade by Transfer
 
-跨域後常見：
+Common after cross-domain transfer:
 
 $$
 \mathsf{EXH}_{3,A}
@@ -805,11 +803,11 @@ $$
 \mathsf{EXH}_{1,B}
 $$
 
-或只保留 structure-level conclusion。
+or only preserving the structure-level conclusion.
 
 # 86. Debt Transfer Law
 
-source debt 不能消失。target 還可能新增：
+Source debt cannot disappear. The target may also add:
 
 $$
 \mathsf{Debt}_B
@@ -821,39 +819,39 @@ $$
 
 # 87. Debt Cancellation No-Go
 
-除非 target theorem 真正 discharge source debt，不能因 domain change 把 debt 刪掉。
+Unless the target theorem genuinely discharges the source debt, the debt cannot be deleted simply due to a domain change.
 
 # 88. Certificate Transfer
 
-source certificate 可以 replay、translate、wrap 或 invalidate。
+A source certificate can be replayed, translated, wrapped, or invalidated.
 
 # 89. Certificate Replay
 
-若 target 系統可直接重驗 source proof，這是最強 transfer。
+If the target system can directly re-verify the source proof, this is the strongest transfer.
 
 # 90. Certificate Translation
 
-若 proof language 不同，可做 verified translation。
+If the proof languages differ, a verified translation can be performed.
 
 # 91. Certificate Wrapping
 
-若 source theorem 作 target assumption，只能保留 source authority，不等於 target theorem proof。
+If the source theorem is used as a target assumption, it can only retain the source authority; it does not equate to a target theorem proof.
 
 # 92. Certificate Invalidation
 
-若 target assumptions 不滿足，source cert 只能保留歷史價值。
+If the target assumptions are not satisfied, the source cert only retains historical value.
 
 # 93. Conservative Extension
 
-若 target theory 是 source 的 conservative extension，source theorem status 可保留。
+If the target theory is a conservative extension of the source, the source theorem status can be preserved.
 
 # 94. Nonconservative Extension
 
-若 target 加強 axioms，target proof 不能反推 source。
+If the target strengthens the axioms, the target proof cannot be retroactively applied to the source.
 
 # 95. Closure Conservation Law Candidate
 
-在某 conservative transfer family 中，可以研究：
+Within a certain conservative transfer family, one can study:
 
 $$
 \boxed{
@@ -863,19 +861,19 @@ $$
 }
 $$
 
-這是 status conservation law candidate。
+This is a status conservation law candidate.
 
 # 96. Closure Monotonicity Candidate
 
-若 $B$ 是 restriction of $A$，可能有 closure authority 從 $A$ 向 $B$ 保留，但仍需 theorem-specific 檢查。
+If $B$ is a restriction of $A$, closure authority might be preserved from $A$ to $B$, but theorem-specific checks are still required.
 
 # 97. Closure Quantity Warning
 
-本文不主張存在 universal scalar $E_{\rm closure}$ 像物理能量般全域守恆。
+This paper does not claim the existence of a universal scalar $E_{\rm closure}$ that is globally conserved like physical energy.
 
 # 98. Conservation Is Typed
 
-本文「守恆」是指定 invariant family 在指定 transfer contract 下保持，不是一個神秘總量。
+In this paper, "conservation" means that a specified invariant family is maintained under a specified transfer contract, not a mysterious total quantity.
 
 # 99. Conservative Transfer Invariant
 
@@ -885,7 +883,7 @@ $$
 }
 $$
 
-是可能的形式化方向之一。
+is one possible direction for formalization.
 
 # 100. Loss Profile
 
@@ -901,27 +899,27 @@ $$
 
 # 101. Zero Loss
 
-$\mathbf L=0$ 是 conservative candidate。
+$\mathbf L=0$ is a conservative candidate.
 
 # 102. Partial Loss
 
-若 $\mathbf L\neq0$，authority 必降格或附 debt。
+If $\mathbf L\neq0$, the authority must be downgraded or accompanied by debt.
 
 # 103. Irreversible Transfer
 
-如果 loss 無法 reconstruct，稱 irreversible transfer。
+If the loss cannot be reconstructed, it is called an irreversible transfer.
 
 # 104. Reversible Transfer
 
-若存在 $\mathcal T^{-1}$ 使 closure-equivalent recovery，稱 reversible。
+If there exists $\mathcal T^{-1}$ enabling a closure-equivalent recovery, it is called reversible.
 
 # 105. Reversible Structure vs Authority
 
-structure 可逆仍不代表 theorem authority 可逆。
+A reversible structure still does not imply a reversible theorem authority.
 
 # 106. Cross-Domain Closure Graph
 
-將 domain 當 node：
+Treating domains as nodes:
 
 $$
 \boxed{
@@ -931,7 +929,7 @@ $$
 
 # 107. Domain Node
 
-例如：
+For example:
 
 $$
 \mathfrak N_{\rm C},
@@ -943,15 +941,15 @@ $$
 
 # 108. Domain Edge
 
-每條 $A\xrightarrow{\mathcal T}B$ 帶 transfer type、authority level、invariants、loss、debt、cert 與 version。
+Each $A\xrightarrow{\mathcal T}B$ carries a transfer type, authority level, invariants, loss, debt, cert, and version.
 
 # 109. Domain SCC Warning
 
-即使 domain graph 形成 strongly connected component，也不表示 domains theorem-equivalent。
+Even if the domain graph forms a strongly connected component, it does not mean the domains are theorem-equivalent.
 
 # 110. Bidirectional Bridge
 
-只有雙向 theorem-level conservative transfer 才可能支持 stronger equivalence claim。
+Only a bidirectional theorem-level conservative transfer can potentially support a stronger equivalence claim.
 
 # 111. NS Formal Domain
 
@@ -961,7 +959,7 @@ $$
 }
 $$
 
-為指定 formal NS target family。
+is the designated formal NS target family.
 
 # 112. NS Generalized Domain
 
@@ -971,7 +969,7 @@ $$
 }
 $$
 
-必須先宣告 signature $\Sigma$。
+must first declare the signature $\Sigma$.
 
 # 113. NS Physical Domain
 
@@ -981,7 +979,7 @@ $$
 }
 $$
 
-包含 model-to-world interpretation、measurement 與 physical applicability。
+includes model-to-world interpretation, measurement, and physical applicability.
 
 # 114. Formal-to-Generalized Transfer
 
@@ -989,7 +987,7 @@ $$
 \mathcal T_{\rm C\to G}.
 $$
 
-最安全地先視為：
+is most safely viewed initially as:
 
 $$
 \boxed{
@@ -999,7 +997,7 @@ $$
 
 # 115. Special-Case Anchor
 
-若 $\mathfrak N_{\rm C}$ 是 $\mathfrak N_{\rm G}^{\Sigma}$ 的一個合法 member，formal theorem 可成為 generalized family 的一個 case。但：
+If $\mathfrak N_{\rm C}$ is a valid member of $\mathfrak N_{\rm G}^{\Sigma}$, a formal theorem can serve as a case for the generalized family. However:
 
 $$
 \boxed{
@@ -1011,7 +1009,7 @@ $$
 
 # 116. Generalized-to-Formal Restriction
 
-若 generalized theorem 真正涵蓋 formal NS，則可 restriction 到 formal domain。
+If the generalized theorem genuinely covers the formal NS, it can be restricted to the formal domain.
 
 # 117. Formal-to-Physical Transfer
 
@@ -1019,7 +1017,7 @@ $$
 \mathcal T_{\rm C\to P}
 $$
 
-需要 model interpretation bridge。
+requires a model interpretation bridge.
 
 # 118. Mathematical Truth vs Physical Adequacy
 
@@ -1033,11 +1031,11 @@ $$
 
 # 119. Physical-to-Formal Feedback
 
-實驗可能提示 model discrepancy、parameter correction、missing mechanism，但不能直接改 formal theorem truth。
+Experiments may suggest model discrepancies, parameter corrections, or missing mechanisms, but they cannot directly alter formal theorem truth.
 
 # 120. Physical Feedback Event
 
-可生成：
+can generate:
 
 $$
 \boxed{
@@ -1045,7 +1043,7 @@ $$
 }
 $$
 
-而不是 theorem refutation。
+rather than a theorem refutation.
 
 # 121. Generalized-to-Physical Transfer
 
@@ -1053,7 +1051,7 @@ $$
 \mathcal T_{\rm G\to P}
 $$
 
-需要 parameter identification、observables、scale mapping、physical validity regime。
+requires parameter identification, observables, scale mapping, and a physical validity regime.
 
 # 122. NS Three-Domain Firewall
 
@@ -1079,61 +1077,61 @@ $$
 }
 $$
 
-每條 edge 有不同 bridge semantics。
+Each edge has different bridge semantics.
 
 # 124. Clay Theorem Transfer Limit
 
-即使 Clay formal problem 被解：
+Even if the Clay formal problem is solved:
 
 $$
 \mathsf{CLOSED}^{+}_{\mathfrak N_{\rm C}},
 $$
 
-最多直接得到 formal-domain closure。
+it at most directly yields a formal-domain closure.
 
 # 125. Generalized Family Debt
 
-要升到：
+To promote to:
 
 $$
 \mathsf{CLOSED}^{+}_{\mathfrak N_{\rm G}^{\Sigma}}
 $$
 
-需要 equation-family uniformity / signature completeness。
+requires equation-family uniformity / signature completeness.
 
 # 126. Physical Domain Debt
 
-要升到：
+To promote to:
 
 $$
 \mathsf{CLOSED}^{+}_{\mathfrak N_{\rm P}}
 $$
 
-需要 model-to-world adequacy，不只是 PDE proof。
+requires model-to-world adequacy, not just a PDE proof.
 
 # 127. NS Obstruction Transfer Example
 
-若 formal NS 中某 scalar additive budget 被證明不足，它可以作 generalized family 的 method-level warning，但不能自動變成 generalized global no-go。
+If a scalar additive budget in the formal NS is proven insufficient, it can serve as a method-level warning for the generalized family, but it cannot automatically become a generalized global no-go.
 
 # 128. NS Spectral Lemma Transfer Example
 
-某 Fourier / Riesz lemma 若 target family 保留相同 operator structure，可 transfer lemma。
+If a target family preserves the same operator structure, a Fourier / Riesz lemma can be transferred.
 
 # 129. NS Ancient-Profile Transfer Example
 
-ancient solution rigidity 結果若 target equation family 改 nonlinear term，通常不能直接 transfer theorem authority。
+If the target equation family modifies the nonlinear term, ancient solution rigidity results usually cannot directly transfer their theorem authority.
 
 # 130. NS Survivor Transfer Example
 
-DCRP survivor 可作 generalized mechanism candidate，但不是 generalized blow-up existence proof。
+A DCRP survivor can serve as a generalized mechanism candidate, but it is not a generalized blow-up existence proof.
 
 # 131. Cross-Series Transfer
 
-X72、C6、DCRP 之間也可視為 subdomain / representation transfer。
+Transfers between X72, C6, and DCRP can also be viewed as subdomain / representation transfers.
 
 # 132. Series Transfer Contract
 
-每個 cross-series merge 需要：
+Every cross-series merge requires:
 
 $$
 \boxed{
@@ -1143,11 +1141,11 @@ $$
 
 # 133. Same Word No Transfer
 
-兩系列都用 carrier 不代表同一 object。
+Using 'carrier' in both series does not imply they are the same object.
 
 # 134. Same Equation No Full Transfer
 
-即使都研究同一 NS equation，不同 route scope / assumptions 也可使 obstruction 不可直接 transfer。
+Even if both study the same NS equation, different route scopes / assumptions can render an obstruction non-transferable directly.
 
 # 135. Transfer Firewall for NO-GO
 
@@ -1159,7 +1157,7 @@ $$
 }
 $$
 
-除非 OPCert + TContract 都 PASS。
+Unless both OPCert and TContract evaluate to PASS.
 
 # 136. Transfer Firewall for SURVIVOR
 
@@ -1203,7 +1201,7 @@ $$
 
 # 140. Transfer Frontier
 
-定義跨域 transfer 後新增 frontier：
+Define the newly added frontier after a cross-domain transfer:
 
 $$
 \boxed{
@@ -1217,7 +1215,7 @@ $$
 
 # 141. Transfer-Induced Frontier
 
-這些是 source domain 不存在、但 target domain 新出現的 obligations。
+These are obligations that do not exist in the source domain but newly appear in the target domain.
 
 # 142. Transfer-Induced Debt
 
@@ -1233,15 +1231,15 @@ $$
 
 # 143. Conservative Transfer Test
 
-若 target statement 對齊、scope preserved、assumptions preserved、cert replayable、no new frontier、no new debt，則 conservative candidate。
+If the target statement aligns, scope is preserved, assumptions are preserved, cert is replayable, no new frontier, and no new debt, then it is a conservative candidate.
 
 # 144. Lossy Transfer Test
 
-若 structure 可搬但 scope narrower、cert not replayable、new debt 出現，則 lossy。
+If the structure is transferable but the scope is narrower, cert is not replayable, or new debt appears, then it is lossy.
 
 # 145. Nontransferability Test
 
-若 target semantics 無可靠 mapping：
+If there is no reliable mapping for the target semantics:
 
 $$
 \boxed{
@@ -1269,15 +1267,15 @@ $$
 
 # 147. Transfer Staleness
 
-source theorem 或 bridge revision 時，target transfer cert 進 $\mathsf{STALE}$。
+When the source theorem or bridge undergoes revision, the target transfer cert enters $\mathsf{STALE}$.
 
 # 148. Transfer Revalidation
 
-跨域 transfer 需要 version-aware replay。
+Cross-domain transfers require version-aware replay.
 
 # 149. Transfer Reopening Wave
 
-若 high-centrality source theorem 被修訂，所有 target descendants 也可能 reopen。
+If a high-centrality source theorem is revised, all target descendants may also reopen.
 
 # 150. Cross-Domain Reopening
 
@@ -1287,15 +1285,15 @@ W_{\rm reopen}^{A\to B}
 }
 $$
 
-衡量 transfer lineage 造成的 reopening mass。
+Measures the reopening mass caused by the transfer lineage.
 
 # 151. Transfer Fragility
 
-高 authority transfer 若依賴少數 fragile bridges，需標高 fragility。
+If a high-authority transfer relies on a few fragile bridges, it must be tagged with high fragility.
 
 # 152. Transfer Robustness
 
-若多種 independent bridge / representation 都支持同一 transfer，可提高 robustness。
+If multiple independent bridges / representations support the same transfer, robustness can be increased.
 
 # 153. Robustness Not Truth
 
@@ -1309,11 +1307,11 @@ $$
 
 # 154. Closure Transfer Fixed Point
 
-若 repeated transfer / revalidation 後 target status 穩定，可稱 transfer-relative fixed point。
+If the target status stabilizes after repeated transfers / revalidations, it can be called a transfer-relative fixed point.
 
 # 155. Transfer Fixed Point Nonclaim
 
-它不表示 domains globally equivalent。
+It does not imply that the domains are globally equivalent.
 
 # 156. Transfer Cycle
 
@@ -1321,15 +1319,15 @@ $$
 A\to B\to C\to A
 $$
 
-可能形成 transfer cycle。
+may form a transfer cycle.
 
 # 157. Cycle Consistency
 
-若回到 $A$ 後 authority / scope 改變，表示 cycle 有 loss 或 gain。
+If the authority / scope changes upon returning to $A$, it indicates the cycle has a loss or gain.
 
 # 158. Authority Gain No-Go
 
-無證情況下：
+Without certification:
 
 $$
 \boxed{
@@ -1339,7 +1337,7 @@ $$
 
 # 159. Authority Conservation Principle
 
-對 conservative cycle：
+For a conservative cycle:
 
 $$
 \boxed{
@@ -1351,7 +1349,7 @@ $$
 
 # 160. Debt Conservation Principle
 
-跨 cycle：
+Across a cycle:
 
 $$
 \boxed{
@@ -1361,7 +1359,7 @@ $$
 }
 $$
 
-除非有 explicit discharge。
+unless there is an explicit discharge.
 
 # 161. Machine Record — Transfer Contract
 
@@ -1436,51 +1434,51 @@ ns_transfer_triangle:
 
 # 165. Validation Scenario A — Conservative restriction
 
-廣 domain theorem restriction 到較窄 domain。expected: theorem authority preserved。
+A broad domain theorem restricted to a narrower domain. Expected: theorem authority preserved.
 
 # 166. Validation Scenario B — Invalid widening
 
-single parameter theorem 擴張全 parameter family。expected: uniformity debt，THEOREM transfer FAIL。
+A single parameter theorem expanded to an entire parameter family. Expected: uniformity debt, THEOREM transfer FAIL.
 
 # 167. Validation Scenario C — Representation equivalence
 
-verified representation equivalence。expected: theorem status preserved。
+Verified representation equivalence. Expected: theorem status preserved.
 
 # 168. Validation Scenario D — Search failure transfer
 
-one prover failed。expected: failure does not transfer。
+One prover failed. Expected: failure does not transfer.
 
 # 169. Validation Scenario E — Obstruction downgrade
 
-formal no-go assumptions target 不完整。expected: downgrade to diagnostic/conditional。
+Formal no-go assumptions are incomplete in the target. Expected: downgrade to diagnostic/conditional.
 
 # 170. Validation Scenario F — Cut transfer
 
-source cut 在 target 有新 routes。expected: CutTransferCert FAIL。
+Source cut has new routes in the target. Expected: CutTransferCert FAIL.
 
 # 171. Validation Scenario G — Exhaustion transfer
 
-source EXH3，target route grammar 更廣。expected: downgrade / new completeness debt。
+Source EXH3, target route grammar is broader. Expected: downgrade / new completeness debt.
 
 # 172. Validation Scenario H — Formal NS to generalized NS
 
-formal theorem as special case anchor。expected: STRUCTURE/THEOREM-on-subcase，not DOMAIN theorem。
+Formal theorem as a special case anchor. Expected: STRUCTURE/THEOREM-on-subcase, not DOMAIN theorem.
 
 # 173. Validation Scenario I — Formal NS to physical NS
 
-formal theorem transferred to model interpretation。expected: physical adequacy debt。
+Formal theorem transferred to model interpretation. Expected: physical adequacy debt.
 
 # 174. Validation Scenario J — Physical feedback
 
-experiment suggests missing mechanism。expected: model revision candidate，not theorem refutation。
+Experiment suggests a missing mechanism. Expected: model revision candidate, not theorem refutation.
 
 # 175. Validation Scenario K — Cross-series NO-GO
 
-same label, different scope。expected: no merge without SeriesTContract。
+Same label, different scope. Expected: no merge without SeriesTContract.
 
 # 176. Validation Scenario L — Transfer cycle
 
-authority after cycle exceeds input without discharge/promote cert。expected: FAIL。
+Authority after cycle exceeds input without a discharge/promote cert. Expected: FAIL.
 
 # 177. Core No-Go 1
 
@@ -1562,67 +1560,67 @@ $$
 }
 $$
 
-# 185. Paper 06 核心命題一
+# 185. Paper 06 Core Proposition I
 
 ## Conservative Transfer Principle
 
-若 target statement、scope、assumptions、certificate、representation semantics 與 version 均被保存，則 source theorem authority 可在 target 中保持。
+If the target statement, scope, assumptions, certificate, representation semantics, and version are all preserved, then the source theorem authority can be maintained in the target.
 
-# 186. Paper 06 核心命題二
+# 186. Paper 06 Core Proposition II
 
 ## Lossy Transfer Downgrade Principle
 
-若 transferable structure 存在但 closure-critical invariant 有 loss，則 target authority 必降格，並建立 transfer debt。
+If a transferable structure exists but a closure-critical invariant suffers a loss, the target authority must be downgraded, and a transfer debt is established.
 
-# 187. Paper 06 核心命題三
+# 187. Paper 06 Core Proposition III
 
 ## Debt Persistence Principle
 
-跨域 transfer 不得使 unresolved debt 無證消失。
+Cross-domain transfers must not allow unresolved debt to disappear uncertified.
 
-# 188. Paper 06 核心命題四
+# 188. Paper 06 Core Proposition IV
 
 ## Cross-Domain Frontier Expansion Principle
 
-即使 source closure complete，target domain 也可能因新增 scope / model / representation obligations 產生新的 frontier。
+Even if the source closure is complete, the target domain may generate new frontiers due to newly added scope / model / representation obligations.
 
-# 189. Paper 06 核心命題五
+# 189. Paper 06 Core Proposition V
 
 ## Authority Noncreation Principle
 
-transfer composition / cycle 不得在沒有 explicit theorem / promotion certificate 的情況下增加 closure authority。
+Transfer compositions / cycles must not increase closure authority without an explicit theorem / promotion certificate.
 
-# 190. Paper 06 核心命題六
+# 190. Paper 06 Core Proposition VI
 
 ## NS Three-Domain Separation Principle
 
-formal NS、generalized NS-like family、physical NS realization 必須以 typed transfer bridge 連接，不得以「都是 NS」為理由做 closure collapse。
+The formal NS, generalized NS-like family, and physical NS realization must be connected by typed transfer bridges; closure collapse must not be performed under the pretext that "they are all NS."
 
-# 191. 與 Paper 00–05 的整合
+# 191. Integration with Papers 00–05
 
-Paper 00：relative-global closure object。  
-Paper 01：domain / globality typing。  
-Paper 02：obstruction propagation。  
-Paper 03：frontier / cut / exhaustion。  
-Paper 04：versioned dynamics / reopening。  
-Paper 05：projection / invariant preservation。  
-Paper 06：cross-domain transfer / conservation / authority。
+Paper 00: relative-global closure object.  
+Paper 01: domain / globality typing.  
+Paper 02: obstruction propagation.  
+Paper 03: frontier / cut / exhaustion.  
+Paper 04: versioned dynamics / reopening.  
+Paper 05: projection / invariant preservation.  
+Paper 06: cross-domain transfer / conservation / authority.
 
-# 192. 與 UCT 的關係
+# 192. Relationship with UCT
 
-UCT 的 Bridge Theory 在本文被具體化為 mathematical closure transfer laws，但 CSM 不把所有 bridge 強制還原成同一 formalism。
+The Bridge Theory of UCT is concretized in this paper as mathematical closure transfer laws, but CSM does not force all bridges to be reduced to a single formalism.
 
-# 193. 與 LSI-PSD 的關係
+# 193. Relationship with LSI-PSD
 
-LSI-PSD 提供 representation sensitivity、route quotient、obstruction confluence。本文要求這些跨 series / domain 的合併都必通過 transfer contract。
+LSI-PSD provides representation sensitivity, route quotient, and obstruction confluence. This paper requires that all such merges across series / domains must pass through a transfer contract.
 
-# 194. 與一般 category / logic translation 的關係
+# 194. Relationship with General Category / Logic Translation
 
-本文可使用 institution morphism、functor、interpretation、conservative extension 等工具作 backend。CSM 不宣稱發明這些一般形式。
+This paper can utilize tools such as institution morphisms, functors, interpretations, and conservative extensions as backends. CSM does not claim to have invented these general formalisms.
 
-# 195. CSM 的新增焦點
+# 195. New Focus of CSM
 
-新增焦點是：
+The new focus is:
 
 $$
 \boxed{
@@ -1630,7 +1628,7 @@ $$
 }
 $$
 
-並且：
+And:
 
 $$
 \boxed{
@@ -1638,9 +1636,9 @@ $$
 }
 $$
 
-# 196. Paper 07 路線
+# 196. Roadmap for Paper 07
 
-下一篇應處理：
+The next paper should address:
 
 $$
 \boxed{
@@ -1648,15 +1646,15 @@ $$
 }
 $$
 
-也就是把 Papers 00–06 的 object、closure、transfer、projection、reopening、debt、certificate 收斂成更緊的運算 calculus：operator signatures、legal composition、proof-carrying closure operators、algebraic normal forms、no-go composition、runtime-executable semantics、NS closure graph compiler interface。
+That is, converging the objects, closures, transfers, projections, reopenings, debts, and certificates from Papers 00–06 into a tighter operational calculus: operator signatures, legal compositions, proof-carrying closure operators, algebraic normal forms, no-go compositions, runtime-executable semantics, and an NS closure graph compiler interface.
 
-# 197. 結論
+# 197. Conclusion
 
-一個大型數學研究體系不可能永遠只存在單一 domain。我們會不斷換 representation、function space、equation family、parameter regime，從 formal mathematics 走向 model interpretation，從 local theorem 走向 generalized family。
+A large-scale mathematical research system cannot exist solely in a single domain forever. We will constantly change representations, function spaces, equation families, and parameter regimes, moving from formal mathematics to model interpretation, and from local theorems to generalized families.
 
-真正危險的不是 transfer 本身，而是無證 transfer。
+What is truly dangerous is not the transfer itself, but an uncertified transfer.
 
-因此 CSM 將 cross-domain reuse 改寫成：
+Therefore, CSM rewrites cross-domain reuse as:
 
 $$
 \boxed{
@@ -1672,7 +1670,7 @@ $$
 }
 $$
 
-最重要的原則是：
+The most important principle is:
 
 $$
 \boxed{
@@ -1682,7 +1680,7 @@ $$
 }
 $$
 
-而對 Navier--Stokes：
+And for Navier--Stokes:
 
 $$
 \boxed{
@@ -1694,11 +1692,11 @@ $$
 }
 $$
 
-formal NS 被證明，仍只直接關閉 formal target；generalized family 與 physical realization 需要自己的 bridge、scope、uniformity 與 interpretation obligations。
+Even if the formal NS is proven, it still only directly closes the formal target; the generalized family and physical realization require their own bridges, scopes, uniformities, and interpretation obligations.
 
-另一方面，formal NS 中累積的 lemma、obstruction、route decomposition、spectral structure、negative result 與 proof asset 也不必因此被困在單一 domain。只要 transfer contract 足夠清楚，它們可以合法成為其他 domain 的研究資產，而不被誇大為相同 theorem。
+On the other hand, the lemmas, obstructions, route decompositions, spectral structures, negative results, and proof assets accumulated in the formal NS do not have to be trapped in a single domain. As long as the transfer contract is sufficiently clear, they can legally become research assets in other domains without being exaggerated as the same theorem.
 
-這使 CSM 真正做到：
+This enables CSM to truly achieve:
 
 $$
 \boxed{
@@ -1710,27 +1708,27 @@ $$
 
 ---
 
-## 附錄 A — Paper 06 核心不變量
+## Appendix A — Paper 06 Core Invariants
 
-1. structure transfer 不等於 authority transfer；
-2. analogy 不等於 semantic transfer；
-3. semantic transfer 不等於 theorem transfer；
-4. conservative transfer 必須保存 closure-critical invariants；
-5. lossy transfer 必須降格 authority；
-6. nontransferable mapping 不得以 analogy 替代；
-7. debt 不得跨域消失；
-8. transfer composition 不保證 transitive；
-9. transfer cycle 不得無證創造 authority；
-10. source cut 不等於 target cut；
-11. source exhaustion 不等於 target exhaustion；
-12. formal theorem 不等於 physical adequacy proof；
-13. special case 不等於 family theorem；
-14. transfer certificate 必須 versioned；
-15. target 可因 transfer 產生新增 frontier。
+1. Structure transfer does not equal authority transfer;
+2. Analogy does not equal semantic transfer;
+3. Semantic transfer does not equal theorem transfer;
+4. Conservative transfer must preserve closure-critical invariants;
+5. Lossy transfer must downgrade authority;
+6. Nontransferable mapping must not be replaced by analogy;
+7. Debt must not disappear across domains;
+8. Transfer composition is not guaranteed to be transitive;
+9. Transfer cycle must not uncertifiedly create authority;
+10. Source cut does not equal target cut;
+11. Source exhaustion does not equal target exhaustion;
+12. Formal theorem does not equal physical adequacy proof;
+13. Special case does not equal family theorem;
+14. Transfer certificate must be versioned;
+15. Target may generate new frontiers due to transfer.
 
 ---
 
-## 附錄 B — 系列依賴
+## Appendix B — Series Dependencies
 
 ### Paper 00
 - Relative-Global Closure Space

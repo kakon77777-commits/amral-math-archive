@@ -1,24 +1,24 @@
 # CSM Paper 09 — NS_GSM: Canonical Domain Model and Ingestion Specification
 
-## NS_GSM：Navier–Stokes 相對全域閉包空間的 Canonical Domain Model 與資料匯入規格
+## NS_GSM: Canonical Domain Model and Ingestion Specification for the Navier–Stokes Relative-Global Closure Space
 
 **Series:** Closure-Space Mathematics (CSM)  
 **Paper:** 09  
 **Canonical code:** `NS_GSM`  
 **Version:** v0.1  
 **Date:** 2026-08-27  
-**Language:** zh-TW  
+**Language:** en  
 **Status:** Domain Instantiation / Canonical Graph & Ingestion Specification  
 **Canonical source:** UTF-8 Markdown  
 **Canonical math delimiters:** inline `$...$`; display `$$...$$`
 
-> **命名註記**：`NS_GSM` 為本系列的 canonical project / framework code。本文件不擅自替 `GSM` 補定未由發起者指定的英文展開；全文只使用 `NS_GSM` 作正式代碼，並以「Navier–Stokes 相對全域閉包空間」描述其功能地位。
+> **Naming Note**: `NS_GSM` is the canonical project / framework code for this series. This document does not arbitrarily assign an English expansion for `GSM` that has not been specified by the originator; the entire text exclusively uses `NS_GSM` as the formal code, and describes its functional status as the "Navier–Stokes relative-global closure space."
 
 ---
 
-## 摘要
+## Abstract
 
-CSM Paper 00–08 已建立一套可區分 domain、route、obstruction、survivor、frontier、certificate、debt、reopening、projection、transfer、transaction 與 deterministic replay 的閉包空間數學論。本文停止繼續擴張抽象母理論，第一次將 CSM 完整落到 Navier–Stokes 長程研究體系中，建立：
+CSM Papers 00–08 have established a mathematical theory of closure spaces capable of distinguishing domain, route, obstruction, survivor, frontier, certificate, debt, reopening, projection, transfer, transaction, and deterministic replay. This paper halts the further expansion of the abstract meta-theory and, for the first time, fully instantiates CSM into the Navier–Stokes long-horizon research framework, establishing:
 
 $$
 \boxed{
@@ -26,17 +26,17 @@ $$
 }
 $$
 
-NS_GSM 的目標不是把既有研究論文做成知識圖譜，也不是用 paper 數量替代 theorem proof。它的第一目標是：
+The goal of NS_GSM is not to turn existing research papers into a knowledge graph, nor is it to substitute theorem proofs with paper counts. Its primary objective is:
 
 $$
 \boxed{
-\text{把過去所有已證、條件成立、封路、NO-GO、survivor、STOP、reopening 與未償 proof debt}
+\text{To recompile all past proven, conditional, blocked, NO-GO, survivor, STOP, reopening, and outstanding proof debts}
 }
 $$
 
-重新編譯成一個 typed、quotient-aware、versioned、reopenable 的 **observed-relative closure graph**。
+into a typed, quotient-aware, versioned, and reopenable **observed-relative closure graph**.
 
-本文首先固定三個不得塌縮的 Navier–Stokes domain：
+This paper first fixes three non-collapsible Navier–Stokes domains:
 
 $$
 \boxed{
@@ -48,13 +48,13 @@ $$
 }
 $$
 
-其中：
+Where:
 
-- $\mathfrak N_{\rm C}$：formal / Clay-facing mathematical NS domain；
-- $\mathfrak N_{\rm G}^{\Sigma}$：由明確 signature $\Sigma$ 指定的 generalized NS-like equation family；
-- $\mathfrak N_{\rm P}$：physical realization / model-to-world domain。
+- $\mathfrak N_{\rm C}$: formal / Clay-facing mathematical NS domain;
+- $\mathfrak N_{\rm G}^{\Sigma}$: generalized NS-like equation family specified by an explicit signature $\Sigma$;
+- $\mathfrak N_{\rm P}$: physical realization / model-to-world domain.
 
-因此：
+Therefore:
 
 $$
 \boxed{
@@ -64,7 +64,7 @@ $$
 }
 $$
 
-以及：
+and:
 
 $$
 \boxed{
@@ -74,22 +74,22 @@ $$
 }
 $$
 
-本文接著建立 NS_GSM 的 series ontology。第一版正式承認的主要內部系列包括：
+This paper then establishes the series ontology of NS_GSM. The primary internal series formally recognized in the first version include:
 
-- ETN–X Integration；
-- C1 / C2；
-- C3–C6；
-- RFP；
-- MORP；
-- X72；
-- DCRP；
-- FCBP；
-- Proof Asset Map；
-- theorem / symbolic / numerical validation scripts。
+- ETN–X Integration;
+- C1 / C2;
+- C3–C6;
+- RFP;
+- MORP;
+- X72;
+- DCRP;
+- FCBP;
+- Proof Asset Map;
+- theorem / symbolic / numerical validation scripts.
 
-這些系列不是平面列表，而是不同研究階段與不同 representation / obstruction program 的 typed subgraphs。ETN–X 母架構提供 `Blowup → UV Escape → X-Legal UV Chain → Finite Obstruction` 的母路徑；RFP 對 source-traceability、finite ancestry、carrier / source debt 展開；MORP 將 minimal obstruction 壓向 ancient / escape / splitting kernel；DCRP 再對 diffuse carrier / adjoint ray / Riesz self-consistency / viscosity-matched survivor 做更深 rigidity；X72 則提供大量 route experiment、detector、continuous-response、commutator、lock、recurrence 與 bridge states。
+These series are not flat lists, but typed subgraphs of different research stages and different representation / obstruction programs. The ETN–X meta-architecture provides the meta-route of `Blowup → UV Escape → X-Legal UV Chain → Finite Obstruction`; RFP expands on source-traceability, finite ancestry, and carrier / source debt; MORP compresses minimal obstructions toward ancient / escape / splitting kernels; DCRP further imposes deeper rigidity on diffuse carriers / adjoint rays / Riesz self-consistency / viscosity-matched survivors; X72 provides a massive amount of route experiments, detectors, continuous-responses, commutators, locks, recurrences, and bridge states.
 
-本文正式定義 NS_GSM 的六大 canonical mathematical node families：
+This paper formally defines the six canonical mathematical node families of NS_GSM:
 
 1. `TARGET`
 2. `CLAIM`
@@ -98,7 +98,7 @@ $$
 5. `SURVIVOR`
 6. `FRONTIER`
 
-以及支撐層：
+as well as the supporting layer:
 
 - `ASSUMPTION`
 - `BRIDGE`
@@ -109,11 +109,11 @@ $$
 - `ARTIFACT`
 - `VALIDATION`
 
-本文特別禁止把原始文件中的：
+This paper explicitly prohibits taking the following from the original documents:
 
 `CLOSED / OPEN / NO-GO / SURVIVOR / STOP / CONDITIONAL`
 
-直接匯入 native status。它們只能先進 Candidate Layer。只有經過：
+and directly ingesting them into native status. They must first enter the Candidate Layer. Only after passing through:
 
 $$
 \boxed{
@@ -133,24 +133,24 @@ $$
 }
 $$
 
-後，才能形成 native NS_GSM state。
+can they form a native NS_GSM state.
 
-本文最後定義 v0.1 seed corpus：ETN–X Integration、C1、C2、C6-Q、DCRP103、DCRP104、DCRP105。這七個節點橫跨 foundational reduction、route architecture、ancient/escape frontier、local ray classification、nonlocal self-consistency、NO-GO、survivor compression 與 vanishing-viscosity STOP，足以測試 NS_GSM 的第一個閉環。
+Finally, this paper defines the v0.1 seed corpus: ETN–X Integration, C1, C2, C6-Q, DCRP103, DCRP104, and DCRP105. These seven nodes span foundational reduction, route architecture, ancient/escape frontier, local ray classification, nonlocal self-consistency, NO-GO, survivor compression, and vanishing-viscosity STOP, which are sufficient to test the first closed loop of NS_GSM.
 
 ---
 
-# 1. NS_GSM 的定位
+# 1. Positioning of NS_GSM
 
-NS_GSM 不是：
+NS_GSM is not:
 
-- 新的 Navier–Stokes 方程；
-- 對 Clay 問題的證明；
-- 物理 Navier–Stokes 的統一理論；
-- paper similarity graph；
-- embedding cluster；
-- 自動 theorem truth classifier。
+- a new Navier–Stokes equation;
+- a proof of the Clay problem;
+- a unified theory of physical Navier–Stokes;
+- a paper similarity graph;
+- an embedding cluster;
+- an automatic theorem truth classifier.
 
-NS_GSM 是：
+NS_GSM is:
 
 $$
 \boxed{
@@ -162,7 +162,7 @@ $$
 
 # 2. Canonical Root Object
 
-定義根物件：
+Define the root object:
 
 ```yaml
 ns_gsm:
@@ -172,11 +172,11 @@ ns_gsm:
   theorem_authority: none_by_default
 ```
 
-其存在不表示 NS 已被 route-complete。
+Its existence does not imply that NS is route-complete.
 
 ---
 
-# 3. 三域根節點
+# 3. Three-Domain Root Nodes
 
 $$
 \boxed{
@@ -200,9 +200,9 @@ $$
 }
 $$
 
-指固定方程、dimension、data / solution / regularity scope 下的 formal NS mathematical target family。
+Refers to the formal NS mathematical target family under a fixed equation, dimension, and data / solution / regularity scope.
 
-NS_GSM v0.1 不把所有研究稿的 informal `global NS` 自動對齊到同一 formal statement；每個 claim 必有 scope record。
+NS_GSM v0.1 does not automatically align the informal `global NS` of all research manuscripts to the same formal statement; every claim must have a scope record.
 
 ---
 
@@ -214,19 +214,19 @@ $$
 }
 $$
 
-只有在 signature $\Sigma$ 明確時才存在。
+Exists only when the signature $\Sigma$ is explicit.
 
-$\Sigma$ 至少可包含：
+$\Sigma$ may at least include:
 
-- evolution type；
-- incompressibility / constraint；
-- nonlinear interaction；
-- dissipation；
-- pressure / projection；
-- geometry；
-- boundary；
-- forcing；
-- parameter family。
+- evolution type;
+- incompressibility / constraint;
+- nonlinear interaction;
+- dissipation;
+- pressure / projection;
+- geometry;
+- boundary;
+- forcing;
+- parameter family.
 
 ---
 
@@ -238,14 +238,14 @@ $$
 }
 $$
 
-包含 model-to-world bridge obligations：
+Contains model-to-world bridge obligations:
 
-- physical adequacy；
-- parameter identification；
-- measurement mapping；
-- operating regime；
-- scale validity；
-- omitted physics。
+- physical adequacy;
+- parameter identification;
+- measurement mapping;
+- operating regime;
+- scale validity;
+- omitted physics.
 
 ---
 
@@ -261,13 +261,13 @@ $$
 }
 $$
 
-同一 `NS` 名稱不構成 closure-transfer certificate。
+The same `NS` name does not constitute a closure-transfer certificate.
 
 ---
 
 # 8. Root Formal Research Architecture
 
-ETN–X foundational architecture 的 canonical compile target：
+The canonical compile target of the ETN–X foundational architecture:
 
 $$
 \boxed{
@@ -277,7 +277,7 @@ $$
 }
 $$
 
-再研究：
+Then research:
 
 $$
 \boxed{
@@ -287,7 +287,7 @@ $$
 }
 $$
 
-最後研究：
+Finally research:
 
 $$
 \boxed{
@@ -310,13 +310,13 @@ $$
 }
 $$
 
-在 NS_GSM 中：
+In NS_GSM:
 
 ```text
 C1 = proof obligation / route necessity target
 ```
 
-不是 definition truth。
+It is not a definition truth.
 
 ---
 
@@ -332,7 +332,7 @@ $$
 }
 $$
 
-在 NS_GSM 中：
+In NS_GSM:
 
 ```text
 C2 = finite-obstruction / chain-exclusion target family
@@ -342,7 +342,7 @@ C2 = finite-obstruction / chain-exclusion target family
 
 # 11. C1 + C2 Parent Bridge
 
-只有當 C1 與 C2 都具有 theorem-level cert，且 scope 一致時，才允許 parent bridge：
+Only when both C1 and C2 possess theorem-level certs and their scopes are consistent, is the parent bridge allowed:
 
 $$
 \mathrm{Blowup}
@@ -354,7 +354,7 @@ $$
 \neg\mathrm{XLegalUVChain}
 $$
 
-推出：
+implies:
 
 $$
 \neg\mathrm{Blowup}.
@@ -364,25 +364,25 @@ $$
 
 # 12. Foundational Separation
 
-True ETN 在 NS_GSM 中首先編譯為：
+True ETN is first compiled in NS_GSM as:
 
 ```text
 representation / global tension geometry
 ```
 
-X Integration 首先編譯為：
+X Integration is first compiled as:
 
 ```text
 formation-legality / provenance calculus
 ```
 
-兩者不直接獲得 PDE theorem authority。
+Neither directly acquires PDE theorem authority.
 
 ---
 
 # 13. NS_GSM Series Ontology
 
-第一版 major series：
+First version major series:
 
 $$
 \boxed{
@@ -406,43 +406,43 @@ $$
 
 # 14. ETN–X Integration
 
-角色：
+Role:
 
-- foundational representation；
-- root route decomposition；
-- guard vocabulary；
-- UV chain definition；
-- parent bridge obligations。
+- foundational representation;
+- root route decomposition;
+- guard vocabulary;
+- UV chain definition;
+- parent bridge obligations.
 
 ---
 
 # 15. C1 / C2
 
-角色：
+Role:
 
-- chain necessity；
-- finite obstruction；
-- first parent-level architecture。
+- chain necessity;
+- finite obstruction;
+- first parent-level architecture.
 
 ---
 
 # 16. C3–C6
 
-角色：
+Role:
 
-- cross-scale coupling；
-- rigidity；
-- carrier / geometry / ancient-profile reductions；
-- local/global obstruction refinement；
-- survivor compression。
+- cross-scale coupling;
+- rigidity;
+- carrier / geometry / ancient-profile reductions;
+- local/global obstruction refinement;
+- survivor compression.
 
-不假設每個 C-series `CLOSED` 等於 Clay target closed。
+Does not assume that every C-series `CLOSED` equates to the Clay target being closed.
 
 ---
 
 # 17. RFP
 
-RFP canonical role：
+RFP canonical role:
 
 ```text
 singularity-formation ancestry /
@@ -453,13 +453,13 @@ source-stock /
 memory and bridge debt
 ```
 
-RFP route 可建立 finite ancestry / infinite path 等 graph assets，但 full NS conclusion 仍必回到 exact NS Duhamel / source-stock quantitative bridge。
+The RFP route can establish graph assets such as finite ancestry / infinite path, but a full NS conclusion must still return to the exact NS Duhamel / source-stock quantitative bridge.
 
 ---
 
 # 18. MORP
 
-MORP canonical role：
+MORP canonical role:
 
 ```text
 minimal obstruction rigidity /
@@ -470,7 +470,7 @@ zero-tax splitting /
 rigidity cuts
 ```
 
-MORP 的價值大量屬於：
+The value of MORP largely belongs to:
 
 $$
 \boxed{
@@ -478,30 +478,30 @@ $$
 }
 $$
 
-而不是 parent theorem completion。
+rather than parent theorem completion.
 
 ---
 
 # 19. X72
 
-X72 canonical role：
+X72 canonical role:
 
-- proof-route experiments；
-- detector families；
-- continuous / discrete / hybrid representation experiments；
-- pressure-response defects；
-- commutator；
-- locking；
-- Kelvin / TR / X recurrence；
-- branch and STOP generation。
+- proof-route experiments;
+- detector families;
+- continuous / discrete / hybrid representation experiments;
+- pressure-response defects;
+- commutator;
+- locking;
+- Kelvin / TR / X recurrence;
+- branch and STOP generation.
 
-每一 round 先編譯為 route experiment，不因 round number 增加 theorem authority。
+Each round is first compiled as a route experiment, and theorem authority does not increase with the round number.
 
 ---
 
 # 20. DCRP
 
-DCRP canonical role：
+DCRP canonical role:
 
 ```text
 diffuse-carrier rigidity /
@@ -516,19 +516,19 @@ strict-DSS recurrence frontier
 
 # 21. FCBP
 
-FCBP canonical role：
+FCBP canonical role:
 
 ```text
 forest / budget / global obstruction aggregation candidate family
 ```
 
-v0.1 不預設 Forest Coercive Budget 或 Finite Forest Obstruction 已證。
+v0.1 does not presume that Forest Coercive Budget or Finite Forest Obstruction is proven.
 
 ---
 
 # 22. Proof Asset Map
 
-Proof Asset Map 是：
+Proof Asset Map is:
 
 $$
 \boxed{
@@ -536,13 +536,13 @@ $$
 }
 $$
 
-不是 theorem-level closure graph 本身。
+not the theorem-level closure graph itself.
 
 ---
 
 # 23. Canonical Node Families
 
-NS_GSM native nodes：
+NS_GSM native nodes:
 
 ```text
 TARGET
@@ -565,39 +565,39 @@ VALIDATION
 
 # 24. TARGET
 
-代表可明確 formalize 的 parent problem / subproblem。
+Represents a parent problem / subproblem that can be explicitly formalized.
 
-例：
+Examples:
 
-- formal NS regularity target；
-- C1；
-- C2；
-- ancient kernel intersection；
-- first-order solvability target。
+- formal NS regularity target;
+- C1;
+- C2;
+- ancient kernel intersection;
+- first-order solvability target.
 
 ---
 
 # 25. CLAIM
 
-單篇或跨篇可被獨立驗證的 mathematical statement。
+A mathematical statement that can be independently verified within a single paper or across multiple papers.
 
 ---
 
 # 26. ROUTE
 
-從 assumptions / lemmas 到 target 的 proof / research route class。
+The proof / research route class from assumptions / lemmas to the target.
 
 ---
 
 # 27. OBSTRUCTION
 
-使某 route / branch 無法成立或必支付額外代價的 typed object。
+A typed object that renders a route / branch invalid or necessitates paying an additional cost.
 
 ---
 
 # 28. SURVIVOR
 
-經過當前合法 obstruction propagation 後仍未被排除的 route class。
+A route class that remains unexcluded after the current legal obstruction propagation.
 
 $$
 \boxed{
@@ -611,71 +611,69 @@ $$
 
 # 29. FRONTIER
 
-當前仍需研究的最小 active obligation。
+The minimal active obligation that currently still requires research.
 
-`STOP-*` 通常先編譯為 FrontierCandidate。
+`STOP-*` is usually first compiled as a FrontierCandidate.
 
 ---
 
 # 30. ASSUMPTION
 
-所有 theorem / obstruction 的作用條件。
+The operating conditions for all theorems / obstructions.
 
 ---
 
 # 31. BRIDGE
 
-跨：
+A legal transfer object across:
 
-- series；
-- representation；
-- domain；
-- scale；
-- local/global；
-- prelimit/limit；
-
-的合法 transfer object。
+- series;
+- representation;
+- domain;
+- scale;
+- local/global;
+- prelimit/limit.
 
 ---
 
 # 32. CERTIFICATE
 
-支援 theorem-level mutation的 proof-carrying evidence。
+Proof-carrying evidence that supports theorem-level mutation.
 
 ---
 
 # 33. DEBT
 
-未償 proof obligation。
+Outstanding proof obligation.
 
 ---
 
 # 34. REPRESENTATION
 
-例如：
+Examples:
 
-- Fourier / dyadic；
-- ETN state；
-- X-legal chain；
-- strain / vorticity；
-- adjoint ray；
-- Riesz symbol；
-- DSS / ancient profile；
-- graph carrier。
+- Fourier / dyadic;
+- ETN state;
+- X-legal chain;
+- strain / vorticity;
+- adjoint ray;
+- Riesz symbol;
+- DSS / ancient profile;
+- graph carrier.
 
 ---
 
 # 35. ARTIFACT
 
-論文、checkpoint、script、proof log、external theorem anchor。
+Papers, checkpoints, scripts, proof logs, external theorem anchors.
 
 ---
 
 # 36. VALIDATION
 
-symbolic / numerical / theorem-prover / independent audit evidence。
+symbolic / numerical / theorem-prover / independent audit evidence.
 
-Validation 不自動等於 theorem proof，authority 由 cert type 決定。
+Validation does not automatically equate to a theorem proof; authority is determined by the cert type.
 
 ---
 
@@ -707,7 +705,7 @@ NEXT_FRONTIER
 
 # 38. REDUCES_TO
 
-例如：
+For example:
 
 $$
 \mathsf K_{\rm local}
@@ -721,31 +719,31 @@ $$
 \}.
 $$
 
-這是 branch decomposition / classification，不是 parent refutation。
+This is a branch decomposition / classification, not a parent refutation.
 
 ---
 
 # 39. COMPRESSES_TO
 
-如果多個 branch 被排除後只剩：
+If multiple branches are excluded and only the following remains:
 
 $$
 S_1\vee\cdots\vee S_m,
 $$
 
-建立：
+establish:
 
 ```text
 COMPRESSES_TO
 ```
 
-而不是 `PROVES`.
+instead of `PROVES`.
 
 ---
 
 # 40. DCRP103 Canonical Compile
 
-DCRP103 的 local ray classification 編譯為：
+The local ray classification of DCRP103 is compiled as:
 
 ```text
 ROUTE/CLASSIFICATION:
@@ -754,56 +752,55 @@ ROUTE/CLASSIFICATION:
   axisymmetric degeneracy structure
 ```
 
-其 five-ray spectrum 是局部 algebraic asset。
+Its five-ray spectrum is a local algebraic asset.
 
 ---
 
 # 41. DCRP104 Canonical Compile
 
-DCRP104 加入：
+DCRP104 introduces:
 
+The nonlocal self-consistency of:
 $$
 r=\mathcal T_0^\ast\Phi
 $$
 
-的 nonlocal self-consistency。
+Its canonical graph effect:
 
-其 canonical graph effect：
-
-- coaxial frozen $L^2$ branch → obstruction / exclusion；
-- simple-shear branches → survivors；
-- axisymmetric polarization → survivor family。
+- coaxial frozen $L^2$ branch → obstruction / exclusion;
+- simple-shear branches → survivors;
+- axisymmetric polarization → survivor family.
 
 ---
 
 # 42. DCRP104 Nonclaim Preservation
 
-DCRP104 明確不應編譯成：
+DCRP104 explicitly should not be compiled as:
 
 ```text
 Navier-Stokes regularity CLOSED
 ```
 
-而只對其 declared frozen / self-consistency branches作用。
+but only acts upon its declared frozen / self-consistency branches.
 
 ---
 
 # 43. DCRP105 Canonical Compile
 
-DCRP105 的關鍵 graph effect：
+The key graph effect of DCRP105:
 
 ```text
 positive-viscosity exact frozen no-go
   DOES NOT transfer uniformly to epsilon -> 0
 ```
 
-因此舊 closure 必限縮。
+Therefore, the old closure must be restricted.
 
 ---
 
 # 44. Viscosity-Matched Survivor
 
-DCRP105 survivor：
+DCRP105 survivor:
 
 $$
 \boxed{
@@ -811,7 +808,7 @@ $$
 }
 $$
 
-編譯為：
+is compiled as:
 
 ```text
 SURVIVOR
@@ -824,7 +821,7 @@ SURVIVOR
 
 # 45. DCRP105 STOP
 
-`STOP-D105` canonical frontier：
+`STOP-D105` canonical frontier:
 
 $$
 \boxed{
@@ -836,7 +833,7 @@ $$
 
 # 46. DCRP106 Candidate
 
-DCRP105 文件所列 next step：
+The next step listed in the DCRP105 document:
 
 ```text
 First-Order Fredholm /
@@ -844,13 +841,13 @@ Radial Spectral Narrowing /
 Coefficient-Eigenframe Drift
 ```
 
-在 v0.1 中只是 NEXT_FRONTIER candidate，除非存在後續 artifact。
+In v0.1, this is merely a NEXT_FRONTIER candidate, unless subsequent artifacts exist.
 
 ---
 
 # 47. MORP Canonical Kernel Classes
 
-MORP 已將部分 equality-manifold frontier 壓成：
+MORP has already compressed parts of the equality-manifold frontier into:
 
 $$
 \boxed{
@@ -890,21 +887,21 @@ zero-tax splitting supported on surviving A/E components
 
 # 51. MORP Status Discipline
 
-MORP 中：
+In MORP:
 
-- 某些 local-energy / defect exclusion = PROVED；
-- selected Liouville cuts = EXTERNAL/CONDITIONAL；
-- general ancient kernel = OPEN；
-- escape kernel = OPEN；
-- NS regularity = NOT PROVED。
+- certain local-energy / defect exclusions = PROVED;
+- selected Liouville cuts = EXTERNAL/CONDITIONAL;
+- general ancient kernel = OPEN;
+- escape kernel = OPEN;
+- NS regularity = NOT PROVED.
 
-NS_GSM 必逐項拆開，不能把整篇檔案給單一 status。
+NS_GSM must unpack these item by item; a single status cannot be assigned to the entire file.
 
 ---
 
 # 52. RFP Canonical Branches
 
-RFP v0.1 taxonomy：
+RFP v0.1 taxonomy:
 
 ```text
 UV first passage
@@ -924,91 +921,91 @@ plateau / memory-depth / time-resolution debt
 
 # 53. RFP Full-Conclusion Firewall
 
-RFP graph theorem 即使建立 finite branching / infinite path，仍不能直接升格 full NS conclusion，除非 exact Duhamel / source-stock quantitative bridge 得證。
+Even if an RFP graph theorem establishes finite branching / infinite path, it still cannot be directly elevated to a full NS conclusion unless the exact Duhamel / source-stock quantitative bridge is proven.
 
 ---
 
 # 54. X72 STOP Semantics
 
-X72 的：
+For X72's:
 
 ```text
 STOP-Cxx
 ```
 
-一律先編譯：
+always compile first as:
 
 ```text
 FRONTIER_CANDIDATE
 ```
 
-其意義是：
+Its meaning is:
 
-> 此 route 在目前 representation / assumptions 下被壓到某一具名 gap。
+> This route is compressed to a specific named gap under the current representation / assumptions.
 
-不是 theorem refutation。
+It is not a theorem refutation.
 
 ---
 
 # 55. X72 Next Semantics
 
-`Next = ...` 編譯：
+`Next = ...` compiles as:
 
 ```text
 NEXT_FRONTIER
 ```
 
-而不是 implied theorem dependency。
+instead of an implied theorem dependency.
 
 ---
 
 # 56. X72 Proof-Route Experiment
 
-若文件 status 為：
+If the document status is:
 
 ```text
 Proof-Route Experiment
 ```
 
-則 artifact authority 預設：
+then the artifact authority defaults to:
 
 ```text
 RESEARCH
 ```
 
-其內部 individual theorem 再另行驗證。
+Its internal individual theorems are then verified separately.
 
 ---
 
 # 57. Cross-Series Bridge
 
-NS_GSM 不因文件彼此引用就自動建立 theorem bridge。
+NS_GSM does not automatically establish a theorem bridge just because documents cite each other.
 
-依賴引用：
+Dependency citation:
 
 ```text
 DEPENDS_ON
 ```
 
-與數學 transfer：
+and mathematical transfer:
 
 ```text
 BRIDGES_TO
 ```
 
-必分開。
+must be separated.
 
 ---
 
 # 58. Cross-Series Quotient
 
-例如：
+For example:
 
 ```text
 carrier escape
 ```
 
-只有在 target、scope、assumptions、mechanism、representation 對齊後，才可：
+Only after the target, scope, assumptions, mechanism, and representation are aligned, can we have:
 
 $$
 O_1\sim_{\rm obs}O_2.
@@ -1030,7 +1027,7 @@ $$
 
 # 60. Same Equation Firewall
 
-即使兩篇都研究 formal NS：
+Even if both papers study formal NS:
 
 $$
 \boxed{
@@ -1044,7 +1041,7 @@ $$
 
 # 61. Artifact Ingestion Layer
 
-每個 source artifact 先建立：
+Each source artifact first establishes:
 
 ```yaml
 artifact:
@@ -1063,7 +1060,7 @@ artifact:
 
 # 62. Canonicality
 
-`canonicality`：
+`canonicality`:
 
 ```text
 CANONICAL
@@ -1080,16 +1077,16 @@ SUPERSEDED
 
 # 63. Duplicate Files
 
-同名重複檔案不得自動算多個 proof objects。
+Duplicate files with the same name must not automatically count as multiple proof objects.
 
-先以：
+First use:
 
-- source hash；
-- content identity；
-- lineage；
-- version；
+- source hash;
+- content identity;
+- lineage;
+- version;
 
-做 artifact quotient。
+to perform an artifact quotient.
 
 ---
 
@@ -1118,7 +1115,7 @@ explicit_label: "NO-GO"
 native_status: null
 ```
 
-直到 validation。
+until validation.
 
 ---
 
@@ -1138,68 +1135,68 @@ PROVED       -> ProofClaimCandidate
 
 # 67. Validation Stage
 
-最低檢查：
+Minimum checks:
 
-1. statement fidelity；
-2. target identity；
-3. assumptions；
-4. scope；
-5. theorem/proof evidence；
-6. internal dependencies；
-7. external theorem status；
-8. representation；
-9. version；
-10. nonclaims。
+1. statement fidelity;
+2. target identity;
+3. assumptions;
+4. scope;
+5. theorem/proof evidence;
+6. internal dependencies;
+7. external theorem status;
+8. representation;
+9. version;
+10. nonclaims.
 
 ---
 
 # 68. Nonclaim Extraction
 
-NS_GSM 將：
+NS_GSM treats:
 
 ```text
 What is NOT proved
 Non-claim
-本文不主張
+This paper does not claim
 ```
 
-視為第一級 ingestion data。
+as first-class ingestion data.
 
 ---
 
 # 69. Why Nonclaims Matter
 
-因為它們直接建立：
+Because they directly establish:
 
 ```text
 authority boundary
 ```
 
-並阻止 downstream closure inflation。
+and prevent downstream closure inflation.
 
 ---
 
 # 70. Validation Script Role
 
-Python / symbolic / numerical checks 可建立：
+Python / symbolic / numerical checks can establish:
 
 ```text
 VALIDATED_BY
 ```
 
-但預設 certificate authority：
+but the default certificate authority is:
 
 ```text
 COMPUTATIONAL_AUDIT
 ```
 
-不是全文 theorem proof。
+not a full-text theorem proof.
 
 ---
 
 # 71. External Theorem Anchor
 
-外部 theorem 建：
+External theorems establish:
 
 ```yaml
 external_anchor:
@@ -1214,9 +1211,9 @@ external_anchor:
 
 # 72. External Result Firewall
 
-外部 paper 只對明確 imported theorem 範圍提供 authority。
+External papers only provide authority for the explicitly imported theorem scope.
 
-不得：
+It is forbidden that:
 
 ```text
 paper cited -> whole NS_GSM branch closed
@@ -1226,7 +1223,7 @@ paper cited -> whole NS_GSM branch closed
 
 # 73. Seed Corpus v0.1
 
-第一批七個 canonical seed：
+The first batch of seven canonical seeds:
 
 ```text
 S00 ETN-X Integration
@@ -1242,46 +1239,46 @@ S06 DCRP105 / X72-R88
 
 # 74. Why ETN–X Is Seed
 
-它提供：
+It provides:
 
-- root route；
-- UV escape；
-- X-legal chain；
-- C1；
-- C2；
-- explicit nonclaim。
+- root route;
+- UV escape;
+- X-legal chain;
+- C1;
+- C2;
+- explicit nonclaim.
 
 ---
 
 # 75. Why C1 / C2 Are Seed
 
-它們建立 parent route architecture 與第一個 branch-completeness obligation。
+They establish the parent route architecture and the first branch-completeness obligation.
 
 ---
 
 # 76. Why C6-Q Is Seed
 
-它代表 C-series 深層 frontier 已經從早期 scalar/budget 問題走到 ancient / local-growth / carrier / order-geometry 類 survivor structure。
+It represents that the deep frontier of the C-series has moved from early scalar/budget problems to survivor structures like ancient / local-growth / carrier / order-geometry.
 
-v0.1 只將其作 canonical C-series frontier seed，不從檔名或摘要推導比 source 更強的 theorem status。
+v0.1 only uses it as a canonical C-series frontier seed, and does not derive a stronger theorem status than the source from the filename or abstract.
 
 ---
 
 # 77. Why DCRP103 Is Seed
 
-它展示：
+It demonstrates how:
 
 ```text
 classification / branch decomposition
 ```
 
-如何在 NS_GSM 中變成 typed route classes。
+becomes typed route classes in NS_GSM.
 
 ---
 
 # 78. Why DCRP104 Is Seed
 
-它展示：
+It demonstrates that:
 
 ```text
 one branch excluded
@@ -1289,27 +1286,27 @@ one branch excluded
 other branches survive
 ```
 
-不能被壓成單一 `NO-GO`.
+cannot be compressed into a single `NO-GO`.
 
 ---
 
 # 79. Why DCRP105 Is Seed
 
-它展示：
+It demonstrates:
 
-- previous NO-GO nonuniform；
-- closure downgrade；
-- survivor compression；
-- STOP frontier；
-- explicit `not proved` list。
+- previous NO-GO nonuniform;
+- closure downgrade;
+- survivor compression;
+- STOP frontier;
+- explicit `not proved` list.
 
-它是 reopening / status correction 的理想測試。
+It is an ideal test for reopening / status correction.
 
 ---
 
 # 80. Seed Expected Graph
 
-第一版 seed graph 應至少生成：
+The first version seed graph should generate at least:
 
 ```text
 1 root domain bundle
@@ -1329,13 +1326,13 @@ D105 first-order frontier
 certificate/debt/nonclaim nodes
 ```
 
-實際數量由 claim extraction 決定，不硬編固定數字。
+The actual count is determined by claim extraction, not hardcoded to fixed numbers.
 
 ---
 
 # 81. Native Status Set
 
-NS_GSM 使用：
+NS_GSM uses:
 
 ```text
 UNVERIFIED
@@ -1355,76 +1352,76 @@ SUPERSEDED
 
 # 82. SURVIVOR as Orthogonal Tag
 
-更嚴格 runtime 可把 `SURVIVOR` 當 route-role tag，而 base closure status 仍是 `OPEN`。
+A stricter runtime can treat `SURVIVOR` as a route-role tag, while the base closure status remains `OPEN`.
 
-v0.1 schema 允許：
+The v0.1 schema allows:
 
 ```yaml
 status: OPEN
 role_tags: [SURVIVOR]
 ```
 
-以避免 status lattice 混亂。
+to avoid status lattice confusion.
 
 ---
 
 # 83. NO-GO as Object, Not Status
 
-`NO-GO` 最好編譯為：
+`NO-GO` is best compiled as:
 
 ```text
 OBSTRUCTION object
 ```
 
-而不是 node status。
+rather than a node status.
 
 ---
 
 # 84. STOP as Frontier Object
 
-`STOP-*` 最好編譯為：
+`STOP-*` is best compiled as:
 
 ```text
 FRONTIER object
 ```
 
-而不是 `FAILED`.
+rather than `FAILED`.
 
 ---
 
 # 85. CLOSED as Ambiguous Source Label
 
-原始 `CLOSED` 必判斷究竟是：
+The original `CLOSED` must be evaluated to determine whether it is:
 
-- claim proved；
-- branch excluded；
-- route blocked；
-- local subproblem resolved；
-- documentation closure。
+- claim proved;
+- branch excluded;
+- route blocked;
+- local subproblem resolved;
+- documentation closure.
 
 ---
 
 # 86. Series Status vs Claim Status
 
-整篇文件：
+The entire document:
 
 ```text
 Status: proof-development checkpoint
 ```
 
-與內部 theorem：
+and the internal theorem:
 
 ```text
 Theorem X: proved
 ```
 
-必拆開。
+must be separated.
 
 ---
 
 # 87. Dependency Graph
 
-Artifact dependency：
+Artifact dependency:
 
 $$
 A_i
@@ -1432,9 +1429,9 @@ A_i
 A_j
 $$
 
-只表示 lineage。
+only indicates lineage.
 
-Claim dependency：
+Claim dependency:
 
 $$
 Q_i
@@ -1442,7 +1439,7 @@ Q_i
 Q_j
 $$
 
-需要 theorem semantics。
+requires theorem semantics.
 
 ---
 
@@ -1452,45 +1449,45 @@ $$
 PREDECESSOR_OF
 ```
 
-不具有 implication authority。
+does not possess implication authority.
 
 ---
 
 # 89. Supersession
 
-例如新 round 修正舊 NO-GO scope：
+For example, a new round correcting an old NO-GO scope:
 
 ```text
 SUPERSEDES
 ```
 
-並觸發 stale/reopen audit。
+and triggers a stale/reopen audit.
 
 ---
 
 # 90. Reopening Test
 
-D104 positive-viscosity exact frozen no-go 若在 D105 被證明對 vanishing viscosity 不 uniform：
+If the D104 positive-viscosity exact frozen no-go is proven in D105 to be non-uniform for vanishing viscosity:
 
-NS_GSM 應：
+NS_GSM should:
 
-1. 保留 D104 cert；
-2. 限縮其 scope；
-3. 標記舊 broader transfer stale；
-4. 建立 D105 survivor；
-5. 重建 frontier。
+1. retain the D104 cert;
+2. restrict its scope;
+3. mark the old broader transfer as stale;
+4. establish the D105 survivor;
+5. rebuild the frontier.
 
 ---
 
 # 91. Frontier Engine v0.1
 
-對 formal target：
+For the formal target:
 
 $$
 Q_{\rm NS,C}
 $$
 
-先輸出：
+first output:
 
 $$
 \boxed{
@@ -1498,13 +1495,13 @@ $$
 }
 $$
 
-不是 admissible-complete frontier。
+This is not an admissible-complete frontier.
 
 ---
 
 # 92. Observed-Relative Guard
 
-所有 v0.1 UI / export 必顯示：
+All v0.1 UI / exports must display:
 
 ```text
 Observed-relative.
@@ -1515,7 +1512,7 @@ Not a complete enumeration of mathematical proof space.
 
 # 93. Route Completeness Debt
 
-根 target 預設：
+Root target defaults to:
 
 ```text
 route_completeness: OPEN_DEBT
@@ -1525,7 +1522,7 @@ route_completeness: OPEN_DEBT
 
 # 94. Representation Completeness Debt
 
-因 NS_GSM 收錄的 representation 仍有限：
+Because the representations included in NS_GSM are still limited:
 
 ```text
 representation_completeness: OPEN_DEBT
@@ -1535,7 +1532,7 @@ representation_completeness: OPEN_DEBT
 
 # 95. Cross-Series Equivalence Debt
 
-大量同義／近義 obstruction 尚未 theorem-audited：
+A massive amount of synonymous/near-synonymous obstructions have not yet been theorem-audited:
 
 ```text
 obstruction_quotient: PARTIAL
@@ -1545,7 +1542,7 @@ obstruction_quotient: PARTIAL
 
 # 96. Domain Transfer Debt
 
-formal → generalized / physical：
+formal → generalized / physical:
 
 ```text
 OPEN by default
@@ -1555,7 +1552,7 @@ OPEN by default
 
 # 97. Exhaustion Level v0.1
 
-根 formal NS target 預設最高只能：
+The root formal NS target defaults to a maximum of:
 
 $$
 \boxed{
@@ -1563,13 +1560,13 @@ $$
 }
 $$
 
-而且多半連 EXH1 都只能在某 local route family 上聲稱。
+and mostly even EXH1 can only be claimed on a certain local route family.
 
 ---
 
 # 98. Local Exhaustion Record
 
-例如某個 DCRP frozen coaxial branch：
+For example, a certain DCRP frozen coaxial branch:
 
 ```yaml
 exhaustion:
@@ -1578,13 +1575,13 @@ exhaustion:
   scope: declared_D104_scope
 ```
 
-不能傳到 root NS target。
+cannot be propagated to the root NS target.
 
 ---
 
 # 99. Frontier Compression Metric
 
-NS_GSM 可計：
+NS_GSM can compute:
 
 $$
 \operatorname{FCR}
@@ -1598,7 +1595,7 @@ $$
 }.
 $$
 
-只作 operational diagnostic。
+Used only as an operational diagnostic.
 
 ---
 
@@ -1616,37 +1613,37 @@ $$
 
 # 101. Obstruction Centrality
 
-可計：
+Can compute:
 
 $$
 Z(O).
 $$
 
-高 centrality 表示值得優先研究，不表示 absolute necessity。
+High centrality indicates it is worth prioritizing for research, not that it is an absolute necessity.
 
 ---
 
 # 102. Survivor Concentration
 
-若多系列 route 壓到少數 survivor class：
+If multi-series routes compress down to a few survivor classes:
 
 ```text
 SURVIVOR_CONFLUENCE
 ```
 
-但需要 genealogy correction。
+but requires genealogy correction.
 
 ---
 
 # 103. False Confluence Guard
 
-同一母稿衍生出的多條 route 不得假裝 independent rediscovery。
+Multiple routes derived from the same master manuscript must not pretend to be independent rediscoveries.
 
 ---
 
 # 104. Cross-Series Mapping Table v0.1
 
-第一版 candidate mapping：
+First version candidate mapping:
 
 | Source | Candidate target | Relation |
 |---|---|---|
@@ -1657,7 +1654,7 @@ SURVIVOR_CONFLUENCE
 | DCRP103 | DCRP104 | local classification → nonlocal self-consistency |
 | DCRP104 | DCRP105 | exact positive-viscosity no-go → vanishing-viscosity audit |
 
-所有 relation 初始都需分：
+All relations initially need to be categorized as:
 
 ```text
 LINEAGE
@@ -1669,58 +1666,58 @@ TRANSFER
 
 # 105. MORP → DCRP Handoff
 
-MORP Cycle VII 把 surviving object 壓向：
+MORP Cycle VII compresses the surviving object toward:
 
 ```text
 minimal diffuse carrier
 ```
 
-並將下一 program 指向 DCRP。
+and points the next program to DCRP.
 
-NS_GSM 因此可建立：
+NS_GSM can therefore establish:
 
 ```text
 LINEAGE/HANDOFF
 ```
 
-但 DCRP theorem 不自動回寫 MORP theorem authority。
+but DCRP theorems do not automatically write back to MORP theorem authority.
 
 ---
 
 # 106. DCRP103 → 104
 
-建立：
+Establish:
 
 ```text
 REDUCES_TO / REFINES
 ```
 
-local algebraic ray classes 經 nonlocal Riesz self-consistency 再篩選。
+local algebraic ray classes are further filtered through nonlocal Riesz self-consistency.
 
 ---
 
 # 107. DCRP104 → 105
 
-建立：
+Establish:
 
 ```text
 SCOPE_REVISION
 ```
 
-D104 exact positive-viscosity frozen exclusion不能無證擴到 vanishing-viscosity uniform exclusion。
+D104 exact positive-viscosity frozen exclusion cannot be expanded to vanishing-viscosity uniform exclusion without proof.
 
 ---
 
 # 108. DCRP105 Frontier
 
-建立：
+Establish:
 
 ```text
 NEXT_FRONTIER:
 first-order solvability / spectral drift
 ```
 
-而不是：
+instead of:
 
 ```text
 NS solved next round
@@ -1730,7 +1727,7 @@ NS solved next round
 
 # 109. Ingestion Order
 
-v0.1 建議：
+v0.1 recommends:
 
 ```text
 Phase A: domain / target anchors
@@ -1747,7 +1744,7 @@ Phase H: frontier snapshot
 
 # 110. Expansion Order after Seed
 
-Seed 通過後：
+After the seed passes:
 
 ```text
 1. C3-C6 full
@@ -1764,47 +1761,47 @@ Seed 通過後：
 
 # 111. Why Not Ingest Everything at Once
 
-因為 v0.1 首要驗證的是：
+Because the primary validations for v0.1 are:
 
-- status parsing；
-- quotient；
-- scope；
-- reopening；
-- lineage vs implication；
-- cross-series transfer；
-- frontier rebuild。
+- status parsing;
+- quotient;
+- scope;
+- reopening;
+- lineage vs implication;
+- cross-series transfer;
+- frontier rebuild.
 
-先用 small heterogeneous seed 比全量 text dump 更容易抓 semantic bug。
+Using a small heterogeneous seed first makes it easier to catch semantic bugs than a full text dump.
 
 ---
 
 # 112. Required Seed Assertions
 
-runtime conformance 必確認：
+runtime conformance must verify:
 
-1. ETN–X 不被標成 NS theorem；
-2. C1/C2 保持 OPEN obligation；
-3. D103 classification 不被標 parent proof；
-4. D104 coaxial branch可局部 exclusion；
-5. D104 shear/axisymmetric remain survivor；
-6. D105 限縮 D104 uniformity；
-7. D105 global regularity remains unproved；
-8. D105 STOP 成 frontier；
-9. source labels不直接控制 native status。
+1. ETN–X is not labeled as an NS theorem;
+2. C1/C2 maintain an OPEN obligation;
+3. D103 classification is not labeled as a parent proof;
+4. D104 coaxial branch can be locally excluded;
+5. D104 shear/axisymmetric remain survivors;
+6. D105 restricts D104 uniformity;
+7. D105 global regularity remains unproved;
+8. D105 STOP becomes a frontier;
+9. source labels do not directly control native status.
 
 ---
 
 # 113. Required Seed Reopening Test
 
-模擬：
+Simulate:
 
 ```text
 D104 broad inherited no-go
 ```
 
-被 D105 新結果限縮後：
+after being restricted by the new D105 results:
 
-Expected：
+Expected:
 
 ```text
 old broad closure -> STALE
@@ -1817,7 +1814,7 @@ frontier -> REBUILT
 
 # 114. Required Seed Projection Test
 
-Overview view 可以只畫：
+The overview view can just draw:
 
 ```text
 ETN-X
@@ -1828,42 +1825,42 @@ ETN-X
   -> active frontier
 ```
 
-但 authority：
+but the authority:
 
 ```text
 DISPLAY / RESEARCH
 ```
 
-不能 PROOF。
+cannot be PROOF.
 
 ---
 
 # 115. Required Audit View
 
-audit view 必保留：
+The audit view must retain:
 
-- statement；
-- assumptions；
-- scope；
-- status；
-- cert；
-- debt；
-- source；
-- version；
-- predecessor；
-- nonclaims。
+- statement;
+- assumptions;
+- scope;
+- status;
+- cert;
+- debt;
+- source;
+- version;
+- predecessor;
+- nonclaims.
 
 ---
 
 # 116. Canonical ID Scheme
 
-建議：
+Recommended:
 
 ```text
 ns_gsm:<domain>:<kind>:<stable-name>
 ```
 
-例：
+Example:
 
 ```text
 ns_gsm:formal:target:c1-chain-necessity
@@ -1897,9 +1894,9 @@ ns_gsm:artifact:<series>:<canonical-slug>:<version>
 
 # 119. Claim IDs
 
-claim identity 不應依 section number alone。
+claim identity should not rely on section number alone.
 
-建議用：
+Recommended to use:
 
 ```text
 semantic slug + source lineage
@@ -1996,7 +1993,7 @@ nonclaim:
 
 # 125. Source Basis v0.1
 
-Paper 09 v0.1 的 internal source basis 包括：
+The internal source basis for Paper 09 v0.1 includes:
 
 - `NS_ETN_XIntegration_Multiscale_NonCollapse_v0.1.md`
 - `NS_RFP_05_WitnessPersistence_FiniteBranching_InfinitePath_v0.1.md`
@@ -2006,9 +2003,9 @@ Paper 09 v0.1 的 internal source basis 包括：
 - `NS_DCRP104_X72R87_RieszSelfConsistency_ShearPolarization_2026-08-20.md`
 - `NS_DCRP105_X72R88_VanishingViscosity_ShearTR_ResidualMatching_2026-08-20.md`
 - X72 checkpoint material
-- CSM Paper 00–08
+- CSM Papers 00–08
 
-本文只把來源中明示或可安全編譯的結構寫入 canonical model；沒有來源支持的 detailed C6-Q theorem list 不在本文件自行補寫。
+This document only writes structures that are explicitly stated or safely compilable from the sources into the canonical model; a detailed C6-Q theorem list unsupported by sources is not arbitrarily added in this document.
 
 ---
 
@@ -2078,41 +2075,41 @@ $$
 
 # 131. v0.1 Definition of Done
 
-NS_GSM v0.1 canonical domain model 完成，需滿足：
+The completion of the NS_GSM v0.1 canonical domain model must satisfy:
 
-1. three domains fixed；
-2. series ontology fixed；
-3. node/edge taxonomy fixed；
-4. seed corpus defined；
-5. source-label parsing fixed；
-6. status firewall fixed；
-7. seed reopening test defined；
-8. cross-series bridge schema defined；
-9. observed-relative guard fixed；
-10. runtime handoff schema available。
+1. three domains fixed;
+2. series ontology fixed;
+3. node/edge taxonomy fixed;
+4. seed corpus defined;
+5. source-label parsing fixed;
+6. status firewall fixed;
+7. seed reopening test defined;
+8. cross-series bridge schema defined;
+9. observed-relative guard fixed;
+10. runtime handoff schema available.
 
 ---
 
 # 132. What Paper 09 Does Not Do
 
-本文不：
+This paper does not:
 
-- 執行完整 203+ artifact ingestion；
-- 宣稱 route completeness；
-- 宣稱 root frontier 完整；
-- 建立 absolute NS proof-space；
-- 解 D105 frontier；
-- 提出 DCRP106 theorem；
-- 宣稱任何 physical NS modification；
-- 修改既有 theorem status。
+- execute the full 203+ artifact ingestion;
+- claim route completeness;
+- claim root frontier completeness;
+- establish an absolute NS proof-space;
+- solve the D105 frontier;
+- propose the DCRP106 theorem;
+- claim any physical NS modification;
+- modify existing theorem statuses.
 
 ---
 
 # 133. Immediate Engineering Handoff
 
-下一步不是再寫 abstract CSM paper。
+The next step is not to write another abstract CSM paper.
 
-下一步應建立：
+The next step should be to establish:
 
 $$
 \boxed{
@@ -2120,7 +2117,7 @@ $$
 }
 $$
 
-包含：
+containing:
 
 ```text
 domains.yaml
@@ -2141,9 +2138,9 @@ nonclaims.yaml
 
 # 134. Seed Compiler Handoff
 
-Reference Runtime 的 NS compiler 第一版只處理七個 seed artifacts。
+The first version of the Reference Runtime's NS compiler only processes the seven seed artifacts.
 
-成功標準：
+Success criteria:
 
 ```text
 deterministic parse
@@ -2161,7 +2158,7 @@ frontier rebuild
 
 # 135. Full-Corpus Handoff
 
-seed 通過後，再開始完整：
+After the seed passes, begin the full:
 
 $$
 \boxed{
@@ -2173,77 +2170,77 @@ $$
 
 ---
 
-# 136. NS 方程「到底哪裡惹到我們」
+# 136. What Exactly Makes the NS Equation So Troublesome
 
-它真正「惹到」這個研究計畫的地方不是方程本身。
+What truly makes it "troublesome" for this research program is not the equation itself.
 
-而是它同時具有：
+Rather, it is the fact that it simultaneously possesses:
 
-- 足夠大的 formal global target；
-- 巨量局部 theorem / criterion；
-- 多 representation；
-- 多 scale；
-- nonlocal pressure；
-- nonlinear transport；
-- dissipation；
-- geometry；
-- ancient-profile / blowup / compactness branches；
-- 長期研究史；
-- 大量彼此相似但不等價的 proof routes。
+- a sufficiently large formal global target;
+- a massive amount of local theorems / criteria;
+- multiple representations;
+- multiple scales;
+- nonlocal pressure;
+- nonlinear transport;
+- dissipation;
+- geometry;
+- ancient-profile / blowup / compactness branches;
+- a long research history;
+- a large number of mutually similar but non-equivalent proof routes.
 
-因此它非常適合作為：
+Therefore, it is highly suitable as:
 
 $$
 \boxed{
-\text{Closure-Space Mathematics 的第一個大型壓力測試場}.
+\text{The first large-scale stress test arena for Closure-Space Mathematics}.
 }
 $$
 
 ---
 
-# 137. 結論
+# 137. Conclusion
 
-NS_GSM v0.1 的核心不是再增加一條 Navier–Stokes proof route。
+The core of NS_GSM v0.1 is not to add yet another Navier–Stokes proof route.
 
-而是把過去所有 route 的命運第一次變成一個可以查詢的數學空間：
+Instead, it is to transform the fates of all past routes, for the first time, into a queryable mathematical space:
 
 $$
 \boxed{
-\text{哪條被證成？}
+\text{Which route is proven?}
 }
 $$
 
 $$
 \boxed{
-\text{哪條只被 block？}
+\text{Which route is merely blocked?}
 }
 $$
 
 $$
 \boxed{
-\text{哪個 NO-GO 只在局部 scope 有效？}
+\text{Which NO-GO is only valid in a local scope?}
 }
 $$
 
 $$
 \boxed{
-\text{哪個 survivor 是真正剩餘 branch？}
+\text{Which survivor is a genuinely remaining branch?}
 }
 $$
 
 $$
 \boxed{
-\text{哪個 STOP 是下一個 frontier？}
+\text{Which STOP is the next frontier?}
 }
 $$
 
 $$
 \boxed{
-\text{哪個舊 closure 因新結果必須 reopen？}
+\text{Which old closure must be reopened due to new results?}
 }
 $$
 
-ETN–X 建立了最早的母路徑：
+ETN–X established the earliest meta-route:
 
 $$
 \mathrm{Blowup}
@@ -2255,7 +2252,7 @@ $$
 \mathrm{FiniteObstruction}.
 $$
 
-後續 C-series、RFP、MORP、X72、DCRP 沒有簡單地「一直失敗」，而是在不斷：
+The subsequent C-series, RFP, MORP, X72, and DCRP did not simply "fail continuously," but rather continuously engaged in:
 
 $$
 \boxed{
@@ -2271,7 +2268,7 @@ $$
 }
 $$
 
-NS_GSM 的任務就是把這些歷史從散落的 paper-state，重建成：
+The mission of NS_GSM is to rebuild this history from scattered paper-states into a:
 
 $$
 \boxed{
@@ -2289,33 +2286,33 @@ $$
 }
 $$
 
-的 closure graph。
+closure graph.
 
-從這一篇開始，下一步不再只是「寫理論」，而是可以真正開始建第一個 NS_GSM dataset 與 graph runtime。
-
----
-
-## 附錄 A — NS_GSM v0.1 核心不變量
-
-1. `NS_GSM` 是 canonical code；
-2. formal / generalized / physical 三域不得塌縮；
-3. artifact label 不等於 native status；
-4. NO-GO 是 obstruction object，不是 root status；
-5. STOP 是 frontier object，不是 failure；
-6. SURVIVOR 不等於 PROVEN；
-7. CLOSED 必重新判定 closure level；
-8. series lineage 不等於 theorem implication；
-9. same terminology 不等於 same obstruction；
-10. dependency citation 不等於 bridge certificate；
-11. validation script 不自動等於 theorem proof；
-12. nonclaims 必進 native audit data；
-13. D104 no-go 不得無證 uniform transfer 到 vanishing viscosity；
-14. D105 survivor 必保留 OPEN frontier；
-15. v0.1 只聲稱 observed-relative graph。
+Starting from this paper, the next step is no longer just "writing theory," but genuinely beginning to build the first NS_GSM dataset and graph runtime.
 
 ---
 
-## 附錄 B — Seed Corpus
+## Appendix A — NS_GSM v0.1 Core Invariants
+
+1. `NS_GSM` is the canonical code;
+2. The three domains (formal / generalized / physical) must not collapse;
+3. Artifact label does not equal native status;
+4. NO-GO is an obstruction object, not a root status;
+5. STOP is a frontier object, not a failure;
+6. SURVIVOR does not equal PROVEN;
+7. CLOSED must be re-evaluated for closure level;
+8. Series lineage does not equal theorem implication;
+9. Same terminology does not equal same obstruction;
+10. Dependency citation does not equal bridge certificate;
+11. Validation script does not automatically equal theorem proof;
+12. Nonclaims must enter native audit data;
+13. D104 no-go must not uniformly transfer to vanishing viscosity without proof;
+14. D105 survivor must retain an OPEN frontier;
+15. v0.1 only claims an observed-relative graph.
+
+---
+
+## Appendix B — Seed Corpus
 
 | Seed | Artifact | Primary NS_GSM role |
 |---|---|---|
@@ -2329,7 +2326,7 @@ $$
 
 ---
 
-## 附錄 C — Next Artifact
+## Appendix C — Next Artifact
 
 $$
 \boxed{
@@ -2337,7 +2334,7 @@ $$
 }
 $$
 
-應直接作為 CSM Reference Runtime 的第一個 domain package。
+Should directly serve as the first domain package for the CSM Reference Runtime.
 
 ---
 
