@@ -104,9 +104,9 @@ b=0.057263454680.
 8.018970729117e-05.
 \]
 
-![形狀比較](../figures/01_old_vs_limit_shape.png)
+![形狀比較](./files/figures/01_old_vs_limit_shape.png)
 
-![曲率比較](../figures/02_curvature_profiles.png)
+![曲率比較](./files/figures/02_curvature_profiles.png)
 
 ---
 
@@ -160,7 +160,7 @@ E_{\mathrm{cong}}^{(1)}
 1.841516.
 \]
 
-![手性相位圖](../figures/03_chirality_phase_landscape.png)
+![手性相位圖](./files/figures/03_chirality_phase_landscape.png)
 
 ---
 
@@ -192,7 +192,7 @@ E_+\approx E_-.
 0.000126740211.
 \]
 
-![邊界等高](../figures/04_boundary_equalization.png)
+![邊界等高](./files/figures/04_boundary_equalization.png)
 
 ---
 
@@ -249,7 +249,7 @@ E_+\approx E_-.
 
 這支持 reach 由局部曲率半徑控制，但仍不是區間 reach 證書。
 
-![管狀審計](../figures/08_tube_audit.png)
+![管狀審計](./files/figures/08_tube_audit.png)
 
 ---
 
@@ -296,9 +296,9 @@ A_2=0.269624487989
 \end{aligned}
 \]
 
-![雙骨架容器](../figures/06_final_pair_container.png)
+![雙骨架容器](./files/figures/06_final_pair_container.png)
 
-![支撐所有權](../figures/07_support_ownership.png)
+![支撐所有權](./files/figures/07_support_ownership.png)
 
 ---
 
@@ -362,7 +362,7 @@ A_2^{(2)}=0.269624487989.
 3.171062.
 \]
 
-![面積進程](../figures/05_container_area_progression.png)
+![面積進程](./files/figures/05_container_area_progression.png)
 
 ---
 

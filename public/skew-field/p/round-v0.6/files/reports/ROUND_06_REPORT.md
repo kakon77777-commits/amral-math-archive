@@ -143,11 +143,11 @@ A_6
 2.2980%.
 \]
 
-![面積序列](../figures/03_area_sequence.png)
+![面積序列](./files/figures/03_area_sequence.png)
 
-![攻擊與淨增量](../figures/04_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/04_attack_vs_net_increment.png)
 
-![吸收與新穎係數](../figures/05_absorption_novelty.png)
+![吸收與新穎係數](./files/figures/05_absorption_novelty.png)
 
 ---
 
@@ -169,7 +169,7 @@ A_6
 
 的 leave-one-out 外露量，因此不是加入後立即冗餘的曲線。
 
-![活動帳本](../figures/07_leave_one_out.png)
+![活動帳本](./files/figures/07_leave_one_out.png)
 
 ---
 
@@ -278,7 +278,7 @@ e_6^{\mathrm{res}}
 
 它的外露量高於本輪正式攻擊，故目前不存在近似封閉證據。
 
-![殘餘候選](../figures/08_residual_challenger.png)
+![殘餘候選](./files/figures/08_residual_challenger.png)
 
 ---
 

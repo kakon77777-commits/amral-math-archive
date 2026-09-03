@@ -147,11 +147,11 @@ A_7
 18.3098%.
 \]
 
-![面積序列](../figures/01_area_sequence.png)
+![面積序列](./files/figures/01_area_sequence.png)
 
-![攻擊與淨增量](../figures/02_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/02_attack_vs_net_increment.png)
 
-![吸收與新穎](../figures/03_absorption_novelty.png)
+![吸收與新穎](./files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -194,11 +194,11 @@ A_7
 }
 \]
 
-![清距缺口](../figures/05_clearance_deficit_profiles.png)
+![清距缺口](./files/figures/05_clearance_deficit_profiles.png)
 
-![空間分散](../figures/06_spatial_dispersion.png)
+![空間分散](./files/figures/06_spatial_dispersion.png)
 
-![頻譜模式](../figures/09_effective_spectral_modes.png)
+![頻譜模式](./files/figures/09_effective_spectral_modes.png)
 
 ---
 
@@ -222,7 +222,7 @@ A_7
 
 的 leave-one-out 外露量，因此加入後沒有立即冗餘。
 
-![最終容器](../figures/07_final_container.png)
+![最終容器](./files/figures/07_final_container.png)
 
 ---
 
@@ -279,7 +279,7 @@ e_7^{\mathrm{res}}
 
 它由一個深而集中的缺口主導，與第 7 輪的分散葉片型攻擊不同。
 
-![殘餘候選](../figures/08_residual_challenger.png)
+![殘餘候選](./files/figures/08_residual_challenger.png)
 
 ---
 

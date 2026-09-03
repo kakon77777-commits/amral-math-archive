@@ -84,11 +84,11 @@ A_{10}
 1.1331%.
 \]
 
-![面積序列](../figures/01_area_sequence.png)
+![面積序列](./files/figures/01_area_sequence.png)
 
-![攻擊與淨增量](../figures/02_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/02_attack_vs_net_increment.png)
 
-![吸收與新穎](../figures/03_absorption_novelty.png)
+![吸收與新穎](./files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -133,7 +133,7 @@ Fourier-20 在終態容器中的 leave-one-out 外露：
 5. `round8_fourier16`：0.001996811390
 6. `round10_fourier20`：0.002307467379
 
-![終態活動](../figures/06_leave_one_out.png)
+![終態活動](./files/figures/06_leave_one_out.png)
 
 ---
 
@@ -151,7 +151,7 @@ e_n,\quad
 
 第 9 輪代表暫態施壓，第 10 輪代表持續骨架。
 
-![歷史施壓記憶](../figures/09_historical_pressure_memory.png)
+![歷史施壓記憶](./files/figures/09_historical_pressure_memory.png)
 
 ---
 
@@ -177,7 +177,7 @@ e_n,\quad
 
 因此非凸 hard case 必須先通過合同放置器的反證。
 
-![放置失敗](../figures/08_placement_failure.png)
+![放置失敗](./files/figures/08_placement_failure.png)
 
 ---
 
@@ -220,9 +220,9 @@ e_{10}^{\mathrm{res}}
 
 它已保存為第 11 輪攻擊種子。
 
-![保留池](../figures/07_pool_audit.png)
+![保留池](./files/figures/07_pool_audit.png)
 
-![第 11 輪種子](../figures/10_round11_seed.png)
+![第 11 輪種子](./files/figures/10_round11_seed.png)
 
 ---
 

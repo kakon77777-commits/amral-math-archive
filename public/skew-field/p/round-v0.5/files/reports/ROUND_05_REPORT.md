@@ -109,11 +109,11 @@
 7.8381%.
 \]
 
-![曲線比較](../figures/01_curve_comparison.png)
+![曲線比較](./files/figures/01_curve_comparison.png)
 
-![曲率輪廓](../figures/02_curvature_profiles.png)
+![曲率輪廓](./files/figures/02_curvature_profiles.png)
 
-![攻擊配置](../figures/03_attack_against_round4.png)
+![攻擊配置](./files/figures/03_attack_against_round4.png)
 
 ---
 
@@ -197,9 +197,9 @@ A_5
 1.4721%.
 \]
 
-![面積回應](../figures/04_attack_response_area.png)
+![面積回應](./files/figures/04_attack_response_area.png)
 
-![壓力分解](../figures/07_recovery_decomposition.png)
+![壓力分解](./files/figures/07_recovery_decomposition.png)
 
 ---
 
@@ -231,7 +231,7 @@ A_{\mathrm{sc}}
 
 容器有效且連通。
 
-![最終容器](../figures/05_final_container.png)
+![最終容器](./files/figures/05_final_container.png)
 
 ---
 
@@ -246,7 +246,7 @@ A_{\mathrm{sc}}
 
 各族詳細外露量見機讀帳本與圖表。
 
-![活動帳本](../figures/06_leave_one_out.png)
+![活動帳本](./files/figures/06_leave_one_out.png)
 
 這表示第 5 輪新增曲線不是單純取代舊骨架，而是成為第四個主要非凸活動來源。
 
@@ -283,7 +283,7 @@ A_{\mathrm{sc}}
 
 該曲線已保存為第 6 輪攻擊種子。
 
-![保留候選](../figures/08_holdout_challenger.png)
+![保留候選](./files/figures/08_holdout_challenger.png)
 
 ---
 

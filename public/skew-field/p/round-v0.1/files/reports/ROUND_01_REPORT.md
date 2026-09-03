@@ -57,9 +57,9 @@
 3. 局部曲率半徑達 \(\rho\) 的接觸飽和平滑螺旋；
 4. 以有限預算 max-min 搜尋取得的有限寬度曲率層。
 
-![四種中心線](../figures/01_centerline_families.png)
+![四種中心線](./files/figures/01_centerline_families.png)
 
-![曲率分布](../figures/02_curvature_profiles.png)
+![曲率分布](./files/figures/02_curvature_profiles.png)
 
 | 曲線族 | 最大曲率 | 最小局部曲率半徑 | 終點半徑 | 單體凸化厚化面積 |
 |---|---:|---:|---:|---:|
@@ -159,9 +159,9 @@ A_4-A_3
 }.
 \]
 
-![共同容器面積](../figures/04_common_container_area.png)
+![共同容器面積](./files/figures/04_common_container_area.png)
 
-![最佳共同容器](../figures/08_optimized_common_container.png)
+![最佳共同容器](./files/figures/08_optimized_common_container.png)
 
 ---
 
@@ -176,9 +176,9 @@ A_4-A_3
 | 接觸飽和平滑螺旋 | 0.000973210 | 0.000274087 | 1.4583% |
 | 有限寬度曲率層 | 0.046058168 | 0.011344824 | 55.5556% |
 
-![Leave-one-out 張力](../figures/05_leave_one_out_tension.png)
+![Leave-one-out 張力](./files/figures/05_leave_one_out_tension.png)
 
-![Leave-one-out 面積](../figures/06_leave_one_out_area_increment.png)
+![Leave-one-out 面積](./files/figures/06_leave_one_out_area_increment.png)
 
 ---
 
@@ -203,7 +203,7 @@ A_4-A_3
 \end{aligned}
 \]
 
-![活動支撐比例](../figures/07_active_support_shares.png)
+![活動支撐比例](./files/figures/07_active_support_shares.png)
 
 這表示共同容器主要由兩種互補幾何支撐：
 
@@ -317,7 +317,7 @@ z
 不代表普適容納成本守恆。}
 \]
 
-![等量異形比較](../figures/03_individual_area_comparison.png)
+![等量異形比較](./files/figures/03_individual_area_comparison.png)
 
 ---
 

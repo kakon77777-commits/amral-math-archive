@@ -82,11 +82,11 @@ A_{11}
 
 這是第 5 至 11 輪最小的淨面積增量。
 
-![面積序列](../figures/01_area_sequence.png)
+![面積序列](./files/figures/01_area_sequence.png)
 
-![攻擊與淨增量](../figures/02_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/02_attack_vs_net_increment.png)
 
-![吸收與新穎](../figures/03_absorption_novelty.png)
+![吸收與新穎](./files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -122,9 +122,9 @@ Fourier-22 在終態中的 leave-one-out 外露為：
 
 第 6 與第 9 輪曲線目前屬暫態施壓；它們的終態活動可為零，但仍保留於歷史測試集。
 
-![最終容器](../figures/04_final_container.png)
+![最終容器](./files/figures/04_final_container.png)
 
-![活動帳本](../figures/05_leave_one_out.png)
+![活動帳本](./files/figures/05_leave_one_out.png)
 
 ---
 
@@ -160,7 +160,7 @@ L=0.
 
 個單元，顯示單純周長 Lipschitz 分支界不可行。
 
-![放置上下界](../figures/06_placement_bracket.png)
+![放置上下界](./files/figures/06_placement_bracket.png)
 
 ---
 
@@ -195,7 +195,7 @@ e_{11}^{\mathrm{res}}
 
 所以第 11 輪是容器對正式攻擊的局部近均衡，而不是函數空間封閉。
 
-![保留池](../figures/07_pool_audit.png)
+![保留池](./files/figures/07_pool_audit.png)
 
 ---
 
@@ -228,7 +228,7 @@ Fourier-24 局部母系種子的曲率盒：
 
 已保存為第 12 輪正式攻擊種子。
 
-![第 12 輪種子](../figures/08_round12_seed.png)
+![第 12 輪種子](./files/figures/08_round12_seed.png)
 
 ---
 
@@ -250,7 +250,7 @@ Fourier-24 局部母系種子的曲率盒：
 
 容器更新使用完整歷史施壓集，終態解釋才使用活動集。
 
-![歷史記憶](../figures/09_historical_pressure_memory.png)
+![歷史記憶](./files/figures/09_historical_pressure_memory.png)
 
 ---
 
@@ -278,7 +278,7 @@ Fourier-24 局部母系種子的曲率盒：
 }
 \]
 
-![增量序列](../figures/10_increment_sequence.png)
+![增量序列](./files/figures/10_increment_sequence.png)
 
 ---
 

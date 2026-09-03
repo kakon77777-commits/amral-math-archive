@@ -125,11 +125,11 @@ A_9
 1.1793%.
 \]
 
-![面積序列](../figures/01_area_sequence.png)
+![面積序列](./files/figures/01_area_sequence.png)
 
-![攻擊與淨增量](../figures/02_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/02_attack_vs_net_increment.png)
 
-![吸收與新穎](../figures/03_absorption_novelty.png)
+![吸收與新穎](./files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -185,7 +185,7 @@ A_9
 }
 \]
 
-![暫態施壓](../figures/10_transient_forcing.png)
+![暫態施壓](./files/figures/10_transient_forcing.png)
 
 ---
 
@@ -203,9 +203,9 @@ A_9
 
 因此最終靜態骨架與攻擊歷史必須分開保存。
 
-![最終容器](../figures/06_final_container.png)
+![最終容器](./files/figures/06_final_container.png)
 
-![活動帳本](../figures/08_leave_one_out.png)
+![活動帳本](./files/figures/08_leave_one_out.png)
 
 ---
 
@@ -270,7 +270,7 @@ e_{\mathrm{spline}}
 
 這表示殘餘外露並非只存在於 Fourier 同源曲率族。
 
-![池審計](../figures/07_pool_audit.png)
+![池審計](./files/figures/07_pool_audit.png)
 
 ---
 
@@ -317,7 +317,7 @@ e_9^{\mathrm{res}}
 
 它已保存為第 10 輪初始攻擊。
 
-![殘餘候選](../figures/09_residual_challengers.png)
+![殘餘候選](./files/figures/09_residual_challengers.png)
 
 ---
 

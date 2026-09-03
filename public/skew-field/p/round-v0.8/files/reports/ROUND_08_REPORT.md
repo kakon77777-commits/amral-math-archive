@@ -123,11 +123,11 @@ A_8
 2.2603%.
 \]
 
-![面積序列](../figures/01_area_sequence.png)
+![面積序列](./files/figures/01_area_sequence.png)
 
-![攻擊與淨增量](../figures/02_attack_vs_net_increment.png)
+![攻擊與淨增量](./files/figures/02_attack_vs_net_increment.png)
 
-![吸收與新穎](../figures/03_absorption_novelty.png)
+![吸收與新穎](./files/figures/03_absorption_novelty.png)
 
 ---
 
@@ -168,9 +168,9 @@ A_8
 
 阿基米德族僅剩數值噪聲量級外露。
 
-![最終容器](../figures/06_final_container.png)
+![最終容器](./files/figures/06_final_container.png)
 
-![活動帳本](../figures/08_leave_one_out.png)
+![活動帳本](./files/figures/08_leave_one_out.png)
 
 ---
 
@@ -196,7 +196,7 @@ B-spline 保留池最佳精煉值：
 
 所以兩個 Fourier 母系都仍能產生正外露候選，而本批平滑 B-spline 擾動接近被完全吸收。
 
-![雙池審計](../figures/07_dual_pool_audit.png)
+![雙池審計](./files/figures/07_dual_pool_audit.png)
 
 ---
 
@@ -257,9 +257,9 @@ e_8^{\mathrm{res}}
 
 它是一條混合型攻擊，已保存為第 9 輪初始種子。
 
-![清距缺口](../figures/05_clearance_deficits.png)
+![清距缺口](./files/figures/05_clearance_deficits.png)
 
-![殘餘候選](../figures/09_residual_challenger.png)
+![殘餘候選](./files/figures/09_residual_challenger.png)
 
 ---
 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runtime Semantics, State Machines, Recorders, and an Executable Reference Model · CSM · AMRAL</title>
+<meta name="description" content="Converts the theory of Papers 00–07 into a first-version, implementable runtime specification. Defines the machine state (native graph, state map, certificate recorder, debt recorder, frontier, cut se">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/csm/p/08-runtime-semantics/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/csm/p/08-runtime-semantics/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/csm/p/08-runtime-semantics/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../">AMRAL</a>
+  <a class="link" href="../../../about/">About</a>
+  <a class="link" href="../../../methodology/">Methodology</a>
+  <a class="link" href="../../../protocols/">Protocols</a>
+  <a class="link" href="../../../validation/">Validation</a>
+  <a class="link" href="../../../research-modes/">Research Modes</a>
+  <a class="link" href="../../../data-access/">Data Access</a>
+  <a class="link" href="../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../bsd/">BSD Conjecture</a>
+  <a class="link" href="../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link" href="../../../ns/">Navier–Stokes</a>
+  <a class="link" href="../../../collatz/">Collatz Conjecture</a>
+  <a class="link active" href="../../">CSM Closure-Space Mathematics</a>
+  <a class="lang-switch" href="../../../../csm/p/08-runtime-semantics/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← CSM</a>
+    <span>/</span>
+    <span>08 · Runtime Semantics, State Machines, Recorders, and an Executable Reference Model</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">CSM · 08</span>
+      <span class="tag">v0.1 · Executable Runtime Specification</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>Runtime Semantics, State Machines, Recorders, and an Executable Reference Model</h1>
+    <p class="h1-sub">Converts the theory of Papers 00–07 into a first-version, implementable runtime specification. Defines the machine state (native graph, state map, certificate recorder, debt recorder, frontier, cut sets, obstruction cover, exhaustion, policy, ledger head, version); every theorem-level mutation must go through an atomic transaction. Fixes a three-tier runtime: L0, a canonical append-only event ledger (the source of truth); L1, the natively materialized closure state (must be reconstructible by replay); and L2, purpose-specific views (whose authority never exceeds L1’s). Core safety principle: no certificate path ⇒ no native theorem mutation. States explicitly that the runtime is implementation-agnostic — it makes no difference whether it is realized as an LLM, a theorem prover, a GUI, a web service, or a distributed database; what matters is deterministic semantics, the recorders, the ledger, PCOs, transactions, replay, querying, and consistency testing.</p>
+    <div class="claim-box">
+      Every theorem-level state mutation must go through an atomic transaction; without a certificate path there is no native theorem mutation; the runtime’s implementation method is immaterial.
+      <span class="note">The flagship item among the paper’s 8 Runtime Nonclaims: it does not claim that completing NS ingestion is equivalent to a Clay proof. Also: it does not claim deterministic replay resolves semantic ambiguity.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the rest of the series, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      <div class="conn-card"><span class="k">Previous</span><a href="../07-closure-calculus/">07 · Closure Calculus, Composition Rules, and Proof-Carrying Operators</a></div>
+      <div class="conn-card"><span class="k">Next</span><a href="../09-ns-gsm-domain-model/">09 · NS_GSM: A Canonical Domain Model and Data-Ingestion Specification for the Navier–Stokes Relative-Global Closure Space</a></div>
+      <div class="conn-card"><span class="k">CSM progress</span>08 / 09 (10 papers total, 00–09)</div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← CSM</a>
+    <a href="../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md" download>Download original .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/CSM_Paper_08_Runtime_Semantics_and_Executable_Reference_Model_v0.1_2026-08-27.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

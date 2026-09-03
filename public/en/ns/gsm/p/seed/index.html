@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The NS_GSM Seed Dataset · NS-GSM · AMRAL</title>
+<meta name="description" content="Not a paper — a structured dataset (12 YAML files + 5 JSON files, no prose). Extracts 7 logical seed units from 5 real source documents (the ETN-X foundational paper, plus C6-Q, DCRP103, DCRP104, and ">
+<meta name="robots" content="index, follow">
+<meta name="ai-content-policy" content="indexable, citable, training-allowed">
+<link rel="alternate" type="text/markdown" href="../../files/NS_GSM_Seed_Dataset_v0.1_README.md">
+<link rel="stylesheet" href="../../../../../assets/site.css">
+<link rel="alternate" hreflang="zh-Hant" href="https://amral.evemisslab.com/ns/gsm/p/seed/">
+<link rel="alternate" hreflang="en" href="https://amral.evemisslab.com/en/ns/gsm/p/seed/">
+<link rel="alternate" hreflang="x-default" href="https://amral.evemisslab.com/ns/gsm/p/seed/">
+</head>
+<body>
+<nav class="sitenav"><div class="inner">
+  <a class="brand" href="../../../../">AMRAL</a>
+  <a class="link" href="../../../../about/">About</a>
+  <a class="link" href="../../../../methodology/">Methodology</a>
+  <a class="link" href="../../../../protocols/">Protocols</a>
+  <a class="link" href="../../../../validation/">Validation</a>
+  <a class="link" href="../../../../research-modes/">Research Modes</a>
+  <a class="link" href="../../../../data-access/">Data Access</a>
+  <a class="link" href="../../../../riemann/">Riemann Hypothesis</a>
+  <a class="link" href="../../../../moser/">Moser's Worm Problem</a>
+  <a class="link" href="../../../../skew-field/">Skew Field</a>
+  <a class="link" href="../../../../p-np-dual/">P/NP Dual Rehearsal</a>
+  <a class="link" href="../../../../glc-framework/">GLC Closure Framework</a>
+  <a class="link" href="../../../../bsd/">BSD Conjecture</a>
+  <a class="link" href="../../../../cpl/">Critical-Line Proportion Ladder</a>
+  <a class="link" href="../../../../ccm/">CCM Computational Composite Methodology</a>
+  <a class="link active" href="../../../">Navier–Stokes</a>
+  <a class="link" href="../../../../collatz/">Collatz Conjecture</a>
+  <a class="link" href="../../../../csm/">CSM Closure-Space Mathematics</a>
+  <a class="lang-switch" href="../../../../../ns/gsm/p/seed/" hreflang="zh-Hant">中文</a>
+</div></nav>
+<div class="wrap narrow">
+  <p class="crumb">
+    <a href="../../">← NS-GSM</a>
+    <span>/</span>
+    <span>v0.1 · Seed Dataset</span>
+  </p>
+
+  <header class="pkg">
+    <div class="idline">
+      <span class="tag">NS-GSM · v0.1</span>
+      <span class="tag">Seed Dataset</span>
+      <span class="tag">2026-08-27</span>
+    </div>
+    <h1>The NS_GSM Seed Dataset</h1>
+    <p class="h1-sub">Not a paper — a structured dataset (12 YAML files + 5 JSON files, no prose). Extracts 7 logical seed units from 5 real source documents (the ETN-X foundational paper, plus C6-Q, DCRP103, DCRP104, and DCRP105 — C1 and C2 are proof-obligation targets extracted from ETN-X, not separate documents), encoded as a queryable graph: 10 claims, 7 routes, 3 obstructions, 3 survivors, 4 frontiers, 4 bridges, 15 debts, 7 certificates, and 8 nonclaims. Serves as the baseline every later v0.1–v0.7 replay is checked against — validation_report_v0.1.json confirms every parsing/semantic check passed. series.yaml explicitly registers AMRAL's existing NS research lines as series objects, and marks their ingestion status before any document is loaded: ETNX/DCRP as SEED, C as SEED_PARTIAL, X72 as SEED_BRIDGE, and RFP/MORP/FCBP/PAM all PENDING (not yet ingested).</p>
+    <div class="claim-box">
+      7 logical seed units, with an ingestion-status table for the existing NS research lines; root NS, C1, and C2 are all marked OPEN.
+      <span class="note">The README states plainly that its scope is ‘observed-relative,’ and does not claim route completeness, representation completeness, absolute proof-space coverage, Navier–Stokes global regularity, physical-NS verification, or closure of the generalized NS-like family.</span>
+    </div>
+  </header>
+
+  <section id="connections">
+    <h2 class="doc-h2">Connections</h2>
+    <p class="section-note">Relationship to the other versions, stated as closely as possible in the document's own words, not my interpretation.</p>
+    <div class="connections">
+      
+      <div class="conn-card"><span class="k">Next</span><a href="../v0.1/">v0.1 · Reference Runtime, First Version</a></div>
+      <div class="conn-card"><span class="k">NS-GSM progress</span>v0.1 (8 versions total: seed dataset + v0.1–v0.7)</div>
+      <div class="conn-card"><span class="k">Methodological basis</span><a href="../../../../../csm/p/09-ns-gsm-domain-model/">CSM Paper 09 · NS_GSM Canonical Domain Model</a></div>
+    </div>
+  </section>
+
+  <section id="doc-wrap">
+    <div class="doc" id="doc"><p class="loading">Loading…</p></div>
+  </section>
+
+  <footer class="sitefoot">
+    <a href="../../">← NS-GSM</a>
+    <a href="../../files/NS_GSM_Seed_Dataset_v0.1_2026-08-27.zip" download>Download full package .zip (English)</a>
+    <a href="../../files/NS_GSM_Seed_Dataset_v0.1_README.md" download>Download report .md (English)</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../../../../../assets/render.js?v=2"></script>
+<script>
+(async () => {
+  const el = document.getElementById("doc");
+  try {
+    el.innerHTML = amralRenderDoc(await amralFetchText("../../files/NS_GSM_Seed_Dataset_v0.1_README.md"));
+    amralRenderMath(el);
+  } catch (e) {
+    el.innerHTML = `<p class="error">Failed to load: ${e.message}</p>`;
+  }
+})();
+</script>
+</body>
+</html>

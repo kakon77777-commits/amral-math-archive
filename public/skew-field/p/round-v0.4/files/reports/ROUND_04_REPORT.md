@@ -82,7 +82,7 @@ E_{10}=0.045871358626.
 
 所以 Fourier 維度尚未顯示明確收斂。
 
-![模式張力](../figures/01_tension_vs_modes.png)
+![模式張力](./files/figures/01_tension_vs_modes.png)
 
 ---
 
@@ -137,7 +137,7 @@ E_-=0.045871358626.
 -9.320805660629e-08.
 \]
 
-![曲率輪廓](../figures/02_fourier_curvature_profiles.png)
+![曲率輪廓](./files/figures/02_fourier_curvature_profiles.png)
 
 ---
 
@@ -155,9 +155,9 @@ E_-=0.045871358626.
 \text{容器張力敏感度}.
 \]
 
-![係數頻譜](../figures/03_mode_amplitudes.png)
+![係數頻譜](./files/figures/03_mode_amplitudes.png)
 
-![梯度頻譜](../figures/04_mode_sensitivity.png)
+![梯度頻譜](./files/figures/04_mode_sensitivity.png)
 
 ---
 
@@ -207,7 +207,7 @@ n\cdot\delta\gamma(s_\ast).
 1.194240584988e-03.
 \]
 
-![伴隨核對](../figures/08_adjoint_verification.png)
+![伴隨核對](./files/figures/08_adjoint_verification.png)
 
 ---
 
@@ -231,7 +231,7 @@ A_{\mathrm{convex}}
 0.305379358034.
 \]
 
-![凸容器](../figures/05_convex_pair_container.png)
+![凸容器](./files/figures/05_convex_pair_container.png)
 
 ---
 
@@ -261,9 +261,9 @@ A_{\mathrm{sc}}
 37.3094%.
 \]
 
-![非凸容器](../figures/06_nonconvex_all_families.png)
+![非凸容器](./files/figures/06_nonconvex_all_families.png)
 
-![面積比較](../figures/07_container_area_comparison.png)
+![面積比較](./files/figures/07_container_area_comparison.png)
 
 ---
 
