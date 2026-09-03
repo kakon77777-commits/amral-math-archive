@@ -1,10 +1,3 @@
----
-title: CSM Paper 04 — Closure Dynamics, Reopening, and Fixed-Point Evolution
-subtitle: Closure-Space Mathematics: Closure Dynamics, Reopening, Hysteresis, and Fixed-Point Evolution
-status: Formal Theory / Dynamic Core
-epistemic_status: Formal Theory / Dynamic Core
----
-
 # CSM Paper 04 — Closure Dynamics, Reopening, and Fixed-Point Evolution
 
 ## Closure-Space Mathematics: Closure Dynamics, Reopening, Hysteresis, and Fixed-Point Evolution
